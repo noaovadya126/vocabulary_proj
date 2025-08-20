@@ -1,10 +1,10 @@
 'use client';
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Play, Volume2, CheckCircle, BookOpen } from 'lucide-react';
-import type { Word, UserWordProgress } from '@/types';
 import { useAudioPlayer } from '@/lib/audio';
+import type { UserWordProgress, Word } from '@/types';
+import { motion } from 'framer-motion';
+import { BookOpen, CheckCircle, Volume2 } from 'lucide-react';
+import { useState } from 'react';
 
 interface StationCardProps {
   word: Word & { progress?: UserWordProgress };
@@ -51,14 +51,33 @@ export default function StationCard({ word, onWordClick, onMarkLearned }: Statio
       setIsPlaying(true);
       const pronunciationMedia = word.media.find(m => m.role === 'PRONUNCIATION');
       if (pronunciationMedia) {
+        // Check if this is a placeholder file
+        if (pronunciationMedia.media.url.includes('#')) {
+          console.info('Audio placeholder detected. Replace with real MP3 files for pronunciation playback.');
+          // Show user-friendly message
+          alert('🎵 Audio pronunciation coming soon! This is a placeholder file. Replace with real MP3 files for audio playback.');
+          setIsPlaying(false);
+          return;
+        }
+        
         await audioPlayer.play(pronunciationMedia.media.url, {
           onEnd: () => setIsPlaying(false),
-          onError: () => setIsPlaying(false),
+          onError: (error) => {
+            console.error('Audio playback failed:', error);
+            setIsPlaying(false);
+            // Show user-friendly error message
+            alert('🎵 Audio playback failed. Please check your audio files.');
+          },
         });
+      } else {
+        console.info('No pronunciation audio available for this word');
+        alert('🎵 No pronunciation audio available for this word yet.');
+        setIsPlaying(false);
       }
     } catch (error) {
       console.error('Failed to play audio:', error);
       setIsPlaying(false);
+      alert('🎵 Audio playback error. Please check your audio files.');
     }
   };
 

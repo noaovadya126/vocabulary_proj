@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
-import { ArrowLeft, Play, Trophy, BookOpen, Volume2 } from 'lucide-react';
 import StationCard from '@/components/game/StationCard';
+import WordModal from '@/components/game/WordModal';
 import { useGameStore } from '@/lib/store';
-import type { Station, Word, UserWordProgress } from '@/types';
+import type { UserWordProgress, Word } from '@/types';
+import { motion } from 'framer-motion';
+import { ArrowLeft, Trophy } from 'lucide-react';
+import { useParams, useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 // Mock data for demonstration
 const mockWords: (Word & { progress?: UserWordProgress })[] = [
@@ -29,11 +30,11 @@ const mockWords: (Word & { progress?: UserWordProgress })[] = [
         media: {
           id: 'img-1',
           type: 'IMAGE',
-          url: '/media/ko/hello.webp',
+          url: '/images/ko/hello_korean_girl.webp',
           mime: 'image/webp',
           width: 400,
           height: 300,
-          alt: 'Child waving hello',
+          alt: 'Korean girl saying hello',
           createdAt: new Date(),
         },
       },
@@ -74,11 +75,11 @@ const mockWords: (Word & { progress?: UserWordProgress })[] = [
         media: {
           id: 'img-2',
           type: 'IMAGE',
-          url: '/media/ko/thank-you.webp',
+          url: '/images/ko/thank_you_korean_girl.webp',
           mime: 'image/webp',
           width: 400,
           height: 300,
-          alt: 'Person saying thank you',
+          alt: 'Korean girl saying thank you',
           createdAt: new Date(),
         },
       },
@@ -119,11 +120,11 @@ const mockWords: (Word & { progress?: UserWordProgress })[] = [
         media: {
           id: 'img-3',
           type: 'IMAGE',
-          url: '/media/ko/yes.webp',
+          url: '/images/ko/yes_korean_girl.webp',
           mime: 'image/webp',
           width: 400,
           height: 300,
-          alt: 'Thumbs up gesture',
+          alt: 'Korean girl saying yes',
           createdAt: new Date(),
         },
       },
@@ -168,6 +169,7 @@ export default function StationPage() {
   const [words, setWords] = useState<(Word & { progress?: UserWordProgress })[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedWord, setSelectedWord] = useState<Word | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     // Load station data (in real app, this would be an API call)
@@ -188,8 +190,12 @@ export default function StationPage() {
 
   const handleWordClick = (word: Word) => {
     setSelectedWord(word);
-    // In a real app, this would open a modal or navigate to word detail
-    console.log('Selected word:', word);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedWord(null);
   };
 
   const handleMarkLearned = (wordId: string) => {
@@ -396,6 +402,15 @@ export default function StationPage() {
           </div>
         </div>
       </main>
+
+      {selectedWord && (
+        <WordModal
+          word={selectedWord}
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+          onMarkLearned={handleMarkLearned}
+        />
+      )}
     </div>
   );
 }

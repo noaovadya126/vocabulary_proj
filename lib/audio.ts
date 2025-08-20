@@ -1,133 +1,105 @@
-class AudioPlayer {
+export class AudioPlayer {
   private audio: HTMLAudioElement | null = null;
-  private isPlaying = false;
-  private currentSrc: string | null = null;
+  private currentUrl: string | null = null;
+  private eventListeners: Map<string, Function[]> = new Map();
 
   constructor() {
-    // Initialize audio element
+    // Only create audio element on client side
     if (typeof window !== 'undefined') {
       this.audio = new Audio();
       this.setupEventListeners();
     }
   }
 
-  private setupEventListeners(): void {
+  private setupEventListeners() {
     if (!this.audio) return;
 
-    this.audio.addEventListener('play', () => {
-      this.isPlaying = true;
-    });
-
-    this.audio.addEventListener('pause', () => {
-      this.isPlaying = false;
-    });
-
-    this.audio.addEventListener('ended', () => {
-      this.isPlaying = false;
-    });
-
-    this.audio.addEventListener('error', (e) => {
-      console.error('Audio playback error:', e);
-      this.isPlaying = false;
-    });
+    this.audio.addEventListener('play', () => this.emit('play'));
+    this.audio.addEventListener('pause', () => this.emit('pause'));
+    this.audio.addEventListener('ended', () => this.emit('ended'));
+    this.audio.addEventListener('error', (e) => this.emit('error', e));
   }
 
-  async play(src: string, options: {
-    volume?: number;
-    playbackRate?: number;
-    onEnd?: () => void;
-    onError?: (error: Error) => void;
-  } = {}): Promise<void> {
+  async play(url: string, options?: AudioPlayOptions): Promise<void> {
     if (!this.audio) {
-      throw new Error('Audio not supported in this environment');
+      console.warn('Audio not available in this environment');
+      return;
     }
 
     try {
-      // Stop current audio if playing
-      if (this.isPlaying) {
-        await this.stop();
+      // Check if the URL is actually an audio file
+      if (url.includes('#') || url.includes('.txt') || url.includes('.md')) {
+        console.warn('Invalid audio URL:', url);
+        this.emit('error', new Error('Invalid audio file'));
+        return;
       }
 
-      // Set new source
-      if (this.currentSrc !== src) {
-        this.audio.src = src;
-        this.currentSrc = src;
+      if (this.currentUrl !== url) {
+        this.audio.src = url;
+        this.currentUrl = url;
       }
 
-      // Apply options
-      if (options.volume !== undefined) {
-        this.audio.volume = Math.max(0, Math.min(1, options.volume));
+      // Set options
+      if (options?.volume !== undefined) {
+        this.audio.volume = options.volume;
+      }
+      if (options?.playbackRate !== undefined) {
+        this.audio.playbackRate = options.playbackRate;
       }
 
-      if (options.playbackRate !== undefined) {
-        this.audio.playbackRate = Math.max(0.5, Math.min(2, options.playbackRate));
+      // Add event listeners for this play session
+      if (options?.onEnd) {
+        this.once('ended', options.onEnd);
+      }
+      if (options?.onError) {
+        this.once('error', options.onError);
       }
 
-      // Set up event handlers
-      if (options.onEnd) {
-        this.audio.addEventListener('ended', options.onEnd, { once: true });
-      }
-
-      if (options.onError) {
-        this.audio.addEventListener('error', (e) => {
-          options.onError!(new Error('Audio playback failed'));
-        }, { once: true });
-      }
-
-      // Play audio
       await this.audio.play();
+      this.emit('play');
     } catch (error) {
       console.error('Failed to play audio:', error);
-      this.isPlaying = false;
-      throw error;
+      this.emit('error', error);
+      
+      // If it's a placeholder file, show a user-friendly message
+      if (url.includes('placeholder') || url.includes('#')) {
+        console.info('This is a placeholder audio file. Replace with real MP3 files for audio playback.');
+      }
     }
   }
 
-  async stop(): Promise<void> {
-    if (!this.audio || !this.isPlaying) return;
-
-    try {
+  stop(): void {
+    if (this.audio) {
       this.audio.pause();
       this.audio.currentTime = 0;
-      this.isPlaying = false;
-    } catch (error) {
-      console.error('Failed to stop audio:', error);
+      this.emit('stop');
     }
   }
 
-  async pause(): Promise<void> {
-    if (!this.audio || !this.isPlaying) return;
-
-    try {
+  pause(): void {
+    if (this.audio) {
       this.audio.pause();
-      this.isPlaying = false;
-    } catch (error) {
-      console.error('Failed to pause audio:', error);
+      this.emit('pause');
     }
   }
 
-  async resume(): Promise<void> {
-    if (!this.audio || this.isPlaying) return;
-
-    try {
-      await this.audio.play();
-    } catch (error) {
-      console.error('Failed to resume audio:', error);
+  resume(): void {
+    if (this.audio) {
+      this.audio.play();
+      this.emit('play');
     }
   }
 
   setVolume(volume: number): void {
-    if (!this.audio) return;
-
-    const clampedVolume = Math.max(0, Math.min(1, volume));
-    this.audio.volume = clampedVolume;
+    if (this.audio) {
+      this.audio.volume = Math.max(0, Math.min(1, volume));
+    }
   }
 
   setPlaybackRate(rate: number): void {
-    if (!this.audio) return;
-
-    const clampedRate = Math.max(0.5, Math.min(2, rate));
-    this.audio.playbackRate = clampedRate;
+    if (this.audio) {
+      this.audio.playbackRate = Math.max(0.1, Math.min(4, rate));
+    }
   }
 
   getCurrentTime(): number {
@@ -138,55 +110,84 @@ class AudioPlayer {
     return this.audio?.duration || 0;
   }
 
-  isAudioPlaying(): boolean {
-    return this.isPlaying;
+  isPlaying(): boolean {
+    return this.audio ? !this.audio.paused && !this.audio.ended : false;
   }
 
-  getCurrentSrc(): string | null {
-    return this.currentSrc;
+  // Event handling
+  on(event: string, callback: Function): void {
+    if (!this.eventListeners.has(event)) {
+      this.eventListeners.set(event, []);
+    }
+    this.eventListeners.get(event)!.push(callback);
   }
 
-  // Accessibility methods
-  getAudioElement(): HTMLAudioElement | null {
-    return this.audio;
+  once(event: string, callback: Function): void {
+    const onceCallback = (...args: any[]) => {
+      callback(...args);
+      this.off(event, onceCallback);
+    };
+    this.on(event, onceCallback);
   }
 
-  // Cleanup
+  off(event: string, callback: Function): void {
+    const listeners = this.eventListeners.get(event);
+    if (listeners) {
+      const index = listeners.indexOf(callback);
+      if (index > -1) {
+        listeners.splice(index, 1);
+      }
+    }
+  }
+
+  private emit(event: string, data?: any): void {
+    const listeners = this.eventListeners.get(event);
+    if (listeners) {
+      listeners.forEach(callback => callback(data));
+    }
+  }
+
   destroy(): void {
     if (this.audio) {
       this.audio.pause();
       this.audio.src = '';
       this.audio = null;
     }
-    this.isPlaying = false;
-    this.currentSrc = null;
+    this.eventListeners.clear();
   }
 }
 
-// Create singleton instance
+// Singleton instance
 export const audioPlayer = new AudioPlayer();
 
-// Hook for using audio player in components
-export const useAudioPlayer = () => audioPlayer;
+// React hook for using the audio player
+export const useAudioPlayer = () => {
+  return audioPlayer;
+};
 
-// Utility function to preload audio
-export const preloadAudio = (src: string): Promise<void> => {
+// Utility functions
+export const preloadAudio = (url: string): Promise<void> => {
   return new Promise((resolve, reject) => {
+    if (typeof window === 'undefined') {
+      resolve();
+      return;
+    }
+
     const audio = new Audio();
-    audio.addEventListener('canplaythrough', () => resolve(), { once: true });
-    audio.addEventListener('error', () => reject(new Error('Failed to preload audio')), { once: true });
-    audio.src = src;
+    audio.addEventListener('canplaythrough', () => resolve());
+    audio.addEventListener('error', reject);
+    audio.src = url;
   });
 };
 
-// Utility function to check audio support
 export const isAudioSupported = (): boolean => {
-  if (typeof window === 'undefined') return false;
-  
-  const audio = document.createElement('audio');
-  return !!(
-    audio.canPlayType &&
-    audio.canPlayType('audio/mpeg;').replace(/no/, '') &&
-    audio.canPlayType('audio/ogg; codecs="vorbis"').replace(/no/, '')
-  );
+  return typeof window !== 'undefined' && 'Audio' in window;
 };
+
+// Audio play options interface
+export interface AudioPlayOptions {
+  volume?: number;
+  playbackRate?: number;
+  onEnd?: () => void;
+  onError?: (error: any) => void;
+}

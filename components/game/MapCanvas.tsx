@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { MapPin, Lock, Unlock, Play, Trophy } from 'lucide-react';
 import type { Map, Station, UserRunProgress } from '@/types';
+import { motion } from 'framer-motion';
+import { Lock, MapPin, Play, Trophy, Unlock } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 interface MapCanvasProps {
   map: Map;
@@ -102,13 +102,13 @@ export default function MapCanvas({ map, userProgress, onStationClick }: MapCanv
       {/* Map background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 to-green-100/30" />
       
-      {/* South Korea outline placeholder */}
+      {/* South Korea map */}
       <div className="absolute inset-4 flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-8xl mb-4">🇰🇷</div>
-          <h2 className="text-2xl font-bold text-primary-700 mb-2">한국</h2>
-          <p className="text-muted-600">South Korea</p>
-        </div>
+        <img 
+          src="/images/korea_map.webp" 
+          alt="South Korea Map" 
+          className="w-full h-full object-contain"
+        />
       </div>
 
       {/* Stations */}
@@ -181,7 +181,7 @@ export default function MapCanvas({ map, userProgress, onStationClick }: MapCanv
 
       {/* Character sprites */}
       <motion.div
-        className="absolute w-12 h-12 pointer-events-none"
+        className="absolute w-16 h-16 pointer-events-none z-10"
         style={{
           left: characterPosition.x,
           top: characterPosition.y,
@@ -197,16 +197,61 @@ export default function MapCanvas({ map, userProgress, onStationClick }: MapCanv
           damping: 20,
         }}
       >
-        {/* Lead character */}
-        <div className="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
-          L
+        {/* Lead character - Korean Girl */}
+        <div className="relative">
+          <img
+            src="/images/korean_main_character_girl.jpg"
+            alt="Korean Main Character Girl"
+            className="w-12 h-12 rounded-full object-cover shadow-lg border-2 border-white"
+          />
+          {/* Character indicator */}
+          <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary-600 rounded-full flex items-center justify-center">
+            <span className="text-white text-xs font-bold">L</span>
+          </div>
         </div>
         
-        {/* Buddy character */}
-        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
-          B
-        </div>
+        {/* Buddy character - Korean Boy */}
+        <motion.div 
+          className="absolute -bottom-2 -right-2"
+          animate={{
+            y: [0, -3, 0],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          <img
+            src="/images/korean_main_character_boy.jpg"
+            alt="Korean Main Character Boy"
+            className="w-10 h-10 rounded-full object-cover shadow-lg border-2 border-white"
+          />
+          {/* Character indicator */}
+          <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-600 rounded-full flex items-center justify-center">
+            <span className="text-white text-xs font-bold">B</span>
+          </div>
+        </motion.div>
       </motion.div>
+
+      {/* Character movement path */}
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none z-5"
+        style={{
+          width: '100%',
+          height: '100%',
+        }}
+      >
+        {/* Path for characters to follow */}
+        <path
+          d="M 200 150 Q 300 200 400 300 T 150 450"
+          stroke="#10B981"
+          strokeWidth="3"
+          fill="none"
+          strokeDasharray="5,5"
+          opacity="0.6"
+        />
+      </svg>
 
       {/* Progress indicator */}
       <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg">

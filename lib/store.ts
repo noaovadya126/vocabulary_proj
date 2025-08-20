@@ -1,17 +1,16 @@
+import type {
+    FeatureFlags,
+    Language,
+    Map,
+    QuizAttempt,
+    Station,
+    Theme,
+    User,
+    UserRunProgress,
+    UserWordProgress
+} from '@/types';
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
-import type { 
-  User, 
-  Language, 
-  Map, 
-  Station, 
-  UserRunProgress, 
-  Word, 
-  UserWordProgress,
-  QuizAttempt,
-  Theme,
-  FeatureFlags
-} from '@/types';
 
 interface GameStore {
   // User state
@@ -69,6 +68,41 @@ const defaultFeatures: FeatureFlags = {
   enableAdvancedQuiz: false,
 };
 
+// Custom storage that only works on the client side
+const createClientStorage = () => {
+  if (typeof window === 'undefined') {
+    return {
+      getItem: () => null,
+      setItem: () => {},
+      removeItem: () => {},
+    };
+  }
+  
+  return {
+    getItem: (name: string) => {
+      try {
+        return localStorage.getItem(name);
+      } catch {
+        return null;
+      }
+    },
+    setItem: (name: string, value: string) => {
+      try {
+        localStorage.setItem(name, value);
+      } catch {
+        // Silently fail if localStorage is not available
+      }
+    },
+    removeItem: (name: string) => {
+      try {
+        localStorage.removeItem(name);
+      } catch {
+        // Silently fail if localStorage is not available
+      }
+    },
+  };
+};
+
 export const useGameStore = create<GameStore>()(
   devtools(
     persist(
@@ -101,14 +135,9 @@ export const useGameStore = create<GameStore>()(
         
         setUserProgress: (progress) => set({ userProgress: progress }),
         
-        unlockStation: (stationId) => {
-          const { unlockedStations } = get();
-          if (!unlockedStations.includes(stationId)) {
-            set({ 
-              unlockedStations: [...unlockedStations, stationId] 
-            });
-          }
-        },
+        unlockStation: (stationId) => set((state) => ({
+          unlockedStations: [...new Set([...state.unlockedStations, stationId])]
+        })),
         
         setCurrentQuiz: (quiz) => set({ currentQuiz: quiz }),
         
@@ -120,19 +149,22 @@ export const useGameStore = create<GameStore>()(
         
         setError: (error) => set({ error }),
         
-        updateWordProgress: (wordId, status) => {
-          const { userProgress } = get();
-          if (userProgress) {
-            // This would typically update the database
-            // For now, we'll just update the local state
-            set({ 
-              userProgress: {
-                ...userProgress,
-                updatedAt: new Date(),
+        updateWordProgress: (wordId, status) => set((state) => {
+          if (!state.userProgress) return state;
+          
+          const updatedProgress = {
+            ...state.userProgress,
+            wordProgress: {
+              ...state.userProgress.wordProgress,
+              [wordId]: {
+                status,
+                lastUpdated: new Date().toISOString(),
               }
-            });
-          }
-        },
+            }
+          };
+          
+          return { userProgress: updatedProgress };
+        }),
         
         resetGame: () => set({
           currentLanguage: null,
@@ -142,21 +174,24 @@ export const useGameStore = create<GameStore>()(
           unlockedStations: [],
           currentQuiz: null,
           isQuizActive: false,
-          error: null,
         }),
       }),
       {
-        name: 'vocab-quest-store',
+        name: 'vocabquest-store',
+        storage: createClientStorage(),
         partialize: (state) => ({
           user: state.user,
+          isAuthenticated: state.isAuthenticated,
+          currentLanguage: state.currentLanguage,
+          currentMap: state.currentMap,
+          currentStation: state.currentStation,
+          userProgress: state.userProgress,
+          unlockedStations: state.unlockedStations,
           theme: state.theme,
           features: state.features,
         }),
       }
-    ),
-    {
-      name: 'vocab-quest-store',
-    }
+    )
   )
 );
 

@@ -1,12 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
-import { ArrowLeft, Play, Trophy, User } from 'lucide-react';
 import MapCanvas from '@/components/game/MapCanvas';
 import { useGameStore } from '@/lib/store';
 import type { Map, Station } from '@/types';
+import { motion } from 'framer-motion';
+import { ArrowLeft, Play, Trophy, User } from 'lucide-react';
+import { useParams, useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 // Mock data for demonstration
 const mockMap: Map = {
@@ -58,7 +58,7 @@ const mockMap: Map = {
 export default function MapPage() {
   const params = useParams();
   const router = useRouter();
-  const { currentLanguage, setCurrentMap, setCurrentStation } = useGameStore();
+  const { currentLanguage, setCurrentLanguage, setCurrentMap, setCurrentStation } = useGameStore();
   const [map, setMap] = useState<Map | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
