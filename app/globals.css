@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS variables */
+:root {
+  --font-noto-sans-kr: 'Noto Sans KR', sans-serif;
+  --font-heebo: 'Heebo', sans-serif;
+  
+  /* Color palette */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-500: #2563eb;
+  --color-primary-600: #1d4ed8;
+  --color-primary-700: #1e40af;
+  
+  --color-success-50: #ecfdf5;
+  --color-success-100: #d1fae5;
+  --color-success-500: #10b981;
+  --color-success-600: #059669;
+  
+  --color-muted-50: #f8fafc;
+  --color-muted-100: #f1f5f9;
+  --color-muted-200: #e2e8f0;
+  --color-muted-300: #cbd5e1;
+  --color-muted-400: #94a3b8;
+  --color-muted-500: #64748b;
+  
+  --color-background: #f8fafc;
+  --color-text: #1e293b;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-heebo), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-noto-sans-kr), system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Korean text styling */
+.korean-text {
+  font-family: var(--font-noto-sans-kr), sans-serif;
+  font-weight: 500;
+}
+
+/* Hebrew text styling */
+.hebrew-text {
+  font-family: var(--font-heebo), sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+/* Utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Loading states */
+.loading-spinner {
+  @apply animate-spin rounded-full border-2 border-muted-300 border-t-primary-500;
+}
+
+/* Component-specific styles */
+.station-card {
+  @apply bg-white rounded-xl shadow-md border border-muted-200 transition-all duration-300 hover:shadow-lg hover:scale-105;
+}
+
+.word-tile {
+  @apply relative overflow-hidden rounded-lg bg-gradient-to-br from-muted-50 to-muted-100 border-2 transition-all duration-300;
+}
+
+.word-tile.not-started {
+  @apply border-muted-300 bg-muted-100;
+}
+
+.word-tile.in-progress {
+  @apply border-blue-300 bg-blue-50;
+}
+
+.word-tile.learned {
+  @apply border-green-300 bg-green-50;
+}

@@ -1,0 +1,159 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: vocab-quest-db
+    environment:
+      POSTGRES_DB: vocab_quest
+      POSTGRES_USER: vocab_user
+      POSTGRES_PASSWORD: vocab_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./prisma/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vocab_user -d vocab_quest"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - vocab-quest-network
+
+  # Redis (for sessions and caching)
+  redis:
+    image: redis:7-alpine
+    container_name: vocab-quest-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - vocab-quest-network
+
+  # MinIO (for local file storage)
+  minio:
+    image: minio/minio:latest
+    container_name: vocab-quest-minio
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin123
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    networks:
+      - vocab-quest-network
+
+  # Next.js Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: vocab-quest-app
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://vocab_user:vocab_password@postgres:5432/vocab_quest
+      - REDIS_URL=redis://redis:6379
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin123
+      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_SECRET=your-secret-key-here
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    networks:
+      - vocab-quest-network
+    command: npm run dev
+
+  # Prisma Studio (Database GUI)
+  prisma-studio:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: vocab-quest-prisma-studio
+    environment:
+      - DATABASE_URL=postgresql://vocab_user:vocab_password@postgres:5432/vocab_quest
+    ports:
+      - "5555:5555"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - vocab-quest-network
+    command: npx prisma studio --hostname 0.0.0.0 --port 5555
+    profiles:
+      - tools
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  minio_data:
+    driver: local
+
+networks:
+  vocab-quest-network:
+    driver: bridge
+
+# Development tools (optional)
+services:
+  # Database migration tool
+  db-migrate:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: vocab-quest-migrate
+    environment:
+      - DATABASE_URL=postgresql://vocab_user:vocab_password@postgres:5432/vocab_quest
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - vocab-quest-network
+    command: npx prisma migrate dev
+    profiles:
+      - tools
+
+  # Database seeding tool
+  db-seed:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: vocab-quest-seed
+    environment:
+      - DATABASE_URL=postgresql://vocab_user:vocab_password@postgres:5432/vocab_quest
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - vocab-quest-network
+    command: npm run db:seed
+    profiles:
+      - tools
