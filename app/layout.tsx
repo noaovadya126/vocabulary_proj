@@ -17,9 +17,9 @@ const heebo = Heebo({
 });
 
 export const metadata: Metadata = {
-  title: 'VocabQuest - Interactive Language Learning Journey',
-  description: 'Learn Korean vocabulary through an interactive journey across South Korea. Progress through stations, complete quizzes, and unlock new areas with gamified learning.',
-  keywords: 'Korean, language learning, vocabulary, interactive, gamification, education',
+  title: 'VocabQuest - אפליקציית למידת שפות אינטראקטיבית',
+  description: 'למדו שפות חדשות דרך חוויה אינטראקטיבית ומהנה עם VocabQuest',
+  keywords: 'למידת שפות, ספרדית, קוריאנית, צרפתית, אוצר מילים, אינטראקטיבי',
   authors: [{ name: 'VocabQuest Team' }],
   creator: 'VocabQuest',
   publisher: 'VocabQuest',
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('http://localhost:3000'),
   openGraph: {
-    title: 'VocabQuest - Interactive Language Learning Journey',
-    description: 'Learn Korean vocabulary through an interactive journey across South Korea.',
+    title: 'VocabQuest - אפליקציית למידת שפות אינטראקטיבית',
+    description: 'למדו שפות חדשות דרך חוויה אינטראקטיבית ומהנה',
     url: 'http://localhost:3000',
     siteName: 'VocabQuest',
     images: [
@@ -39,16 +39,16 @@ export const metadata: Metadata = {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'VocabQuest Korean Learning Journey',
+        alt: 'VocabQuest Language Learning',
       },
     ],
-    locale: 'en_US',
+    locale: 'he_IL',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VocabQuest - Interactive Language Learning Journey',
-    description: 'Learn Korean vocabulary through an interactive journey across South Korea.',
+    title: 'VocabQuest - אפליקציית למידת שפות אינטראקטיבית',
+    description: 'למדו שפות חדשות דרך חוויה אינטראקטיבית ומהנה',
     images: ['/images/og-image.jpg'],
   },
   robots: {
@@ -73,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" dir="ltr" className={`${notoSansKR.variable} ${heebo.variable}`}>
+    <html lang="he" dir="rtl" className={`${notoSansKR.variable} ${heebo.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -85,8 +85,8 @@ export default function RootLayout({
         
         {/* Meta tags for accessibility */}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <meta name="theme-color" content="#2563eb" />
-        <meta name="color-scheme" content="light dark" />
+        <meta name="theme-color" content="#6366F1" />
+        <meta name="color-scheme" content="light" />
         
         {/* Structured data for SEO */}
         <script
@@ -96,7 +96,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'WebApplication',
               name: 'VocabQuest',
-              description: 'Interactive language learning application for Korean vocabulary',
+              description: 'אפליקציית למידת שפות אינטראקטיבית',
               applicationCategory: 'EducationalApplication',
               operatingSystem: 'Web Browser',
               offers: {
@@ -109,7 +109,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${notoSansKR.variable} ${heebo.variable} antialiased`}>
-        <div id="root" className="min-h-screen bg-background text-text">
+        <div id="root" className="min-h-screen bg-gray-50 text-gray-900">
           {children}
         </div>
         
@@ -119,9 +119,9 @@ export default function RootLayout({
         {/* Skip to main content link for keyboard navigation */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-indigo-600 focus:text-white focus:rounded focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
         >
-          Skip to main content
+          דלג לתוכן הראשי
         </a>
       </body>
     </html>

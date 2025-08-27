@@ -1,295 +1,238 @@
 'use client';
 
-import MapCanvas from '@/components/game/MapCanvas';
-import { useGameStore } from '@/lib/store';
-import type { Map, Station } from '@/types';
-import { motion } from 'framer-motion';
-import { ArrowLeft, Play, Trophy, User } from 'lucide-react';
 import { useParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-// Mock data for demonstration
-const mockMap: Map = {
-  id: 'korea-map',
-  languageId: 'ko-kr',
-  name: 'South Korea',
-  svgPathUrl: '/maps/south-korea.svg',
-  orderIndex: 1,
-  stations: [
-    {
-      id: 'seoul-station',
-      mapId: 'korea-map',
-      name: 'Seoul Station',
-      description: 'Learn essential greetings and basic phrases',
-      orderIndex: 1,
-      isLockedByDefault: false,
-      positionX: 200,
-      positionY: 150,
-      words: [],
-      attempts: [],
-    },
-    {
-      id: 'busan-station',
-      mapId: 'korea-map',
-      name: 'Busan Station',
-      description: 'Master common expressions and useful phrases',
-      orderIndex: 2,
-      isLockedByDefault: true,
-      positionX: 400,
-      positionY: 300,
-      words: [],
-      attempts: [],
-    },
-    {
-      id: 'jeju-station',
-      mapId: 'korea-map',
-      name: 'Jeju Station',
-      description: 'Explore cultural expressions and advanced vocabulary',
-      orderIndex: 3,
-      isLockedByDefault: true,
-      positionX: 150,
-      positionY: 450,
-      words: [],
-      attempts: [],
-    },
-  ],
+interface Milestone {
+  id: number;
+  name: string;
+  status: 'completed' | 'current' | 'locked';
+  position: { x: number; y: number };
+}
+
+const milestones: Milestone[] = [
+  { id: 1, name: 'ראשונה', status: 'completed', position: { x: 15, y: 85 } },
+  { id: 2, name: 'שנייה', status: 'completed', position: { x: 35, y: 65 } },
+  { id: 3, name: 'שלישית', status: 'current', position: { x: 55, y: 45 } },
+  { id: 4, name: 'רביעית', status: 'locked', position: { x: 75, y: 65 } },
+  { id: 5, name: 'חמישית', status: 'locked', position: { x: 55, y: 85 } },
+  { id: 6, name: 'שישית', status: 'locked', position: { x: 35, y: 95 } }
+];
+
+const languageNames = {
+  es: 'ספרדית',
+  ko: 'קוריאנית',
+  fr: 'צרפתית'
 };
 
-export default function MapPage() {
-  const params = useParams();
+export default function CountryMapPage() {
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
+  
   const router = useRouter();
-  const { currentLanguage, setCurrentLanguage, setCurrentMap, setCurrentStation } = useGameStore();
-  const [map, setMap] = useState<Map | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const params = useParams();
+  const language = params.language as string;
 
   useEffect(() => {
-    // Set current language if not set
-    if (!currentLanguage && params.language === 'ko-KR') {
-      setCurrentLanguage({
-        id: 'ko-kr',
-        code: 'ko-KR',
-        name: 'Korean',
-        rtl: false,
-      });
+    const userData = localStorage.getItem('userData');
+    const selectedLanguage = localStorage.getItem('selectedLanguage');
+    
+    if (!userData) {
+      router.push('/auth');
+      return;
+    }
+    
+    if (!selectedLanguage || selectedLanguage !== language) {
+      router.push('/language-selection');
+      return;
+    }
+  }, [language, router]);
+
+  const handleMilestoneClick = (milestone: Milestone) => {
+    if (milestone.status === 'locked') {
+      setToastMessage('אבן דרך זו נעולה עדיין. השלימי את האבן הנוכחית תחילה.');
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000);
+      return;
     }
 
-    // Load map data (in real app, this would be an API call)
-    const loadMap = async () => {
-      try {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        setMap(mockMap);
-        setCurrentMap(mockMap);
-      } catch (error) {
-        console.error('Failed to load map:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadMap();
-  }, [params.language, currentLanguage, setCurrentLanguage, setCurrentMap]);
-
-  const handleStationClick = (station: Station) => {
-    setCurrentStation(station);
-    router.push(`/station/${station.id}`);
+    if (milestone.status === 'current') {
+      router.push(`/milestone/${language}/${milestone.id}`);
+    } else if (milestone.status === 'completed') {
+      setToastMessage(`כבר השלמת את ${milestone.name}!`);
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000);
+    }
   };
 
-  const handleBackClick = () => {
-    router.push('/');
+  const getMilestoneColor = (status: string) => {
+    switch (status) {
+      case 'completed':
+        return 'bg-green-500';
+      case 'current':
+        return 'bg-cyan-500';
+      case 'locked':
+        return 'bg-gray-400';
+      default:
+        return 'bg-gray-400';
+    }
   };
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-primary-50 to-muted-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="loading-spinner w-16 h-16 mx-auto mb-4"></div>
-          <h2 className="text-xl font-semibold text-muted-600">Loading Korean Journey...</h2>
+  const getMilestoneIcon = (status: string) => {
+    switch (status) {
+      case 'completed':
+        return '✓';
+      case 'current':
+        return '📚';
+      case 'locked':
+        return '🔒';
+      default:
+        return '●';
+    }
+  };
+
+  const completedMilestones = milestones.filter(m => m.status === 'completed').length;
+  const progressPercentage = (completedMilestones / milestones.length) * 100;
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-2">
+      <div className="max-w-3xl mx-auto">
+        {/* Header - Ultra Compact */}
+        <div className="text-center mb-3">
+          <h1 className="text-2xl font-bold text-gray-900 mb-1">
+            מפת {languageNames[language as keyof typeof languageNames]}
+          </h1>
+          <p className="text-sm text-gray-600">
+            התקדמי דרך אבני הדרך
+          </p>
         </div>
-      </div>
-    );
-  }
 
-  if (!map) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-primary-50 to-muted-50 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-xl font-semibold text-muted-600">Failed to load map</h2>
-          <button
-            onClick={handleBackClick}
-            className="mt-4 px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+        {/* Progress Bar - Ultra Compact */}
+        <div className="bg-white rounded-lg shadow-md p-3 mb-3">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-sm font-semibold text-gray-900">התקדמות</h3>
+            <span className="text-xs text-gray-600">
+              {completedMilestones}/{milestones.length}
+            </span>
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-1.5">
+            <div 
+              className="bg-gradient-to-r from-indigo-500 to-cyan-500 h-1.5 rounded-full transition-all duration-1000 ease-out"
+              style={{ width: `${progressPercentage}%` }}
+            ></div>
+          </div>
+        </div>
+
+        {/* Map Container - Ultra Compact */}
+        <div className="relative bg-white rounded-lg shadow-lg p-4 min-h-[300px] overflow-hidden">
+          {/* Background Pattern - Very Light */}
+          <div className="absolute inset-0 opacity-2">
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 to-cyan-50"></div>
+          </div>
+
+          {/* Milestone Path - Very Thin */}
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path
+              d="M 15,85 Q 25,75 35,65 Q 45,55 55,45 Q 65,55 75,65 Q 65,75 55,85 Q 45,95 35,95"
+              fill="none"
+              stroke="url(#gradient)"
+              strokeWidth="1"
+              strokeDasharray="3,3"
+              className="animate-pulse"
+            />
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#6366F1" />
+                <stop offset="100%" stopColor="#06B6D4" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          {/* Milestones - Very Small */}
+          {milestones.map((milestone) => (
+            <div
+              key={milestone.id}
+              onClick={() => handleMilestoneClick(milestone)}
+              className={`absolute w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-xs cursor-pointer transition-all duration-300 transform hover:scale-110 ${
+                milestone.status === 'locked' ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
+              } ${getMilestoneColor(milestone.status)}`}
+              style={{
+                left: `${milestone.position.x}%`,
+                top: `${milestone.position.y}%`,
+                transform: 'translate(-50%, -50%)'
+              }}
+            >
+              {getMilestoneIcon(milestone.status)}
+            </div>
+          ))}
+
+          {/* Character Avatars - Very Small */}
+          <div
+            className="absolute w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-md animate-bounce"
+            style={{
+              left: `${milestones.find(m => m.status === 'current')?.position.x! - 1}%`,
+              top: `${milestones.find(m => m.status === 'current')?.position.y! - 1}%`,
+              transform: 'translate(-50%, -50%)'
+            }}
           >
-            Go Back
+            👧
+          </div>
+          <div
+            className="absolute w-5 h-5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-md animate-bounce"
+            style={{
+              left: `${milestones.find(m => m.status === 'current')?.position.x! + 1}%`,
+              top: `${milestones.find(m => m.status === 'current')?.position.y! + 1}%`,
+              transform: 'translate(-50%, -50%)',
+              animationDelay: '0.2s'
+            }}
+          >
+            👦
+          </div>
+
+          {/* Milestone Labels - Very Small and Close */}
+          {milestones.map((milestone) => (
+            <div
+              key={milestone.id}
+              className="absolute text-center"
+              style={{
+                left: `${milestone.position.x}%`,
+                top: `${milestone.position.y + 4}%`,
+                transform: 'translateX(-50%)'
+              }}
+            >
+              <div className={`px-1.5 py-0.5 rounded text-xs font-medium ${
+                milestone.status === 'completed' 
+                  ? 'bg-green-100 text-green-800' 
+                  : milestone.status === 'current'
+                  ? 'bg-cyan-100 text-cyan-800'
+                  : 'bg-gray-100 text-gray-600'
+              }`}>
+                {milestone.name}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Navigation - Ultra Compact */}
+        <div className="text-center mt-3">
+          <button
+            onClick={() => router.push('/language-selection')}
+            className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-800 font-medium"
+          >
+            ← חזרה לבחירת שפה
           </button>
         </div>
       </div>
-    );
-  }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-muted-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b border-muted-200">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={handleBackClick}
-                className="p-2 rounded-lg hover:bg-muted-100 transition-colors"
-                aria-label="Go back to home"
-              >
-                <ArrowLeft className="w-5 h-5 text-muted-600" />
-              </button>
-              
-              <div>
-                <h1 className="text-2xl font-bold text-muted-800">
-                  Korean Learning Journey
-                </h1>
-                <p className="text-muted-600">
-                  Explore South Korea and learn essential vocabulary
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              {/* Progress indicator */}
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600">1/3</div>
-                <div className="text-xs text-muted-500">Stations</div>
-              </div>
-
-              {/* Navigation buttons */}
-              <div className="flex space-x-2">
-                <button
-                  onClick={() => router.push('/profile')}
-                  className="p-2 rounded-lg hover:bg-muted-100 transition-colors"
-                  aria-label="View profile"
-                >
-                  <User className="w-5 h-5 text-muted-600" />
-                </button>
-                
-                <button
-                  onClick={() => router.push('/progress')}
-                  className="p-2 rounded-lg hover:bg-muted-100 transition-colors"
-                  aria-label="View progress"
-                >
-                  <Trophy className="w-5 h-5 text-muted-600" />
-                </button>
-              </div>
-            </div>
+      {/* Toast Notification - Compact */}
+      {showToast && (
+        <div className="fixed top-2 right-2 z-50 bg-blue-500 text-white p-2 rounded-lg shadow-lg text-sm">
+          <div className="flex items-center">
+            <span className="mr-1">ℹ️</span>
+            {toastMessage}
           </div>
         </div>
-      </header>
-
-      {/* Main content */}
-      <main className="container mx-auto px-4 py-8">
-        <div className="max-w-6xl mx-auto">
-          {/* Map container */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-            <div className="mb-6">
-              <h2 className="text-3xl font-bold text-muted-800 mb-2">
-                🗺️ Your Learning Map
-              </h2>
-              <p className="text-muted-600">
-                Click on unlocked stations to begin learning. Complete quizzes to unlock new areas!
-              </p>
-            </div>
-
-            <div className="relative">
-              <MapCanvas
-                map={map}
-                userProgress={null}
-                onStationClick={handleStationClick}
-              />
-            </div>
-          </div>
-
-          {/* Station information */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {map.stations.map((station, index) => (
-              <motion.div
-                key={station.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-md p-6 border border-muted-200"
-              >
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
-                    <span className="text-lg font-bold text-primary-600">
-                      {index + 1}
-                    </span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-muted-800">
-                      {station.name}
-                    </h3>
-                    <p className="text-sm text-muted-500">
-                      Station {index + 1}
-                    </p>
-                  </div>
-                </div>
-
-                <p className="text-muted-600 mb-4">
-                  {station.description}
-                </p>
-
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-500">Words to learn:</span>
-                    <span className="font-semibold text-muted-700">10</span>
-                  </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-500">Status:</span>
-                    <span className={`font-semibold ${
-                      index === 0 ? 'text-green-600' : 'text-muted-400'
-                    }`}>
-                      {index === 0 ? 'Unlocked' : 'Locked'}
-                    </span>
-                  </div>
-                </div>
-
-                {index === 0 && (
-                  <button
-                    onClick={() => handleStationClick(station)}
-                    className="w-full mt-4 bg-primary-600 text-white py-2 px-4 rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center space-x-2"
-                  >
-                    <Play className="w-4 h-4" />
-                    <span>Start Learning</span>
-                  </button>
-                )}
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Learning tips */}
-          <div className="mt-12 bg-gradient-to-r from-primary-50 to-green-50 rounded-2xl p-8 border border-primary-100">
-            <h3 className="text-2xl font-bold text-muted-800 mb-4">
-              💡 Learning Tips
-            </h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-semibold text-muted-800 mb-2">
-                  🎯 Start with Seoul Station
-                </h4>
-                <p className="text-muted-600">
-                  Begin your journey with essential greetings and basic phrases. 
-                  This station is unlocked and contains 10 fundamental Korean words.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-muted-800 mb-2">
-                  🏆 Unlock New Areas
-                </h4>
-                <p className="text-muted-600">
-                  Complete quizzes with 80% or higher to unlock the next station. 
-                  Each station builds upon the previous one, creating a progressive learning experience.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
+      )}
     </div>
   );
 }

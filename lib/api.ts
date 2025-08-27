@@ -1,17 +1,3 @@
-import type { 
-  ApiResponse, 
-  LoginRequest, 
-  RegisterRequest, 
-  WordProgressRequest,
-  QuizStartRequest,
-  QuizAnswerRequest,
-  QuizFinishRequest,
-  Language,
-  Map,
-  Station,
-  User,
-  UserRunProgress
-} from '@/types';
 
 class ApiClient {
   private baseUrl: string;
@@ -25,7 +11,7 @@ class ApiClient {
   private async request<T>(
     endpoint: string,
     options: RequestInit = {}
-  ): Promise<ApiResponse<T>> {
+  ): Promise<any> {
     const url = `${this.baseUrl}${endpoint}`;
     
     const headers: HeadersInit = {
@@ -60,8 +46,8 @@ class ApiClient {
   }
 
   // Authentication
-  async login(credentials: LoginRequest): Promise<ApiResponse<{ user: User; token: string }>> {
-    const response = await this.request<{ user: User; token: string }>('/auth/login', {
+  async login(credentials: any): Promise<any> {
+    const response = await this.request<{ user: any; token: string }>('/auth/login', {
       method: 'POST',
       body: JSON.stringify(credentials),
     });
@@ -76,8 +62,8 @@ class ApiClient {
     return response;
   }
 
-  async register(userData: RegisterRequest): Promise<ApiResponse<{ user: User; token: string }>> {
-    const response = await this.request<{ user: User; token: string }>('/auth/register', {
+  async register(userData: any): Promise<any> {
+    const response = await this.request<{ user: any; token: string }>('/auth/register', {
       method: 'POST',
       body: JSON.stringify(userData),
     });
@@ -92,7 +78,7 @@ class ApiClient {
     return response;
   }
 
-  async logout(): Promise<ApiResponse<void>> {
+  async logout(): Promise<any> {
     const response = await this.request<void>('/auth/logout', {
       method: 'POST',
     });
@@ -105,79 +91,66 @@ class ApiClient {
     return response;
   }
 
-  // Languages
-  async getLanguages(): Promise<ApiResponse<Language[]>> {
-    return this.request<Language[]>('/languages');
+  // Language and Map APIs
+  async getLanguages(): Promise<any> {
+    return this.request('/languages');
   }
 
-  // Maps
-  async getMap(languageCode: string): Promise<ApiResponse<Map>> {
-    return this.request<Map>(`/maps/${languageCode}`);
+  async getMap(languageId: string): Promise<any> {
+    return this.request(`/maps/${languageId}`);
   }
 
-  // Stations
-  async getStation(stationId: string): Promise<ApiResponse<Station>> {
-    return this.request<Station>(`/stations/${stationId}`);
+  async getStation(stationId: string): Promise<any> {
+    return this.request(`/stations/${stationId}`);
   }
 
-  // Progress
-  async updateWordProgress(data: WordProgressRequest): Promise<ApiResponse<void>> {
-    return this.request<void>('/progress/word', {
+  // Quiz APIs
+  async startQuiz(stationId: string): Promise<any> {
+    return this.request('/quiz/start', {
       method: 'POST',
-      body: JSON.stringify(data),
+      body: JSON.stringify({ stationId }),
     });
   }
 
-  async getUserProgress(): Promise<ApiResponse<UserRunProgress>> {
-    return this.request<UserRunProgress>('/me/progress');
-  }
-
-  // Quiz
-  async startQuiz(data: QuizStartRequest): Promise<ApiResponse<{ attemptId: string }>> {
-    return this.request<{ attemptId: string }>('/quiz/start', {
+  async submitQuizAnswer(quizId: string, questionId: string, answer: string): Promise<any> {
+    return this.request('/quiz/answer', {
       method: 'POST',
-      body: JSON.stringify(data),
+      body: JSON.stringify({ quizId, questionId, answer }),
     });
   }
 
-  async submitQuizAnswer(data: QuizAnswerRequest): Promise<ApiResponse<void>> {
-    return this.request<void>('/quiz/answer', {
+  async finishQuiz(quizId: string): Promise<any> {
+    return this.request('/quiz/finish', {
       method: 'POST',
-      body: JSON.stringify(data),
+      body: JSON.stringify({ quizId }),
     });
   }
 
-  async finishQuiz(data: QuizFinishRequest): Promise<ApiResponse<{ 
-    score: number; 
-    passed: boolean; 
-    nextStationId?: string 
-  }>> {
-    return this.request<{ 
-      score: number; 
-      passed: boolean; 
-      nextStationId?: string 
-    }>('/quiz/finish', {
-      method: 'POST',
-      body: JSON.stringify(data),
+  // Progress APIs
+  async updateWordProgress(wordId: string, status: string): Promise<any> {
+    return this.request('/progress/word', {
+      method: 'PUT',
+      body: JSON.stringify({ wordId, status }),
     });
   }
 
-  // Media
-  getMediaUrl(path: string): string {
-    // In production, this would return a signed CDN URL
-    return `${this.baseUrl}/media${path}`;
+  async getUserProgress(): Promise<any> {
+    return this.request('/progress/user');
   }
 
   // Utility methods
-  setToken(token: string): void {
+  setToken(token: string) {
     this.token = token;
     if (typeof window !== 'undefined') {
       localStorage.setItem('auth_token', token);
     }
   }
 
-  getToken(): string | null {
-    return this.token;
+  clearToken() {
+    this.token = null;
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('auth_token');
+    }
   }
 
   isAuthenticated(): boolean {
@@ -185,27 +158,5 @@ class ApiClient {
   }
 }
 
-// Create singleton instance
 export const apiClient = new ApiClient();
-
-// Export individual methods for convenience
-export const {
-  login,
-  register,
-  logout,
-  getLanguages,
-  getMap,
-  getStation,
-  updateWordProgress,
-  getUserProgress,
-  startQuiz,
-  submitQuizAnswer,
-  finishQuiz,
-  getMediaUrl,
-  setToken,
-  getToken,
-  isAuthenticated,
-} = apiClient;
-
-// Hook for using API client in components
-export const useApi = () => apiClient;
+export default apiClient;
