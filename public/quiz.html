@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VocabQuest - קוויז סופי</title>
+  <style>
+    :root {
+      /* Professional Color Palette */
+      --primary: #6366F1;      /* Indigo */
+      --secondary: #8B5CF6;    /* Purple */
+      --accent: #06B6D4;       /* Cyan */
+      --error: #DF3F40;        /* Red */
+      --success: #10B981;      /* Green */
+      --warning: #F59E0B;      /* Amber */
+      
+      /* Neutral Colors */
+      --white: #FFFFFF;
+      --gray-50: #F9FAFB;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF;
+      --gray-500: #6B7280;
+      --gray-600: #4B5563;
+      --gray-700: #374151;
+      --gray-800: #1F2937;
+      --gray-900: #111827;
+      
+      /* Spacing System */
+      --spacing-xs: 4px;
+      --spacing-sm: 8px;
+      --spacing-md: 16px;
+      --spacing-lg: 20px;
+      --spacing-xl: 24px;
+      --spacing-2xl: 32px;
+      --spacing-3xl: 48px;
+      --spacing-4xl: 64px;
+      
+      /* Shadows & Effects */
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      
+      /* Border Radius */
+      --radius-sm: 4px;
+      --radius-md: 6px;
+      --radius-lg: 8px;
+      --radius-xl: 12px;
+      --radius-2xl: 16px;
+      --radius-full: 9999px;
+      
+      /* Transitions */
+      --transition-fast: 150ms ease-in-out;
+      --transition-normal: 250ms ease-in-out;
+      --transition-slow: 350ms ease-in-out;
+    }
+
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    body {
+      font-family: 'Heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+      color: var(--gray-900);
+      min-height: 100vh;
+      direction: rtl;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: var(--spacing-md);
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+    h4 { font-size: 1.5rem; }
+    h5 { font-size: 1.25rem; }
+    h6 { font-size: 1rem; }
+
+    p {
+      font-weight: 400;
+      margin-bottom: var(--spacing-md);
+      color: var(--gray-600);
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: var(--spacing-2xl) var(--spacing-lg);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="20" cy="20" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="80" cy="80" r="0.8" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .quiz-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .quiz-icon {
+      background: var(--white);
+      color: var(--primary);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .header h1 {
+      color: var(--white);
+      margin-bottom: var(--spacing-sm);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Progress Section */
+    .progress-section {
+      background: var(--white);
+      padding: var(--spacing-lg);
+      margin: var(--spacing-lg);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .progress-title {
+      font-weight: 600;
+      color: var(--gray-900);
+    }
+
+    .progress-stats {
+      display: flex;
+      gap: var(--spacing-lg);
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+
+    .progress-stat {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 12px;
+      background: var(--gray-200);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--success), var(--accent));
+      border-radius: var(--radius-full);
+      transition: width var(--transition-slow);
+      position: relative;
+      width: 0%;
+    }
+
+    .progress-fill::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      animation: shimmer 2s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    /* Main Content */
+    .main-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: var(--spacing-lg);
+    }
+
+    /* Quiz Container */
+    .quiz-container {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-3xl);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gray-200);
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    .question-header {
+      text-align: center;
+      margin-bottom: var(--spacing-3xl);
+    }
+
+    .question-number {
+      background: var(--primary);
+      color: var(--white);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0 auto var(--spacing-lg);
+      box-shadow: var(--shadow-md);
+    }
+
+    .question-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .question-instruction {
+      color: var(--gray-600);
+      font-size: 1rem;
+    }
+
+    /* Question Types */
+    .question-content {
+      margin-bottom: var(--spacing-3xl);
+    }
+
+    .question-word {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: var(--spacing-2xl);
+      text-shadow: 0 2px 4px rgba(99, 102, 241, 0.1);
+    }
+
+    .question-image {
+      width: 120px;
+      height: 120px;
+      background: var(--gray-100);
+      border-radius: var(--radius-xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      margin: 0 auto var(--spacing-2xl);
+      border: 2px solid var(--gray-200);
+    }
+
+    /* Answer Options */
+    .answer-options {
+      display: grid;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    .answer-option {
+      background: var(--white);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      padding: var(--spacing-lg);
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      text-align: center;
+      font-size: 1.125rem;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .answer-option::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+      transform: scaleX(0);
+      transition: transform var(--transition-normal);
+    }
+
+    .answer-option:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+
+    .answer-option:hover::before {
+      transform: scaleX(1);
+    }
+
+    .answer-option.selected {
+      border-color: var(--primary);
+      background: rgba(99, 102, 241, 0.05);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .answer-option.selected::before {
+      transform: scaleX(1);
+    }
+
+    .answer-option.correct {
+      border-color: var(--success);
+      background: rgba(16, 185, 129, 0.1);
+      animation: correctAnswer 0.5s ease-in-out;
+    }
+
+    .answer-option.incorrect {
+      border-color: var(--error);
+      background: rgba(223, 63, 64, 0.1);
+      animation: incorrectAnswer 0.5s ease-in-out;
+    }
+
+    @keyframes correctAnswer {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes incorrectAnswer {
+      0% { transform: scale(1); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+      100% { transform: scale(1); }
+    }
+
+    /* Fill in the blank */
+    .fill-blank-input {
+      width: 100%;
+      padding: var(--spacing-lg);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      font-size: 1.125rem;
+      text-align: center;
+      transition: all var(--transition-normal);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .fill-blank-input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+    }
+
+    .fill-blank-input.correct {
+      border-color: var(--success);
+      background: rgba(16, 185, 129, 0.05);
+    }
+
+    .fill-blank-input.incorrect {
+      border-color: var(--error);
+      background: rgba(223, 63, 64, 0.05);
+    }
+
+    /* Action Buttons */
+    .quiz-actions {
+      display: flex;
+      gap: var(--spacing-md);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .quiz-btn {
+      padding: var(--spacing-lg) var(--spacing-2xl);
+      border-radius: var(--radius-xl);
+      font-size: 1.125rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+    }
+
+    .quiz-btn.primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .quiz-btn.secondary {
+      background: var(--white);
+      color: var(--gray-700);
+      border: 2px solid var(--gray-300);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .quiz-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .quiz-btn:active {
+      transform: translateY(0);
+    }
+
+    .quiz-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Results Section */
+    .results-section {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-3xl);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gray-200);
+      text-align: center;
+      display: none;
+    }
+
+    .results-icon {
+      font-size: 4rem;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .results-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .results-score {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .results-message {
+      color: var(--gray-600);
+      font-size: 1.125rem;
+      line-height: 1.6;
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    /* Back Button */
+    .back-btn {
+      position: fixed;
+      top: var(--spacing-lg);
+      right: var(--spacing-lg);
+      background: var(--white);
+      color: var(--gray-700);
+      border: 1px solid var(--gray-300);
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all var(--transition-normal);
+      box-shadow: var(--shadow-sm);
+      z-index: 100;
+    }
+
+    .back-btn:hover {
+      background: var(--gray-50);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header {
+        padding: var(--spacing-xl) var(--spacing-md);
+      }
+
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .main-content {
+        padding: var(--spacing-md);
+      }
+
+      .quiz-container {
+        padding: var(--spacing-2xl);
+      }
+
+      .question-word {
+        font-size: 2rem;
+      }
+
+      .answer-options {
+        grid-template-columns: 1fr;
+      }
+
+      .quiz-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .quiz-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+      }
+
+      .back-btn {
+        top: var(--spacing-md);
+        right: var(--spacing-md);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.75rem;
+      }
+
+      .quiz-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+      }
+
+      .question-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+      }
+
+      .question-word {
+        font-size: 1.75rem;
+      }
+
+      .quiz-container {
+        padding: var(--spacing-xl);
+      }
+    }
+
+    /* Animations */
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .quiz-container {
+      animation: slideInUp 0.8s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <!-- Back Button -->
+  <a href="/milestone.html" class="back-btn">← חזרה</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="quiz-info">
+        <div class="quiz-icon">🧠</div>
+        <h1>קוויז סופי</h1>
+      </div>
+      <p>בחנו את הידע שלכם בכל 10 המילים שלמדתם</p>
+    </div>
+  </header>
+
+  <!-- Progress Section -->
+  <div class="progress-section">
+    <div class="progress-header">
+      <span class="progress-title">התקדמות בקוויז</span>
+      <div class="progress-stats">
+        <div class="progress-stat">
+          <span>✅</span>
+          <span id="correct-count">0</span>
+        </div>
+        <div class="progress-stat">
+          <span>❌</span>
+          <span id="incorrect-count">0</span>
+        </div>
+        <div class="progress-stat">
+          <span>📊</span>
+          <span id="accuracy">0%</span>
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Quiz Container -->
+    <div class="quiz-container" id="quiz-container">
+      <div class="question-header">
+        <div class="question-number" id="question-number">1</div>
+        <h2 class="question-title" id="question-title">בחרי את המשמעות הנכונה</h2>
+        <p class="question-instruction" id="question-instruction">לחצי על התשובה הנכונה</p>
+      </div>
+
+      <div class="question-content" id="question-content">
+        <!-- Question content will be dynamically generated -->
+      </div>
+
+      <div class="quiz-actions">
+        <button class="quiz-btn secondary" id="skip-btn">⏭️ דלג</button>
+        <button class="quiz-btn primary" id="submit-btn" disabled>✅ שלח תשובה</button>
+      </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="results-section" id="results-section">
+      <div class="results-icon" id="results-icon">🎉</div>
+      <h2 class="results-title" id="results-title">כל הכבוד!</h2>
+      <div class="results-score" id="results-score">95%</div>
+      <p class="results-message" id="results-message">
+        השלמת את הקוויז בהצלחה! את מוכנה לעבור לשלב הבא.
+      </p>
+      <div class="quiz-actions">
+        <button class="quiz-btn secondary" id="review-btn">📚 סקירה חוזרת</button>
+        <button class="quiz-btn primary" id="continue-btn">🚀 המשכי</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    class QuizPage {
+      constructor() {
+        this.currentQuestion = 0;
+        this.totalQuestions = 10;
+        this.correctAnswers = 0;
+        this.incorrectAnswers = 0;
+        this.questions = [];
+        this.currentAnswer = null;
+        this.isQuizComplete = false;
+        
+        this.quizContainer = document.getElementById('quiz-container');
+        this.resultsSection = document.getElementById('results-section');
+        this.questionNumber = document.getElementById('question-number');
+        this.questionTitle = document.getElementById('question-title');
+        this.questionInstruction = document.getElementById('question-instruction');
+        this.questionContent = document.getElementById('question-content');
+        this.submitBtn = document.getElementById('submit-btn');
+        this.skipBtn = document.getElementById('skip-btn');
+        this.progressFill = document.getElementById('progress-fill');
+        this.correctCount = document.getElementById('correct-count');
+        this.incorrectCount = document.getElementById('incorrect-count');
+        this.accuracy = document.getElementById('accuracy');
+        
+        this.init();
+      }
+
+      init() {
+        this.setupQuestions();
+        this.setupEventListeners();
+        this.showQuestion();
+        this.updateProgress();
+      }
+
+      setupQuestions() {
+        this.questions = [
+          {
+            type: 'multiple-choice',
+            word: 'Familia',
+            meaning: 'משפחה',
+            image: '👨‍👩‍👧‍👦',
+            options: ['משפחה', 'חברים', 'בית', 'עיר'],
+            correct: 0
+          },
+          {
+            type: 'multiple-choice',
+            word: 'Padre',
+            meaning: 'אבא',
+            image: '👨‍🦳',
+            options: ['אמא', 'אבא', 'אח', 'סבא'],
+            correct: 1
+          },
+          {
+            type: 'multiple-choice',
+            word: 'Madre',
+            meaning: 'אמא',
+            image: '👩‍🦰',
+            options: ['אבא', 'אמא', 'אחות', 'סבתא'],
+            correct: 1
+          },
+          {
+            type: 'fill-blank',
+            word: 'Hermana',
+            meaning: 'אחות',
+            image: '👧',
+            correct: 'אחות'
+          },
+          {
+            type: 'multiple-choice',
+            word: 'Hermano',
+            meaning: 'אח',
+            image: '👦',
+            options: ['אחות', 'אח', 'בן', 'בת'],
+            correct: 1
+          },
+          {
+            type: 'fill-blank',
+            word: 'Abuelo',
+            meaning: 'סבא',
+            image: '👴',
+            correct: 'סבא'
+          },
+          {
+            type: 'multiple-choice',
+            word: 'Abuela',
+            meaning: 'סבתא',
+            image: '👵',
+            options: ['סבא', 'סבתא', 'דוד', 'דודה'],
+            correct: 1
+          },
+          {
+            type: 'fill-blank',
+            word: 'Hijo',
+            meaning: 'בן',
+            image: '👨‍👩‍👦',
+            correct: 'בן'
+          },
+          {
+            type: 'multiple-choice',
+            word: 'Hija',
+            meaning: 'בת',
+            image: '👨‍👩‍👧',
+            options: ['בן', 'בת', 'ילד', 'ילדה'],
+            correct: 1
+          },
+          {
+            type: 'multiple-choice',
+            word: 'Amigo',
+            meaning: 'חבר',
+            image: '👥',
+            options: ['משפחה', 'חבר', 'שכן', 'עמית'],
+            correct: 1
+          }
+        ];
+      }
+
+      setupEventListeners() {
+        // Submit button
+        this.submitBtn.addEventListener('click', () => {
+          this.submitAnswer();
+        });
+
+        // Skip button
+        this.skipBtn.addEventListener('click', () => {
+          this.skipQuestion();
+        });
+
+        // Results buttons
+        document.getElementById('review-btn').addEventListener('click', () => {
+          this.goToReview();
+        });
+
+        document.getElementById('continue-btn').addEventListener('click', () => {
+          this.continueToNext();
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            window.history.back();
+          }
+          if (e.key === 'Enter') {
+            this.submitAnswer();
+          }
+          if (e.key === ' ') {
+            this.skipQuestion();
+          }
+        });
+      }
+
+      showQuestion() {
+        if (this.currentQuestion >= this.totalQuestions) {
+          this.completeQuiz();
+          return;
+        }
+
+        const question = this.questions[this.currentQuestion];
+        this.questionNumber.textContent = this.currentQuestion + 1;
+        this.questionTitle.textContent = this.getQuestionTitle(question.type);
+        this.questionInstruction.textContent = this.getQuestionInstruction(question.type);
+        
+        this.generateQuestionContent(question);
+        this.resetAnswerState();
+      }
+
+      getQuestionTitle(type) {
+        switch(type) {
+          case 'multiple-choice': return 'בחרי את המשמעות הנכונה';
+          case 'fill-blank': return 'השלימי את המשמעות';
+          default: return 'עני על השאלה';
+        }
+      }
+
+      getQuestionInstruction(type) {
+        switch(type) {
+          case 'multiple-choice': return 'לחצי על התשובה הנכונה';
+          case 'fill-blank': return 'הקלידי את המשמעות בעברית';
+          default: return 'עני על השאלה';
+        }
+      }
+
+      generateQuestionContent(question) {
+        this.questionContent.innerHTML = '';
+        
+        // Word display
+        const wordElement = document.createElement('div');
+        wordElement.className = 'question-word';
+        wordElement.textContent = question.word;
+        this.questionContent.appendChild(wordElement);
+        
+        // Image display
+        const imageElement = document.createElement('div');
+        imageElement.className = 'question-image';
+        imageElement.textContent = question.image;
+        this.questionContent.appendChild(imageElement);
+        
+        // Answer options based on type
+        if (question.type === 'multiple-choice') {
+          this.generateMultipleChoice(question);
+        } else if (question.type === 'fill-blank') {
+          this.generateFillBlank(question);
+        }
+      }
+
+      generateMultipleChoice(question) {
+        const optionsContainer = document.createElement('div');
+        optionsContainer.className = 'answer-options';
+        
+        question.options.forEach((option, index) => {
+          const optionElement = document.createElement('div');
+          optionElement.className = 'answer-option';
+          optionElement.textContent = option;
+          optionElement.dataset.index = index;
+          
+          optionElement.addEventListener('click', () => {
+            this.selectOption(optionElement, index);
+          });
+          
+          optionsContainer.appendChild(optionElement);
+        });
+        
+        this.questionContent.appendChild(optionsContainer);
+      }
+
+      generateFillBlank(question) {
+        const inputContainer = document.createElement('div');
+        inputContainer.style.textAlign = 'center';
+        
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'fill-blank-input';
+        input.placeholder = 'הקלידי את המשמעות...';
+        input.addEventListener('input', (e) => {
+          this.currentAnswer = e.target.value.trim();
+          this.submitBtn.disabled = !this.currentAnswer;
+        });
+        
+        inputContainer.appendChild(input);
+        this.questionContent.appendChild(inputContainer);
+        
+        // Focus on input
+        setTimeout(() => input.focus(), 100);
+      }
+
+      selectOption(optionElement, index) {
+        // Remove previous selection
+        const previousSelected = this.questionContent.querySelector('.answer-option.selected');
+        if (previousSelected) {
+          previousSelected.classList.remove('selected');
+        }
+        
+        // Select new option
+        optionElement.classList.add('selected');
+        this.currentAnswer = index;
+        this.submitBtn.disabled = false;
+      }
+
+      resetAnswerState() {
+        this.currentAnswer = null;
+        this.submitBtn.disabled = true;
+        
+        // Reset option selections
+        const options = this.questionContent.querySelectorAll('.answer-option');
+        options.forEach(option => {
+          option.classList.remove('selected', 'correct', 'incorrect');
+        });
+        
+        // Reset fill blank input
+        const input = this.questionContent.querySelector('.fill-blank-input');
+        if (input) {
+          input.value = '';
+          input.classList.remove('correct', 'incorrect');
+        }
+      }
+
+      submitAnswer() {
+        if (this.currentAnswer === null) return;
+        
+        const question = this.questions[this.currentQuestion];
+        let isCorrect = false;
+        
+        if (question.type === 'multiple-choice') {
+          isCorrect = this.currentAnswer === question.correct;
+          this.showMultipleChoiceResult(question, isCorrect);
+        } else if (question.type === 'fill-blank') {
+          isCorrect = this.currentAnswer.toLowerCase() === question.correct.toLowerCase();
+          this.showFillBlankResult(question, isCorrect);
+        }
+        
+        // Update score
+        if (isCorrect) {
+          this.correctAnswers++;
+          this.showMessage('נכון! 🎉', 'success');
+        } else {
+          this.incorrectAnswers++;
+          this.showMessage('לא נכון, התשובה הנכונה היא: ' + question.meaning, 'error');
+        }
+        
+        this.updateProgress();
+        
+        // Disable submit button
+        this.submitBtn.disabled = true;
+        
+        // Move to next question after delay
+        setTimeout(() => {
+          this.nextQuestion();
+        }, 2000);
+      }
+
+      showMultipleChoiceResult(question, isCorrect) {
+        const options = this.questionContent.querySelectorAll('.answer-option');
+        
+        options.forEach((option, index) => {
+          if (index === question.correct) {
+            option.classList.add('correct');
+          } else if (index === this.currentAnswer && !isCorrect) {
+            option.classList.add('incorrect');
+          }
+        });
+      }
+
+      showFillBlankResult(question, isCorrect) {
+        const input = this.questionContent.querySelector('.fill-blank-input');
+        if (input) {
+          if (isCorrect) {
+            input.classList.add('correct');
+          } else {
+            input.classList.add('incorrect');
+            input.value = question.correct;
+          }
+        }
+      }
+
+      skipQuestion() {
+        this.incorrectAnswers++;
+        this.updateProgress();
+        this.showMessage('דילגת על השאלה', 'warning');
+        
+        setTimeout(() => {
+          this.nextQuestion();
+        }, 1000);
+      }
+
+      nextQuestion() {
+        this.currentQuestion++;
+        this.showQuestion();
+      }
+
+      updateProgress() {
+        const total = this.correctAnswers + this.incorrectAnswers;
+        const accuracy = total > 0 ? (this.correctAnswers / total) * 100 : 0;
+        const progress = (total / this.totalQuestions) * 100;
+        
+        this.progressFill.style.width = `${progress}%`;
+        this.correctCount.textContent = this.correctAnswers;
+        this.incorrectCount.textContent = this.incorrectAnswers;
+        this.accuracy.textContent = `${Math.round(accuracy)}%`;
+      }
+
+      completeQuiz() {
+        this.isQuizComplete = true;
+        this.quizContainer.style.display = 'none';
+        this.resultsSection.style.display = 'block';
+        
+        const finalScore = Math.round((this.correctAnswers / this.totalQuestions) * 100);
+        this.showResults(finalScore);
+      }
+
+      showResults(score) {
+        const resultsIcon = document.getElementById('results-icon');
+        const resultsTitle = document.getElementById('results-title');
+        const resultsScore = document.getElementById('results-score');
+        const resultsMessage = document.getElementById('results-message');
+        
+        resultsScore.textContent = `${score}%`;
+        
+        if (score >= 90) {
+          resultsIcon.textContent = '🎉';
+          resultsTitle.textContent = 'מעולה! כל הכבוד!';
+          resultsMessage.textContent = 'השלמת את הקוויז בהצלחה! את מוכנה לעבור לשלב הבא.';
+        } else if (score >= 70) {
+          resultsIcon.textContent = '👏';
+          resultsTitle.textContent = 'טוב מאוד!';
+          resultsMessage.textContent = 'עשית עבודה טובה! המשכי להתאמן ולשפר.';
+        } else {
+          resultsIcon.textContent = '💪';
+          resultsTitle.textContent = 'כמעט שם!';
+          resultsMessage.textContent = 'נסי שוב כדי לשפר את התוצאה שלך.';
+        }
+        
+        // Save score to localStorage
+        try {
+          localStorage.setItem('vocabQuest_quizScore', score.toString());
+        } catch (error) {
+          console.warn('Could not save quiz score:', error);
+        }
+      }
+
+      goToReview() {
+        this.showMessage('עוברים לסקירה... 📚', 'info');
+        
+        setTimeout(() => {
+          window.location.href = '/milestone.html';
+        }, 1500);
+      }
+
+      continueToNext() {
+        this.showMessage('עוברים לשלב הבא... 🚀', 'info');
+        
+        setTimeout(() => {
+          window.location.href = '/winner.html?score=' + 
+            Math.round((this.correctAnswers / this.totalQuestions) * 100);
+        }, 1500);
+      }
+
+      showMessage(message, type = 'info') {
+        // Create toast message
+        const toast = document.createElement('div');
+        toast.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: ${this.getToastColor(type)};
+          color: white;
+          padding: var(--spacing-md) var(--spacing-lg);
+          border-radius: var(--radius-lg);
+          box-shadow: var(--shadow-lg);
+          z-index: 1000;
+          transform: translateX(100%);
+          transition: transform var(--transition-normal);
+          max-width: 300px;
+          font-weight: 500;
+        `;
+        toast.textContent = message;
+        
+        document.body.appendChild(toast);
+        
+        // Animate in
+        setTimeout(() => {
+          toast.style.transform = 'translateX(0)';
+        }, 100);
+        
+        // Remove after 3 seconds
+        setTimeout(() => {
+          toast.style.transform = 'translateX(100%)';
+          setTimeout(() => {
+            if (document.body.contains(toast)) {
+              document.body.removeChild(toast);
+            }
+          }, 300);
+        }, 3000);
+      }
+
+      getToastColor(type) {
+        switch(type) {
+          case 'success': return 'var(--success)';
+          case 'error': return 'var(--error)';
+          case 'warning': return 'var(--warning)';
+          case 'info': return 'var(--primary)';
+          default: return 'var(--primary)';
+        }
+      }
+    }
+
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      new QuizPage();
+    });
+  </script>
+</body>
+</html>

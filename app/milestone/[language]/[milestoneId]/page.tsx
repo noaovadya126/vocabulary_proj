@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter, useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 interface Word {
   id: number;
@@ -10,28 +10,56 @@ interface Word {
   status: 'locked' | 'learning' | 'completed';
 }
 
-const words: Word[] = [
-  { id: 1, hebrew: 'שלום', english: 'Hello', status: 'completed' },
-  { id: 2, hebrew: 'תודה', english: 'Thank you', status: 'completed' },
-  { id: 3, hebrew: 'בבקשה', english: 'Please', status: 'completed' },
-  { id: 4, hebrew: 'סליחה', english: 'Sorry', status: 'completed' },
-  { id: 5, hebrew: 'כן', english: 'Yes', status: 'completed' },
-  { id: 6, hebrew: 'לא', english: 'No', status: 'completed' },
-  { id: 7, hebrew: 'מה', english: 'What', status: 'learning' },
-  { id: 8, hebrew: 'איפה', english: 'Where', status: 'learning' },
-  { id: 9, hebrew: 'מתי', english: 'When', status: 'locked' },
-  { id: 10, hebrew: 'איך', english: 'How', status: 'locked' }
-];
+// Language-specific word sets
+const wordSets = {
+  es: [
+    { id: 1, hebrew: 'Hola', english: 'Hello', status: 'completed' },
+    { id: 2, hebrew: 'Gracias', english: 'Thank you', status: 'completed' },
+    { id: 3, hebrew: 'Por favor', english: 'Please', status: 'completed' },
+    { id: 4, hebrew: 'Lo siento', english: 'Sorry', status: 'completed' },
+    { id: 5, hebrew: 'Sí', english: 'Yes', status: 'completed' },
+    { id: 6, hebrew: 'No', english: 'No', status: 'learning' },
+    { id: 7, hebrew: '¿Qué?', english: 'What?', status: 'learning' },
+    { id: 8, hebrew: '¿Dónde?', english: 'Where?', status: 'learning' },
+    { id: 9, hebrew: '¿Cuándo?', english: 'When?', status: 'learning' },
+    { id: 10, hebrew: '¿Cómo?', english: 'How?', status: 'learning' }
+  ],
+  ko: [
+    { id: 1, hebrew: '안녕하세요', english: 'Hello', status: 'completed' },
+    { id: 2, hebrew: '감사합니다', english: 'Thank you', status: 'completed' },
+    { id: 3, hebrew: '부탁합니다', english: 'Please', status: 'completed' },
+    { id: 4, hebrew: '죄송합니다', english: 'Sorry', status: 'completed' },
+    { id: 5, hebrew: '네', english: 'Yes', status: 'completed' },
+    { id: 6, hebrew: '아니요', english: 'No', status: 'learning' },
+    { id: 7, hebrew: '뭐?', english: 'What?', status: 'learning' },
+    { id: 8, hebrew: '어디?', english: 'Where?', status: 'learning' },
+    { id: 9, hebrew: '언제?', english: 'When?', status: 'learning' },
+    { id: 10, hebrew: '어떻게?', english: 'How?', status: 'learning' }
+  ],
+  fr: [
+    { id: 1, hebrew: 'Bonjour', english: 'Hello', status: 'completed' },
+    { id: 2, hebrew: 'Merci', english: 'Thank you', status: 'completed' },
+    { id: 3, hebrew: 'S\'il vous plaît', english: 'Please', status: 'completed' },
+    { id: 4, hebrew: 'Désolé', english: 'Sorry', status: 'completed' },
+    { id: 5, hebrew: 'Oui', english: 'Yes', status: 'completed' },
+    { id: 6, hebrew: 'Non', english: 'No', status: 'learning' },
+    { id: 7, hebrew: 'Quoi?', english: 'What?', status: 'learning' },
+    { id: 8, hebrew: 'Où?', english: 'Where?', status: 'learning' },
+    { id: 9, hebrew: 'Quand?', english: 'When?', status: 'learning' },
+    { id: 10, hebrew: 'Comment?', english: 'How?', status: 'learning' }
+  ]
+};
 
 const languageNames = {
-  es: 'ספרדית',
-  ko: 'קוריאנית',
-  fr: 'צרפתית'
+  es: 'Spanish',
+  ko: 'Korean',
+  fr: 'French'
 };
 
 export default function MilestonePage() {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
+  const [words, setWords] = useState<Word[]>([]);
   
   const router = useRouter();
   const params = useParams();
@@ -51,11 +79,27 @@ export default function MilestonePage() {
       router.push('/language-selection');
       return;
     }
-  }, [language, router]);
+
+    // Load words for the specific language
+    const languageWords = wordSets[language as keyof typeof wordSets] || wordSets.es;
+    
+    // Load user progress from localStorage
+    const userProgress = localStorage.getItem(`progress_${language}_${milestoneId}`);
+    if (userProgress) {
+      const progress = JSON.parse(userProgress);
+      const updatedWords = languageWords.map(word => ({
+        ...word,
+        status: progress[word.id] || word.status
+      }));
+      setWords(updatedWords);
+    } else {
+      setWords(languageWords);
+    }
+  }, [language, milestoneId, router]);
 
   const handleWordClick = (word: Word) => {
     if (word.status === 'locked') {
-      setToastMessage('מילה זו נעולה עדיין. השלימי את המילים הקודמות תחילה.');
+      setToastMessage('This word is locked. Complete the previous words first.');
       setShowToast(true);
       setTimeout(() => setShowToast(false), 3000);
       return;
@@ -71,10 +115,27 @@ export default function MilestonePage() {
     if (completedWords === words.length) {
       router.push(`/quiz/${language}/${milestoneId}`);
     } else {
-      setToastMessage(`עדיין לא השלמת את כל המילים. השלימי ${words.length - completedWords} מילים נוספות.`);
+      setToastMessage(`You still need to complete ${words.length - completedWords} more words.`);
       setShowToast(true);
       setTimeout(() => setShowToast(false), 3000);
     }
+  };
+
+  // Function to determine if a word should be locked
+  const shouldLockWord = (word: Word, wordIndex: number) => {
+    if (wordIndex === 0) return false; // First word is always accessible
+    
+    // Check if previous word is completed
+    const previousWord = words[wordIndex - 1];
+    return previousWord && previousWord.status !== 'completed';
+  };
+
+  // Update word status based on progression
+  const getWordStatus = (word: Word, wordIndex: number) => {
+    if (shouldLockWord(word, wordIndex)) {
+      return 'locked';
+    }
+    return word.status;
   };
 
   const getStatusIcon = (status: string) => {
@@ -93,13 +154,13 @@ export default function MilestonePage() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'completed':
-        return 'bg-green-100 text-green-800 border-green-200';
+        return 'bg-gradient-to-r from-green-200 to-emerald-200 text-green-700 border-green-300';
       case 'learning':
-        return 'bg-blue-100 text-blue-800 border-blue-200';
+        return 'bg-gradient-to-r from-blue-200 to-cyan-200 text-blue-700 border-blue-300';
       case 'locked':
-        return 'bg-gray-100 text-gray-600 border-gray-200';
+        return 'bg-gradient-to-r from-gray-200 to-gray-300 text-gray-600 border-gray-300';
       default:
-        return 'bg-gray-100 text-gray-600 border-gray-200';
+        return 'bg-gradient-to-r from-gray-200 to-gray-300 text-gray-600 border-gray-300';
     }
   };
 
@@ -107,88 +168,88 @@ export default function MilestonePage() {
   const canTakeQuiz = completedWords === words.length;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-2">
-      <div className="max-w-3xl mx-auto">
-        {/* Header - Ultra Compact */}
-        <div className="text-center mb-3">
-          <h1 className="text-xl font-bold text-gray-900 mb-1">
-            אבן דרך {milestoneId} - {languageNames[language as keyof typeof languageNames]}
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-indigo-50 p-3">
+      <div className="max-w-5xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+            Milestone {milestoneId} - {languageNames[language as keyof typeof languageNames]}
           </h1>
-          <p className="text-sm text-gray-600">
-            למדי את המילים החדשות
+          <p className="text-lg md:text-xl text-gray-600">
+            Master these new words to unlock the next level
           </p>
         </div>
 
-        {/* Progress Summary - Ultra Compact */}
-        <div className="bg-white rounded-lg shadow-md p-3 mb-3">
-          <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-semibold text-gray-900">התקדמות</h3>
-            <span className="text-xs text-gray-600">
-              {completedWords}/{words.length}
+        {/* Progress Summary */}
+        <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-4 mb-6 border border-gray-100">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-lg font-bold text-gray-800">Milestone Progress</h3>
+            <span className="text-base text-gray-600 font-semibold">
+              {completedWords} of {words.length} words completed
             </span>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-1.5">
+          <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
             <div 
-              className="bg-gradient-to-r from-indigo-500 to-cyan-500 h-1.5 rounded-full transition-all duration-1000 ease-out"
+              className="bg-gradient-to-r from-pink-300 via-purple-300 to-blue-300 h-3 rounded-full transition-all duration-1000 ease-out shadow-md"
               style={{ width: `${(completedWords / words.length) * 100}%` }}
             ></div>
           </div>
         </div>
 
-        {/* Words Grid - Ultra Compact */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-3">
-          {words.map((word) => (
+        {/* Words Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 mb-6">
+          {words.map((word, index) => (
             <div
               key={word.id}
               onClick={() => handleWordClick(word)}
-              className={`bg-white rounded-md shadow-sm p-2 cursor-pointer transition-all duration-300 transform hover:scale-105 border ${
-                word.status === 'locked' ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'
-              } ${getStatusColor(word.status)}`}
+              className={`bg-white/80 backdrop-blur-sm rounded-lg shadow-md p-3 cursor-pointer transition-all duration-300 transform hover:scale-105 border-2 hover:shadow-lg ${
+                getWordStatus(word, index) === 'locked' ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'
+              } ${getStatusColor(getWordStatus(word, index))}`}
             >
-              <div className="flex items-center justify-between mb-1">
-                <span className="text-sm font-bold">{word.hebrew}</span>
-                <span className="text-lg">{getStatusIcon(word.status)}</span>
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-base font-bold">{word.english}</span>
+                <span className="text-xl">{getStatusIcon(getWordStatus(word, index))}</span>
               </div>
-              <p className="text-xs text-gray-600">{word.english}</p>
-              <div className="mt-1 text-xs text-gray-500">
-                {word.status === 'completed' ? 'הושלם' : 
-                 word.status === 'learning' ? 'בלמידה' : 'נעול'}
+              <p className="text-sm text-gray-600 mb-2">{word.hebrew}</p>
+              <div className="text-xs font-medium text-center">
+                {getWordStatus(word, index) === 'completed' ? 'Completed' : 
+                 getWordStatus(word, index) === 'learning' ? 'Learning' : 'Locked'}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Quiz Button - Ultra Compact */}
-        <div className="text-center mb-3">
+        {/* Quiz Button */}
+        <div className="text-center mb-6">
           <button
             onClick={handleQuizClick}
             disabled={!canTakeQuiz}
-            className={`px-4 py-2 rounded-md font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105 ${
+            className={`px-6 py-3 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 ${
               canTakeQuiz 
-                ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 shadow-md' 
-                : 'bg-gray-400 cursor-not-allowed'
+                ? 'bg-gradient-to-r from-pink-300 via-purple-300 to-blue-300 text-white hover:from-pink-400 hover:via-purple-400 hover:to-blue-400 shadow-lg' 
+                : 'bg-gray-300 cursor-not-allowed text-gray-600'
             }`}
           >
-            {canTakeQuiz ? '🎯 קוויז' : '🔒 נעול'}
+            {canTakeQuiz ? '🎯 Start Quiz' : '🔒 Quiz Locked - Complete All Words First'}
           </button>
         </div>
 
-        {/* Navigation - Ultra Compact */}
+        {/* Navigation */}
         <div className="text-center">
           <button
             onClick={() => router.push(`/map/${language}`)}
-            className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-800 font-medium"
+            className="px-5 py-2 text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
           >
-            ← חזרה למפה
+            ← Back to Map
           </button>
         </div>
       </div>
 
-      {/* Toast Notification - Compact */}
+      {/* Toast Notification */}
       {showToast && (
-        <div className="fixed top-2 right-2 z-50 bg-blue-500 text-white p-2 rounded-lg shadow-lg text-sm">
+        <div className="fixed top-4 right-4 z-50 bg-gradient-to-r from-blue-300 to-purple-300 text-white p-3 rounded-xl shadow-lg">
           <div className="flex items-center">
-            <span className="mr-1">ℹ️</span>
+            <span className="mr-2 text-lg">ℹ️</span>
             {toastMessage}
           </div>
         </div>

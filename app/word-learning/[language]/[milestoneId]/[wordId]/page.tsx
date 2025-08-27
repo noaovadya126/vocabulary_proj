@@ -3,23 +3,50 @@
 import { useParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-const words = [
-  { id: 1, hebrew: 'שלום', english: 'Hello', image: '👋', audio: 'hello.mp3', video: 'hello.mp4' },
-  { id: 2, hebrew: 'תודה', english: 'Thank you', image: '🙏', audio: 'thankyou.mp3', video: 'thankyou.mp4' },
-  { id: 3, hebrew: 'בבקשה', english: 'Please', image: '🤲', audio: 'please.mp3', video: 'please.mp4' },
-  { id: 4, hebrew: 'סליחה', english: 'Sorry', image: '😔', audio: 'sorry.mp3', video: 'sorry.mp4' },
-  { id: 5, hebrew: 'כן', english: 'Yes', image: '👍', audio: 'yes.mp3', video: 'yes.mp4' },
-  { id: 6, hebrew: 'לא', english: 'No', image: '👎', audio: 'no.mp3', video: 'no.mp4' },
-  { id: 7, hebrew: 'מה', english: 'What', image: '❓', audio: 'what.mp3', video: 'what.mp4' },
-  { id: 8, hebrew: 'איפה', english: 'Where', image: '📍', audio: 'where.mp3', video: 'where.mp4' },
-  { id: 9, hebrew: 'מתי', english: 'When', image: '🕐', audio: 'when.mp3', video: 'when.mp4' },
-  { id: 10, hebrew: 'איך', english: 'How', image: '🤔', audio: 'how.mp3', video: 'how.mp4' }
-];
+// Language-specific word sets
+const wordSets = {
+  es: [
+    { id: 1, hebrew: 'Hola', english: 'Hello', image: '👋', audio: 'hello.mp3', video: 'hello.mp4' },
+    { id: 2, hebrew: 'Gracias', english: 'Thank you', image: '🙏', audio: 'thankyou.mp3', video: 'thankyou.mp4' },
+    { id: 3, hebrew: 'Por favor', english: 'Please', image: '🤲', audio: 'please.mp3', video: 'please.mp4' },
+    { id: 4, hebrew: 'Lo siento', english: 'Sorry', image: '😔', audio: 'sorry.mp3', video: 'sorry.mp4' },
+    { id: 5, hebrew: 'Sí', english: 'Yes', image: '👍', audio: 'yes.mp3', video: 'yes.mp4' },
+    { id: 6, hebrew: 'No', english: 'No', image: '👎', audio: 'no.mp3', video: 'no.mp4' },
+    { id: 7, hebrew: '¿Qué?', english: 'What?', image: '❓', audio: 'what.mp3', video: 'what.mp4' },
+    { id: 8, hebrew: '¿Dónde?', english: 'Where?', image: '📍', audio: 'where.mp3', video: 'where.mp4' },
+    { id: 9, hebrew: '¿Cuándo?', english: 'When?', image: '🕐', audio: 'when.mp3', video: 'when.mp4' },
+    { id: 10, hebrew: '¿Cómo?', english: 'How?', image: '🤔', audio: 'how.mp3', video: 'how.mp4' }
+  ],
+  ko: [
+    { id: 1, hebrew: '안녕하세요', english: 'Hello', image: '👋', audio: 'hello.mp3', video: 'hello.mp4' },
+    { id: 2, hebrew: '감사합니다', english: 'Thank you', image: '🙏', audio: 'thankyou.mp3', video: 'thankyou.mp4' },
+    { id: 3, hebrew: '부탁합니다', english: 'Please', image: '🤲', audio: 'please.mp3', video: 'please.mp4' },
+    { id: 4, hebrew: '죄송합니다', english: 'Sorry', image: '😔', audio: 'sorry.mp3', video: 'sorry.mp4' },
+    { id: 5, hebrew: '네', english: 'Yes', image: '👍', audio: 'yes.mp3', video: 'yes.mp4' },
+    { id: 6, hebrew: '아니요', english: 'No', image: '👎', audio: 'no.mp3', video: 'no.mp4' },
+    { id: 7, hebrew: '뭐?', english: 'What?', image: '❓', audio: 'what.mp3', video: 'what.mp4' },
+    { id: 8, hebrew: '어디?', english: 'Where?', image: '📍', audio: 'where.mp3', video: 'where.mp4' },
+    { id: 9, hebrew: '언제?', english: 'When?', image: '🕐', audio: 'when.mp3', video: 'when.mp4' },
+    { id: 10, hebrew: '어떻게?', english: 'How?', image: '🤔', audio: 'how.mp3', video: 'how.mp4' }
+  ],
+  fr: [
+    { id: 1, hebrew: 'Bonjour', english: 'Hello', image: '👋', audio: 'hello.mp3', video: 'hello.mp4' },
+    { id: 2, hebrew: 'Merci', english: 'Thank you', image: '🙏', audio: 'thankyou.mp3', video: 'thankyou.mp4' },
+    { id: 3, hebrew: 'S\'il vous plaît', english: 'Please', image: '🤲', audio: 'please.mp3', video: 'please.mp4' },
+    { id: 4, hebrew: 'Désolé', english: 'Sorry', image: '😔', audio: 'sorry.mp3', video: 'sorry.mp4' },
+    { id: 5, hebrew: 'Oui', english: 'Yes', image: '👍', audio: 'yes.mp3', video: 'yes.mp4' },
+    { id: 6, hebrew: 'Non', english: 'No', image: '👎', audio: 'no.mp3', video: 'no.mp4' },
+    { id: 7, hebrew: 'Quoi?', english: 'What?', image: '❓', audio: 'what.mp3', video: 'what.mp4' },
+    { id: 8, hebrew: 'Où?', english: 'Where?', image: '📍', audio: 'where.mp3', video: 'where.mp4' },
+    { id: 9, hebrew: 'Quand?', english: 'When?', image: '🕐', audio: 'when.mp3', video: 'when.mp4' },
+    { id: 10, hebrew: 'Comment?', english: 'How?', image: '🤔', audio: 'how.mp3', video: 'how.mp4' }
+  ]
+};
 
 const languageNames = {
-  es: 'ספרדית',
-  ko: 'קוריאנית',
-  fr: 'צרפתית'
+  es: 'Spanish',
+  ko: 'Korean',
+  fr: 'French'
 };
 
 export default function WordLearningPage() {
@@ -27,6 +54,7 @@ export default function WordLearningPage() {
   const [notes, setNotes] = useState('');
   const [isPlaying, setIsPlaying] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [showGotIt, setShowGotIt] = useState(false);
   
   const router = useRouter();
   const params = useParams();
@@ -34,7 +62,7 @@ export default function WordLearningPage() {
   const milestoneId = params.milestoneId as string;
   const wordId = parseInt(params.wordId as string);
 
-  const currentWord = words.find(w => w.id === wordId);
+  const currentWord = wordSets[language as keyof typeof wordSets]?.find(w => w.id === wordId);
 
   useEffect(() => {
     const userData = localStorage.getItem('userData');
@@ -75,121 +103,149 @@ export default function WordLearningPage() {
     localStorage.setItem(`notes_${language}_${milestoneId}_${wordId}`, newNotes);
   };
 
-  const handleContinue = () => {
-    // Mark word as completed
-    router.push(`/milestone/${language}/${milestoneId}`);
+  const handleGotIt = () => {
+    setShowGotIt(true);
+    
+    // Mark current word as completed
+    const progressKey = `progress_${language}_${milestoneId}`;
+    const currentProgress = localStorage.getItem(progressKey);
+    const progress = currentProgress ? JSON.parse(currentProgress) : {};
+    
+    progress[wordId] = 'completed';
+    localStorage.setItem(progressKey, JSON.stringify(progress));
+
+    // Automatically unlock the next word in sequence
+    const nextWordId = parseInt(wordId) + 1;
+    if (nextWordId <= 10) { // Assuming max 10 words per milestone
+      progress[nextWordId] = 'learning';
+      localStorage.setItem(progressKey, JSON.stringify(progress));
+    }
+
+    // Show success message
+    setTimeout(() => {
+      alert('Word completed! Next word unlocked! Progress saved.');
+      router.push(`/milestone/${language}/${milestoneId}`);
+    }, 1000);
   };
 
   if (!currentWord) {
-    return <div>מילה לא נמצאה</div>;
+    return <div>Word not found</div>;
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-2">
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-indigo-50 p-3">
       <div className="max-w-3xl mx-auto">
-        {/* Header - Ultra Compact */}
-        <div className="text-center mb-3">
-          <h1 className="text-xl font-bold text-gray-900 mb-1">
-            למידת מילה - {languageNames[language as keyof typeof languageNames]}
+        {/* Header */}
+        <div className="text-center mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+            Learning Word - {languageNames[language as keyof typeof languageNames]}
           </h1>
-          <p className="text-sm text-gray-600">
-            אבן דרך {milestoneId}, מילה {wordId}
+          <p className="text-lg md:text-xl text-gray-600">
+            Milestone {milestoneId}, Word {wordId}
           </p>
         </div>
 
-        {/* Word Display - Ultra Compact */}
-        <div className="bg-white rounded-lg shadow-md p-3 mb-3">
-          <div className="text-center mb-2">
-            <div className="text-4xl mb-2">{currentWord.image}</div>
-            <div className="space-y-1">
-              <h2 className="text-2xl font-bold text-gray-900">{currentWord.hebrew}</h2>
+        {/* Word Display */}
+        <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 mb-6 border border-gray-100">
+          <div className="text-center mb-4">
+            <div className="text-5xl mb-4">{currentWord.image}</div>
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold text-gray-800">{currentWord.english}</h2>
               {showTranslation && (
-                <p className="text-lg text-indigo-600 font-semibold">{currentWord.english}</p>
+                <p className="text-xl text-purple-600 font-semibold">{currentWord.hebrew}</p>
               )}
             </div>
             <button
               onClick={() => setShowTranslation(!showTranslation)}
-              className="mt-2 px-3 py-1 bg-indigo-500 text-white rounded text-sm hover:bg-indigo-600 transition-colors"
+              className="mt-4 px-4 py-2 bg-gradient-to-r from-pink-300 to-purple-300 text-white rounded-lg hover:from-pink-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-md"
             >
-              {showTranslation ? 'הסתירי תרגום' : 'הראי תרגום'}
+              {showTranslation ? 'Hide Translation' : 'Show Translation'}
             </button>
           </div>
         </div>
 
-        {/* Media Controls - Ultra Compact */}
-        <div className="grid grid-cols-2 gap-2 mb-3">
+        {/* Media Controls */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           {/* Audio Control */}
-          <div className="bg-white rounded-lg shadow-md p-2">
-            <h3 className="text-sm font-semibold text-gray-900 mb-2 text-center">השמע</h3>
+          <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-4 border border-gray-100">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-center">Audio</h3>
             <div className="text-center">
               <button
                 onClick={handleAudioPlay}
                 disabled={isPlaying}
-                className={`w-12 h-12 rounded-full flex items-center justify-center text-lg transition-all duration-300 ${
+                className={`w-16 h-16 rounded-full flex items-center justify-center text-xl transition-all duration-300 ${
                   isPlaying 
-                    ? 'bg-gray-400 cursor-not-allowed' 
-                    : 'bg-blue-500 hover:bg-blue-600 text-white hover:scale-110'
+                    ? 'bg-gray-300 cursor-not-allowed' 
+                    : 'bg-gradient-to-r from-blue-300 to-cyan-300 hover:from-blue-400 hover:to-cyan-400 text-white hover:scale-110 shadow-md'
                 }`}
               >
                 {isPlaying ? '⏸️' : '🔊'}
               </button>
-              <p className="text-xs text-gray-600 mt-1">
-                {isPlaying ? 'מנגן...' : 'לחצי להשמעה'}
+              <p className="text-sm text-gray-600 mt-3">
+                {isPlaying ? 'Playing...' : 'Click to play'}
               </p>
             </div>
           </div>
 
           {/* Video Control */}
-          <div className="bg-white rounded-lg shadow-md p-2">
-            <h3 className="text-sm font-semibold text-gray-900 mb-2 text-center">וידאו</h3>
+          <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-4 border border-gray-100">
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-center">Video</h3>
             <div className="text-center">
               <button
                 onClick={handleVideoPlay}
                 disabled={isVideoPlaying}
-                className={`w-12 h-12 rounded-full flex items-center justify-center text-lg transition-all duration-300 ${
+                className={`w-16 h-16 rounded-full flex items-center justify-center text-xl transition-all duration-300 ${
                   isVideoPlaying 
-                    ? 'bg-gray-400 cursor-not-allowed' 
-                    : 'bg-purple-500 hover:bg-purple-600 text-white hover:scale-110'
+                    ? 'bg-gray-300 cursor-not-allowed' 
+                    : 'bg-gradient-to-r from-purple-300 to-pink-300 hover:from-purple-400 hover:to-pink-400 text-white hover:scale-110 shadow-md'
                 }`}
               >
                 {isVideoPlaying ? '⏸️' : '🎥'}
               </button>
-              <p className="text-xs text-gray-600 mt-1">
-                {isVideoPlaying ? 'מנגן...' : 'לחצי לצפייה'}
+              <p className="text-sm text-gray-600 mt-3">
+                {isVideoPlaying ? 'Playing...' : 'Click to watch'}
               </p>
             </div>
           </div>
         </div>
 
-        {/* Notes Section - Ultra Compact */}
-        <div className="bg-white rounded-lg shadow-md p-2 mb-3">
-          <h3 className="text-sm font-semibold text-gray-900 mb-2 text-center">הערות אישיות</h3>
+        {/* Notes Section */}
+        <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-4 mb-6 border border-gray-100">
+          <h3 className="text-lg font-bold text-gray-800 mb-3 text-center">Personal Notes</h3>
           <textarea
             value={notes}
             onChange={handleNotesChange}
-            placeholder="כתבי לעצמך הערות שיעזרו לזכור את המילה..."
-            className="w-full h-16 p-2 border border-gray-300 rounded text-sm resize-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            placeholder="Write personal notes to help remember this word..."
+            className="w-full h-24 p-3 border border-gray-200 rounded-lg text-base resize-none focus:ring-2 focus:ring-purple-300 focus:border-transparent"
           />
-          <p className="text-xs text-gray-500 mt-1 text-center">
-            הערות נשמרות אוטומטית
+          <p className="text-xs text-gray-500 mt-2 text-center">
+            Notes are saved automatically
           </p>
         </div>
 
-        {/* Action Buttons - Ultra Compact */}
-        <div className="text-center space-y-2">
+        {/* Got It Button */}
+        <div className="text-center mb-4">
           <button
-            onClick={handleContinue}
-            className="px-6 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded text-sm hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-md"
+            onClick={handleGotIt}
+            disabled={showGotIt}
+            className={`px-8 py-3 text-lg font-bold rounded-xl transition-all duration-300 transform hover:scale-105 ${
+              showGotIt 
+                ? 'bg-green-300 text-green-700 cursor-not-allowed' 
+                : 'bg-gradient-to-r from-green-300 to-emerald-300 hover:from-green-400 hover:to-emerald-400 text-white shadow-lg'
+            }`}
           >
-            ✅ המשכי למילה הבאה
+            {showGotIt ? '✅ Got it!' : '🎯 Got it!'}
           </button>
-          
+        </div>
+
+        {/* Action Buttons */}
+        <div className="text-center space-y-3">
           <div>
             <button
               onClick={() => router.push(`/milestone/${language}/${milestoneId}`)}
-              className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800 font-medium"
+              className="px-6 py-2 text-base text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
             >
-              ← חזרה לאבן דרך
+              ← Back to Milestone
             </button>
           </div>
         </div>

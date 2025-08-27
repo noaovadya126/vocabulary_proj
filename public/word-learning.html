@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VocabQuest - למידת מילה</title>
+  <style>
+    :root {
+      /* Professional Color Palette */
+      --primary: #6366F1;      /* Indigo */
+      --secondary: #8B5CF6;    /* Purple */
+      --accent: #06B6D4;       /* Cyan */
+      --error: #DF3F40;        /* Red */
+      --success: #10B981;      /* Green */
+      --warning: #F59E0B;      /* Amber */
+      
+      /* Neutral Colors */
+      --white: #FFFFFF;
+      --gray-50: #F9FAFB;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF;
+      --gray-500: #6B7280;
+      --gray-600: #4B5563;
+      --gray-700: #374151;
+      --gray-800: #1F2937;
+      --gray-900: #111827;
+      
+      /* Spacing System */
+      --spacing-xs: 4px;
+      --spacing-sm: 8px;
+      --spacing-md: 16px;
+      --spacing-lg: 20px;
+      --spacing-xl: 24px;
+      --spacing-2xl: 32px;
+      --spacing-3xl: 48px;
+      --spacing-4xl: 64px;
+      
+      /* Shadows & Effects */
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      
+      /* Border Radius */
+      --radius-sm: 4px;
+      --radius-md: 6px;
+      --radius-lg: 8px;
+      --radius-xl: 12px;
+      --radius-2xl: 16px;
+      --radius-full: 9999px;
+      
+      /* Transitions */
+      --transition-fast: 150ms ease-in-out;
+      --transition-normal: 250ms ease-in-out;
+      --transition-slow: 350ms ease-in-out;
+    }
+
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    body {
+      font-family: 'Heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+      color: var(--gray-900);
+      min-height: 100vh;
+      direction: rtl;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: var(--spacing-md);
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+    h4 { font-size: 1.5rem; }
+    h5 { font-size: 1.25rem; }
+    h6 { font-size: 1rem; }
+
+    p {
+      font-weight: 400;
+      margin-bottom: var(--spacing-md);
+      color: var(--gray-600);
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: var(--spacing-2xl) var(--spacing-lg);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="20" cy="20" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="80" cy="80" r="0.8" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .word-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .word-icon {
+      background: var(--white);
+      color: var(--primary);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .header h1 {
+      color: var(--white);
+      margin-bottom: var(--spacing-sm);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Main Content */
+    .main-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: var(--spacing-lg);
+    }
+
+    /* Word Display Section */
+    .word-display-section {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-3xl);
+      margin-bottom: var(--spacing-2xl);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gray-200);
+      text-align: center;
+    }
+
+    .word-container {
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    .word-original {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: var(--spacing-md);
+      text-shadow: 0 2px 4px rgba(99, 102, 241, 0.1);
+    }
+
+    .word-translation {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .language-toggle {
+      display: inline-flex;
+      background: var(--gray-100);
+      border-radius: var(--radius-full);
+      padding: var(--spacing-xs);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .toggle-btn {
+      background: none;
+      border: none;
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-radius: var(--radius-full);
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      color: var(--gray-600);
+    }
+
+    .toggle-btn.active {
+      background: var(--white);
+      color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Media Section */
+    .media-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-2xl);
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    .video-section, .image-section {
+      background: var(--gray-50);
+      border-radius: var(--radius-xl);
+      padding: var(--spacing-2xl);
+      border: 1px solid var(--gray-200);
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-lg);
+      text-align: center;
+    }
+
+    .video-container {
+      width: 100%;
+      height: 200px;
+      background: var(--gray-200);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--spacing-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--gray-300), var(--gray-400));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 3rem;
+      position: relative;
+    }
+
+    .video-placeholder::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="videoPattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="rgba(255,255,255,0.2)"/></pattern></defs><rect width="100" height="100" fill="url(%23videoPattern)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--primary);
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      box-shadow: var(--shadow-lg);
+      z-index: 2;
+    }
+
+    .play-button:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+      background: var(--white);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .audio-btn {
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      color: var(--white);
+      border: none;
+      padding: var(--spacing-lg) var(--spacing-2xl);
+      border-radius: var(--radius-xl);
+      font-size: 1.125rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      margin: 0 auto;
+    }
+
+    .audio-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .audio-btn:active {
+      transform: translateY(0);
+    }
+
+    .audio-btn.playing {
+      background: linear-gradient(135deg, var(--success), var(--accent));
+      animation: pulse 1s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: translateY(-2px) scale(1); }
+      50% { transform: translateY(-2px) scale(1.05); }
+    }
+
+    .image-container {
+      width: 100%;
+      height: 200px;
+      background: var(--gray-200);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--spacing-lg);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .word-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+    }
+
+    .image-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--gray-300), var(--gray-400));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 4rem;
+    }
+
+    /* Notes Section */
+    .notes-section {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-2xl);
+      margin-bottom: var(--spacing-2xl);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+    }
+
+    .notes-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-lg);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+    }
+
+    .notes-textarea {
+      width: 100%;
+      min-height: 120px;
+      padding: var(--spacing-lg);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      font-family: inherit;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--gray-900);
+      background: var(--gray-50);
+      transition: all var(--transition-normal);
+      resize: vertical;
+    }
+
+    .notes-textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+    }
+
+    .notes-textarea::placeholder {
+      color: var(--gray-400);
+    }
+
+    /* Action Section */
+    .action-section {
+      text-align: center;
+      padding: var(--spacing-2xl);
+    }
+
+    .ok-btn {
+      background: linear-gradient(135deg, var(--success), var(--accent));
+      color: var(--white);
+      border: none;
+      padding: var(--spacing-lg) var(--spacing-3xl);
+      border-radius: var(--radius-xl);
+      font-size: 1.25rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .ok-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .ok-btn:active {
+      transform: translateY(0);
+    }
+
+    .ok-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .progress-info {
+      color: var(--gray-600);
+      font-size: 0.875rem;
+    }
+
+    /* Back Button */
+    .back-btn {
+      position: fixed;
+      top: var(--spacing-lg);
+      right: var(--spacing-lg);
+      background: var(--white);
+      color: var(--gray-700);
+      border: 1px solid var(--gray-300);
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all var(--transition-normal);
+      box-shadow: var(--shadow-sm);
+      z-index: 100;
+    }
+
+    .back-btn:hover {
+      background: var(--gray-50);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header {
+        padding: var(--spacing-xl) var(--spacing-md);
+      }
+
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .main-content {
+        padding: var(--spacing-md);
+      }
+
+      .word-display-section {
+        padding: var(--spacing-2xl);
+      }
+
+      .word-original {
+        font-size: 2.5rem;
+      }
+
+      .word-translation {
+        font-size: 1.75rem;
+      }
+
+      .media-section {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+      }
+
+      .back-btn {
+        top: var(--spacing-md);
+        right: var(--spacing-md);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.75rem;
+      }
+
+      .word-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+      }
+
+      .word-original {
+        font-size: 2rem;
+      }
+
+      .word-translation {
+        font-size: 1.5rem;
+      }
+
+      .word-display-section {
+        padding: var(--spacing-xl);
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .word-display-section,
+    .media-section,
+    .notes-section {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .media-section { animation-delay: 0.1s; }
+    .notes-section { animation-delay: 0.2s; }
+  </style>
+</head>
+<body>
+  <!-- Back Button -->
+  <a href="/milestone.html" class="back-btn">← חזרה</a>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="word-info">
+        <div class="word-icon" id="word-icon">👩‍🦰</div>
+        <h1 id="word-title">למידת מילה</h1>
+      </div>
+      <p>צפי, האזיני ולמדי את המילה החדשה</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Word Display Section -->
+    <div class="word-display-section">
+      <div class="word-container">
+        <div class="word-original" id="word-original">Madre</div>
+        <div class="word-translation" id="word-translation">אמא</div>
+        
+        <div class="language-toggle">
+          <button class="toggle-btn active" data-language="original">מקור</button>
+          <button class="toggle-btn" data-language="translation">תרגום</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Media Section -->
+    <div class="media-section">
+      <!-- Video Section -->
+      <div class="video-section">
+        <h3 class="section-title">📹 וידאו</h3>
+        <div class="video-container">
+          <div class="video-placeholder">
+            <button class="play-button" id="play-button">▶️</button>
+          </div>
+        </div>
+        <div class="audio-section">
+          <button class="audio-btn" id="audio-btn">
+            🔊 האזיני הגייה
+          </button>
+        </div>
+      </div>
+
+      <!-- Image Section -->
+      <div class="image-section">
+        <h3 class="section-title">🖼️ תמונה</h3>
+        <div class="image-container">
+          <div class="image-placeholder">👩‍🦰</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notes Section -->
+    <div class="notes-section">
+      <h3 class="notes-title">
+        📝 הערות אישיות
+        <span style="font-size: 0.875rem; font-weight: 400; color: var(--gray-500);">
+          (רשומי רמזים שיעזרו לך לזכור)
+        </span>
+      </h3>
+      <textarea 
+        class="notes-textarea" 
+        id="notes-textarea"
+        placeholder="למשל: אמא שלי אוהבת לבשל, או: המילה נשמעת כמו 'מאדרה'..."
+      ></textarea>
+    </div>
+
+    <!-- Action Section -->
+    <div class="action-section">
+      <button class="ok-btn" id="ok-btn">
+        ✓ הבנתי את המילה
+      </button>
+      <div class="progress-info">
+        התקדמות: מילה 3 מתוך 10 באבן דרך זו
+      </div>
+    </div>
+  </main>
+
+  <script>
+    class WordLearningPage {
+      constructor() {
+        this.currentWord = 3;
+        this.currentMilestone = 3;
+        this.currentLanguage = 'es';
+        this.isPlaying = false;
+        this.notes = '';
+        
+        this.wordOriginal = document.getElementById('word-original');
+        this.wordTranslation = document.getElementById('word-title');
+        this.wordIcon = document.getElementById('word-icon');
+        this.playButton = document.getElementById('play-button');
+        this.audioBtn = document.getElementById('audio-btn');
+        this.notesTextarea = document.getElementById('notes-textarea');
+        this.okBtn = document.getElementById('ok-btn');
+        this.toggleBtns = document.querySelectorAll('.toggle-btn');
+        
+        this.init();
+      }
+
+      init() {
+        this.loadWordInfo();
+        this.setupEventListeners();
+        this.loadSavedNotes();
+      }
+
+      loadWordInfo() {
+        try {
+          const urlParams = new URLSearchParams(window.location.search);
+          const word = urlParams.get('word');
+          const milestone = urlParams.get('milestone');
+          const language = urlParams.get('language');
+          
+          if (word) {
+            this.currentWord = parseInt(word);
+          }
+          
+          if (milestone) {
+            this.currentMilestone = parseInt(milestone);
+          }
+          
+          if (language) {
+            this.currentLanguage = language;
+          }
+          
+          const wordInfo = this.getWordInfo(language, milestone, word);
+          this.updateWordDisplay(wordInfo);
+          
+        } catch (error) {
+          console.warn('Could not load word info:', error);
+        }
+      }
+
+      getWordInfo(language, milestone, word) {
+        const words = {
+          'es': {
+            3: {
+              1: { original: 'Familia', translation: 'משפחה', icon: '👨‍👩‍👧‍👦', video: '👨‍👩‍👧‍👦', image: '👨‍👩‍👧‍👦' },
+              2: { original: 'Padre', translation: 'אבא', icon: '👨‍🦳', video: '👨‍🦳', image: '👨‍🦳' },
+              3: { original: 'Madre', translation: 'אמא', icon: '👩‍🦰', video: '👩‍🦰', image: '👩‍🦰' },
+              4: { original: 'Hermana', translation: 'אחות', icon: '👧', video: '👧', image: '👧' },
+              5: { original: 'Hermano', translation: 'אח', icon: '👦', video: '👦', image: '👦' },
+              6: { original: 'Abuelo', translation: 'סבא', icon: '👴', video: '👴', image: '👴' },
+              7: { original: 'Abuela', translation: 'סבתא', icon: '👵', video: '👵', image: '👵' },
+              8: { original: 'Hijo', translation: 'בן', icon: '👨‍👩‍👦', video: '👨‍👩‍👦', image: '👨‍👩‍👦' },
+              9: { original: 'Hija', translation: 'בת', icon: '👨‍👩‍👧', video: '👨‍👩‍👧', image: '👨‍👩‍👧' },
+              10: { original: 'Amigo', translation: 'חבר', icon: '👥', video: '👥', image: '👥' }
+            }
+          },
+          'ko': {
+            3: {
+              1: { original: '가족', translation: 'משפחה', icon: '👨‍👩‍👧‍👦', video: '👨‍👩‍👧‍👦', image: '👨‍👩‍👧‍👦' },
+              2: { original: '아버지', translation: 'אבא', icon: '👨‍🦳', video: '👨‍🦳', image: '👨‍🦳' },
+              3: { original: '어머니', translation: 'אמא', icon: '👩‍🦰', video: '👩‍🦰', image: '👩‍🦰' }
+            }
+          },
+          'fr': {
+            3: {
+              1: { original: 'Famille', translation: 'משפחה', icon: '👨‍👩‍👧‍👦', video: '👨‍👩‍👧‍👦', image: '👨‍👩‍👧‍👦' },
+              2: { original: 'Père', translation: 'אבא', icon: '👨‍🦳', video: '👨‍🦳', image: '👨‍🦳' },
+              3: { original: 'Mère', translation: 'אמא', icon: '👩‍🦰', video: '👩‍🦰', image: '👩‍🦰' }
+            }
+          }
+        };
+        
+        return words[language]?.[milestone]?.[word] || {
+          original: 'מילה',
+          translation: 'Word',
+          icon: '📚',
+          video: '📹',
+          image: '🖼️'
+        };
+      }
+
+      updateWordDisplay(wordInfo) {
+        this.wordOriginal.textContent = wordInfo.original;
+        this.wordTranslation.textContent = wordInfo.translation;
+        this.wordIcon.textContent = wordInfo.icon;
+        
+        // Update video and image placeholders
+        const videoPlaceholder = document.querySelector('.video-placeholder');
+        const imagePlaceholder = document.querySelector('.image-placeholder');
+        
+        if (videoPlaceholder) {
+          videoPlaceholder.innerHTML = `
+            ${wordInfo.video}
+            <button class="play-button" id="play-button">▶️</button>
+          `;
+          this.playButton = document.getElementById('play-button');
+        }
+        
+        if (imagePlaceholder) {
+          imagePlaceholder.textContent = wordInfo.image;
+        }
+      }
+
+      setupEventListeners() {
+        // Language toggle
+        this.toggleBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            this.toggleLanguage(btn);
+          });
+        });
+
+        // Play button
+        if (this.playButton) {
+          this.playButton.addEventListener('click', () => {
+            this.playVideo();
+          });
+        }
+
+        // Audio button
+        this.audioBtn.addEventListener('click', () => {
+          this.playAudio();
+        });
+
+        // Notes textarea
+        this.notesTextarea.addEventListener('input', (e) => {
+          this.notes = e.target.value;
+          this.saveNotes();
+        });
+
+        // OK button
+        this.okBtn.addEventListener('click', () => {
+          this.completeWord();
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            window.history.back();
+          }
+          if (e.key === 'Enter' && e.ctrlKey) {
+            this.completeWord();
+          }
+        });
+      }
+
+      toggleLanguage(clickedBtn) {
+        this.toggleBtns.forEach(btn => btn.classList.remove('active'));
+        clickedBtn.classList.add('active');
+        
+        const language = clickedBtn.dataset.language;
+        if (language === 'translation') {
+          this.wordOriginal.style.display = 'none';
+          this.wordTranslation.style.display = 'block';
+        } else {
+          this.wordOriginal.style.display = 'block';
+          this.wordTranslation.style.display = 'block';
+        }
+      }
+
+      playVideo() {
+        this.showMessage('מתחיל וידאו... 🎬', 'info');
+        
+        // Simulate video loading
+        setTimeout(() => {
+          this.showMessage('וידאו פועל! 🎥', 'success');
+        }, 1000);
+      }
+
+      playAudio() {
+        if (this.isPlaying) {
+          this.stopAudio();
+          return;
+        }
+
+        this.isPlaying = true;
+        this.audioBtn.classList.add('playing');
+        this.audioBtn.innerHTML = '⏸️ עצור האזנה';
+        
+        this.showMessage('מאזינה... 🔊', 'info');
+        
+        // Simulate audio duration
+        setTimeout(() => {
+          this.stopAudio();
+        }, 3000);
+      }
+
+      stopAudio() {
+        this.isPlaying = false;
+        this.audioBtn.classList.remove('playing');
+        this.audioBtn.innerHTML = '🔊 האזיני הגייה';
+      }
+
+      saveNotes() {
+        try {
+          const key = `vocabQuest_notes_${this.currentLanguage}_${this.currentMilestone}_${this.currentWord}`;
+          localStorage.setItem(key, this.notes);
+        } catch (error) {
+          console.warn('Could not save notes:', error);
+        }
+      }
+
+      loadSavedNotes() {
+        try {
+          const key = `vocabQuest_notes_${this.currentLanguage}_${this.currentMilestone}_${this.currentWord}`;
+          const savedNotes = localStorage.getItem(key);
+          if (savedNotes) {
+            this.notes = savedNotes;
+            this.notesTextarea.value = savedNotes;
+          }
+        } catch (error) {
+          console.warn('Could not load saved notes:', error);
+        }
+      }
+
+      completeWord() {
+        if (!this.notes.trim()) {
+          this.showMessage('אנא הוסיפי הערה אישית לפני שתמשיכי', 'warning');
+          return;
+        }
+
+        this.showMessage('מעולה! המילה הושלמה! 🎉', 'success');
+        
+        // Show loading state
+        this.okBtn.textContent = 'מעדכן...';
+        this.okBtn.disabled = true;
+
+        // Simulate API call
+        setTimeout(() => {
+          // Navigate back to milestone page
+          window.location.href = `/milestone.html?language=${this.currentLanguage}&milestone=${this.currentMilestone}`;
+        }, 1500);
+      }
+
+      showMessage(message, type = 'info') {
+        // Create toast message
+        const toast = document.createElement('div');
+        toast.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: ${this.getToastColor(type)};
+          color: white;
+          padding: var(--spacing-md) var(--spacing-lg);
+          border-radius: var(--radius-lg);
+          box-shadow: var(--shadow-lg);
+          z-index: 1000;
+          transform: translateX(100%);
+          transition: transform var(--transition-normal);
+          max-width: 300px;
+          font-weight: 500;
+        `;
+        toast.textContent = message;
+        
+        document.body.appendChild(toast);
+        
+        // Animate in
+        setTimeout(() => {
+          toast.style.transform = 'translateX(0)';
+        }, 100);
+        
+        // Remove after 3 seconds
+        setTimeout(() => {
+          toast.style.transform = 'translateX(100%)';
+          setTimeout(() => {
+            if (document.body.contains(toast)) {
+              document.body.removeChild(toast);
+            }
+          }, 300);
+        }, 3000);
+      }
+
+      getToastColor(type) {
+        switch(type) {
+          case 'success': return 'var(--success)';
+          case 'error': return 'var(--error)';
+          case 'warning': return 'var(--warning)';
+          case 'info': return 'var(--primary)';
+          default: return 'var(--primary)';
+        }
+      }
+    }
+
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      new WordLearningPage();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "welcome": "Welcome to VocabQuest",
+  "tagline": "Master new languages through interactive learning",
+  "get_started": "Get Started",
+  "learn_more": "Learn More",
+  "features": "Features",
+  "about": "About",
+  "contact": "Contact",
+  "hero_title": "Learn Languages the Fun Way",
+  "hero_subtitle": "Interactive lessons, games, and quizzes to make language learning engaging and effective",
+  "feature_1_title": "Interactive Learning",
+  "feature_1_desc": "Learn through games, quizzes, and real-world scenarios",
+  "feature_2_title": "Progress Tracking",
+  "feature_2_desc": "Monitor your learning journey with detailed progress reports",
+  "feature_3_title": "Multiple Languages",
+  "feature_3_desc": "Choose from Spanish, Korean, French, and more"
+}
