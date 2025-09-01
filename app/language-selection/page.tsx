@@ -128,15 +128,15 @@ export default function LanguageSelectionPage() {
                   <span className="text-lg">👧</span>
                 </div>
 
-                <div className={`bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 transform hover:scale-105 ${
+                <div className={`bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 transform hover:scale-105 min-h-[280px] flex flex-col ${
                   selectedLanguage === language.id
                     ? 'border-cyan-400 bg-gradient-to-br from-cyan-50 to-blue-50'
                     : 'border-gray-200 hover:border-gray-300 hover:shadow-xl'
                 }`}>
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">{language.flag}</div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-3 break-words">{language.name}</h3>
-                    <p className="text-gray-600 mb-4 break-words">{language.description}</p>
+                  <div className="text-center flex-1 flex flex-col justify-center">
+                    <div className="text-6xl mb-6">{language.flag}</div>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-4 break-words">{language.name}</h3>
+                    <p className="text-gray-600 mb-4 break-words leading-relaxed">{language.description}</p>
                     
                     {/* Selection indicator */}
                     {selectedLanguage === language.id && (
