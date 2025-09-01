@@ -127,6 +127,11 @@ export default function CountryMapPage() {
 
   const completedMilestones = milestones.filter(m => m.status === 'completed').length;
   const progressPercentage = (completedMilestones / milestones.length) * 100;
+  
+  // Debug logging
+  console.log('Milestones:', milestones);
+  console.log('Completed milestones:', completedMilestones);
+  console.log('Total milestones:', milestones.length);
 
   const handleLogout = () => {
     localStorage.removeItem('userData');
