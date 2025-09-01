@@ -128,7 +128,7 @@ export default function LanguageSelectionPage() {
                   <span className="text-lg">👧</span>
                 </div>
 
-                <div className={`bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 transform hover:scale-105 min-h-[280px] flex flex-col ${
+                <div className={`bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 transform hover:scale-105 min-h-[260px] flex flex-col ${
                   selectedLanguage === language.id
                     ? 'border-cyan-400 bg-gradient-to-br from-cyan-50 to-blue-50'
                     : 'border-gray-200 hover:border-gray-300 hover:shadow-xl'
