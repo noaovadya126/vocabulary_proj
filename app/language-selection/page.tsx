@@ -49,6 +49,16 @@ export default function LanguageSelectionPage() {
     router.push(`/map/${selectedLanguage}`);
   };
 
+  const handleLogout = () => {
+    // Clear all user data and session
+    localStorage.removeItem('userData');
+    localStorage.removeItem('selectedLanguage');
+    localStorage.removeItem('auth_token');
+    
+    // Navigate to auth page
+    router.push('/auth');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-indigo-50 relative overflow-hidden">
       {/* Page Character - Main Character */}
@@ -164,10 +174,11 @@ export default function LanguageSelectionPage() {
           {/* Back Button */}
           <div className="text-center mt-6">
             <button
-              onClick={() => router.push('/auth')}
-              className="px-6 py-3 text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words"
+              onClick={handleLogout}
+              className="px-6 py-3 text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words flex items-center justify-center gap-2 mx-auto"
             >
-              ← Back to Login
+              <span className="text-lg">↩</span>
+              Back to Login
             </button>
           </div>
         </div>
