@@ -107,10 +107,10 @@ export default function LanguageSelectionPage() {
               <div
                 key={language.id}
                 onClick={() => handleLanguageSelect(language.id)}
-                className={`relative cursor-pointer transition-all duration-300 transform hover:scale-105 ${
+                className={`relative cursor-pointer transition-all duration-300 ${
                   selectedLanguage === language.id
                     ? 'ring-4 ring-cyan-400 ring-offset-4 ring-offset-pink-50'
-                    : 'hover:shadow-xl'
+                    : ''
                 }`}
               >
                 {/* Character on each card */}
@@ -118,10 +118,10 @@ export default function LanguageSelectionPage() {
                   <span className="text-lg">👧</span>
                 </div>
 
-                <div className={`bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 ${
+                <div className={`bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 transform hover:scale-105 ${
                   selectedLanguage === language.id
                     ? 'border-cyan-400 bg-gradient-to-br from-cyan-50 to-blue-50'
-                    : 'border-gray-200 hover:border-gray-300'
+                    : 'border-gray-200 hover:border-gray-300 hover:shadow-xl'
                 }`}>
                   <div className="text-center">
                     <div className="text-6xl mb-4">{language.flag}</div>
