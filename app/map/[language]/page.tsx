@@ -315,11 +315,11 @@ export default function CountryMapPage() {
         </div>
 
         {/* Navigation */}
-        <div className="text-center mt-8 space-y-4">
+        <div className="text-center mt-8 space-y-6">
           <div className="relative inline-block">
             <button
               onClick={() => router.push(`/vocabulary/${language}`)}
-              className="px-6 py-3 bg-gradient-to-r from-purple-400 to-pink-400 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words text-lg mr-4"
+              className="px-6 py-3 bg-gradient-to-r from-purple-400 to-pink-400 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words text-lg"
             >
               📚 Vocabulary Learning
             </button>
@@ -331,9 +331,10 @@ export default function CountryMapPage() {
           <div className="relative inline-block">
             <button
               onClick={() => router.push('/language-selection')}
-              className="px-6 py-3 text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words text-lg"
+              className="px-6 py-3 text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words text-lg flex items-center justify-center gap-2"
             >
-              ← Back to Language Selection
+              <span className="text-lg">↩</span>
+              Back to Language Selection
             </button>
             <div className="absolute -right-16 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full flex items-center justify-center shadow-lg animate-pulse">
               <span className="text-lg">🔙</span>
