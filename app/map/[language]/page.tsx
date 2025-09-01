@@ -1,7 +1,7 @@
 'use client';
 
 import { useParams, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 
 interface Milestone {
   id: number;
@@ -125,8 +125,14 @@ export default function CountryMapPage() {
     }
   };
 
-  const completedMilestones = milestones.filter(m => m.status === 'completed').length;
-  const progressPercentage = (completedMilestones / milestones.length) * 100;
+  const completedMilestones = useMemo(() => 
+    milestones.filter(m => m.status === 'completed').length, 
+    [milestones]
+  );
+  const progressPercentage = useMemo(() => 
+    (completedMilestones / milestones.length) * 100, 
+    [completedMilestones, milestones.length]
+  );
   
   // Debug logging
   console.log('Milestones:', milestones);
