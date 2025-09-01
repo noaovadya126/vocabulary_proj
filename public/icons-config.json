@@ -1,0 +1,77 @@
+{
+  "pageIcons": {
+    "map": {
+      "mainCharacter": "🗺️",
+      "backgroundCharacters": ["😊", "✍️", "🏃‍♀️"],
+      "progressIcon": "📊",
+      "starIcon": "🌟",
+      "backIcon": "🔙",
+      "floatingParticles": ["💖", "💜", "💙"]
+    },
+    "languageSelection": {
+      "mainCharacter": "🌍",
+      "backgroundCharacters": ["🎯", "📚", "🎨"],
+      "starIcon": "⭐",
+      "floatingParticles": ["✨", "🎉", "🚀"]
+    },
+    "auth": {
+      "mainCharacter": "🔐",
+      "backgroundCharacters": ["👋", "🎭", "🎪"],
+      "starIcon": "💫",
+      "floatingParticles": ["💎", "🌈", "🎊"]
+    },
+    "milestone": {
+      "mainCharacter": "🎯",
+      "backgroundCharacters": ["📖", "🎓", "🏆"],
+      "starIcon": "🌟",
+      "floatingParticles": ["💫", "✨", "🎉"]
+    },
+    "vocabulary": {
+      "mainCharacter": "📚",
+      "backgroundCharacters": ["🎨", "🎭", "🎪"],
+      "starIcon": "⭐",
+      "floatingParticles": ["💎", "🌈", "🎊"]
+    }
+  },
+  "gameIcons": {
+    "memory": {
+      "cardBack": "🃏",
+      "success": "✅",
+      "failure": "❌",
+      "timer": "⏰",
+      "score": "🏆"
+    },
+    "wordSearch": {
+      "searchIcon": "🔍",
+      "foundWord": "✨",
+      "hint": "💡",
+      "timer": "⏱️"
+    },
+    "matching": {
+      "dragIcon": "👆",
+      "dropIcon": "🎯",
+      "success": "🎉",
+      "failure": "😅"
+    },
+    "quiz": {
+      "question": "❓",
+      "correct": "✅",
+      "incorrect": "❌",
+      "timer": "⏰",
+      "score": "📊"
+    }
+  },
+  "milestoneIcons": {
+    "completed": "✓",
+    "current": "📚",
+    "locked": "🔒",
+    "default": "●"
+  },
+  "achievementIcons": {
+    "firstWord": "🥇",
+    "streak": "🔥",
+    "perfect": "💯",
+    "explorer": "🗺️",
+    "master": "👑"
+  }
+}

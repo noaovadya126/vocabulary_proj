@@ -164,17 +164,21 @@ export default function QuizPage() {
       return;
     }
 
-    // Check if user has completed all words in this milestone
+    // Check if user has completed enough words to take the quiz
     const progressKey = `progress_${language}_${milestoneId}`;
     const userProgress = localStorage.getItem(progressKey);
-    if (!userProgress) {
-      router.push(`/milestone/${language}/${milestoneId}`);
-      return;
-    }
-
-    const progress = JSON.parse(userProgress);
-    const completedWords = Object.values(progress).filter(status => status === 'completed').length;
-    if (completedWords < 10) {
+    
+    if (userProgress) {
+      const progress = JSON.parse(userProgress);
+      const completedWords = Object.values(progress).filter(status => status === 'completed').length;
+      
+      if (completedWords < 5) { // Require at least 5 words completed
+        alert('You need to complete at least 5 words before taking the quiz!');
+        router.push(`/milestone/${language}/${milestoneId}`);
+        return;
+      }
+    } else {
+      alert('No progress found! Please complete some words first.');
       router.push(`/milestone/${language}/${milestoneId}`);
       return;
     }
@@ -226,13 +230,6 @@ export default function QuizPage() {
     }, 3000);
   };
 
-  const handleNextQuestion = () => {
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setSelectedAnswer('');
-    }
-  };
-
   const handleFinishQuiz = () => {
     // Save quiz results
     const quizResults = {
@@ -244,6 +241,16 @@ export default function QuizPage() {
     };
     
     localStorage.setItem(`quiz_results_${language}_${milestoneId}`, JSON.stringify(quizResults));
+    
+    // Mark milestone as completed
+    const milestoneProgressKey = `milestone_progress_${language}_${milestoneId}`;
+    const milestoneProgress = localStorage.getItem(milestoneProgressKey);
+    const milestoneData = milestoneProgress ? JSON.parse(milestoneProgress) : {};
+    
+    milestoneData.quizCompleted = true;
+    milestoneData.quizScore = score;
+    milestoneData.quizCompletedAt = new Date().toISOString();
+    localStorage.setItem(milestoneProgressKey, JSON.stringify(milestoneData));
     
     // Navigate to winner page
     router.push(`/winner/${language}/${milestoneId}`);
@@ -296,10 +303,10 @@ export default function QuizPage() {
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent break-words">
             Quiz - {languageNames[language as keyof typeof languageNames]}
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 break-words">
             Milestone {milestoneId} - Test your knowledge
           </p>
         </div>
@@ -307,8 +314,8 @@ export default function QuizPage() {
         {/* Progress */}
         <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-4 mb-6">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-lg font-bold text-gray-800">Quiz Progress</h3>
-            <span className="text-base text-gray-600">
+            <h3 className="text-lg font-bold text-gray-800 break-words">Quiz Progress</h3>
+            <span className="text-base text-gray-600 break-words">
               Question {currentQuestionIndex + 1} of {questions.length}
             </span>
           </div>
@@ -326,7 +333,7 @@ export default function QuizPage() {
             isCorrect ? 'bg-green-100 border-2 border-green-300' : 'bg-red-100 border-2 border-red-300'
           }`}>
             <div className="text-center">
-              <p className={`text-lg font-semibold ${
+              <p className={`text-lg font-semibold break-words ${
                 isCorrect ? 'text-green-700' : 'text-red-700'
               }`}>
                 {feedbackMessage}
@@ -338,10 +345,10 @@ export default function QuizPage() {
         {/* Question Card */}
         <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 mb-6">
           <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 break-words">
               What does "{currentQuestion.word}" mean?
             </h2>
-            <p className="text-sm text-gray-500 mb-4">Multiple Choice</p>
+            <p className="text-sm text-gray-500 mb-4 break-words">Multiple Choice</p>
           </div>
 
           {/* Answer Options */}
@@ -351,7 +358,7 @@ export default function QuizPage() {
                 key={index}
                 onClick={() => handleAnswerSelect(option)}
                 disabled={showAnswerFeedback}
-                className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-300 ${
+                className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-300 break-words ${
                   selectedAnswer === option
                     ? 'border-purple-400 bg-purple-50 text-purple-700'
                     : 'border-gray-200 hover:border-gray-300 bg-white hover:bg-gray-50 text-gray-700'
@@ -359,7 +366,7 @@ export default function QuizPage() {
                   showAnswerFeedback ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'
                 }`}
               >
-                <span className="font-medium">{option}</span>
+                <span className="font-medium break-words">{option}</span>
               </button>
             ))}
           </div>
@@ -367,11 +374,11 @@ export default function QuizPage() {
           {/* Progress Info */}
           <div className="text-center text-sm text-gray-600">
             {showAnswerFeedback ? (
-              <p className="text-purple-600 font-medium">
+              <p className="text-purple-600 font-medium break-words">
                 {currentQuestionIndex < questions.length - 1 ? 'Moving to next question...' : 'Quiz complete!'}
               </p>
             ) : (
-              <p>Click on an answer to submit</p>
+              <p className="break-words">Click on an answer to submit</p>
             )}
           </div>
         </div>

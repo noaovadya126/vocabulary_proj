@@ -1,0 +1,28 @@
+Vocabulary Data Template
+
+This Excel file contains the vocabulary data for all languages. Each row represents one word.
+
+Columns:
+- Language: The language code (ko, es, fr, he, en)
+- Lemma: The word in the original language
+- Phonetic: Romanization/pronunciation guide
+- Translation: Translation in the target language
+- Part of Speech: NOUN, VERB, ADJECTIVE, ADVERB, PRONOUN, PREPOSITION, INTERJECTION
+- Example Native: Example sentence in the original language
+- Example Translation: Example sentence translated
+- Difficulty Level: 1-5 (1=easiest, 5=hardest)
+- Category: Basic, Food, Family, Colors, Numbers, etc.
+- Audio File: Filename for pronunciation audio
+- Image File: Filename for word illustration
+
+Sample Data:
+Language | Lemma | Phonetic | Translation | Part of Speech | Example Native | Example Translation | Difficulty Level | Category | Audio File | Image File
+ko | 안녕하세요 | annyeonghaseyo | Hello | INTERJECTION | 안녕하세요, 만나서 반가워요 | Hello, nice to meet you | 1 | Basic | hello.mp3 | hello_korean_girl.webp
+ko | 감사합니다 | kamsahamnida | Thank you | INTERJECTION | 감사합니다, 정말 고마워요 | Thank you, I really appreciate it | 1 | Basic | thank-you.mp3 | thank_you_korean_girl.webp
+ko | 네 | ne | Yes | INTERJECTION | 네, 맞습니다 | Yes, that's correct | 1 | Basic | yes.mp3 | yes_korean_girl.webp
+es | hola | ola | Hello | INTERJECTION | ¡Hola! ¿Cómo estás? | Hello! How are you? | 1 | Basic | hola.mp3 | hola_spanish.webp
+es | gracias | grasias | Thank you | INTERJECTION | Muchas gracias por tu ayuda | Thank you very much for your help | 1 | Basic | gracias.mp3 | gracias_spanish.webp
+fr | bonjour | bonzhur | Hello | INTERJECTION | Bonjour, comment allez-vous? | Hello, how are you? | 1 | Basic | bonjour.mp3 | bonjour_french.webp
+fr | merci | mersi | Thank you | INTERJECTION | Merci beaucoup pour votre aide | Thank you very much for your help | 1 | Basic | merci.mp3 | merci_french.webp
+he | שלום | shalom | Hello | INTERJECTION | שלום, מה שלומך? | Hello, how are you? | 1 | Basic | shalom.mp3 | shalom_hebrew.webp
+he | תודה | toda | Thank you | INTERJECTION | תודה רבה על העזרה | Thank you very much for the help | 1 | Basic | toda.mp3 | toda_hebrew.webp

@@ -1,29 +1,29 @@
 'use client';
 
-import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 const languages = [
   {
     id: 'es',
     name: 'Spanish',
     flag: '🇪🇸',
-    description: 'Learn Spanish with interactive lessons',
-    color: 'from-green-300 to-emerald-400'
+    description: 'Learn Spanish vocabulary and culture',
+    color: 'from-red-100 to-yellow-100'
   },
   {
     id: 'ko',
     name: 'Korean',
     flag: '🇰🇷',
-    description: 'Master Korean vocabulary and grammar',
-    color: 'from-blue-300 to-indigo-400'
+    description: 'Master Korean language skills',
+    color: 'from-blue-100 to-red-100'
   },
   {
     id: 'fr',
     name: 'French',
     flag: '🇫🇷',
-    description: 'Discover the beauty of French language',
-    color: 'from-purple-300 to-pink-400'
+    description: 'Discover French expressions',
+    color: 'from-blue-100 to-white'
   }
 ];
 
@@ -31,8 +31,6 @@ export default function LanguageSelectionPage() {
   const [selectedLanguage, setSelectedLanguage] = useState<string>('');
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
-  const [toastType, setToastType] = useState<'success' | 'error'>('success');
-  
   const router = useRouter();
 
   const handleLanguageSelect = (languageId: string) => {
@@ -41,48 +39,44 @@ export default function LanguageSelectionPage() {
 
   const handleContinue = () => {
     if (!selectedLanguage) {
-      setToastMessage('Please select a language to continue');
-      setToastType('error');
+      setToastMessage('Please select a language first');
       setShowToast(true);
       setTimeout(() => setShowToast(false), 3000);
       return;
     }
 
     localStorage.setItem('selectedLanguage', selectedLanguage);
-    setToastMessage(`Great choice! You selected ${languages.find(l => l.id === selectedLanguage)?.name}`);
-    setToastType('success');
-    setShowToast(true);
-    
-    setTimeout(() => {
-      router.push(`/map/${selectedLanguage}`);
-    }, 1500);
+    router.push(`/map/${selectedLanguage}`);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-indigo-50 relative overflow-hidden">
-      {/* Background Characters - Positioned strategically */}
-      {/* Top Left - Thoughtful Character */}
+      {/* Page Character - Main Character */}
+      <div className="absolute top-8 left-8 z-10 opacity-80 animate-bounce">
+        <div className="w-24 h-24 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full flex items-center justify-center shadow-lg">
+          <span className="text-5xl">🌍</span>
+        </div>
+      </div>
+
+      {/* Background Characters */}
       <div className="absolute top-16 left-6 z-10 opacity-70 animate-float">
         <div className="w-20 h-20 bg-gradient-to-br from-pink-100 to-purple-100 rounded-full flex items-center justify-center shadow-lg">
           <span className="text-3xl">🤔</span>
         </div>
       </div>
 
-      {/* Top Right - Happy Character */}
       <div className="absolute top-20 right-8 z-10 opacity-70 animate-float-delayed">
         <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full flex items-center justify-center shadow-lg">
           <span className="text-4xl">😊</span>
         </div>
       </div>
 
-      {/* Bottom Left - Writing Character */}
       <div className="absolute bottom-20 left-8 z-10 opacity-70 animate-float-slow">
         <div className="w-28 h-28 bg-gradient-to-br from-green-100 to-blue-100 rounded-full flex items-center justify-center shadow-lg">
           <span className="text-5xl">✍️</span>
         </div>
       </div>
 
-      {/* Bottom Right - Running Character */}
       <div className="absolute bottom-16 right-12 z-10 opacity-70 animate-float-fast">
         <div className="w-32 h-32 bg-gradient-to-br from-orange-100 to-red-100 rounded-full flex items-center justify-center shadow-lg">
           <span className="text-6xl">🏃‍♀️</span>
@@ -94,7 +88,7 @@ export default function LanguageSelectionPage() {
           {/* Header with Character */}
           <div className="text-center mb-8">
             <div className="relative inline-block mb-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent break-words max-w-[600px] mx-auto leading-tight">
                 Choose Your Learning Language
               </h1>
               {/* Character above title */}
@@ -102,7 +96,7 @@ export default function LanguageSelectionPage() {
                 <span className="text-2xl">🎯</span>
               </div>
             </div>
-            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto break-words leading-relaxed">
               Select the language you want to learn and start your vocabulary journey
             </p>
           </div>
@@ -131,8 +125,8 @@ export default function LanguageSelectionPage() {
                 }`}>
                   <div className="text-center">
                     <div className="text-6xl mb-4">{language.flag}</div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-3">{language.name}</h3>
-                    <p className="text-gray-600 mb-4">{language.description}</p>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-3 break-words">{language.name}</h3>
+                    <p className="text-gray-600 mb-4 break-words">{language.description}</p>
                     
                     {/* Selection indicator */}
                     {selectedLanguage === language.id && (
@@ -171,7 +165,7 @@ export default function LanguageSelectionPage() {
           <div className="text-center mt-6">
             <button
               onClick={() => router.push('/auth')}
-              className="px-6 py-3 text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+              className="px-6 py-3 text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words"
             >
               ← Back to Login
             </button>
@@ -181,22 +175,22 @@ export default function LanguageSelectionPage() {
 
       {/* Toast Notification */}
       {showToast && (
-        <div className={`fixed top-4 right-4 z-50 p-4 rounded-xl shadow-lg ${
-          toastType === 'success' 
-            ? 'bg-gradient-to-r from-green-300 to-blue-300 text-white' 
-            : 'bg-gradient-to-r from-red-300 to-pink-300 text-white'
+        <div className={`fixed top-4 right-4 z-50 p-4 rounded-xl shadow-lg max-w-md break-words ${
+          toastMessage.includes('Please select') 
+            ? 'bg-gradient-to-r from-red-300 to-pink-300 text-white' 
+            : 'bg-gradient-to-r from-blue-300 to-purple-300 text-white'
         }`}>
           <div className="flex items-center">
-            <span className="mr-2">{toastType === 'success' ? '✅' : '❌'}</span>
-            {toastMessage}
+            <span className="mr-2">{toastMessage.includes('Please select') ? '❌' : 'ℹ️'}</span>
+            <span className="text-base break-words">{toastMessage}</span>
           </div>
         </div>
       )}
 
-      {/* Floating particles for extra charm */}
-      <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-pink-300 rounded-full animate-ping opacity-60"></div>
-      <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-purple-300 rounded-full animate-ping opacity-60" style={{animationDelay: '1s'}}></div>
-      <div className="absolute bottom-1/3 left-1/3 w-4 h-4 bg-blue-300 rounded-full animate-ping opacity-60" style={{animationDelay: '2s'}}></div>
+      {/* Floating particles */}
+      <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-pink-300 rounded-full animate-ping opacity-60"></div>
+      <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-purple-300 rounded-full animate-ping opacity-60" style={{animationDelay: '1s'}}></div>
+      <div className="absolute bottom-1/3 left-1/3 w-5 h-5 bg-blue-300 rounded-full animate-ping opacity-60" style={{animationDelay: '2s'}}></div>
     </div>
   );
 }

@@ -89,25 +89,6 @@ export const Learnable: React.FC<LearnableProps> = ({
   );
 };
 
-// Higher-order component for wrapping existing elements
-export const withLearnable = <P extends object>(
-  Component: React.ComponentType<P>,
-  termKey: string,
-  namespace?: string
-) => {
-  return React.forwardRef<any, P>((props, ref) => (
-    <Component
-      {...props}
-      ref={ref}
-      children={
-        <Learnable termKey={termKey} namespace={namespace}>
-          {props.children}
-        </Learnable>
-      }
-    />
-  ));
-};
-
 // Hook for getting learnable terms programmatically
 export const useLearnable = () => {
   const { tLearn } = useI18n();

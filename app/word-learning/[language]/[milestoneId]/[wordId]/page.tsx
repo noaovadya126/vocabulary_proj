@@ -115,11 +115,23 @@ export default function WordLearningPage() {
     localStorage.setItem(progressKey, JSON.stringify(progress));
 
     // Automatically unlock the next word in sequence
-    const nextWordId = parseInt(wordId) + 1;
+    const nextWordId = wordId + 1;
     if (nextWordId <= 10) { // Assuming max 10 words per milestone
       progress[nextWordId] = 'learning';
       localStorage.setItem(progressKey, JSON.stringify(progress));
     }
+
+    // Update milestone progress in localStorage
+    const milestoneProgressKey = `milestone_progress_${language}_${milestoneId}`;
+    const milestoneProgress = localStorage.getItem(milestoneProgressKey);
+    const milestoneData = milestoneProgress ? JSON.parse(milestoneProgress) : {};
+    
+    milestoneData.completedWords = milestoneData.completedWords || [];
+    if (!milestoneData.completedWords.includes(wordId)) {
+      milestoneData.completedWords.push(wordId);
+    }
+    milestoneData.lastUpdated = new Date().toISOString();
+    localStorage.setItem(milestoneProgressKey, JSON.stringify(milestoneData));
 
     // Show success message
     setTimeout(() => {
@@ -137,10 +149,15 @@ export default function WordLearningPage() {
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-            Learning Word - {languageNames[language as keyof typeof languageNames]}
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600">
+          <div className="relative inline-block mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent break-words">
+              Learning Word - {languageNames[language as keyof typeof languageNames]}
+            </h1>
+            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-yellow-100 to-orange-100 rounded-full flex items-center justify-center shadow-lg animate-bounce">
+              <span className="text-lg">📖</span>
+            </div>
+          </div>
+          <p className="text-lg md:text-xl text-gray-600 break-words">
             Milestone {milestoneId}, Word {wordId}
           </p>
         </div>
@@ -150,9 +167,9 @@ export default function WordLearningPage() {
           <div className="text-center mb-4">
             <div className="text-5xl mb-4">{currentWord.image}</div>
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold text-gray-800">{currentWord.english}</h2>
+              <h2 className="text-3xl font-bold text-gray-800 break-words">{currentWord.english}</h2>
               {showTranslation && (
-                <p className="text-xl text-purple-600 font-semibold">{currentWord.hebrew}</p>
+                <p className="text-xl text-purple-600 font-semibold break-words">{currentWord.hebrew}</p>
               )}
             </div>
             <button
@@ -168,7 +185,7 @@ export default function WordLearningPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           {/* Audio Control */}
           <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-4 border border-gray-100">
-            <h3 className="text-lg font-bold text-gray-800 mb-3 text-center">Audio</h3>
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-center break-words">Audio</h3>
             <div className="text-center">
               <button
                 onClick={handleAudioPlay}
@@ -181,7 +198,7 @@ export default function WordLearningPage() {
               >
                 {isPlaying ? '⏸️' : '🔊'}
               </button>
-              <p className="text-sm text-gray-600 mt-3">
+              <p className="text-sm text-gray-600 mt-3 break-words">
                 {isPlaying ? 'Playing...' : 'Click to play'}
               </p>
             </div>
@@ -189,7 +206,7 @@ export default function WordLearningPage() {
 
           {/* Video Control */}
           <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-4 border border-gray-100">
-            <h3 className="text-lg font-bold text-gray-800 mb-3 text-center">Video</h3>
+            <h3 className="text-lg font-bold text-gray-800 mb-3 text-center break-words">Video</h3>
             <div className="text-center">
               <button
                 onClick={handleVideoPlay}
@@ -202,7 +219,7 @@ export default function WordLearningPage() {
               >
                 {isVideoPlaying ? '⏸️' : '🎥'}
               </button>
-              <p className="text-sm text-gray-600 mt-3">
+              <p className="text-sm text-gray-600 mt-3 break-words">
                 {isVideoPlaying ? 'Playing...' : 'Click to watch'}
               </p>
             </div>
@@ -211,14 +228,14 @@ export default function WordLearningPage() {
 
         {/* Notes Section */}
         <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-4 mb-6 border border-gray-100">
-          <h3 className="text-lg font-bold text-gray-800 mb-3 text-center">Personal Notes</h3>
+          <h3 className="text-lg font-bold text-gray-800 mb-3 text-center break-words">Personal Notes</h3>
           <textarea
             value={notes}
             onChange={handleNotesChange}
             placeholder="Write personal notes to help remember this word..."
-            className="w-full h-24 p-3 border border-gray-200 rounded-lg text-base resize-none focus:ring-2 focus:ring-purple-300 focus:border-transparent"
+            className="w-full h-24 p-3 border border-gray-200 rounded-lg text-base resize-none focus:ring-2 focus:ring-purple-300 focus:border-transparent break-words"
           />
-          <p className="text-xs text-gray-500 mt-2 text-center">
+          <p className="text-xs text-gray-500 mt-2 text-center break-words">
             Notes are saved automatically
           </p>
         </div>
@@ -243,7 +260,7 @@ export default function WordLearningPage() {
           <div>
             <button
               onClick={() => router.push(`/milestone/${language}/${milestoneId}`)}
-              className="px-6 py-2 text-base text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+              className="px-6 py-2 text-base text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words"
             >
               ← Back to Milestone
             </button>

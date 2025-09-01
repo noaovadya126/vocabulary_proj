@@ -85,29 +85,32 @@ export default function AuthPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-indigo-50 relative overflow-hidden">
-      {/* Background Characters - Positioned strategically */}
-      {/* Top Left - Thoughtful Character */}
+      {/* Page Character - Main Character */}
+      <div className="absolute top-8 left-8 z-10 opacity-80 animate-bounce">
+        <div className="w-24 h-24 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full flex items-center justify-center shadow-lg">
+          <span className="text-5xl">🔐</span>
+        </div>
+      </div>
+
+      {/* Background Characters */}
       <div className="absolute top-16 left-6 z-10 opacity-70 animate-float">
         <div className="w-20 h-20 bg-gradient-to-br from-pink-100 to-purple-100 rounded-full flex items-center justify-center shadow-lg">
           <span className="text-3xl">🤔</span>
         </div>
       </div>
 
-      {/* Top Right - Happy Character */}
       <div className="absolute top-20 right-8 z-10 opacity-70 animate-float-delayed">
         <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full flex items-center justify-center shadow-lg">
           <span className="text-4xl">😊</span>
         </div>
       </div>
 
-      {/* Bottom Left - Writing Character */}
       <div className="absolute bottom-20 left-8 z-10 opacity-70 animate-float-slow">
         <div className="w-28 h-28 bg-gradient-to-br from-green-100 to-blue-100 rounded-full flex items-center justify-center shadow-lg">
           <span className="text-5xl">✍️</span>
         </div>
       </div>
 
-      {/* Bottom Right - Running Character */}
       <div className="absolute bottom-16 right-12 z-10 opacity-70 animate-float-fast">
         <div className="w-32 h-32 bg-gradient-to-br from-orange-100 to-red-100 rounded-full flex items-center justify-center shadow-lg">
           <span className="text-6xl">🏃‍♀️</span>
@@ -127,10 +130,10 @@ export default function AuthPage() {
                 <span className="text-xl">👋</span>
               </div>
             </div>
-            <h1 className="text-3xl font-bold text-gray-800 mb-2 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold text-gray-800 mb-2 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent break-words">
               {isLogin ? 'Welcome Back!' : 'Join VocabQuest'}
             </h1>
-            <p className="text-gray-600">
+            <p className="text-gray-600 break-words">
               {isLogin ? 'Sign in to continue your learning journey' : 'Create an account to start learning'}
             </p>
           </div>
@@ -145,7 +148,7 @@ export default function AuthPage() {
             <form onSubmit={handleSubmit} className="space-y-4">
               {!isLogin && (
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 mb-2 break-words">
                     Full Name
                   </label>
                   <input
@@ -154,7 +157,7 @@ export default function AuthPage() {
                     onChange={(e) => handleInputChange('fullName', e.target.value)}
                     className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-300 transition-all duration-300 ${
                       errors.fullName ? 'border-red-300 bg-red-50' : 'border-gray-200 focus:border-purple-300'
-                    }`}
+                    } break-words`}
                     placeholder="Enter your full name"
                   />
                   {errors.fullName && (
@@ -164,7 +167,7 @@ export default function AuthPage() {
               )}
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2 break-words">
                   Email
                 </label>
                 <input
@@ -173,7 +176,7 @@ export default function AuthPage() {
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-300 transition-all duration-300 ${
                     errors.email ? 'border-red-300 bg-red-50' : 'border-gray-200 focus:border-purple-300'
-                  }`}
+                  } break-words`}
                   placeholder="Enter your email"
                 />
                 {errors.email && (
@@ -182,7 +185,7 @@ export default function AuthPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2 break-words">
                   Password
                 </label>
                 <input
@@ -191,7 +194,7 @@ export default function AuthPage() {
                   onChange={(e) => handleInputChange('password', e.target.value)}
                   className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-300 transition-all duration-300 ${
                     errors.password ? 'border-red-300 bg-red-50' : 'border-gray-200 focus:border-purple-300'
-                  }`}
+                  } break-words`}
                   placeholder="Enter your password"
                 />
                 {errors.password && (
@@ -201,7 +204,7 @@ export default function AuthPage() {
 
               {!isLogin && (
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 mb-2 break-words">
                     Confirm Password
                   </label>
                   <input
@@ -210,7 +213,7 @@ export default function AuthPage() {
                     onChange={(e) => handleInputChange('confirmPassword', e.target.value)}
                     className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-300 transition-all duration-300 ${
                       errors.confirmPassword ? 'border-red-300 bg-red-50' : 'border-gray-200 focus:border-purple-300'
-                    }`}
+                    } break-words`}
                     placeholder="Confirm your password"
                   />
                   {errors.confirmPassword && (
@@ -221,7 +224,7 @@ export default function AuthPage() {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-pink-300 to-purple-300 text-white font-bold py-3 px-4 rounded-lg hover:from-pink-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="w-full bg-gradient-to-r from-pink-300 to-purple-300 text-white font-bold py-3 px-4 rounded-lg hover:from-pink-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg break-words"
               >
                 {isLogin ? 'Sign In' : 'Create Account'}
               </button>
@@ -229,7 +232,7 @@ export default function AuthPage() {
 
             {/* Google Sign In */}
             <div className="mt-6">
-              <button className="w-full bg-white border-2 border-gray-200 text-gray-700 font-medium py-3 px-4 rounded-lg hover:bg-gray-50 transition-all duration-300 flex items-center justify-center space-x-2">
+              <button className="w-full bg-white border-2 border-gray-200 text-gray-700 font-medium py-3 px-4 rounded-lg hover:bg-gray-50 transition-all duration-300 flex items-center justify-center space-x-2 break-words">
                 <span>🔍</span>
                 <span>Continue with Google</span>
               </button>
@@ -239,7 +242,7 @@ export default function AuthPage() {
             <div className="mt-6 text-center">
               <button
                 onClick={() => setIsLogin(!isLogin)}
-                className="text-purple-600 hover:text-purple-700 font-medium transition-colors duration-300"
+                className="text-purple-600 hover:text-purple-700 font-medium transition-colors duration-300 break-words"
               >
                 {isLogin ? "Don't have an account? Sign up" : 'Already have an account? Sign in'}
               </button>
@@ -250,7 +253,7 @@ export default function AuthPage() {
 
       {/* Toast Notification */}
       {showToast && (
-        <div className="fixed top-4 right-4 z-50 bg-gradient-to-r from-green-300 to-blue-300 text-white p-4 rounded-xl shadow-lg">
+        <div className="fixed top-4 right-4 z-50 bg-gradient-to-r from-green-300 to-blue-300 text-white p-4 rounded-xl shadow-lg break-words">
           <div className="flex items-center">
             <span className="mr-2">✅</span>
             {toastMessage}
