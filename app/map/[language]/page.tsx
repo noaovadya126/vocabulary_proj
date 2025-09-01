@@ -191,10 +191,10 @@ export default function CountryMapPage() {
         {/* Progress Bar */}
         <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 mb-8 relative">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-800 break-words max-w-[200px]">Overall Progress</h3>
-            <span className="text-lg text-gray-600 break-words max-w-[300px] text-right">
+            <span className="text-lg text-gray-600 break-words max-w-[300px] text-left">
               {completedMilestones} of {milestones.length} milestones completed
             </span>
+            <h3 className="text-lg font-semibold text-gray-800 break-words max-w-[200px] text-right">Overall Progress</h3>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-4">
             <div 
