@@ -1,196 +1,298 @@
-# VocabQuest - אפליקציית למידת שפות
+🚀 Main Pages & Features
+1. Login Page (/hebrew-auth.html)
 
-אפליקציה אינטראקטיבית ללמידת שפות חדשות עם ממשק עברי מלא ועיצוב מקצועי.
+Full Hebrew interface with RTL support
 
-## 🚀 **דפים ופיצ'רים עיקריים**
+Login with email & password – comprehensive validation
 
-### 1. **דף התחברות** (`/hebrew-auth.html`)
-- **ממשק עברי מלא** עם תמיכה ב-RTL
-- **התחברות עם מייל וסיסמה** - וולידציה מקיפה
-- **הרשמה מלאה** - שם, מייל, סיסמה, אישור סיסמה, תנאי שימוש
-- **כניסה עם Google** (מוק)
-- **הודעות שגיאה ברורות** בעברית עם אנימציות
-- **מצבי טעינה** עם ספינרים ואנימציות
-- **תמיכה במקלדת** - Escape, Enter, Tab navigation
-- **אחסון מקומי** של פרטי משתמש
+Full registration – name, email, password, confirm password, terms of use
 
-### 2. **דף בחירת שפה** (`/language-selection.html`)
-- **3 שפות זמינות**: ספרדית, קוריאנית, צרפתית
-- **כרטיסי שפה אינטראקטיביים** עם אנימציות
-- **סימון שפה נבחרת** עם גבול ציאן
-- **תגי קושי** - קל, בינוני, קשה
-- **כפתור המשך** שנפתח רק אחרי בחירת שפה
-- **אחסון בחירה** ב-localStorage
+Login with Google (mock)
 
-### 3. **דף מפת המדינה** (`/country-map.html`)
-- **6 אבני דרך** עם מצבי התקדמות שונים
-- **מסלול התקדמות** עם אנימת מילוי
-- **אבני דרך נעולות/פתוחות/הושלמו** עם צבעים שונים
-- **דמויות תלמידים** על אבן הדרך הנוכחית
-- **סרגל התקדמות כללי** עם אפקט זוהר
-- **ניווט בין אבני דרך** עם לחיצה
+Clear error messages in Hebrew with animations
 
-### 4. **דף אבן דרך** (`/milestone.html`)
-- **רשימת 10 מילים** עם סטטוסים שונים
-- **מילים שהושלמו** - צבע ירוק עם סימן ✓
-- **מילה נוכחית** - צבע ציאן עם אייקון 📚
-- **מילים נעולות** - צבע אפור עם 🔒
-- **סרגל התקדמות לכל מילה**
-- **כפתור קוויז** שנפתח רק אחרי השלמת כל המילים
+Loading states with spinners and animations
 
-### 5. **דף למידת מילה** (`/word-learning.html`)
-- **הצגת מילה** עם תרגום עברי
-- **מעבר בין שפות** - מקור ותרגום
-- **וידאו הדגמה** עם כפתור הפעלה
-- **האזנה להגייה** עם כפתור אודיו
-- **תמונה מייצגת** של המילה
-- **אזור הערות אישיות** לרמזים
-- **כפתור אישור** - "הבנתי את המילה"
+Keyboard support – Escape, Enter, Tab navigation
 
-### 6. **דף משחק למידה** (`/game.html`)
-- **מילים מרחפות** עם אנימציות float
-- **אזורי יעד** עם תוויות בעברית
-- **מכניקת גרירה/לחיצה** להתאמת מילים
-- **סרגל דיוק** - התקדמות רק אחרי 90%
-- **אנימציות משוב** - זוהר ירוק/אדום
-- **כפתורי עזרה** - רמזים וטעינה מחדש
+Local storage for user details
 
-### 7. **דף זוכה** (`/winner.html`)
-- **דמות שמחה רוקדת** עם אנימציות
-- **5 כוכבים** עם אנימציות מילוי
-- **הצגת תוצאה** באחוזים
-- **הודעת עידוד** מותאמת לתוצאה
-- **קונפטי נופל** ברקע
-- **כפתורי המשך** לשלב הבא או סקירה
+2. Language Selection Page (/language-selection.html)
 
-### 8. **דף קוויז סופי** (`/quiz.html`)
-- **10 שאלות** על כל המילים שלמדת
-- **סוגי שאלות שונים** - בחירה מרובה והשלמה
-- **סרגל התקדמות** עם סטטיסטיקות
-- **משוב מיידי** - נכון/לא נכון
-- **תוצאות סופיות** עם הודעות מותאמות
-- **אפשרות דילוג** על שאלות
+3 available languages: Spanish, Korean, French
 
-## 🎨 **מדריך עיצוב**
+Interactive language cards with animations
 
-### **צבעים מקצועיים:**
-- **ראשי**: אינדיגו `#6366F1`
-- **משני**: סגול `#8B5CF6`
-- **דגש**: ציאן `#06B6D4`
-- **שגיאה**: אדום `#DF3F40`
-- **הצלחה**: ירוק `#10B981`
-- **אזהרה**: ענבר `#F59E0B`
+Selected language highlight with cyan border
 
-### **מערכת רווחים:**
-- **קטן מאוד**: 4px
-- **קטן**: 8px
-- **בינוני**: 16px
-- **גדול**: 20px
-- **גדול מאוד**: 24px
-- **ענק**: 32px
-- **ענק מאוד**: 48px
-- **ענק במיוחד**: 64px
+Difficulty tags – Easy, Medium, Hard
 
-### **צללים וזוויות:**
-- **צל קטן**: `0 1px 2px 0 rgba(0, 0, 0, 0.05)`
-- **צל בינוני**: `0 4px 6px -1px rgba(0, 0, 0, 0.1)`
-- **זוויות מעוגלות**: 4px עד 16px
-- **מעברים**: 150ms עד 350ms
+Continue button unlocked only after language selection
 
-## 🛠️ **התקנה והפעלה**
+Choice stored in localStorage
 
-### **דרישות:**
-- Node.js 16+ 
-- npm או yarn
+3. Country Map Page (/country-map.html)
 
-### **התקנה:**
-```bash
-# שכפול הפרויקט
+6 milestones with different progress states
+
+Progress path with fill animation
+
+Locked/Unlocked/Completed milestones with different colors
+
+Student avatars on the current milestone
+
+General progress bar with glowing effect
+
+Navigation between milestones by clicking
+
+4. Milestone Page (/milestone.html)
+
+List of 10 words with different statuses
+
+Completed words – green with ✓
+
+Current word – cyan with 📚
+
+Locked words – gray with 🔒
+
+Progress bar for each word
+
+Quiz button unlocked only after all words are completed
+
+5. Word Learning Page (/word-learning.html)
+
+Word display with Hebrew translation
+
+Switch between languages – source & translation
+
+Demo video with play button
+
+Pronunciation audio with play button
+
+Representative image of the word
+
+Personal notes section for hints
+
+Confirm button – “I understood the word”
+
+6. Learning Game Page (/game.html)
+
+Floating words with animations
+
+Target zones with Hebrew labels
+
+Drag-and-drop/click mechanic to match words
+
+Accuracy bar – progress only after 90%
+
+Feedback animations – green/red glow
+
+Help buttons – hints & reload
+
+7. Winner Page (/winner.html)
+
+Happy dancing character with animations
+
+5 stars with fill animations
+
+Score display in percentages
+
+Encouragement message adapted to result
+
+Falling confetti background
+
+Continue buttons for next stage or review
+
+8. Final Quiz Page (/quiz.html)
+
+10 questions covering all learned words
+
+Different question types – multiple choice & fill-in
+
+Progress bar with statistics
+
+Immediate feedback – correct/incorrect
+
+Final results with tailored messages
+
+Option to skip questions
+
+🎨 Design Guide
+Professional Colors
+
+Primary: Indigo #6366F1
+
+Secondary: Purple #8B5CF6
+
+Accent: Cyan #06B6D4
+
+Error: Red #DF3F40
+
+Success: Green #10B981
+
+Warning: Amber #F59E0B
+
+Spacing System
+
+Extra small: 4px
+
+Small: 8px
+
+Medium: 16px
+
+Large: 20px
+
+Extra large: 24px
+
+Huge: 32px
+
+Extra huge: 48px
+
+Super huge: 64px
+
+Shadows & Corners
+
+Small shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05)
+
+Medium shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1)
+
+Rounded corners: 4px to 16px
+
+Transitions: 150ms to 350ms
+
+🛠️ Installation & Running
+Requirements
+
+Node.js 16+
+
+npm or yarn
+
+Installation
+# Clone project
 git clone [repository-url]
 cd site_project_code
 
-# התקנת תלויות
+# Install dependencies
 npm install
 
-# הפעלת שרת פיתוח
+# Start dev server
 npm run dev
-```
 
-### **גישה לאפליקציה:**
-- **דף התחברות**: `http://localhost:3000/hebrew-auth.html`
-- **בחירת שפה**: `http://localhost:3000/language-selection.html`
-- **מפת המדינה**: `http://localhost:3000/country-map.html`
-- **אבן דרך**: `http://localhost:3000/milestone.html`
-- **למידת מילים**: `http://localhost:3000/word-learning.html`
-- **משחק למידה**: `http://localhost:3000/game.html`
-- **דף זוכה**: `http://localhost:3000/winner.html`
-- **קוויז סופי**: `http://localhost:3000/quiz.html`
+App Access
 
-## 🔧 **פיצ'רים טכניים**
+Login page: http://localhost:3000/hebrew-auth.html
 
-### **אבטחה:**
-- **מניעת XSS** - סניטציה של כל הקלט
-- **וולידציה מקיפה** - בדיקת כל הפרמטרים
-- **טיפול בשגיאות** - try-catch בכל הפונקציות
+Language selection: http://localhost:3000/language-selection.html
 
-### **נגישות:**
-- **ניווט מקלדת** - Tab, Enter, Escape
-- **תמיכה בקוראי מסך** - ARIA labels
-- **הודעות קוליות** - הודעות למסך
-- **ניגודיות צבעים** - עמידה בסטנדרטים
+Country map: http://localhost:3000/country-map.html
 
-### **ביצועים:**
-- **אנימציות חלקות** - CSS transitions
-- **טעינה מהירה** - קוד מותאם
-- **אחסון מקומי** - localStorage
-- **מעקב ביצועים** - performance monitoring
+Milestone: http://localhost:3000/milestone.html
 
-## 📱 **תמיכה במובייל**
+Word learning: http://localhost:3000/word-learning.html
 
-- **עיצוב רספונסיבי** - מתאים לכל המסכים
-- **ממשק מגע** - כפתורים גדולים ונגישים
-- **ניווט מובייל** - תמיכה במחוות מגע
-- **ביצועים מותאמים** - אופטימיזציה למובייל
+Learning game: http://localhost:3000/game.html
 
-## 🎯 **שימוש באפליקציה**
+Winner page: http://localhost:3000/winner.html
 
-### **זרימת עבודה:**
-1. **התחברות/הרשמה** - יצירת חשבון משתמש
-2. **בחירת שפה** - ספרדית, קוריאנית או צרפתית
-3. **ניווט במפה** - בחירת אבן דרך למידה
-4. **למידת מילים** - צפייה, האזנה והערות
-5. **משחק למידה** - התאמת מילים למשמעויות
-6. **קוויז סופי** - בדיקת הידע שנרכש
-7. **תוצאות וחגיגה** - הצגת הישגים
+Final quiz: http://localhost:3000/quiz.html
 
-### **טיפים לשימוש:**
-- **השתמשי במקלדת** לניווט מהיר
-- **הוסיפי הערות אישיות** לזכירה טובה יותר
-- **תרגלי במשחק** לפני הקוויז
-- **בדקי את ההתקדמות** בסרגל הכללי
+🔧 Technical Features
+Security
 
-## 🚧 **פיתוח עתידי**
+XSS prevention – sanitize all input
 
-### **פיצ'רים מתוכננים:**
-- **Dark Mode** - עיצוב כהה
-- **מערכת הישגים** - תגים ועיטורים
-- **שיתוף חברתי** - תחרויות וחברים
-- **התאמה אישית** - עיצוב מותאם
-- **מערכת רמות** - התקדמות מתקדמת
-- **תמיכה בשפות נוספות** - ערבית, סינית ועוד
+Comprehensive validation – check all parameters
 
-### **שיפורים טכניים:**
-- **PWA** - Progressive Web App
-- **Offline Mode** - עבודה ללא אינטרנט
-- **Sync** - סנכרון בין מכשירים
-- **Analytics** - מעקב התקדמות מתקדם
+Error handling – try-catch in all functions
 
-## 📞 **תמיכה וקשר**
+Accessibility
 
-- **דיווח באגים**: [GitHub Issues]
-- **בקשות פיצ'רים**: [GitHub Discussions]
-- **תמיכה טכנית**: [Email Support]
+Keyboard navigation – Tab, Enter, Escape
 
----
+Screen reader support – ARIA labels
 
-**VocabQuest** - הופכת למידת שפות לחוויה מהנה ומעשית! 🌍✨
+Voice messages – on-screen notifications
+
+Color contrast – standards compliant
+
+Performance
+
+Smooth animations – CSS transitions
+
+Fast loading – optimized code
+
+Local storage – via localStorage
+
+Performance monitoring – tracking tools
+
+📱 Mobile Support
+
+Responsive design – works on all screens
+
+Touch interface – large, accessible buttons
+
+Mobile navigation – gesture support
+
+Optimized performance – for mobile devices
+
+🎯 App Usage
+Workflow
+
+Login/Register – create a user account
+
+Choose a language – Spanish, Korean, or French
+
+Navigate the map – select a learning milestone
+
+Learn words – watch, listen, take notes
+
+Play the learning game – match words with meanings
+
+Final quiz – test acquired knowledge
+
+Results & celebration – achievements displayed
+
+Tips
+
+Use the keyboard for quick navigation
+
+Add personal notes for better recall
+
+Practice with the game before the quiz
+
+Check progress on the general bar
+
+🚧 Future Development
+Planned Features
+
+Dark mode – dark theme
+
+Achievement system – badges & trophies
+
+Social sharing – competitions & friends
+
+Customization – personalized themes
+
+Level system – advanced progression
+
+Additional languages – Arabic, Chinese, and more
+
+Technical Improvements
+
+PWA – Progressive Web App
+
+Offline mode – work without internet
+
+Sync – cross-device synchronization
+
+Analytics – advanced progress tracking
+
+📞 Support & Contact
+
+Bug reports: [GitHub Issues]
+
+Feature requests: [GitHub Discussions]
+
+Technical support: [Email Support]
+
+VocabQuest – making language learning fun and practical! 🌍✨
