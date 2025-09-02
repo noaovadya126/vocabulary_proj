@@ -1,7 +1,7 @@
 'use client';
 
 import { useParams, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 
 interface Milestone {
   id: number;
@@ -125,8 +125,19 @@ export default function CountryMapPage() {
     }
   };
 
-  const completedMilestones = milestones.filter(m => m.status === 'completed').length;
-  const progressPercentage = (completedMilestones / milestones.length) * 100;
+  const completedMilestones = useMemo(() => 
+    milestones.filter(m => m.status === 'completed').length, 
+    [milestones]
+  );
+  const progressPercentage = useMemo(() => 
+    (completedMilestones / milestones.length) * 100, 
+    [completedMilestones, milestones.length]
+  );
+  
+  // Debug logging
+  console.log('Milestones:', milestones);
+  console.log('Completed milestones:', completedMilestones);
+  console.log('Total milestones:', milestones.length);
 
   const handleLogout = () => {
     localStorage.removeItem('userData');
@@ -191,10 +202,10 @@ export default function CountryMapPage() {
         {/* Progress Bar */}
         <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 mb-8 relative">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-800 break-words max-w-[200px]">Overall Progress</h3>
-            <span className="text-lg text-gray-600 break-words max-w-[300px] text-right">
+            <span className="text-lg text-gray-600 break-words max-w-[300px] text-left">
               {completedMilestones} of {milestones.length} milestones completed
             </span>
+            <h3 className="text-lg font-semibold text-gray-800 break-words max-w-[200px] text-right">Overall Progress</h3>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-4">
             <div 
@@ -304,11 +315,11 @@ export default function CountryMapPage() {
         </div>
 
         {/* Navigation */}
-        <div className="text-center mt-8 space-y-4">
+        <div className="text-center mt-8 space-y-6">
           <div className="relative inline-block">
             <button
               onClick={() => router.push(`/vocabulary/${language}`)}
-              className="px-6 py-3 bg-gradient-to-r from-purple-400 to-pink-400 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words text-lg mr-4"
+              className="px-6 py-3 bg-gradient-to-r from-purple-400 to-pink-400 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words text-lg"
             >
               📚 Vocabulary Learning
             </button>
@@ -320,9 +331,10 @@ export default function CountryMapPage() {
           <div className="relative inline-block">
             <button
               onClick={() => router.push('/language-selection')}
-              className="px-6 py-3 text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words text-lg"
+              className="px-6 py-3 text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words text-lg flex items-center justify-center gap-2"
             >
-              ← Back to Language Selection
+              <span className="text-lg">↩</span>
+              Back to Language Selection
             </button>
             <div className="absolute -right-16 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full flex items-center justify-center shadow-lg animate-pulse">
               <span className="text-lg">🔙</span>

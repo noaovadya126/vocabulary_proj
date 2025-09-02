@@ -49,6 +49,16 @@ export default function LanguageSelectionPage() {
     router.push(`/map/${selectedLanguage}`);
   };
 
+  const handleLogout = () => {
+    // Clear all user data and session
+    localStorage.removeItem('userData');
+    localStorage.removeItem('selectedLanguage');
+    localStorage.removeItem('auth_token');
+    
+    // Navigate to auth page
+    router.push('/auth');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-indigo-50 relative overflow-hidden">
       {/* Page Character - Main Character */}
@@ -107,10 +117,10 @@ export default function LanguageSelectionPage() {
               <div
                 key={language.id}
                 onClick={() => handleLanguageSelect(language.id)}
-                className={`relative cursor-pointer transition-all duration-300 transform hover:scale-105 ${
+                className={`relative cursor-pointer transition-all duration-300 ${
                   selectedLanguage === language.id
                     ? 'ring-4 ring-cyan-400 ring-offset-4 ring-offset-pink-50'
-                    : 'hover:shadow-xl'
+                    : ''
                 }`}
               >
                 {/* Character on each card */}
@@ -118,15 +128,15 @@ export default function LanguageSelectionPage() {
                   <span className="text-lg">👧</span>
                 </div>
 
-                <div className={`bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 ${
+                <div className={`bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 transform hover:scale-105 min-h-[260px] flex flex-col ${
                   selectedLanguage === language.id
                     ? 'border-cyan-400 bg-gradient-to-br from-cyan-50 to-blue-50'
-                    : 'border-gray-200 hover:border-gray-300'
+                    : 'border-gray-200 hover:border-gray-300 hover:shadow-xl'
                 }`}>
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">{language.flag}</div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-3 break-words">{language.name}</h3>
-                    <p className="text-gray-600 mb-4 break-words">{language.description}</p>
+                  <div className="text-center flex-1 flex flex-col justify-center">
+                    <div className="text-6xl mb-6">{language.flag}</div>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-4 break-words">{language.name}</h3>
+                    <p className="text-gray-600 mb-4 break-words leading-relaxed">{language.description}</p>
                     
                     {/* Selection indicator */}
                     {selectedLanguage === language.id && (
@@ -164,10 +174,11 @@ export default function LanguageSelectionPage() {
           {/* Back Button */}
           <div className="text-center mt-6">
             <button
-              onClick={() => router.push('/auth')}
-              className="px-6 py-3 text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words"
+              onClick={handleLogout}
+              className="px-6 py-3 text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words flex items-center justify-center gap-2 mx-auto"
             >
-              ← Back to Login
+              <span className="text-lg">↩</span>
+              Back to Login
             </button>
           </div>
         </div>
