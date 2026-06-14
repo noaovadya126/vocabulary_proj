@@ -7,7 +7,7 @@ on:
     paths:
       - '.github/workflows/android-apk.yml'
       - 'android/**'
-      - 'capacitor.config.ts'
+      - 'capacitor.config.json'
       - 'www/**'
       - 'package.json'
       - 'package-lock.json'
@@ -43,7 +43,9 @@ jobs:
           sdkmanager "platforms;android-36" "build-tools;36.0.0"
 
       - name: Sync Capacitor Android
-        run: npx cap copy android
+        run: |
+          ls -la www/
+          npx cap copy android
 
       - name: Make Gradle executable
         working-directory: android
