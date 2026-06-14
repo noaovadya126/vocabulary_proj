@@ -1,12 +1,27 @@
 'use client';
 
 import { cn } from '@/lib/cn';
+import { isNativeApp } from '@/lib/nativeApp';
 import { signIn } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 
 interface AuthStatus {
   googleEnabled: boolean;
   databaseEnabled: boolean;
+}
+
+function getAppOrigin(): string {
+  if (typeof window === 'undefined') return 'https://vocabulary-proj.vercel.app';
+  return window.location.origin;
+}
+
+async function signInWithGoogleNative(): Promise<void> {
+  const origin = getAppOrigin();
+  const callbackUrl = `${origin}/auth/native-callback`;
+  const signInUrl = `${origin}/api/auth/signin/google?callbackUrl=${encodeURIComponent(callbackUrl)}`;
+
+  const { Browser } = await import('@capacitor/browser');
+  await Browser.open({ url: signInUrl, presentationStyle: 'fullscreen' });
 }
 
 export function GoogleSignInButton({ className }: { className?: string }) {
@@ -24,6 +39,10 @@ export function GoogleSignInButton({ className }: { className?: string }) {
     if (!status?.googleEnabled) return;
     setLoading(true);
     try {
+      if (isNativeApp()) {
+        await signInWithGoogleNative();
+        return;
+      }
       await signIn('google', { callbackUrl: '/auth' });
     } finally {
       setLoading(false);
