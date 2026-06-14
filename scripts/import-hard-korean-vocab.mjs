@@ -3,6 +3,7 @@ import path from 'path';
 
 const ROOT = path.resolve('.');
 const INPUT = path.join(ROOT, 'scripts', 'hard-korean-vocab.json');
+const TSV = path.join(ROOT, 'scripts', 'ko-combined.tsv');
 const OUTPUT = path.join(ROOT, 'lib', 'data', 'ko-topik-words.ts');
 
 const POS_CATEGORY = {
@@ -16,6 +17,43 @@ const POS_CATEGORY = {
   determiner: 'Descriptions',
   particle: 'Study & Work',
   suffix: 'Study & Work',
+};
+
+const POS_EN = {
+  명사: 'noun',
+  동사: 'verb',
+  형용사: 'adjective',
+  부사: 'adverb',
+  수사: 'numeral',
+  감탄사: 'interjection',
+  관형사: 'determiner',
+  대명사: 'pronoun',
+  접사: 'suffix',
+};
+
+const CAT_NORM = {
+  Greetings: 'Greetings',
+  Food: 'Food & Drink',
+  Places: 'Places',
+  People: 'People & Family',
+  Time: 'Time & Dates',
+  Numbers: 'Numbers',
+  Verbs: 'Actions',
+  Adjectives: 'Descriptions',
+  Weather: 'Weather & Nature',
+  Transport: 'Transport',
+  Shopping: 'Shopping',
+  'Daily life': 'Daily Life',
+  Study: 'Study & Work',
+  Feelings: 'Feelings',
+  명사: 'Daily Life',
+  동사: 'Actions',
+  형용사: 'Descriptions',
+  부사: 'Daily Life',
+  수사: 'Numbers',
+  감탄사: 'Greetings',
+  관형사: 'Descriptions',
+  대명사: 'People & Family',
 };
 
 const KEYWORD_CATEGORY = [
@@ -64,6 +102,22 @@ function cleanMeaning(meaning) {
   return meaning.split(/[;]/)[0].trim();
 }
 
+function cleanWord(w) {
+  return w.replace(/\d+$/, '').trim();
+}
+
+function parseEnglishFromExplanation(exp) {
+  if (!exp) return null;
+  const trimmed = exp.trim();
+  const latin = trimmed.match(/^([a-zA-Z][a-zA-Z0-9 ,\-/]{0,60})/);
+  if (latin) return latin[1].split(';')[0].trim();
+  if (trimmed.includes(';')) {
+    const part = trimmed.split(';')[0].trim();
+    if (/^[a-zA-Z]/.test(part)) return part;
+  }
+  return null;
+}
+
 const raw = JSON.parse(fs.readFileSync(INPUT, 'utf8'));
 const seen = new Set();
 const words = [];
@@ -71,7 +125,7 @@ const words = [];
 for (const item of raw) {
   const native = item.word?.trim();
   if (!native) continue;
-  const key = `${native}:${item.level}`;
+  const key = native;
   if (seen.has(key)) continue;
   seen.add(key);
 
@@ -80,7 +134,6 @@ for (const item of raw) {
   const topikLevel = topikLevelFromHard(item.level ?? 1);
 
   words.push({
-    id: words.length + 1,
     native,
     english,
     phonetic: item.romanization || native,
@@ -89,17 +142,60 @@ for (const item of raw) {
     image: emoji[category] || '📖',
     exampleNative: item.example_kr || `${native}을(를) 배워요.`,
     exampleEnglish: item.example_en || `Learning: ${english}.`,
-    wordId: words.length + 1,
   });
 }
 
-const level1 = words.filter((w) => w.topikLevel === 1).length;
-const level2 = words.filter((w) => w.topikLevel === 2).length;
+let mergedFromTsv = 0;
+if (fs.existsSync(TSV)) {
+  const rows = fs.readFileSync(TSV, 'utf8').split(/\r?\n/).slice(1).filter(Boolean);
+  for (const line of rows) {
+    const [, word, pos, hanja, explanation, , topik] = line.split('\t');
+    if (!word || !topik) continue;
+    const topikLevel = topik === 'A' ? 1 : topik === 'B' ? 2 : null;
+    if (!topikLevel) continue;
 
-const out = `// Korean vocabulary from Hard Korean (https://hard-korean-app.vercel.app) — ${words.length} words
-// TOPIK levels 1–2 → difficulty 1, levels 3–6 → difficulty 2
-export const KO_TOPIK_WORDS = ${JSON.stringify(words, null, 2)} as const;
+    const native = cleanWord(word);
+    if (seen.has(native)) continue;
+    seen.add(native);
+
+    let english =
+      parseEnglishFromExplanation(explanation) ||
+      parseEnglishFromExplanation(hanja);
+    if (!english) {
+      const posLabel = POS_EN[pos?.split('/')[0]] || 'word';
+      english = `${native} (${posLabel})`;
+    }
+
+    const rawCat = Object.keys(CAT_NORM).find((k) => pos?.includes(k)) || 'Daily life';
+    const category = CAT_NORM[rawCat] || 'Daily Life';
+
+    words.push({
+      native,
+      english,
+      phonetic: native,
+      category,
+      topikLevel,
+      image: emoji[category] || '📖',
+      exampleNative: explanation ? `${native} — ${explanation}` : `${native}을(를) 배워요.`,
+      exampleEnglish: `Learning: ${english}.`,
+    });
+    mergedFromTsv += 1;
+  }
+}
+
+const numbered = words.map((w, i) => ({
+  ...w,
+  id: i + 1,
+  wordId: i + 1,
+}));
+
+const level1 = numbered.filter((w) => w.topikLevel === 1).length;
+const level2 = numbered.filter((w) => w.topikLevel === 2).length;
+
+const out = `// Korean TOPIK 1–2 vocabulary — Hard Korean + official TOPIK word list (${numbered.length} words)
+// Hard Korean levels 1–2 → TOPIK 1, levels 3–6 → TOPIK 2; + ${mergedFromTsv} extra words from ko-combined.tsv
+export const KO_TOPIK_WORDS = ${JSON.stringify(numbered, null, 2)} as const;
 `;
 
 fs.writeFileSync(OUTPUT, out);
-console.log(`Imported ${words.length} words (L1: ${level1}, L2: ${level2}) → ${OUTPUT}`);
+console.log(`Imported ${numbered.length} words (L1: ${level1}, L2: ${level2}, +${mergedFromTsv} from TSV) → ${OUTPUT}`);

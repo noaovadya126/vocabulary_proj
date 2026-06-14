@@ -1,4 +1,4 @@
-// JLPT N5→N4 (1000) + N4/N3 (1000) Japanese vocabulary
+// JLPT N5 (718) + N4/N3 (2740) — beginner & intermediate Japanese
 export const JA_WORDS = [
   {
     "native": "ああ",
@@ -400,12 +400,12 @@ export const JA_WORDS = [
     "native": "雨",
     "english": "rain",
     "phonetic": "あめ",
-    "category": "Daily Life",
+    "category": "Weather & Nature",
     "topikLevel": 1,
     "exampleNative": "雨を例文に使います。",
     "exampleEnglish": "Example with rain.",
     "id": 37,
-    "image": "🏠"
+    "image": "🌤️"
   },
   {
     "native": "飴",
@@ -642,12 +642,12 @@ export const JA_WORDS = [
     "native": "一番",
     "english": "best (most)",
     "phonetic": "いちばん",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "一番を例文に使います。",
     "exampleEnglish": "Example with best (most).",
     "id": 59,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "いつ",
@@ -1137,12 +1137,12 @@ export const JA_WORDS = [
     "native": "お金",
     "english": "money",
     "phonetic": "おかね",
-    "category": "Daily Life",
+    "category": "Shopping",
     "topikLevel": 1,
     "exampleNative": "お金を例文に使います。",
     "exampleEnglish": "Example with money.",
     "id": 104,
-    "image": "🏠"
+    "image": "🛍️"
   },
   {
     "native": "起きる",
@@ -1555,34 +1555,34 @@ export const JA_WORDS = [
     "native": "～回",
     "english": "counter for occurrences (~ times)",
     "phonetic": "～かい",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "～回を例文に使います。",
     "exampleEnglish": "Example with counter for occurrences (~ times).",
     "id": 142,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "～階",
     "english": "counter for stories (floors) of a building",
     "phonetic": "～かい",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "～階を例文に使います。",
     "exampleEnglish": "Example with counter for stories (floors) of a building.",
     "id": 143,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "外国",
     "english": "foreign country; abroad",
     "phonetic": "がいこく",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "外国を例文に使います。",
     "exampleEnglish": "Example with foreign country; abroad.",
     "id": 144,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "外国人",
@@ -1621,23 +1621,23 @@ export const JA_WORDS = [
     "native": "買い物",
     "english": "shopping",
     "phonetic": "かいもの",
-    "category": "Daily Life",
+    "category": "Shopping",
     "topikLevel": 1,
     "exampleNative": "買い物を例文に使います。",
     "exampleEnglish": "Example with shopping.",
     "id": 148,
-    "image": "🏠"
+    "image": "🛍️"
   },
   {
     "native": "買う",
     "english": "to buy",
     "phonetic": "かう",
-    "category": "Daily Life",
+    "category": "Shopping",
     "topikLevel": 1,
     "exampleNative": "買うを例文に使います。",
     "exampleEnglish": "Example with to buy.",
     "id": 149,
-    "image": "🏠"
+    "image": "🛍️"
   },
   {
     "native": "返す",
@@ -1676,12 +1676,12 @@ export const JA_WORDS = [
     "native": "かかる",
     "english": "it takes (amount of time",
     "phonetic": "かかる",
-    "category": "Daily Life",
+    "category": "Shopping",
     "topikLevel": 1,
     "exampleNative": "かかるを例文に使います。",
     "exampleEnglish": "Example with it takes (amount of time.",
     "id": 153,
-    "image": "🏠"
+    "image": "🛍️"
   },
   {
     "native": "鍵",
@@ -1720,12 +1720,12 @@ export const JA_WORDS = [
     "native": "～か月",
     "english": "(number of) months",
     "phonetic": "～かげつ",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "～か月を例文に使います。",
     "exampleEnglish": "Example with (number of) months.",
     "id": 157,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "掛ける",
@@ -1896,12 +1896,12 @@ export const JA_WORDS = [
     "native": "花瓶",
     "english": "(flower) vase",
     "phonetic": "かびん",
-    "category": "Daily Life",
+    "category": "Weather & Nature",
     "topikLevel": 1,
     "exampleNative": "花瓶を例文に使います。",
     "exampleEnglish": "Example with (flower) vase.",
     "id": 173,
-    "image": "🏠"
+    "image": "🌤️"
   },
   {
     "native": "かぶる",
@@ -2072,12 +2072,12 @@ export const JA_WORDS = [
     "native": "木",
     "english": "tree",
     "phonetic": "き",
-    "category": "Daily Life",
+    "category": "Weather & Nature",
     "topikLevel": 1,
     "exampleNative": "木を例文に使います。",
     "exampleEnglish": "Example with tree.",
     "id": 189,
-    "image": "🏠"
+    "image": "🌤️"
   },
   {
     "native": "黄色",
@@ -2446,12 +2446,12 @@ export const JA_WORDS = [
     "native": "国",
     "english": "country; place of origin",
     "phonetic": "くに",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "国を例文に使います。",
     "exampleEnglish": "Example with country; place of origin.",
     "id": 223,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "曇り",
@@ -2655,12 +2655,12 @@ export const JA_WORDS = [
     "native": "～個",
     "english": "counter for small items (e.g.",
     "phonetic": "～こ",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "～個を例文に使います。",
     "exampleEnglish": "Example with counter for small items (e.g..",
     "id": 242,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "五",
@@ -3095,12 +3095,12 @@ export const JA_WORDS = [
     "native": "～冊",
     "english": "counter for books",
     "phonetic": "～さつ",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "～冊を例文に使います。",
     "exampleEnglish": "Example with counter for books.",
     "id": 282,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "雑誌",
@@ -3579,12 +3579,12 @@ export const JA_WORDS = [
     "native": "～人",
     "english": "counter for people",
     "phonetic": "～じん",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "～人を例文に使います。",
     "exampleEnglish": "Example with counter for people.",
     "id": 326,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "新聞",
@@ -4074,12 +4074,12 @@ export const JA_WORDS = [
     "native": "～台",
     "english": "counter for vehicles; machines",
     "phonetic": "～だい",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "～台を例文に使います。",
     "exampleEnglish": "Example with counter for vehicles; machines.",
     "id": 371,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "大学",
@@ -4767,12 +4767,12 @@ export const JA_WORDS = [
     "native": "デパート",
     "english": "(abbr.) department store",
     "phonetic": "デパート",
-    "category": "Daily Life",
+    "category": "Shopping",
     "topikLevel": 1,
     "exampleNative": "デパートを例文に使います。",
     "exampleEnglish": "Example with (abbr.) department store.",
     "id": 434,
-    "image": "🏠"
+    "image": "🛍️"
   },
   {
     "native": "でも",
@@ -4866,12 +4866,12 @@ export const JA_WORDS = [
     "native": "～度",
     "english": "counter for occurrences; ~ degree; ~ point",
     "phonetic": "～ど",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "～度を例文に使います。",
     "exampleEnglish": "Example with counter for occurrences; ~ degree; ~ point.",
     "id": 443,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "ドア",
@@ -5548,12 +5548,12 @@ export const JA_WORDS = [
     "native": "～人",
     "english": "counter for people",
     "phonetic": "～にん",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "～人を例文に使います。",
     "exampleEnglish": "Example with counter for people.",
     "id": 505,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "脱ぐ",
@@ -5713,12 +5713,12 @@ export const JA_WORDS = [
     "native": "～杯",
     "english": "counter for cupfuls",
     "phonetic": "～はい",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "～杯を例文に使います。",
     "exampleEnglish": "Example with counter for cupfuls.",
     "id": 520,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "灰皿",
@@ -5911,12 +5911,12 @@ export const JA_WORDS = [
     "native": "花",
     "english": "flower",
     "phonetic": "はな",
-    "category": "Daily Life",
+    "category": "Weather & Nature",
     "topikLevel": 1,
     "exampleNative": "花を例文に使います。",
     "exampleEnglish": "Example with flower.",
     "id": 538,
-    "image": "🏠"
+    "image": "🌤️"
   },
   {
     "native": "鼻",
@@ -6087,12 +6087,12 @@ export const JA_WORDS = [
     "native": "番号",
     "english": "number",
     "phonetic": "ばんごう",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "番号を例文に使います。",
     "exampleEnglish": "Example with number.",
     "id": 554,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "晩御飯",
@@ -6131,12 +6131,12 @@ export const JA_WORDS = [
     "native": "～匹",
     "english": "counter for small animals",
     "phonetic": "～ひき",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "～匹を例文に使います。",
     "exampleEnglish": "Example with counter for small animals.",
     "id": 558,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "引く",
@@ -6461,12 +6461,12 @@ export const JA_WORDS = [
     "native": "降る",
     "english": "to precipitate",
     "phonetic": "ふる",
-    "category": "Daily Life",
+    "category": "Weather & Nature",
     "topikLevel": 1,
     "exampleNative": "降るを例文に使います。",
     "exampleEnglish": "Example with to precipitate.",
     "id": 588,
-    "image": "🏠"
+    "image": "🌤️"
   },
   {
     "native": "古い",
@@ -6714,12 +6714,12 @@ export const JA_WORDS = [
     "native": "～本",
     "english": "counter for long cylindrical things",
     "phonetic": "～ほん",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "～本を例文に使います。",
     "exampleEnglish": "Example with counter for long cylindrical things.",
     "id": 611,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "本棚",
@@ -6747,12 +6747,12 @@ export const JA_WORDS = [
     "native": "～枚",
     "english": "counter for flat things",
     "phonetic": "～まい",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 1,
     "exampleNative": "～枚を例文に使います。",
     "exampleEnglish": "Example with counter for flat things.",
     "id": 614,
-    "image": "🏠"
+    "image": "🔢"
   },
   {
     "native": "毎朝",
@@ -7022,12 +7022,12 @@ export const JA_WORDS = [
     "native": "店",
     "english": "store",
     "phonetic": "みせ",
-    "category": "Daily Life",
+    "category": "Shopping",
     "topikLevel": 1,
     "exampleNative": "店を例文に使います。",
     "exampleEnglish": "Example with store.",
     "id": 639,
-    "image": "🏠"
+    "image": "🛍️"
   },
   {
     "native": "見せる",
@@ -7044,12 +7044,12 @@ export const JA_WORDS = [
     "native": "道",
     "english": "road",
     "phonetic": "みち",
-    "category": "Daily Life",
+    "category": "Weather & Nature",
     "topikLevel": 1,
     "exampleNative": "道を例文に使います。",
     "exampleEnglish": "Example with road.",
     "id": 641,
-    "image": "🏠"
+    "image": "🌤️"
   },
   {
     "native": "三日",
@@ -7319,12 +7319,12 @@ export const JA_WORDS = [
     "native": "～屋",
     "english": "~ shop",
     "phonetic": "～や",
-    "category": "Daily Life",
+    "category": "Shopping",
     "topikLevel": 1,
     "exampleNative": "～屋を例文に使います。",
     "exampleEnglish": "Example with ~ shop.",
     "id": 666,
-    "image": "🏠"
+    "image": "🛍️"
   },
   {
     "native": "八百屋",
@@ -7484,12 +7484,12 @@ export const JA_WORDS = [
     "native": "雪",
     "english": "snow",
     "phonetic": "ゆき",
-    "category": "Daily Life",
+    "category": "Weather & Nature",
     "topikLevel": 1,
     "exampleNative": "雪を例文に使います。",
     "exampleEnglish": "Example with snow.",
     "id": 681,
-    "image": "🏠"
+    "image": "🌤️"
   },
   {
     "native": "ゆっくりと",
@@ -7903,7 +7903,7 @@ export const JA_WORDS = [
     "english": "to step on",
     "phonetic": "ふむ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "踏むを例文に使います。",
     "exampleEnglish": "Example with to step on.",
     "id": 719,
@@ -7914,7 +7914,7 @@ export const JA_WORDS = [
     "english": "~ district",
     "phonetic": "～く",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "～区を例文に使います。",
     "exampleEnglish": "Example with ~ district.",
     "id": 720,
@@ -7925,7 +7925,7 @@ export const JA_WORDS = [
     "english": "straight",
     "phonetic": "すっと",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "すっとを例文に使います。",
     "exampleEnglish": "Example with straight.",
     "id": 721,
@@ -7936,7 +7936,7 @@ export const JA_WORDS = [
     "english": "to steal; to rob",
     "phonetic": "ぬすむ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "盗むを例文に使います。",
     "exampleEnglish": "Example with to steal; to rob.",
     "id": 722,
@@ -7947,7 +7947,7 @@ export const JA_WORDS = [
     "english": "generally",
     "phonetic": "たいてい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "大抵を例文に使います。",
     "exampleEnglish": "Example with generally.",
     "id": 723,
@@ -7958,7 +7958,7 @@ export const JA_WORDS = [
     "english": "finally",
     "phonetic": "とうとう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "とうとうを例文に使います。",
     "exampleEnglish": "Example with finally.",
     "id": 724,
@@ -7969,7 +7969,7 @@ export const JA_WORDS = [
     "english": "gasoline",
     "phonetic": "ガソリン",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "ガソリンを例文に使います。",
     "exampleEnglish": "Example with gasoline.",
     "id": 725,
@@ -7980,7 +7980,7 @@ export const JA_WORDS = [
     "english": "to sound",
     "phonetic": "なる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "鳴るを例文に使います。",
     "exampleEnglish": "Example with to sound.",
     "id": 726,
@@ -7991,7 +7991,7 @@ export const JA_WORDS = [
     "english": "firmly",
     "phonetic": "しっかり",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "しっかりを例文に使います。",
     "exampleEnglish": "Example with firmly.",
     "id": 727,
@@ -8002,7 +8002,7 @@ export const JA_WORDS = [
     "english": "to live",
     "phonetic": "いきる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "生きるを例文に使います。",
     "exampleEnglish": "Example with to live.",
     "id": 728,
@@ -8013,7 +8013,7 @@ export const JA_WORDS = [
     "english": "bitter",
     "phonetic": "にがい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "苦いを例文に使います。",
     "exampleEnglish": "Example with bitter.",
     "id": 729,
@@ -8024,7 +8024,7 @@ export const JA_WORDS = [
     "english": "to boil",
     "phonetic": "わく",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "沸くを例文に使います。",
     "exampleEnglish": "Example with to boil.",
     "id": 730,
@@ -8035,7 +8035,7 @@ export const JA_WORDS = [
     "english": "opinion",
     "phonetic": "いけん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "意見を例文に使います。",
     "exampleEnglish": "Example with opinion.",
     "id": 731,
@@ -8046,7 +8046,7 @@ export const JA_WORDS = [
     "english": "as I thought",
     "phonetic": "やはり; やっぱり",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "やはり; やっぱりを例文に使います。",
     "exampleEnglish": "Example with as I thought.",
     "id": 732,
@@ -8057,7 +8057,7 @@ export const JA_WORDS = [
     "english": "comic (book)",
     "phonetic": "まんが",
     "category": "Transport",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "漫画を例文に使います。",
     "exampleEnglish": "Example with comic (book).",
     "id": 733,
@@ -8068,7 +8068,7 @@ export const JA_WORDS = [
     "english": "stereo",
     "phonetic": "ステレオ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "ステレオを例文に使います。",
     "exampleEnglish": "Example with stereo.",
     "id": 734,
@@ -8079,7 +8079,7 @@ export const JA_WORDS = [
     "english": "medical science",
     "phonetic": "いがく",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "医学を例文に使います。",
     "exampleEnglish": "Example with medical science.",
     "id": 735,
@@ -8090,21 +8090,10 @@ export const JA_WORDS = [
     "english": "text; text book",
     "phonetic": "テキスト",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "テキストを例文に使います。",
     "exampleEnglish": "Example with text; text book.",
     "id": 736,
-    "image": "🏠"
-  },
-  {
-    "native": "～月",
-    "english": "month",
-    "phonetic": "～つき",
-    "category": "Daily Life",
-    "topikLevel": 1,
-    "exampleNative": "～月を例文に使います。",
-    "exampleEnglish": "Example with month.",
-    "id": 737,
     "image": "🏠"
   },
   {
@@ -8112,10 +8101,10 @@ export const JA_WORDS = [
     "english": "to snap",
     "phonetic": "おる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "折るを例文に使います。",
     "exampleEnglish": "Example with to snap.",
-    "id": 738,
+    "id": 737,
     "image": "🏠"
   },
   {
@@ -8123,10 +8112,10 @@ export const JA_WORDS = [
     "english": "~ meeting",
     "phonetic": "～かい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "～会を例文に使います。",
     "exampleEnglish": "Example with ~ meeting.",
-    "id": 739,
+    "id": 738,
     "image": "🏠"
   },
   {
@@ -8134,10 +8123,10 @@ export const JA_WORDS = [
     "english": "to ask",
     "phonetic": "うかがう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "うかがうを例文に使います。",
     "exampleEnglish": "Example with to ask.",
-    "id": 740,
+    "id": 739,
     "image": "🏠"
   },
   {
@@ -8145,10 +8134,10 @@ export const JA_WORDS = [
     "english": "to be heard",
     "phonetic": "きこえる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "聞こえるを例文に使います。",
     "exampleEnglish": "Example with to be heard.",
-    "id": 741,
+    "id": 740,
     "image": "🏠"
   },
   {
@@ -8156,10 +8145,10 @@ export const JA_WORDS = [
     "english": "I (used by men towards those of equal or lower status)",
     "phonetic": "ぼく",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "僕を例文に使います。",
     "exampleEnglish": "Example with I (used by men towards those of equal or lower status).",
-    "id": 742,
+    "id": 741,
     "image": "🏠"
   },
   {
@@ -8167,10 +8156,10 @@ export const JA_WORDS = [
     "english": "surely",
     "phonetic": "かならず",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "必ずを例文に使います。",
     "exampleEnglish": "Example with surely.",
-    "id": 743,
+    "id": 742,
     "image": "🏠"
   },
   {
@@ -8178,10 +8167,10 @@ export const JA_WORDS = [
     "english": "to break",
     "phonetic": "こわす",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "壊すを例文に使います。",
     "exampleEnglish": "Example with to break.",
-    "id": 744,
+    "id": 743,
     "image": "🏠"
   },
   {
@@ -8189,32 +8178,32 @@ export const JA_WORDS = [
     "english": "to get angry; to scold angrily",
     "phonetic": "おこる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "怒るを例文に使います。",
     "exampleEnglish": "Example with to get angry; to scold angrily.",
-    "id": 745,
+    "id": 744,
     "image": "🏠"
   },
   {
     "native": "床屋",
     "english": "barber's (shop)",
     "phonetic": "とこや",
-    "category": "Daily Life",
-    "topikLevel": 1,
+    "category": "Shopping",
+    "topikLevel": 2,
     "exampleNative": "床屋を例文に使います。",
     "exampleEnglish": "Example with barber's (shop).",
-    "id": 746,
-    "image": "🏠"
+    "id": 745,
+    "image": "🛍️"
   },
   {
     "native": "オートバイ",
     "english": "motorcycle (lit: auto-bi(ke))",
     "phonetic": "オートバイ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "オートバイを例文に使います。",
     "exampleEnglish": "Example with motorcycle (lit: auto-bi(ke)).",
-    "id": 747,
+    "id": 746,
     "image": "🏠"
   },
   {
@@ -8222,10 +8211,10 @@ export const JA_WORDS = [
     "english": "exercise",
     "phonetic": "うんどうする",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "運動を例文に使います。",
     "exampleEnglish": "Example with exercise.",
-    "id": 748,
+    "id": 747,
     "image": "🏠"
   },
   {
@@ -8233,10 +8222,10 @@ export const JA_WORDS = [
     "english": "to cease",
     "phonetic": "やむ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "止むを例文に使います。",
     "exampleEnglish": "Example with to cease.",
-    "id": 749,
+    "id": 748,
     "image": "🏠"
   },
   {
@@ -8244,10 +8233,10 @@ export const JA_WORDS = [
     "english": "if",
     "phonetic": "もし",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "もしを例文に使います。",
     "exampleEnglish": "Example with if.",
-    "id": 750,
+    "id": 749,
     "image": "🏠"
   },
   {
@@ -8255,10 +8244,10 @@ export const JA_WORDS = [
     "english": "surface; front; outside",
     "phonetic": "おもて",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "表を例文に使います。",
     "exampleEnglish": "Example with surface; front; outside.",
-    "id": 751,
+    "id": 750,
     "image": "🏠"
   },
   {
@@ -8266,10 +8255,10 @@ export const JA_WORDS = [
     "english": "college student",
     "phonetic": "だいがくせい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "大学生を例文に使います。",
     "exampleEnglish": "Example with college student.",
-    "id": 752,
+    "id": 751,
     "image": "🏠"
   },
   {
@@ -8277,10 +8266,10 @@ export const JA_WORDS = [
     "english": "driver (by occupation)",
     "phonetic": "うんてんしゅ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "運転手を例文に使います。",
     "exampleEnglish": "Example with driver (by occupation).",
-    "id": 753,
+    "id": 752,
     "image": "🏠"
   },
   {
@@ -8288,10 +8277,10 @@ export const JA_WORDS = [
     "english": "preparation of lessons (for class)",
     "phonetic": "よしゅう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "予習を例文に使います。",
     "exampleEnglish": "Example with preparation of lessons (for class).",
-    "id": 754,
+    "id": 753,
     "image": "🏠"
   },
   {
@@ -8299,10 +8288,10 @@ export const JA_WORDS = [
     "english": "worry",
     "phonetic": "しんぱいする",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "心配を例文に使います。",
     "exampleEnglish": "Example with worry.",
-    "id": 755,
+    "id": 754,
     "image": "🏠"
   },
   {
@@ -8310,10 +8299,10 @@ export const JA_WORDS = [
     "english": "distinction",
     "phonetic": "べつ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "別を例文に使います。",
     "exampleEnglish": "Example with distinction.",
-    "id": 756,
+    "id": 755,
     "image": "🏠"
   },
   {
@@ -8321,10 +8310,10 @@ export const JA_WORDS = [
     "english": "extremely; very",
     "phonetic": "ひじょうに",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "非常にを例文に使います。",
     "exampleEnglish": "Example with extremely; very.",
-    "id": 757,
+    "id": 756,
     "image": "🏠"
   },
   {
@@ -8332,10 +8321,10 @@ export const JA_WORDS = [
     "english": "(someone else's) house; home -- polite word for 家 (いえ) --",
     "phonetic": "おたく",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "お宅を例文に使います。",
     "exampleEnglish": "Example with (someone else's) house; home -- polite word for 家 (いえ) --.",
-    "id": 758,
+    "id": 757,
     "image": "🏠"
   },
   {
@@ -8343,10 +8332,10 @@ export const JA_WORDS = [
     "english": "soft (in reference to texture)",
     "phonetic": "やわらかい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "柔らかいを例文に使います。",
     "exampleEnglish": "Example with soft (in reference to texture).",
-    "id": 759,
+    "id": 758,
     "image": "🏠"
   },
   {
@@ -8354,10 +8343,10 @@ export const JA_WORDS = [
     "english": "to pick up (something)",
     "phonetic": "ひろう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "拾うを例文に使います。",
     "exampleEnglish": "Example with to pick up (something).",
-    "id": 760,
+    "id": 759,
     "image": "🏠"
   },
   {
@@ -8365,10 +8354,10 @@ export const JA_WORDS = [
     "english": "to be (polite)",
     "phonetic": "～ございます",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "～ございますを例文に使います。",
     "exampleEnglish": "Example with to be (polite).",
-    "id": 761,
+    "id": 760,
     "image": "🏠"
   },
   {
@@ -8376,10 +8365,10 @@ export const JA_WORDS = [
     "english": "spirit",
     "phonetic": "き",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "気を例文に使います。",
     "exampleEnglish": "Example with spirit.",
-    "id": 762,
+    "id": 761,
     "image": "🏠"
   },
   {
@@ -8387,10 +8376,10 @@ export const JA_WORDS = [
     "english": "to compare",
     "phonetic": "くらべる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "比べるを例文に使います。",
     "exampleEnglish": "Example with to compare.",
-    "id": 763,
+    "id": 762,
     "image": "🏠"
   },
   {
@@ -8398,10 +8387,10 @@ export const JA_WORDS = [
     "english": "mostly",
     "phonetic": "ほとんど",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "ほとんどを例文に使います。",
     "exampleEnglish": "Example with mostly.",
-    "id": 764,
+    "id": 763,
     "image": "🏠"
   },
   {
@@ -8409,10 +8398,10 @@ export const JA_WORDS = [
     "english": "intention",
     "phonetic": "つもり",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "つもりを例文に使います。",
     "exampleEnglish": "Example with intention.",
-    "id": 765,
+    "id": 764,
     "image": "🏠"
   },
   {
@@ -8420,10 +8409,10 @@ export const JA_WORDS = [
     "english": "suburb",
     "phonetic": "こうがい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "郊外を例文に使います。",
     "exampleEnglish": "Example with suburb.",
-    "id": 766,
+    "id": 765,
     "image": "🏠"
   },
   {
@@ -8431,10 +8420,10 @@ export const JA_WORDS = [
     "english": "useless",
     "phonetic": "だめ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "だめを例文に使います。",
     "exampleEnglish": "Example with useless.",
-    "id": 767,
+    "id": 766,
     "image": "🏠"
   },
   {
@@ -8442,10 +8431,10 @@ export const JA_WORDS = [
     "english": "place where things are sold",
     "phonetic": "うりば",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "売り場を例文に使います。",
     "exampleEnglish": "Example with place where things are sold.",
-    "id": 768,
+    "id": 767,
     "image": "🏠"
   },
   {
@@ -8453,10 +8442,10 @@ export const JA_WORDS = [
     "english": "New Year",
     "phonetic": "しょうがつ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "正月を例文に使います。",
     "exampleEnglish": "Example with New Year.",
-    "id": 769,
+    "id": 768,
     "image": "🏠"
   },
   {
@@ -8464,10 +8453,10 @@ export const JA_WORDS = [
     "english": "rule",
     "phonetic": "きそく",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "規則を例文に使います。",
     "exampleEnglish": "Example with rule.",
-    "id": 770,
+    "id": 769,
     "image": "🏠"
   },
   {
@@ -8475,10 +8464,10 @@ export const JA_WORDS = [
     "english": "yes (informal)",
     "phonetic": "うん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "うんを例文に使います。",
     "exampleEnglish": "Example with yes (informal).",
-    "id": 771,
+    "id": 770,
     "image": "🏠"
   },
   {
@@ -8486,10 +8475,10 @@ export const JA_WORDS = [
     "english": "pronunciation",
     "phonetic": "はつおん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "発音を例文に使います。",
     "exampleEnglish": "Example with pronunciation.",
-    "id": 772,
+    "id": 771,
     "image": "🏠"
   },
   {
@@ -8497,10 +8486,10 @@ export const JA_WORDS = [
     "english": "to bake",
     "phonetic": "やく",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "焼くを例文に使います。",
     "exampleEnglish": "Example with to bake.",
-    "id": 773,
+    "id": 772,
     "image": "🏠"
   },
   {
@@ -8508,10 +8497,10 @@ export const JA_WORDS = [
     "english": "rooftop",
     "phonetic": "おくじょう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "屋上を例文に使います。",
     "exampleEnglish": "Example with rooftop.",
-    "id": 774,
+    "id": 773,
     "image": "🏠"
   },
   {
@@ -8519,10 +8508,10 @@ export const JA_WORDS = [
     "english": "discourtesy",
     "phonetic": "しつれい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "失礼を例文に使います。",
     "exampleEnglish": "Example with discourtesy.",
-    "id": 775,
+    "id": 774,
     "image": "🏠"
   },
   {
@@ -8530,10 +8519,10 @@ export const JA_WORDS = [
     "english": "trash",
     "phonetic": "ごみ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "ごみを例文に使います。",
     "exampleEnglish": "Example with trash.",
-    "id": 776,
+    "id": 775,
     "image": "🏠"
   },
   {
@@ -8541,10 +8530,10 @@ export const JA_WORDS = [
     "english": "Africa",
     "phonetic": "アフリカ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "アフリカを例文に使います。",
     "exampleEnglish": "Example with Africa.",
-    "id": 777,
+    "id": 776,
     "image": "🏠"
   },
   {
@@ -8552,10 +8541,10 @@ export const JA_WORDS = [
     "english": "mark",
     "phonetic": "てん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "点を例文に使います。",
     "exampleEnglish": "Example with mark.",
-    "id": 778,
+    "id": 777,
     "image": "🏠"
   },
   {
@@ -8563,10 +8552,10 @@ export const JA_WORDS = [
     "english": "very hard (as in to work hard)",
     "phonetic": "いっしょうけんめい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "一生懸命を例文に使います。",
     "exampleEnglish": "Example with very hard (as in to work hard).",
-    "id": 779,
+    "id": 778,
     "image": "🏠"
   },
   {
@@ -8574,10 +8563,10 @@ export const JA_WORDS = [
     "english": "now",
     "phonetic": "こんど",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "今度を例文に使います。",
     "exampleEnglish": "Example with now.",
-    "id": 780,
+    "id": 779,
     "image": "🏠"
   },
   {
@@ -8585,10 +8574,10 @@ export const JA_WORDS = [
     "english": "chance",
     "phonetic": "きかい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "機会を例文に使います。",
     "exampleEnglish": "Example with chance.",
-    "id": 781,
+    "id": 780,
     "image": "🏠"
   },
   {
@@ -8596,10 +8585,10 @@ export const JA_WORDS = [
     "english": "to build",
     "phonetic": "たてる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "建てるを例文に使います。",
     "exampleEnglish": "Example with to build.",
-    "id": 782,
+    "id": 781,
     "image": "🏠"
   },
   {
@@ -8607,10 +8596,10 @@ export const JA_WORDS = [
     "english": "complexity",
     "phonetic": "ふくざつ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "複雑を例文に使います。",
     "exampleEnglish": "Example with complexity.",
-    "id": 783,
+    "id": 782,
     "image": "🏠"
   },
   {
@@ -8618,10 +8607,10 @@ export const JA_WORDS = [
     "english": "he",
     "phonetic": "かれ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "彼を例文に使います。",
     "exampleEnglish": "Example with he.",
-    "id": 784,
+    "id": 783,
     "image": "🏠"
   },
   {
@@ -8629,10 +8618,10 @@ export const JA_WORDS = [
     "english": "-- honorific expression for いく",
     "phonetic": "いらっしゃる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "いらっしゃるを例文に使います。",
     "exampleEnglish": "Example with -- honorific expression for いく.",
-    "id": 785,
+    "id": 784,
     "image": "🏠"
   },
   {
@@ -8640,10 +8629,10 @@ export const JA_WORDS = [
     "english": "futon",
     "phonetic": "ふとん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "布団を例文に使います。",
     "exampleEnglish": "Example with futon.",
-    "id": 786,
+    "id": 785,
     "image": "🏠"
   },
   {
@@ -8651,10 +8640,10 @@ export const JA_WORDS = [
     "english": "important",
     "phonetic": "だいじ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "大事を例文に使います。",
     "exampleEnglish": "Example with important.",
-    "id": 787,
+    "id": 786,
     "image": "🏠"
   },
   {
@@ -8662,10 +8651,10 @@ export const JA_WORDS = [
     "english": "a gift; a present",
     "phonetic": "おくりもの",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "贈り物を例文に使います。",
     "exampleEnglish": "Example with a gift; a present.",
-    "id": 788,
+    "id": 787,
     "image": "🏠"
   },
   {
@@ -8673,10 +8662,10 @@ export const JA_WORDS = [
     "english": "thief; burglar",
     "phonetic": "どろぼう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "泥棒を例文に使います。",
     "exampleEnglish": "Example with thief; burglar.",
-    "id": 789,
+    "id": 788,
     "image": "🏠"
   },
   {
@@ -8684,10 +8673,10 @@ export const JA_WORDS = [
     "english": "made in ~",
     "phonetic": "～せい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "～製を例文に使います。",
     "exampleEnglish": "Example with made in ~.",
-    "id": 790,
+    "id": 789,
     "image": "🏠"
   },
   {
@@ -8695,10 +8684,10 @@ export const JA_WORDS = [
     "english": "caution",
     "phonetic": "ちゅうい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "注意を例文に使います。",
     "exampleEnglish": "Example with caution.",
-    "id": 791,
+    "id": 790,
     "image": "🏠"
   },
   {
@@ -8706,10 +8695,10 @@ export const JA_WORDS = [
     "english": "typhoon",
     "phonetic": "たいふう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "台風を例文に使います。",
     "exampleEnglish": "Example with typhoon.",
-    "id": 792,
+    "id": 791,
     "image": "🏠"
   },
   {
@@ -8717,32 +8706,32 @@ export const JA_WORDS = [
     "english": "sun",
     "phonetic": "ひ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "日を例文に使います。",
     "exampleEnglish": "Example with sun.",
-    "id": 793,
+    "id": 792,
     "image": "🏠"
   },
   {
     "native": "～軒",
     "english": "counter for houses",
     "phonetic": "～けん",
-    "category": "Daily Life",
-    "topikLevel": 1,
+    "category": "Numbers",
+    "topikLevel": 2,
     "exampleNative": "～軒を例文に使います。",
     "exampleEnglish": "Example with counter for houses.",
-    "id": 794,
-    "image": "🏠"
+    "id": 793,
+    "image": "🔢"
   },
   {
     "native": "そう",
     "english": "really",
     "phonetic": "そう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "そうを例文に使います。",
     "exampleEnglish": "Example with really.",
-    "id": 795,
+    "id": 794,
     "image": "🏠"
   },
   {
@@ -8750,10 +8739,10 @@ export const JA_WORDS = [
     "english": "to pass (by)",
     "phonetic": "とおる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "通るを例文に使います。",
     "exampleEnglish": "Example with to pass (by).",
-    "id": 796,
+    "id": 795,
     "image": "🏠"
   },
   {
@@ -8761,10 +8750,10 @@ export const JA_WORDS = [
     "english": "to exceed",
     "phonetic": "すぎる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "過ぎるを例文に使います。",
     "exampleEnglish": "Example with to exceed.",
-    "id": 797,
+    "id": 796,
     "image": "🏠"
   },
   {
@@ -8772,10 +8761,10 @@ export const JA_WORDS = [
     "english": "report",
     "phonetic": "レポート; リポート",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "レポート; リポートを例文に使います。",
     "exampleEnglish": "Example with report.",
-    "id": 798,
+    "id": 797,
     "image": "🏠"
   },
   {
@@ -8783,10 +8772,10 @@ export const JA_WORDS = [
     "english": "leaf",
     "phonetic": "は",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "葉を例文に使います。",
     "exampleEnglish": "Example with leaf.",
-    "id": 799,
+    "id": 798,
     "image": "🏠"
   },
   {
@@ -8794,10 +8783,10 @@ export const JA_WORDS = [
     "english": "necessary",
     "phonetic": "ひつよう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "必要を例文に使います。",
     "exampleEnglish": "Example with necessary.",
-    "id": 800,
+    "id": 799,
     "image": "🏠"
   },
   {
@@ -8805,10 +8794,10 @@ export const JA_WORDS = [
     "english": "section manager",
     "phonetic": "かちょう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "課長を例文に使います。",
     "exampleEnglish": "Example with section manager.",
-    "id": 801,
+    "id": 800,
     "image": "🏠"
   },
   {
@@ -8816,10 +8805,10 @@ export const JA_WORDS = [
     "english": "earthquake",
     "phonetic": "じしん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "地震を例文に使います。",
     "exampleEnglish": "Example with earthquake.",
-    "id": 802,
+    "id": 801,
     "image": "🏠"
   },
   {
@@ -8827,10 +8816,10 @@ export const JA_WORDS = [
     "english": "and",
     "phonetic": "すると",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "するとを例文に使います。",
     "exampleEnglish": "Example with and.",
-    "id": 803,
+    "id": 802,
     "image": "🏠"
   },
   {
@@ -8838,10 +8827,10 @@ export const JA_WORDS = [
     "english": "to end",
     "phonetic": "やめる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "止めるを例文に使います。",
     "exampleEnglish": "Example with to end.",
-    "id": 804,
+    "id": 803,
     "image": "🏠"
   },
   {
@@ -8849,10 +8838,10 @@ export const JA_WORDS = [
     "english": "glass",
     "phonetic": "ガラス",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "ガラスを例文に使います。",
     "exampleEnglish": "Example with glass.",
-    "id": 805,
+    "id": 804,
     "image": "🏠"
   },
   {
@@ -8860,10 +8849,10 @@ export const JA_WORDS = [
     "english": "department of a university",
     "phonetic": "～がくぶ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "～学部を例文に使います。",
     "exampleEnglish": "Example with department of a university.",
-    "id": 806,
+    "id": 805,
     "image": "🏠"
   },
   {
@@ -8871,10 +8860,10 @@ export const JA_WORDS = [
     "english": "hard; rigorous; strict",
     "phonetic": "きびしい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "厳しいを例文に使います。",
     "exampleEnglish": "Example with hard; rigorous; strict.",
-    "id": 807,
+    "id": 806,
     "image": "🏠"
   },
   {
@@ -8882,10 +8871,10 @@ export const JA_WORDS = [
     "english": "escalator",
     "phonetic": "エスカレーター",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "エスカレーターを例文に使います。",
     "exampleEnglish": "Example with escalator.",
-    "id": 808,
+    "id": 807,
     "image": "🏠"
   },
   {
@@ -8893,10 +8882,10 @@ export const JA_WORDS = [
     "english": "population",
     "phonetic": "じんこう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "人口を例文に使います。",
     "exampleEnglish": "Example with population.",
-    "id": 809,
+    "id": 808,
     "image": "🏠"
   },
   {
@@ -8904,10 +8893,10 @@ export const JA_WORDS = [
     "english": "moon",
     "phonetic": "つき",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "月を例文に使います。",
     "exampleEnglish": "Example with moon.",
-    "id": 810,
+    "id": 809,
     "image": "🏠"
   },
   {
@@ -8915,10 +8904,10 @@ export const JA_WORDS = [
     "english": "silk",
     "phonetic": "きぬ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "絹を例文に使います。",
     "exampleEnglish": "Example with silk.",
-    "id": 811,
+    "id": 810,
     "image": "🏠"
   },
   {
@@ -8926,10 +8915,10 @@ export const JA_WORDS = [
     "english": "not at all (neg. verb)",
     "phonetic": "ちっとも",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "ちっともを例文に使います。",
     "exampleEnglish": "Example with not at all (neg. verb).",
-    "id": 812,
+    "id": 811,
     "image": "🏠"
   },
   {
@@ -8937,10 +8926,10 @@ export const JA_WORDS = [
     "english": "deep",
     "phonetic": "ふかい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "深いを例文に使います。",
     "exampleEnglish": "Example with deep.",
-    "id": 813,
+    "id": 812,
     "image": "🏠"
   },
   {
@@ -8948,10 +8937,10 @@ export const JA_WORDS = [
     "english": "to be broken",
     "phonetic": "こわれる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "壊れるを例文に使います。",
     "exampleEnglish": "Example with to be broken.",
-    "id": 814,
+    "id": 813,
     "image": "🏠"
   },
   {
@@ -8959,10 +8948,10 @@ export const JA_WORDS = [
     "english": "to shake",
     "phonetic": "ゆれる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "揺れるを例文に使います。",
     "exampleEnglish": "Example with to shake.",
-    "id": 815,
+    "id": 814,
     "image": "🏠"
   },
   {
@@ -8970,10 +8959,10 @@ export const JA_WORDS = [
     "english": "to fall",
     "phonetic": "おちる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "落るを例文に使います。",
     "exampleEnglish": "Example with to fall.",
-    "id": 816,
+    "id": 815,
     "image": "🏠"
   },
   {
@@ -8981,10 +8970,10 @@ export const JA_WORDS = [
     "english": "if at all possible",
     "phonetic": "できるだけ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "できるだけを例文に使います。",
     "exampleEnglish": "Example with if at all possible.",
-    "id": 817,
+    "id": 816,
     "image": "🏠"
   },
   {
@@ -8992,10 +8981,10 @@ export const JA_WORDS = [
     "english": "sad",
     "phonetic": "かなしい",
     "category": "Feelings",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "悲しいを例文に使います。",
     "exampleEnglish": "Example with sad.",
-    "id": 818,
+    "id": 817,
     "image": "💕"
   },
   {
@@ -9003,10 +8992,10 @@ export const JA_WORDS = [
     "english": "junior high school pupil",
     "phonetic": "ちゅうがっこう",
     "category": "Study & Work",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "中学校を例文に使います。",
     "exampleEnglish": "Example with junior high school pupil.",
-    "id": 819,
+    "id": 818,
     "image": "📚"
   },
   {
@@ -9014,10 +9003,10 @@ export const JA_WORDS = [
     "english": "gas",
     "phonetic": "ガス",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "ガスを例文に使います。",
     "exampleEnglish": "Example with gas.",
-    "id": 820,
+    "id": 819,
     "image": "🏠"
   },
   {
@@ -9025,10 +9014,10 @@ export const JA_WORDS = [
     "english": "to pray; to wish",
     "phonetic": "いのる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "祈るを例文に使います。",
     "exampleEnglish": "Example with to pray; to wish.",
-    "id": 821,
+    "id": 820,
     "image": "🏠"
   },
   {
@@ -9036,10 +9025,10 @@ export const JA_WORDS = [
     "english": "prosperous",
     "phonetic": "さかん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "盛んを例文に使います。",
     "exampleEnglish": "Example with prosperous.",
-    "id": 822,
+    "id": 821,
     "image": "🏠"
   },
   {
@@ -9047,10 +9036,10 @@ export const JA_WORDS = [
     "english": "part-time job",
     "phonetic": "アルバイト",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "アルバイトを例文に使います。",
     "exampleEnglish": "Example with part-time job.",
-    "id": 823,
+    "id": 822,
     "image": "🏠"
   },
   {
@@ -9058,10 +9047,10 @@ export const JA_WORDS = [
     "english": "to wake (someone) up",
     "phonetic": "おこす",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "起こすを例文に使います。",
     "exampleEnglish": "Example with to wake (someone) up.",
-    "id": 824,
+    "id": 823,
     "image": "🏠"
   },
   {
@@ -9069,10 +9058,10 @@ export const JA_WORDS = [
     "english": "-- extra-modest expression for する --",
     "phonetic": "いたす",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "致すを例文に使います。",
     "exampleEnglish": "Example with -- extra-modest expression for する --.",
-    "id": 825,
+    "id": 824,
     "image": "🏠"
   },
   {
@@ -9080,10 +9069,10 @@ export const JA_WORDS = [
     "english": "to bite",
     "phonetic": "かむ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "噛むを例文に使います。",
     "exampleEnglish": "Example with to bite.",
-    "id": 826,
+    "id": 825,
     "image": "🏠"
   },
   {
@@ -9091,10 +9080,10 @@ export const JA_WORDS = [
     "english": "baby",
     "phonetic": "あかちゃん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "赤ちゃんを例文に使います。",
     "exampleEnglish": "Example with baby.",
-    "id": 827,
+    "id": 826,
     "image": "🏠"
   },
   {
@@ -9102,10 +9091,10 @@ export const JA_WORDS = [
     "english": "shallow",
     "phonetic": "あさい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "浅いを例文に使います。",
     "exampleEnglish": "Example with shallow.",
-    "id": 828,
+    "id": 827,
     "image": "🏠"
   },
   {
@@ -9113,10 +9102,10 @@ export const JA_WORDS = [
     "english": "lie",
     "phonetic": "嘘",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "うそを例文に使います。",
     "exampleEnglish": "Example with lie.",
-    "id": 829,
+    "id": 828,
     "image": "🏠"
   },
   {
@@ -9124,10 +9113,10 @@ export const JA_WORDS = [
     "english": "novel",
     "phonetic": "しょうせつ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "小説を例文に使います。",
     "exampleEnglish": "Example with novel.",
-    "id": 830,
+    "id": 829,
     "image": "🏠"
   },
   {
@@ -9135,10 +9124,10 @@ export const JA_WORDS = [
     "english": "a parent",
     "phonetic": "おや",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "親を例文に使います。",
     "exampleEnglish": "Example with a parent.",
-    "id": 831,
+    "id": 830,
     "image": "🏠"
   },
   {
@@ -9146,32 +9135,32 @@ export const JA_WORDS = [
     "english": "moreover; besides",
     "phonetic": "それに",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "それにを例文に使います。",
     "exampleEnglish": "Example with moreover; besides.",
-    "id": 832,
+    "id": 831,
     "image": "🏠"
   },
   {
     "native": "西洋",
     "english": "the West",
     "phonetic": "せいよう",
-    "category": "Daily Life",
-    "topikLevel": 1,
+    "category": "Numbers",
+    "topikLevel": 2,
     "exampleNative": "西洋を例文に使います。",
     "exampleEnglish": "Example with the West.",
-    "id": 833,
-    "image": "🏠"
+    "id": 832,
+    "image": "🔢"
   },
   {
     "native": "思う",
     "english": "to think",
     "phonetic": "おもう",
     "category": "Feelings",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "思うを例文に使います。",
     "exampleEnglish": "Example with to think.",
-    "id": 834,
+    "id": 833,
     "image": "💕"
   },
   {
@@ -9179,10 +9168,10 @@ export const JA_WORDS = [
     "english": "part time (esp. female part time employees)",
     "phonetic": "パート (タイム)",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "パート (タイム)を例文に使います。",
     "exampleEnglish": "Example with part time (esp. female part time employees).",
-    "id": 835,
+    "id": 834,
     "image": "🏠"
   },
   {
@@ -9190,10 +9179,10 @@ export const JA_WORDS = [
     "english": "age",
     "phonetic": "じだい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "時代を例文に使います。",
     "exampleEnglish": "Example with age.",
-    "id": 836,
+    "id": 835,
     "image": "🏠"
   },
   {
@@ -9201,10 +9190,10 @@ export const JA_WORDS = [
     "english": "(humble)to say",
     "phonetic": "もうしあげる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "申し上げるを例文に使います。",
     "exampleEnglish": "Example with (humble)to say.",
-    "id": 837,
+    "id": 836,
     "image": "🏠"
   },
   {
@@ -9212,10 +9201,10 @@ export const JA_WORDS = [
     "english": "~ ceremony; ~ style",
     "phonetic": "～しき",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "～式を例文に使います。",
     "exampleEnglish": "Example with ~ ceremony; ~ style.",
-    "id": 838,
+    "id": 837,
     "image": "🏠"
   },
   {
@@ -9223,10 +9212,10 @@ export const JA_WORDS = [
     "english": "attendance",
     "phonetic": "しゅっせきする",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "出席を例文に使います。",
     "exampleEnglish": "Example with attendance.",
-    "id": 839,
+    "id": 838,
     "image": "🏠"
   },
   {
@@ -9234,10 +9223,10 @@ export const JA_WORDS = [
     "english": "person who is specialized in ~",
     "phonetic": "～か",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "～家を例文に使います。",
     "exampleEnglish": "Example with person who is specialized in ~.",
-    "id": 840,
+    "id": 839,
     "image": "🏠"
   },
   {
@@ -9245,10 +9234,10 @@ export const JA_WORDS = [
     "english": "to welcome; to meet; to greet",
     "phonetic": "むかえる",
     "category": "Greetings",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "迎えるを例文に使います。",
     "exampleEnglish": "Example with to welcome; to meet; to greet.",
-    "id": 841,
+    "id": 840,
     "image": "👋"
   },
   {
@@ -9256,10 +9245,10 @@ export const JA_WORDS = [
     "english": "to touch",
     "phonetic": "さわる",
     "category": "Feelings",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "触るを例文に使います。",
     "exampleEnglish": "Example with to touch.",
-    "id": 842,
+    "id": 841,
     "image": "💕"
   },
   {
@@ -9267,10 +9256,10 @@ export const JA_WORDS = [
     "english": "~ storied",
     "phonetic": "～だて",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "建てを例文に使います。",
     "exampleEnglish": "Example with ~ storied.",
-    "id": 843,
+    "id": 842,
     "image": "🏠"
   },
   {
@@ -9278,10 +9267,10 @@ export const JA_WORDS = [
     "english": "president of a company",
     "phonetic": "しゃちょう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "社長を例文に使います。",
     "exampleEnglish": "Example with president of a company.",
-    "id": 844,
+    "id": 843,
     "image": "🏠"
   },
   {
@@ -9289,10 +9278,10 @@ export const JA_WORDS = [
     "english": "zoo",
     "phonetic": "どうぶつえん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "動物園を例文に使います。",
     "exampleEnglish": "Example with zoo.",
-    "id": 845,
+    "id": 844,
     "image": "🏠"
   },
   {
@@ -9300,10 +9289,10 @@ export const JA_WORDS = [
     "english": "to catch",
     "phonetic": "つかまえる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "捕まえるを例文に使います。",
     "exampleEnglish": "Example with to catch.",
-    "id": 846,
+    "id": 845,
     "image": "🏠"
   },
   {
@@ -9311,10 +9300,10 @@ export const JA_WORDS = [
     "english": "season (in reference to weather)",
     "phonetic": "きせつ",
     "category": "Food & Drink",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "季節を例文に使います。",
     "exampleEnglish": "Example with season (in reference to weather).",
-    "id": 847,
+    "id": 846,
     "image": "🍜"
   },
   {
@@ -9322,10 +9311,10 @@ export const JA_WORDS = [
     "english": "to stop by",
     "phonetic": "よる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "寄るを例文に使います。",
     "exampleEnglish": "Example with to stop by.",
-    "id": 848,
+    "id": 847,
     "image": "🏠"
   },
   {
@@ -9333,21 +9322,10 @@ export const JA_WORDS = [
     "english": "to be set; fixed (v.i.)",
     "phonetic": "きまる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "決まるを例文に使います。",
     "exampleEnglish": "Example with to be set; fixed (v.i.).",
-    "id": 849,
-    "image": "🏠"
-  },
-  {
-    "native": "開く",
-    "english": "to open; to hold (an event)",
-    "phonetic": "ひらく",
-    "category": "Daily Life",
-    "topikLevel": 1,
-    "exampleNative": "開くを例文に使います。",
-    "exampleEnglish": "Example with to open; to hold (an event).",
-    "id": 850,
+    "id": 848,
     "image": "🏠"
   },
   {
@@ -9355,10 +9333,10 @@ export const JA_WORDS = [
     "english": "to escape",
     "phonetic": "にげる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "逃げるを例文に使います。",
     "exampleEnglish": "Example with to escape.",
-    "id": 851,
+    "id": 849,
     "image": "🏠"
   },
   {
@@ -9366,10 +9344,10 @@ export const JA_WORDS = [
     "english": "so; therefore",
     "phonetic": "だから",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "だからを例文に使います。",
     "exampleEnglish": "Example with so; therefore.",
-    "id": 852,
+    "id": 850,
     "image": "🏠"
   },
   {
@@ -9377,10 +9355,10 @@ export const JA_WORDS = [
     "english": "regret; regrettable",
     "phonetic": "ざんねん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "残念を例文に使います。",
     "exampleEnglish": "Example with regret; regrettable.",
-    "id": 853,
+    "id": 851,
     "image": "🏠"
   },
   {
@@ -9388,10 +9366,10 @@ export const JA_WORDS = [
     "english": "tatami mat (Japanese straw mat)",
     "phonetic": "たたみ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "畳を例文に使います。",
     "exampleEnglish": "Example with tatami mat (Japanese straw mat).",
-    "id": 854,
+    "id": 852,
     "image": "🏠"
   },
   {
@@ -9399,10 +9377,10 @@ export const JA_WORDS = [
     "english": "polite",
     "phonetic": "ていねい",
     "category": "Transport",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "丁寧を例文に使います。",
     "exampleEnglish": "Example with polite.",
-    "id": 855,
+    "id": 853,
     "image": "🚌"
   },
   {
@@ -9410,10 +9388,10 @@ export const JA_WORDS = [
     "english": "geography",
     "phonetic": "ちり",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "地理を例文に使います。",
     "exampleEnglish": "Example with geography.",
-    "id": 856,
+    "id": 854,
     "image": "🏠"
   },
   {
@@ -9421,10 +9399,10 @@ export const JA_WORDS = [
     "english": "a little while ago",
     "phonetic": "さっき",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "さっきを例文に使います。",
     "exampleEnglish": "Example with a little while ago.",
-    "id": 857,
+    "id": 855,
     "image": "🏠"
   },
   {
@@ -9432,10 +9410,10 @@ export const JA_WORDS = [
     "english": "scary",
     "phonetic": "こわい",
     "category": "Transport",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "怖いを例文に使います。",
     "exampleEnglish": "Example with scary.",
-    "id": 858,
+    "id": 856,
     "image": "🚌"
   },
   {
@@ -9443,10 +9421,10 @@ export const JA_WORDS = [
     "english": "to wrap",
     "phonetic": "つつむ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "包むを例文に使います。",
     "exampleEnglish": "Example with to wrap.",
-    "id": 859,
+    "id": 857,
     "image": "🏠"
   },
   {
@@ -9454,10 +9432,10 @@ export const JA_WORDS = [
     "english": "if possible",
     "phonetic": "なるべく",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "なるべくを例文に使います。",
     "exampleEnglish": "Example with if possible.",
-    "id": 860,
+    "id": 858,
     "image": "🏠"
   },
   {
@@ -9465,10 +9443,10 @@ export const JA_WORDS = [
     "english": "unreasonable",
     "phonetic": "むり",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "無理を例文に使います。",
     "exampleEnglish": "Example with unreasonable.",
-    "id": 861,
+    "id": 859,
     "image": "🏠"
   },
   {
@@ -9476,10 +9454,10 @@ export const JA_WORDS = [
     "english": "sandwich",
     "phonetic": "サンドイッチ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "サンドイッチを例文に使います。",
     "exampleEnglish": "Example with sandwich.",
-    "id": 862,
+    "id": 860,
     "image": "🏠"
   },
   {
@@ -9487,10 +9465,10 @@ export const JA_WORDS = [
     "english": "conference room",
     "phonetic": "かいぎしつ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "会議室を例文に使います。",
     "exampleEnglish": "Example with conference room.",
-    "id": 863,
+    "id": 861,
     "image": "🏠"
   },
   {
@@ -9498,10 +9476,10 @@ export const JA_WORDS = [
     "english": "goods",
     "phonetic": "しなもの",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "品物を例文に使います。",
     "exampleEnglish": "Example with goods.",
-    "id": 864,
+    "id": 862,
     "image": "🏠"
   },
   {
@@ -9509,10 +9487,10 @@ export const JA_WORDS = [
     "english": "doll",
     "phonetic": "にんぎょう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "人形を例文に使います。",
     "exampleEnglish": "Example with doll.",
-    "id": 865,
+    "id": 863,
     "image": "🏠"
   },
   {
@@ -9520,10 +9498,10 @@ export const JA_WORDS = [
     "english": "use",
     "phonetic": "りよう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "利用を例文に使います。",
     "exampleEnglish": "Example with use.",
-    "id": 866,
+    "id": 864,
     "image": "🏠"
   },
   {
@@ -9531,21 +9509,10 @@ export const JA_WORDS = [
     "english": "to decorate",
     "phonetic": "かざる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "飾るを例文に使います。",
     "exampleEnglish": "Example with to decorate.",
-    "id": 867,
-    "image": "🏠"
-  },
-  {
-    "native": "止める",
-    "english": "to stop (something)",
-    "phonetic": "とめる",
-    "category": "Daily Life",
-    "topikLevel": 1,
-    "exampleNative": "止めるを例文に使います。",
-    "exampleEnglish": "Example with to stop (something).",
-    "id": 868,
+    "id": 865,
     "image": "🏠"
   },
   {
@@ -9553,10 +9520,10 @@ export const JA_WORDS = [
     "english": "ashamed",
     "phonetic": "はずかしい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "恥ずかしいを例文に使います。",
     "exampleEnglish": "Example with ashamed.",
-    "id": 869,
+    "id": 866,
     "image": "🏠"
   },
   {
@@ -9564,10 +9531,10 @@ export const JA_WORDS = [
     "english": "however much one may ~",
     "phonetic": "いくら～ても",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "いくら～てもを例文に使います。",
     "exampleEnglish": "Example with however much one may ~.",
-    "id": 870,
+    "id": 867,
     "image": "🏠"
   },
   {
@@ -9575,10 +9542,10 @@ export const JA_WORDS = [
     "english": "business to take care of; tasks; errands",
     "phonetic": "ようじ",
     "category": "Transport",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "用事を例文に使います。",
     "exampleEnglish": "Example with business to take care of; tasks; errands.",
-    "id": 871,
+    "id": 868,
     "image": "🚌"
   },
   {
@@ -9586,10 +9553,10 @@ export const JA_WORDS = [
     "english": "(abbr.) building",
     "phonetic": "ビル",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "ビルを例文に使います。",
     "exampleEnglish": "Example with (abbr.) building.",
-    "id": 872,
+    "id": 869,
     "image": "🏠"
   },
   {
@@ -9597,10 +9564,10 @@ export const JA_WORDS = [
     "english": "quarrel",
     "phonetic": "けんかする",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "けんかするを例文に使います。",
     "exampleEnglish": "Example with quarrel.",
-    "id": 873,
+    "id": 870,
     "image": "🏠"
   },
   {
@@ -9608,10 +9575,10 @@ export const JA_WORDS = [
     "english": "to try one's best",
     "phonetic": "がんばる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "頑張るを例文に使います。",
     "exampleEnglish": "Example with to try one's best.",
-    "id": 874,
+    "id": 871,
     "image": "🏠"
   },
   {
@@ -9619,10 +9586,10 @@ export const JA_WORDS = [
     "english": "to pitch",
     "phonetic": "なげる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "投げるを例文に使います。",
     "exampleEnglish": "Example with to pitch.",
-    "id": 875,
+    "id": 872,
     "image": "🏠"
   },
   {
@@ -9630,10 +9597,10 @@ export const JA_WORDS = [
     "english": "breakdown",
     "phonetic": "こしょうする",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "故障を例文に使います。",
     "exampleEnglish": "Example with breakdown.",
-    "id": 876,
+    "id": 873,
     "image": "🏠"
   },
   {
@@ -9641,10 +9608,10 @@ export const JA_WORDS = [
     "english": "strength",
     "phonetic": "ちから",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "力を例文に使います。",
     "exampleEnglish": "Example with strength.",
-    "id": 877,
+    "id": 874,
     "image": "🏠"
   },
   {
@@ -9652,10 +9619,10 @@ export const JA_WORDS = [
     "english": "to take (an examination",
     "phonetic": "うける",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "受けるを例文に使います。",
     "exampleEnglish": "Example with to take (an examination.",
-    "id": 878,
+    "id": 875,
     "image": "🏠"
   },
   {
@@ -9663,10 +9630,10 @@ export const JA_WORDS = [
     "english": "feeling",
     "phonetic": "きぶん",
     "category": "Feelings",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "気分を例文に使います。",
     "exampleEnglish": "Example with feeling.",
-    "id": 879,
+    "id": 876,
     "image": "💕"
   },
   {
@@ -9674,10 +9641,10 @@ export const JA_WORDS = [
     "english": "to make a mistake",
     "phonetic": "まちがえる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "間違えるを例文に使います。",
     "exampleEnglish": "Example with to make a mistake.",
-    "id": 880,
+    "id": 877,
     "image": "🏠"
   },
   {
@@ -9685,10 +9652,10 @@ export const JA_WORDS = [
     "english": "such",
     "phonetic": "そんな",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "そんなを例文に使います。",
     "exampleEnglish": "Example with such.",
-    "id": 881,
+    "id": 878,
     "image": "🏠"
   },
   {
@@ -9696,10 +9663,10 @@ export const JA_WORDS = [
     "english": "star",
     "phonetic": "ほし",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "星を例文に使います。",
     "exampleEnglish": "Example with star.",
-    "id": 882,
+    "id": 879,
     "image": "🏠"
   },
   {
@@ -9707,10 +9674,10 @@ export const JA_WORDS = [
     "english": "case",
     "phonetic": "ばあい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "場合を例文に使います。",
     "exampleEnglish": "Example with case.",
-    "id": 883,
+    "id": 880,
     "image": "🏠"
   },
   {
@@ -9718,10 +9685,10 @@ export const JA_WORDS = [
     "english": "at last",
     "phonetic": "やっと",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "やっとを例文に使います。",
     "exampleEnglish": "Example with at last.",
-    "id": 884,
+    "id": 881,
     "image": "🏠"
   },
   {
@@ -9729,10 +9696,10 @@ export const JA_WORDS = [
     "english": "to be sufficient; to be enough",
     "phonetic": "たりる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "足りるを例文に使います。",
     "exampleEnglish": "Example with to be sufficient; to be enough.",
-    "id": 885,
+    "id": 882,
     "image": "🏠"
   },
   {
@@ -9740,10 +9707,10 @@ export const JA_WORDS = [
     "english": "to carry out; to conduct (typically used in written language)",
     "phonetic": "おこなう",
     "category": "Transport",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "行うを例文に使います。",
     "exampleEnglish": "Example with to carry out; to conduct (typically used in written language).",
-    "id": 886,
+    "id": 883,
     "image": "🚌"
   },
   {
@@ -9751,10 +9718,10 @@ export const JA_WORDS = [
     "english": "grapes",
     "phonetic": "ぶどう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "ぶどうを例文に使います。",
     "exampleEnglish": "Example with grapes.",
-    "id": 887,
+    "id": 884,
     "image": "🏠"
   },
   {
@@ -9762,10 +9729,10 @@ export const JA_WORDS = [
     "english": "to disappear",
     "phonetic": "なくなる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "無くなるを例文に使います。",
     "exampleEnglish": "Example with to disappear.",
-    "id": 888,
+    "id": 885,
     "image": "🏠"
   },
   {
@@ -9773,10 +9740,10 @@ export const JA_WORDS = [
     "english": "prepare",
     "phonetic": "じゅんびする",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "準備を例文に使います。",
     "exampleEnglish": "Example with prepare.",
-    "id": 889,
+    "id": 886,
     "image": "🏠"
   },
   {
@@ -9784,10 +9751,10 @@ export const JA_WORDS = [
     "english": "world",
     "phonetic": "せかい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "世界を例文に使います。",
     "exampleEnglish": "Example with world.",
-    "id": 890,
+    "id": 887,
     "image": "🏠"
   },
   {
@@ -9795,10 +9762,10 @@ export const JA_WORDS = [
     "english": "address; place of residence",
     "phonetic": "じゅうしょ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "住所を例文に使います。",
     "exampleEnglish": "Example with address; place of residence.",
-    "id": 891,
+    "id": 888,
     "image": "🏠"
   },
   {
@@ -9806,10 +9773,10 @@ export const JA_WORDS = [
     "english": "the month after next",
     "phonetic": "さらいげつ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "再来月を例文に使います。",
     "exampleEnglish": "Example with the month after next.",
-    "id": 892,
+    "id": 889,
     "image": "🏠"
   },
   {
@@ -9817,10 +9784,10 @@ export const JA_WORDS = [
     "english": "woods",
     "phonetic": "はやし",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "林を例文に使います。",
     "exampleEnglish": "Example with woods.",
-    "id": 893,
+    "id": 890,
     "image": "🏠"
   },
   {
@@ -9828,10 +9795,10 @@ export const JA_WORDS = [
     "english": "double",
     "phonetic": "ばい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "倍を例文に使います。",
     "exampleEnglish": "Example with double.",
-    "id": 894,
+    "id": 891,
     "image": "🏠"
   },
   {
@@ -9839,10 +9806,10 @@ export const JA_WORDS = [
     "english": "to lose weight",
     "phonetic": "やせる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "痩せるを例文に使います。",
     "exampleEnglish": "Example with to lose weight.",
-    "id": 895,
+    "id": 892,
     "image": "🏠"
   },
   {
@@ -9850,10 +9817,10 @@ export const JA_WORDS = [
     "english": "line",
     "phonetic": "せん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "線を例文に使います。",
     "exampleEnglish": "Example with line.",
-    "id": 896,
+    "id": 893,
     "image": "🏠"
   },
   {
@@ -9861,10 +9828,10 @@ export const JA_WORDS = [
     "english": "war",
     "phonetic": "せんそう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "戦争を例文に使います。",
     "exampleEnglish": "Example with war.",
-    "id": 897,
+    "id": 894,
     "image": "🏠"
   },
   {
@@ -9872,10 +9839,10 @@ export const JA_WORDS = [
     "english": "to decide (v.t.)",
     "phonetic": "きめる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "決めるを例文に使います。",
     "exampleEnglish": "Example with to decide (v.t.).",
-    "id": 898,
+    "id": 895,
     "image": "🏠"
   },
   {
@@ -9883,10 +9850,10 @@ export const JA_WORDS = [
     "english": "to check; to look up; to inquire; to search",
     "phonetic": "しらべる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "調べるを例文に使います。",
     "exampleEnglish": "Example with to check; to look up; to inquire; to search.",
-    "id": 899,
+    "id": 896,
     "image": "🏠"
   },
   {
@@ -9894,10 +9861,10 @@ export const JA_WORDS = [
     "english": "sleeping in late",
     "phonetic": "ねぼう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "寝坊を例文に使います。",
     "exampleEnglish": "Example with sleeping in late.",
-    "id": 900,
+    "id": 897,
     "image": "🏠"
   },
   {
@@ -9905,10 +9872,10 @@ export const JA_WORDS = [
     "english": "papa",
     "phonetic": "パパ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "パパを例文に使います。",
     "exampleEnglish": "Example with papa.",
-    "id": 901,
+    "id": 898,
     "image": "🏠"
   },
   {
@@ -9916,10 +9883,10 @@ export const JA_WORDS = [
     "english": "to shine",
     "phonetic": "ひかる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "光るを例文に使います。",
     "exampleEnglish": "Example with to shine.",
-    "id": 902,
+    "id": 899,
     "image": "🏠"
   },
   {
@@ -9927,10 +9894,10 @@ export const JA_WORDS = [
     "english": "husband",
     "phonetic": "おっと",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "夫を例文に使います。",
     "exampleEnglish": "Example with husband.",
-    "id": 903,
+    "id": 900,
     "image": "🏠"
   },
   {
@@ -9938,10 +9905,10 @@ export const JA_WORDS = [
     "english": "cloud",
     "phonetic": "くも",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "雲を例文に使います。",
     "exampleEnglish": "Example with cloud.",
-    "id": 904,
+    "id": 901,
     "image": "🏠"
   },
   {
@@ -9949,10 +9916,10 @@ export const JA_WORDS = [
     "english": "slope",
     "phonetic": "さか",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "坂を例文に使います。",
     "exampleEnglish": "Example with slope.",
-    "id": 905,
+    "id": 902,
     "image": "🏠"
   },
   {
@@ -9960,10 +9927,10 @@ export const JA_WORDS = [
     "english": "to end up ~",
     "phonetic": "～(て) しまう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "～(て) しまうを例文に使います。",
     "exampleEnglish": "Example with to end up ~.",
-    "id": 906,
+    "id": 903,
     "image": "🏠"
   },
   {
@@ -9971,10 +9938,10 @@ export const JA_WORDS = [
     "english": "airport",
     "phonetic": "ひこうじょう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "飛行場を例文に使います。",
     "exampleEnglish": "Example with airport.",
-    "id": 907,
+    "id": 904,
     "image": "🏠"
   },
   {
@@ -9982,10 +9949,10 @@ export const JA_WORDS = [
     "english": "judo",
     "phonetic": "じゅうどう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "柔道を例文に使います。",
     "exampleEnglish": "Example with judo.",
-    "id": 908,
+    "id": 905,
     "image": "🏠"
   },
   {
@@ -9993,10 +9960,10 @@ export const JA_WORDS = [
     "english": "never",
     "phonetic": "けっして",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "決してを例文に使います。",
     "exampleEnglish": "Example with never.",
-    "id": 909,
+    "id": 906,
     "image": "🏠"
   },
   {
@@ -10004,10 +9971,10 @@ export const JA_WORDS = [
     "english": "office",
     "phonetic": "じむしょ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "事務所を例文に使います。",
     "exampleEnglish": "Example with office.",
-    "id": 910,
+    "id": 907,
     "image": "🏠"
   },
   {
@@ -10015,10 +9982,10 @@ export const JA_WORDS = [
     "english": "communication",
     "phonetic": "れんらく",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "連絡を例文に使います。",
     "exampleEnglish": "Example with communication.",
-    "id": 911,
+    "id": 908,
     "image": "🏠"
   },
   {
@@ -10026,10 +9993,10 @@ export const JA_WORDS = [
     "english": "elementary school",
     "phonetic": "しょうがっこう",
     "category": "Study & Work",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "小学校を例文に使います。",
     "exampleEnglish": "Example with elementary school.",
-    "id": 912,
+    "id": 909,
     "image": "📚"
   },
   {
@@ -10037,10 +10004,10 @@ export const JA_WORDS = [
     "english": "guest",
     "phonetic": "きゃく",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "客を例文に使います。",
     "exampleEnglish": "Example with guest.",
-    "id": 913,
+    "id": 910,
     "image": "🏠"
   },
   {
@@ -10048,10 +10015,10 @@ export const JA_WORDS = [
     "english": "old days; past",
     "phonetic": "むかし",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "昔を例文に使います。",
     "exampleEnglish": "Example with old days; past.",
-    "id": 914,
+    "id": 911,
     "image": "🏠"
   },
   {
@@ -10059,10 +10026,10 @@ export const JA_WORDS = [
     "english": "beautiful",
     "phonetic": "うつくしい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "美しいを例文に使います。",
     "exampleEnglish": "Example with beautiful.",
-    "id": 915,
+    "id": 912,
     "image": "🏠"
   },
   {
@@ -10070,10 +10037,10 @@ export const JA_WORDS = [
     "english": "throw away (trash)",
     "phonetic": "すてる",
     "category": "Transport",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "捨てるを例文に使います。",
     "exampleEnglish": "Example with throw away (trash).",
-    "id": 916,
+    "id": 913,
     "image": "🚌"
   },
   {
@@ -10081,10 +10048,10 @@ export const JA_WORDS = [
     "english": "-- honorific expression for する --",
     "phonetic": "なさる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "なさるを例文に使います。",
     "exampleEnglish": "Example with -- honorific expression for する --.",
-    "id": 917,
+    "id": 914,
     "image": "🏠"
   },
   {
@@ -10092,10 +10059,10 @@ export const JA_WORDS = [
     "english": "thing(s)",
     "phonetic": "こと",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "事を例文に使います。",
     "exampleEnglish": "Example with thing(s).",
-    "id": 918,
+    "id": 915,
     "image": "🏠"
   },
   {
@@ -10103,10 +10070,10 @@ export const JA_WORDS = [
     "english": "quickly and steadily; at a rapid pace",
     "phonetic": "どんどん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "どんどんを例文に使います。",
     "exampleEnglish": "Example with quickly and steadily; at a rapid pace.",
-    "id": 919,
+    "id": 916,
     "image": "🏠"
   },
   {
@@ -10114,10 +10081,10 @@ export const JA_WORDS = [
     "english": "match",
     "phonetic": "しあい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "試合を例文に使います。",
     "exampleEnglish": "Example with match.",
-    "id": 920,
+    "id": 917,
     "image": "🏠"
   },
   {
@@ -10125,10 +10092,10 @@ export const JA_WORDS = [
     "english": "fitness",
     "phonetic": "てきとう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "適当を例文に使います。",
     "exampleEnglish": "Example with fitness.",
-    "id": 921,
+    "id": 918,
     "image": "🏠"
   },
   {
@@ -10136,10 +10103,10 @@ export const JA_WORDS = [
     "english": "wonderful; terrific",
     "phonetic": "すばらしい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "素晴らしいを例文に使います。",
     "exampleEnglish": "Example with wonderful; terrific.",
-    "id": 922,
+    "id": 919,
     "image": "🏠"
   },
   {
@@ -10147,10 +10114,10 @@ export const JA_WORDS = [
     "english": "art gallery",
     "phonetic": "びじゅつかん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "美術館を例文に使います。",
     "exampleEnglish": "Example with art gallery.",
-    "id": 923,
+    "id": 920,
     "image": "🏠"
   },
   {
@@ -10158,10 +10125,10 @@ export const JA_WORDS = [
     "english": "grammar",
     "phonetic": "ぶんぽう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "文法を例文に使います。",
     "exampleEnglish": "Example with grammar.",
-    "id": 924,
+    "id": 921,
     "image": "🏠"
   },
   {
@@ -10169,10 +10136,10 @@ export const JA_WORDS = [
     "english": "end",
     "phonetic": "おわり",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "終わりを例文に使います。",
     "exampleEnglish": "Example with end.",
-    "id": 925,
+    "id": 922,
     "image": "🏠"
   },
   {
@@ -10180,10 +10147,10 @@ export const JA_WORDS = [
     "english": "wall",
     "phonetic": "かべ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "壁を例文に使います。",
     "exampleEnglish": "Example with wall.",
-    "id": 926,
+    "id": 923,
     "image": "🏠"
   },
   {
@@ -10191,10 +10158,10 @@ export const JA_WORDS = [
     "english": "once",
     "phonetic": "いちど",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "一度を例文に使います。",
     "exampleEnglish": "Example with once.",
-    "id": 927,
+    "id": 924,
     "image": "🏠"
   },
   {
@@ -10202,10 +10169,10 @@ export const JA_WORDS = [
     "english": "expression of gratitude; thanking; gift of appreciation; bow",
     "phonetic": "おれい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "お礼を例文に使います。",
     "exampleEnglish": "Example with expression of gratitude; thanking; gift of appreciation; bow.",
-    "id": 928,
+    "id": 925,
     "image": "🏠"
   },
   {
@@ -10213,10 +10180,10 @@ export const JA_WORDS = [
     "english": "kindness",
     "phonetic": "しんせつ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "親切を例文に使います。",
     "exampleEnglish": "Example with kindness.",
-    "id": 929,
+    "id": 926,
     "image": "🏠"
   },
   {
@@ -10224,10 +10191,10 @@ export const JA_WORDS = [
     "english": "to notify",
     "phonetic": "しらせる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "知らせるを例文に使います。",
     "exampleEnglish": "Example with to notify.",
-    "id": 930,
+    "id": 927,
     "image": "🏠"
   },
   {
@@ -10235,10 +10202,10 @@ export const JA_WORDS = [
     "english": "dentist",
     "phonetic": "はいしゃ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "歯医者を例文に使います。",
     "exampleEnglish": "Example with dentist.",
-    "id": 931,
+    "id": 928,
     "image": "🏠"
   },
   {
@@ -10246,10 +10213,10 @@ export const JA_WORDS = [
     "english": "enthusiasm",
     "phonetic": "ねっしん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "熱心を例文に使います。",
     "exampleEnglish": "Example with enthusiasm.",
-    "id": 932,
+    "id": 929,
     "image": "🏠"
   },
   {
@@ -10257,10 +10224,10 @@ export const JA_WORDS = [
     "english": "to start",
     "phonetic": "はじめる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "始めるを例文に使います。",
     "exampleEnglish": "Example with to start.",
-    "id": 933,
+    "id": 930,
     "image": "🏠"
   },
   {
@@ -10268,10 +10235,10 @@ export const JA_WORDS = [
     "english": "to receive",
     "phonetic": "もらう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "もらうを例文に使います。",
     "exampleEnglish": "Example with to receive.",
-    "id": 934,
+    "id": 931,
     "image": "🏠"
   },
   {
@@ -10279,10 +10246,10 @@ export const JA_WORDS = [
     "english": "to cry",
     "phonetic": "なく",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "泣くを例文に使います。",
     "exampleEnglish": "Example with to cry.",
-    "id": 935,
+    "id": 932,
     "image": "🏠"
   },
   {
@@ -10290,10 +10257,10 @@ export const JA_WORDS = [
     "english": "to get better; to recover from illness (v.i.)",
     "phonetic": "なおる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "治るを例文に使います。",
     "exampleEnglish": "Example with to get better; to recover from illness (v.i.).",
-    "id": 936,
+    "id": 933,
     "image": "🏠"
   },
   {
@@ -10301,10 +10268,10 @@ export const JA_WORDS = [
     "english": "fever",
     "phonetic": "ねつ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "熱を例文に使います。",
     "exampleEnglish": "Example with fever.",
-    "id": 937,
+    "id": 934,
     "image": "🏠"
   },
   {
@@ -10312,10 +10279,10 @@ export const JA_WORDS = [
     "english": "festival",
     "phonetic": "おまつり",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "お祭りを例文に使います。",
     "exampleEnglish": "Example with festival.",
-    "id": 938,
+    "id": 935,
     "image": "🏠"
   },
   {
@@ -10323,10 +10290,10 @@ export const JA_WORDS = [
     "english": "water service",
     "phonetic": "すいどう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "水道を例文に使います。",
     "exampleEnglish": "Example with water service.",
-    "id": 939,
+    "id": 936,
     "image": "🏠"
   },
   {
@@ -10334,10 +10301,10 @@ export const JA_WORDS = [
     "english": "odor",
     "phonetic": "におい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "匂いを例文に使います。",
     "exampleEnglish": "Example with odor.",
-    "id": 940,
+    "id": 937,
     "image": "🏠"
   },
   {
@@ -10345,10 +10312,10 @@ export const JA_WORDS = [
     "english": "bell",
     "phonetic": "ベル",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "ベルを例文に使います。",
     "exampleEnglish": "Example with bell.",
-    "id": 941,
+    "id": 938,
     "image": "🏠"
   },
   {
@@ -10356,10 +10323,10 @@ export const JA_WORDS = [
     "english": "baby",
     "phonetic": "あかんぼう",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "赤ん坊を例文に使います。",
     "exampleEnglish": "Example with baby.",
-    "id": 942,
+    "id": 939,
     "image": "🏠"
   },
   {
@@ -10367,10 +10334,10 @@ export const JA_WORDS = [
     "english": "strange; odd; funny",
     "phonetic": "おかしい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "おかしいを例文に使います。",
     "exampleEnglish": "Example with strange; odd; funny.",
-    "id": 943,
+    "id": 940,
     "image": "🏠"
   },
   {
@@ -10378,10 +10345,10 @@ export const JA_WORDS = [
     "english": "accident",
     "phonetic": "じこ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "事故を例文に使います。",
     "exampleEnglish": "Example with accident.",
-    "id": 944,
+    "id": 941,
     "image": "🏠"
   },
   {
@@ -10389,10 +10356,10 @@ export const JA_WORDS = [
     "english": "strange",
     "phonetic": "へん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "変を例文に使います。",
     "exampleEnglish": "Example with strange.",
-    "id": 945,
+    "id": 942,
     "image": "🏠"
   },
   {
@@ -10400,10 +10367,10 @@ export const JA_WORDS = [
     "english": "encyclopedia",
     "phonetic": "じてん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "辞典を例文に使います。",
     "exampleEnglish": "Example with encyclopedia.",
-    "id": 946,
+    "id": 943,
     "image": "🏠"
   },
   {
@@ -10411,10 +10378,10 @@ export const JA_WORDS = [
     "english": "to remain (v.i.)",
     "phonetic": "のこる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "残るを例文に使います。",
     "exampleEnglish": "Example with to remain (v.i.).",
-    "id": 947,
+    "id": 944,
     "image": "🏠"
   },
   {
@@ -10422,10 +10389,10 @@ export const JA_WORDS = [
     "english": "to stand (something) up",
     "phonetic": "たてる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "立てるを例文に使います。",
     "exampleEnglish": "Example with to stand (something) up.",
-    "id": 948,
+    "id": 945,
     "image": "🏠"
   },
   {
@@ -10433,10 +10400,10 @@ export const JA_WORDS = [
     "english": "to give",
     "phonetic": "くれる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "くれるを例文に使います。",
     "exampleEnglish": "Example with to give.",
-    "id": 949,
+    "id": 946,
     "image": "🏠"
   },
   {
@@ -10444,10 +10411,10 @@ export const JA_WORDS = [
     "english": "member of ~",
     "phonetic": "～いん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "～員を例文に使います。",
     "exampleEnglish": "Example with member of ~.",
-    "id": 950,
+    "id": 947,
     "image": "🏠"
   },
   {
@@ -10455,10 +10422,10 @@ export const JA_WORDS = [
     "english": "cause",
     "phonetic": "げんいん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "原因を例文に使います。",
     "exampleEnglish": "Example with cause.",
-    "id": 951,
+    "id": 948,
     "image": "🏠"
   },
   {
@@ -10466,10 +10433,10 @@ export const JA_WORDS = [
     "english": "to be surprised",
     "phonetic": "おどろく",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "驚くを例文に使います。",
     "exampleEnglish": "Example with to be surprised.",
-    "id": 952,
+    "id": 949,
     "image": "🏠"
   },
   {
@@ -10477,10 +10444,10 @@ export const JA_WORDS = [
     "english": "-- extra-modest expression for たべる and のむ; humble expression for もらう --",
     "phonetic": "頂く",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "いただくを例文に使います。",
     "exampleEnglish": "Example with -- extra-modest expression for たべる and のむ; humble expression for もらう --.",
-    "id": 953,
+    "id": 950,
     "image": "🏠"
   },
   {
@@ -10488,10 +10455,10 @@ export const JA_WORDS = [
     "english": "grandmother",
     "phonetic": "そぼ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "祖母を例文に使います。",
     "exampleEnglish": "Example with grandmother.",
-    "id": 954,
+    "id": 951,
     "image": "🏠"
   },
   {
@@ -10499,10 +10466,10 @@ export const JA_WORDS = [
     "english": "place",
     "phonetic": "ばしょ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "場所を例文に使います。",
     "exampleEnglish": "Example with place.",
-    "id": 955,
+    "id": 952,
     "image": "🏠"
   },
   {
@@ -10510,10 +10477,10 @@ export const JA_WORDS = [
     "english": "answer",
     "phonetic": "こたえ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "答を例文に使います。",
     "exampleEnglish": "Example with answer.",
-    "id": 956,
+    "id": 953,
     "image": "🏠"
   },
   {
@@ -10521,10 +10488,10 @@ export const JA_WORDS = [
     "english": "certainly",
     "phonetic": "もちろん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "もちろんを例文に使います。",
     "exampleEnglish": "Example with certainly.",
-    "id": 957,
+    "id": 954,
     "image": "🏠"
   },
   {
@@ -10532,10 +10499,10 @@ export const JA_WORDS = [
     "english": "to soak",
     "phonetic": "つける",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "漬けるを例文に使います。",
     "exampleEnglish": "Example with to soak.",
-    "id": 958,
+    "id": 955,
     "image": "🏠"
   },
   {
@@ -10543,10 +10510,10 @@ export const JA_WORDS = [
     "english": "reception(ist) desk",
     "phonetic": "うけつけ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "受付を例文に使います。",
     "exampleEnglish": "Example with reception(ist) desk.",
-    "id": 959,
+    "id": 956,
     "image": "🏠"
   },
   {
@@ -10554,10 +10521,10 @@ export const JA_WORDS = [
     "english": "within",
     "phonetic": "うち",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "内を例文に使います。",
     "exampleEnglish": "Example with within.",
-    "id": 960,
+    "id": 957,
     "image": "🏠"
   },
   {
@@ -10565,10 +10532,10 @@ export const JA_WORDS = [
     "english": "screen",
     "phonetic": "スクリーン",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "スクリーンを例文に使います。",
     "exampleEnglish": "Example with screen.",
-    "id": 961,
+    "id": 958,
     "image": "🏠"
   },
   {
@@ -10576,10 +10543,10 @@ export const JA_WORDS = [
     "english": "to increase",
     "phonetic": "ふえる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "増えるを例文に使います。",
     "exampleEnglish": "Example with to increase.",
-    "id": 962,
+    "id": 959,
     "image": "🏠"
   },
   {
@@ -10587,10 +10554,10 @@ export const JA_WORDS = [
     "english": "or",
     "phonetic": "または",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "またはを例文に使います。",
     "exampleEnglish": "Example with or.",
-    "id": 963,
+    "id": 960,
     "image": "🏠"
   },
   {
@@ -10598,10 +10565,10 @@ export const JA_WORDS = [
     "english": "injury (to animate object)",
     "phonetic": "けがする",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "けがするを例文に使います。",
     "exampleEnglish": "Example with injury (to animate object).",
-    "id": 964,
+    "id": 961,
     "image": "🏠"
   },
   {
@@ -10609,10 +10576,10 @@ export const JA_WORDS = [
     "english": "less than",
     "phonetic": "いか",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "以下を例文に使います。",
     "exampleEnglish": "Example with less than.",
-    "id": 965,
+    "id": 962,
     "image": "🏠"
   },
   {
@@ -10620,10 +10587,10 @@ export const JA_WORDS = [
     "english": "to choose; to select",
     "phonetic": "えらぶ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "選ぶを例文に使います。",
     "exampleEnglish": "Example with to choose; to select.",
-    "id": 966,
+    "id": 963,
     "image": "🏠"
   },
   {
@@ -10631,10 +10598,10 @@ export const JA_WORDS = [
     "english": "just did ~",
     "phonetic": "～ばかり",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "～ばかりを例文に使います。",
     "exampleEnglish": "Example with just did ~.",
-    "id": 967,
+    "id": 964,
     "image": "🏠"
   },
   {
@@ -10642,10 +10609,10 @@ export const JA_WORDS = [
     "english": "heart",
     "phonetic": "こころ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "心を例文に使います。",
     "exampleEnglish": "Example with heart.",
-    "id": 968,
+    "id": 965,
     "image": "🏠"
   },
   {
@@ -10653,10 +10620,10 @@ export const JA_WORDS = [
     "english": "to start doing ~",
     "phonetic": "～だす",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "～だすを例文に使います。",
     "exampleEnglish": "Example with to start doing ~.",
-    "id": 969,
+    "id": 966,
     "image": "🏠"
   },
   {
@@ -10664,10 +10631,10 @@ export const JA_WORDS = [
     "english": "salad",
     "phonetic": "サラダ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "サラダを例文に使います。",
     "exampleEnglish": "Example with salad.",
-    "id": 970,
+    "id": 967,
     "image": "🏠"
   },
   {
@@ -10675,10 +10642,10 @@ export const JA_WORDS = [
     "english": "to deliver (v.t.)",
     "phonetic": "とどける",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "届けるを例文に使います。",
     "exampleEnglish": "Example with to deliver (v.t.).",
-    "id": 971,
+    "id": 968,
     "image": "🏠"
   },
   {
@@ -10686,10 +10653,10 @@ export const JA_WORDS = [
     "english": "greet(ing)",
     "phonetic": "挨拶",
     "category": "Greetings",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "あいさつするを例文に使います。",
     "exampleEnglish": "Example with greet(ing).",
-    "id": 972,
+    "id": 969,
     "image": "👋"
   },
   {
@@ -10697,10 +10664,10 @@ export const JA_WORDS = [
     "english": "scenery",
     "phonetic": "けしき",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "景色を例文に使います。",
     "exampleEnglish": "Example with scenery.",
-    "id": 973,
+    "id": 970,
     "image": "🏠"
   },
   {
@@ -10708,10 +10675,10 @@ export const JA_WORDS = [
     "english": "if I remember correctly; certain",
     "phonetic": "たしか",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "確かを例文に使います。",
     "exampleEnglish": "Example with if I remember correctly; certain.",
-    "id": 974,
+    "id": 971,
     "image": "🏠"
   },
   {
@@ -10719,10 +10686,10 @@ export const JA_WORDS = [
     "english": "steak",
     "phonetic": "ステーキ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "ステーキを例文に使います。",
     "exampleEnglish": "Example with steak.",
-    "id": 975,
+    "id": 972,
     "image": "🏠"
   },
   {
@@ -10730,10 +10697,10 @@ export const JA_WORDS = [
     "english": "foodstuff",
     "phonetic": "しょくりょうひん",
     "category": "Food & Drink",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "食料品を例文に使います。",
     "exampleEnglish": "Example with foodstuff.",
-    "id": 976,
+    "id": 973,
     "image": "🍜"
   },
   {
@@ -10741,10 +10708,10 @@ export const JA_WORDS = [
     "english": "forest",
     "phonetic": "もり",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "森を例文に使います。",
     "exampleEnglish": "Example with forest.",
-    "id": 977,
+    "id": 974,
     "image": "🏠"
   },
   {
@@ -10752,10 +10719,10 @@ export const JA_WORDS = [
     "english": "within",
     "phonetic": "いない",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "以内を例文に使います。",
     "exampleEnglish": "Example with within.",
-    "id": 978,
+    "id": 975,
     "image": "🏠"
   },
   {
@@ -10763,10 +10730,10 @@ export const JA_WORDS = [
     "english": "plans",
     "phonetic": "よてい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "予定を例文に使います。",
     "exampleEnglish": "Example with plans.",
-    "id": 979,
+    "id": 976,
     "image": "🏠"
   },
   {
@@ -10774,10 +10741,10 @@ export const JA_WORDS = [
     "english": "overcoat; over",
     "phonetic": "オーバー",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "オーバーを例文に使います。",
     "exampleEnglish": "Example with overcoat; over.",
-    "id": 980,
+    "id": 977,
     "image": "🏠"
   },
   {
@@ -10785,10 +10752,10 @@ export const JA_WORDS = [
     "english": "to get dry",
     "phonetic": "かわく",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "乾くを例文に使います。",
     "exampleEnglish": "Example with to get dry.",
-    "id": 981,
+    "id": 978,
     "image": "🏠"
   },
   {
@@ -10796,10 +10763,10 @@ export const JA_WORDS = [
     "english": "stone",
     "phonetic": "いし",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "石を例文に使います。",
     "exampleEnglish": "Example with stone.",
-    "id": 982,
+    "id": 979,
     "image": "🏠"
   },
   {
@@ -10807,10 +10774,10 @@ export const JA_WORDS = [
     "english": "to recall",
     "phonetic": "おもいだす",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "思い出すを例文に使います。",
     "exampleEnglish": "Example with to recall.",
-    "id": 983,
+    "id": 980,
     "image": "🏠"
   },
   {
@@ -10818,10 +10785,10 @@ export const JA_WORDS = [
     "english": "to dance",
     "phonetic": "おどる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "踊るを例文に使います。",
     "exampleEnglish": "Example with to dance.",
-    "id": 984,
+    "id": 981,
     "image": "🏠"
   },
   {
@@ -10829,10 +10796,10 @@ export const JA_WORDS = [
     "english": "small; fine",
     "phonetic": "こまかい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "細かいを例文に使います。",
     "exampleEnglish": "Example with small; fine.",
-    "id": 985,
+    "id": 982,
     "image": "🏠"
   },
   {
@@ -10840,10 +10807,10 @@ export const JA_WORDS = [
     "english": "to paint",
     "phonetic": "ぬる",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "塗るを例文に使います。",
     "exampleEnglish": "Example with to paint.",
-    "id": 986,
+    "id": 983,
     "image": "🏠"
   },
   {
@@ -10851,10 +10818,10 @@ export const JA_WORDS = [
     "english": "(your",
     "phonetic": "ごしゅじん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "ご主人を例文に使います。",
     "exampleEnglish": "Example with (your.",
-    "id": 987,
+    "id": 984,
     "image": "🏠"
   },
   {
@@ -10862,10 +10829,10 @@ export const JA_WORDS = [
     "english": "unusual",
     "phonetic": "めずらしい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "珍しいを例文に使います。",
     "exampleEnglish": "Example with unusual.",
-    "id": 988,
+    "id": 985,
     "image": "🏠"
   },
   {
@@ -10873,10 +10840,10 @@ export const JA_WORDS = [
     "english": "errand",
     "phonetic": "よう",
     "category": "Transport",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "用を例文に使います。",
     "exampleEnglish": "Example with errand.",
-    "id": 989,
+    "id": 986,
     "image": "🚌"
   },
   {
@@ -10884,10 +10851,10 @@ export const JA_WORDS = [
     "english": "government worker",
     "phonetic": "こうむいん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "公務員を例文に使います。",
     "exampleEnglish": "Example with government worker.",
-    "id": 990,
+    "id": 987,
     "image": "🏠"
   },
   {
@@ -10895,10 +10862,10 @@ export const JA_WORDS = [
     "english": "(someone's) daughter (polite)",
     "phonetic": "おじょうさん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "お嬢さんを例文に使います。",
     "exampleEnglish": "Example with (someone's) daughter (polite).",
-    "id": 991,
+    "id": 988,
     "image": "🏠"
   },
   {
@@ -10906,10 +10873,10 @@ export const JA_WORDS = [
     "english": "preparation",
     "phonetic": "ようい",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "用意を例文に使います。",
     "exampleEnglish": "Example with preparation.",
-    "id": 992,
+    "id": 989,
     "image": "🏠"
   },
   {
@@ -10917,10 +10884,10 @@ export const JA_WORDS = [
     "english": "to search",
     "phonetic": "さがす",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "探すを例文に使います。",
     "exampleEnglish": "Example with to search.",
-    "id": 993,
+    "id": 990,
     "image": "🏠"
   },
   {
@@ -10928,10 +10895,10 @@ export const JA_WORDS = [
     "english": "shape",
     "phonetic": "かたち",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "形を例文に使います。",
     "exampleEnglish": "Example with shape.",
-    "id": 994,
+    "id": 991,
     "image": "🏠"
   },
   {
@@ -10939,10 +10906,10 @@ export const JA_WORDS = [
     "english": "driving",
     "phonetic": "うんてんする",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "運転を例文に使います。",
     "exampleEnglish": "Example with driving.",
-    "id": 995,
+    "id": 992,
     "image": "🏠"
   },
   {
@@ -10950,10 +10917,10 @@ export const JA_WORDS = [
     "english": "all",
     "phonetic": "すっかり",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "すっかりを例文に使います。",
     "exampleEnglish": "Example with all.",
-    "id": 996,
+    "id": 993,
     "image": "🏠"
   },
   {
@@ -10961,10 +10928,10 @@ export const JA_WORDS = [
     "english": "announcer",
     "phonetic": "アナウンサー",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "アナウンサーを例文に使います。",
     "exampleEnglish": "Example with announcer.",
-    "id": 997,
+    "id": 994,
     "image": "🏠"
   },
   {
@@ -10972,10 +10939,10 @@ export const JA_WORDS = [
     "english": "souvenir",
     "phonetic": "おみやげ",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "お土産を例文に使います。",
     "exampleEnglish": "Example with souvenir.",
-    "id": 998,
+    "id": 995,
     "image": "🏠"
   },
   {
@@ -10983,10 +10950,10 @@ export const JA_WORDS = [
     "english": "eraser",
     "phonetic": "けしゴム",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "消しゴムを例文に使います。",
     "exampleEnglish": "Example with eraser.",
-    "id": 999,
+    "id": 996,
     "image": "🏠"
   },
   {
@@ -10994,10 +10961,10 @@ export const JA_WORDS = [
     "english": "a Japanese inn",
     "phonetic": "りょかん",
     "category": "Daily Life",
-    "topikLevel": 1,
+    "topikLevel": 2,
     "exampleNative": "旅館を例文に使います。",
     "exampleEnglish": "Example with a Japanese inn.",
-    "id": 1000,
+    "id": 997,
     "image": "🏠"
   },
   {
@@ -11008,7 +10975,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "海岸を例文に使います。",
     "exampleEnglish": "Example with coast.",
-    "id": 1001,
+    "id": 998,
     "image": "🏠"
   },
   {
@@ -11019,7 +10986,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "寂しいを例文に使います。",
     "exampleEnglish": "Example with lonely.",
-    "id": 1002,
+    "id": 999,
     "image": "🏠"
   },
   {
@@ -11030,7 +10997,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "火を例文に使います。",
     "exampleEnglish": "Example with fire.",
-    "id": 1003,
+    "id": 1000,
     "image": "🏠"
   },
   {
@@ -11041,7 +11008,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "育てるを例文に使います。",
     "exampleEnglish": "Example with to raise (v.t.); to bring up.",
-    "id": 1004,
+    "id": 1001,
     "image": "🏠"
   },
   {
@@ -11052,7 +11019,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "味噌を例文に使います。",
     "exampleEnglish": "Example with miso.",
-    "id": 1005,
+    "id": 1002,
     "image": "🏠"
   },
   {
@@ -11063,7 +11030,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "お祝いを例文に使います。",
     "exampleEnglish": "Example with congratulation.",
-    "id": 1006,
+    "id": 1003,
     "image": "🏠"
   },
   {
@@ -11074,7 +11041,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "乗り物を例文に使います。",
     "exampleEnglish": "Example with vehicle.",
-    "id": 1007,
+    "id": 1004,
     "image": "🏠"
   },
   {
@@ -11085,7 +11052,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "案内を例文に使います。",
     "exampleEnglish": "Example with information.",
-    "id": 1008,
+    "id": 1005,
     "image": "🏠"
   },
   {
@@ -11096,7 +11063,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "通うを例文に使います。",
     "exampleEnglish": "Example with to go back and forth; to commute.",
-    "id": 1009,
+    "id": 1006,
     "image": "🏠"
   },
   {
@@ -11107,7 +11074,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "連れるを例文に使います。",
     "exampleEnglish": "Example with to lead.",
-    "id": 1010,
+    "id": 1007,
     "image": "🏠"
   },
   {
@@ -11118,7 +11085,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "技術を例文に使います。",
     "exampleEnglish": "Example with technique.",
-    "id": 1011,
+    "id": 1008,
     "image": "🏠"
   },
   {
@@ -11129,7 +11096,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "小鳥を例文に使います。",
     "exampleEnglish": "Example with small bird.",
-    "id": 1012,
+    "id": 1009,
     "image": "🏠"
   },
   {
@@ -11140,7 +11107,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "下宿を例文に使います。",
     "exampleEnglish": "Example with lodging.",
-    "id": 1013,
+    "id": 1010,
     "image": "🏠"
   },
   {
@@ -11151,7 +11118,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ジャムを例文に使います。",
     "exampleEnglish": "Example with jam.",
-    "id": 1014,
+    "id": 1011,
     "image": "🏠"
   },
   {
@@ -11162,7 +11129,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "招待を例文に使います。",
     "exampleEnglish": "Example with invitation.",
-    "id": 1015,
+    "id": 1012,
     "image": "🏠"
   },
   {
@@ -11173,7 +11140,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "鏡を例文に使います。",
     "exampleEnglish": "Example with mirror.",
-    "id": 1016,
+    "id": 1013,
     "image": "🏠"
   },
   {
@@ -11184,7 +11151,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "はずを例文に使います。",
     "exampleEnglish": "Example with it should be so.",
-    "id": 1017,
+    "id": 1014,
     "image": "🏠"
   },
   {
@@ -11195,7 +11162,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "法律を例文に使います。",
     "exampleEnglish": "Example with law.",
-    "id": 1018,
+    "id": 1015,
     "image": "🏠"
   },
   {
@@ -11206,7 +11173,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "進むを例文に使います。",
     "exampleEnglish": "Example with to advance.",
-    "id": 1019,
+    "id": 1016,
     "image": "🏠"
   },
   {
@@ -11217,7 +11184,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "楽むを例文に使います。",
     "exampleEnglish": "Example with to enjoy.",
-    "id": 1020,
+    "id": 1017,
     "image": "🏠"
   },
   {
@@ -11228,7 +11195,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "貿易を例文に使います。",
     "exampleEnglish": "Example with trade.",
-    "id": 1021,
+    "id": 1018,
     "image": "🏠"
   },
   {
@@ -11239,7 +11206,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "反対を例文に使います。",
     "exampleEnglish": "Example with oppose.",
-    "id": 1022,
+    "id": 1019,
     "image": "🏠"
   },
   {
@@ -11250,7 +11217,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "おるを例文に使います。",
     "exampleEnglish": "Example with -- extra-modest expression for いる --.",
-    "id": 1023,
+    "id": 1020,
     "image": "🏠"
   },
   {
@@ -11261,7 +11228,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "申すを例文に使います。",
     "exampleEnglish": "Example with -- extra-modest (humble) expression for 言う (いう) --.",
-    "id": 1024,
+    "id": 1021,
     "image": "🏠"
   },
   {
@@ -11272,7 +11239,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "試験を例文に使います。",
     "exampleEnglish": "Example with an exam.",
-    "id": 1025,
+    "id": 1022,
     "image": "🏠"
   },
   {
@@ -11283,7 +11250,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "真面目を例文に使います。",
     "exampleEnglish": "Example with diligent.",
-    "id": 1026,
+    "id": 1023,
     "image": "🏠"
   },
   {
@@ -11294,19 +11261,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ごらんになるを例文に使います。",
     "exampleEnglish": "Example with -- honorific expression for みる --.",
-    "id": 1027,
+    "id": 1024,
     "image": "🏠"
   },
   {
     "native": "店員",
     "english": "clerk; shop-employee",
     "phonetic": "てんいん",
-    "category": "Daily Life",
+    "category": "Shopping",
     "topikLevel": 2,
     "exampleNative": "店員を例文に使います。",
     "exampleEnglish": "Example with clerk; shop-employee.",
-    "id": 1028,
-    "image": "🏠"
+    "id": 1025,
+    "image": "🛍️"
   },
   {
     "native": "泊まる",
@@ -11316,7 +11283,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "泊まるを例文に使います。",
     "exampleEnglish": "Example with to stay (over night) (v.i.).",
-    "id": 1029,
+    "id": 1026,
     "image": "🏠"
   },
   {
@@ -11327,7 +11294,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "よろしいを例文に使います。",
     "exampleEnglish": "Example with (hon.) good.",
-    "id": 1030,
+    "id": 1027,
     "image": "🏠"
   },
   {
@@ -11338,19 +11305,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "今夜を例文に使います。",
     "exampleEnglish": "Example with this evening.",
-    "id": 1031,
+    "id": 1028,
     "image": "🏠"
   },
   {
     "native": "おつり",
     "english": "change; balance of money returned to the purchaser",
     "phonetic": "おつり",
-    "category": "Daily Life",
+    "category": "Shopping",
     "topikLevel": 2,
     "exampleNative": "おつりを例文に使います。",
     "exampleEnglish": "Example with change; balance of money returned to the purchaser.",
-    "id": 1032,
-    "image": "🏠"
+    "id": 1029,
+    "image": "🛍️"
   },
   {
     "native": "チェックする",
@@ -11360,7 +11327,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "チェックするを例文に使います。",
     "exampleEnglish": "Example with check.",
-    "id": 1033,
+    "id": 1030,
     "image": "🏠"
   },
   {
@@ -11371,7 +11338,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "会話を例文に使います。",
     "exampleEnglish": "Example with conversation.",
-    "id": 1034,
+    "id": 1031,
     "image": "🏠"
   },
   {
@@ -11382,7 +11349,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "空気を例文に使います。",
     "exampleEnglish": "Example with air.",
-    "id": 1035,
+    "id": 1032,
     "image": "🏠"
   },
   {
@@ -11393,7 +11360,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "交通を例文に使います。",
     "exampleEnglish": "Example with traffic.",
-    "id": 1036,
+    "id": 1033,
     "image": "🏠"
   },
   {
@@ -11404,7 +11371,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ワープロを例文に使います。",
     "exampleEnglish": "Example with word processor.",
-    "id": 1037,
+    "id": 1034,
     "image": "🏠"
   },
   {
@@ -11415,7 +11382,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "喜ぶを例文に使います。",
     "exampleEnglish": "Example with to rejoice.",
-    "id": 1038,
+    "id": 1035,
     "image": "🏠"
   },
   {
@@ -11426,7 +11393,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "急行を例文に使います。",
     "exampleEnglish": "Example with express train or bus.",
-    "id": 1039,
+    "id": 1036,
     "image": "🚌"
   },
   {
@@ -11437,7 +11404,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "皆を例文に使います。",
     "exampleEnglish": "Example with everyone.",
-    "id": 1040,
+    "id": 1037,
     "image": "🏠"
   },
   {
@@ -11448,7 +11415,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "味を例文に使います。",
     "exampleEnglish": "Example with flavor.",
-    "id": 1041,
+    "id": 1038,
     "image": "🏠"
   },
   {
@@ -11459,7 +11426,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "空港を例文に使います。",
     "exampleEnglish": "Example with airport.",
-    "id": 1042,
+    "id": 1039,
     "image": "🏠"
   },
   {
@@ -11470,7 +11437,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "手袋を例文に使います。",
     "exampleEnglish": "Example with glove(s).",
-    "id": 1043,
+    "id": 1040,
     "image": "🏠"
   },
   {
@@ -11481,7 +11448,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "校長を例文に使います。",
     "exampleEnglish": "Example with principal.",
-    "id": 1044,
+    "id": 1041,
     "image": "🏠"
   },
   {
@@ -11492,7 +11459,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ごちそうを例文に使います。",
     "exampleEnglish": "Example with feast.",
-    "id": 1045,
+    "id": 1042,
     "image": "🍜"
   },
   {
@@ -11503,7 +11470,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "踊りを例文に使います。",
     "exampleEnglish": "Example with dance.",
-    "id": 1046,
+    "id": 1043,
     "image": "🏠"
   },
   {
@@ -11514,7 +11481,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "興味を例文に使います。",
     "exampleEnglish": "Example with interest (in something).",
-    "id": 1047,
+    "id": 1044,
     "image": "🏠"
   },
   {
@@ -11525,7 +11492,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "引っ越すを例文に使います。",
     "exampleEnglish": "Example with to move to a new place of residence.",
-    "id": 1048,
+    "id": 1045,
     "image": "🏠"
   },
   {
@@ -11536,7 +11503,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "冷房を例文に使います。",
     "exampleEnglish": "Example with cooling.",
-    "id": 1049,
+    "id": 1046,
     "image": "🏠"
   },
   {
@@ -11547,7 +11514,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "都合を例文に使います。",
     "exampleEnglish": "Example with circumstances.",
-    "id": 1050,
+    "id": 1047,
     "image": "🏠"
   },
   {
@@ -11558,7 +11525,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "遠慮を例文に使います。",
     "exampleEnglish": "Example with restraint.",
-    "id": 1051,
+    "id": 1048,
     "image": "🚌"
   },
   {
@@ -11569,7 +11536,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "亡くなるを例文に使います。",
     "exampleEnglish": "Example with to pass away.",
-    "id": 1052,
+    "id": 1049,
     "image": "🏠"
   },
   {
@@ -11580,7 +11547,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "科学を例文に使います。",
     "exampleEnglish": "Example with science.",
-    "id": 1053,
+    "id": 1050,
     "image": "🏠"
   },
   {
@@ -11591,7 +11558,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "はっきりを例文に使います。",
     "exampleEnglish": "Example with clearly.",
-    "id": 1054,
+    "id": 1051,
     "image": "🏠"
   },
   {
@@ -11602,7 +11569,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "差し上げるを例文に使います。",
     "exampleEnglish": "Example with -- humble expression for あげる --.",
-    "id": 1055,
+    "id": 1052,
     "image": "🏠"
   },
   {
@@ -11613,7 +11580,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "気持ちを例文に使います。",
     "exampleEnglish": "Example with feeling.",
-    "id": 1056,
+    "id": 1053,
     "image": "💕"
   },
   {
@@ -11624,7 +11591,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "祖父を例文に使います。",
     "exampleEnglish": "Example with grandfather.",
-    "id": 1057,
+    "id": 1054,
     "image": "🏠"
   },
   {
@@ -11635,7 +11602,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "港を例文に使います。",
     "exampleEnglish": "Example with harbor.",
-    "id": 1058,
+    "id": 1055,
     "image": "🏠"
   },
   {
@@ -11646,7 +11613,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "予約を例文に使います。",
     "exampleEnglish": "Example with reservation.",
-    "id": 1059,
+    "id": 1056,
     "image": "🏠"
   },
   {
@@ -11657,7 +11624,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "凄いを例文に使います。",
     "exampleEnglish": "Example with terrific.",
-    "id": 1060,
+    "id": 1057,
     "image": "🍜"
   },
   {
@@ -11668,7 +11635,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "入学を例文に使います。",
     "exampleEnglish": "Example with entry to school or university.",
-    "id": 1061,
+    "id": 1058,
     "image": "📚"
   },
   {
@@ -11679,7 +11646,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "片付けるを例文に使います。",
     "exampleEnglish": "Example with to (clean) tidy up (v.t.).",
-    "id": 1062,
+    "id": 1059,
     "image": "🏠"
   },
   {
@@ -11690,7 +11657,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "写すを例文に使います。",
     "exampleEnglish": "Example with to copy (v.t.); to photograph.",
-    "id": 1063,
+    "id": 1060,
     "image": "🏠"
   },
   {
@@ -11701,7 +11668,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "パソコンを例文に使います。",
     "exampleEnglish": "Example with (personal) computer.",
-    "id": 1064,
+    "id": 1061,
     "image": "🏠"
   },
   {
@@ -11712,7 +11679,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "部長を例文に使います。",
     "exampleEnglish": "Example with department (division) manager.",
-    "id": 1065,
+    "id": 1062,
     "image": "🏠"
   },
   {
@@ -11723,19 +11690,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "火事を例文に使います。",
     "exampleEnglish": "Example with fire.",
-    "id": 1066,
+    "id": 1063,
     "image": "🏠"
   },
   {
     "native": "足す",
     "english": "to add (numbers)",
     "phonetic": "たす",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 2,
     "exampleNative": "足すを例文に使います。",
     "exampleEnglish": "Example with to add (numbers).",
-    "id": 1067,
-    "image": "🏠"
+    "id": 1064,
+    "image": "🔢"
   },
   {
     "native": "教会",
@@ -11745,7 +11712,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "教会を例文に使います。",
     "exampleEnglish": "Example with church.",
-    "id": 1068,
+    "id": 1065,
     "image": "🏠"
   },
   {
@@ -11756,7 +11723,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "彼らを例文に使います。",
     "exampleEnglish": "Example with they (usually male).",
-    "id": 1069,
+    "id": 1066,
     "image": "🏠"
   },
   {
@@ -11767,7 +11734,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "いっぱいを例文に使います。",
     "exampleEnglish": "Example with full.",
-    "id": 1070,
+    "id": 1067,
     "image": "🏠"
   },
   {
@@ -11778,7 +11745,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "アメリカを例文に使います。",
     "exampleEnglish": "Example with America.",
-    "id": 1071,
+    "id": 1068,
     "image": "🏠"
   },
   {
@@ -11789,7 +11756,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "男性を例文に使います。",
     "exampleEnglish": "Example with man; male.",
-    "id": 1072,
+    "id": 1069,
     "image": "🏠"
   },
   {
@@ -11800,7 +11767,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "理由を例文に使います。",
     "exampleEnglish": "Example with reason.",
-    "id": 1073,
+    "id": 1070,
     "image": "🏠"
   },
   {
@@ -11811,7 +11778,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "生産を例文に使います。",
     "exampleEnglish": "Example with production; to produce.",
-    "id": 1074,
+    "id": 1071,
     "image": "🏠"
   },
   {
@@ -11822,7 +11789,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "着物を例文に使います。",
     "exampleEnglish": "Example with kimono; Japanese traditional dress.",
-    "id": 1075,
+    "id": 1072,
     "image": "🏠"
   },
   {
@@ -11833,7 +11800,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "おもちゃを例文に使います。",
     "exampleEnglish": "Example with a toy.",
-    "id": 1076,
+    "id": 1073,
     "image": "🏠"
   },
   {
@@ -11844,7 +11811,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "暮れるを例文に使います。",
     "exampleEnglish": "Example with to get dark.",
-    "id": 1077,
+    "id": 1074,
     "image": "🏠"
   },
   {
@@ -11855,7 +11822,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "釣るを例文に使います。",
     "exampleEnglish": "Example with to fish.",
-    "id": 1078,
+    "id": 1075,
     "image": "🏠"
   },
   {
@@ -11866,7 +11833,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "～ちゃんを例文に使います。",
     "exampleEnglish": "Example with suffix for familiar (female) person.",
-    "id": 1079,
+    "id": 1076,
     "image": "🏠"
   },
   {
@@ -11877,7 +11844,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "打つを例文に使います。",
     "exampleEnglish": "Example with to hit.",
-    "id": 1080,
+    "id": 1077,
     "image": "🏠"
   },
   {
@@ -11888,7 +11855,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "あんなを例文に使います。",
     "exampleEnglish": "Example with such.",
-    "id": 1081,
+    "id": 1078,
     "image": "🏠"
   },
   {
@@ -11899,7 +11866,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "謝るを例文に使います。",
     "exampleEnglish": "Example with to apologize.",
-    "id": 1082,
+    "id": 1079,
     "image": "🏠"
   },
   {
@@ -11910,7 +11877,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "昼間を例文に使います。",
     "exampleEnglish": "Example with daytime.",
-    "id": 1083,
+    "id": 1080,
     "image": "🏠"
   },
   {
@@ -11921,7 +11888,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "教育を例文に使います。",
     "exampleEnglish": "Example with education.",
-    "id": 1084,
+    "id": 1081,
     "image": "🏠"
   },
   {
@@ -11932,7 +11899,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "女性を例文に使います。",
     "exampleEnglish": "Example with woman.",
-    "id": 1085,
+    "id": 1082,
     "image": "🏠"
   },
   {
@@ -11943,7 +11910,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "米を例文に使います。",
     "exampleEnglish": "Example with uncooked rice.",
-    "id": 1086,
+    "id": 1083,
     "image": "🏠"
   },
   {
@@ -11954,7 +11921,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "邪魔を例文に使います。",
     "exampleEnglish": "Example with hindrance.",
-    "id": 1087,
+    "id": 1084,
     "image": "🏠"
   },
   {
@@ -11965,7 +11932,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "国際を例文に使います。",
     "exampleEnglish": "Example with international.",
-    "id": 1088,
+    "id": 1085,
     "image": "🏠"
   },
   {
@@ -11976,7 +11943,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "隅を例文に使います。",
     "exampleEnglish": "Example with corner.",
-    "id": 1089,
+    "id": 1086,
     "image": "🏠"
   },
   {
@@ -11987,7 +11954,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "伺うを例文に使います。",
     "exampleEnglish": "Example with humble form of 行く (いく).",
-    "id": 1090,
+    "id": 1087,
     "image": "🏠"
   },
   {
@@ -11998,7 +11965,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "再来週を例文に使います。",
     "exampleEnglish": "Example with the week after next.",
-    "id": 1091,
+    "id": 1088,
     "image": "🏠"
   },
   {
@@ -12009,7 +11976,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "夢を例文に使います。",
     "exampleEnglish": "Example with a dream.",
-    "id": 1092,
+    "id": 1089,
     "image": "🏠"
   },
   {
@@ -12020,7 +11987,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "喉を例文に使います。",
     "exampleEnglish": "Example with throat.",
-    "id": 1093,
+    "id": 1090,
     "image": "🏠"
   },
   {
@@ -12031,7 +11998,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "最近を例文に使います。",
     "exampleEnglish": "Example with recently.",
-    "id": 1094,
+    "id": 1091,
     "image": "🏠"
   },
   {
@@ -12042,7 +12009,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "周りを例文に使います。",
     "exampleEnglish": "Example with surroundings.",
-    "id": 1095,
+    "id": 1092,
     "image": "🏠"
   },
   {
@@ -12053,7 +12020,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "歴史を例文に使います。",
     "exampleEnglish": "Example with history.",
-    "id": 1096,
+    "id": 1093,
     "image": "🏠"
   },
   {
@@ -12064,7 +12031,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "不便を例文に使います。",
     "exampleEnglish": "Example with inconvenience.",
-    "id": 1097,
+    "id": 1094,
     "image": "🏠"
   },
   {
@@ -12075,7 +12042,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "血を例文に使います。",
     "exampleEnglish": "Example with blood.",
-    "id": 1098,
+    "id": 1095,
     "image": "🏠"
   },
   {
@@ -12086,7 +12053,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "～続けるを例文に使います。",
     "exampleEnglish": "Example with to continue doing ~.",
-    "id": 1099,
+    "id": 1096,
     "image": "🏠"
   },
   {
@@ -12097,7 +12064,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "毛を例文に使います。",
     "exampleEnglish": "Example with hair.",
-    "id": 1100,
+    "id": 1097,
     "image": "🏠"
   },
   {
@@ -12108,7 +12075,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ひどいを例文に使います。",
     "exampleEnglish": "Example with terrible.",
-    "id": 1101,
+    "id": 1098,
     "image": "🏠"
   },
   {
@@ -12119,7 +12086,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "例えばを例文に使います。",
     "exampleEnglish": "Example with for example.",
-    "id": 1102,
+    "id": 1099,
     "image": "🏠"
   },
   {
@@ -12130,7 +12097,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "中々を例文に使います。",
     "exampleEnglish": "Example with very.",
-    "id": 1103,
+    "id": 1100,
     "image": "🏠"
   },
   {
@@ -12141,7 +12108,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "随分を例文に使います。",
     "exampleEnglish": "Example with extremely.",
-    "id": 1104,
+    "id": 1101,
     "image": "🏠"
   },
   {
@@ -12152,7 +12119,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "～やすいを例文に使います。",
     "exampleEnglish": "Example with easy to do ~.",
-    "id": 1105,
+    "id": 1102,
     "image": "🏠"
   },
   {
@@ -12163,7 +12130,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "押し入れを例文に使います。",
     "exampleEnglish": "Example with closet.",
-    "id": 1106,
+    "id": 1103,
     "image": "🏠"
   },
   {
@@ -12174,7 +12141,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "電灯を例文に使います。",
     "exampleEnglish": "Example with electric light.",
-    "id": 1107,
+    "id": 1104,
     "image": "🏠"
   },
   {
@@ -12185,7 +12152,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "叱るを例文に使います。",
     "exampleEnglish": "Example with to scold.",
-    "id": 1108,
+    "id": 1105,
     "image": "🏠"
   },
   {
@@ -12196,7 +12163,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "サンダルを例文に使います。",
     "exampleEnglish": "Example with sandal.",
-    "id": 1109,
+    "id": 1106,
     "image": "🏠"
   },
   {
@@ -12207,7 +12174,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "びっくりするを例文に使います。",
     "exampleEnglish": "Example with to be surprised.",
-    "id": 1110,
+    "id": 1107,
     "image": "🏠"
   },
   {
@@ -12218,7 +12185,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "うまいを例文に使います。",
     "exampleEnglish": "Example with delicious; skillful; fortunate.",
-    "id": 1111,
+    "id": 1108,
     "image": "🏠"
   },
   {
@@ -12229,7 +12196,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "変えるを例文に使います。",
     "exampleEnglish": "Example with to change.",
-    "id": 1112,
+    "id": 1109,
     "image": "🏠"
   },
   {
@@ -12240,7 +12207,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "講堂を例文に使います。",
     "exampleEnglish": "Example with auditorium.",
-    "id": 1113,
+    "id": 1110,
     "image": "🏠"
   },
   {
@@ -12251,7 +12218,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "子を例文に使います。",
     "exampleEnglish": "Example with child.",
-    "id": 1114,
+    "id": 1111,
     "image": "🏠"
   },
   {
@@ -12262,7 +12229,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "沸かすを例文に使います。",
     "exampleEnglish": "Example with to boil.",
-    "id": 1115,
+    "id": 1112,
     "image": "🏠"
   },
   {
@@ -12273,7 +12240,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "レジを例文に使います。",
     "exampleEnglish": "Example with register.",
-    "id": 1116,
+    "id": 1113,
     "image": "🏠"
   },
   {
@@ -12284,7 +12251,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "しばらくを例文に使います。",
     "exampleEnglish": "Example with little while.",
-    "id": 1117,
+    "id": 1114,
     "image": "🏠"
   },
   {
@@ -12295,7 +12262,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "特にを例文に使います。",
     "exampleEnglish": "Example with particularly.",
-    "id": 1118,
+    "id": 1115,
     "image": "🏠"
   },
   {
@@ -12306,7 +12273,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "空くを例文に使います。",
     "exampleEnglish": "Example with to open.",
-    "id": 1119,
+    "id": 1116,
     "image": "🏠"
   },
   {
@@ -12317,19 +12284,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "計画を例文に使います。",
     "exampleEnglish": "Example with plan.",
-    "id": 1120,
+    "id": 1117,
     "image": "🏠"
   },
   {
     "native": "通り",
     "english": "~ Street",
     "phonetic": "とおり",
-    "category": "Daily Life",
+    "category": "Weather & Nature",
     "topikLevel": 2,
     "exampleNative": "通りを例文に使います。",
     "exampleEnglish": "Example with ~ Street.",
-    "id": 1121,
-    "image": "🏠"
+    "id": 1118,
+    "image": "🌤️"
   },
   {
     "native": "下着",
@@ -12339,7 +12306,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "下着を例文に使います。",
     "exampleEnglish": "Example with underwear.",
-    "id": 1122,
+    "id": 1119,
     "image": "🏠"
   },
   {
@@ -12350,7 +12317,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "経済を例文に使います。",
     "exampleEnglish": "Example with economics.",
-    "id": 1123,
+    "id": 1120,
     "image": "🏠"
   },
   {
@@ -12361,7 +12328,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "こうを例文に使います。",
     "exampleEnglish": "Example with like this.",
-    "id": 1124,
+    "id": 1121,
     "image": "🏠"
   },
   {
@@ -12372,7 +12339,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "是非を例文に使います。",
     "exampleEnglish": "Example with certainly.",
-    "id": 1125,
+    "id": 1122,
     "image": "🏠"
   },
   {
@@ -12383,7 +12350,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "裏を例文に使います。",
     "exampleEnglish": "Example with reverse side.",
-    "id": 1126,
+    "id": 1123,
     "image": "🏠"
   },
   {
@@ -12394,7 +12361,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "為を例文に使います。",
     "exampleEnglish": "Example with good.",
-    "id": 1127,
+    "id": 1124,
     "image": "🏠"
   },
   {
@@ -12405,7 +12372,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "おいでになるを例文に使います。",
     "exampleEnglish": "Example with (hon.) to be.",
-    "id": 1128,
+    "id": 1125,
     "image": "🏠"
   },
   {
@@ -12416,7 +12383,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "変わるを例文に使います。",
     "exampleEnglish": "Example with to change (v.i.).",
-    "id": 1129,
+    "id": 1126,
     "image": "🏠"
   },
   {
@@ -12427,7 +12394,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "以外を例文に使います。",
     "exampleEnglish": "Example with other than.",
-    "id": 1130,
+    "id": 1127,
     "image": "🏠"
   },
   {
@@ -12438,7 +12405,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "済むを例文に使います。",
     "exampleEnglish": "Example with to finish.",
-    "id": 1131,
+    "id": 1128,
     "image": "🏠"
   },
   {
@@ -12449,7 +12416,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ハンバーグを例文に使います。",
     "exampleEnglish": "Example with hamburger steak.",
-    "id": 1132,
+    "id": 1129,
     "image": "🏠"
   },
   {
@@ -12460,7 +12427,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "市を例文に使います。",
     "exampleEnglish": "Example with city.",
-    "id": 1133,
+    "id": 1130,
     "image": "🏠"
   },
   {
@@ -12471,7 +12438,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "引き出しを例文に使います。",
     "exampleEnglish": "Example with drawer.",
-    "id": 1134,
+    "id": 1131,
     "image": "🏠"
   },
   {
@@ -12482,7 +12449,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "遊びを例文に使います。",
     "exampleEnglish": "Example with play.",
-    "id": 1135,
+    "id": 1132,
     "image": "🏠"
   },
   {
@@ -12493,7 +12460,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "支度を例文に使います。",
     "exampleEnglish": "Example with preparation.",
-    "id": 1136,
+    "id": 1133,
     "image": "🏠"
   },
   {
@@ -12504,7 +12471,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "～始めるを例文に使います。",
     "exampleEnglish": "Example with to start doing ~.",
-    "id": 1137,
+    "id": 1134,
     "image": "🏠"
   },
   {
@@ -12515,7 +12482,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "見えるを例文に使います。",
     "exampleEnglish": "Example with to be visible; -- polite verb meaning 来る (くる) --.",
-    "id": 1138,
+    "id": 1135,
     "image": "🏠"
   },
   {
@@ -12526,7 +12493,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "十分を例文に使います。",
     "exampleEnglish": "Example with enough.",
-    "id": 1139,
+    "id": 1136,
     "image": "🏠"
   },
   {
@@ -12537,7 +12504,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "音を例文に使います。",
     "exampleEnglish": "Example with sound.",
-    "id": 1140,
+    "id": 1137,
     "image": "🏠"
   },
   {
@@ -12548,7 +12515,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "きっとを例文に使います。",
     "exampleEnglish": "Example with surely.",
-    "id": 1141,
+    "id": 1138,
     "image": "🏠"
   },
   {
@@ -12559,7 +12526,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "まずを例文に使います。",
     "exampleEnglish": "Example with first (of all).",
-    "id": 1142,
+    "id": 1139,
     "image": "🏠"
   },
   {
@@ -12570,7 +12537,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "遠くを例文に使います。",
     "exampleEnglish": "Example with far away.",
-    "id": 1143,
+    "id": 1140,
     "image": "🏠"
   },
   {
@@ -12581,7 +12548,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "大体を例文に使います。",
     "exampleEnglish": "Example with approximately; in most cases; in general; to begin with (same as もともと).",
-    "id": 1144,
+    "id": 1141,
     "image": "🏠"
   },
   {
@@ -12592,7 +12559,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "折れるを例文に使います。",
     "exampleEnglish": "Example with to break.",
-    "id": 1145,
+    "id": 1142,
     "image": "🏠"
   },
   {
@@ -12603,7 +12570,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "正しいを例文に使います。",
     "exampleEnglish": "Example with correct.",
-    "id": 1146,
+    "id": 1143,
     "image": "🏠"
   },
   {
@@ -12614,7 +12581,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "輸入を例文に使います。",
     "exampleEnglish": "Example with import.",
-    "id": 1147,
+    "id": 1144,
     "image": "🏠"
   },
   {
@@ -12625,7 +12592,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "返事を例文に使います。",
     "exampleEnglish": "Example with reply.",
-    "id": 1148,
+    "id": 1145,
     "image": "🏠"
   },
   {
@@ -12636,7 +12603,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "都を例文に使います。",
     "exampleEnglish": "Example with metropolitan.",
-    "id": 1149,
+    "id": 1146,
     "image": "🏠"
   },
   {
@@ -12647,7 +12614,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "産業を例文に使います。",
     "exampleEnglish": "Example with industry.",
-    "id": 1150,
+    "id": 1147,
     "image": "🏠"
   },
   {
@@ -12658,7 +12625,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "伝えるを例文に使います。",
     "exampleEnglish": "Example with to convey (a message); to tell.",
-    "id": 1151,
+    "id": 1148,
     "image": "🏠"
   },
   {
@@ -12669,7 +12636,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "お金持ちを例文に使います。",
     "exampleEnglish": "Example with rich person.",
-    "id": 1152,
+    "id": 1149,
     "image": "🏠"
   },
   {
@@ -12680,7 +12647,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "説明を例文に使います。",
     "exampleEnglish": "Example with explanation.",
-    "id": 1153,
+    "id": 1150,
     "image": "🏠"
   },
   {
@@ -12691,7 +12658,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "島を例文に使います。",
     "exampleEnglish": "Example with island.",
-    "id": 1154,
+    "id": 1151,
     "image": "🏠"
   },
   {
@@ -12702,7 +12669,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "道具を例文に使います。",
     "exampleEnglish": "Example with tool.",
-    "id": 1155,
+    "id": 1152,
     "image": "🏠"
   },
   {
@@ -12713,7 +12680,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "滑るを例文に使います。",
     "exampleEnglish": "Example with to slide.",
-    "id": 1156,
+    "id": 1153,
     "image": "🏠"
   },
   {
@@ -12724,7 +12691,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "それほどを例文に使います。",
     "exampleEnglish": "Example with to that degree; extent.",
-    "id": 1157,
+    "id": 1154,
     "image": "🏠"
   },
   {
@@ -12735,7 +12702,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "以上を例文に使います。",
     "exampleEnglish": "Example with more than; this is all.",
-    "id": 1158,
+    "id": 1155,
     "image": "🏠"
   },
   {
@@ -12746,7 +12713,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "～ままを例文に使います。",
     "exampleEnglish": "Example with as it is.",
-    "id": 1159,
+    "id": 1156,
     "image": "🏠"
   },
   {
@@ -12757,7 +12724,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "特急を例文に使います。",
     "exampleEnglish": "Example with limited express (train faster than an express).",
-    "id": 1160,
+    "id": 1157,
     "image": "🚌"
   },
   {
@@ -12768,7 +12735,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "プレゼントを例文に使います。",
     "exampleEnglish": "Example with present.",
-    "id": 1161,
+    "id": 1158,
     "image": "🏠"
   },
   {
@@ -12779,7 +12746,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "～(に) よるとを例文に使います。",
     "exampleEnglish": "Example with according to ~.",
-    "id": 1162,
+    "id": 1159,
     "image": "🏠"
   },
   {
@@ -12790,7 +12757,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "妻を例文に使います。",
     "exampleEnglish": "Example with wife (humble).",
-    "id": 1163,
+    "id": 1160,
     "image": "🏠"
   },
   {
@@ -12801,7 +12768,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "帰りを例文に使います。",
     "exampleEnglish": "Example with return.",
-    "id": 1164,
+    "id": 1161,
     "image": "🏠"
   },
   {
@@ -12812,7 +12779,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "具合を例文に使います。",
     "exampleEnglish": "Example with condition.",
-    "id": 1165,
+    "id": 1162,
     "image": "🏠"
   },
   {
@@ -12823,7 +12790,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "堅; 硬; 固いを例文に使います。",
     "exampleEnglish": "Example with solid.",
-    "id": 1166,
+    "id": 1163,
     "image": "🏠"
   },
   {
@@ -12834,7 +12801,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "駐車場を例文に使います。",
     "exampleEnglish": "Example with parking lot.",
-    "id": 1167,
+    "id": 1164,
     "image": "🏠"
   },
   {
@@ -12845,7 +12812,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "スーツを例文に使います。",
     "exampleEnglish": "Example with suit.",
-    "id": 1168,
+    "id": 1165,
     "image": "🏠"
   },
   {
@@ -12856,7 +12823,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "危険を例文に使います。",
     "exampleEnglish": "Example with danger.",
-    "id": 1169,
+    "id": 1166,
     "image": "🏠"
   },
   {
@@ -12867,7 +12834,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "髪を例文に使います。",
     "exampleEnglish": "Example with hair.",
-    "id": 1170,
+    "id": 1167,
     "image": "🏠"
   },
   {
@@ -12878,7 +12845,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "天気予報を例文に使います。",
     "exampleEnglish": "Example with weather forecast.",
-    "id": 1171,
+    "id": 1168,
     "image": "🍜"
   },
   {
@@ -12889,7 +12856,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "彼女を例文に使います。",
     "exampleEnglish": "Example with girlfriend; she.",
-    "id": 1172,
+    "id": 1169,
     "image": "🏠"
   },
   {
@@ -12900,7 +12867,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "間を例文に使います。",
     "exampleEnglish": "Example with space.",
-    "id": 1173,
+    "id": 1170,
     "image": "🏠"
   },
   {
@@ -12911,7 +12878,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "卒業を例文に使います。",
     "exampleEnglish": "Example with graduation.",
-    "id": 1174,
+    "id": 1171,
     "image": "🏠"
   },
   {
@@ -12922,7 +12889,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "それでを例文に使います。",
     "exampleEnglish": "Example with and (conj.).",
-    "id": 1175,
+    "id": 1172,
     "image": "🏠"
   },
   {
@@ -12933,7 +12900,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "枝を例文に使います。",
     "exampleEnglish": "Example with branch.",
-    "id": 1176,
+    "id": 1173,
     "image": "🏠"
   },
   {
@@ -12944,7 +12911,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "専門を例文に使います。",
     "exampleEnglish": "Example with major; speciality.",
-    "id": 1177,
+    "id": 1174,
     "image": "🏠"
   },
   {
@@ -12955,7 +12922,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "そろそろを例文に使います。",
     "exampleEnglish": "Example with gradually.",
-    "id": 1178,
+    "id": 1175,
     "image": "🏠"
   },
   {
@@ -12966,7 +12933,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "送るを例文に使います。",
     "exampleEnglish": "Example with to send.",
-    "id": 1179,
+    "id": 1176,
     "image": "🏠"
   },
   {
@@ -12977,7 +12944,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "あげるを例文に使います。",
     "exampleEnglish": "Example with to give.",
-    "id": 1180,
+    "id": 1177,
     "image": "🏠"
   },
   {
@@ -12988,7 +12955,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "騒ぐを例文に使います。",
     "exampleEnglish": "Example with to make noise.",
-    "id": 1181,
+    "id": 1178,
     "image": "🏠"
   },
   {
@@ -12999,7 +12966,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "尋ねるを例文に使います。",
     "exampleEnglish": "Example with to inquire (same as 質問する).",
-    "id": 1182,
+    "id": 1179,
     "image": "🏠"
   },
   {
@@ -13010,7 +12977,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "放送を例文に使います。",
     "exampleEnglish": "Example with broadcasting.",
-    "id": 1183,
+    "id": 1180,
     "image": "🏠"
   },
   {
@@ -13021,7 +12988,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "政治を例文に使います。",
     "exampleEnglish": "Example with politics.",
-    "id": 1184,
+    "id": 1181,
     "image": "🏠"
   },
   {
@@ -13032,7 +12999,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "市民を例文に使います。",
     "exampleEnglish": "Example with citizen.",
-    "id": 1185,
+    "id": 1182,
     "image": "🏠"
   },
   {
@@ -13043,7 +13010,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ファックスを例文に使います。",
     "exampleEnglish": "Example with fax.",
-    "id": 1186,
+    "id": 1183,
     "image": "🏠"
   },
   {
@@ -13054,7 +13021,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "負けるを例文に使います。",
     "exampleEnglish": "Example with to lose (a game) (v.i.).",
-    "id": 1187,
+    "id": 1184,
     "image": "🍜"
   },
   {
@@ -13065,19 +13032,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "指輪を例文に使います。",
     "exampleEnglish": "Example with (finger) ring.",
-    "id": 1188,
+    "id": 1185,
     "image": "🏠"
   },
   {
     "native": "田舎",
     "english": "rural",
     "phonetic": "いなか",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 2,
     "exampleNative": "田舎を例文に使います。",
     "exampleEnglish": "Example with rural.",
-    "id": 1189,
-    "image": "🏠"
+    "id": 1186,
+    "image": "🔢"
   },
   {
     "native": "見つける",
@@ -13087,7 +13054,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "見つけるを例文に使います。",
     "exampleEnglish": "Example with to discover.",
-    "id": 1190,
+    "id": 1187,
     "image": "🏠"
   },
   {
@@ -13098,7 +13065,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "高校生を例文に使います。",
     "exampleEnglish": "Example with high school student.",
-    "id": 1191,
+    "id": 1188,
     "image": "📚"
   },
   {
@@ -13109,7 +13076,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "講義を例文に使います。",
     "exampleEnglish": "Example with a lecture.",
-    "id": 1192,
+    "id": 1189,
     "image": "🏠"
   },
   {
@@ -13120,7 +13087,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "そんなにを例文に使います。",
     "exampleEnglish": "Example with so much.",
-    "id": 1193,
+    "id": 1190,
     "image": "🏠"
   },
   {
@@ -13131,7 +13098,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "昼休みを例文に使います。",
     "exampleEnglish": "Example with lunch break.",
-    "id": 1194,
+    "id": 1191,
     "image": "🏠"
   },
   {
@@ -13142,7 +13109,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "忘れ物を例文に使います。",
     "exampleEnglish": "Example with lost article.",
-    "id": 1195,
+    "id": 1192,
     "image": "🏠"
   },
   {
@@ -13153,7 +13120,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "下りるを例文に使います。",
     "exampleEnglish": "Example with to get down.",
-    "id": 1196,
+    "id": 1193,
     "image": "🏠"
   },
   {
@@ -13164,7 +13131,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "腕を例文に使います。",
     "exampleEnglish": "Example with arm (in reference to body).",
-    "id": 1197,
+    "id": 1194,
     "image": "🏠"
   },
   {
@@ -13175,7 +13142,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "訳を例文に使います。",
     "exampleEnglish": "Example with reason; explanation.",
-    "id": 1198,
+    "id": 1195,
     "image": "🏠"
   },
   {
@@ -13186,7 +13153,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "承知を例文に使います。",
     "exampleEnglish": "Example with consent.",
-    "id": 1199,
+    "id": 1196,
     "image": "🏠"
   },
   {
@@ -13197,7 +13164,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "日記を例文に使います。",
     "exampleEnglish": "Example with diary.",
-    "id": 1200,
+    "id": 1197,
     "image": "🏠"
   },
   {
@@ -13208,7 +13175,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "高校; 高等学校を例文に使います。",
     "exampleEnglish": "Example with high school; senior high school.",
-    "id": 1201,
+    "id": 1198,
     "image": "📚"
   },
   {
@@ -13219,7 +13186,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "似るを例文に使います。",
     "exampleEnglish": "Example with to resemble.",
-    "id": 1202,
+    "id": 1199,
     "image": "🏠"
   },
   {
@@ -13230,7 +13197,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "～おわるを例文に使います。",
     "exampleEnglish": "Example with to finish doing ~.",
-    "id": 1203,
+    "id": 1200,
     "image": "🏠"
   },
   {
@@ -13241,7 +13208,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "暖房を例文に使います。",
     "exampleEnglish": "Example with heating.",
-    "id": 1204,
+    "id": 1201,
     "image": "🍜"
   },
   {
@@ -13252,7 +13219,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "留守を例文に使います。",
     "exampleEnglish": "Example with absence; not at home.",
-    "id": 1205,
+    "id": 1202,
     "image": "🏠"
   },
   {
@@ -13263,7 +13230,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "割合を例文に使います。",
     "exampleEnglish": "Example with rate.",
-    "id": 1206,
+    "id": 1203,
     "image": "🏠"
   },
   {
@@ -13274,7 +13241,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "寺を例文に使います。",
     "exampleEnglish": "Example with Buddhist temple.",
-    "id": 1207,
+    "id": 1204,
     "image": "🏠"
   },
   {
@@ -13285,7 +13252,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "慣れるを例文に使います。",
     "exampleEnglish": "Example with to grow accustomed to.",
-    "id": 1208,
+    "id": 1205,
     "image": "🏠"
   },
   {
@@ -13296,7 +13263,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "普通を例文に使います。",
     "exampleEnglish": "Example with common; usual.",
-    "id": 1209,
+    "id": 1206,
     "image": "🏠"
   },
   {
@@ -13307,7 +13274,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "手伝うを例文に使います。",
     "exampleEnglish": "Example with to help.",
-    "id": 1210,
+    "id": 1207,
     "image": "🏠"
   },
   {
@@ -13318,7 +13285,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "なるほどを例文に使います。",
     "exampleEnglish": "Example with I see; I now understand.",
-    "id": 1211,
+    "id": 1208,
     "image": "🏠"
   },
   {
@@ -13329,7 +13296,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "くださるを例文に使います。",
     "exampleEnglish": "Example with (hon.) to give.",
-    "id": 1212,
+    "id": 1209,
     "image": "🏠"
   },
   {
@@ -13340,7 +13307,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "息子を例文に使います。",
     "exampleEnglish": "Example with (humble) son.",
-    "id": 1213,
+    "id": 1210,
     "image": "🏠"
   },
   {
@@ -13351,7 +13318,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "お子さんを例文に使います。",
     "exampleEnglish": "Example with (someone else's) child (polite).",
-    "id": 1214,
+    "id": 1211,
     "image": "🏠"
   },
   {
@@ -13362,7 +13329,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "会場を例文に使います。",
     "exampleEnglish": "Example with venue.",
-    "id": 1215,
+    "id": 1212,
     "image": "🏠"
   },
   {
@@ -13373,7 +13340,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "笑うを例文に使います。",
     "exampleEnglish": "Example with to laugh.",
-    "id": 1216,
+    "id": 1213,
     "image": "🏠"
   },
   {
@@ -13384,7 +13351,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "運ぶを例文に使います。",
     "exampleEnglish": "Example with to transport.",
-    "id": 1217,
+    "id": 1214,
     "image": "🚌"
   },
   {
@@ -13395,7 +13362,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "文学を例文に使います。",
     "exampleEnglish": "Example with literature.",
-    "id": 1218,
+    "id": 1215,
     "image": "🏠"
   },
   {
@@ -13406,7 +13373,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "光を例文に使います。",
     "exampleEnglish": "Example with light.",
-    "id": 1219,
+    "id": 1216,
     "image": "🏠"
   },
   {
@@ -13417,7 +13384,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "お見舞いを例文に使います。",
     "exampleEnglish": "Example with calling on someone who is ill.",
-    "id": 1220,
+    "id": 1217,
     "image": "🏠"
   },
   {
@@ -13428,7 +13395,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "席を例文に使います。",
     "exampleEnglish": "Example with a seat.",
-    "id": 1221,
+    "id": 1218,
     "image": "🍜"
   },
   {
@@ -13439,7 +13406,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "～様を例文に使います。",
     "exampleEnglish": "Example with Mr..",
-    "id": 1222,
+    "id": 1219,
     "image": "🏠"
   },
   {
@@ -13450,7 +13417,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ご存じを例文に使います。",
     "exampleEnglish": "Example with knowing.",
-    "id": 1223,
+    "id": 1220,
     "image": "🏠"
   },
   {
@@ -13461,7 +13428,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "下るを例文に使います。",
     "exampleEnglish": "Example with to descend.",
-    "id": 1224,
+    "id": 1221,
     "image": "🏠"
   },
   {
@@ -13472,7 +13439,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "字を例文に使います。",
     "exampleEnglish": "Example with letter; character.",
-    "id": 1225,
+    "id": 1222,
     "image": "🏠"
   },
   {
@@ -13483,7 +13450,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "アジアを例文に使います。",
     "exampleEnglish": "Example with Asia.",
-    "id": 1226,
+    "id": 1223,
     "image": "🏠"
   },
   {
@@ -13494,7 +13461,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "褒めるを例文に使います。",
     "exampleEnglish": "Example with to praise; to say nice things.",
-    "id": 1227,
+    "id": 1224,
     "image": "🏠"
   },
   {
@@ -13505,7 +13472,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "あを例文に使います。",
     "exampleEnglish": "Example with Ah.",
-    "id": 1228,
+    "id": 1225,
     "image": "🏠"
   },
   {
@@ -13516,7 +13483,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "最もを例文に使います。",
     "exampleEnglish": "Example with most.",
-    "id": 1229,
+    "id": 1226,
     "image": "🏠"
   },
   {
@@ -13527,7 +13494,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "合うを例文に使います。",
     "exampleEnglish": "Example with to fit.",
-    "id": 1230,
+    "id": 1227,
     "image": "🏠"
   },
   {
@@ -13538,7 +13505,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "～代を例文に使います。",
     "exampleEnglish": "Example with ~ age; period.",
-    "id": 1231,
+    "id": 1228,
     "image": "🏠"
   },
   {
@@ -13549,7 +13516,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "最後を例文に使います。",
     "exampleEnglish": "Example with last.",
-    "id": 1232,
+    "id": 1229,
     "image": "🏠"
   },
   {
@@ -13560,7 +13527,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "値段を例文に使います。",
     "exampleEnglish": "Example with price.",
-    "id": 1233,
+    "id": 1230,
     "image": "🏠"
   },
   {
@@ -13571,7 +13538,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "退院を例文に使います。",
     "exampleEnglish": "Example with leaving hospital.",
-    "id": 1234,
+    "id": 1231,
     "image": "🏠"
   },
   {
@@ -13582,7 +13549,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "展覧会を例文に使います。",
     "exampleEnglish": "Example with exhibition.",
-    "id": 1235,
+    "id": 1232,
     "image": "🏠"
   },
   {
@@ -13593,7 +13560,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "久しぶりを例文に使います。",
     "exampleEnglish": "Example with it has been a long time; for the first time in a long time.",
-    "id": 1236,
+    "id": 1233,
     "image": "🏠"
   },
   {
@@ -13604,7 +13571,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "カーテンを例文に使います。",
     "exampleEnglish": "Example with curtain.",
-    "id": 1237,
+    "id": 1234,
     "image": "🏠"
   },
   {
@@ -13615,7 +13582,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "汽車を例文に使います。",
     "exampleEnglish": "Example with train (steam).",
-    "id": 1238,
+    "id": 1235,
     "image": "🚌"
   },
   {
@@ -13626,7 +13593,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "遅れるを例文に使います。",
     "exampleEnglish": "Example with to (be) become late.",
-    "id": 1239,
+    "id": 1236,
     "image": "🏠"
   },
   {
@@ -13637,7 +13604,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "見つかるを例文に使います。",
     "exampleEnglish": "Example with to be found (v.i.).",
-    "id": 1240,
+    "id": 1237,
     "image": "🏠"
   },
   {
@@ -13648,7 +13615,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "召し上がるを例文に使います。",
     "exampleEnglish": "Example with -- honorific form of 食べる (たべる) and 飲む (のむ) --.",
-    "id": 1241,
+    "id": 1238,
     "image": "🏠"
   },
   {
@@ -13659,7 +13626,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "太るを例文に使います。",
     "exampleEnglish": "Example with to gain weight.",
-    "id": 1242,
+    "id": 1239,
     "image": "🏠"
   },
   {
@@ -13670,7 +13637,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "注射を例文に使います。",
     "exampleEnglish": "Example with injection.",
-    "id": 1243,
+    "id": 1240,
     "image": "🏠"
   },
   {
@@ -13681,7 +13648,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "様を例文に使います。",
     "exampleEnglish": "Example with way.",
-    "id": 1244,
+    "id": 1241,
     "image": "🏠"
   },
   {
@@ -13692,7 +13659,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "～おきを例文に使います。",
     "exampleEnglish": "Example with after every ~.",
-    "id": 1245,
+    "id": 1242,
     "image": "🏠"
   },
   {
@@ -13703,7 +13670,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "最初を例文に使います。",
     "exampleEnglish": "Example with beginning.",
-    "id": 1246,
+    "id": 1243,
     "image": "🏠"
   },
   {
@@ -13714,7 +13681,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "御～を例文に使います。",
     "exampleEnglish": "Example with honorable ~.",
-    "id": 1247,
+    "id": 1244,
     "image": "🏠"
   },
   {
@@ -13725,7 +13692,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "安心を例文に使います。",
     "exampleEnglish": "Example with peace of mind.",
-    "id": 1248,
+    "id": 1245,
     "image": "🏠"
   },
   {
@@ -13736,7 +13703,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "直るを例文に使います。",
     "exampleEnglish": "Example with to be fixed.",
-    "id": 1249,
+    "id": 1246,
     "image": "🏠"
   },
   {
@@ -13747,7 +13714,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "集めるを例文に使います。",
     "exampleEnglish": "Example with to collect.",
-    "id": 1250,
+    "id": 1247,
     "image": "🏠"
   },
   {
@@ -13758,7 +13725,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "直すを例文に使います。",
     "exampleEnglish": "Example with to correct (v.t.); to fix.",
-    "id": 1251,
+    "id": 1248,
     "image": "🏠"
   },
   {
@@ -13769,7 +13736,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "続くを例文に使います。",
     "exampleEnglish": "Example with to be continued.",
-    "id": 1252,
+    "id": 1249,
     "image": "🏠"
   },
   {
@@ -13780,7 +13747,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "先輩を例文に使います。",
     "exampleEnglish": "Example with senior members of a group.",
-    "id": 1253,
+    "id": 1250,
     "image": "🏠"
   },
   {
@@ -13791,7 +13758,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "約束を例文に使います。",
     "exampleEnglish": "Example with arrangement.",
-    "id": 1254,
+    "id": 1251,
     "image": "🏠"
   },
   {
@@ -13802,7 +13769,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "世話を例文に使います。",
     "exampleEnglish": "Example with looking after; to look after.",
-    "id": 1255,
+    "id": 1252,
     "image": "🏠"
   },
   {
@@ -13813,7 +13780,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "近所を例文に使います。",
     "exampleEnglish": "Example with neighborhood.",
-    "id": 1256,
+    "id": 1253,
     "image": "🏠"
   },
   {
@@ -13824,7 +13791,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "将来を例文に使います。",
     "exampleEnglish": "Example with (in the) future; prospects.",
-    "id": 1257,
+    "id": 1254,
     "image": "🏠"
   },
   {
@@ -13835,7 +13802,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "億を例文に使います。",
     "exampleEnglish": "Example with hundred million.",
-    "id": 1258,
+    "id": 1255,
     "image": "🏠"
   },
   {
@@ -13846,7 +13813,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "数学を例文に使います。",
     "exampleEnglish": "Example with mathematics.",
-    "id": 1259,
+    "id": 1256,
     "image": "🏠"
   },
   {
@@ -13857,7 +13824,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "文化を例文に使います。",
     "exampleEnglish": "Example with culture.",
-    "id": 1260,
+    "id": 1257,
     "image": "🏠"
   },
   {
@@ -13868,7 +13835,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "払うを例文に使います。",
     "exampleEnglish": "Example with to pay.",
-    "id": 1261,
+    "id": 1258,
     "image": "🏠"
   },
   {
@@ -13879,7 +13846,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "習慣を例文に使います。",
     "exampleEnglish": "Example with custom (in reference to culture).",
-    "id": 1262,
+    "id": 1259,
     "image": "🏠"
   },
   {
@@ -13890,7 +13857,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "焼けるを例文に使います。",
     "exampleEnglish": "Example with to burn.",
-    "id": 1263,
+    "id": 1260,
     "image": "🏠"
   },
   {
@@ -13901,7 +13868,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "君を例文に使います。",
     "exampleEnglish": "Example with you (informal for men).",
-    "id": 1264,
+    "id": 1261,
     "image": "🏠"
   },
   {
@@ -13912,7 +13879,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "冷えるを例文に使います。",
     "exampleEnglish": "Example with to grow cold.",
-    "id": 1265,
+    "id": 1262,
     "image": "🏠"
   },
   {
@@ -13923,7 +13890,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "点くを例文に使います。",
     "exampleEnglish": "Example with to be started.",
-    "id": 1266,
+    "id": 1263,
     "image": "🏠"
   },
   {
@@ -13934,7 +13901,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "この間を例文に使います。",
     "exampleEnglish": "Example with the other day.",
-    "id": 1267,
+    "id": 1264,
     "image": "🏠"
   },
   {
@@ -13945,7 +13912,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "かっこうを例文に使います。",
     "exampleEnglish": "Example with appearance.",
-    "id": 1268,
+    "id": 1265,
     "image": "🏠"
   },
   {
@@ -13956,7 +13923,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "かまうを例文に使います。",
     "exampleEnglish": "Example with to mind.",
-    "id": 1269,
+    "id": 1266,
     "image": "🚌"
   },
   {
@@ -13967,7 +13934,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "続けるを例文に使います。",
     "exampleEnglish": "Example with to continue.",
-    "id": 1270,
+    "id": 1267,
     "image": "🏠"
   },
   {
@@ -13978,7 +13945,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "落すを例文に使います。",
     "exampleEnglish": "Example with to drop.",
-    "id": 1271,
+    "id": 1268,
     "image": "🏠"
   },
   {
@@ -13989,7 +13956,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "出発を例文に使います。",
     "exampleEnglish": "Example with departure.",
-    "id": 1272,
+    "id": 1269,
     "image": "🏠"
   },
   {
@@ -14000,7 +13967,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "拝見を例文に使います。",
     "exampleEnglish": "Example with (humble) (polite) seeing.",
-    "id": 1273,
+    "id": 1270,
     "image": "🏠"
   },
   {
@@ -14011,7 +13978,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "割れるを例文に使います。",
     "exampleEnglish": "Example with to break.",
-    "id": 1274,
+    "id": 1271,
     "image": "🏠"
   },
   {
@@ -14022,7 +13989,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "背中を例文に使います。",
     "exampleEnglish": "Example with back (of body).",
-    "id": 1275,
+    "id": 1272,
     "image": "🏠"
   },
   {
@@ -14033,7 +14000,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "新聞社を例文に使います。",
     "exampleEnglish": "Example with newspaper company.",
-    "id": 1276,
+    "id": 1273,
     "image": "🏠"
   },
   {
@@ -14044,7 +14011,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "いじめるを例文に使います。",
     "exampleEnglish": "Example with to bully.",
-    "id": 1277,
+    "id": 1274,
     "image": "🏠"
   },
   {
@@ -14055,7 +14022,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "回る、回すを例文に使います。",
     "exampleEnglish": "Example with to go around.",
-    "id": 1278,
+    "id": 1275,
     "image": "🏠"
   },
   {
@@ -14066,7 +14033,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "～君を例文に使います。",
     "exampleEnglish": "Example with Mr. (junior) ~.",
-    "id": 1279,
+    "id": 1276,
     "image": "🏠"
   },
   {
@@ -14077,7 +14044,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "おっしゃるを例文に使います。",
     "exampleEnglish": "Example with -- honorific expression for いう --.",
-    "id": 1280,
+    "id": 1277,
     "image": "🏠"
   },
   {
@@ -14088,7 +14055,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "眠いを例文に使います。",
     "exampleEnglish": "Example with sleepy.",
-    "id": 1281,
+    "id": 1278,
     "image": "🏠"
   },
   {
@@ -14099,7 +14066,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "濡れるを例文に使います。",
     "exampleEnglish": "Example with to get wet.",
-    "id": 1282,
+    "id": 1279,
     "image": "🏠"
   },
   {
@@ -14110,7 +14077,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "倒れるを例文に使います。",
     "exampleEnglish": "Example with to collapse.",
-    "id": 1283,
+    "id": 1280,
     "image": "🏠"
   },
   {
@@ -14121,7 +14088,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "スーパー (マーケット)を例文に使います。",
     "exampleEnglish": "Example with supermarket.",
-    "id": 1284,
+    "id": 1281,
     "image": "🏠"
   },
   {
@@ -14132,7 +14099,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "アクセサリーを例文に使います。",
     "exampleEnglish": "Example with accessory.",
-    "id": 1285,
+    "id": 1282,
     "image": "🏠"
   },
   {
@@ -14143,7 +14110,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "考えるを例文に使います。",
     "exampleEnglish": "Example with to think (about); to consider.",
-    "id": 1286,
+    "id": 1283,
     "image": "🏠"
   },
   {
@@ -14154,7 +14121,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "向かうを例文に使います。",
     "exampleEnglish": "Example with to face.",
-    "id": 1287,
+    "id": 1284,
     "image": "🏠"
   },
   {
@@ -14165,7 +14132,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "自由を例文に使います。",
     "exampleEnglish": "Example with freedom.",
-    "id": 1288,
+    "id": 1285,
     "image": "🏠"
   },
   {
@@ -14176,7 +14143,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "仕方を例文に使います。",
     "exampleEnglish": "Example with way (of doing something).",
-    "id": 1289,
+    "id": 1286,
     "image": "🏠"
   },
   {
@@ -14187,7 +14154,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "首を例文に使います。",
     "exampleEnglish": "Example with neck.",
-    "id": 1290,
+    "id": 1287,
     "image": "🏠"
   },
   {
@@ -14198,7 +14165,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "程を例文に使います。",
     "exampleEnglish": "Example with degree.",
-    "id": 1291,
+    "id": 1288,
     "image": "🏠"
   },
   {
@@ -14209,7 +14176,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "代わりを例文に使います。",
     "exampleEnglish": "Example with substitute.",
-    "id": 1292,
+    "id": 1289,
     "image": "🏠"
   },
   {
@@ -14220,7 +14187,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "失敗を例文に使います。",
     "exampleEnglish": "Example with failure.",
-    "id": 1293,
+    "id": 1290,
     "image": "🏠"
   },
   {
@@ -14231,7 +14198,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "工業を例文に使います。",
     "exampleEnglish": "Example with (manufacturing) industry.",
-    "id": 1294,
+    "id": 1291,
     "image": "🏠"
   },
   {
@@ -14242,7 +14209,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "移るを例文に使います。",
     "exampleEnglish": "Example with to move (from a house); to transfer (from a department); to shift.",
-    "id": 1295,
+    "id": 1292,
     "image": "🏠"
   },
   {
@@ -14253,7 +14220,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "スーツケースを例文に使います。",
     "exampleEnglish": "Example with suitcase.",
-    "id": 1296,
+    "id": 1293,
     "image": "🏠"
   },
   {
@@ -14264,7 +14231,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ひげを例文に使います。",
     "exampleEnglish": "Example with beard.",
-    "id": 1297,
+    "id": 1294,
     "image": "🏠"
   },
   {
@@ -14275,7 +14242,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "研究室を例文に使います。",
     "exampleEnglish": "Example with the professor's office; laboratory.",
-    "id": 1298,
+    "id": 1295,
     "image": "🏠"
   },
   {
@@ -14286,7 +14253,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "工場を例文に使います。",
     "exampleEnglish": "Example with factory.",
-    "id": 1299,
+    "id": 1296,
     "image": "🏠"
   },
   {
@@ -14297,7 +14264,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "紹介を例文に使います。",
     "exampleEnglish": "Example with an introduction.",
-    "id": 1300,
+    "id": 1297,
     "image": "🏠"
   },
   {
@@ -14308,7 +14275,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "けれど; けれどもを例文に使います。",
     "exampleEnglish": "Example with but.",
-    "id": 1301,
+    "id": 1298,
     "image": "🏠"
   },
   {
@@ -14319,7 +14286,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "舟を例文に使います。",
     "exampleEnglish": "Example with ship.",
-    "id": 1302,
+    "id": 1299,
     "image": "🏠"
   },
   {
@@ -14330,7 +14297,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "動くを例文に使います。",
     "exampleEnglish": "Example with to move.",
-    "id": 1303,
+    "id": 1300,
     "image": "🏠"
   },
   {
@@ -14341,7 +14308,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "～(に) ついてを例文に使います。",
     "exampleEnglish": "Example with about.",
-    "id": 1304,
+    "id": 1301,
     "image": "🏠"
   },
   {
@@ -14352,7 +14319,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "コンサートを例文に使います。",
     "exampleEnglish": "Example with concert.",
-    "id": 1305,
+    "id": 1302,
     "image": "🏠"
   },
   {
@@ -14363,7 +14330,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "虫を例文に使います。",
     "exampleEnglish": "Example with insect.",
-    "id": 1306,
+    "id": 1303,
     "image": "🏠"
   },
   {
@@ -14374,7 +14341,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "優しいを例文に使います。",
     "exampleEnglish": "Example with kind (person).",
-    "id": 1307,
+    "id": 1304,
     "image": "🏠"
   },
   {
@@ -14385,7 +14352,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "コンピュータ; コンピューターを例文に使います。",
     "exampleEnglish": "Example with computer.",
-    "id": 1308,
+    "id": 1305,
     "image": "🏠"
   },
   {
@@ -14396,7 +14363,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "植えるを例文に使います。",
     "exampleEnglish": "Example with to plant.",
-    "id": 1309,
+    "id": 1306,
     "image": "🏠"
   },
   {
@@ -14407,7 +14374,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "両方を例文に使います。",
     "exampleEnglish": "Example with both sides.",
-    "id": 1310,
+    "id": 1307,
     "image": "🏠"
   },
   {
@@ -14418,7 +14385,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "汚れるを例文に使います。",
     "exampleEnglish": "Example with to become dirty.",
-    "id": 1311,
+    "id": 1308,
     "image": "🏠"
   },
   {
@@ -14429,7 +14396,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "水泳を例文に使います。",
     "exampleEnglish": "Example with swimming.",
-    "id": 1312,
+    "id": 1309,
     "image": "🏠"
   },
   {
@@ -14440,7 +14407,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "経験を例文に使います。",
     "exampleEnglish": "Example with experience.",
-    "id": 1313,
+    "id": 1310,
     "image": "🏠"
   },
   {
@@ -14451,7 +14418,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "勝つを例文に使います。",
     "exampleEnglish": "Example with to win.",
-    "id": 1314,
+    "id": 1311,
     "image": "🏠"
   },
   {
@@ -14462,7 +14429,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "砂を例文に使います。",
     "exampleEnglish": "Example with sand.",
-    "id": 1315,
+    "id": 1312,
     "image": "🏠"
   },
   {
@@ -14473,7 +14440,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "警察を例文に使います。",
     "exampleEnglish": "Example with police; police station.",
-    "id": 1316,
+    "id": 1313,
     "image": "🏠"
   },
   {
@@ -14484,7 +14451,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "取り替えるを例文に使います。",
     "exampleEnglish": "Example with to exchange.",
-    "id": 1317,
+    "id": 1314,
     "image": "🏠"
   },
   {
@@ -14495,7 +14462,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "急ぐを例文に使います。",
     "exampleEnglish": "Example with to hurry.",
-    "id": 1318,
+    "id": 1315,
     "image": "🏠"
   },
   {
@@ -14506,7 +14473,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "簡単を例文に使います。",
     "exampleEnglish": "Example with simple.",
-    "id": 1319,
+    "id": 1316,
     "image": "🏠"
   },
   {
@@ -14517,7 +14484,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "参るを例文に使います。",
     "exampleEnglish": "Example with humble expression for 行く and 来る.",
-    "id": 1320,
+    "id": 1317,
     "image": "🏠"
   },
   {
@@ -14528,7 +14495,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "全然を例文に使います。",
     "exampleEnglish": "Example with not at all; wholly.",
-    "id": 1321,
+    "id": 1318,
     "image": "🏠"
   },
   {
@@ -14539,7 +14506,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "特別を例文に使います。",
     "exampleEnglish": "Example with special.",
-    "id": 1322,
+    "id": 1319,
     "image": "🏠"
   },
   {
@@ -14550,7 +14517,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "復習を例文に使います。",
     "exampleEnglish": "Example with review (of lessons).",
-    "id": 1323,
+    "id": 1320,
     "image": "🏠"
   },
   {
@@ -14561,7 +14528,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "間に合うを例文に使います。",
     "exampleEnglish": "Example with to be in time for.",
-    "id": 1324,
+    "id": 1321,
     "image": "🏠"
   },
   {
@@ -14572,7 +14539,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "役に立つを例文に使います。",
     "exampleEnglish": "Example with to be helpful.",
-    "id": 1325,
+    "id": 1322,
     "image": "🏠"
   },
   {
@@ -14583,7 +14550,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "もうすぐを例文に使います。",
     "exampleEnglish": "Example with very soon; in a few moments; days.",
-    "id": 1326,
+    "id": 1323,
     "image": "🏠"
   },
   {
@@ -14594,7 +14561,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "真中を例文に使います。",
     "exampleEnglish": "Example with middle.",
-    "id": 1327,
+    "id": 1324,
     "image": "🏠"
   },
   {
@@ -14605,7 +14572,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "戻るを例文に使います。",
     "exampleEnglish": "Example with to return (v.i.); to come back.",
-    "id": 1328,
+    "id": 1325,
     "image": "🏠"
   },
   {
@@ -14616,7 +14583,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "研究を例文に使います。",
     "exampleEnglish": "Example with study.",
-    "id": 1329,
+    "id": 1326,
     "image": "📚"
   },
   {
@@ -14627,7 +14594,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ケーキを例文に使います。",
     "exampleEnglish": "Example with cake.",
-    "id": 1330,
+    "id": 1327,
     "image": "🏠"
   },
   {
@@ -14638,7 +14605,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "草を例文に使います。",
     "exampleEnglish": "Example with grass.",
-    "id": 1331,
+    "id": 1328,
     "image": "🏠"
   },
   {
@@ -14649,7 +14616,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "込むを例文に使います。",
     "exampleEnglish": "Example with to be crowded.",
-    "id": 1332,
+    "id": 1329,
     "image": "🏠"
   },
   {
@@ -14660,7 +14627,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "この頃を例文に使います。",
     "exampleEnglish": "Example with these days.",
-    "id": 1333,
+    "id": 1330,
     "image": "🏠"
   },
   {
@@ -14671,7 +14638,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "訪ねるを例文に使います。",
     "exampleEnglish": "Example with to visit.",
-    "id": 1334,
+    "id": 1331,
     "image": "🏠"
   },
   {
@@ -14682,7 +14649,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "下げるを例文に使います。",
     "exampleEnglish": "Example with to lower (v.t.); to hang.",
-    "id": 1335,
+    "id": 1332,
     "image": "🏠"
   },
   {
@@ -14693,7 +14660,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "花見を例文に使います。",
     "exampleEnglish": "Example with cherry-blossom viewing.",
-    "id": 1336,
+    "id": 1333,
     "image": "🏠"
   },
   {
@@ -14704,7 +14671,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "途中を例文に使います。",
     "exampleEnglish": "Example with on the way.",
-    "id": 1337,
+    "id": 1334,
     "image": "🏠"
   },
   {
@@ -14715,7 +14682,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "入院を例文に使います。",
     "exampleEnglish": "Example with hospitalization.",
-    "id": 1338,
+    "id": 1335,
     "image": "🏠"
   },
   {
@@ -14726,7 +14693,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "乗り換えるを例文に使います。",
     "exampleEnglish": "Example with to transfer (trains).",
-    "id": 1339,
+    "id": 1336,
     "image": "🚌"
   },
   {
@@ -14737,7 +14704,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "別れるを例文に使います。",
     "exampleEnglish": "Example with to part from.",
-    "id": 1340,
+    "id": 1337,
     "image": "🏠"
   },
   {
@@ -14748,7 +14715,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "～町を例文に使います。",
     "exampleEnglish": "Example with the town of ~.",
-    "id": 1341,
+    "id": 1338,
     "image": "🏠"
   },
   {
@@ -14759,7 +14726,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "安全を例文に使います。",
     "exampleEnglish": "Example with safety.",
-    "id": 1342,
+    "id": 1339,
     "image": "🏠"
   },
   {
@@ -14770,7 +14737,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "看護婦を例文に使います。",
     "exampleEnglish": "Example with (female) nurse.",
-    "id": 1343,
+    "id": 1340,
     "image": "🏠"
   },
   {
@@ -14781,7 +14748,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "見物を例文に使います。",
     "exampleEnglish": "Example with sightseeing.",
-    "id": 1344,
+    "id": 1341,
     "image": "🏠"
   },
   {
@@ -14792,7 +14759,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "相談を例文に使います。",
     "exampleEnglish": "Example with consultation.",
-    "id": 1345,
+    "id": 1342,
     "image": "🏠"
   },
   {
@@ -14803,7 +14770,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ガソリンスタンドを例文に使います。",
     "exampleEnglish": "Example with gas station.",
-    "id": 1346,
+    "id": 1343,
     "image": "🏠"
   },
   {
@@ -14814,7 +14781,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "テニスを例文に使います。",
     "exampleEnglish": "Example with tennis.",
-    "id": 1347,
+    "id": 1344,
     "image": "🏠"
   },
   {
@@ -14825,7 +14792,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "眠るを例文に使います。",
     "exampleEnglish": "Example with to sleep.",
-    "id": 1348,
+    "id": 1345,
     "image": "🏠"
   },
   {
@@ -14836,7 +14803,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "上がるを例文に使います。",
     "exampleEnglish": "Example with to rise.",
-    "id": 1349,
+    "id": 1346,
     "image": "🏠"
   },
   {
@@ -14847,7 +14814,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "翻訳を例文に使います。",
     "exampleEnglish": "Example with translation.",
-    "id": 1350,
+    "id": 1347,
     "image": "🏠"
   },
   {
@@ -14858,7 +14825,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "食事を例文に使います。",
     "exampleEnglish": "Example with meal.",
-    "id": 1351,
+    "id": 1348,
     "image": "🍜"
   },
   {
@@ -14869,7 +14836,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "おかげを例文に使います。",
     "exampleEnglish": "Example with thanks or owing to.",
-    "id": 1352,
+    "id": 1349,
     "image": "🏠"
   },
   {
@@ -14880,7 +14847,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "娘を例文に使います。",
     "exampleEnglish": "Example with daughter (humble).",
-    "id": 1353,
+    "id": 1350,
     "image": "🏠"
   },
   {
@@ -14891,7 +14858,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "湯を例文に使います。",
     "exampleEnglish": "Example with hot water.",
-    "id": 1354,
+    "id": 1351,
     "image": "🏠"
   },
   {
@@ -14902,7 +14869,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "競争を例文に使います。",
     "exampleEnglish": "Example with competition.",
-    "id": 1355,
+    "id": 1352,
     "image": "🏠"
   },
   {
@@ -14913,7 +14880,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "会議を例文に使います。",
     "exampleEnglish": "Example with business meeting; conference.",
-    "id": 1356,
+    "id": 1353,
     "image": "🚌"
   },
   {
@@ -14924,7 +14891,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "湖を例文に使います。",
     "exampleEnglish": "Example with lake.",
-    "id": 1357,
+    "id": 1354,
     "image": "🏠"
   },
   {
@@ -14935,7 +14902,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "集まるを例文に使います。",
     "exampleEnglish": "Example with to gather (v.i.).",
-    "id": 1358,
+    "id": 1355,
     "image": "🏠"
   },
   {
@@ -14946,7 +14913,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "～にくいを例文に使います。",
     "exampleEnglish": "Example with difficult to do ~.",
-    "id": 1359,
+    "id": 1356,
     "image": "🏠"
   },
   {
@@ -14957,7 +14924,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "生活を例文に使います。",
     "exampleEnglish": "Example with living.",
-    "id": 1360,
+    "id": 1357,
     "image": "🏠"
   },
   {
@@ -14968,7 +14935,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "糸を例文に使います。",
     "exampleEnglish": "Example with thread.",
-    "id": 1361,
+    "id": 1358,
     "image": "🏠"
   },
   {
@@ -14979,7 +14946,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "関係を例文に使います。",
     "exampleEnglish": "Example with relation(ship).",
-    "id": 1362,
+    "id": 1359,
     "image": "🏠"
   },
   {
@@ -14990,19 +14957,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ピアノを例文に使います。",
     "exampleEnglish": "Example with piano.",
-    "id": 1363,
+    "id": 1360,
     "image": "🏠"
   },
   {
     "native": "～目",
     "english": "number ~ sequence",
     "phonetic": "～め",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 2,
     "exampleNative": "～目を例文に使います。",
     "exampleEnglish": "Example with number ~ sequence.",
-    "id": 1364,
-    "image": "🏠"
+    "id": 1361,
+    "image": "🔢"
   },
   {
     "native": "番組",
@@ -15012,7 +14979,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "番組を例文に使います。",
     "exampleEnglish": "Example with broadcast program.",
-    "id": 1365,
+    "id": 1362,
     "image": "🏠"
   },
   {
@@ -15023,7 +14990,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "急を例文に使います。",
     "exampleEnglish": "Example with urgent.",
-    "id": 1366,
+    "id": 1363,
     "image": "🏠"
   },
   {
@@ -15034,7 +15001,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "棚を例文に使います。",
     "exampleEnglish": "Example with shelves.",
-    "id": 1367,
+    "id": 1364,
     "image": "🏠"
   },
   {
@@ -15045,7 +15012,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "木綿を例文に使います。",
     "exampleEnglish": "Example with cotton.",
-    "id": 1368,
+    "id": 1365,
     "image": "🏠"
   },
   {
@@ -15056,7 +15023,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "輸出を例文に使います。",
     "exampleEnglish": "Example with export.",
-    "id": 1369,
+    "id": 1366,
     "image": "🏠"
   },
   {
@@ -15067,7 +15034,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "タイプを例文に使います。",
     "exampleEnglish": "Example with type.",
-    "id": 1370,
+    "id": 1367,
     "image": "🏠"
   },
   {
@@ -15078,7 +15045,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "すりを例文に使います。",
     "exampleEnglish": "Example with pickpocket.",
-    "id": 1371,
+    "id": 1368,
     "image": "🏠"
   },
   {
@@ -15089,7 +15056,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "うれしいを例文に使います。",
     "exampleEnglish": "Example with to be happy; to be glad.",
-    "id": 1372,
+    "id": 1369,
     "image": "💕"
   },
   {
@@ -15100,7 +15067,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "アルコールを例文に使います。",
     "exampleEnglish": "Example with alcohol.",
-    "id": 1373,
+    "id": 1370,
     "image": "🏠"
   },
   {
@@ -15111,7 +15078,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ソフトを例文に使います。",
     "exampleEnglish": "Example with soft; soft hat; software.",
-    "id": 1374,
+    "id": 1371,
     "image": "🏠"
   },
   {
@@ -15122,7 +15089,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "神社を例文に使います。",
     "exampleEnglish": "Example with Shinto shrine.",
-    "id": 1375,
+    "id": 1372,
     "image": "🏠"
   },
   {
@@ -15133,7 +15100,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "大分を例文に使います。",
     "exampleEnglish": "Example with fairly well.",
-    "id": 1376,
+    "id": 1373,
     "image": "🏠"
   },
   {
@@ -15144,7 +15111,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "楽しみを例文に使います。",
     "exampleEnglish": "Example with pleasure.",
-    "id": 1377,
+    "id": 1374,
     "image": "🏠"
   },
   {
@@ -15155,7 +15122,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "趣味を例文に使います。",
     "exampleEnglish": "Example with hobby; pastime.",
-    "id": 1378,
+    "id": 1375,
     "image": "🏠"
   },
   {
@@ -15166,7 +15133,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "電報を例文に使います。",
     "exampleEnglish": "Example with telegram.",
-    "id": 1379,
+    "id": 1376,
     "image": "🏠"
   },
   {
@@ -15177,7 +15144,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "家内を例文に使います。",
     "exampleEnglish": "Example with (one's own) wife.",
-    "id": 1380,
+    "id": 1377,
     "image": "🏠"
   },
   {
@@ -15188,7 +15155,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "指を例文に使います。",
     "exampleEnglish": "Example with finger.",
-    "id": 1381,
+    "id": 1378,
     "image": "🏠"
   },
   {
@@ -15199,7 +15166,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "これからを例文に使います。",
     "exampleEnglish": "Example with from now on.",
-    "id": 1382,
+    "id": 1379,
     "image": "🏠"
   },
   {
@@ -15210,7 +15177,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "たまにを例文に使います。",
     "exampleEnglish": "Example with occasionally.",
-    "id": 1383,
+    "id": 1380,
     "image": "🏠"
   },
   {
@@ -15221,7 +15188,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "社会を例文に使います。",
     "exampleEnglish": "Example with society.",
-    "id": 1384,
+    "id": 1381,
     "image": "🏠"
   },
   {
@@ -15232,7 +15199,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "作法を例文に使います。",
     "exampleEnglish": "Example with manners.",
-    "id": 1385,
+    "id": 1382,
     "image": "🏠"
   },
   {
@@ -15243,7 +15210,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "様々を例文に使います。",
     "exampleEnglish": "Example with varied.",
-    "id": 1386,
+    "id": 1383,
     "image": "🏠"
   },
   {
@@ -15254,7 +15221,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "冷ますを例文に使います。",
     "exampleEnglish": "Example with to cool.",
-    "id": 1387,
+    "id": 1384,
     "image": "🏠"
   },
   {
@@ -15265,7 +15232,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "覚ますを例文に使います。",
     "exampleEnglish": "Example with to awaken.",
-    "id": 1388,
+    "id": 1385,
     "image": "🏠"
   },
   {
@@ -15276,7 +15243,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "冷めるを例文に使います。",
     "exampleEnglish": "Example with to become cool.",
-    "id": 1389,
+    "id": 1386,
     "image": "🏠"
   },
   {
@@ -15287,7 +15254,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "覚めるを例文に使います。",
     "exampleEnglish": "Example with to wake.",
-    "id": 1390,
+    "id": 1387,
     "image": "🏠"
   },
   {
@@ -15298,7 +15265,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "左右を例文に使います。",
     "exampleEnglish": "Example with left and right; influence.",
-    "id": 1391,
+    "id": 1388,
     "image": "🏠"
   },
   {
@@ -15309,7 +15276,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "皿を例文に使います。",
     "exampleEnglish": "Example with plate.",
-    "id": 1392,
+    "id": 1389,
     "image": "🏠"
   },
   {
@@ -15320,7 +15287,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "更にを例文に使います。",
     "exampleEnglish": "Example with furthermore.",
-    "id": 1393,
+    "id": 1390,
     "image": "🏠"
   },
   {
@@ -15331,7 +15298,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "去るを例文に使います。",
     "exampleEnglish": "Example with to leave.",
-    "id": 1394,
+    "id": 1391,
     "image": "🏠"
   },
   {
@@ -15342,7 +15309,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "猿を例文に使います。",
     "exampleEnglish": "Example with monkey.",
-    "id": 1395,
+    "id": 1392,
     "image": "🏠"
   },
   {
@@ -15353,7 +15320,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "騒ぎを例文に使います。",
     "exampleEnglish": "Example with uproar.",
-    "id": 1396,
+    "id": 1393,
     "image": "🏠"
   },
   {
@@ -15364,7 +15331,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "参加を例文に使います。",
     "exampleEnglish": "Example with participation.",
-    "id": 1397,
+    "id": 1394,
     "image": "🏠"
   },
   {
@@ -15375,7 +15342,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "参考を例文に使います。",
     "exampleEnglish": "Example with reference.",
-    "id": 1398,
+    "id": 1395,
     "image": "🏠"
   },
   {
@@ -15386,7 +15353,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "賛成を例文に使います。",
     "exampleEnglish": "Example with approval.",
-    "id": 1399,
+    "id": 1396,
     "image": "🏠"
   },
   {
@@ -15397,7 +15364,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "酸性を例文に使います。",
     "exampleEnglish": "Example with acidity.",
-    "id": 1400,
+    "id": 1397,
     "image": "🏠"
   },
   {
@@ -15408,7 +15375,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "酸素を例文に使います。",
     "exampleEnglish": "Example with oxygen.",
-    "id": 1401,
+    "id": 1398,
     "image": "🏠"
   },
   {
@@ -15419,7 +15386,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "氏を例文に使います。",
     "exampleEnglish": "Example with family name.",
-    "id": 1402,
+    "id": 1399,
     "image": "🏠"
   },
   {
@@ -15430,7 +15397,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "詩を例文に使います。",
     "exampleEnglish": "Example with poem; poetry.",
-    "id": 1403,
+    "id": 1400,
     "image": "🏠"
   },
   {
@@ -15441,7 +15408,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "幸せを例文に使います。",
     "exampleEnglish": "Example with happiness.",
-    "id": 1404,
+    "id": 1401,
     "image": "🏠"
   },
   {
@@ -15452,7 +15419,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ジーンズを例文に使います。",
     "exampleEnglish": "Example with jeans.",
-    "id": 1405,
+    "id": 1402,
     "image": "🏠"
   },
   {
@@ -15463,7 +15430,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ジェット機を例文に使います。",
     "exampleEnglish": "Example with jet plane.",
-    "id": 1406,
+    "id": 1403,
     "image": "🏠"
   },
   {
@@ -15474,7 +15441,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "四角を例文に使います。",
     "exampleEnglish": "Example with square.",
-    "id": 1407,
+    "id": 1404,
     "image": "🏠"
   },
   {
@@ -15485,7 +15452,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "直にを例文に使います。",
     "exampleEnglish": "Example with immediately.",
-    "id": 1408,
+    "id": 1405,
     "image": "🏠"
   },
   {
@@ -15496,7 +15463,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "しかもを例文に使います。",
     "exampleEnglish": "Example with moreover.",
-    "id": 1409,
+    "id": 1406,
     "image": "🏠"
   },
   {
@@ -15507,7 +15474,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "四季を例文に使います。",
     "exampleEnglish": "Example with four seasons.",
-    "id": 1410,
+    "id": 1407,
     "image": "🏠"
   },
   {
@@ -15518,7 +15485,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "直を例文に使います。",
     "exampleEnglish": "Example with immediately.",
-    "id": 1411,
+    "id": 1408,
     "image": "🏠"
   },
   {
@@ -15529,7 +15496,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "時期を例文に使います。",
     "exampleEnglish": "Example with time.",
-    "id": 1412,
+    "id": 1409,
     "image": "🏠"
   },
   {
@@ -15540,7 +15507,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "支給を例文に使います。",
     "exampleEnglish": "Example with payment.",
-    "id": 1413,
+    "id": 1410,
     "image": "🏠"
   },
   {
@@ -15551,7 +15518,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "至急を例文に使います。",
     "exampleEnglish": "Example with urgent.",
-    "id": 1414,
+    "id": 1411,
     "image": "🏠"
   },
   {
@@ -15562,7 +15529,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "しきりにを例文に使います。",
     "exampleEnglish": "Example with frequently.",
-    "id": 1415,
+    "id": 1412,
     "image": "🍜"
   },
   {
@@ -15573,7 +15540,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "刺激を例文に使います。",
     "exampleEnglish": "Example with stimulus.",
-    "id": 1416,
+    "id": 1413,
     "image": "🏠"
   },
   {
@@ -15584,7 +15551,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "資源を例文に使います。",
     "exampleEnglish": "Example with resources.",
-    "id": 1417,
+    "id": 1414,
     "image": "🏠"
   },
   {
@@ -15595,7 +15562,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "事件を例文に使います。",
     "exampleEnglish": "Example with event.",
-    "id": 1418,
+    "id": 1415,
     "image": "🏠"
   },
   {
@@ -15606,7 +15573,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "時刻を例文に使います。",
     "exampleEnglish": "Example with time.",
-    "id": 1419,
+    "id": 1416,
     "image": "🏠"
   },
   {
@@ -15617,7 +15584,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "自殺を例文に使います。",
     "exampleEnglish": "Example with suicide.",
-    "id": 1420,
+    "id": 1417,
     "image": "🏠"
   },
   {
@@ -15628,7 +15595,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "事実を例文に使います。",
     "exampleEnglish": "Example with fact.",
-    "id": 1421,
+    "id": 1418,
     "image": "🏠"
   },
   {
@@ -15639,7 +15606,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "支出を例文に使います。",
     "exampleEnglish": "Example with expenditure.",
-    "id": 1422,
+    "id": 1419,
     "image": "🏠"
   },
   {
@@ -15650,7 +15617,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "事情を例文に使います。",
     "exampleEnglish": "Example with circumstances.",
-    "id": 1423,
+    "id": 1420,
     "image": "🏠"
   },
   {
@@ -15661,7 +15628,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "詩人を例文に使います。",
     "exampleEnglish": "Example with poet.",
-    "id": 1424,
+    "id": 1421,
     "image": "🏠"
   },
   {
@@ -15672,7 +15639,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "自身を例文に使います。",
     "exampleEnglish": "Example with oneself.",
-    "id": 1425,
+    "id": 1422,
     "image": "🏠"
   },
   {
@@ -15683,19 +15650,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "沈むを例文に使います。",
     "exampleEnglish": "Example with to sink; to feel depressed.",
-    "id": 1426,
+    "id": 1423,
     "image": "💕"
   },
   {
     "native": "自然",
     "english": "nature",
     "phonetic": "しぜん",
-    "category": "Daily Life",
+    "category": "Weather & Nature",
     "topikLevel": 2,
     "exampleNative": "自然を例文に使います。",
     "exampleEnglish": "Example with nature.",
-    "id": 1427,
-    "image": "🏠"
+    "id": 1424,
+    "image": "🌤️"
   },
   {
     "native": "思想",
@@ -15705,7 +15672,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "思想を例文に使います。",
     "exampleEnglish": "Example with thought.",
-    "id": 1428,
+    "id": 1425,
     "image": "🏠"
   },
   {
@@ -15716,7 +15683,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "舌を例文に使います。",
     "exampleEnglish": "Example with tongue.",
-    "id": 1429,
+    "id": 1426,
     "image": "🏠"
   },
   {
@@ -15727,7 +15694,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "次第を例文に使います。",
     "exampleEnglish": "Example with order; circumstances; immediate(ly).",
-    "id": 1430,
+    "id": 1427,
     "image": "🏠"
   },
   {
@@ -15738,7 +15705,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "従うを例文に使います。",
     "exampleEnglish": "Example with to abide (by the rules).",
-    "id": 1431,
+    "id": 1428,
     "image": "🏠"
   },
   {
@@ -15749,7 +15716,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "したがってを例文に使います。",
     "exampleEnglish": "Example with therefore.",
-    "id": 1432,
+    "id": 1429,
     "image": "🏠"
   },
   {
@@ -15760,19 +15727,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "親しいを例文に使います。",
     "exampleEnglish": "Example with intimate.",
-    "id": 1433,
+    "id": 1430,
     "image": "🏠"
   },
   {
     "native": "質",
     "english": "quality",
     "phonetic": "しつ",
-    "category": "Daily Life",
+    "category": "Weather & Nature",
     "topikLevel": 2,
     "exampleNative": "質を例文に使います。",
     "exampleEnglish": "Example with quality.",
-    "id": 1434,
-    "image": "🏠"
+    "id": 1431,
+    "image": "🌤️"
   },
   {
     "native": "失業",
@@ -15782,7 +15749,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "失業を例文に使います。",
     "exampleEnglish": "Example with unemployment.",
-    "id": 1435,
+    "id": 1432,
     "image": "🏠"
   },
   {
@@ -15793,7 +15760,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "湿気を例文に使います。",
     "exampleEnglish": "Example with moisture.",
-    "id": 1436,
+    "id": 1433,
     "image": "🏠"
   },
   {
@@ -15804,7 +15771,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "実験を例文に使います。",
     "exampleEnglish": "Example with lab work; experiment.",
-    "id": 1437,
+    "id": 1434,
     "image": "🏠"
   },
   {
@@ -15815,7 +15782,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "実現を例文に使います。",
     "exampleEnglish": "Example with implementation.",
-    "id": 1438,
+    "id": 1435,
     "image": "🏠"
   },
   {
@@ -15826,7 +15793,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "実行を例文に使います。",
     "exampleEnglish": "Example with practice.",
-    "id": 1439,
+    "id": 1436,
     "image": "🏠"
   },
   {
@@ -15837,7 +15804,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "実際を例文に使います。",
     "exampleEnglish": "Example with in fact; in actuality.",
-    "id": 1440,
+    "id": 1437,
     "image": "🏠"
   },
   {
@@ -15848,7 +15815,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "実施を例文に使います。",
     "exampleEnglish": "Example with enforcement.",
-    "id": 1441,
+    "id": 1438,
     "image": "🚌"
   },
   {
@@ -15859,7 +15826,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "湿度を例文に使います。",
     "exampleEnglish": "Example with humidity.",
-    "id": 1442,
+    "id": 1439,
     "image": "🏠"
   },
   {
@@ -15870,7 +15837,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "じっとを例文に使います。",
     "exampleEnglish": "Example with patiently.",
-    "id": 1443,
+    "id": 1440,
     "image": "🏠"
   },
   {
@@ -15881,7 +15848,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "実にを例文に使います。",
     "exampleEnglish": "Example with indeed.",
-    "id": 1444,
+    "id": 1441,
     "image": "🏠"
   },
   {
@@ -15892,7 +15859,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "実はを例文に使います。",
     "exampleEnglish": "Example with actually; in fact.",
-    "id": 1445,
+    "id": 1442,
     "image": "🏠"
   },
   {
@@ -15903,7 +15870,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "失望を例文に使います。",
     "exampleEnglish": "Example with disappointment.",
-    "id": 1446,
+    "id": 1443,
     "image": "🏠"
   },
   {
@@ -15914,19 +15881,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "実力を例文に使います。",
     "exampleEnglish": "Example with ability; force.",
-    "id": 1447,
+    "id": 1444,
     "image": "🏠"
   },
   {
     "native": "支店",
     "english": "branch store (office)",
     "phonetic": "してん",
-    "category": "Daily Life",
+    "category": "Shopping",
     "topikLevel": 2,
     "exampleNative": "支店を例文に使います。",
     "exampleEnglish": "Example with branch store (office).",
-    "id": 1448,
-    "image": "🏠"
+    "id": 1445,
+    "image": "🛍️"
   },
   {
     "native": "指導",
@@ -15936,7 +15903,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "指導を例文に使います。",
     "exampleEnglish": "Example with leadership.",
-    "id": 1449,
+    "id": 1446,
     "image": "🏠"
   },
   {
@@ -15947,7 +15914,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "自動を例文に使います。",
     "exampleEnglish": "Example with automatic.",
-    "id": 1450,
+    "id": 1447,
     "image": "🏠"
   },
   {
@@ -15958,7 +15925,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "児童を例文に使います。",
     "exampleEnglish": "Example with children.",
-    "id": 1451,
+    "id": 1448,
     "image": "🏠"
   },
   {
@@ -15969,7 +15936,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "品を例文に使います。",
     "exampleEnglish": "Example with thing.",
-    "id": 1452,
+    "id": 1449,
     "image": "🏠"
   },
   {
@@ -15980,7 +15947,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "支配を例文に使います。",
     "exampleEnglish": "Example with rule.",
-    "id": 1453,
+    "id": 1450,
     "image": "🏠"
   },
   {
@@ -15991,7 +15958,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "芝居を例文に使います。",
     "exampleEnglish": "Example with play.",
-    "id": 1454,
+    "id": 1451,
     "image": "🏠"
   },
   {
@@ -16002,7 +15969,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "しばしばを例文に使います。",
     "exampleEnglish": "Example with often.",
-    "id": 1455,
+    "id": 1452,
     "image": "🏠"
   },
   {
@@ -16013,7 +15980,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "芝生を例文に使います。",
     "exampleEnglish": "Example with lawn.",
-    "id": 1456,
+    "id": 1453,
     "image": "🏠"
   },
   {
@@ -16024,7 +15991,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "支払を例文に使います。",
     "exampleEnglish": "Example with payment.",
-    "id": 1457,
+    "id": 1454,
     "image": "🏠"
   },
   {
@@ -16035,7 +16002,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "支払うを例文に使います。",
     "exampleEnglish": "Example with to pay.",
-    "id": 1458,
+    "id": 1455,
     "image": "🏠"
   },
   {
@@ -16046,7 +16013,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "死亡を例文に使います。",
     "exampleEnglish": "Example with death.",
-    "id": 1459,
+    "id": 1456,
     "image": "🍜"
   },
   {
@@ -16057,7 +16024,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "資本を例文に使います。",
     "exampleEnglish": "Example with funds.",
-    "id": 1460,
+    "id": 1457,
     "image": "🏠"
   },
   {
@@ -16068,7 +16035,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "姉妹を例文に使います。",
     "exampleEnglish": "Example with sisters.",
-    "id": 1461,
+    "id": 1458,
     "image": "🏠"
   },
   {
@@ -16079,7 +16046,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "しまった (かん)を例文に使います。",
     "exampleEnglish": "Example with Damn it!.",
-    "id": 1462,
+    "id": 1459,
     "image": "🏠"
   },
   {
@@ -16090,7 +16057,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "自慢を例文に使います。",
     "exampleEnglish": "Example with pride.",
-    "id": 1463,
+    "id": 1460,
     "image": "🏠"
   },
   {
@@ -16101,7 +16068,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "地味を例文に使います。",
     "exampleEnglish": "Example with quiet.",
-    "id": 1464,
+    "id": 1461,
     "image": "🏠"
   },
   {
@@ -16112,19 +16079,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "示すを例文に使います。",
     "exampleEnglish": "Example with to show.",
-    "id": 1465,
+    "id": 1462,
     "image": "🏠"
   },
   {
     "native": "占める",
     "english": "to take up; to account for",
     "phonetic": "しめる",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 2,
     "exampleNative": "占めるを例文に使います。",
     "exampleEnglish": "Example with to take up; to account for.",
-    "id": 1466,
-    "image": "🏠"
+    "id": 1463,
+    "image": "🔢"
   },
   {
     "native": "湿る",
@@ -16134,7 +16101,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "湿るを例文に使います。",
     "exampleEnglish": "Example with to be wet.",
-    "id": 1467,
+    "id": 1464,
     "image": "🏠"
   },
   {
@@ -16145,7 +16112,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "霜を例文に使います。",
     "exampleEnglish": "Example with frost.",
-    "id": 1468,
+    "id": 1465,
     "image": "🏠"
   },
   {
@@ -16156,7 +16123,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "借金を例文に使います。",
     "exampleEnglish": "Example with debt.",
-    "id": 1469,
+    "id": 1466,
     "image": "🏠"
   },
   {
@@ -16167,7 +16134,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "しゃべるを例文に使います。",
     "exampleEnglish": "Example with to talk.",
-    "id": 1470,
+    "id": 1467,
     "image": "🏠"
   },
   {
@@ -16178,7 +16145,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "週を例文に使います。",
     "exampleEnglish": "Example with week.",
-    "id": 1471,
+    "id": 1468,
     "image": "🏠"
   },
   {
@@ -16189,7 +16156,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "州を例文に使います。",
     "exampleEnglish": "Example with state.",
-    "id": 1472,
+    "id": 1469,
     "image": "🏠"
   },
   {
@@ -16200,7 +16167,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "銃を例文に使います。",
     "exampleEnglish": "Example with gun.",
-    "id": 1473,
+    "id": 1470,
     "image": "🏠"
   },
   {
@@ -16211,7 +16178,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "周囲を例文に使います。",
     "exampleEnglish": "Example with surroundings.",
-    "id": 1474,
+    "id": 1471,
     "image": "🏠"
   },
   {
@@ -16222,7 +16189,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "収穫を例文に使います。",
     "exampleEnglish": "Example with harvest.",
-    "id": 1475,
+    "id": 1472,
     "image": "🏠"
   },
   {
@@ -16233,7 +16200,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "宗教を例文に使います。",
     "exampleEnglish": "Example with religion.",
-    "id": 1476,
+    "id": 1473,
     "image": "🏠"
   },
   {
@@ -16244,7 +16211,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "重視を例文に使います。",
     "exampleEnglish": "Example with importance.",
-    "id": 1477,
+    "id": 1474,
     "image": "🏠"
   },
   {
@@ -16255,7 +16222,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "就職を例文に使います。",
     "exampleEnglish": "Example with finding employment.",
-    "id": 1478,
+    "id": 1475,
     "image": "🏠"
   },
   {
@@ -16266,7 +16233,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ジュースを例文に使います。",
     "exampleEnglish": "Example with juice.",
-    "id": 1479,
+    "id": 1476,
     "image": "🍜"
   },
   {
@@ -16277,7 +16244,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "修正を例文に使います。",
     "exampleEnglish": "Example with amendment.",
-    "id": 1480,
+    "id": 1477,
     "image": "🏠"
   },
   {
@@ -16288,7 +16255,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "重体を例文に使います。",
     "exampleEnglish": "Example with seriously ill.",
-    "id": 1481,
+    "id": 1478,
     "image": "🏠"
   },
   {
@@ -16299,7 +16266,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "渋滞を例文に使います。",
     "exampleEnglish": "Example with congestion (e.g..",
-    "id": 1482,
+    "id": 1479,
     "image": "🏠"
   },
   {
@@ -16310,7 +16277,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "重大を例文に使います。",
     "exampleEnglish": "Example with serious.",
-    "id": 1483,
+    "id": 1480,
     "image": "🏠"
   },
   {
@@ -16321,7 +16288,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "住宅を例文に使います。",
     "exampleEnglish": "Example with resident.",
-    "id": 1484,
+    "id": 1481,
     "image": "🏠"
   },
   {
@@ -16332,7 +16299,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "集団を例文に使います。",
     "exampleEnglish": "Example with group.",
-    "id": 1485,
+    "id": 1482,
     "image": "🏠"
   },
   {
@@ -16343,7 +16310,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "集中を例文に使います。",
     "exampleEnglish": "Example with concentration.",
-    "id": 1486,
+    "id": 1483,
     "image": "🏠"
   },
   {
@@ -16354,7 +16321,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "収入を例文に使います。",
     "exampleEnglish": "Example with income.",
-    "id": 1487,
+    "id": 1484,
     "image": "🏠"
   },
   {
@@ -16365,7 +16332,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "住民を例文に使います。",
     "exampleEnglish": "Example with inhabitants.",
-    "id": 1488,
+    "id": 1485,
     "image": "🏠"
   },
   {
@@ -16376,7 +16343,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "重要を例文に使います。",
     "exampleEnglish": "Example with important.",
-    "id": 1489,
+    "id": 1486,
     "image": "🏠"
   },
   {
@@ -16387,7 +16354,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "修理を例文に使います。",
     "exampleEnglish": "Example with repairing.",
-    "id": 1490,
+    "id": 1487,
     "image": "🏠"
   },
   {
@@ -16398,7 +16365,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "主義を例文に使います。",
     "exampleEnglish": "Example with doctrine.",
-    "id": 1491,
+    "id": 1488,
     "image": "🏠"
   },
   {
@@ -16409,7 +16376,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "宿泊を例文に使います。",
     "exampleEnglish": "Example with lodging.",
-    "id": 1492,
+    "id": 1489,
     "image": "🏠"
   },
   {
@@ -16420,7 +16387,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "手術を例文に使います。",
     "exampleEnglish": "Example with surgical operation.",
-    "id": 1493,
+    "id": 1490,
     "image": "🏠"
   },
   {
@@ -16431,7 +16398,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "首相を例文に使います。",
     "exampleEnglish": "Example with Prime Minister.",
-    "id": 1494,
+    "id": 1491,
     "image": "🏠"
   },
   {
@@ -16442,7 +16409,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "手段を例文に使います。",
     "exampleEnglish": "Example with means.",
-    "id": 1495,
+    "id": 1492,
     "image": "🏠"
   },
   {
@@ -16453,7 +16420,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "主張を例文に使います。",
     "exampleEnglish": "Example with claim.",
-    "id": 1496,
+    "id": 1493,
     "image": "🏠"
   },
   {
@@ -16464,7 +16431,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "出場を例文に使います。",
     "exampleEnglish": "Example with participation.",
-    "id": 1497,
+    "id": 1494,
     "image": "🏠"
   },
   {
@@ -16475,7 +16442,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "出身を例文に使います。",
     "exampleEnglish": "Example with come from.",
-    "id": 1498,
+    "id": 1495,
     "image": "🏠"
   },
   {
@@ -16486,7 +16453,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "出版を例文に使います。",
     "exampleEnglish": "Example with publication.",
-    "id": 1499,
+    "id": 1496,
     "image": "🏠"
   },
   {
@@ -16497,7 +16464,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "首都を例文に使います。",
     "exampleEnglish": "Example with capital city.",
-    "id": 1500,
+    "id": 1497,
     "image": "🏠"
   },
   {
@@ -16508,7 +16475,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "主婦を例文に使います。",
     "exampleEnglish": "Example with housewife.",
-    "id": 1501,
+    "id": 1498,
     "image": "🏠"
   },
   {
@@ -16519,7 +16486,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "主要を例文に使います。",
     "exampleEnglish": "Example with chief.",
-    "id": 1502,
+    "id": 1499,
     "image": "🏠"
   },
   {
@@ -16530,7 +16497,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "需要を例文に使います。",
     "exampleEnglish": "Example with demand.",
-    "id": 1503,
+    "id": 1500,
     "image": "🏠"
   },
   {
@@ -16541,7 +16508,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "種類を例文に使います。",
     "exampleEnglish": "Example with variety.",
-    "id": 1504,
+    "id": 1501,
     "image": "🏠"
   },
   {
@@ -16552,7 +16519,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "順を例文に使います。",
     "exampleEnglish": "Example with order.",
-    "id": 1505,
+    "id": 1502,
     "image": "🏠"
   },
   {
@@ -16563,7 +16530,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "瞬間を例文に使います。",
     "exampleEnglish": "Example with moment.",
-    "id": 1506,
+    "id": 1503,
     "image": "🏠"
   },
   {
@@ -16574,7 +16541,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "順調を例文に使います。",
     "exampleEnglish": "Example with doing well.",
-    "id": 1507,
+    "id": 1504,
     "image": "🏠"
   },
   {
@@ -16585,7 +16552,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "順番を例文に使います。",
     "exampleEnglish": "Example with turn (in line).",
-    "id": 1508,
+    "id": 1505,
     "image": "🏠"
   },
   {
@@ -16596,7 +16563,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "使用を例文に使います。",
     "exampleEnglish": "Example with use (same as 使うこと (つかうこと)).",
-    "id": 1509,
+    "id": 1506,
     "image": "🏠"
   },
   {
@@ -16607,7 +16574,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "小を例文に使います。",
     "exampleEnglish": "Example with small.",
-    "id": 1510,
+    "id": 1507,
     "image": "🏠"
   },
   {
@@ -16618,7 +16585,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "章を例文に使います。",
     "exampleEnglish": "Example with chapter.",
-    "id": 1511,
+    "id": 1508,
     "image": "🏠"
   },
   {
@@ -16629,7 +16596,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "賞を例文に使います。",
     "exampleEnglish": "Example with prize.",
-    "id": 1512,
+    "id": 1509,
     "image": "🏠"
   },
   {
@@ -16640,7 +16607,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "障害を例文に使います。",
     "exampleEnglish": "Example with obstacle.",
-    "id": 1513,
+    "id": 1510,
     "image": "🏠"
   },
   {
@@ -16651,7 +16618,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "奨学金を例文に使います。",
     "exampleEnglish": "Example with scholarship.",
-    "id": 1514,
+    "id": 1511,
     "image": "🏠"
   },
   {
@@ -16662,7 +16629,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "乗客を例文に使います。",
     "exampleEnglish": "Example with passenger.",
-    "id": 1515,
+    "id": 1512,
     "image": "🏠"
   },
   {
@@ -16673,7 +16640,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "上京を例文に使います。",
     "exampleEnglish": "Example with proceeding to the capital (Tokyo).",
-    "id": 1516,
+    "id": 1513,
     "image": "🏠"
   },
   {
@@ -16684,7 +16651,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "状況を例文に使います。",
     "exampleEnglish": "Example with state of affairs.",
-    "id": 1517,
+    "id": 1514,
     "image": "🏠"
   },
   {
@@ -16695,7 +16662,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "条件を例文に使います。",
     "exampleEnglish": "Example with conditions.",
-    "id": 1518,
+    "id": 1515,
     "image": "🏠"
   },
   {
@@ -16706,7 +16673,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "正午を例文に使います。",
     "exampleEnglish": "Example with noon.",
-    "id": 1519,
+    "id": 1516,
     "image": "🏠"
   },
   {
@@ -16717,7 +16684,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "正直を例文に使います。",
     "exampleEnglish": "Example with honesty.",
-    "id": 1520,
+    "id": 1517,
     "image": "🏠"
   },
   {
@@ -16728,7 +16695,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "常識を例文に使います。",
     "exampleEnglish": "Example with common sense.",
-    "id": 1521,
+    "id": 1518,
     "image": "🏠"
   },
   {
@@ -16739,7 +16706,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "少女を例文に使います。",
     "exampleEnglish": "Example with young girl.",
-    "id": 1522,
+    "id": 1519,
     "image": "🏠"
   },
   {
@@ -16750,7 +16717,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "少々を例文に使います。",
     "exampleEnglish": "Example with a little; short (time) (formal for 少し (すこし)).",
-    "id": 1523,
+    "id": 1520,
     "image": "🏠"
   },
   {
@@ -16761,7 +16728,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "症状を例文に使います。",
     "exampleEnglish": "Example with symptoms.",
-    "id": 1524,
+    "id": 1521,
     "image": "🏠"
   },
   {
@@ -16772,7 +16739,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "生じるを例文に使います。",
     "exampleEnglish": "Example with to occur.",
-    "id": 1525,
+    "id": 1522,
     "image": "🏠"
   },
   {
@@ -16783,7 +16750,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "状態を例文に使います。",
     "exampleEnglish": "Example with condition.",
-    "id": 1526,
+    "id": 1523,
     "image": "🏠"
   },
   {
@@ -16794,7 +16761,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "上達を例文に使います。",
     "exampleEnglish": "Example with improvement.",
-    "id": 1527,
+    "id": 1524,
     "image": "🏠"
   },
   {
@@ -16805,7 +16772,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "冗談を例文に使います。",
     "exampleEnglish": "Example with a joke.",
-    "id": 1528,
+    "id": 1525,
     "image": "🏠"
   },
   {
@@ -16816,7 +16783,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "上等を例文に使います。",
     "exampleEnglish": "Example with first class.",
-    "id": 1529,
+    "id": 1526,
     "image": "🏠"
   },
   {
@@ -16827,19 +16794,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "衝突を例文に使います。",
     "exampleEnglish": "Example with collision.",
-    "id": 1530,
+    "id": 1527,
     "image": "🏠"
   },
   {
     "native": "商人",
     "english": "trader",
     "phonetic": "しょうにん",
-    "category": "Daily Life",
+    "category": "Shopping",
     "topikLevel": 2,
     "exampleNative": "商人を例文に使います。",
     "exampleEnglish": "Example with trader.",
-    "id": 1531,
-    "image": "🏠"
+    "id": 1528,
+    "image": "🛍️"
   },
   {
     "native": "承認",
@@ -16849,7 +16816,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "承認を例文に使います。",
     "exampleEnglish": "Example with recognition.",
-    "id": 1532,
+    "id": 1529,
     "image": "🏠"
   },
   {
@@ -16860,7 +16827,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "少年を例文に使います。",
     "exampleEnglish": "Example with boys.",
-    "id": 1533,
+    "id": 1530,
     "image": "🏠"
   },
   {
@@ -16871,7 +16838,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "商売を例文に使います。",
     "exampleEnglish": "Example with trade.",
-    "id": 1534,
+    "id": 1531,
     "image": "🚌"
   },
   {
@@ -16882,7 +16849,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "消費を例文に使います。",
     "exampleEnglish": "Example with consumption.",
-    "id": 1535,
+    "id": 1532,
     "image": "🏠"
   },
   {
@@ -16893,7 +16860,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "商品を例文に使います。",
     "exampleEnglish": "Example with commodity.",
-    "id": 1536,
+    "id": 1533,
     "image": "🏠"
   },
   {
@@ -16904,7 +16871,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "賞品を例文に使います。",
     "exampleEnglish": "Example with prize.",
-    "id": 1537,
+    "id": 1534,
     "image": "🏠"
   },
   {
@@ -16915,7 +16882,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "消防を例文に使います。",
     "exampleEnglish": "Example with fire fighting.",
-    "id": 1538,
+    "id": 1535,
     "image": "🏠"
   },
   {
@@ -16926,7 +16893,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "情報を例文に使います。",
     "exampleEnglish": "Example with information.",
-    "id": 1539,
+    "id": 1536,
     "image": "🏠"
   },
   {
@@ -16937,7 +16904,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "証明を例文に使います。",
     "exampleEnglish": "Example with proof.",
-    "id": 1540,
+    "id": 1537,
     "image": "🏠"
   },
   {
@@ -16948,7 +16915,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "省略を例文に使います。",
     "exampleEnglish": "Example with omission.",
-    "id": 1541,
+    "id": 1538,
     "image": "🏠"
   },
   {
@@ -16959,7 +16926,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "女王を例文に使います。",
     "exampleEnglish": "Example with queen.",
-    "id": 1542,
+    "id": 1539,
     "image": "🏠"
   },
   {
@@ -16970,7 +16937,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "職を例文に使います。",
     "exampleEnglish": "Example with employment.",
-    "id": 1543,
+    "id": 1540,
     "image": "🏠"
   },
   {
@@ -16981,7 +16948,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "職業を例文に使います。",
     "exampleEnglish": "Example with occupation.",
-    "id": 1544,
+    "id": 1541,
     "image": "🚌"
   },
   {
@@ -16992,7 +16959,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "食卓を例文に使います。",
     "exampleEnglish": "Example with dining table.",
-    "id": 1545,
+    "id": 1542,
     "image": "🏠"
   },
   {
@@ -17003,7 +16970,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "食品を例文に使います。",
     "exampleEnglish": "Example with foodstuff.",
-    "id": 1546,
+    "id": 1543,
     "image": "🍜"
   },
   {
@@ -17014,7 +16981,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "植物を例文に使います。",
     "exampleEnglish": "Example with plant.",
-    "id": 1547,
+    "id": 1544,
     "image": "🏠"
   },
   {
@@ -17025,7 +16992,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "食物を例文に使います。",
     "exampleEnglish": "Example with food.",
-    "id": 1548,
+    "id": 1545,
     "image": "🍜"
   },
   {
@@ -17036,7 +17003,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "食欲を例文に使います。",
     "exampleEnglish": "Example with appetite (for food).",
-    "id": 1549,
+    "id": 1546,
     "image": "🍜"
   },
   {
@@ -17047,7 +17014,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "食料を例文に使います。",
     "exampleEnglish": "Example with food.",
-    "id": 1550,
+    "id": 1547,
     "image": "🍜"
   },
   {
@@ -17058,7 +17025,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "食糧を例文に使います。",
     "exampleEnglish": "Example with provisions.",
-    "id": 1551,
+    "id": 1548,
     "image": "🏠"
   },
   {
@@ -17069,7 +17036,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "書斎を例文に使います。",
     "exampleEnglish": "Example with study.",
-    "id": 1552,
+    "id": 1549,
     "image": "📚"
   },
   {
@@ -17080,7 +17047,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "女子を例文に使います。",
     "exampleEnglish": "Example with woman.",
-    "id": 1553,
+    "id": 1550,
     "image": "🏠"
   },
   {
@@ -17091,7 +17058,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "助手を例文に使います。",
     "exampleEnglish": "Example with helper.",
-    "id": 1554,
+    "id": 1551,
     "image": "🏠"
   },
   {
@@ -17102,19 +17069,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "徐々にを例文に使います。",
     "exampleEnglish": "Example with slowly.",
-    "id": 1555,
+    "id": 1552,
     "image": "🏠"
   },
   {
     "native": "署名",
     "english": "signature",
     "phonetic": "しょめい",
-    "category": "Daily Life",
+    "category": "Weather & Nature",
     "topikLevel": 2,
     "exampleNative": "署名を例文に使います。",
     "exampleEnglish": "Example with signature.",
-    "id": 1556,
-    "image": "🏠"
+    "id": 1553,
+    "image": "🌤️"
   },
   {
     "native": "書物",
@@ -17124,7 +17091,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "書物を例文に使います。",
     "exampleEnglish": "Example with books.",
-    "id": 1557,
+    "id": 1554,
     "image": "🏠"
   },
   {
@@ -17135,7 +17102,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "女優を例文に使います。",
     "exampleEnglish": "Example with actress.",
-    "id": 1558,
+    "id": 1555,
     "image": "🏠"
   },
   {
@@ -17146,7 +17113,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "処理を例文に使います。",
     "exampleEnglish": "Example with processing.",
-    "id": 1559,
+    "id": 1556,
     "image": "🍜"
   },
   {
@@ -17157,7 +17124,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "書類を例文に使います。",
     "exampleEnglish": "Example with documents.",
-    "id": 1560,
+    "id": 1557,
     "image": "🏠"
   },
   {
@@ -17168,7 +17135,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "知らせを例文に使います。",
     "exampleEnglish": "Example with notice.",
-    "id": 1561,
+    "id": 1558,
     "image": "🏠"
   },
   {
@@ -17179,7 +17146,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "尻を例文に使います。",
     "exampleEnglish": "Example with buttocks.",
-    "id": 1562,
+    "id": 1559,
     "image": "🏠"
   },
   {
@@ -17190,7 +17157,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "知合いを例文に使います。",
     "exampleEnglish": "Example with acquaintance.",
-    "id": 1563,
+    "id": 1560,
     "image": "🏠"
   },
   {
@@ -17201,7 +17168,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "印を例文に使います。",
     "exampleEnglish": "Example with mark; symbol; evidence.",
-    "id": 1564,
+    "id": 1561,
     "image": "🏠"
   },
   {
@@ -17212,7 +17179,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "城を例文に使います。",
     "exampleEnglish": "Example with castle.",
-    "id": 1565,
+    "id": 1562,
     "image": "🏠"
   },
   {
@@ -17223,7 +17190,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "進学を例文に使います。",
     "exampleEnglish": "Example with going on to university.",
-    "id": 1566,
+    "id": 1563,
     "image": "🏠"
   },
   {
@@ -17234,7 +17201,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "神経を例文に使います。",
     "exampleEnglish": "Example with nerve.",
-    "id": 1567,
+    "id": 1564,
     "image": "🏠"
   },
   {
@@ -17245,7 +17212,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "真剣を例文に使います。",
     "exampleEnglish": "Example with seriousness.",
-    "id": 1568,
+    "id": 1565,
     "image": "🏠"
   },
   {
@@ -17256,7 +17223,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "信仰を例文に使います。",
     "exampleEnglish": "Example with (religious) faith.",
-    "id": 1569,
+    "id": 1566,
     "image": "🏠"
   },
   {
@@ -17267,7 +17234,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "信号を例文に使います。",
     "exampleEnglish": "Example with traffic lights.",
-    "id": 1570,
+    "id": 1567,
     "image": "🏠"
   },
   {
@@ -17278,7 +17245,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "人工を例文に使います。",
     "exampleEnglish": "Example with artificial.",
-    "id": 1571,
+    "id": 1568,
     "image": "🏠"
   },
   {
@@ -17289,7 +17256,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "深刻を例文に使います。",
     "exampleEnglish": "Example with serious.",
-    "id": 1572,
+    "id": 1569,
     "image": "🏠"
   },
   {
@@ -17300,7 +17267,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "診察を例文に使います。",
     "exampleEnglish": "Example with medical examination (of a patient).",
-    "id": 1573,
+    "id": 1570,
     "image": "🏠"
   },
   {
@@ -17311,7 +17278,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "人種を例文に使います。",
     "exampleEnglish": "Example with race (of people).",
-    "id": 1574,
+    "id": 1571,
     "image": "🏠"
   },
   {
@@ -17322,7 +17289,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "信じるを例文に使います。",
     "exampleEnglish": "Example with to believe.",
-    "id": 1575,
+    "id": 1572,
     "image": "🏠"
   },
   {
@@ -17333,7 +17300,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "人生を例文に使います。",
     "exampleEnglish": "Example with (human) life (e.g..",
-    "id": 1576,
+    "id": 1573,
     "image": "🍜"
   },
   {
@@ -17344,7 +17311,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "親戚を例文に使います。",
     "exampleEnglish": "Example with relative(s).",
-    "id": 1577,
+    "id": 1574,
     "image": "🏠"
   },
   {
@@ -17355,7 +17322,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "新鮮を例文に使います。",
     "exampleEnglish": "Example with fresh.",
-    "id": 1578,
+    "id": 1575,
     "image": "🏠"
   },
   {
@@ -17366,7 +17333,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "心臓を例文に使います。",
     "exampleEnglish": "Example with heart.",
-    "id": 1579,
+    "id": 1576,
     "image": "🏠"
   },
   {
@@ -17377,7 +17344,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "身体を例文に使います。",
     "exampleEnglish": "Example with the body.",
-    "id": 1580,
+    "id": 1577,
     "image": "🏠"
   },
   {
@@ -17388,7 +17355,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "身長を例文に使います。",
     "exampleEnglish": "Example with height (of body).",
-    "id": 1581,
+    "id": 1578,
     "image": "🏠"
   },
   {
@@ -17399,7 +17366,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "慎重を例文に使います。",
     "exampleEnglish": "Example with careful.",
-    "id": 1582,
+    "id": 1579,
     "image": "🚌"
   },
   {
@@ -17410,7 +17377,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "審判を例文に使います。",
     "exampleEnglish": "Example with umpire.",
-    "id": 1583,
+    "id": 1580,
     "image": "🏠"
   },
   {
@@ -17421,7 +17388,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "人物を例文に使います。",
     "exampleEnglish": "Example with character.",
-    "id": 1584,
+    "id": 1581,
     "image": "🏠"
   },
   {
@@ -17432,7 +17399,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "進歩を例文に使います。",
     "exampleEnglish": "Example with improvement.",
-    "id": 1585,
+    "id": 1582,
     "image": "🏠"
   },
   {
@@ -17443,7 +17410,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "親友を例文に使います。",
     "exampleEnglish": "Example with close friend.",
-    "id": 1586,
+    "id": 1583,
     "image": "🏠"
   },
   {
@@ -17454,7 +17421,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "信用を例文に使います。",
     "exampleEnglish": "Example with confidence.",
-    "id": 1587,
+    "id": 1584,
     "image": "🏠"
   },
   {
@@ -17465,7 +17432,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "信頼を例文に使います。",
     "exampleEnglish": "Example with reliance.",
-    "id": 1588,
+    "id": 1585,
     "image": "🏠"
   },
   {
@@ -17476,7 +17443,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "心理を例文に使います。",
     "exampleEnglish": "Example with mentality.",
-    "id": 1589,
+    "id": 1586,
     "image": "🏠"
   },
   {
@@ -17487,7 +17454,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "人類を例文に使います。",
     "exampleEnglish": "Example with mankind.",
-    "id": 1590,
+    "id": 1587,
     "image": "🏠"
   },
   {
@@ -17498,7 +17465,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "巣を例文に使います。",
     "exampleEnglish": "Example with nest.",
-    "id": 1591,
+    "id": 1588,
     "image": "🏠"
   },
   {
@@ -17509,7 +17476,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "酢を例文に使います。",
     "exampleEnglish": "Example with vinegar.",
-    "id": 1592,
+    "id": 1589,
     "image": "🏠"
   },
   {
@@ -17520,7 +17487,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "図を例文に使います。",
     "exampleEnglish": "Example with figure.",
-    "id": 1593,
+    "id": 1590,
     "image": "🏠"
   },
   {
@@ -17531,7 +17498,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "水準を例文に使います。",
     "exampleEnglish": "Example with level.",
-    "id": 1594,
+    "id": 1591,
     "image": "🏠"
   },
   {
@@ -17542,7 +17509,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "推薦を例文に使います。",
     "exampleEnglish": "Example with recommendation.",
-    "id": 1595,
+    "id": 1592,
     "image": "🏠"
   },
   {
@@ -17553,7 +17520,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "スイッチを例文に使います。",
     "exampleEnglish": "Example with switch.",
-    "id": 1596,
+    "id": 1593,
     "image": "🏠"
   },
   {
@@ -17564,19 +17531,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "睡眠を例文に使います。",
     "exampleEnglish": "Example with sleep.",
-    "id": 1597,
+    "id": 1594,
     "image": "🏠"
   },
   {
     "native": "数",
     "english": "number",
     "phonetic": "すう",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 2,
     "exampleNative": "数を例文に使います。",
     "exampleEnglish": "Example with number.",
-    "id": 1598,
-    "image": "🏠"
+    "id": 1595,
+    "image": "🔢"
   },
   {
     "native": "数字",
@@ -17586,7 +17553,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "数字を例文に使います。",
     "exampleEnglish": "Example with numeral.",
-    "id": 1599,
+    "id": 1596,
     "image": "🏠"
   },
   {
@@ -17597,7 +17564,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "スープを例文に使います。",
     "exampleEnglish": "Example with (Western) soup.",
-    "id": 1600,
+    "id": 1597,
     "image": "🏠"
   },
   {
@@ -17608,7 +17575,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "末を例文に使います。",
     "exampleEnglish": "Example with the end of.",
-    "id": 1601,
+    "id": 1598,
     "image": "🏠"
   },
   {
@@ -17619,7 +17586,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "姿を例文に使います。",
     "exampleEnglish": "Example with figure.",
-    "id": 1602,
+    "id": 1599,
     "image": "🏠"
   },
   {
@@ -17630,7 +17597,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "スキーを例文に使います。",
     "exampleEnglish": "Example with ski.",
-    "id": 1603,
+    "id": 1600,
     "image": "🏠"
   },
   {
@@ -17641,7 +17608,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "救うを例文に使います。",
     "exampleEnglish": "Example with to rescue from.",
-    "id": 1604,
+    "id": 1601,
     "image": "🏠"
   },
   {
@@ -17652,7 +17619,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "すくなくともを例文に使います。",
     "exampleEnglish": "Example with at least.",
-    "id": 1605,
+    "id": 1602,
     "image": "🏠"
   },
   {
@@ -17663,7 +17630,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "優れるを例文に使います。",
     "exampleEnglish": "Example with to surpass.",
-    "id": 1606,
+    "id": 1603,
     "image": "🏠"
   },
   {
@@ -17674,7 +17641,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "スケートを例文に使います。",
     "exampleEnglish": "Example with skate(s).",
-    "id": 1607,
+    "id": 1604,
     "image": "🏠"
   },
   {
@@ -17685,7 +17652,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "スケジュールを例文に使います。",
     "exampleEnglish": "Example with schedule.",
-    "id": 1608,
+    "id": 1605,
     "image": "🏠"
   },
   {
@@ -17696,7 +17663,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "少しもを例文に使います。",
     "exampleEnglish": "Example with anything of.",
-    "id": 1609,
+    "id": 1606,
     "image": "🏠"
   },
   {
@@ -17707,7 +17674,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "過ごすを例文に使います。",
     "exampleEnglish": "Example with to pass.",
-    "id": 1610,
+    "id": 1607,
     "image": "🏠"
   },
   {
@@ -17718,7 +17685,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "筋を例文に使います。",
     "exampleEnglish": "Example with muscle.",
-    "id": 1611,
+    "id": 1608,
     "image": "🏠"
   },
   {
@@ -17729,7 +17696,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "進めるを例文に使います。",
     "exampleEnglish": "Example with to advance.",
-    "id": 1612,
+    "id": 1609,
     "image": "🏠"
   },
   {
@@ -17740,7 +17707,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "勧めるを例文に使います。",
     "exampleEnglish": "Example with to urge (someone) to do (something).",
-    "id": 1613,
+    "id": 1610,
     "image": "🏠"
   },
   {
@@ -17751,7 +17718,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "スターを例文に使います。",
     "exampleEnglish": "Example with star.",
-    "id": 1614,
+    "id": 1611,
     "image": "🏠"
   },
   {
@@ -17762,7 +17729,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "スタイルを例文に使います。",
     "exampleEnglish": "Example with style.",
-    "id": 1615,
+    "id": 1612,
     "image": "🏠"
   },
   {
@@ -17773,7 +17740,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "スタンドを例文に使います。",
     "exampleEnglish": "Example with stand.",
-    "id": 1616,
+    "id": 1613,
     "image": "🏠"
   },
   {
@@ -17784,7 +17751,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "頭痛を例文に使います。",
     "exampleEnglish": "Example with headache.",
-    "id": 1617,
+    "id": 1614,
     "image": "🏠"
   },
   {
@@ -17795,7 +17762,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ずっとを例文に使います。",
     "exampleEnglish": "Example with for a long time; all the time; consecutively.",
-    "id": 1618,
+    "id": 1615,
     "image": "🏠"
   },
   {
@@ -17806,7 +17773,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "すっぱいを例文に使います。",
     "exampleEnglish": "Example with sour.",
-    "id": 1619,
+    "id": 1616,
     "image": "🏠"
   },
   {
@@ -17817,7 +17784,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "すてきを例文に使います。",
     "exampleEnglish": "Example with lovely.",
-    "id": 1620,
+    "id": 1617,
     "image": "🍜"
   },
   {
@@ -17828,7 +17795,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "既にを例文に使います。",
     "exampleEnglish": "Example with already (same as もう).",
-    "id": 1621,
+    "id": 1618,
     "image": "🏠"
   },
   {
@@ -17839,7 +17806,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "すなわちを例文に使います。",
     "exampleEnglish": "Example with that is.",
-    "id": 1622,
+    "id": 1619,
     "image": "🏠"
   },
   {
@@ -17850,7 +17817,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "スピーチを例文に使います。",
     "exampleEnglish": "Example with speech.",
-    "id": 1623,
+    "id": 1620,
     "image": "🏠"
   },
   {
@@ -17861,7 +17828,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "全てを例文に使います。",
     "exampleEnglish": "Example with all.",
-    "id": 1624,
+    "id": 1621,
     "image": "🏠"
   },
   {
@@ -17872,7 +17839,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "済ませるを例文に使います。",
     "exampleEnglish": "Example with to be finished.",
-    "id": 1625,
+    "id": 1622,
     "image": "🏠"
   },
   {
@@ -17883,7 +17850,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "墨を例文に使います。",
     "exampleEnglish": "Example with ink.",
-    "id": 1626,
+    "id": 1623,
     "image": "🏠"
   },
   {
@@ -17894,7 +17861,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "すみません (かん)を例文に使います。",
     "exampleEnglish": "Example with sorry.",
-    "id": 1627,
+    "id": 1624,
     "image": "🏠"
   },
   {
@@ -17905,7 +17872,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "澄むを例文に使います。",
     "exampleEnglish": "Example with to clear (e.g..",
-    "id": 1628,
+    "id": 1625,
     "image": "🍜"
   },
   {
@@ -17916,7 +17883,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "清むを例文に使います。",
     "exampleEnglish": "Example with to clear (e.g..",
-    "id": 1629,
+    "id": 1626,
     "image": "🍜"
   },
   {
@@ -17927,7 +17894,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "刷るを例文に使います。",
     "exampleEnglish": "Example with to print.",
-    "id": 1630,
+    "id": 1627,
     "image": "🏠"
   },
   {
@@ -17938,7 +17905,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "為るを例文に使います。",
     "exampleEnglish": "Example with to do.",
-    "id": 1631,
+    "id": 1628,
     "image": "🏠"
   },
   {
@@ -17949,7 +17916,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "鋭いを例文に使います。",
     "exampleEnglish": "Example with pointed.",
-    "id": 1632,
+    "id": 1629,
     "image": "🏠"
   },
   {
@@ -17960,7 +17927,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "すれ違うを例文に使います。",
     "exampleEnglish": "Example with to pass by one another.",
-    "id": 1633,
+    "id": 1630,
     "image": "🏠"
   },
   {
@@ -17971,7 +17938,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ずれるを例文に使います。",
     "exampleEnglish": "Example with move.",
-    "id": 1634,
+    "id": 1631,
     "image": "🏠"
   },
   {
@@ -17982,7 +17949,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "正を例文に使います。",
     "exampleEnglish": "Example with (logical) true.",
-    "id": 1635,
+    "id": 1632,
     "image": "🏠"
   },
   {
@@ -17993,7 +17960,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "生を例文に使います。",
     "exampleEnglish": "Example with birth.",
-    "id": 1636,
+    "id": 1633,
     "image": "🏠"
   },
   {
@@ -18004,7 +17971,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "性を例文に使います。",
     "exampleEnglish": "Example with sex.",
-    "id": 1637,
+    "id": 1634,
     "image": "🏠"
   },
   {
@@ -18015,7 +17982,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "姓を例文に使います。",
     "exampleEnglish": "Example with surname.",
-    "id": 1638,
+    "id": 1635,
     "image": "🏠"
   },
   {
@@ -18026,7 +17993,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "所為を例文に使います。",
     "exampleEnglish": "Example with cause.",
-    "id": 1639,
+    "id": 1636,
     "image": "🏠"
   },
   {
@@ -18037,7 +18004,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "税を例文に使います。",
     "exampleEnglish": "Example with tax.",
-    "id": 1640,
+    "id": 1637,
     "image": "🏠"
   },
   {
@@ -18048,7 +18015,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "性格を例文に使います。",
     "exampleEnglish": "Example with character.",
-    "id": 1641,
+    "id": 1638,
     "image": "🏠"
   },
   {
@@ -18059,7 +18026,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "正確を例文に使います。",
     "exampleEnglish": "Example with accurate.",
-    "id": 1642,
+    "id": 1639,
     "image": "🏠"
   },
   {
@@ -18070,7 +18037,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "世紀を例文に使います。",
     "exampleEnglish": "Example with century.",
-    "id": 1643,
+    "id": 1640,
     "image": "🏠"
   },
   {
@@ -18081,7 +18048,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "請求を例文に使います。",
     "exampleEnglish": "Example with claim.",
-    "id": 1644,
+    "id": 1641,
     "image": "🏠"
   },
   {
@@ -18092,7 +18059,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "税金を例文に使います。",
     "exampleEnglish": "Example with tax.",
-    "id": 1645,
+    "id": 1642,
     "image": "🏠"
   },
   {
@@ -18103,7 +18070,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "清潔を例文に使います。",
     "exampleEnglish": "Example with clean.",
-    "id": 1646,
+    "id": 1643,
     "image": "🏠"
   },
   {
@@ -18114,7 +18081,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "制限を例文に使います。",
     "exampleEnglish": "Example with restriction.",
-    "id": 1647,
+    "id": 1644,
     "image": "🚌"
   },
   {
@@ -18125,7 +18092,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "成功を例文に使います。",
     "exampleEnglish": "Example with success.",
-    "id": 1648,
+    "id": 1645,
     "image": "🏠"
   },
   {
@@ -18136,19 +18103,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "正式を例文に使います。",
     "exampleEnglish": "Example with official.",
-    "id": 1649,
+    "id": 1646,
     "image": "🏠"
   },
   {
     "native": "性質",
     "english": "nature",
     "phonetic": "せいしつ",
-    "category": "Daily Life",
+    "category": "Weather & Nature",
     "topikLevel": 2,
     "exampleNative": "性質を例文に使います。",
     "exampleEnglish": "Example with nature.",
-    "id": 1650,
-    "image": "🏠"
+    "id": 1647,
+    "image": "🌤️"
   },
   {
     "native": "精神",
@@ -18158,7 +18125,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "精神を例文に使います。",
     "exampleEnglish": "Example with mind.",
-    "id": 1651,
+    "id": 1648,
     "image": "🏠"
   },
   {
@@ -18169,7 +18136,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "成人を例文に使います。",
     "exampleEnglish": "Example with adult.",
-    "id": 1652,
+    "id": 1649,
     "image": "🏠"
   },
   {
@@ -18180,7 +18147,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "精々を例文に使います。",
     "exampleEnglish": "Example with at the most.",
-    "id": 1653,
+    "id": 1650,
     "image": "🏠"
   },
   {
@@ -18191,7 +18158,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "成績を例文に使います。",
     "exampleEnglish": "Example with grade (i.e..",
-    "id": 1654,
+    "id": 1651,
     "image": "🏠"
   },
   {
@@ -18202,7 +18169,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "製造を例文に使います。",
     "exampleEnglish": "Example with manufacture.",
-    "id": 1655,
+    "id": 1652,
     "image": "🏠"
   },
   {
@@ -18213,7 +18180,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "贅沢を例文に使います。",
     "exampleEnglish": "Example with luxury.",
-    "id": 1656,
+    "id": 1653,
     "image": "🏠"
   },
   {
@@ -18224,7 +18191,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "成長を例文に使います。",
     "exampleEnglish": "Example with growth.",
-    "id": 1657,
+    "id": 1654,
     "image": "🏠"
   },
   {
@@ -18235,7 +18202,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "生長を例文に使います。",
     "exampleEnglish": "Example with growth.",
-    "id": 1658,
+    "id": 1655,
     "image": "🏠"
   },
   {
@@ -18246,7 +18213,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "制度を例文に使います。",
     "exampleEnglish": "Example with system.",
-    "id": 1659,
+    "id": 1656,
     "image": "🏠"
   },
   {
@@ -18257,7 +18224,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "青年を例文に使います。",
     "exampleEnglish": "Example with youth.",
-    "id": 1660,
+    "id": 1657,
     "image": "🏠"
   },
   {
@@ -18268,7 +18235,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "生年月日を例文に使います。",
     "exampleEnglish": "Example with birth date.",
-    "id": 1661,
+    "id": 1658,
     "image": "🏠"
   },
   {
@@ -18279,7 +18246,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "製品を例文に使います。",
     "exampleEnglish": "Example with manufactured goods.",
-    "id": 1662,
+    "id": 1659,
     "image": "🏠"
   },
   {
@@ -18290,7 +18257,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "政府を例文に使います。",
     "exampleEnglish": "Example with government.",
-    "id": 1663,
+    "id": 1660,
     "image": "🏠"
   },
   {
@@ -18301,7 +18268,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "生物を例文に使います。",
     "exampleEnglish": "Example with living thing.",
-    "id": 1664,
+    "id": 1661,
     "image": "🏠"
   },
   {
@@ -18312,7 +18279,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "生命を例文に使います。",
     "exampleEnglish": "Example with life.",
-    "id": 1665,
+    "id": 1662,
     "image": "🏠"
   },
   {
@@ -18323,7 +18290,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "整理を例文に使います。",
     "exampleEnglish": "Example with sorting.",
-    "id": 1666,
+    "id": 1663,
     "image": "🏠"
   },
   {
@@ -18334,7 +18301,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "咳を例文に使います。",
     "exampleEnglish": "Example with cough.",
-    "id": 1667,
+    "id": 1664,
     "image": "🏠"
   },
   {
@@ -18345,7 +18312,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "石炭を例文に使います。",
     "exampleEnglish": "Example with coal.",
-    "id": 1668,
+    "id": 1665,
     "image": "🏠"
   },
   {
@@ -18356,7 +18323,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "責任を例文に使います。",
     "exampleEnglish": "Example with duty.",
-    "id": 1669,
+    "id": 1666,
     "image": "🏠"
   },
   {
@@ -18367,7 +18334,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "石油を例文に使います。",
     "exampleEnglish": "Example with oil.",
-    "id": 1670,
+    "id": 1667,
     "image": "🏠"
   },
   {
@@ -18378,7 +18345,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "世間を例文に使います。",
     "exampleEnglish": "Example with world.",
-    "id": 1671,
+    "id": 1668,
     "image": "🏠"
   },
   {
@@ -18389,7 +18356,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "説を例文に使います。",
     "exampleEnglish": "Example with theory.",
-    "id": 1672,
+    "id": 1669,
     "image": "🏠"
   },
   {
@@ -18400,7 +18367,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "積極的を例文に使います。",
     "exampleEnglish": "Example with positive.",
-    "id": 1673,
+    "id": 1670,
     "image": "🏠"
   },
   {
@@ -18411,7 +18378,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "設計を例文に使います。",
     "exampleEnglish": "Example with plan.",
-    "id": 1674,
+    "id": 1671,
     "image": "🏠"
   },
   {
@@ -18422,7 +18389,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "絶対を例文に使います。",
     "exampleEnglish": "Example with definitely.",
-    "id": 1675,
+    "id": 1672,
     "image": "🏠"
   },
   {
@@ -18433,7 +18400,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "セットを例文に使います。",
     "exampleEnglish": "Example with set.",
-    "id": 1676,
+    "id": 1673,
     "image": "🏠"
   },
   {
@@ -18444,7 +18411,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "愛を例文に使います。",
     "exampleEnglish": "Example with love.",
-    "id": 1677,
+    "id": 1674,
     "image": "🏠"
   },
   {
@@ -18455,7 +18422,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "相変わらずを例文に使います。",
     "exampleEnglish": "Example with as ever.",
-    "id": 1678,
+    "id": 1675,
     "image": "🏠"
   },
   {
@@ -18466,7 +18433,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "愛情を例文に使います。",
     "exampleEnglish": "Example with love.",
-    "id": 1679,
+    "id": 1676,
     "image": "🏠"
   },
   {
@@ -18477,7 +18444,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "合図を例文に使います。",
     "exampleEnglish": "Example with sign.",
-    "id": 1680,
+    "id": 1677,
     "image": "🏠"
   },
   {
@@ -18488,7 +18455,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "アイスクリームを例文に使います。",
     "exampleEnglish": "Example with ice cream.",
-    "id": 1681,
+    "id": 1678,
     "image": "🏠"
   },
   {
@@ -18499,7 +18466,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "愛するを例文に使います。",
     "exampleEnglish": "Example with to love.",
-    "id": 1682,
+    "id": 1679,
     "image": "🏠"
   },
   {
@@ -18510,7 +18477,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "相手を例文に使います。",
     "exampleEnglish": "Example with partner; addressee; the person you are talking to.",
-    "id": 1683,
+    "id": 1680,
     "image": "🏠"
   },
   {
@@ -18521,19 +18488,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "あいにくを例文に使います。",
     "exampleEnglish": "Example with unfortunately.",
-    "id": 1684,
+    "id": 1681,
     "image": "🏠"
   },
   {
     "native": "遭う",
     "english": "to meet",
     "phonetic": "あう",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 2,
     "exampleNative": "遭うを例文に使います。",
     "exampleEnglish": "Example with to meet.",
-    "id": 1685,
-    "image": "🏠"
+    "id": 1682,
+    "image": "🔢"
   },
   {
     "native": "アウト",
@@ -18543,7 +18510,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "アウトを例文に使います。",
     "exampleEnglish": "Example with out.",
-    "id": 1686,
+    "id": 1683,
     "image": "🏠"
   },
   {
@@ -18554,7 +18521,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "明かりを例文に使います。",
     "exampleEnglish": "Example with lamplight.",
-    "id": 1687,
+    "id": 1684,
     "image": "🏠"
   },
   {
@@ -18565,7 +18532,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "空きを例文に使います。",
     "exampleEnglish": "Example with vacancy.",
-    "id": 1688,
+    "id": 1685,
     "image": "🏠"
   },
   {
@@ -18576,7 +18543,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "明らかを例文に使います。",
     "exampleEnglish": "Example with obvious.",
-    "id": 1689,
+    "id": 1686,
     "image": "🏠"
   },
   {
@@ -18587,7 +18554,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "諦めるを例文に使います。",
     "exampleEnglish": "Example with to give up.",
-    "id": 1690,
+    "id": 1687,
     "image": "🏠"
   },
   {
@@ -18598,7 +18565,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "飽きるを例文に使います。",
     "exampleEnglish": "Example with to get tired of.",
-    "id": 1691,
+    "id": 1688,
     "image": "🏠"
   },
   {
@@ -18609,7 +18576,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "握手を例文に使います。",
     "exampleEnglish": "Example with handshake.",
-    "id": 1692,
+    "id": 1689,
     "image": "🏠"
   },
   {
@@ -18620,7 +18587,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "悪魔を例文に使います。",
     "exampleEnglish": "Example with devil.",
-    "id": 1693,
+    "id": 1690,
     "image": "🏠"
   },
   {
@@ -18631,7 +18598,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "明けるを例文に使います。",
     "exampleEnglish": "Example with to dawn.",
-    "id": 1694,
+    "id": 1691,
     "image": "🏠"
   },
   {
@@ -18642,7 +18609,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "揚げるを例文に使います。",
     "exampleEnglish": "Example with to lift.",
-    "id": 1695,
+    "id": 1692,
     "image": "🏠"
   },
   {
@@ -18653,7 +18620,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "挙げるを例文に使います。",
     "exampleEnglish": "Example with to raise; to list.",
-    "id": 1696,
+    "id": 1693,
     "image": "🏠"
   },
   {
@@ -18664,7 +18631,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "預かるを例文に使います。",
     "exampleEnglish": "Example with to keep (something) for (someone).",
-    "id": 1697,
+    "id": 1694,
     "image": "🏠"
   },
   {
@@ -18675,7 +18642,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "預けるを例文に使います。",
     "exampleEnglish": "Example with to give into custody.",
-    "id": 1698,
+    "id": 1695,
     "image": "🏠"
   },
   {
@@ -18686,7 +18653,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "汗を例文に使います。",
     "exampleEnglish": "Example with sweat.",
-    "id": 1699,
+    "id": 1696,
     "image": "🍜"
   },
   {
@@ -18697,7 +18664,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "与えるを例文に使います。",
     "exampleEnglish": "Example with to give.",
-    "id": 1700,
+    "id": 1697,
     "image": "🏠"
   },
   {
@@ -18708,7 +18675,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "温かいを例文に使います。",
     "exampleEnglish": "Example with warm.",
-    "id": 1701,
+    "id": 1698,
     "image": "🏠"
   },
   {
@@ -18719,7 +18686,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "暖まるを例文に使います。",
     "exampleEnglish": "Example with to warm up.",
-    "id": 1702,
+    "id": 1699,
     "image": "🏠"
   },
   {
@@ -18730,7 +18697,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "温まるを例文に使います。",
     "exampleEnglish": "Example with to warm oneself.",
-    "id": 1703,
+    "id": 1700,
     "image": "🏠"
   },
   {
@@ -18741,7 +18708,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "暖めるを例文に使います。",
     "exampleEnglish": "Example with to warm (up to someone/something).",
-    "id": 1704,
+    "id": 1701,
     "image": "🍜"
   },
   {
@@ -18752,7 +18719,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "温めるを例文に使います。",
     "exampleEnglish": "Example with to warm.",
-    "id": 1705,
+    "id": 1702,
     "image": "🍜"
   },
   {
@@ -18763,7 +18730,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "辺りを例文に使います。",
     "exampleEnglish": "Example with vicinity.",
-    "id": 1706,
+    "id": 1703,
     "image": "🏠"
   },
   {
@@ -18774,7 +18741,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "当たり前を例文に使います。",
     "exampleEnglish": "Example with usual.",
-    "id": 1707,
+    "id": 1704,
     "image": "🏠"
   },
   {
@@ -18785,7 +18752,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "当たるを例文に使います。",
     "exampleEnglish": "Example with to be hit.",
-    "id": 1708,
+    "id": 1705,
     "image": "🏠"
   },
   {
@@ -18796,7 +18763,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "あちこちを例文に使います。",
     "exampleEnglish": "Example with here and there.",
-    "id": 1709,
+    "id": 1706,
     "image": "🏠"
   },
   {
@@ -18807,7 +18774,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "扱うを例文に使います。",
     "exampleEnglish": "Example with to treat.",
-    "id": 1710,
+    "id": 1707,
     "image": "🍜"
   },
   {
@@ -18818,7 +18785,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "集まりを例文に使います。",
     "exampleEnglish": "Example with gathering.",
-    "id": 1711,
+    "id": 1708,
     "image": "🏠"
   },
   {
@@ -18829,7 +18796,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "当てるを例文に使います。",
     "exampleEnglish": "Example with to hit; to apply to.",
-    "id": 1712,
+    "id": 1709,
     "image": "🏠"
   },
   {
@@ -18840,7 +18807,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "跡を例文に使います。",
     "exampleEnglish": "Example with trace; remains; scar.",
-    "id": 1713,
+    "id": 1710,
     "image": "🚌"
   },
   {
@@ -18851,7 +18818,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "穴を例文に使います。",
     "exampleEnglish": "Example with hole.",
-    "id": 1714,
+    "id": 1711,
     "image": "🏠"
   },
   {
@@ -18862,7 +18829,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "油を例文に使います。",
     "exampleEnglish": "Example with oil.",
-    "id": 1715,
+    "id": 1712,
     "image": "🏠"
   },
   {
@@ -18873,7 +18840,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "脂を例文に使います。",
     "exampleEnglish": "Example with fat.",
-    "id": 1716,
+    "id": 1713,
     "image": "🏠"
   },
   {
@@ -18884,7 +18851,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "誤りを例文に使います。",
     "exampleEnglish": "Example with error.",
-    "id": 1717,
+    "id": 1714,
     "image": "🏠"
   },
   {
@@ -18895,7 +18862,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "粗を例文に使います。",
     "exampleEnglish": "Example with defect.",
-    "id": 1718,
+    "id": 1715,
     "image": "🏠"
   },
   {
@@ -18906,7 +18873,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "嵐を例文に使います。",
     "exampleEnglish": "Example with storm.",
-    "id": 1719,
+    "id": 1716,
     "image": "🏠"
   },
   {
@@ -18917,7 +18884,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "争うを例文に使います。",
     "exampleEnglish": "Example with to dispute.",
-    "id": 1720,
+    "id": 1717,
     "image": "🏠"
   },
   {
@@ -18928,7 +18895,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "新たを例文に使います。",
     "exampleEnglish": "Example with new.",
-    "id": 1721,
+    "id": 1718,
     "image": "🏠"
   },
   {
@@ -18939,7 +18906,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "あらゆるを例文に使います。",
     "exampleEnglish": "Example with all.",
-    "id": 1722,
+    "id": 1719,
     "image": "🏠"
   },
   {
@@ -18950,7 +18917,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "表すを例文に使います。",
     "exampleEnglish": "Example with to express.",
-    "id": 1723,
+    "id": 1720,
     "image": "🏠"
   },
   {
@@ -18961,7 +18928,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "現すを例文に使います。",
     "exampleEnglish": "Example with to show.",
-    "id": 1724,
+    "id": 1721,
     "image": "🏠"
   },
   {
@@ -18972,7 +18939,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "著すを例文に使います。",
     "exampleEnglish": "Example with to write.",
-    "id": 1725,
+    "id": 1722,
     "image": "🏠"
   },
   {
@@ -18983,7 +18950,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "現れを例文に使います。",
     "exampleEnglish": "Example with expression.",
-    "id": 1726,
+    "id": 1723,
     "image": "🏠"
   },
   {
@@ -18994,7 +18961,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "現れるを例文に使います。",
     "exampleEnglish": "Example with to appear (v.i.).",
-    "id": 1727,
+    "id": 1724,
     "image": "🏠"
   },
   {
@@ -19005,7 +18972,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ありがとうを例文に使います。",
     "exampleEnglish": "Example with Thank you.",
-    "id": 1728,
+    "id": 1725,
     "image": "🏠"
   },
   {
@@ -19016,7 +18983,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "在る; 有るを例文に使います。",
     "exampleEnglish": "Example with to live.",
-    "id": 1729,
+    "id": 1726,
     "image": "🏠"
   },
   {
@@ -19027,7 +18994,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "或を例文に使います。",
     "exampleEnglish": "Example with a certain....",
-    "id": 1730,
+    "id": 1727,
     "image": "🏠"
   },
   {
@@ -19038,7 +19005,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "あるいはを例文に使います。",
     "exampleEnglish": "Example with or.",
-    "id": 1731,
+    "id": 1728,
     "image": "🏠"
   },
   {
@@ -19049,7 +19016,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "アルバムを例文に使います。",
     "exampleEnglish": "Example with album.",
-    "id": 1732,
+    "id": 1729,
     "image": "🏠"
   },
   {
@@ -19060,7 +19027,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "泡を例文に使います。",
     "exampleEnglish": "Example with bubble.",
-    "id": 1733,
+    "id": 1730,
     "image": "🏠"
   },
   {
@@ -19071,7 +19038,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "合わせるを例文に使います。",
     "exampleEnglish": "Example with to combine.",
-    "id": 1734,
+    "id": 1731,
     "image": "🏠"
   },
   {
@@ -19082,7 +19049,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "慌てるを例文に使います。",
     "exampleEnglish": "Example with to become confused、to panic.",
-    "id": 1735,
+    "id": 1732,
     "image": "🏠"
   },
   {
@@ -19093,7 +19060,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "哀れを例文に使います。",
     "exampleEnglish": "Example with helpless.",
-    "id": 1736,
+    "id": 1733,
     "image": "🏠"
   },
   {
@@ -19104,7 +19071,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "案を例文に使います。",
     "exampleEnglish": "Example with plan.",
-    "id": 1737,
+    "id": 1734,
     "image": "🏠"
   },
   {
@@ -19115,7 +19082,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "案外を例文に使います。",
     "exampleEnglish": "Example with unexpectedly.",
-    "id": 1738,
+    "id": 1735,
     "image": "🏠"
   },
   {
@@ -19126,7 +19093,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "暗記を例文に使います。",
     "exampleEnglish": "Example with memorization.",
-    "id": 1739,
+    "id": 1736,
     "image": "📚"
   },
   {
@@ -19137,7 +19104,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "安定を例文に使います。",
     "exampleEnglish": "Example with stability.",
-    "id": 1740,
+    "id": 1737,
     "image": "🏠"
   },
   {
@@ -19148,7 +19115,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "あんなにを例文に使います。",
     "exampleEnglish": "Example with to that extent.",
-    "id": 1741,
+    "id": 1738,
     "image": "🏠"
   },
   {
@@ -19159,7 +19126,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "あんまりを例文に使います。",
     "exampleEnglish": "Example with not very.",
-    "id": 1742,
+    "id": 1739,
     "image": "🏠"
   },
   {
@@ -19170,7 +19137,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "胃を例文に使います。",
     "exampleEnglish": "Example with stomach.",
-    "id": 1743,
+    "id": 1740,
     "image": "🏠"
   },
   {
@@ -19181,7 +19148,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "委員を例文に使います。",
     "exampleEnglish": "Example with committee member.",
-    "id": 1744,
+    "id": 1741,
     "image": "🏠"
   },
   {
@@ -19192,7 +19159,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "意外を例文に使います。",
     "exampleEnglish": "Example with unexpected.",
-    "id": 1745,
+    "id": 1742,
     "image": "🏠"
   },
   {
@@ -19203,7 +19170,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "行きを例文に使います。",
     "exampleEnglish": "Example with going.",
-    "id": 1746,
+    "id": 1743,
     "image": "🏠"
   },
   {
@@ -19214,7 +19181,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "息を例文に使います。",
     "exampleEnglish": "Example with breath.",
-    "id": 1747,
+    "id": 1744,
     "image": "🍜"
   },
   {
@@ -19225,7 +19192,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "勢いを例文に使います。",
     "exampleEnglish": "Example with force.",
-    "id": 1748,
+    "id": 1745,
     "image": "🏠"
   },
   {
@@ -19236,7 +19203,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "生き物を例文に使います。",
     "exampleEnglish": "Example with living thing.",
-    "id": 1749,
+    "id": 1746,
     "image": "🍜"
   },
   {
@@ -19247,7 +19214,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "いけないを例文に使います。",
     "exampleEnglish": "Example with must not do.",
-    "id": 1750,
+    "id": 1747,
     "image": "🏠"
   },
   {
@@ -19258,7 +19225,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "医師を例文に使います。",
     "exampleEnglish": "Example with doctor.",
-    "id": 1751,
+    "id": 1748,
     "image": "🏠"
   },
   {
@@ -19269,7 +19236,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "意思を例文に使います。",
     "exampleEnglish": "Example with intention.",
-    "id": 1752,
+    "id": 1749,
     "image": "🏠"
   },
   {
@@ -19280,7 +19247,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "意志を例文に使います。",
     "exampleEnglish": "Example with will.",
-    "id": 1753,
+    "id": 1750,
     "image": "🏠"
   },
   {
@@ -19291,7 +19258,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "維持を例文に使います。",
     "exampleEnglish": "Example with maintenance.",
-    "id": 1754,
+    "id": 1751,
     "image": "🏠"
   },
   {
@@ -19302,7 +19269,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "意識を例文に使います。",
     "exampleEnglish": "Example with consciousness.",
-    "id": 1755,
+    "id": 1752,
     "image": "🏠"
   },
   {
@@ -19313,7 +19280,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "異常を例文に使います。",
     "exampleEnglish": "Example with strangeness.",
-    "id": 1756,
+    "id": 1753,
     "image": "🏠"
   },
   {
@@ -19324,7 +19291,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "意地悪を例文に使います。",
     "exampleEnglish": "Example with malicious.",
-    "id": 1757,
+    "id": 1754,
     "image": "🏠"
   },
   {
@@ -19335,7 +19302,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "泉を例文に使います。",
     "exampleEnglish": "Example with spring.",
-    "id": 1758,
+    "id": 1755,
     "image": "🏠"
   },
   {
@@ -19346,7 +19313,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "いずれを例文に使います。",
     "exampleEnglish": "Example with where.",
-    "id": 1759,
+    "id": 1756,
     "image": "🏠"
   },
   {
@@ -19357,7 +19324,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "以前を例文に使います。",
     "exampleEnglish": "Example with in the past; before.",
-    "id": 1760,
+    "id": 1757,
     "image": "🏠"
   },
   {
@@ -19368,7 +19335,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "板を例文に使います。",
     "exampleEnglish": "Example with board.",
-    "id": 1761,
+    "id": 1758,
     "image": "🏠"
   },
   {
@@ -19379,7 +19346,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "偉大を例文に使います。",
     "exampleEnglish": "Example with greatness.",
-    "id": 1762,
+    "id": 1759,
     "image": "🍜"
   },
   {
@@ -19390,7 +19357,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "抱くを例文に使います。",
     "exampleEnglish": "Example with to hold (v.t.) (written expression).",
-    "id": 1763,
+    "id": 1760,
     "image": "🏠"
   },
   {
@@ -19401,7 +19368,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "いたずらを例文に使います。",
     "exampleEnglish": "Example with trick.",
-    "id": 1764,
+    "id": 1761,
     "image": "🏠"
   },
   {
@@ -19412,7 +19379,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "いただきますを例文に使います。",
     "exampleEnglish": "Example with expression of gratitude before meals.",
-    "id": 1765,
+    "id": 1762,
     "image": "🍜"
   },
   {
@@ -19423,7 +19390,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "痛みを例文に使います。",
     "exampleEnglish": "Example with pain.",
-    "id": 1766,
+    "id": 1763,
     "image": "🏠"
   },
   {
@@ -19434,7 +19401,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "至るを例文に使います。",
     "exampleEnglish": "Example with to come.",
-    "id": 1767,
+    "id": 1764,
     "image": "🏠"
   },
   {
@@ -19445,7 +19412,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "位置を例文に使います。",
     "exampleEnglish": "Example with place.",
-    "id": 1768,
+    "id": 1765,
     "image": "🏠"
   },
   {
@@ -19456,7 +19423,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "一時を例文に使います。",
     "exampleEnglish": "Example with for a time.",
-    "id": 1769,
+    "id": 1766,
     "image": "🏠"
   },
   {
@@ -19467,7 +19434,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "一度にを例文に使います。",
     "exampleEnglish": "Example with all at once.",
-    "id": 1770,
+    "id": 1767,
     "image": "🏠"
   },
   {
@@ -19478,7 +19445,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "市場を例文に使います。",
     "exampleEnglish": "Example with market.",
-    "id": 1771,
+    "id": 1768,
     "image": "🏠"
   },
   {
@@ -19489,7 +19456,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "いつかを例文に使います。",
     "exampleEnglish": "Example with sometime.",
-    "id": 1772,
+    "id": 1769,
     "image": "🏠"
   },
   {
@@ -19500,7 +19467,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "一家を例文に使います。",
     "exampleEnglish": "Example with family.",
-    "id": 1773,
+    "id": 1770,
     "image": "🏠"
   },
   {
@@ -19511,7 +19478,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "一種を例文に使います。",
     "exampleEnglish": "Example with a species.",
-    "id": 1774,
+    "id": 1771,
     "image": "🏠"
   },
   {
@@ -19522,7 +19489,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "一瞬を例文に使います。",
     "exampleEnglish": "Example with a moment.",
-    "id": 1775,
+    "id": 1772,
     "image": "🏠"
   },
   {
@@ -19533,7 +19500,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "一生を例文に使います。",
     "exampleEnglish": "Example with throughout (one's) life.",
-    "id": 1776,
+    "id": 1773,
     "image": "🏠"
   },
   {
@@ -19544,7 +19511,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "一層を例文に使います。",
     "exampleEnglish": "Example with much more.",
-    "id": 1777,
+    "id": 1774,
     "image": "🏠"
   },
   {
@@ -19555,7 +19522,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "一体を例文に使います。",
     "exampleEnglish": "Example with one object; body; what on earth?; generally.",
-    "id": 1778,
+    "id": 1775,
     "image": "🏠"
   },
   {
@@ -19566,7 +19533,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "一致を例文に使います。",
     "exampleEnglish": "Example with agreement; conformity.",
-    "id": 1779,
+    "id": 1776,
     "image": "🏠"
   },
   {
@@ -19577,7 +19544,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "いつでもを例文に使います。",
     "exampleEnglish": "Example with (at) any time.",
-    "id": 1780,
+    "id": 1777,
     "image": "🏠"
   },
   {
@@ -19588,7 +19555,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "いつのまにかを例文に使います。",
     "exampleEnglish": "Example with before one knows.",
-    "id": 1781,
+    "id": 1778,
     "image": "🏠"
   },
   {
@@ -19599,7 +19566,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "一般を例文に使います。",
     "exampleEnglish": "Example with general.",
-    "id": 1782,
+    "id": 1779,
     "image": "🏠"
   },
   {
@@ -19610,7 +19577,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "一方を例文に使います。",
     "exampleEnglish": "Example with on the other hand; meanwhile.",
-    "id": 1783,
+    "id": 1780,
     "image": "🏠"
   },
   {
@@ -19621,7 +19588,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "いつまでもを例文に使います。",
     "exampleEnglish": "Example with forever.",
-    "id": 1784,
+    "id": 1781,
     "image": "🏠"
   },
   {
@@ -19632,7 +19599,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "移動を例文に使います。",
     "exampleEnglish": "Example with migration.",
-    "id": 1785,
+    "id": 1782,
     "image": "🏠"
   },
   {
@@ -19643,7 +19610,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "従兄弟を例文に使います。",
     "exampleEnglish": "Example with cousin (male).",
-    "id": 1786,
+    "id": 1783,
     "image": "🏠"
   },
   {
@@ -19654,7 +19621,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "従姉妹を例文に使います。",
     "exampleEnglish": "Example with cousin (female).",
-    "id": 1787,
+    "id": 1784,
     "image": "🏠"
   },
   {
@@ -19665,7 +19632,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "稲を例文に使います。",
     "exampleEnglish": "Example with rice-plant.",
-    "id": 1788,
+    "id": 1785,
     "image": "🏠"
   },
   {
@@ -19676,7 +19643,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "居眠りを例文に使います。",
     "exampleEnglish": "Example with dozing.",
-    "id": 1789,
+    "id": 1786,
     "image": "🏠"
   },
   {
@@ -19687,7 +19654,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "命を例文に使います。",
     "exampleEnglish": "Example with life.",
-    "id": 1790,
+    "id": 1787,
     "image": "🏠"
   },
   {
@@ -19698,7 +19665,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "違反を例文に使います。",
     "exampleEnglish": "Example with violation (of law).",
-    "id": 1791,
+    "id": 1788,
     "image": "🏠"
   },
   {
@@ -19709,7 +19676,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "衣服を例文に使います。",
     "exampleEnglish": "Example with clothes.",
-    "id": 1792,
+    "id": 1789,
     "image": "🏠"
   },
   {
@@ -19720,7 +19687,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "居間を例文に使います。",
     "exampleEnglish": "Example with living room.",
-    "id": 1793,
+    "id": 1790,
     "image": "🏠"
   },
   {
@@ -19731,7 +19698,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "今にを例文に使います。",
     "exampleEnglish": "Example with before long.",
-    "id": 1794,
+    "id": 1791,
     "image": "🏠"
   },
   {
@@ -19742,7 +19709,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "今にもを例文に使います。",
     "exampleEnglish": "Example with at any time.",
-    "id": 1795,
+    "id": 1792,
     "image": "🏠"
   },
   {
@@ -19753,7 +19720,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "イメージを例文に使います。",
     "exampleEnglish": "Example with one's image.",
-    "id": 1796,
+    "id": 1793,
     "image": "🏠"
   },
   {
@@ -19764,7 +19731,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "否を例文に使います。",
     "exampleEnglish": "Example with no.",
-    "id": 1797,
+    "id": 1794,
     "image": "🏠"
   },
   {
@@ -19775,7 +19742,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "以来を例文に使います。",
     "exampleEnglish": "Example with since.",
-    "id": 1798,
+    "id": 1795,
     "image": "🏠"
   },
   {
@@ -19786,7 +19753,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "依頼を例文に使います。",
     "exampleEnglish": "Example with request; dependence.",
-    "id": 1799,
+    "id": 1796,
     "image": "🏠"
   },
   {
@@ -19797,7 +19764,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "いらいらを例文に使います。",
     "exampleEnglish": "Example with getting nervous.",
-    "id": 1800,
+    "id": 1797,
     "image": "🏠"
   },
   {
@@ -19808,7 +19775,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "いらっしゃいを例文に使います。",
     "exampleEnglish": "Example with welcome.",
-    "id": 1801,
+    "id": 1798,
     "image": "🏠"
   },
   {
@@ -19819,7 +19786,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "医療を例文に使います。",
     "exampleEnglish": "Example with medical care.",
-    "id": 1802,
+    "id": 1799,
     "image": "🍜"
   },
   {
@@ -19830,7 +19797,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "岩を例文に使います。",
     "exampleEnglish": "Example with rock.",
-    "id": 1803,
+    "id": 1800,
     "image": "🏠"
   },
   {
@@ -19841,7 +19808,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "祝いを例文に使います。",
     "exampleEnglish": "Example with celebration.",
-    "id": 1804,
+    "id": 1801,
     "image": "🏠"
   },
   {
@@ -19852,7 +19819,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "祝うを例文に使います。",
     "exampleEnglish": "Example with to congratulate.",
-    "id": 1805,
+    "id": 1802,
     "image": "🏠"
   },
   {
@@ -19863,7 +19830,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "言わばを例文に使います。",
     "exampleEnglish": "Example with so to speak.",
-    "id": 1806,
+    "id": 1803,
     "image": "🏠"
   },
   {
@@ -19874,7 +19841,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "いわゆるを例文に使います。",
     "exampleEnglish": "Example with the so-called.",
-    "id": 1807,
+    "id": 1804,
     "image": "🏠"
   },
   {
@@ -19885,7 +19852,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "インクを例文に使います。",
     "exampleEnglish": "Example with ink.",
-    "id": 1808,
+    "id": 1805,
     "image": "🏠"
   },
   {
@@ -19896,7 +19863,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "印刷を例文に使います。",
     "exampleEnglish": "Example with printing.",
-    "id": 1809,
+    "id": 1806,
     "image": "🏠"
   },
   {
@@ -19907,7 +19874,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "印象を例文に使います。",
     "exampleEnglish": "Example with impression.",
-    "id": 1810,
+    "id": 1807,
     "image": "🏠"
   },
   {
@@ -19918,7 +19885,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "引退を例文に使います。",
     "exampleEnglish": "Example with retirement.",
-    "id": 1811,
+    "id": 1808,
     "image": "🏠"
   },
   {
@@ -19929,7 +19896,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "インタビューを例文に使います。",
     "exampleEnglish": "Example with interview.",
-    "id": 1812,
+    "id": 1809,
     "image": "🏠"
   },
   {
@@ -19940,7 +19907,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "引用を例文に使います。",
     "exampleEnglish": "Example with quotation.",
-    "id": 1813,
+    "id": 1810,
     "image": "🏠"
   },
   {
@@ -19951,7 +19918,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "ウイスキーを例文に使います。",
     "exampleEnglish": "Example with whiskey.",
-    "id": 1814,
+    "id": 1811,
     "image": "🏠"
   },
   {
@@ -19962,7 +19929,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "うがいを例文に使います。",
     "exampleEnglish": "Example with gargling.",
-    "id": 1815,
+    "id": 1812,
     "image": "🏠"
   },
   {
@@ -19973,7 +19940,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "受け取るを例文に使います。",
     "exampleEnglish": "Example with to receive.",
-    "id": 1816,
+    "id": 1813,
     "image": "🏠"
   },
   {
@@ -19984,7 +19951,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "動かすを例文に使います。",
     "exampleEnglish": "Example with to move.",
-    "id": 1817,
+    "id": 1814,
     "image": "🏠"
   },
   {
@@ -19995,7 +19962,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "兎を例文に使います。",
     "exampleEnglish": "Example with rabbit.",
-    "id": 1818,
+    "id": 1815,
     "image": "🏠"
   },
   {
@@ -20006,7 +19973,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "牛を例文に使います。",
     "exampleEnglish": "Example with cattle.",
-    "id": 1819,
+    "id": 1816,
     "image": "🏠"
   },
   {
@@ -20017,7 +19984,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "失うを例文に使います。",
     "exampleEnglish": "Example with to lose.",
-    "id": 1820,
+    "id": 1817,
     "image": "🏠"
   },
   {
@@ -20028,7 +19995,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "疑うを例文に使います。",
     "exampleEnglish": "Example with to doubt.",
-    "id": 1821,
+    "id": 1818,
     "image": "🏠"
   },
   {
@@ -20039,7 +20006,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "宇宙を例文に使います。",
     "exampleEnglish": "Example with universe.",
-    "id": 1822,
+    "id": 1819,
     "image": "🏠"
   },
   {
@@ -20050,7 +20017,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "討つを例文に使います。",
     "exampleEnglish": "Example with to attack.",
-    "id": 1823,
+    "id": 1820,
     "image": "🏠"
   },
   {
@@ -20061,7 +20028,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "撃つを例文に使います。",
     "exampleEnglish": "Example with to attack.",
-    "id": 1824,
+    "id": 1821,
     "image": "🏠"
   },
   {
@@ -20072,7 +20039,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "うっかりを例文に使います。",
     "exampleEnglish": "Example with carelessly; inadvertently.",
-    "id": 1825,
+    "id": 1822,
     "image": "🚌"
   },
   {
@@ -20083,7 +20050,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "映すを例文に使います。",
     "exampleEnglish": "Example with to project.",
-    "id": 1826,
+    "id": 1823,
     "image": "🏠"
   },
   {
@@ -20094,7 +20061,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "訴えるを例文に使います。",
     "exampleEnglish": "Example with to complain.",
-    "id": 1827,
+    "id": 1824,
     "image": "🏠"
   },
   {
@@ -20105,7 +20072,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "写るを例文に使います。",
     "exampleEnglish": "Example with to be photographed.",
-    "id": 1828,
+    "id": 1825,
     "image": "🏠"
   },
   {
@@ -20116,7 +20083,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "映るを例文に使います。",
     "exampleEnglish": "Example with to be reflected.",
-    "id": 1829,
+    "id": 1826,
     "image": "🏠"
   },
   {
@@ -20127,7 +20094,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "うなるを例文に使います。",
     "exampleEnglish": "Example with to groan.",
-    "id": 1830,
+    "id": 1827,
     "image": "🏠"
   },
   {
@@ -20138,19 +20105,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "奪うを例文に使います。",
     "exampleEnglish": "Example with to rob.",
-    "id": 1831,
+    "id": 1828,
     "image": "🏠"
   },
   {
     "native": "馬",
     "english": "horse; promoted bishop (in Japanese chess known as shogi)",
     "phonetic": "うま",
-    "category": "Daily Life",
+    "category": "Shopping",
     "topikLevel": 2,
     "exampleNative": "馬を例文に使います。",
     "exampleEnglish": "Example with horse; promoted bishop (in Japanese chess known as shogi).",
-    "id": 1832,
-    "image": "🏠"
+    "id": 1829,
+    "image": "🛍️"
   },
   {
     "native": "生まれ",
@@ -20160,7 +20127,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "生まれを例文に使います。",
     "exampleEnglish": "Example with birth.",
-    "id": 1833,
+    "id": 1830,
     "image": "🏠"
   },
   {
@@ -20171,7 +20138,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "有無を例文に使います。",
     "exampleEnglish": "Example with yes or no.",
-    "id": 1834,
+    "id": 1831,
     "image": "🏠"
   },
   {
@@ -20182,7 +20149,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "梅を例文に使います。",
     "exampleEnglish": "Example with plum.",
-    "id": 1835,
+    "id": 1832,
     "image": "🏠"
   },
   {
@@ -20193,7 +20160,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "埋めるを例文に使います。",
     "exampleEnglish": "Example with to bury.",
-    "id": 1836,
+    "id": 1833,
     "image": "🍜"
   },
   {
@@ -20204,7 +20171,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "裏切るを例文に使います。",
     "exampleEnglish": "Example with to betray.",
-    "id": 1837,
+    "id": 1834,
     "image": "🏠"
   },
   {
@@ -20215,7 +20182,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "羨ましいを例文に使います。",
     "exampleEnglish": "Example with envious.",
-    "id": 1838,
+    "id": 1835,
     "image": "🏠"
   },
   {
@@ -20226,7 +20193,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "売れるを例文に使います。",
     "exampleEnglish": "Example with to be sold.",
-    "id": 1839,
+    "id": 1836,
     "image": "🏠"
   },
   {
@@ -20237,7 +20204,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "噂を例文に使います。",
     "exampleEnglish": "Example with rumor.",
-    "id": 1840,
+    "id": 1837,
     "image": "🏠"
   },
   {
@@ -20248,7 +20215,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "運を例文に使います。",
     "exampleEnglish": "Example with fortune.",
-    "id": 1841,
+    "id": 1838,
     "image": "🏠"
   },
   {
@@ -20259,7 +20226,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "柄を例文に使います。",
     "exampleEnglish": "Example with handle (of a sword.",
-    "id": 1842,
+    "id": 1839,
     "image": "🏠"
   },
   {
@@ -20270,7 +20237,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "永遠を例文に使います。",
     "exampleEnglish": "Example with eternity.",
-    "id": 1843,
+    "id": 1840,
     "image": "🏠"
   },
   {
@@ -20281,7 +20248,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "永久を例文に使います。",
     "exampleEnglish": "Example with eternity.",
-    "id": 1844,
+    "id": 1841,
     "image": "🏠"
   },
   {
@@ -20292,7 +20259,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "影響を例文に使います。",
     "exampleEnglish": "Example with influence.",
-    "id": 1845,
+    "id": 1842,
     "image": "🏠"
   },
   {
@@ -20303,7 +20270,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "営業を例文に使います。",
     "exampleEnglish": "Example with business.",
-    "id": 1846,
+    "id": 1843,
     "image": "🚌"
   },
   {
@@ -20314,7 +20281,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "衛星を例文に使います。",
     "exampleEnglish": "Example with satellite.",
-    "id": 1847,
+    "id": 1844,
     "image": "🏠"
   },
   {
@@ -20325,7 +20292,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "栄養を例文に使います。",
     "exampleEnglish": "Example with nutrition.",
-    "id": 1848,
+    "id": 1845,
     "image": "🏠"
   },
   {
@@ -20336,7 +20303,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "笑顔を例文に使います。",
     "exampleEnglish": "Example with smile (on one's face).",
-    "id": 1849,
+    "id": 1846,
     "image": "🏠"
   },
   {
@@ -20347,7 +20314,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "描くを例文に使います。",
     "exampleEnglish": "Example with to draw.",
-    "id": 1850,
+    "id": 1847,
     "image": "🏠"
   },
   {
@@ -20358,7 +20325,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "餌を例文に使います。",
     "exampleEnglish": "Example with feed.",
-    "id": 1851,
+    "id": 1848,
     "image": "🏠"
   },
   {
@@ -20369,7 +20336,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "エネルギーを例文に使います。",
     "exampleEnglish": "Example with energy (GER: energie).",
-    "id": 1852,
+    "id": 1849,
     "image": "🏠"
   },
   {
@@ -20380,7 +20347,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "得るを例文に使います。",
     "exampleEnglish": "Example with to get.",
-    "id": 1853,
+    "id": 1850,
     "image": "📚"
   },
   {
@@ -20391,7 +20358,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "円を例文に使います。",
     "exampleEnglish": "Example with circle.",
-    "id": 1854,
+    "id": 1851,
     "image": "🏠"
   },
   {
@@ -20402,7 +20369,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "延期を例文に使います。",
     "exampleEnglish": "Example with postponement.",
-    "id": 1855,
+    "id": 1852,
     "image": "🏠"
   },
   {
@@ -20413,7 +20380,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "演技を例文に使います。",
     "exampleEnglish": "Example with acting.",
-    "id": 1856,
+    "id": 1853,
     "image": "🏠"
   },
   {
@@ -20424,7 +20391,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "援助を例文に使います。",
     "exampleEnglish": "Example with assistance.",
-    "id": 1857,
+    "id": 1854,
     "image": "🏠"
   },
   {
@@ -20435,7 +20402,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "エンジンを例文に使います。",
     "exampleEnglish": "Example with engine.",
-    "id": 1858,
+    "id": 1855,
     "image": "🏠"
   },
   {
@@ -20446,7 +20413,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "演説を例文に使います。",
     "exampleEnglish": "Example with speech.",
-    "id": 1859,
+    "id": 1856,
     "image": "🏠"
   },
   {
@@ -20457,7 +20424,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "演奏を例文に使います。",
     "exampleEnglish": "Example with musical performance.",
-    "id": 1860,
+    "id": 1857,
     "image": "🏠"
   },
   {
@@ -20468,7 +20435,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "老いを例文に使います。",
     "exampleEnglish": "Example with old age.",
-    "id": 1861,
+    "id": 1858,
     "image": "🏠"
   },
   {
@@ -20479,7 +20446,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "追い付くを例文に使います。",
     "exampleEnglish": "Example with to overtake.",
-    "id": 1862,
+    "id": 1859,
     "image": "🏠"
   },
   {
@@ -20490,7 +20457,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "王を例文に使います。",
     "exampleEnglish": "Example with king.",
-    "id": 1863,
+    "id": 1860,
     "image": "🏠"
   },
   {
@@ -20501,7 +20468,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "追うを例文に使います。",
     "exampleEnglish": "Example with to chase.",
-    "id": 1864,
+    "id": 1861,
     "image": "🏠"
   },
   {
@@ -20512,7 +20479,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "応援を例文に使います。",
     "exampleEnglish": "Example with aid.",
-    "id": 1865,
+    "id": 1862,
     "image": "🏠"
   },
   {
@@ -20523,7 +20490,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "王様を例文に使います。",
     "exampleEnglish": "Example with king.",
-    "id": 1866,
+    "id": 1863,
     "image": "🏠"
   },
   {
@@ -20534,7 +20501,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "王子を例文に使います。",
     "exampleEnglish": "Example with prince.",
-    "id": 1867,
+    "id": 1864,
     "image": "🏠"
   },
   {
@@ -20545,7 +20512,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "応じるを例文に使います。",
     "exampleEnglish": "Example with to adapt.",
-    "id": 1868,
+    "id": 1865,
     "image": "🏠"
   },
   {
@@ -20556,7 +20523,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "横断を例文に使います。",
     "exampleEnglish": "Example with crossing.",
-    "id": 1869,
+    "id": 1866,
     "image": "🏠"
   },
   {
@@ -20567,7 +20534,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "終えるを例文に使います。",
     "exampleEnglish": "Example with to finish.",
-    "id": 1870,
+    "id": 1867,
     "image": "🏠"
   },
   {
@@ -20578,7 +20545,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "大いにを例文に使います。",
     "exampleEnglish": "Example with much.",
-    "id": 1871,
+    "id": 1868,
     "image": "🍜"
   },
   {
@@ -20589,7 +20556,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "覆うを例文に使います。",
     "exampleEnglish": "Example with to cover.",
-    "id": 1872,
+    "id": 1869,
     "image": "🏠"
   },
   {
@@ -20600,7 +20567,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "大家を例文に使います。",
     "exampleEnglish": "Example with landlord.",
-    "id": 1873,
+    "id": 1870,
     "image": "🏠"
   },
   {
@@ -20611,7 +20578,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "丘を例文に使います。",
     "exampleEnglish": "Example with hill.",
-    "id": 1874,
+    "id": 1871,
     "image": "🏠"
   },
   {
@@ -20622,7 +20589,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "沖を例文に使います。",
     "exampleEnglish": "Example with open sea.",
-    "id": 1875,
+    "id": 1872,
     "image": "🏠"
   },
   {
@@ -20633,7 +20600,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "奥を例文に使います。",
     "exampleEnglish": "Example with interior.",
-    "id": 1876,
+    "id": 1873,
     "image": "🏠"
   },
   {
@@ -20644,7 +20611,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "贈るを例文に使います。",
     "exampleEnglish": "Example with to present.",
-    "id": 1877,
+    "id": 1874,
     "image": "🏠"
   },
   {
@@ -20655,7 +20622,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "起こるを例文に使います。",
     "exampleEnglish": "Example with to occur.",
-    "id": 1878,
+    "id": 1875,
     "image": "🏠"
   },
   {
@@ -20666,7 +20633,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "押えるを例文に使います。",
     "exampleEnglish": "Example with to stop.",
-    "id": 1879,
+    "id": 1876,
     "image": "🚌"
   },
   {
@@ -20677,30 +20644,30 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "幼いを例文に使います。",
     "exampleEnglish": "Example with very young.",
-    "id": 1880,
+    "id": 1877,
     "image": "🏠"
   },
   {
     "native": "収める",
     "english": "to store to pay",
     "phonetic": "おさめる",
-    "category": "Daily Life",
+    "category": "Shopping",
     "topikLevel": 2,
     "exampleNative": "収めるを例文に使います。",
     "exampleEnglish": "Example with to store to pay.",
-    "id": 1881,
-    "image": "🏠"
+    "id": 1878,
+    "image": "🛍️"
   },
   {
     "native": "納める",
     "english": "to store to pay",
     "phonetic": "おさめる",
-    "category": "Daily Life",
+    "category": "Shopping",
     "topikLevel": 2,
     "exampleNative": "納めるを例文に使います。",
     "exampleEnglish": "Example with to store to pay.",
-    "id": 1882,
-    "image": "🏠"
+    "id": 1879,
+    "image": "🛍️"
   },
   {
     "native": "治める",
@@ -20710,7 +20677,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "治めるを例文に使います。",
     "exampleEnglish": "Example with to govern.",
-    "id": 1883,
+    "id": 1880,
     "image": "🏠"
   },
   {
@@ -20721,7 +20688,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "お辞儀を例文に使います。",
     "exampleEnglish": "Example with bow.",
-    "id": 1884,
+    "id": 1881,
     "image": "🏠"
   },
   {
@@ -20732,7 +20699,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "お洒落を例文に使います。",
     "exampleEnglish": "Example with smartly dressed.",
-    "id": 1885,
+    "id": 1882,
     "image": "🏠"
   },
   {
@@ -20743,7 +20710,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "お喋りを例文に使います。",
     "exampleEnglish": "Example with chattering.",
-    "id": 1886,
+    "id": 1883,
     "image": "🏠"
   },
   {
@@ -20754,7 +20721,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "汚染を例文に使います。",
     "exampleEnglish": "Example with pollution.",
-    "id": 1887,
+    "id": 1884,
     "image": "🏠"
   },
   {
@@ -20765,7 +20732,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "恐らくを例文に使います。",
     "exampleEnglish": "Example with perhaps.",
-    "id": 1888,
+    "id": 1885,
     "image": "🏠"
   },
   {
@@ -20776,7 +20743,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "恐れるを例文に使います。",
     "exampleEnglish": "Example with to fear.",
-    "id": 1889,
+    "id": 1886,
     "image": "🏠"
   },
   {
@@ -20787,7 +20754,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "恐ろしいを例文に使います。",
     "exampleEnglish": "Example with terrible.",
-    "id": 1890,
+    "id": 1887,
     "image": "🏠"
   },
   {
@@ -20798,7 +20765,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "教わるを例文に使います。",
     "exampleEnglish": "Example with to be taught.",
-    "id": 1891,
+    "id": 1888,
     "image": "🏠"
   },
   {
@@ -20809,7 +20776,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "お互いを例文に使います。",
     "exampleEnglish": "Example with mutual.",
-    "id": 1892,
+    "id": 1889,
     "image": "🏠"
   },
   {
@@ -20820,7 +20787,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "穏やかを例文に使います。",
     "exampleEnglish": "Example with calm.",
-    "id": 1893,
+    "id": 1890,
     "image": "🏠"
   },
   {
@@ -20831,7 +20798,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "男の人を例文に使います。",
     "exampleEnglish": "Example with man.",
-    "id": 1894,
+    "id": 1891,
     "image": "🏠"
   },
   {
@@ -20842,7 +20809,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "大人しいを例文に使います。",
     "exampleEnglish": "Example with obedient.",
-    "id": 1895,
+    "id": 1892,
     "image": "🏠"
   },
   {
@@ -20853,7 +20820,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "劣るを例文に使います。",
     "exampleEnglish": "Example with to fall behind.",
-    "id": 1896,
+    "id": 1893,
     "image": "🏠"
   },
   {
@@ -20864,7 +20831,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "鬼を例文に使います。",
     "exampleEnglish": "Example with ogre.",
-    "id": 1897,
+    "id": 1894,
     "image": "🏠"
   },
   {
@@ -20875,7 +20842,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "帯を例文に使います。",
     "exampleEnglish": "Example with band.",
-    "id": 1898,
+    "id": 1895,
     "image": "🏠"
   },
   {
@@ -20886,7 +20853,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "お昼を例文に使います。",
     "exampleEnglish": "Example with lunch.",
-    "id": 1899,
+    "id": 1896,
     "image": "🏠"
   },
   {
@@ -20897,7 +20864,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "オフィスを例文に使います。",
     "exampleEnglish": "Example with office.",
-    "id": 1900,
+    "id": 1897,
     "image": "🏠"
   },
   {
@@ -20908,7 +20875,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "溺れるを例文に使います。",
     "exampleEnglish": "Example with to be drowned.",
-    "id": 1901,
+    "id": 1898,
     "image": "🏠"
   },
   {
@@ -20919,7 +20886,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "お前を例文に使います。",
     "exampleEnglish": "Example with you (sing).",
-    "id": 1902,
+    "id": 1899,
     "image": "🏠"
   },
   {
@@ -20930,7 +20897,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "おめでとうを例文に使います。",
     "exampleEnglish": "Example with Congratulations!.",
-    "id": 1903,
+    "id": 1900,
     "image": "🏠"
   },
   {
@@ -20941,7 +20908,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "お目に掛かるを例文に使います。",
     "exampleEnglish": "Example with meet ~.",
-    "id": 1904,
+    "id": 1901,
     "image": "🏠"
   },
   {
@@ -20952,7 +20919,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "思い付くを例文に使います。",
     "exampleEnglish": "Example with to think of.",
-    "id": 1905,
+    "id": 1902,
     "image": "🏠"
   },
   {
@@ -20963,7 +20930,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "思い出を例文に使います。",
     "exampleEnglish": "Example with memories.",
-    "id": 1906,
+    "id": 1903,
     "image": "🏠"
   },
   {
@@ -20974,7 +20941,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "主にを例文に使います。",
     "exampleEnglish": "Example with mainly.",
-    "id": 1907,
+    "id": 1904,
     "image": "🏠"
   },
   {
@@ -20985,7 +20952,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "思わずを例文に使います。",
     "exampleEnglish": "Example with unintentional.",
-    "id": 1908,
+    "id": 1905,
     "image": "🏠"
   },
   {
@@ -20996,7 +20963,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "泳ぎを例文に使います。",
     "exampleEnglish": "Example with swimming.",
-    "id": 1909,
+    "id": 1906,
     "image": "🏠"
   },
   {
@@ -21007,7 +20974,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "およそを例文に使います。",
     "exampleEnglish": "Example with about.",
-    "id": 1910,
+    "id": 1907,
     "image": "🏠"
   },
   {
@@ -21018,7 +20985,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "及ぼすを例文に使います。",
     "exampleEnglish": "Example with to exert.",
-    "id": 1911,
+    "id": 1908,
     "image": "🏠"
   },
   {
@@ -21029,7 +20996,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "下すを例文に使います。",
     "exampleEnglish": "Example with to lower.",
-    "id": 1912,
+    "id": 1909,
     "image": "🏠"
   },
   {
@@ -21040,7 +21007,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "降ろすを例文に使います。",
     "exampleEnglish": "Example with to take down.",
-    "id": 1913,
+    "id": 1910,
     "image": "🏠"
   },
   {
@@ -21051,7 +21018,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "卸すを例文に使います。",
     "exampleEnglish": "Example with to sell wholesale.",
-    "id": 1914,
+    "id": 1911,
     "image": "🏠"
   },
   {
@@ -21062,7 +21029,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "恩を例文に使います。",
     "exampleEnglish": "Example with favor.",
-    "id": 1915,
+    "id": 1912,
     "image": "🏠"
   },
   {
@@ -21073,7 +21040,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "温暖を例文に使います。",
     "exampleEnglish": "Example with warmth.",
-    "id": 1916,
+    "id": 1913,
     "image": "🏠"
   },
   {
@@ -21084,7 +21051,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "温度を例文に使います。",
     "exampleEnglish": "Example with temperature.",
-    "id": 1917,
+    "id": 1914,
     "image": "🏠"
   },
   {
@@ -21095,7 +21062,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "可を例文に使います。",
     "exampleEnglish": "Example with passable.",
-    "id": 1918,
+    "id": 1915,
     "image": "🏠"
   },
   {
@@ -21106,7 +21073,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "蚊を例文に使います。",
     "exampleEnglish": "Example with mosquito.",
-    "id": 1919,
+    "id": 1916,
     "image": "🏠"
   },
   {
@@ -21117,7 +21084,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "課を例文に使います。",
     "exampleEnglish": "Example with department.",
-    "id": 1920,
+    "id": 1917,
     "image": "🏠"
   },
   {
@@ -21128,7 +21095,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "カーを例文に使います。",
     "exampleEnglish": "Example with car.",
-    "id": 1921,
+    "id": 1918,
     "image": "🚌"
   },
   {
@@ -21139,7 +21106,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "カードを例文に使います。",
     "exampleEnglish": "Example with card.",
-    "id": 1922,
+    "id": 1919,
     "image": "🚌"
   },
   {
@@ -21150,7 +21117,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "貝を例文に使います。",
     "exampleEnglish": "Example with shell.",
-    "id": 1923,
+    "id": 1920,
     "image": "🏠"
   },
   {
@@ -21161,7 +21128,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "害を例文に使います。",
     "exampleEnglish": "Example with harm.",
-    "id": 1924,
+    "id": 1921,
     "image": "🏠"
   },
   {
@@ -21172,7 +21139,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "会員を例文に使います。",
     "exampleEnglish": "Example with member.",
-    "id": 1925,
+    "id": 1922,
     "image": "🏠"
   },
   {
@@ -21183,7 +21150,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "絵画を例文に使います。",
     "exampleEnglish": "Example with picture.",
-    "id": 1926,
+    "id": 1923,
     "image": "🏠"
   },
   {
@@ -21194,19 +21161,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "海外を例文に使います。",
     "exampleEnglish": "Example with foreign.",
-    "id": 1927,
+    "id": 1924,
     "image": "🏠"
   },
   {
     "native": "会計",
     "english": "account",
     "phonetic": "かいけい",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 2,
     "exampleNative": "会計を例文に使います。",
     "exampleEnglish": "Example with account.",
-    "id": 1928,
-    "image": "🏠"
+    "id": 1925,
+    "image": "🔢"
   },
   {
     "native": "解決",
@@ -21216,7 +21183,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "解決を例文に使います。",
     "exampleEnglish": "Example with settlement.",
-    "id": 1929,
+    "id": 1926,
     "image": "🏠"
   },
   {
@@ -21227,7 +21194,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "会合を例文に使います。",
     "exampleEnglish": "Example with meeting.",
-    "id": 1930,
+    "id": 1927,
     "image": "🏠"
   },
   {
@@ -21238,7 +21205,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "外交を例文に使います。",
     "exampleEnglish": "Example with diplomacy.",
-    "id": 1931,
+    "id": 1928,
     "image": "🏠"
   },
   {
@@ -21249,7 +21216,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "開始を例文に使います。",
     "exampleEnglish": "Example with start.",
-    "id": 1932,
+    "id": 1929,
     "image": "🏠"
   },
   {
@@ -21260,7 +21227,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "解釈を例文に使います。",
     "exampleEnglish": "Example with explanation.",
-    "id": 1933,
+    "id": 1930,
     "image": "🏠"
   },
   {
@@ -21271,7 +21238,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "外出を例文に使います。",
     "exampleEnglish": "Example with outing.",
-    "id": 1934,
+    "id": 1931,
     "image": "🏠"
   },
   {
@@ -21282,7 +21249,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "改善を例文に使います。",
     "exampleEnglish": "Example with betterment.",
-    "id": 1935,
+    "id": 1932,
     "image": "🏠"
   },
   {
@@ -21293,7 +21260,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "快適を例文に使います。",
     "exampleEnglish": "Example with pleasant.",
-    "id": 1936,
+    "id": 1933,
     "image": "🏠"
   },
   {
@@ -21304,7 +21271,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "回復を例文に使います。",
     "exampleEnglish": "Example with recovery (from illness).",
-    "id": 1937,
+    "id": 1934,
     "image": "🏠"
   },
   {
@@ -21315,7 +21282,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "飼うを例文に使います。",
     "exampleEnglish": "Example with to keep; to own (a pet); to raise; to feed.",
-    "id": 1938,
+    "id": 1935,
     "image": "🏠"
   },
   {
@@ -21326,7 +21293,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "帰すを例文に使います。",
     "exampleEnglish": "Example with to send back.",
-    "id": 1939,
+    "id": 1936,
     "image": "🏠"
   },
   {
@@ -21337,7 +21304,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "代えるを例文に使います。",
     "exampleEnglish": "Example with to exchange.",
-    "id": 1940,
+    "id": 1937,
     "image": "🏠"
   },
   {
@@ -21348,7 +21315,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "替えるを例文に使います。",
     "exampleEnglish": "Example with to exchange.",
-    "id": 1941,
+    "id": 1938,
     "image": "🏠"
   },
   {
@@ -21359,7 +21326,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "換えるを例文に使います。",
     "exampleEnglish": "Example with to exchange.",
-    "id": 1942,
+    "id": 1939,
     "image": "🏠"
   },
   {
@@ -21370,7 +21337,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "反るを例文に使います。",
     "exampleEnglish": "Example with to warp.",
-    "id": 1943,
+    "id": 1940,
     "image": "🏠"
   },
   {
@@ -21381,7 +21348,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "香りを例文に使います。",
     "exampleEnglish": "Example with aroma.",
-    "id": 1944,
+    "id": 1941,
     "image": "🏠"
   },
   {
@@ -21392,7 +21359,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "画家を例文に使います。",
     "exampleEnglish": "Example with painter.",
-    "id": 1945,
+    "id": 1942,
     "image": "🏠"
   },
   {
@@ -21403,7 +21370,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "抱えるを例文に使います。",
     "exampleEnglish": "Example with to hold or carry under or in the arms.",
-    "id": 1946,
+    "id": 1943,
     "image": "🚌"
   },
   {
@@ -21414,7 +21381,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "価格を例文に使います。",
     "exampleEnglish": "Example with price.",
-    "id": 1947,
+    "id": 1944,
     "image": "🏠"
   },
   {
@@ -21425,7 +21392,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "化学を例文に使います。",
     "exampleEnglish": "Example with chemistry.",
-    "id": 1948,
+    "id": 1945,
     "image": "🏠"
   },
   {
@@ -21436,7 +21403,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "輝くを例文に使います。",
     "exampleEnglish": "Example with to shine.",
-    "id": 1949,
+    "id": 1946,
     "image": "🏠"
   },
   {
@@ -21447,7 +21414,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "係を例文に使います。",
     "exampleEnglish": "Example with person in charge.",
-    "id": 1950,
+    "id": 1947,
     "image": "🏠"
   },
   {
@@ -21458,7 +21425,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "罹るを例文に使います。",
     "exampleEnglish": "Example with to suffer from.",
-    "id": 1951,
+    "id": 1948,
     "image": "🏠"
   },
   {
@@ -21469,7 +21436,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "限るを例文に使います。",
     "exampleEnglish": "Example with to restrict.",
-    "id": 1952,
+    "id": 1949,
     "image": "🏠"
   },
   {
@@ -21480,7 +21447,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "掻くを例文に使います。",
     "exampleEnglish": "Example with to scratch.",
-    "id": 1953,
+    "id": 1950,
     "image": "🏠"
   },
   {
@@ -21491,7 +21458,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "嗅ぐを例文に使います。",
     "exampleEnglish": "Example with to sniff.",
-    "id": 1954,
+    "id": 1951,
     "image": "🏠"
   },
   {
@@ -21502,7 +21469,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "家具を例文に使います。",
     "exampleEnglish": "Example with furniture.",
-    "id": 1955,
+    "id": 1952,
     "image": "🏠"
   },
   {
@@ -21513,7 +21480,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "学を例文に使います。",
     "exampleEnglish": "Example with learning.",
-    "id": 1956,
+    "id": 1953,
     "image": "📚"
   },
   {
@@ -21524,7 +21491,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "額を例文に使います。",
     "exampleEnglish": "Example with amount; frame.",
-    "id": 1957,
+    "id": 1954,
     "image": "🏠"
   },
   {
@@ -21535,7 +21502,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "覚悟を例文に使います。",
     "exampleEnglish": "Example with resolution.",
-    "id": 1958,
+    "id": 1955,
     "image": "🏠"
   },
   {
@@ -21546,7 +21513,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "確実を例文に使います。",
     "exampleEnglish": "Example with certainty.",
-    "id": 1959,
+    "id": 1956,
     "image": "🏠"
   },
   {
@@ -21557,7 +21524,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "学者を例文に使います。",
     "exampleEnglish": "Example with scholar.",
-    "id": 1960,
+    "id": 1957,
     "image": "🏠"
   },
   {
@@ -21568,7 +21535,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "学習を例文に使います。",
     "exampleEnglish": "Example with study.",
-    "id": 1961,
+    "id": 1958,
     "image": "📚"
   },
   {
@@ -21579,7 +21546,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "隠すを例文に使います。",
     "exampleEnglish": "Example with to hide.",
-    "id": 1962,
+    "id": 1959,
     "image": "🏠"
   },
   {
@@ -21590,7 +21557,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "拡大を例文に使います。",
     "exampleEnglish": "Example with magnification.",
-    "id": 1963,
+    "id": 1960,
     "image": "🏠"
   },
   {
@@ -21601,7 +21568,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "確認を例文に使います。",
     "exampleEnglish": "Example with affirmation.",
-    "id": 1964,
+    "id": 1961,
     "image": "🏠"
   },
   {
@@ -21612,7 +21579,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "学問を例文に使います。",
     "exampleEnglish": "Example with scholarship.",
-    "id": 1965,
+    "id": 1962,
     "image": "📚"
   },
   {
@@ -21623,7 +21590,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "隠れるを例文に使います。",
     "exampleEnglish": "Example with to hide.",
-    "id": 1966,
+    "id": 1963,
     "image": "🏠"
   },
   {
@@ -21634,7 +21601,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "影を例文に使います。",
     "exampleEnglish": "Example with shade.",
-    "id": 1967,
+    "id": 1964,
     "image": "🏠"
   },
   {
@@ -21645,7 +21612,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "陰を例文に使います。",
     "exampleEnglish": "Example with shade.",
-    "id": 1968,
+    "id": 1965,
     "image": "🏠"
   },
   {
@@ -21656,7 +21623,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "欠けるを例文に使います。",
     "exampleEnglish": "Example with to be lacking.",
-    "id": 1969,
+    "id": 1966,
     "image": "🏠"
   },
   {
@@ -21667,7 +21634,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "加減を例文に使います。",
     "exampleEnglish": "Example with adjustment; addition and subtraction.",
-    "id": 1970,
+    "id": 1967,
     "image": "🏠"
   },
   {
@@ -21678,7 +21645,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "過去を例文に使います。",
     "exampleEnglish": "Example with past.",
-    "id": 1971,
+    "id": 1968,
     "image": "🏠"
   },
   {
@@ -21689,7 +21656,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "籠を例文に使います。",
     "exampleEnglish": "Example with basket.",
-    "id": 1972,
+    "id": 1969,
     "image": "🏠"
   },
   {
@@ -21700,7 +21667,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "囲むを例文に使います。",
     "exampleEnglish": "Example with to surround.",
-    "id": 1973,
+    "id": 1970,
     "image": "🏠"
   },
   {
@@ -21711,7 +21678,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "火災を例文に使います。",
     "exampleEnglish": "Example with conflagration.",
-    "id": 1974,
+    "id": 1971,
     "image": "🏠"
   },
   {
@@ -21722,7 +21689,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "重なるを例文に使います。",
     "exampleEnglish": "Example with to be piled up.",
-    "id": 1975,
+    "id": 1972,
     "image": "🏠"
   },
   {
@@ -21733,7 +21700,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "重ねるを例文に使います。",
     "exampleEnglish": "Example with to pile up.",
-    "id": 1976,
+    "id": 1973,
     "image": "🏠"
   },
   {
@@ -21744,7 +21711,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "飾りを例文に使います。",
     "exampleEnglish": "Example with decoration.",
-    "id": 1977,
+    "id": 1974,
     "image": "🏠"
   },
   {
@@ -21755,7 +21722,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "貸しを例文に使います。",
     "exampleEnglish": "Example with loan.",
-    "id": 1978,
+    "id": 1975,
     "image": "🏠"
   },
   {
@@ -21766,7 +21733,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "菓子を例文に使います。",
     "exampleEnglish": "Example with confectionery.",
-    "id": 1979,
+    "id": 1976,
     "image": "🏠"
   },
   {
@@ -21777,7 +21744,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "家事を例文に使います。",
     "exampleEnglish": "Example with household matters; housework (same as 家の仕事 (いえのしごと)).",
-    "id": 1980,
+    "id": 1977,
     "image": "🏠"
   },
   {
@@ -21788,7 +21755,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "賢いを例文に使います。",
     "exampleEnglish": "Example with wise.",
-    "id": 1981,
+    "id": 1978,
     "image": "🏠"
   },
   {
@@ -21799,7 +21766,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "歌手を例文に使います。",
     "exampleEnglish": "Example with singer.",
-    "id": 1982,
+    "id": 1979,
     "image": "🏠"
   },
   {
@@ -21810,19 +21777,19 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "稼ぐを例文に使います。",
     "exampleEnglish": "Example with to earn income.",
-    "id": 1983,
+    "id": 1980,
     "image": "🏠"
   },
   {
     "native": "数える",
     "english": "to count",
     "phonetic": "かぞえる",
-    "category": "Daily Life",
+    "category": "Numbers",
     "topikLevel": 2,
     "exampleNative": "数えるを例文に使います。",
     "exampleEnglish": "Example with to count.",
-    "id": 1984,
-    "image": "🏠"
+    "id": 1981,
+    "image": "🔢"
   },
   {
     "native": "型",
@@ -21832,7 +21799,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "型を例文に使います。",
     "exampleEnglish": "Example with mold.",
-    "id": 1985,
+    "id": 1982,
     "image": "🏠"
   },
   {
@@ -21843,7 +21810,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "肩を例文に使います。",
     "exampleEnglish": "Example with shoulder.",
-    "id": 1986,
+    "id": 1983,
     "image": "🏠"
   },
   {
@@ -21854,7 +21821,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "堅いを例文に使います。",
     "exampleEnglish": "Example with hard.",
-    "id": 1987,
+    "id": 1984,
     "image": "🏠"
   },
   {
@@ -21865,7 +21832,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "硬いを例文に使います。",
     "exampleEnglish": "Example with hard.",
-    "id": 1988,
+    "id": 1985,
     "image": "🏠"
   },
   {
@@ -21876,7 +21843,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "方々を例文に使います。",
     "exampleEnglish": "Example with persons.",
-    "id": 1989,
+    "id": 1986,
     "image": "🏠"
   },
   {
@@ -21887,7 +21854,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "片付くを例文に使います。",
     "exampleEnglish": "Example with to put in order.",
-    "id": 1990,
+    "id": 1987,
     "image": "🏠"
   },
   {
@@ -21898,7 +21865,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "刀を例文に使います。",
     "exampleEnglish": "Example with sword.",
-    "id": 1991,
+    "id": 1988,
     "image": "🏠"
   },
   {
@@ -21909,7 +21876,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "語るを例文に使います。",
     "exampleEnglish": "Example with to talk.",
-    "id": 1992,
+    "id": 1989,
     "image": "🏠"
   },
   {
@@ -21920,7 +21887,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "勝ちを例文に使います。",
     "exampleEnglish": "Example with win.",
-    "id": 1993,
+    "id": 1990,
     "image": "🏠"
   },
   {
@@ -21931,7 +21898,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "価値を例文に使います。",
     "exampleEnglish": "Example with value.",
-    "id": 1994,
+    "id": 1991,
     "image": "🏠"
   },
   {
@@ -21942,7 +21909,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "がっかりを例文に使います。",
     "exampleEnglish": "Example with feel disappointed.",
-    "id": 1995,
+    "id": 1992,
     "image": "💕"
   },
   {
@@ -21953,7 +21920,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "活気を例文に使います。",
     "exampleEnglish": "Example with vigor; liveliness; vitality; energy.",
-    "id": 1996,
+    "id": 1993,
     "image": "🏠"
   },
   {
@@ -21964,7 +21931,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "楽器を例文に使います。",
     "exampleEnglish": "Example with musical instrument.",
-    "id": 1997,
+    "id": 1994,
     "image": "🏠"
   },
   {
@@ -21975,7 +21942,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "学期を例文に使います。",
     "exampleEnglish": "Example with term (school).",
-    "id": 1998,
+    "id": 1995,
     "image": "📚"
   },
   {
@@ -21986,7 +21953,7 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "活動を例文に使います。",
     "exampleEnglish": "Example with action.",
-    "id": 1999,
+    "id": 1996,
     "image": "🏠"
   },
   {
@@ -21997,7 +21964,16078 @@ export const JA_WORDS = [
     "topikLevel": 2,
     "exampleNative": "活躍を例文に使います。",
     "exampleEnglish": "Example with activity.",
+    "id": 1997,
+    "image": "🏠"
+  },
+  {
+    "native": "活用",
+    "english": "conjugation; practical use",
+    "phonetic": "かつよう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "活用を例文に使います。",
+    "exampleEnglish": "Example with conjugation; practical use.",
+    "id": 1998,
+    "image": "🏠"
+  },
+  {
+    "native": "仮定",
+    "english": "assumption",
+    "phonetic": "かてい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "仮定を例文に使います。",
+    "exampleEnglish": "Example with assumption.",
+    "id": 1999,
+    "image": "🏠"
+  },
+  {
+    "native": "過程",
+    "english": "process",
+    "phonetic": "かてい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "過程を例文に使います。",
+    "exampleEnglish": "Example with process.",
     "id": 2000,
+    "image": "🏠"
+  },
+  {
+    "native": "課程",
+    "english": "course",
+    "phonetic": "かてい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "課程を例文に使います。",
+    "exampleEnglish": "Example with course.",
+    "id": 2001,
+    "image": "🏠"
+  },
+  {
+    "native": "悲しむ",
+    "english": "to be sad",
+    "phonetic": "かなしむ",
+    "category": "Feelings",
+    "topikLevel": 2,
+    "exampleNative": "悲しむを例文に使います。",
+    "exampleEnglish": "Example with to be sad.",
+    "id": 2002,
+    "image": "💕"
+  },
+  {
+    "native": "必ずしも",
+    "english": "(not) always",
+    "phonetic": "かならずしも",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "必ずしもを例文に使います。",
+    "exampleEnglish": "Example with (not) always.",
+    "id": 2003,
+    "image": "🏠"
+  },
+  {
+    "native": "かなり",
+    "english": "considerably",
+    "phonetic": "かなり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "かなりを例文に使います。",
+    "exampleEnglish": "Example with considerably.",
+    "id": 2004,
+    "image": "🏠"
+  },
+  {
+    "native": "金",
+    "english": "gold",
+    "phonetic": "かね",
+    "category": "Shopping",
+    "topikLevel": 2,
+    "exampleNative": "金を例文に使います。",
+    "exampleEnglish": "Example with gold.",
+    "id": 2005,
+    "image": "🛍️"
+  },
+  {
+    "native": "鐘",
+    "english": "bell",
+    "phonetic": "かね",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "鐘を例文に使います。",
+    "exampleEnglish": "Example with bell.",
+    "id": 2006,
+    "image": "🏠"
+  },
+  {
+    "native": "可能",
+    "english": "possible",
+    "phonetic": "かのう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "可能を例文に使います。",
+    "exampleEnglish": "Example with possible.",
+    "id": 2007,
+    "image": "🏠"
+  },
+  {
+    "native": "株",
+    "english": "stock; stump (of tree)",
+    "phonetic": "かぶ",
+    "category": "Weather & Nature",
+    "topikLevel": 2,
+    "exampleNative": "株を例文に使います。",
+    "exampleEnglish": "Example with stock; stump (of tree).",
+    "id": 2008,
+    "image": "🌤️"
+  },
+  {
+    "native": "被る",
+    "english": "to wear; to be covered with",
+    "phonetic": "かぶる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "被るを例文に使います。",
+    "exampleEnglish": "Example with to wear; to be covered with.",
+    "id": 2009,
+    "image": "🏠"
+  },
+  {
+    "native": "我慢",
+    "english": "patience",
+    "phonetic": "がまん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "我慢を例文に使います。",
+    "exampleEnglish": "Example with patience.",
+    "id": 2010,
+    "image": "🏠"
+  },
+  {
+    "native": "神",
+    "english": "god",
+    "phonetic": "かみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "神を例文に使います。",
+    "exampleEnglish": "Example with god.",
+    "id": 2011,
+    "image": "🏠"
+  },
+  {
+    "native": "雷",
+    "english": "thunder",
+    "phonetic": "かみなり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "雷を例文に使います。",
+    "exampleEnglish": "Example with thunder.",
+    "id": 2012,
+    "image": "🏠"
+  },
+  {
+    "native": "髪の毛",
+    "english": "hair (head)",
+    "phonetic": "かみのけ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "髪の毛を例文に使います。",
+    "exampleEnglish": "Example with hair (head).",
+    "id": 2013,
+    "image": "🏠"
+  },
+  {
+    "native": "科目",
+    "english": "(school) subject",
+    "phonetic": "かもく",
+    "category": "Study & Work",
+    "topikLevel": 2,
+    "exampleNative": "科目を例文に使います。",
+    "exampleEnglish": "Example with (school) subject.",
+    "id": 2014,
+    "image": "📚"
+  },
+  {
+    "native": "かもしれない",
+    "english": "maybe",
+    "phonetic": "かもしれない",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "かもしれないを例文に使います。",
+    "exampleEnglish": "Example with maybe.",
+    "id": 2015,
+    "image": "🏠"
+  },
+  {
+    "native": "かゆい",
+    "english": "itchy",
+    "phonetic": "かゆい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "かゆいを例文に使います。",
+    "exampleEnglish": "Example with itchy.",
+    "id": 2016,
+    "image": "🏠"
+  },
+  {
+    "native": "歌謡",
+    "english": "song",
+    "phonetic": "かよう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "歌謡を例文に使います。",
+    "exampleEnglish": "Example with song.",
+    "id": 2017,
+    "image": "🏠"
+  },
+  {
+    "native": "殻",
+    "english": "shell",
+    "phonetic": "から",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "殻を例文に使います。",
+    "exampleEnglish": "Example with shell.",
+    "id": 2018,
+    "image": "🏠"
+  },
+  {
+    "native": "刈る",
+    "english": "to cut (hair)",
+    "phonetic": "かる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "刈るを例文に使います。",
+    "exampleEnglish": "Example with to cut (hair).",
+    "id": 2019,
+    "image": "🏠"
+  },
+  {
+    "native": "河",
+    "english": "river",
+    "phonetic": "かわ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "河を例文に使います。",
+    "exampleEnglish": "Example with river.",
+    "id": 2020,
+    "image": "🏠"
+  },
+  {
+    "native": "皮",
+    "english": "skin",
+    "phonetic": "かわ",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "皮を例文に使います。",
+    "exampleEnglish": "Example with skin.",
+    "id": 2021,
+    "image": "🍜"
+  },
+  {
+    "native": "革",
+    "english": "leather",
+    "phonetic": "かわ",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "革を例文に使います。",
+    "exampleEnglish": "Example with leather.",
+    "id": 2022,
+    "image": "🍜"
+  },
+  {
+    "native": "可愛そう",
+    "english": "poor",
+    "phonetic": "かわいそう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "可愛そうを例文に使います。",
+    "exampleEnglish": "Example with poor.",
+    "id": 2023,
+    "image": "🏠"
+  },
+  {
+    "native": "可愛らしい",
+    "english": "lovely",
+    "phonetic": "かわいらしい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "可愛らしいを例文に使います。",
+    "exampleEnglish": "Example with lovely.",
+    "id": 2024,
+    "image": "🏠"
+  },
+  {
+    "native": "乾かす",
+    "english": "to dry",
+    "phonetic": "かわかす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "乾かすを例文に使います。",
+    "exampleEnglish": "Example with to dry.",
+    "id": 2025,
+    "image": "🏠"
+  },
+  {
+    "native": "渇く",
+    "english": "to be thirsty",
+    "phonetic": "かわく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "渇くを例文に使います。",
+    "exampleEnglish": "Example with to be thirsty.",
+    "id": 2026,
+    "image": "🏠"
+  },
+  {
+    "native": "代る",
+    "english": "to take the place of",
+    "phonetic": "かわる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "代るを例文に使います。",
+    "exampleEnglish": "Example with to take the place of.",
+    "id": 2027,
+    "image": "🏠"
+  },
+  {
+    "native": "缶",
+    "english": "can",
+    "phonetic": "かん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "缶を例文に使います。",
+    "exampleEnglish": "Example with can.",
+    "id": 2028,
+    "image": "🏠"
+  },
+  {
+    "native": "勘",
+    "english": "perception",
+    "phonetic": "かん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "勘を例文に使います。",
+    "exampleEnglish": "Example with perception.",
+    "id": 2029,
+    "image": "🏠"
+  },
+  {
+    "native": "考え",
+    "english": "thinking",
+    "phonetic": "かんがえ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "考えを例文に使います。",
+    "exampleEnglish": "Example with thinking.",
+    "id": 2030,
+    "image": "🏠"
+  },
+  {
+    "native": "感覚",
+    "english": "sense",
+    "phonetic": "かんかく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "感覚を例文に使います。",
+    "exampleEnglish": "Example with sense.",
+    "id": 2031,
+    "image": "🏠"
+  },
+  {
+    "native": "間隔",
+    "english": "space",
+    "phonetic": "かんかく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "間隔を例文に使います。",
+    "exampleEnglish": "Example with space.",
+    "id": 2032,
+    "image": "🏠"
+  },
+  {
+    "native": "観客",
+    "english": "audience",
+    "phonetic": "かんきゃく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "観客を例文に使います。",
+    "exampleEnglish": "Example with audience.",
+    "id": 2033,
+    "image": "🏠"
+  },
+  {
+    "native": "環境",
+    "english": "environment",
+    "phonetic": "かんきょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "環境を例文に使います。",
+    "exampleEnglish": "Example with environment.",
+    "id": 2034,
+    "image": "🏠"
+  },
+  {
+    "native": "歓迎",
+    "english": "welcome",
+    "phonetic": "かんげい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "歓迎を例文に使います。",
+    "exampleEnglish": "Example with welcome.",
+    "id": 2035,
+    "image": "🏠"
+  },
+  {
+    "native": "観光",
+    "english": "sightseeing",
+    "phonetic": "かんこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "観光を例文に使います。",
+    "exampleEnglish": "Example with sightseeing.",
+    "id": 2036,
+    "image": "🏠"
+  },
+  {
+    "native": "観察",
+    "english": "observation",
+    "phonetic": "かんさつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "観察を例文に使います。",
+    "exampleEnglish": "Example with observation.",
+    "id": 2037,
+    "image": "🏠"
+  },
+  {
+    "native": "感じ",
+    "english": "feeling",
+    "phonetic": "かんじ",
+    "category": "Feelings",
+    "topikLevel": 2,
+    "exampleNative": "感じを例文に使います。",
+    "exampleEnglish": "Example with feeling.",
+    "id": 2038,
+    "image": "💕"
+  },
+  {
+    "native": "感謝",
+    "english": "thanks",
+    "phonetic": "かんしゃ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "感謝を例文に使います。",
+    "exampleEnglish": "Example with thanks.",
+    "id": 2039,
+    "image": "🏠"
+  },
+  {
+    "native": "患者",
+    "english": "patient",
+    "phonetic": "かんじゃ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "患者を例文に使います。",
+    "exampleEnglish": "Example with patient.",
+    "id": 2040,
+    "image": "🏠"
+  },
+  {
+    "native": "勘定",
+    "english": "calculation",
+    "phonetic": "かんじょう",
+    "category": "Numbers",
+    "topikLevel": 2,
+    "exampleNative": "勘定を例文に使います。",
+    "exampleEnglish": "Example with calculation.",
+    "id": 2041,
+    "image": "🔢"
+  },
+  {
+    "native": "感情",
+    "english": "emotion(s)",
+    "phonetic": "かんじょう",
+    "category": "Feelings",
+    "topikLevel": 2,
+    "exampleNative": "感情を例文に使います。",
+    "exampleEnglish": "Example with emotion(s).",
+    "id": 2042,
+    "image": "💕"
+  },
+  {
+    "native": "感じる",
+    "english": "to feel",
+    "phonetic": "かんじる",
+    "category": "Feelings",
+    "topikLevel": 2,
+    "exampleNative": "感じるを例文に使います。",
+    "exampleEnglish": "Example with to feel.",
+    "id": 2043,
+    "image": "💕"
+  },
+  {
+    "native": "感心",
+    "english": "admiration",
+    "phonetic": "かんしん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "感心を例文に使います。",
+    "exampleEnglish": "Example with admiration.",
+    "id": 2044,
+    "image": "🏠"
+  },
+  {
+    "native": "関心",
+    "english": "concern",
+    "phonetic": "かんしん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "関心を例文に使います。",
+    "exampleEnglish": "Example with concern.",
+    "id": 2045,
+    "image": "🏠"
+  },
+  {
+    "native": "関する",
+    "english": "to concern",
+    "phonetic": "かんする",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "関するを例文に使います。",
+    "exampleEnglish": "Example with to concern.",
+    "id": 2046,
+    "image": "🏠"
+  },
+  {
+    "native": "完成",
+    "english": "complete",
+    "phonetic": "かんせい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "完成を例文に使います。",
+    "exampleEnglish": "Example with complete.",
+    "id": 2047,
+    "image": "🏠"
+  },
+  {
+    "native": "完全",
+    "english": "perfection",
+    "phonetic": "かんぜん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "完全を例文に使います。",
+    "exampleEnglish": "Example with perfection.",
+    "id": 2048,
+    "image": "🏠"
+  },
+  {
+    "native": "乾燥",
+    "english": "dry",
+    "phonetic": "かんそう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "乾燥を例文に使います。",
+    "exampleEnglish": "Example with dry.",
+    "id": 2049,
+    "image": "🏠"
+  },
+  {
+    "native": "感想",
+    "english": "(one's) impressions",
+    "phonetic": "かんそう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "感想を例文に使います。",
+    "exampleEnglish": "Example with (one's) impressions.",
+    "id": 2050,
+    "image": "🏠"
+  },
+  {
+    "native": "感動",
+    "english": "being deeply moved",
+    "phonetic": "かんどう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "感動を例文に使います。",
+    "exampleEnglish": "Example with being deeply moved.",
+    "id": 2051,
+    "image": "🏠"
+  },
+  {
+    "native": "監督",
+    "english": "supervision",
+    "phonetic": "かんとく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "監督を例文に使います。",
+    "exampleEnglish": "Example with supervision.",
+    "id": 2052,
+    "image": "🏠"
+  },
+  {
+    "native": "管理",
+    "english": "control",
+    "phonetic": "かんり",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "管理を例文に使います。",
+    "exampleEnglish": "Example with control.",
+    "id": 2053,
+    "image": "🚌"
+  },
+  {
+    "native": "完了",
+    "english": "completion",
+    "phonetic": "かんりょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "完了を例文に使います。",
+    "exampleEnglish": "Example with completion.",
+    "id": 2054,
+    "image": "🏠"
+  },
+  {
+    "native": "関連",
+    "english": "relation",
+    "phonetic": "かんれん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "関連を例文に使います。",
+    "exampleEnglish": "Example with relation.",
+    "id": 2055,
+    "image": "🏠"
+  },
+  {
+    "native": "議員",
+    "english": "member of the Diet",
+    "phonetic": "ぎいん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "議員を例文に使います。",
+    "exampleEnglish": "Example with member of the Diet.",
+    "id": 2056,
+    "image": "🏠"
+  },
+  {
+    "native": "記憶",
+    "english": "memory",
+    "phonetic": "きおく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "記憶を例文に使います。",
+    "exampleEnglish": "Example with memory.",
+    "id": 2057,
+    "image": "🏠"
+  },
+  {
+    "native": "気温",
+    "english": "temperature (weather - not used for things)",
+    "phonetic": "きおん",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "気温を例文に使います。",
+    "exampleEnglish": "Example with temperature (weather - not used for things).",
+    "id": 2058,
+    "image": "🍜"
+  },
+  {
+    "native": "機械",
+    "english": "machine",
+    "phonetic": "きかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "機械を例文に使います。",
+    "exampleEnglish": "Example with machine.",
+    "id": 2059,
+    "image": "🏠"
+  },
+  {
+    "native": "器械",
+    "english": "instrument",
+    "phonetic": "きかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "器械を例文に使います。",
+    "exampleEnglish": "Example with instrument.",
+    "id": 2060,
+    "image": "🏠"
+  },
+  {
+    "native": "議会",
+    "english": "Diet",
+    "phonetic": "ぎかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "議会を例文に使います。",
+    "exampleEnglish": "Example with Diet.",
+    "id": 2061,
+    "image": "🏠"
+  },
+  {
+    "native": "期間",
+    "english": "period",
+    "phonetic": "きかん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "期間を例文に使います。",
+    "exampleEnglish": "Example with period.",
+    "id": 2062,
+    "image": "🏠"
+  },
+  {
+    "native": "機関",
+    "english": "engine; institution",
+    "phonetic": "きかん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "機関を例文に使います。",
+    "exampleEnglish": "Example with engine; institution.",
+    "id": 2063,
+    "image": "🏠"
+  },
+  {
+    "native": "企業",
+    "english": "industry",
+    "phonetic": "きぎょう",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "企業を例文に使います。",
+    "exampleEnglish": "Example with industry.",
+    "id": 2064,
+    "image": "🚌"
+  },
+  {
+    "native": "効く",
+    "english": "to be effective",
+    "phonetic": "きく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "効くを例文に使います。",
+    "exampleEnglish": "Example with to be effective.",
+    "id": 2065,
+    "image": "🏠"
+  },
+  {
+    "native": "期限",
+    "english": "deadline",
+    "phonetic": "きげん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "期限を例文に使います。",
+    "exampleEnglish": "Example with deadline.",
+    "id": 2066,
+    "image": "🏠"
+  },
+  {
+    "native": "機嫌",
+    "english": "humor",
+    "phonetic": "きげん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "機嫌を例文に使います。",
+    "exampleEnglish": "Example with humor.",
+    "id": 2067,
+    "image": "🏠"
+  },
+  {
+    "native": "気候",
+    "english": "climate",
+    "phonetic": "きこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "気候を例文に使います。",
+    "exampleEnglish": "Example with climate.",
+    "id": 2068,
+    "image": "🏠"
+  },
+  {
+    "native": "岸",
+    "english": "bank",
+    "phonetic": "きし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "岸を例文に使います。",
+    "exampleEnglish": "Example with bank.",
+    "id": 2069,
+    "image": "🏠"
+  },
+  {
+    "native": "生地",
+    "english": "fabric; dough",
+    "phonetic": "きじ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "生地を例文に使います。",
+    "exampleEnglish": "Example with fabric; dough.",
+    "id": 2070,
+    "image": "🏠"
+  },
+  {
+    "native": "記事",
+    "english": "article",
+    "phonetic": "きじ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "記事を例文に使います。",
+    "exampleEnglish": "Example with article.",
+    "id": 2071,
+    "image": "🏠"
+  },
+  {
+    "native": "技師",
+    "english": "engineer",
+    "phonetic": "ぎし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "技師を例文に使います。",
+    "exampleEnglish": "Example with engineer.",
+    "id": 2072,
+    "image": "🏠"
+  },
+  {
+    "native": "記者",
+    "english": "reporter",
+    "phonetic": "きしゃ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "記者を例文に使います。",
+    "exampleEnglish": "Example with reporter.",
+    "id": 2073,
+    "image": "🏠"
+  },
+  {
+    "native": "傷",
+    "english": "wound",
+    "phonetic": "きず",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "傷を例文に使います。",
+    "exampleEnglish": "Example with wound.",
+    "id": 2074,
+    "image": "🏠"
+  },
+  {
+    "native": "期待",
+    "english": "expectation",
+    "phonetic": "きたい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "期待を例文に使います。",
+    "exampleEnglish": "Example with expectation.",
+    "id": 2075,
+    "image": "🏠"
+  },
+  {
+    "native": "気体",
+    "english": "vapor",
+    "phonetic": "きたい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "気体を例文に使います。",
+    "exampleEnglish": "Example with vapor.",
+    "id": 2076,
+    "image": "🏠"
+  },
+  {
+    "native": "帰宅",
+    "english": "returning home",
+    "phonetic": "きたく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "帰宅を例文に使います。",
+    "exampleEnglish": "Example with returning home.",
+    "id": 2077,
+    "image": "🏠"
+  },
+  {
+    "native": "貴重",
+    "english": "precious",
+    "phonetic": "きちょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "貴重を例文に使います。",
+    "exampleEnglish": "Example with precious.",
+    "id": 2078,
+    "image": "🏠"
+  },
+  {
+    "native": "議長",
+    "english": "chairman",
+    "phonetic": "ぎちょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "議長を例文に使います。",
+    "exampleEnglish": "Example with chairman.",
+    "id": 2079,
+    "image": "🏠"
+  },
+  {
+    "native": "きちんと",
+    "english": "precisely",
+    "phonetic": "きちんと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "きちんとを例文に使います。",
+    "exampleEnglish": "Example with precisely.",
+    "id": 2080,
+    "image": "🏠"
+  },
+  {
+    "native": "きつい",
+    "english": "tight",
+    "phonetic": "きつい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "きついを例文に使います。",
+    "exampleEnglish": "Example with tight.",
+    "id": 2081,
+    "image": "🏠"
+  },
+  {
+    "native": "気付く",
+    "english": "to notice",
+    "phonetic": "きづく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "気付くを例文に使います。",
+    "exampleEnglish": "Example with to notice.",
+    "id": 2082,
+    "image": "🏠"
+  },
+  {
+    "native": "気に入る",
+    "english": "to like",
+    "phonetic": "きにいる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "気に入るを例文に使います。",
+    "exampleEnglish": "Example with to like.",
+    "id": 2083,
+    "image": "🏠"
+  },
+  {
+    "native": "記入",
+    "english": "entry",
+    "phonetic": "きにゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "記入を例文に使います。",
+    "exampleEnglish": "Example with entry.",
+    "id": 2084,
+    "image": "🏠"
+  },
+  {
+    "native": "記念",
+    "english": "commemoration",
+    "phonetic": "きねん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "記念を例文に使います。",
+    "exampleEnglish": "Example with commemoration.",
+    "id": 2085,
+    "image": "🏠"
+  },
+  {
+    "native": "機能",
+    "english": "function",
+    "phonetic": "きのう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "機能を例文に使います。",
+    "exampleEnglish": "Example with function.",
+    "id": 2086,
+    "image": "🏠"
+  },
+  {
+    "native": "気の毒",
+    "english": "pitiful",
+    "phonetic": "きのどく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "気の毒を例文に使います。",
+    "exampleEnglish": "Example with pitiful.",
+    "id": 2087,
+    "image": "🏠"
+  },
+  {
+    "native": "寄付",
+    "english": "contribution",
+    "phonetic": "きふ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "寄付を例文に使います。",
+    "exampleEnglish": "Example with contribution.",
+    "id": 2088,
+    "image": "🏠"
+  },
+  {
+    "native": "希望",
+    "english": "hope",
+    "phonetic": "きぼう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "希望を例文に使います。",
+    "exampleEnglish": "Example with hope.",
+    "id": 2089,
+    "image": "🏠"
+  },
+  {
+    "native": "基本",
+    "english": "basic",
+    "phonetic": "きほん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "基本を例文に使います。",
+    "exampleEnglish": "Example with basic.",
+    "id": 2090,
+    "image": "🏠"
+  },
+  {
+    "native": "決まり",
+    "english": "settlement",
+    "phonetic": "きまり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "決まりを例文に使います。",
+    "exampleEnglish": "Example with settlement.",
+    "id": 2091,
+    "image": "🏠"
+  },
+  {
+    "native": "気味",
+    "english": "-like",
+    "phonetic": "きみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "気味を例文に使います。",
+    "exampleEnglish": "Example with -like.",
+    "id": 2092,
+    "image": "🏠"
+  },
+  {
+    "native": "奇妙",
+    "english": "strange",
+    "phonetic": "きみょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "奇妙を例文に使います。",
+    "exampleEnglish": "Example with strange.",
+    "id": 2093,
+    "image": "🏠"
+  },
+  {
+    "native": "義務",
+    "english": "duty",
+    "phonetic": "ぎむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "義務を例文に使います。",
+    "exampleEnglish": "Example with duty.",
+    "id": 2094,
+    "image": "🏠"
+  },
+  {
+    "native": "疑問",
+    "english": "question",
+    "phonetic": "ぎもん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "疑問を例文に使います。",
+    "exampleEnglish": "Example with question.",
+    "id": 2095,
+    "image": "🏠"
+  },
+  {
+    "native": "逆",
+    "english": "reverse",
+    "phonetic": "ぎゃく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "逆を例文に使います。",
+    "exampleEnglish": "Example with reverse.",
+    "id": 2096,
+    "image": "🏠"
+  },
+  {
+    "native": "キャプテン",
+    "english": "captain",
+    "phonetic": "キャプテン",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "キャプテンを例文に使います。",
+    "exampleEnglish": "Example with captain.",
+    "id": 2097,
+    "image": "🏠"
+  },
+  {
+    "native": "キャンプ",
+    "english": "camp",
+    "phonetic": "キャンプ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "キャンプを例文に使います。",
+    "exampleEnglish": "Example with camp.",
+    "id": 2098,
+    "image": "🏠"
+  },
+  {
+    "native": "旧",
+    "english": "ex-",
+    "phonetic": "きゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "旧を例文に使います。",
+    "exampleEnglish": "Example with ex-.",
+    "id": 2099,
+    "image": "🏠"
+  },
+  {
+    "native": "級",
+    "english": "class",
+    "phonetic": "きゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "級を例文に使います。",
+    "exampleEnglish": "Example with class.",
+    "id": 2100,
+    "image": "🏠"
+  },
+  {
+    "native": "球",
+    "english": "globe",
+    "phonetic": "きゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "球を例文に使います。",
+    "exampleEnglish": "Example with globe.",
+    "id": 2101,
+    "image": "🏠"
+  },
+  {
+    "native": "休暇",
+    "english": "vacation",
+    "phonetic": "きゅうか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "休暇を例文に使います。",
+    "exampleEnglish": "Example with vacation.",
+    "id": 2102,
+    "image": "🏠"
+  },
+  {
+    "native": "休憩",
+    "english": "rest",
+    "phonetic": "きゅうけい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "休憩を例文に使います。",
+    "exampleEnglish": "Example with rest.",
+    "id": 2103,
+    "image": "🏠"
+  },
+  {
+    "native": "急激",
+    "english": "sudden",
+    "phonetic": "きゅうげき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "急激を例文に使います。",
+    "exampleEnglish": "Example with sudden.",
+    "id": 2104,
+    "image": "🏠"
+  },
+  {
+    "native": "吸収",
+    "english": "absorption",
+    "phonetic": "きゅうしゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "吸収を例文に使います。",
+    "exampleEnglish": "Example with absorption.",
+    "id": 2105,
+    "image": "🏠"
+  },
+  {
+    "native": "救助",
+    "english": "relief",
+    "phonetic": "きゅうじょ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "救助を例文に使います。",
+    "exampleEnglish": "Example with relief.",
+    "id": 2106,
+    "image": "🏠"
+  },
+  {
+    "native": "急速",
+    "english": "rapid (e.g.",
+    "phonetic": "きゅうそく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "急速を例文に使います。",
+    "exampleEnglish": "Example with rapid (e.g..",
+    "id": 2107,
+    "image": "🏠"
+  },
+  {
+    "native": "休息",
+    "english": "rest",
+    "phonetic": "きゅうそく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "休息を例文に使います。",
+    "exampleEnglish": "Example with rest.",
+    "id": 2108,
+    "image": "🏠"
+  },
+  {
+    "native": "急に",
+    "english": "suddenly",
+    "phonetic": "きゅうに",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "急にを例文に使います。",
+    "exampleEnglish": "Example with suddenly.",
+    "id": 2109,
+    "image": "🏠"
+  },
+  {
+    "native": "給料",
+    "english": "salary",
+    "phonetic": "きゅうりょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "給料を例文に使います。",
+    "exampleEnglish": "Example with salary.",
+    "id": 2110,
+    "image": "🏠"
+  },
+  {
+    "native": "器用",
+    "english": "skillful",
+    "phonetic": "きよう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "器用を例文に使います。",
+    "exampleEnglish": "Example with skillful.",
+    "id": 2111,
+    "image": "🏠"
+  },
+  {
+    "native": "教科書",
+    "english": "textbook",
+    "phonetic": "きょうかしょ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "教科書を例文に使います。",
+    "exampleEnglish": "Example with textbook.",
+    "id": 2112,
+    "image": "🏠"
+  },
+  {
+    "native": "競技",
+    "english": "game",
+    "phonetic": "きょうぎ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "競技を例文に使います。",
+    "exampleEnglish": "Example with game.",
+    "id": 2113,
+    "image": "🏠"
+  },
+  {
+    "native": "行儀",
+    "english": "manners",
+    "phonetic": "ぎょうぎ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "行儀を例文に使います。",
+    "exampleEnglish": "Example with manners.",
+    "id": 2114,
+    "image": "🏠"
+  },
+  {
+    "native": "供給",
+    "english": "supply",
+    "phonetic": "きょうきゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "供給を例文に使います。",
+    "exampleEnglish": "Example with supply.",
+    "id": 2115,
+    "image": "🏠"
+  },
+  {
+    "native": "教授",
+    "english": "teaching",
+    "phonetic": "きょうじゅ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "教授を例文に使います。",
+    "exampleEnglish": "Example with teaching.",
+    "id": 2116,
+    "image": "🏠"
+  },
+  {
+    "native": "強調",
+    "english": "emphasis",
+    "phonetic": "きょうちょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "強調を例文に使います。",
+    "exampleEnglish": "Example with emphasis.",
+    "id": 2117,
+    "image": "🏠"
+  },
+  {
+    "native": "共通",
+    "english": "commonness",
+    "phonetic": "きょうつう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "共通を例文に使います。",
+    "exampleEnglish": "Example with commonness.",
+    "id": 2118,
+    "image": "🏠"
+  },
+  {
+    "native": "共同",
+    "english": "cooperation",
+    "phonetic": "きょうどう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "共同を例文に使います。",
+    "exampleEnglish": "Example with cooperation.",
+    "id": 2119,
+    "image": "🏠"
+  },
+  {
+    "native": "恐怖",
+    "english": "fear",
+    "phonetic": "きょうふ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "恐怖を例文に使います。",
+    "exampleEnglish": "Example with fear.",
+    "id": 2120,
+    "image": "🏠"
+  },
+  {
+    "native": "協力",
+    "english": "cooperation",
+    "phonetic": "きょうりょく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "協力を例文に使います。",
+    "exampleEnglish": "Example with cooperation.",
+    "id": 2121,
+    "image": "🏠"
+  },
+  {
+    "native": "強力",
+    "english": "powerful",
+    "phonetic": "きょうりょく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "強力を例文に使います。",
+    "exampleEnglish": "Example with powerful.",
+    "id": 2122,
+    "image": "🏠"
+  },
+  {
+    "native": "許可",
+    "english": "permission",
+    "phonetic": "きょか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "許可を例文に使います。",
+    "exampleEnglish": "Example with permission.",
+    "id": 2123,
+    "image": "🏠"
+  },
+  {
+    "native": "局",
+    "english": "office",
+    "phonetic": "きょく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "局を例文に使います。",
+    "exampleEnglish": "Example with office.",
+    "id": 2124,
+    "image": "🏠"
+  },
+  {
+    "native": "巨大",
+    "english": "huge",
+    "phonetic": "きょだい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "巨大を例文に使います。",
+    "exampleEnglish": "Example with huge.",
+    "id": 2125,
+    "image": "🏠"
+  },
+  {
+    "native": "嫌う",
+    "english": "to hate",
+    "phonetic": "きらう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "嫌うを例文に使います。",
+    "exampleEnglish": "Example with to hate.",
+    "id": 2126,
+    "image": "🏠"
+  },
+  {
+    "native": "霧",
+    "english": "fog",
+    "phonetic": "きり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "霧を例文に使います。",
+    "exampleEnglish": "Example with fog.",
+    "id": 2127,
+    "image": "🏠"
+  },
+  {
+    "native": "切れ",
+    "english": "cloth",
+    "phonetic": "きれ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "切れを例文に使います。",
+    "exampleEnglish": "Example with cloth.",
+    "id": 2128,
+    "image": "🏠"
+  },
+  {
+    "native": "切れる",
+    "english": "to cut well",
+    "phonetic": "きれる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "切れるを例文に使います。",
+    "exampleEnglish": "Example with to cut well.",
+    "id": 2129,
+    "image": "🏠"
+  },
+  {
+    "native": "記録",
+    "english": "record",
+    "phonetic": "きろく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "記録を例文に使います。",
+    "exampleEnglish": "Example with record.",
+    "id": 2130,
+    "image": "🏠"
+  },
+  {
+    "native": "議論",
+    "english": "argument",
+    "phonetic": "ぎろん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "議論を例文に使います。",
+    "exampleEnglish": "Example with argument.",
+    "id": 2131,
+    "image": "🏠"
+  },
+  {
+    "native": "銀",
+    "english": "silver",
+    "phonetic": "ぎん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "銀を例文に使います。",
+    "exampleEnglish": "Example with silver.",
+    "id": 2132,
+    "image": "🏠"
+  },
+  {
+    "native": "禁煙",
+    "english": "No Smoking",
+    "phonetic": "きんえん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "禁煙を例文に使います。",
+    "exampleEnglish": "Example with No Smoking.",
+    "id": 2133,
+    "image": "🏠"
+  },
+  {
+    "native": "金額",
+    "english": "amount of money",
+    "phonetic": "きんがく",
+    "category": "Shopping",
+    "topikLevel": 2,
+    "exampleNative": "金額を例文に使います。",
+    "exampleEnglish": "Example with amount of money.",
+    "id": 2134,
+    "image": "🛍️"
+  },
+  {
+    "native": "金庫",
+    "english": "safe",
+    "phonetic": "きんこ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "金庫を例文に使います。",
+    "exampleEnglish": "Example with safe.",
+    "id": 2135,
+    "image": "🏠"
+  },
+  {
+    "native": "禁止",
+    "english": "prohibition",
+    "phonetic": "きんし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "禁止を例文に使います。",
+    "exampleEnglish": "Example with prohibition.",
+    "id": 2136,
+    "image": "🏠"
+  },
+  {
+    "native": "金銭",
+    "english": "money",
+    "phonetic": "きんせん",
+    "category": "Shopping",
+    "topikLevel": 2,
+    "exampleNative": "金銭を例文に使います。",
+    "exampleEnglish": "Example with money.",
+    "id": 2137,
+    "image": "🛍️"
+  },
+  {
+    "native": "金属",
+    "english": "metal",
+    "phonetic": "きんぞく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "金属を例文に使います。",
+    "exampleEnglish": "Example with metal.",
+    "id": 2138,
+    "image": "🏠"
+  },
+  {
+    "native": "近代",
+    "english": "modern times",
+    "phonetic": "きんだい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "近代を例文に使います。",
+    "exampleEnglish": "Example with modern times.",
+    "id": 2139,
+    "image": "🏠"
+  },
+  {
+    "native": "緊張",
+    "english": "tension",
+    "phonetic": "きんちょう",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "緊張を例文に使います。",
+    "exampleEnglish": "Example with tension.",
+    "id": 2140,
+    "image": "🚌"
+  },
+  {
+    "native": "筋肉",
+    "english": "muscle",
+    "phonetic": "きんにく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "筋肉を例文に使います。",
+    "exampleEnglish": "Example with muscle.",
+    "id": 2141,
+    "image": "🏠"
+  },
+  {
+    "native": "金融",
+    "english": "finance",
+    "phonetic": "きんゆう",
+    "category": "Shopping",
+    "topikLevel": 2,
+    "exampleNative": "金融を例文に使います。",
+    "exampleEnglish": "Example with finance.",
+    "id": 2142,
+    "image": "🛍️"
+  },
+  {
+    "native": "句",
+    "english": "phrase",
+    "phonetic": "く",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "句を例文に使います。",
+    "exampleEnglish": "Example with phrase.",
+    "id": 2143,
+    "image": "🏠"
+  },
+  {
+    "native": "食う",
+    "english": "(male) (vulg.) to eat",
+    "phonetic": "くう",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "食うを例文に使います。",
+    "exampleEnglish": "Example with (male) (vulg.) to eat.",
+    "id": 2144,
+    "image": "🍜"
+  },
+  {
+    "native": "偶然",
+    "english": "(by) chance",
+    "phonetic": "ぐうぜん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "偶然を例文に使います。",
+    "exampleEnglish": "Example with (by) chance.",
+    "id": 2145,
+    "image": "🏠"
+  },
+  {
+    "native": "臭い",
+    "english": "stinky",
+    "phonetic": "くさい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "臭いを例文に使います。",
+    "exampleEnglish": "Example with stinky.",
+    "id": 2146,
+    "image": "🏠"
+  },
+  {
+    "native": "鎖",
+    "english": "chain",
+    "phonetic": "くさり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "鎖を例文に使います。",
+    "exampleEnglish": "Example with chain.",
+    "id": 2147,
+    "image": "🏠"
+  },
+  {
+    "native": "腐る",
+    "english": "to rot",
+    "phonetic": "くさる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "腐るを例文に使います。",
+    "exampleEnglish": "Example with to rot.",
+    "id": 2148,
+    "image": "🏠"
+  },
+  {
+    "native": "癖",
+    "english": "a habit (often a bad habit)",
+    "phonetic": "くせ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "癖を例文に使います。",
+    "exampleEnglish": "Example with a habit (often a bad habit).",
+    "id": 2149,
+    "image": "🏠"
+  },
+  {
+    "native": "管",
+    "english": "pipe",
+    "phonetic": "くだ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "管を例文に使います。",
+    "exampleEnglish": "Example with pipe.",
+    "id": 2150,
+    "image": "🏠"
+  },
+  {
+    "native": "具体",
+    "english": "concrete",
+    "phonetic": "ぐたい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "具体を例文に使います。",
+    "exampleEnglish": "Example with concrete.",
+    "id": 2151,
+    "image": "🏠"
+  },
+  {
+    "native": "下り",
+    "english": "down-train (going away from Tokyo)",
+    "phonetic": "くだり",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "下りを例文に使います。",
+    "exampleEnglish": "Example with down-train (going away from Tokyo).",
+    "id": 2152,
+    "image": "🚌"
+  },
+  {
+    "native": "苦痛",
+    "english": "pain",
+    "phonetic": "くつう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "苦痛を例文に使います。",
+    "exampleEnglish": "Example with pain.",
+    "id": 2153,
+    "image": "🏠"
+  },
+  {
+    "native": "ぐっすり",
+    "english": "sound asleep",
+    "phonetic": "ぐっすり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ぐっすりを例文に使います。",
+    "exampleEnglish": "Example with sound asleep.",
+    "id": 2154,
+    "image": "🏠"
+  },
+  {
+    "native": "区別",
+    "english": "distinction",
+    "phonetic": "くべつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "区別を例文に使います。",
+    "exampleEnglish": "Example with distinction.",
+    "id": 2155,
+    "image": "🏠"
+  },
+  {
+    "native": "組",
+    "english": "class",
+    "phonetic": "くみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "組を例文に使います。",
+    "exampleEnglish": "Example with class.",
+    "id": 2156,
+    "image": "🏠"
+  },
+  {
+    "native": "組合",
+    "english": "association",
+    "phonetic": "くみあい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "組合を例文に使います。",
+    "exampleEnglish": "Example with association.",
+    "id": 2157,
+    "image": "🏠"
+  },
+  {
+    "native": "組む",
+    "english": "to put together",
+    "phonetic": "くむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "組むを例文に使います。",
+    "exampleEnglish": "Example with to put together.",
+    "id": 2158,
+    "image": "🏠"
+  },
+  {
+    "native": "汲む",
+    "english": "to draw",
+    "phonetic": "くむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "汲むを例文に使います。",
+    "exampleEnglish": "Example with to draw.",
+    "id": 2159,
+    "image": "🏠"
+  },
+  {
+    "native": "酌む",
+    "english": "to serve sake",
+    "phonetic": "くむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "酌むを例文に使います。",
+    "exampleEnglish": "Example with to serve sake.",
+    "id": 2160,
+    "image": "🏠"
+  },
+  {
+    "native": "悔しい",
+    "english": "regrettable",
+    "phonetic": "くやしい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "悔しいを例文に使います。",
+    "exampleEnglish": "Example with regrettable.",
+    "id": 2161,
+    "image": "🏠"
+  },
+  {
+    "native": "位",
+    "english": "grade",
+    "phonetic": "くらい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "位を例文に使います。",
+    "exampleEnglish": "Example with grade.",
+    "id": 2162,
+    "image": "🏠"
+  },
+  {
+    "native": "暮らし",
+    "english": "living; life style",
+    "phonetic": "くらし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "暮らしを例文に使います。",
+    "exampleEnglish": "Example with living; life style.",
+    "id": 2163,
+    "image": "🏠"
+  },
+  {
+    "native": "クラシック",
+    "english": "classic(s)",
+    "phonetic": "クラシック",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "クラシックを例文に使います。",
+    "exampleEnglish": "Example with classic(s).",
+    "id": 2164,
+    "image": "🏠"
+  },
+  {
+    "native": "暮らす",
+    "english": "to live",
+    "phonetic": "くらす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "暮らすを例文に使います。",
+    "exampleEnglish": "Example with to live.",
+    "id": 2165,
+    "image": "🏠"
+  },
+  {
+    "native": "グラス",
+    "english": "glass; grass",
+    "phonetic": "グラス",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "グラスを例文に使います。",
+    "exampleEnglish": "Example with glass; grass.",
+    "id": 2166,
+    "image": "🏠"
+  },
+  {
+    "native": "グランド",
+    "english": "gland",
+    "phonetic": "グランド",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "グランドを例文に使います。",
+    "exampleEnglish": "Example with gland.",
+    "id": 2167,
+    "image": "🏠"
+  },
+  {
+    "native": "クリーム",
+    "english": "cream",
+    "phonetic": "クリーム",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "クリームを例文に使います。",
+    "exampleEnglish": "Example with cream.",
+    "id": 2168,
+    "image": "🏠"
+  },
+  {
+    "native": "繰り返す",
+    "english": "to repeat",
+    "phonetic": "くりかえす",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "繰り返すを例文に使います。",
+    "exampleEnglish": "Example with to repeat.",
+    "id": 2169,
+    "image": "🍜"
+  },
+  {
+    "native": "クリスマス",
+    "english": "Christmas",
+    "phonetic": "クリスマス",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "クリスマスを例文に使います。",
+    "exampleEnglish": "Example with Christmas.",
+    "id": 2170,
+    "image": "🏠"
+  },
+  {
+    "native": "狂う",
+    "english": "to go mad",
+    "phonetic": "くるう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "狂うを例文に使います。",
+    "exampleEnglish": "Example with to go mad.",
+    "id": 2171,
+    "image": "🏠"
+  },
+  {
+    "native": "グループ",
+    "english": "group",
+    "phonetic": "グループ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "グループを例文に使います。",
+    "exampleEnglish": "Example with group.",
+    "id": 2172,
+    "image": "🏠"
+  },
+  {
+    "native": "苦しい",
+    "english": "tough; physically strenuous",
+    "phonetic": "くるしい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "苦しいを例文に使います。",
+    "exampleEnglish": "Example with tough; physically strenuous.",
+    "id": 2173,
+    "image": "🏠"
+  },
+  {
+    "native": "苦しむ",
+    "english": "to suffer",
+    "phonetic": "くるしむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "苦しむを例文に使います。",
+    "exampleEnglish": "Example with to suffer.",
+    "id": 2174,
+    "image": "🏠"
+  },
+  {
+    "native": "暮れ",
+    "english": "year end",
+    "phonetic": "くれ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "暮れを例文に使います。",
+    "exampleEnglish": "Example with year end.",
+    "id": 2175,
+    "image": "🏠"
+  },
+  {
+    "native": "苦労",
+    "english": "hardship; suffering",
+    "phonetic": "くろう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "苦労を例文に使います。",
+    "exampleEnglish": "Example with hardship; suffering.",
+    "id": 2176,
+    "image": "🏠"
+  },
+  {
+    "native": "加える",
+    "english": "to append",
+    "phonetic": "くわえる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "加えるを例文に使います。",
+    "exampleEnglish": "Example with to append.",
+    "id": 2177,
+    "image": "🏠"
+  },
+  {
+    "native": "咥える",
+    "english": "to hold something in the mouth",
+    "phonetic": "くわえる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "咥えるを例文に使います。",
+    "exampleEnglish": "Example with to hold something in the mouth.",
+    "id": 2178,
+    "image": "🏠"
+  },
+  {
+    "native": "詳しい",
+    "english": "detailed; full; accurate",
+    "phonetic": "くわしい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "詳しいを例文に使います。",
+    "exampleEnglish": "Example with detailed; full; accurate.",
+    "id": 2179,
+    "image": "🏠"
+  },
+  {
+    "native": "加わる",
+    "english": "to join in",
+    "phonetic": "くわわる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "加わるを例文に使います。",
+    "exampleEnglish": "Example with to join in.",
+    "id": 2180,
+    "image": "🏠"
+  },
+  {
+    "native": "訓",
+    "english": "native Japanese reading of a Chinese character",
+    "phonetic": "くん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "訓を例文に使います。",
+    "exampleEnglish": "Example with native Japanese reading of a Chinese character.",
+    "id": 2181,
+    "image": "🏠"
+  },
+  {
+    "native": "軍",
+    "english": "army",
+    "phonetic": "ぐん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "軍を例文に使います。",
+    "exampleEnglish": "Example with army.",
+    "id": 2182,
+    "image": "🏠"
+  },
+  {
+    "native": "郡",
+    "english": "country",
+    "phonetic": "ぐん",
+    "category": "Numbers",
+    "topikLevel": 2,
+    "exampleNative": "郡を例文に使います。",
+    "exampleEnglish": "Example with country.",
+    "id": 2183,
+    "image": "🔢"
+  },
+  {
+    "native": "軍隊",
+    "english": "army",
+    "phonetic": "ぐんたい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "軍隊を例文に使います。",
+    "exampleEnglish": "Example with army.",
+    "id": 2184,
+    "image": "🏠"
+  },
+  {
+    "native": "訓練",
+    "english": "practice",
+    "phonetic": "くんれん",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "訓練を例文に使います。",
+    "exampleEnglish": "Example with practice.",
+    "id": 2185,
+    "image": "🚌"
+  },
+  {
+    "native": "計",
+    "english": "plan; sum",
+    "phonetic": "けい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "計を例文に使います。",
+    "exampleEnglish": "Example with plan; sum.",
+    "id": 2186,
+    "image": "🏠"
+  },
+  {
+    "native": "敬意",
+    "english": "respect",
+    "phonetic": "けいい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "敬意を例文に使います。",
+    "exampleEnglish": "Example with respect.",
+    "id": 2187,
+    "image": "🏠"
+  },
+  {
+    "native": "経営",
+    "english": "management",
+    "phonetic": "けいえい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "経営を例文に使います。",
+    "exampleEnglish": "Example with management.",
+    "id": 2188,
+    "image": "🏠"
+  },
+  {
+    "native": "景気",
+    "english": "condition",
+    "phonetic": "けいき",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "景気を例文に使います。",
+    "exampleEnglish": "Example with condition.",
+    "id": 2189,
+    "image": "🚌"
+  },
+  {
+    "native": "傾向",
+    "english": "tendency",
+    "phonetic": "けいこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "傾向を例文に使います。",
+    "exampleEnglish": "Example with tendency.",
+    "id": 2190,
+    "image": "🏠"
+  },
+  {
+    "native": "警告",
+    "english": "warning",
+    "phonetic": "けいこく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "警告を例文に使います。",
+    "exampleEnglish": "Example with warning.",
+    "id": 2191,
+    "image": "🏠"
+  },
+  {
+    "native": "計算",
+    "english": "calculation",
+    "phonetic": "けいさん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "計算を例文に使います。",
+    "exampleEnglish": "Example with calculation.",
+    "id": 2192,
+    "image": "🏠"
+  },
+  {
+    "native": "掲示",
+    "english": "notice",
+    "phonetic": "けいじ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "掲示を例文に使います。",
+    "exampleEnglish": "Example with notice.",
+    "id": 2193,
+    "image": "🏠"
+  },
+  {
+    "native": "刑事",
+    "english": "criminal case",
+    "phonetic": "けいじ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "刑事を例文に使います。",
+    "exampleEnglish": "Example with criminal case.",
+    "id": 2194,
+    "image": "🏠"
+  },
+  {
+    "native": "芸術",
+    "english": "(fine) art",
+    "phonetic": "げいじゅつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "芸術を例文に使います。",
+    "exampleEnglish": "Example with (fine) art.",
+    "id": 2195,
+    "image": "🏠"
+  },
+  {
+    "native": "契約",
+    "english": "contract",
+    "phonetic": "けいやく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "契約を例文に使います。",
+    "exampleEnglish": "Example with contract.",
+    "id": 2196,
+    "image": "🏠"
+  },
+  {
+    "native": "経由",
+    "english": "go by the way",
+    "phonetic": "けいゆ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "経由を例文に使います。",
+    "exampleEnglish": "Example with go by the way.",
+    "id": 2197,
+    "image": "🏠"
+  },
+  {
+    "native": "ケース",
+    "english": "case",
+    "phonetic": "ケース",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ケースを例文に使います。",
+    "exampleEnglish": "Example with case.",
+    "id": 2198,
+    "image": "🏠"
+  },
+  {
+    "native": "ゲーム",
+    "english": "game",
+    "phonetic": "ゲーム",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ゲームを例文に使います。",
+    "exampleEnglish": "Example with game.",
+    "id": 2199,
+    "image": "🏠"
+  },
+  {
+    "native": "劇",
+    "english": "drama",
+    "phonetic": "げき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "劇を例文に使います。",
+    "exampleEnglish": "Example with drama.",
+    "id": 2200,
+    "image": "🏠"
+  },
+  {
+    "native": "劇場",
+    "english": "theater",
+    "phonetic": "げきじょう",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "劇場を例文に使います。",
+    "exampleEnglish": "Example with theater.",
+    "id": 2201,
+    "image": "🍜"
+  },
+  {
+    "native": "化粧",
+    "english": "make-up (cosmetic)",
+    "phonetic": "けしょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "化粧を例文に使います。",
+    "exampleEnglish": "Example with make-up (cosmetic).",
+    "id": 2202,
+    "image": "🏠"
+  },
+  {
+    "native": "けち",
+    "english": "stinginess",
+    "phonetic": "けち",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "けちを例文に使います。",
+    "exampleEnglish": "Example with stinginess.",
+    "id": 2203,
+    "image": "🏠"
+  },
+  {
+    "native": "血液",
+    "english": "blood",
+    "phonetic": "けつえき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "血液を例文に使います。",
+    "exampleEnglish": "Example with blood.",
+    "id": 2204,
+    "image": "🏠"
+  },
+  {
+    "native": "結果",
+    "english": "result",
+    "phonetic": "けっか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "結果を例文に使います。",
+    "exampleEnglish": "Example with result.",
+    "id": 2205,
+    "image": "🏠"
+  },
+  {
+    "native": "欠陥",
+    "english": "defect",
+    "phonetic": "けっかん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "欠陥を例文に使います。",
+    "exampleEnglish": "Example with defect.",
+    "id": 2206,
+    "image": "🏠"
+  },
+  {
+    "native": "結局",
+    "english": "after all",
+    "phonetic": "けっきょく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "結局を例文に使います。",
+    "exampleEnglish": "Example with after all.",
+    "id": 2207,
+    "image": "🏠"
+  },
+  {
+    "native": "決心",
+    "english": "determination",
+    "phonetic": "けっしん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "決心を例文に使います。",
+    "exampleEnglish": "Example with determination.",
+    "id": 2208,
+    "image": "🏠"
+  },
+  {
+    "native": "欠席",
+    "english": "absence",
+    "phonetic": "けっせき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "欠席を例文に使います。",
+    "exampleEnglish": "Example with absence.",
+    "id": 2209,
+    "image": "🏠"
+  },
+  {
+    "native": "決定",
+    "english": "decision",
+    "phonetic": "けってい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "決定を例文に使います。",
+    "exampleEnglish": "Example with decision.",
+    "id": 2210,
+    "image": "🏠"
+  },
+  {
+    "native": "欠点",
+    "english": "faults",
+    "phonetic": "けってん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "欠点を例文に使います。",
+    "exampleEnglish": "Example with faults.",
+    "id": 2211,
+    "image": "🏠"
+  },
+  {
+    "native": "結論",
+    "english": "conclusion",
+    "phonetic": "けつろん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "結論を例文に使います。",
+    "exampleEnglish": "Example with conclusion.",
+    "id": 2212,
+    "image": "🏠"
+  },
+  {
+    "native": "煙",
+    "english": "smoke",
+    "phonetic": "けむり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "煙を例文に使います。",
+    "exampleEnglish": "Example with smoke.",
+    "id": 2213,
+    "image": "🏠"
+  },
+  {
+    "native": "蹴る",
+    "english": "to kick",
+    "phonetic": "ける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "蹴るを例文に使います。",
+    "exampleEnglish": "Example with to kick.",
+    "id": 2214,
+    "image": "🏠"
+  },
+  {
+    "native": "券",
+    "english": "ticket",
+    "phonetic": "けん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "券を例文に使います。",
+    "exampleEnglish": "Example with ticket.",
+    "id": 2215,
+    "image": "🏠"
+  },
+  {
+    "native": "県",
+    "english": "prefecture",
+    "phonetic": "けん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "県を例文に使います。",
+    "exampleEnglish": "Example with prefecture.",
+    "id": 2216,
+    "image": "🏠"
+  },
+  {
+    "native": "見解",
+    "english": "opinion",
+    "phonetic": "けんかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "見解を例文に使います。",
+    "exampleEnglish": "Example with opinion.",
+    "id": 2217,
+    "image": "🏠"
+  },
+  {
+    "native": "限界",
+    "english": "limit",
+    "phonetic": "げんかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "限界を例文に使います。",
+    "exampleEnglish": "Example with limit.",
+    "id": 2218,
+    "image": "🏠"
+  },
+  {
+    "native": "現金",
+    "english": "cash",
+    "phonetic": "げんきん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "現金を例文に使います。",
+    "exampleEnglish": "Example with cash.",
+    "id": 2219,
+    "image": "🏠"
+  },
+  {
+    "native": "言語",
+    "english": "language",
+    "phonetic": "げんご",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "言語を例文に使います。",
+    "exampleEnglish": "Example with language.",
+    "id": 2220,
+    "image": "🏠"
+  },
+  {
+    "native": "健康",
+    "english": "health(y)",
+    "phonetic": "けんこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "健康を例文に使います。",
+    "exampleEnglish": "Example with health(y).",
+    "id": 2221,
+    "image": "🏠"
+  },
+  {
+    "native": "検査",
+    "english": "inspection",
+    "phonetic": "けんさ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "検査を例文に使います。",
+    "exampleEnglish": "Example with inspection.",
+    "id": 2222,
+    "image": "🏠"
+  },
+  {
+    "native": "現在",
+    "english": "now (same as 今 (いま))",
+    "phonetic": "げんざい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "現在を例文に使います。",
+    "exampleEnglish": "Example with now (same as 今 (いま)).",
+    "id": 2223,
+    "image": "🏠"
+  },
+  {
+    "native": "現実",
+    "english": "reality",
+    "phonetic": "げんじつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "現実を例文に使います。",
+    "exampleEnglish": "Example with reality.",
+    "id": 2224,
+    "image": "🏠"
+  },
+  {
+    "native": "現象",
+    "english": "phenomenon",
+    "phonetic": "げんしょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "現象を例文に使います。",
+    "exampleEnglish": "Example with phenomenon.",
+    "id": 2225,
+    "image": "🏠"
+  },
+  {
+    "native": "現状",
+    "english": "present condition",
+    "phonetic": "げんじょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "現状を例文に使います。",
+    "exampleEnglish": "Example with present condition.",
+    "id": 2226,
+    "image": "🏠"
+  },
+  {
+    "native": "建設",
+    "english": "construction",
+    "phonetic": "けんせつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "建設を例文に使います。",
+    "exampleEnglish": "Example with construction.",
+    "id": 2227,
+    "image": "🏠"
+  },
+  {
+    "native": "現代",
+    "english": "today",
+    "phonetic": "げんだい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "現代を例文に使います。",
+    "exampleEnglish": "Example with today.",
+    "id": 2228,
+    "image": "🏠"
+  },
+  {
+    "native": "建築",
+    "english": "construction",
+    "phonetic": "けんちく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "建築を例文に使います。",
+    "exampleEnglish": "Example with construction.",
+    "id": 2229,
+    "image": "🏠"
+  },
+  {
+    "native": "見当",
+    "english": "estimate",
+    "phonetic": "けんとう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "見当を例文に使います。",
+    "exampleEnglish": "Example with estimate.",
+    "id": 2230,
+    "image": "🏠"
+  },
+  {
+    "native": "検討",
+    "english": "consideration",
+    "phonetic": "けんとう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "検討を例文に使います。",
+    "exampleEnglish": "Example with consideration.",
+    "id": 2231,
+    "image": "🏠"
+  },
+  {
+    "native": "現場",
+    "english": "actual spot",
+    "phonetic": "げんば",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "現場を例文に使います。",
+    "exampleEnglish": "Example with actual spot.",
+    "id": 2232,
+    "image": "🏠"
+  },
+  {
+    "native": "憲法",
+    "english": "constitution",
+    "phonetic": "けんぽう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "憲法を例文に使います。",
+    "exampleEnglish": "Example with constitution.",
+    "id": 2233,
+    "image": "🏠"
+  },
+  {
+    "native": "権利",
+    "english": "right",
+    "phonetic": "けんり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "権利を例文に使います。",
+    "exampleEnglish": "Example with right.",
+    "id": 2234,
+    "image": "🏠"
+  },
+  {
+    "native": "碁",
+    "english": "Go (board game of capturing territory)",
+    "phonetic": "ご",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "碁を例文に使います。",
+    "exampleEnglish": "Example with Go (board game of capturing territory).",
+    "id": 2235,
+    "image": "🏠"
+  },
+  {
+    "native": "恋",
+    "english": "love",
+    "phonetic": "こい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "恋を例文に使います。",
+    "exampleEnglish": "Example with love.",
+    "id": 2236,
+    "image": "🏠"
+  },
+  {
+    "native": "濃い",
+    "english": "thick (as of color",
+    "phonetic": "こい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "濃いを例文に使います。",
+    "exampleEnglish": "Example with thick (as of color.",
+    "id": 2237,
+    "image": "🏠"
+  },
+  {
+    "native": "恋人",
+    "english": "lover; sweetheart; girlfriend",
+    "phonetic": "こいびと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "恋人を例文に使います。",
+    "exampleEnglish": "Example with lover; sweetheart; girlfriend.",
+    "id": 2238,
+    "image": "🏠"
+  },
+  {
+    "native": "幸運",
+    "english": "good luck",
+    "phonetic": "こううん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "幸運を例文に使います。",
+    "exampleEnglish": "Example with good luck.",
+    "id": 2239,
+    "image": "🏠"
+  },
+  {
+    "native": "講演",
+    "english": "lecture",
+    "phonetic": "こうえん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "講演を例文に使います。",
+    "exampleEnglish": "Example with lecture.",
+    "id": 2240,
+    "image": "🏠"
+  },
+  {
+    "native": "効果",
+    "english": "effect",
+    "phonetic": "こうか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "効果を例文に使います。",
+    "exampleEnglish": "Example with effect.",
+    "id": 2241,
+    "image": "🏠"
+  },
+  {
+    "native": "硬貨",
+    "english": "coin",
+    "phonetic": "こうか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "硬貨を例文に使います。",
+    "exampleEnglish": "Example with coin.",
+    "id": 2242,
+    "image": "🏠"
+  },
+  {
+    "native": "高価",
+    "english": "high price",
+    "phonetic": "こうか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "高価を例文に使います。",
+    "exampleEnglish": "Example with high price.",
+    "id": 2243,
+    "image": "🏠"
+  },
+  {
+    "native": "豪華",
+    "english": "luxurious",
+    "phonetic": "ごうか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "豪華を例文に使います。",
+    "exampleEnglish": "Example with luxurious.",
+    "id": 2244,
+    "image": "🏠"
+  },
+  {
+    "native": "合格",
+    "english": "success",
+    "phonetic": "ごうかく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "合格を例文に使います。",
+    "exampleEnglish": "Example with success.",
+    "id": 2245,
+    "image": "🏠"
+  },
+  {
+    "native": "交換",
+    "english": "exchange",
+    "phonetic": "こうかん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "交換を例文に使います。",
+    "exampleEnglish": "Example with exchange.",
+    "id": 2246,
+    "image": "🏠"
+  },
+  {
+    "native": "航空",
+    "english": "aviation",
+    "phonetic": "こうくう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "航空を例文に使います。",
+    "exampleEnglish": "Example with aviation.",
+    "id": 2247,
+    "image": "🏠"
+  },
+  {
+    "native": "光景",
+    "english": "scene",
+    "phonetic": "こうけい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "光景を例文に使います。",
+    "exampleEnglish": "Example with scene.",
+    "id": 2248,
+    "image": "🏠"
+  },
+  {
+    "native": "合計",
+    "english": "sum total",
+    "phonetic": "ごうけい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "合計を例文に使います。",
+    "exampleEnglish": "Example with sum total.",
+    "id": 2249,
+    "image": "🏠"
+  },
+  {
+    "native": "攻撃",
+    "english": "attack",
+    "phonetic": "こうげき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "攻撃を例文に使います。",
+    "exampleEnglish": "Example with attack.",
+    "id": 2250,
+    "image": "🏠"
+  },
+  {
+    "native": "貢献",
+    "english": "contribution",
+    "phonetic": "こうけん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "貢献を例文に使います。",
+    "exampleEnglish": "Example with contribution.",
+    "id": 2251,
+    "image": "🏠"
+  },
+  {
+    "native": "広告",
+    "english": "advertisement",
+    "phonetic": "こうこく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "広告を例文に使います。",
+    "exampleEnglish": "Example with advertisement.",
+    "id": 2252,
+    "image": "🏠"
+  },
+  {
+    "native": "交際",
+    "english": "friendship",
+    "phonetic": "こうさい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "交際を例文に使います。",
+    "exampleEnglish": "Example with friendship.",
+    "id": 2253,
+    "image": "🏠"
+  },
+  {
+    "native": "校舎",
+    "english": "school building",
+    "phonetic": "こうしゃ",
+    "category": "Study & Work",
+    "topikLevel": 2,
+    "exampleNative": "校舎を例文に使います。",
+    "exampleEnglish": "Example with school building.",
+    "id": 2254,
+    "image": "📚"
+  },
+  {
+    "native": "後者",
+    "english": "the latter",
+    "phonetic": "こうしゃ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "後者を例文に使います。",
+    "exampleEnglish": "Example with the latter.",
+    "id": 2255,
+    "image": "🏠"
+  },
+  {
+    "native": "公正",
+    "english": "justice",
+    "phonetic": "こうせい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "公正を例文に使います。",
+    "exampleEnglish": "Example with justice.",
+    "id": 2256,
+    "image": "🏠"
+  },
+  {
+    "native": "構成",
+    "english": "organization",
+    "phonetic": "こうせい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "構成を例文に使います。",
+    "exampleEnglish": "Example with organization.",
+    "id": 2257,
+    "image": "🏠"
+  },
+  {
+    "native": "高速",
+    "english": "high speed",
+    "phonetic": "こうそく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "高速を例文に使います。",
+    "exampleEnglish": "Example with high speed.",
+    "id": 2258,
+    "image": "🏠"
+  },
+  {
+    "native": "行動",
+    "english": "action",
+    "phonetic": "こうどう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "行動を例文に使います。",
+    "exampleEnglish": "Example with action.",
+    "id": 2259,
+    "image": "🏠"
+  },
+  {
+    "native": "強盗",
+    "english": "robbery",
+    "phonetic": "ごうとう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "強盗を例文に使います。",
+    "exampleEnglish": "Example with robbery.",
+    "id": 2260,
+    "image": "🏠"
+  },
+  {
+    "native": "後輩",
+    "english": "junior members of a group",
+    "phonetic": "こうはい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "後輩を例文に使います。",
+    "exampleEnglish": "Example with junior members of a group.",
+    "id": 2261,
+    "image": "🏠"
+  },
+  {
+    "native": "幸福",
+    "english": "happiness",
+    "phonetic": "こうふく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "幸福を例文に使います。",
+    "exampleEnglish": "Example with happiness.",
+    "id": 2262,
+    "image": "🏠"
+  },
+  {
+    "native": "公平",
+    "english": "fairness",
+    "phonetic": "こうへい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "公平を例文に使います。",
+    "exampleEnglish": "Example with fairness.",
+    "id": 2263,
+    "image": "🏠"
+  },
+  {
+    "native": "候補",
+    "english": "candidacy",
+    "phonetic": "こうほ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "候補を例文に使います。",
+    "exampleEnglish": "Example with candidacy.",
+    "id": 2264,
+    "image": "🏠"
+  },
+  {
+    "native": "考慮",
+    "english": "consideration",
+    "phonetic": "こうりょ",
+    "category": "Numbers",
+    "topikLevel": 2,
+    "exampleNative": "考慮を例文に使います。",
+    "exampleEnglish": "Example with consideration.",
+    "id": 2265,
+    "image": "🔢"
+  },
+  {
+    "native": "越える",
+    "english": "to exceed",
+    "phonetic": "こえる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "越えるを例文に使います。",
+    "exampleEnglish": "Example with to exceed.",
+    "id": 2266,
+    "image": "🏠"
+  },
+  {
+    "native": "超える",
+    "english": "to exceed",
+    "phonetic": "こえる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "超えるを例文に使います。",
+    "exampleEnglish": "Example with to exceed.",
+    "id": 2267,
+    "image": "🏠"
+  },
+  {
+    "native": "コーチ",
+    "english": "coach",
+    "phonetic": "コーチ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "コーチを例文に使います。",
+    "exampleEnglish": "Example with coach.",
+    "id": 2268,
+    "image": "🏠"
+  },
+  {
+    "native": "コード",
+    "english": "code; cord; chord",
+    "phonetic": "コード",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "コードを例文に使います。",
+    "exampleEnglish": "Example with code; cord; chord.",
+    "id": 2269,
+    "image": "🏠"
+  },
+  {
+    "native": "氷",
+    "english": "ice",
+    "phonetic": "こおり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "氷を例文に使います。",
+    "exampleEnglish": "Example with ice.",
+    "id": 2270,
+    "image": "🏠"
+  },
+  {
+    "native": "凍る",
+    "english": "to freeze",
+    "phonetic": "こおる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "凍るを例文に使います。",
+    "exampleEnglish": "Example with to freeze.",
+    "id": 2271,
+    "image": "🏠"
+  },
+  {
+    "native": "ゴール",
+    "english": "goal",
+    "phonetic": "ゴール",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ゴールを例文に使います。",
+    "exampleEnglish": "Example with goal.",
+    "id": 2272,
+    "image": "🏠"
+  },
+  {
+    "native": "誤解",
+    "english": "misunderstanding",
+    "phonetic": "ごかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "誤解を例文に使います。",
+    "exampleEnglish": "Example with misunderstanding.",
+    "id": 2273,
+    "image": "🏠"
+  },
+  {
+    "native": "語学",
+    "english": "language study",
+    "phonetic": "ごがく",
+    "category": "Study & Work",
+    "topikLevel": 2,
+    "exampleNative": "語学を例文に使います。",
+    "exampleEnglish": "Example with language study.",
+    "id": 2274,
+    "image": "📚"
+  },
+  {
+    "native": "呼吸",
+    "english": "breath",
+    "phonetic": "こきゅう",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "呼吸を例文に使います。",
+    "exampleEnglish": "Example with breath.",
+    "id": 2275,
+    "image": "🍜"
+  },
+  {
+    "native": "故郷",
+    "english": "hometown",
+    "phonetic": "こきょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "故郷を例文に使います。",
+    "exampleEnglish": "Example with hometown.",
+    "id": 2276,
+    "image": "🏠"
+  },
+  {
+    "native": "極",
+    "english": "quite",
+    "phonetic": "ごく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "極を例文に使います。",
+    "exampleEnglish": "Example with quite.",
+    "id": 2277,
+    "image": "🏠"
+  },
+  {
+    "native": "国語",
+    "english": "national language",
+    "phonetic": "こくご",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "国語を例文に使います。",
+    "exampleEnglish": "Example with national language.",
+    "id": 2278,
+    "image": "🏠"
+  },
+  {
+    "native": "国籍",
+    "english": "nationality",
+    "phonetic": "こくせき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "国籍を例文に使います。",
+    "exampleEnglish": "Example with nationality.",
+    "id": 2279,
+    "image": "🏠"
+  },
+  {
+    "native": "黒板",
+    "english": "blackboard",
+    "phonetic": "こくばん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "黒板を例文に使います。",
+    "exampleEnglish": "Example with blackboard.",
+    "id": 2280,
+    "image": "🏠"
+  },
+  {
+    "native": "克服",
+    "english": "conquest",
+    "phonetic": "こくふく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "克服を例文に使います。",
+    "exampleEnglish": "Example with conquest.",
+    "id": 2281,
+    "image": "🏠"
+  },
+  {
+    "native": "国民",
+    "english": "national",
+    "phonetic": "こくみん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "国民を例文に使います。",
+    "exampleEnglish": "Example with national.",
+    "id": 2282,
+    "image": "🏠"
+  },
+  {
+    "native": "穀物",
+    "english": "grain",
+    "phonetic": "こくもつ",
+    "category": "Weather & Nature",
+    "topikLevel": 2,
+    "exampleNative": "穀物を例文に使います。",
+    "exampleEnglish": "Example with grain.",
+    "id": 2283,
+    "image": "🌤️"
+  },
+  {
+    "native": "腰",
+    "english": "hip",
+    "phonetic": "こし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "腰を例文に使います。",
+    "exampleEnglish": "Example with hip.",
+    "id": 2284,
+    "image": "🏠"
+  },
+  {
+    "native": "胡椒",
+    "english": "pepper",
+    "phonetic": "こしょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "胡椒を例文に使います。",
+    "exampleEnglish": "Example with pepper.",
+    "id": 2285,
+    "image": "🏠"
+  },
+  {
+    "native": "個人",
+    "english": "individual",
+    "phonetic": "こじん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "個人を例文に使います。",
+    "exampleEnglish": "Example with individual.",
+    "id": 2286,
+    "image": "🏠"
+  },
+  {
+    "native": "越す",
+    "english": "to go over (e.g.",
+    "phonetic": "こす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "越すを例文に使います。",
+    "exampleEnglish": "Example with to go over (e.g..",
+    "id": 2287,
+    "image": "🏠"
+  },
+  {
+    "native": "超す",
+    "english": "to cross",
+    "phonetic": "こす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "超すを例文に使います。",
+    "exampleEnglish": "Example with to cross.",
+    "id": 2288,
+    "image": "🏠"
+  },
+  {
+    "native": "国家",
+    "english": "state",
+    "phonetic": "こっか",
+    "category": "Numbers",
+    "topikLevel": 2,
+    "exampleNative": "国家を例文に使います。",
+    "exampleEnglish": "Example with state.",
+    "id": 2289,
+    "image": "🔢"
+  },
+  {
+    "native": "国会",
+    "english": "National Diet",
+    "phonetic": "こっかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "国会を例文に使います。",
+    "exampleEnglish": "Example with National Diet.",
+    "id": 2290,
+    "image": "🏠"
+  },
+  {
+    "native": "国境",
+    "english": "national or state border",
+    "phonetic": "こっきょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "国境を例文に使います。",
+    "exampleEnglish": "Example with national or state border.",
+    "id": 2291,
+    "image": "🏠"
+  },
+  {
+    "native": "骨折",
+    "english": "bone fracture",
+    "phonetic": "こっせつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "骨折を例文に使います。",
+    "exampleEnglish": "Example with bone fracture.",
+    "id": 2292,
+    "image": "🏠"
+  },
+  {
+    "native": "小包",
+    "english": "parcel",
+    "phonetic": "こづつみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "小包を例文に使います。",
+    "exampleEnglish": "Example with parcel.",
+    "id": 2293,
+    "image": "🏠"
+  },
+  {
+    "native": "琴",
+    "english": "Japanese harp",
+    "phonetic": "こと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "琴を例文に使います。",
+    "exampleEnglish": "Example with Japanese harp.",
+    "id": 2294,
+    "image": "🏠"
+  },
+  {
+    "native": "異なる",
+    "english": "to differ",
+    "phonetic": "ことなる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "異なるを例文に使います。",
+    "exampleEnglish": "Example with to differ.",
+    "id": 2295,
+    "image": "🏠"
+  },
+  {
+    "native": "諺",
+    "english": "proverb",
+    "phonetic": "ことわざ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "諺を例文に使います。",
+    "exampleEnglish": "Example with proverb.",
+    "id": 2296,
+    "image": "🏠"
+  },
+  {
+    "native": "断る",
+    "english": "to refuse",
+    "phonetic": "ことわる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "断るを例文に使います。",
+    "exampleEnglish": "Example with to refuse.",
+    "id": 2297,
+    "image": "🏠"
+  },
+  {
+    "native": "粉",
+    "english": "flour",
+    "phonetic": "こな",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "粉を例文に使います。",
+    "exampleEnglish": "Example with flour.",
+    "id": 2298,
+    "image": "🏠"
+  },
+  {
+    "native": "好み",
+    "english": "liking",
+    "phonetic": "このみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "好みを例文に使います。",
+    "exampleEnglish": "Example with liking.",
+    "id": 2299,
+    "image": "🏠"
+  },
+  {
+    "native": "好む",
+    "english": "to like",
+    "phonetic": "このむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "好むを例文に使います。",
+    "exampleEnglish": "Example with to like.",
+    "id": 2300,
+    "image": "🏠"
+  },
+  {
+    "native": "こぼす",
+    "english": "to spill",
+    "phonetic": "こぼす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "こぼすを例文に使います。",
+    "exampleEnglish": "Example with to spill.",
+    "id": 2301,
+    "image": "🏠"
+  },
+  {
+    "native": "こぼれる",
+    "english": "to overflow",
+    "phonetic": "こぼれる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "こぼれるを例文に使います。",
+    "exampleEnglish": "Example with to overflow.",
+    "id": 2302,
+    "image": "🏠"
+  },
+  {
+    "native": "塵",
+    "english": "garbage",
+    "phonetic": "ごみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "塵を例文に使います。",
+    "exampleEnglish": "Example with garbage.",
+    "id": 2303,
+    "image": "🏠"
+  },
+  {
+    "native": "小麦",
+    "english": "wheat",
+    "phonetic": "こむぎ",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "小麦を例文に使います。",
+    "exampleEnglish": "Example with wheat.",
+    "id": 2304,
+    "image": "🍜"
+  },
+  {
+    "native": "ごめんなさい",
+    "english": "I beg your pardon",
+    "phonetic": "ごめんなさい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ごめんなさいを例文に使います。",
+    "exampleEnglish": "Example with I beg your pardon.",
+    "id": 2305,
+    "image": "🏠"
+  },
+  {
+    "native": "小屋",
+    "english": "hut",
+    "phonetic": "こや",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "小屋を例文に使います。",
+    "exampleEnglish": "Example with hut.",
+    "id": 2306,
+    "image": "🏠"
+  },
+  {
+    "native": "これら",
+    "english": "these",
+    "phonetic": "これら",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "これらを例文に使います。",
+    "exampleEnglish": "Example with these.",
+    "id": 2307,
+    "image": "🏠"
+  },
+  {
+    "native": "殺す",
+    "english": "to kill",
+    "phonetic": "ころす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "殺すを例文に使います。",
+    "exampleEnglish": "Example with to kill.",
+    "id": 2308,
+    "image": "🏠"
+  },
+  {
+    "native": "転ぶ",
+    "english": "to fall down",
+    "phonetic": "ころぶ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "転ぶを例文に使います。",
+    "exampleEnglish": "Example with to fall down.",
+    "id": 2309,
+    "image": "🏠"
+  },
+  {
+    "native": "今回",
+    "english": "now",
+    "phonetic": "こんかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "今回を例文に使います。",
+    "exampleEnglish": "Example with now.",
+    "id": 2310,
+    "image": "🏠"
+  },
+  {
+    "native": "今後",
+    "english": "from now on",
+    "phonetic": "こんご",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "今後を例文に使います。",
+    "exampleEnglish": "Example with from now on.",
+    "id": 2311,
+    "image": "🏠"
+  },
+  {
+    "native": "混雑",
+    "english": "confusion",
+    "phonetic": "こんざつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "混雑を例文に使います。",
+    "exampleEnglish": "Example with confusion.",
+    "id": 2312,
+    "image": "🏠"
+  },
+  {
+    "native": "こんなに",
+    "english": "so",
+    "phonetic": "こんなに",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "こんなにを例文に使います。",
+    "exampleEnglish": "Example with so.",
+    "id": 2313,
+    "image": "🏠"
+  },
+  {
+    "native": "困難",
+    "english": "difficulty",
+    "phonetic": "こんなん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "困難を例文に使います。",
+    "exampleEnglish": "Example with difficulty.",
+    "id": 2314,
+    "image": "🏠"
+  },
+  {
+    "native": "こんにちは",
+    "english": "hello",
+    "phonetic": "こんにちは",
+    "category": "Greetings",
+    "topikLevel": 2,
+    "exampleNative": "こんにちはを例文に使います。",
+    "exampleEnglish": "Example with hello.",
+    "id": 2315,
+    "image": "👋"
+  },
+  {
+    "native": "婚約",
+    "english": "engagement",
+    "phonetic": "こんやく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "婚約を例文に使います。",
+    "exampleEnglish": "Example with engagement.",
+    "id": 2316,
+    "image": "🏠"
+  },
+  {
+    "native": "混乱",
+    "english": "chaos",
+    "phonetic": "こんらん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "混乱を例文に使います。",
+    "exampleEnglish": "Example with chaos.",
+    "id": 2317,
+    "image": "🏠"
+  },
+  {
+    "native": "差",
+    "english": "difference",
+    "phonetic": "さ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "差を例文に使います。",
+    "exampleEnglish": "Example with difference.",
+    "id": 2318,
+    "image": "🏠"
+  },
+  {
+    "native": "サービス",
+    "english": "service",
+    "phonetic": "サービス",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "サービスを例文に使います。",
+    "exampleEnglish": "Example with service.",
+    "id": 2319,
+    "image": "🏠"
+  },
+  {
+    "native": "際",
+    "english": "on the occasion of",
+    "phonetic": "さい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "際を例文に使います。",
+    "exampleEnglish": "Example with on the occasion of.",
+    "id": 2320,
+    "image": "🏠"
+  },
+  {
+    "native": "最高",
+    "english": "highest",
+    "phonetic": "さいこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "最高を例文に使います。",
+    "exampleEnglish": "Example with highest.",
+    "id": 2321,
+    "image": "🏠"
+  },
+  {
+    "native": "財産",
+    "english": "property",
+    "phonetic": "ざいさん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "財産を例文に使います。",
+    "exampleEnglish": "Example with property.",
+    "id": 2322,
+    "image": "🏠"
+  },
+  {
+    "native": "最終",
+    "english": "last",
+    "phonetic": "さいしゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "最終を例文に使います。",
+    "exampleEnglish": "Example with last.",
+    "id": 2323,
+    "image": "🏠"
+  },
+  {
+    "native": "最中",
+    "english": "in the middle of",
+    "phonetic": "さいちゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "最中を例文に使います。",
+    "exampleEnglish": "Example with in the middle of.",
+    "id": 2324,
+    "image": "🏠"
+  },
+  {
+    "native": "最低",
+    "english": "least",
+    "phonetic": "さいてい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "最低を例文に使います。",
+    "exampleEnglish": "Example with least.",
+    "id": 2325,
+    "image": "🏠"
+  },
+  {
+    "native": "才能",
+    "english": "talent",
+    "phonetic": "さいのう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "才能を例文に使います。",
+    "exampleEnglish": "Example with talent.",
+    "id": 2326,
+    "image": "🏠"
+  },
+  {
+    "native": "裁判",
+    "english": "trial",
+    "phonetic": "さいばん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "裁判を例文に使います。",
+    "exampleEnglish": "Example with trial.",
+    "id": 2327,
+    "image": "🏠"
+  },
+  {
+    "native": "材料",
+    "english": "ingredients",
+    "phonetic": "ざいりょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "材料を例文に使います。",
+    "exampleEnglish": "Example with ingredients.",
+    "id": 2328,
+    "image": "🏠"
+  },
+  {
+    "native": "幸い",
+    "english": "fortunately; luckily",
+    "phonetic": "さいわい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "幸いを例文に使います。",
+    "exampleEnglish": "Example with fortunately; luckily.",
+    "id": 2329,
+    "image": "🏠"
+  },
+  {
+    "native": "サイン",
+    "english": "autograph; sign; sine",
+    "phonetic": "サイン",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "サインを例文に使います。",
+    "exampleEnglish": "Example with autograph; sign; sine.",
+    "id": 2330,
+    "image": "🏠"
+  },
+  {
+    "native": "境",
+    "english": "border",
+    "phonetic": "さかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "境を例文に使います。",
+    "exampleEnglish": "Example with border.",
+    "id": 2331,
+    "image": "🏠"
+  },
+  {
+    "native": "逆らう",
+    "english": "to go against",
+    "phonetic": "さからう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "逆らうを例文に使います。",
+    "exampleEnglish": "Example with to go against.",
+    "id": 2332,
+    "image": "🏠"
+  },
+  {
+    "native": "盛り",
+    "english": "helping",
+    "phonetic": "さかり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "盛りを例文に使います。",
+    "exampleEnglish": "Example with helping.",
+    "id": 2333,
+    "image": "🏠"
+  },
+  {
+    "native": "作業",
+    "english": "work",
+    "phonetic": "さぎょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "作業を例文に使います。",
+    "exampleEnglish": "Example with work.",
+    "id": 2334,
+    "image": "🏠"
+  },
+  {
+    "native": "裂く",
+    "english": "to tear",
+    "phonetic": "さく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "裂くを例文に使います。",
+    "exampleEnglish": "Example with to tear.",
+    "id": 2335,
+    "image": "🏠"
+  },
+  {
+    "native": "昨",
+    "english": "last (year)",
+    "phonetic": "さく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "昨を例文に使います。",
+    "exampleEnglish": "Example with last (year).",
+    "id": 2336,
+    "image": "🏠"
+  },
+  {
+    "native": "作品",
+    "english": "work",
+    "phonetic": "さくひん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "作品を例文に使います。",
+    "exampleEnglish": "Example with work.",
+    "id": 2337,
+    "image": "🏠"
+  },
+  {
+    "native": "作物",
+    "english": "produce (e.g.",
+    "phonetic": "さくもつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "作物を例文に使います。",
+    "exampleEnglish": "Example with produce (e.g..",
+    "id": 2338,
+    "image": "🏠"
+  },
+  {
+    "native": "桜",
+    "english": "cherry blossom",
+    "phonetic": "さくら",
+    "category": "Weather & Nature",
+    "topikLevel": 2,
+    "exampleNative": "桜を例文に使います。",
+    "exampleEnglish": "Example with cherry blossom.",
+    "id": 2339,
+    "image": "🌤️"
+  },
+  {
+    "native": "酒",
+    "english": "alcohol",
+    "phonetic": "さけ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "酒を例文に使います。",
+    "exampleEnglish": "Example with alcohol.",
+    "id": 2340,
+    "image": "🏠"
+  },
+  {
+    "native": "叫ぶ",
+    "english": "to shout",
+    "phonetic": "さけぶ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "叫ぶを例文に使います。",
+    "exampleEnglish": "Example with to shout.",
+    "id": 2341,
+    "image": "🏠"
+  },
+  {
+    "native": "避ける",
+    "english": "to avoid (physical contact); to ward off",
+    "phonetic": "さける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "避けるを例文に使います。",
+    "exampleEnglish": "Example with to avoid (physical contact); to ward off.",
+    "id": 2342,
+    "image": "🏠"
+  },
+  {
+    "native": "支える",
+    "english": "support",
+    "phonetic": "ささえる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "支えるを例文に使います。",
+    "exampleEnglish": "Example with support.",
+    "id": 2343,
+    "image": "🏠"
+  },
+  {
+    "native": "刺さる",
+    "english": "to stick",
+    "phonetic": "ささる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "刺さるを例文に使います。",
+    "exampleEnglish": "Example with to stick.",
+    "id": 2344,
+    "image": "🏠"
+  },
+  {
+    "native": "刺す",
+    "english": "to sting",
+    "phonetic": "さす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "刺すを例文に使います。",
+    "exampleEnglish": "Example with to sting.",
+    "id": 2345,
+    "image": "🏠"
+  },
+  {
+    "native": "指す",
+    "english": "to point",
+    "phonetic": "さす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "指すを例文に使います。",
+    "exampleEnglish": "Example with to point.",
+    "id": 2346,
+    "image": "🏠"
+  },
+  {
+    "native": "挿す",
+    "english": "to insert",
+    "phonetic": "さす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "挿すを例文に使います。",
+    "exampleEnglish": "Example with to insert.",
+    "id": 2347,
+    "image": "🏠"
+  },
+  {
+    "native": "注す",
+    "english": "to pour (drink)",
+    "phonetic": "さす",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "注すを例文に使います。",
+    "exampleEnglish": "Example with to pour (drink).",
+    "id": 2348,
+    "image": "🍜"
+  },
+  {
+    "native": "射す",
+    "english": "to shine",
+    "phonetic": "さす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "射すを例文に使います。",
+    "exampleEnglish": "Example with to shine.",
+    "id": 2349,
+    "image": "🏠"
+  },
+  {
+    "native": "座席",
+    "english": "seat",
+    "phonetic": "ざせき",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "座席を例文に使います。",
+    "exampleEnglish": "Example with seat.",
+    "id": 2350,
+    "image": "🍜"
+  },
+  {
+    "native": "誘う",
+    "english": "to invite (someone to do something with you); to tempt",
+    "phonetic": "さそう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "誘うを例文に使います。",
+    "exampleEnglish": "Example with to invite (someone to do something with you); to tempt.",
+    "id": 2351,
+    "image": "🏠"
+  },
+  {
+    "native": "札",
+    "english": "bill",
+    "phonetic": "さつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "札を例文に使います。",
+    "exampleEnglish": "Example with bill.",
+    "id": 2352,
+    "image": "🏠"
+  },
+  {
+    "native": "作家",
+    "english": "author",
+    "phonetic": "さっか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "作家を例文に使います。",
+    "exampleEnglish": "Example with author.",
+    "id": 2353,
+    "image": "🏠"
+  },
+  {
+    "native": "作曲",
+    "english": "composition (of music)",
+    "phonetic": "さっきょく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "作曲を例文に使います。",
+    "exampleEnglish": "Example with composition (of music).",
+    "id": 2354,
+    "image": "🏠"
+  },
+  {
+    "native": "ざっと",
+    "english": "roughly",
+    "phonetic": "ざっと",
+    "category": "Numbers",
+    "topikLevel": 2,
+    "exampleNative": "ざっとを例文に使います。",
+    "exampleEnglish": "Example with roughly.",
+    "id": 2355,
+    "image": "🔢"
+  },
+  {
+    "native": "さっぱり",
+    "english": "feeling refreshed",
+    "phonetic": "さっぱり",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "さっぱりを例文に使います。",
+    "exampleEnglish": "Example with feeling refreshed.",
+    "id": 2356,
+    "image": "🍜"
+  },
+  {
+    "native": "さて",
+    "english": "well; now (typically used when switching to a new",
+    "phonetic": "さて",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "さてを例文に使います。",
+    "exampleEnglish": "Example with well; now (typically used when switching to a new.",
+    "id": 2357,
+    "image": "🏠"
+  },
+  {
+    "native": "砂漠",
+    "english": "desert",
+    "phonetic": "さばく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "砂漠を例文に使います。",
+    "exampleEnglish": "Example with desert.",
+    "id": 2358,
+    "image": "🏠"
+  },
+  {
+    "native": "差別",
+    "english": "discrimination",
+    "phonetic": "さべつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "差別を例文に使います。",
+    "exampleEnglish": "Example with discrimination.",
+    "id": 2359,
+    "image": "🏠"
+  },
+  {
+    "native": "ママ",
+    "english": "Mama",
+    "phonetic": "ママ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ママを例文に使います。",
+    "exampleEnglish": "Example with Mama.",
+    "id": 2360,
+    "image": "🏠"
+  },
+  {
+    "native": "豆",
+    "english": "beans",
+    "phonetic": "まめ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "豆を例文に使います。",
+    "exampleEnglish": "Example with beans.",
+    "id": 2361,
+    "image": "🏠"
+  },
+  {
+    "native": "守る",
+    "english": "to protect; to abide (by the rules)",
+    "phonetic": "まもる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "守るを例文に使います。",
+    "exampleEnglish": "Example with to protect; to abide (by the rules).",
+    "id": 2362,
+    "image": "🏠"
+  },
+  {
+    "native": "迷う",
+    "english": "to be puzzled",
+    "phonetic": "まよう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "迷うを例文に使います。",
+    "exampleEnglish": "Example with to be puzzled.",
+    "id": 2363,
+    "image": "🏠"
+  },
+  {
+    "native": "丸",
+    "english": "circle",
+    "phonetic": "まる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "丸を例文に使います。",
+    "exampleEnglish": "Example with circle.",
+    "id": 2364,
+    "image": "🏠"
+  },
+  {
+    "native": "まるで",
+    "english": "just like",
+    "phonetic": "まるで",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "まるでを例文に使います。",
+    "exampleEnglish": "Example with just like.",
+    "id": 2365,
+    "image": "🏠"
+  },
+  {
+    "native": "万一",
+    "english": "by some chance",
+    "phonetic": "まんいち",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "万一を例文に使います。",
+    "exampleEnglish": "Example with by some chance.",
+    "id": 2366,
+    "image": "🏠"
+  },
+  {
+    "native": "満足",
+    "english": "satisfaction",
+    "phonetic": "まんぞく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "満足を例文に使います。",
+    "exampleEnglish": "Example with satisfaction.",
+    "id": 2367,
+    "image": "🏠"
+  },
+  {
+    "native": "身",
+    "english": "body",
+    "phonetic": "み",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "身を例文に使います。",
+    "exampleEnglish": "Example with body.",
+    "id": 2368,
+    "image": "🏠"
+  },
+  {
+    "native": "実",
+    "english": "fruit",
+    "phonetic": "み",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "実を例文に使います。",
+    "exampleEnglish": "Example with fruit.",
+    "id": 2369,
+    "image": "🏠"
+  },
+  {
+    "native": "見送り",
+    "english": "seeing one off",
+    "phonetic": "みおくり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "見送りを例文に使います。",
+    "exampleEnglish": "Example with seeing one off.",
+    "id": 2370,
+    "image": "🏠"
+  },
+  {
+    "native": "味方",
+    "english": "ally",
+    "phonetic": "みかた",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "味方を例文に使います。",
+    "exampleEnglish": "Example with ally.",
+    "id": 2371,
+    "image": "🏠"
+  },
+  {
+    "native": "見事",
+    "english": "splendid",
+    "phonetic": "みごと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "見事を例文に使います。",
+    "exampleEnglish": "Example with splendid.",
+    "id": 2372,
+    "image": "🏠"
+  },
+  {
+    "native": "ミス",
+    "english": "miss (mistake",
+    "phonetic": "ミス",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ミスを例文に使います。",
+    "exampleEnglish": "Example with miss (mistake.",
+    "id": 2373,
+    "image": "🏠"
+  },
+  {
+    "native": "満ちる",
+    "english": "to be full",
+    "phonetic": "みちる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "満ちるを例文に使います。",
+    "exampleEnglish": "Example with to be full.",
+    "id": 2374,
+    "image": "🏠"
+  },
+  {
+    "native": "密",
+    "english": "thick",
+    "phonetic": "みつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "密を例文に使います。",
+    "exampleEnglish": "Example with thick.",
+    "id": 2375,
+    "image": "🏠"
+  },
+  {
+    "native": "認める",
+    "english": "to recognize",
+    "phonetic": "みとめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "認めるを例文に使います。",
+    "exampleEnglish": "Example with to recognize.",
+    "id": 2376,
+    "image": "🏠"
+  },
+  {
+    "native": "見舞い",
+    "english": "expression of sympathy",
+    "phonetic": "みまい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "見舞いを例文に使います。",
+    "exampleEnglish": "Example with expression of sympathy.",
+    "id": 2377,
+    "image": "🏠"
+  },
+  {
+    "native": "土産",
+    "english": "souvenir",
+    "phonetic": "みやげ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "土産を例文に使います。",
+    "exampleEnglish": "Example with souvenir.",
+    "id": 2378,
+    "image": "🏠"
+  },
+  {
+    "native": "妙",
+    "english": "strange",
+    "phonetic": "みょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "妙を例文に使います。",
+    "exampleEnglish": "Example with strange.",
+    "id": 2379,
+    "image": "🏠"
+  },
+  {
+    "native": "未来",
+    "english": "future (life tense)",
+    "phonetic": "みらい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "未来を例文に使います。",
+    "exampleEnglish": "Example with future (life tense).",
+    "id": 2380,
+    "image": "🏠"
+  },
+  {
+    "native": "魅力",
+    "english": "charm",
+    "phonetic": "みりょく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "魅力を例文に使います。",
+    "exampleEnglish": "Example with charm.",
+    "id": 2381,
+    "image": "🏠"
+  },
+  {
+    "native": "診る",
+    "english": "to examine (a patient)",
+    "phonetic": "みる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "診るを例文に使います。",
+    "exampleEnglish": "Example with to examine (a patient).",
+    "id": 2382,
+    "image": "🏠"
+  },
+  {
+    "native": "ミルク",
+    "english": "milk",
+    "phonetic": "ミルク",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ミルクを例文に使います。",
+    "exampleEnglish": "Example with milk.",
+    "id": 2383,
+    "image": "🏠"
+  },
+  {
+    "native": "無",
+    "english": "nothing",
+    "phonetic": "む",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "無を例文に使います。",
+    "exampleEnglish": "Example with nothing.",
+    "id": 2384,
+    "image": "🏠"
+  },
+  {
+    "native": "向かい",
+    "english": "facing",
+    "phonetic": "むかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "向かいを例文に使います。",
+    "exampleEnglish": "Example with facing.",
+    "id": 2385,
+    "image": "🏠"
+  },
+  {
+    "native": "迎え",
+    "english": "meeting",
+    "phonetic": "むかえ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "迎えを例文に使います。",
+    "exampleEnglish": "Example with meeting.",
+    "id": 2386,
+    "image": "🏠"
+  },
+  {
+    "native": "向く",
+    "english": "to face",
+    "phonetic": "むく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "向くを例文に使います。",
+    "exampleEnglish": "Example with to face.",
+    "id": 2387,
+    "image": "🏠"
+  },
+  {
+    "native": "剥く",
+    "english": "to peel",
+    "phonetic": "むく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "剥くを例文に使います。",
+    "exampleEnglish": "Example with to peel.",
+    "id": 2388,
+    "image": "🏠"
+  },
+  {
+    "native": "向ける",
+    "english": "to turn towards",
+    "phonetic": "むける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "向けるを例文に使います。",
+    "exampleEnglish": "Example with to turn towards.",
+    "id": 2389,
+    "image": "🏠"
+  },
+  {
+    "native": "無視",
+    "english": "disregard",
+    "phonetic": "むし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "無視を例文に使います。",
+    "exampleEnglish": "Example with disregard.",
+    "id": 2390,
+    "image": "🏠"
+  },
+  {
+    "native": "蒸し暑い",
+    "english": "humid",
+    "phonetic": "むしあつい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "蒸し暑いを例文に使います。",
+    "exampleEnglish": "Example with humid.",
+    "id": 2391,
+    "image": "🏠"
+  },
+  {
+    "native": "虫歯",
+    "english": "cavity",
+    "phonetic": "むしば",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "虫歯を例文に使います。",
+    "exampleEnglish": "Example with cavity.",
+    "id": 2392,
+    "image": "🏠"
+  },
+  {
+    "native": "寧ろ",
+    "english": "rather",
+    "phonetic": "むしろ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "寧ろを例文に使います。",
+    "exampleEnglish": "Example with rather.",
+    "id": 2393,
+    "image": "🏠"
+  },
+  {
+    "native": "蒸す",
+    "english": "to steam",
+    "phonetic": "むす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "蒸すを例文に使います。",
+    "exampleEnglish": "Example with to steam.",
+    "id": 2394,
+    "image": "🏠"
+  },
+  {
+    "native": "結ぶ",
+    "english": "to tie",
+    "phonetic": "むすぶ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "結ぶを例文に使います。",
+    "exampleEnglish": "Example with to tie.",
+    "id": 2395,
+    "image": "🏠"
+  },
+  {
+    "native": "無駄",
+    "english": "futility",
+    "phonetic": "むだ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "無駄を例文に使います。",
+    "exampleEnglish": "Example with futility.",
+    "id": 2396,
+    "image": "🏠"
+  },
+  {
+    "native": "夢中",
+    "english": "crush",
+    "phonetic": "むちゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "夢中を例文に使います。",
+    "exampleEnglish": "Example with crush.",
+    "id": 2397,
+    "image": "🏠"
+  },
+  {
+    "native": "胸",
+    "english": "breast",
+    "phonetic": "むね",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "胸を例文に使います。",
+    "exampleEnglish": "Example with breast.",
+    "id": 2398,
+    "image": "🏠"
+  },
+  {
+    "native": "無料",
+    "english": "free",
+    "phonetic": "むりょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "無料を例文に使います。",
+    "exampleEnglish": "Example with free.",
+    "id": 2399,
+    "image": "🏠"
+  },
+  {
+    "native": "芽",
+    "english": "sprout",
+    "phonetic": "め",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "芽を例文に使います。",
+    "exampleEnglish": "Example with sprout.",
+    "id": 2400,
+    "image": "🏠"
+  },
+  {
+    "native": "明確",
+    "english": "clear",
+    "phonetic": "めいかく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "明確を例文に使います。",
+    "exampleEnglish": "Example with clear.",
+    "id": 2401,
+    "image": "🏠"
+  },
+  {
+    "native": "名刺",
+    "english": "(name) card; business card",
+    "phonetic": "めいし",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "名刺を例文に使います。",
+    "exampleEnglish": "Example with (name) card; business card.",
+    "id": 2402,
+    "image": "🚌"
+  },
+  {
+    "native": "名詞",
+    "english": "noun",
+    "phonetic": "めいし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "名詞を例文に使います。",
+    "exampleEnglish": "Example with noun.",
+    "id": 2403,
+    "image": "🏠"
+  },
+  {
+    "native": "命じる",
+    "english": "to order",
+    "phonetic": "めいじる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "命じるを例文に使います。",
+    "exampleEnglish": "Example with to order.",
+    "id": 2404,
+    "image": "🏠"
+  },
+  {
+    "native": "名人",
+    "english": "master",
+    "phonetic": "めいじん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "名人を例文に使います。",
+    "exampleEnglish": "Example with master.",
+    "id": 2405,
+    "image": "🏠"
+  },
+  {
+    "native": "命令",
+    "english": "order",
+    "phonetic": "めいれい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "命令を例文に使います。",
+    "exampleEnglish": "Example with order.",
+    "id": 2406,
+    "image": "🏠"
+  },
+  {
+    "native": "迷惑",
+    "english": "trouble",
+    "phonetic": "めいわく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "迷惑を例文に使います。",
+    "exampleEnglish": "Example with trouble.",
+    "id": 2407,
+    "image": "🏠"
+  },
+  {
+    "native": "目上",
+    "english": "person of higher status; one's senior",
+    "phonetic": "めうえ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "目上を例文に使います。",
+    "exampleEnglish": "Example with person of higher status; one's senior.",
+    "id": 2408,
+    "image": "🏠"
+  },
+  {
+    "native": "飯",
+    "english": "meals",
+    "phonetic": "めし",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "飯を例文に使います。",
+    "exampleEnglish": "Example with meals.",
+    "id": 2409,
+    "image": "🍜"
+  },
+  {
+    "native": "滅多に",
+    "english": "rarely (with neg. verb)",
+    "phonetic": "めったに",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "滅多にを例文に使います。",
+    "exampleEnglish": "Example with rarely (with neg. verb).",
+    "id": 2410,
+    "image": "🏠"
+  },
+  {
+    "native": "メモ",
+    "english": "memorandum",
+    "phonetic": "メモ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "メモを例文に使います。",
+    "exampleEnglish": "Example with memorandum.",
+    "id": 2411,
+    "image": "🏠"
+  },
+  {
+    "native": "面",
+    "english": "face",
+    "phonetic": "めん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "面を例文に使います。",
+    "exampleEnglish": "Example with face.",
+    "id": 2412,
+    "image": "🏠"
+  },
+  {
+    "native": "綿",
+    "english": "cotton",
+    "phonetic": "めん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "綿を例文に使います。",
+    "exampleEnglish": "Example with cotton.",
+    "id": 2413,
+    "image": "🏠"
+  },
+  {
+    "native": "免許",
+    "english": "license",
+    "phonetic": "めんきょ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "免許を例文に使います。",
+    "exampleEnglish": "Example with license.",
+    "id": 2414,
+    "image": "🏠"
+  },
+  {
+    "native": "面接",
+    "english": "interview",
+    "phonetic": "めんせつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "面接を例文に使います。",
+    "exampleEnglish": "Example with interview.",
+    "id": 2415,
+    "image": "🏠"
+  },
+  {
+    "native": "面倒",
+    "english": "trouble",
+    "phonetic": "めんどう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "面倒を例文に使います。",
+    "exampleEnglish": "Example with trouble.",
+    "id": 2416,
+    "image": "🏠"
+  },
+  {
+    "native": "メンバー",
+    "english": "member",
+    "phonetic": "メンバー",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "メンバーを例文に使います。",
+    "exampleEnglish": "Example with member.",
+    "id": 2417,
+    "image": "🏠"
+  },
+  {
+    "native": "申し込む",
+    "english": "to apply for",
+    "phonetic": "もうしこむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "申し込むを例文に使います。",
+    "exampleEnglish": "Example with to apply for.",
+    "id": 2418,
+    "image": "🏠"
+  },
+  {
+    "native": "申し訳",
+    "english": "apology",
+    "phonetic": "もうしわけ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "申し訳を例文に使います。",
+    "exampleEnglish": "Example with apology.",
+    "id": 2419,
+    "image": "🏠"
+  },
+  {
+    "native": "毛布",
+    "english": "blanket",
+    "phonetic": "もうふ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "毛布を例文に使います。",
+    "exampleEnglish": "Example with blanket.",
+    "id": 2420,
+    "image": "🏠"
+  },
+  {
+    "native": "燃える",
+    "english": "to burn",
+    "phonetic": "もえる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "燃えるを例文に使います。",
+    "exampleEnglish": "Example with to burn.",
+    "id": 2421,
+    "image": "🏠"
+  },
+  {
+    "native": "目的",
+    "english": "purpose",
+    "phonetic": "もくてき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "目的を例文に使います。",
+    "exampleEnglish": "Example with purpose.",
+    "id": 2422,
+    "image": "🏠"
+  },
+  {
+    "native": "目標",
+    "english": "mark",
+    "phonetic": "もくひょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "目標を例文に使います。",
+    "exampleEnglish": "Example with mark.",
+    "id": 2423,
+    "image": "🏠"
+  },
+  {
+    "native": "文字",
+    "english": "letter (of alphabet)",
+    "phonetic": "もじ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "文字を例文に使います。",
+    "exampleEnglish": "Example with letter (of alphabet).",
+    "id": 2424,
+    "image": "🏠"
+  },
+  {
+    "native": "もしかすると",
+    "english": "perhaps",
+    "phonetic": "もしかすると",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "もしかするとを例文に使います。",
+    "exampleEnglish": "Example with perhaps.",
+    "id": 2425,
+    "image": "🏠"
+  },
+  {
+    "native": "もしも",
+    "english": "if",
+    "phonetic": "もしも",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "もしもを例文に使います。",
+    "exampleEnglish": "Example with if.",
+    "id": 2426,
+    "image": "🏠"
+  },
+  {
+    "native": "持ち上げる",
+    "english": "to raise",
+    "phonetic": "もちあげる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "持ち上げるを例文に使います。",
+    "exampleEnglish": "Example with to raise.",
+    "id": 2427,
+    "image": "🏠"
+  },
+  {
+    "native": "用いる",
+    "english": "to use",
+    "phonetic": "もちいる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "用いるを例文に使います。",
+    "exampleEnglish": "Example with to use.",
+    "id": 2428,
+    "image": "🏠"
+  },
+  {
+    "native": "もったいない",
+    "english": "wasteful; more than one deserves",
+    "phonetic": "もったいない",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "もったいないを例文に使います。",
+    "exampleEnglish": "Example with wasteful; more than one deserves.",
+    "id": 2429,
+    "image": "🏠"
+  },
+  {
+    "native": "尤も",
+    "english": "quite right",
+    "phonetic": "もっとも",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "尤もを例文に使います。",
+    "exampleEnglish": "Example with quite right.",
+    "id": 2430,
+    "image": "🏠"
+  },
+  {
+    "native": "元",
+    "english": "origin",
+    "phonetic": "もと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "元を例文に使います。",
+    "exampleEnglish": "Example with origin.",
+    "id": 2431,
+    "image": "🏠"
+  },
+  {
+    "native": "基",
+    "english": "basis",
+    "phonetic": "もと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "基を例文に使います。",
+    "exampleEnglish": "Example with basis.",
+    "id": 2432,
+    "image": "🏠"
+  },
+  {
+    "native": "素",
+    "english": "prime",
+    "phonetic": "もと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "素を例文に使います。",
+    "exampleEnglish": "Example with prime.",
+    "id": 2433,
+    "image": "🏠"
+  },
+  {
+    "native": "戻す",
+    "english": "to restore",
+    "phonetic": "もどす",
+    "category": "Shopping",
+    "topikLevel": 2,
+    "exampleNative": "戻すを例文に使います。",
+    "exampleEnglish": "Example with to restore.",
+    "id": 2434,
+    "image": "🛍️"
+  },
+  {
+    "native": "基づく",
+    "english": "to be grounded on",
+    "phonetic": "もとづく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "基づくを例文に使います。",
+    "exampleEnglish": "Example with to be grounded on.",
+    "id": 2435,
+    "image": "🏠"
+  },
+  {
+    "native": "求める",
+    "english": "to request",
+    "phonetic": "もとめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "求めるを例文に使います。",
+    "exampleEnglish": "Example with to request.",
+    "id": 2436,
+    "image": "🏠"
+  },
+  {
+    "native": "者",
+    "english": "person (same as 人 (ひと))",
+    "phonetic": "もの",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "者を例文に使います。",
+    "exampleEnglish": "Example with person (same as 人 (ひと)).",
+    "id": 2437,
+    "image": "🏠"
+  },
+  {
+    "native": "物音",
+    "english": "sounds",
+    "phonetic": "ものおと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "物音を例文に使います。",
+    "exampleEnglish": "Example with sounds.",
+    "id": 2438,
+    "image": "🏠"
+  },
+  {
+    "native": "物語",
+    "english": "tale",
+    "phonetic": "ものがたり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "物語を例文に使います。",
+    "exampleEnglish": "Example with tale.",
+    "id": 2439,
+    "image": "🏠"
+  },
+  {
+    "native": "物事",
+    "english": "things",
+    "phonetic": "ものごと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "物事を例文に使います。",
+    "exampleEnglish": "Example with things.",
+    "id": 2440,
+    "image": "🏠"
+  },
+  {
+    "native": "燃やす",
+    "english": "to burn",
+    "phonetic": "もやす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "燃やすを例文に使います。",
+    "exampleEnglish": "Example with to burn.",
+    "id": 2441,
+    "image": "🏠"
+  },
+  {
+    "native": "模様",
+    "english": "pattern",
+    "phonetic": "もよう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "模様を例文に使います。",
+    "exampleEnglish": "Example with pattern.",
+    "id": 2442,
+    "image": "🏠"
+  },
+  {
+    "native": "文句",
+    "english": "a complaint",
+    "phonetic": "もんく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "文句を例文に使います。",
+    "exampleEnglish": "Example with a complaint.",
+    "id": 2443,
+    "image": "🏠"
+  },
+  {
+    "native": "やがて",
+    "english": "before long",
+    "phonetic": "やがて",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "やがてを例文に使います。",
+    "exampleEnglish": "Example with before long.",
+    "id": 2444,
+    "image": "🏠"
+  },
+  {
+    "native": "役",
+    "english": "role",
+    "phonetic": "やく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "役を例文に使います。",
+    "exampleEnglish": "Example with role.",
+    "id": 2445,
+    "image": "🏠"
+  },
+  {
+    "native": "約",
+    "english": "approximately",
+    "phonetic": "やく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "約を例文に使います。",
+    "exampleEnglish": "Example with approximately.",
+    "id": 2446,
+    "image": "🏠"
+  },
+  {
+    "native": "訳す",
+    "english": "to translate",
+    "phonetic": "やくす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "訳すを例文に使います。",
+    "exampleEnglish": "Example with to translate.",
+    "id": 2447,
+    "image": "🏠"
+  },
+  {
+    "native": "役割",
+    "english": "assigning (allotment of) parts",
+    "phonetic": "やくわり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "役割を例文に使います。",
+    "exampleEnglish": "Example with assigning (allotment of) parts.",
+    "id": 2448,
+    "image": "🏠"
+  },
+  {
+    "native": "家賃",
+    "english": "rent",
+    "phonetic": "やちん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "家賃を例文に使います。",
+    "exampleEnglish": "Example with rent.",
+    "id": 2449,
+    "image": "🏠"
+  },
+  {
+    "native": "厄介",
+    "english": "trouble",
+    "phonetic": "やっかい",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "厄介を例文に使います。",
+    "exampleEnglish": "Example with trouble.",
+    "id": 2450,
+    "image": "🚌"
+  },
+  {
+    "native": "宿",
+    "english": "inn",
+    "phonetic": "やど",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "宿を例文に使います。",
+    "exampleEnglish": "Example with inn.",
+    "id": 2451,
+    "image": "🏠"
+  },
+  {
+    "native": "雇う",
+    "english": "to employ",
+    "phonetic": "やとう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "雇うを例文に使います。",
+    "exampleEnglish": "Example with to employ.",
+    "id": 2452,
+    "image": "🏠"
+  },
+  {
+    "native": "屋根",
+    "english": "roof",
+    "phonetic": "やね",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "屋根を例文に使います。",
+    "exampleEnglish": "Example with roof.",
+    "id": 2453,
+    "image": "🏠"
+  },
+  {
+    "native": "破る",
+    "english": "to tear; to violate; to defeat",
+    "phonetic": "やぶる",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "破るを例文に使います。",
+    "exampleEnglish": "Example with to tear; to violate; to defeat.",
+    "id": 2454,
+    "image": "🍜"
+  },
+  {
+    "native": "破れる",
+    "english": "to get torn",
+    "phonetic": "やぶれる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "破れるを例文に使います。",
+    "exampleEnglish": "Example with to get torn.",
+    "id": 2455,
+    "image": "🏠"
+  },
+  {
+    "native": "辞める",
+    "english": "to retire",
+    "phonetic": "やめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "辞めるを例文に使います。",
+    "exampleEnglish": "Example with to retire.",
+    "id": 2456,
+    "image": "🏠"
+  },
+  {
+    "native": "やや",
+    "english": "a little",
+    "phonetic": "やや",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ややを例文に使います。",
+    "exampleEnglish": "Example with a little.",
+    "id": 2457,
+    "image": "🏠"
+  },
+  {
+    "native": "唯一",
+    "english": "only",
+    "phonetic": "ゆいいつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "唯一を例文に使います。",
+    "exampleEnglish": "Example with only.",
+    "id": 2458,
+    "image": "🏠"
+  },
+  {
+    "native": "勇気",
+    "english": "courage",
+    "phonetic": "ゆうき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "勇気を例文に使います。",
+    "exampleEnglish": "Example with courage.",
+    "id": 2459,
+    "image": "🏠"
+  },
+  {
+    "native": "友好",
+    "english": "friendship",
+    "phonetic": "ゆうこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "友好を例文に使います。",
+    "exampleEnglish": "Example with friendship.",
+    "id": 2460,
+    "image": "🏠"
+  },
+  {
+    "native": "有効",
+    "english": "valid",
+    "phonetic": "ゆうこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "有効を例文に使います。",
+    "exampleEnglish": "Example with valid.",
+    "id": 2461,
+    "image": "🏠"
+  },
+  {
+    "native": "優秀",
+    "english": "superiority",
+    "phonetic": "ゆうしゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "優秀を例文に使います。",
+    "exampleEnglish": "Example with superiority.",
+    "id": 2462,
+    "image": "🏠"
+  },
+  {
+    "native": "優勝",
+    "english": "overall victory",
+    "phonetic": "ゆうしょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "優勝を例文に使います。",
+    "exampleEnglish": "Example with overall victory.",
+    "id": 2463,
+    "image": "🏠"
+  },
+  {
+    "native": "友情",
+    "english": "friendship",
+    "phonetic": "ゆうじょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "友情を例文に使います。",
+    "exampleEnglish": "Example with friendship.",
+    "id": 2464,
+    "image": "🏠"
+  },
+  {
+    "native": "友人",
+    "english": "friend (formal)",
+    "phonetic": "ゆうじん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "友人を例文に使います。",
+    "exampleEnglish": "Example with friend (formal).",
+    "id": 2465,
+    "image": "🏠"
+  },
+  {
+    "native": "有能",
+    "english": "able",
+    "phonetic": "ゆうのう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "有能を例文に使います。",
+    "exampleEnglish": "Example with able.",
+    "id": 2466,
+    "image": "🏠"
+  },
+  {
+    "native": "郵便",
+    "english": "mail",
+    "phonetic": "ゆうびん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "郵便を例文に使います。",
+    "exampleEnglish": "Example with mail.",
+    "id": 2467,
+    "image": "🏠"
+  },
+  {
+    "native": "ユーモア",
+    "english": "humor",
+    "phonetic": "ユーモア",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ユーモアを例文に使います。",
+    "exampleEnglish": "Example with humor.",
+    "id": 2468,
+    "image": "🏠"
+  },
+  {
+    "native": "有利",
+    "english": "advantageous",
+    "phonetic": "ゆうり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "有利を例文に使います。",
+    "exampleEnglish": "Example with advantageous.",
+    "id": 2469,
+    "image": "🏠"
+  },
+  {
+    "native": "床",
+    "english": "floor",
+    "phonetic": "ゆか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "床を例文に使います。",
+    "exampleEnglish": "Example with floor.",
+    "id": 2470,
+    "image": "🏠"
+  },
+  {
+    "native": "愉快",
+    "english": "pleasant",
+    "phonetic": "ゆかい",
+    "category": "Feelings",
+    "topikLevel": 2,
+    "exampleNative": "愉快を例文に使います。",
+    "exampleEnglish": "Example with pleasant.",
+    "id": 2471,
+    "image": "💕"
+  },
+  {
+    "native": "譲る",
+    "english": "to turn over",
+    "phonetic": "ゆずる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "譲るを例文に使います。",
+    "exampleEnglish": "Example with to turn over.",
+    "id": 2472,
+    "image": "🏠"
+  },
+  {
+    "native": "豊か",
+    "english": "abundant",
+    "phonetic": "ゆたか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "豊かを例文に使います。",
+    "exampleEnglish": "Example with abundant.",
+    "id": 2473,
+    "image": "🏠"
+  },
+  {
+    "native": "茹でる",
+    "english": "to boil",
+    "phonetic": "ゆでる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "茹でるを例文に使います。",
+    "exampleEnglish": "Example with to boil.",
+    "id": 2474,
+    "image": "🏠"
+  },
+  {
+    "native": "許す",
+    "english": "to permit",
+    "phonetic": "ゆるす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "許すを例文に使います。",
+    "exampleEnglish": "Example with to permit.",
+    "id": 2475,
+    "image": "🏠"
+  },
+  {
+    "native": "夜明け",
+    "english": "dawn",
+    "phonetic": "よあけ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "夜明けを例文に使います。",
+    "exampleEnglish": "Example with dawn.",
+    "id": 2476,
+    "image": "🏠"
+  },
+  {
+    "native": "酔う",
+    "english": "to get drunk",
+    "phonetic": "よう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "酔うを例文に使います。",
+    "exampleEnglish": "Example with to get drunk.",
+    "id": 2477,
+    "image": "🏠"
+  },
+  {
+    "native": "容易",
+    "english": "easy",
+    "phonetic": "ようい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "容易を例文に使います。",
+    "exampleEnglish": "Example with easy.",
+    "id": 2478,
+    "image": "🏠"
+  },
+  {
+    "native": "容器",
+    "english": "container",
+    "phonetic": "ようき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "容器を例文に使います。",
+    "exampleEnglish": "Example with container.",
+    "id": 2479,
+    "image": "🏠"
+  },
+  {
+    "native": "陽気",
+    "english": "season",
+    "phonetic": "ようき",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "陽気を例文に使います。",
+    "exampleEnglish": "Example with season.",
+    "id": 2480,
+    "image": "🍜"
+  },
+  {
+    "native": "要求",
+    "english": "request",
+    "phonetic": "ようきゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "要求を例文に使います。",
+    "exampleEnglish": "Example with request.",
+    "id": 2481,
+    "image": "🏠"
+  },
+  {
+    "native": "用心",
+    "english": "care",
+    "phonetic": "ようじん",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "用心を例文に使います。",
+    "exampleEnglish": "Example with care.",
+    "id": 2482,
+    "image": "🚌"
+  },
+  {
+    "native": "様子",
+    "english": "aspect",
+    "phonetic": "ようす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "様子を例文に使います。",
+    "exampleEnglish": "Example with aspect.",
+    "id": 2483,
+    "image": "🏠"
+  },
+  {
+    "native": "要するに",
+    "english": "in a word",
+    "phonetic": "ようするに",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "要するにを例文に使います。",
+    "exampleEnglish": "Example with in a word.",
+    "id": 2484,
+    "image": "🏠"
+  },
+  {
+    "native": "要素",
+    "english": "element",
+    "phonetic": "ようそ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "要素を例文に使います。",
+    "exampleEnglish": "Example with element.",
+    "id": 2485,
+    "image": "🏠"
+  },
+  {
+    "native": "要点",
+    "english": "gist",
+    "phonetic": "ようてん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "要点を例文に使います。",
+    "exampleEnglish": "Example with gist.",
+    "id": 2486,
+    "image": "🏠"
+  },
+  {
+    "native": "曜日",
+    "english": "day of the week",
+    "phonetic": "ようび",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "曜日を例文に使います。",
+    "exampleEnglish": "Example with day of the week.",
+    "id": 2487,
+    "image": "🏠"
+  },
+  {
+    "native": "ヨーロッパ",
+    "english": "Europe",
+    "phonetic": "ヨーロッパ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ヨーロッパを例文に使います。",
+    "exampleEnglish": "Example with Europe.",
+    "id": 2488,
+    "image": "🏠"
+  },
+  {
+    "native": "予期",
+    "english": "expectation",
+    "phonetic": "よき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "予期を例文に使います。",
+    "exampleEnglish": "Example with expectation.",
+    "id": 2489,
+    "image": "🏠"
+  },
+  {
+    "native": "横切る",
+    "english": "to cross (e.g.",
+    "phonetic": "よこぎる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "横切るを例文に使います。",
+    "exampleEnglish": "Example with to cross (e.g..",
+    "id": 2490,
+    "image": "🏠"
+  },
+  {
+    "native": "汚す",
+    "english": "to pollute",
+    "phonetic": "よごす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "汚すを例文に使います。",
+    "exampleEnglish": "Example with to pollute.",
+    "id": 2491,
+    "image": "🏠"
+  },
+  {
+    "native": "予算",
+    "english": "estimate",
+    "phonetic": "よさん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "予算を例文に使います。",
+    "exampleEnglish": "Example with estimate.",
+    "id": 2492,
+    "image": "🏠"
+  },
+  {
+    "native": "止す",
+    "english": "to cease",
+    "phonetic": "よす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "止すを例文に使います。",
+    "exampleEnglish": "Example with to cease.",
+    "id": 2493,
+    "image": "🏠"
+  },
+  {
+    "native": "寄せる",
+    "english": "to collect",
+    "phonetic": "よせる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "寄せるを例文に使います。",
+    "exampleEnglish": "Example with to collect.",
+    "id": 2494,
+    "image": "🏠"
+  },
+  {
+    "native": "予測",
+    "english": "prediction",
+    "phonetic": "よそく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "予測を例文に使います。",
+    "exampleEnglish": "Example with prediction.",
+    "id": 2495,
+    "image": "🏠"
+  },
+  {
+    "native": "ヨット",
+    "english": "yacht",
+    "phonetic": "ヨット",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ヨットを例文に使います。",
+    "exampleEnglish": "Example with yacht.",
+    "id": 2496,
+    "image": "🏠"
+  },
+  {
+    "native": "夜中",
+    "english": "midnight",
+    "phonetic": "よなか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "夜中を例文に使います。",
+    "exampleEnglish": "Example with midnight.",
+    "id": 2497,
+    "image": "🏠"
+  },
+  {
+    "native": "世の中",
+    "english": "society",
+    "phonetic": "よのなか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "世の中を例文に使います。",
+    "exampleEnglish": "Example with society.",
+    "id": 2498,
+    "image": "🏠"
+  },
+  {
+    "native": "余分",
+    "english": "extra",
+    "phonetic": "よぶん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "余分を例文に使います。",
+    "exampleEnglish": "Example with extra.",
+    "id": 2499,
+    "image": "🏠"
+  },
+  {
+    "native": "予報",
+    "english": "forecast",
+    "phonetic": "よほう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "予報を例文に使います。",
+    "exampleEnglish": "Example with forecast.",
+    "id": 2500,
+    "image": "🏠"
+  },
+  {
+    "native": "予防",
+    "english": "prevention",
+    "phonetic": "よぼう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "予防を例文に使います。",
+    "exampleEnglish": "Example with prevention.",
+    "id": 2501,
+    "image": "🏠"
+  },
+  {
+    "native": "読み",
+    "english": "reading",
+    "phonetic": "よみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "読みを例文に使います。",
+    "exampleEnglish": "Example with reading.",
+    "id": 2502,
+    "image": "🏠"
+  },
+  {
+    "native": "嫁",
+    "english": "bride",
+    "phonetic": "よめ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "嫁を例文に使います。",
+    "exampleEnglish": "Example with bride.",
+    "id": 2503,
+    "image": "🏠"
+  },
+  {
+    "native": "余裕",
+    "english": "excess; surplus",
+    "phonetic": "よゆう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "余裕を例文に使います。",
+    "exampleEnglish": "Example with excess; surplus.",
+    "id": 2504,
+    "image": "🏠"
+  },
+  {
+    "native": "より",
+    "english": "twist",
+    "phonetic": "より",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "よりを例文に使います。",
+    "exampleEnglish": "Example with twist.",
+    "id": 2505,
+    "image": "🏠"
+  },
+  {
+    "native": "因る",
+    "english": "to come from",
+    "phonetic": "よる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "因るを例文に使います。",
+    "exampleEnglish": "Example with to come from.",
+    "id": 2506,
+    "image": "🏠"
+  },
+  {
+    "native": "喜び",
+    "english": "joy",
+    "phonetic": "よろこび",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "喜びを例文に使います。",
+    "exampleEnglish": "Example with joy.",
+    "id": 2507,
+    "image": "🏠"
+  },
+  {
+    "native": "よろしく (かん)",
+    "english": "best regards",
+    "phonetic": "よろしく (かん)",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "よろしく (かん)を例文に使います。",
+    "exampleEnglish": "Example with best regards.",
+    "id": 2508,
+    "image": "🏠"
+  },
+  {
+    "native": "来",
+    "english": "next ~",
+    "phonetic": "らい～",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "来を例文に使います。",
+    "exampleEnglish": "Example with next ~.",
+    "id": 2509,
+    "image": "🏠"
+  },
+  {
+    "native": "ライター",
+    "english": "lighter; writer",
+    "phonetic": "ライター",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ライターを例文に使います。",
+    "exampleEnglish": "Example with lighter; writer.",
+    "id": 2510,
+    "image": "🏠"
+  },
+  {
+    "native": "楽",
+    "english": "comfort",
+    "phonetic": "らく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "楽を例文に使います。",
+    "exampleEnglish": "Example with comfort.",
+    "id": 2511,
+    "image": "🏠"
+  },
+  {
+    "native": "ラケット",
+    "english": "racket",
+    "phonetic": "ラケット",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ラケットを例文に使います。",
+    "exampleEnglish": "Example with racket.",
+    "id": 2512,
+    "image": "🏠"
+  },
+  {
+    "native": "利益",
+    "english": "profits",
+    "phonetic": "りえき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "利益を例文に使います。",
+    "exampleEnglish": "Example with profits.",
+    "id": 2513,
+    "image": "🏠"
+  },
+  {
+    "native": "理解",
+    "english": "understanding",
+    "phonetic": "りかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "理解を例文に使います。",
+    "exampleEnglish": "Example with understanding.",
+    "id": 2514,
+    "image": "🏠"
+  },
+  {
+    "native": "陸",
+    "english": "land",
+    "phonetic": "りく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "陸を例文に使います。",
+    "exampleEnglish": "Example with land.",
+    "id": 2515,
+    "image": "🏠"
+  },
+  {
+    "native": "利口",
+    "english": "clever",
+    "phonetic": "りこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "利口を例文に使います。",
+    "exampleEnglish": "Example with clever.",
+    "id": 2516,
+    "image": "🏠"
+  },
+  {
+    "native": "離婚",
+    "english": "divorce",
+    "phonetic": "りこん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "離婚を例文に使います。",
+    "exampleEnglish": "Example with divorce.",
+    "id": 2517,
+    "image": "🏠"
+  },
+  {
+    "native": "理想",
+    "english": "ideal",
+    "phonetic": "りそう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "理想を例文に使います。",
+    "exampleEnglish": "Example with ideal.",
+    "id": 2518,
+    "image": "🏠"
+  },
+  {
+    "native": "率",
+    "english": "rate",
+    "phonetic": "りつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "率を例文に使います。",
+    "exampleEnglish": "Example with rate.",
+    "id": 2519,
+    "image": "🏠"
+  },
+  {
+    "native": "留学",
+    "english": "studying abroad",
+    "phonetic": "りゅうがく",
+    "category": "Study & Work",
+    "topikLevel": 2,
+    "exampleNative": "留学を例文に使います。",
+    "exampleEnglish": "Example with studying abroad.",
+    "id": 2520,
+    "image": "📚"
+  },
+  {
+    "native": "流行",
+    "english": "fashionable",
+    "phonetic": "りゅうこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "流行を例文に使います。",
+    "exampleEnglish": "Example with fashionable.",
+    "id": 2521,
+    "image": "🏠"
+  },
+  {
+    "native": "量",
+    "english": "quantity",
+    "phonetic": "りょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "量を例文に使います。",
+    "exampleEnglish": "Example with quantity.",
+    "id": 2522,
+    "image": "🏠"
+  },
+  {
+    "native": "寮",
+    "english": "hostel",
+    "phonetic": "りょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "寮を例文に使います。",
+    "exampleEnglish": "Example with hostel.",
+    "id": 2523,
+    "image": "🏠"
+  },
+  {
+    "native": "両替",
+    "english": "change",
+    "phonetic": "りょうがえ",
+    "category": "Shopping",
+    "topikLevel": 2,
+    "exampleNative": "両替を例文に使います。",
+    "exampleEnglish": "Example with change.",
+    "id": 2524,
+    "image": "🛍️"
+  },
+  {
+    "native": "料金",
+    "english": "fee",
+    "phonetic": "りょうきん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "料金を例文に使います。",
+    "exampleEnglish": "Example with fee.",
+    "id": 2525,
+    "image": "🏠"
+  },
+  {
+    "native": "例",
+    "english": "instance",
+    "phonetic": "れい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "例を例文に使います。",
+    "exampleEnglish": "Example with instance.",
+    "id": 2526,
+    "image": "🏠"
+  },
+  {
+    "native": "礼",
+    "english": "expression of gratitude; bow",
+    "phonetic": "れい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "礼を例文に使います。",
+    "exampleEnglish": "Example with expression of gratitude; bow.",
+    "id": 2527,
+    "image": "🏠"
+  },
+  {
+    "native": "例外",
+    "english": "exception",
+    "phonetic": "れいがい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "例外を例文に使います。",
+    "exampleEnglish": "Example with exception.",
+    "id": 2528,
+    "image": "🏠"
+  },
+  {
+    "native": "礼儀",
+    "english": "manners",
+    "phonetic": "れいぎ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "礼儀を例文に使います。",
+    "exampleEnglish": "Example with manners.",
+    "id": 2529,
+    "image": "🏠"
+  },
+  {
+    "native": "冷静",
+    "english": "calm",
+    "phonetic": "れいせい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "冷静を例文に使います。",
+    "exampleEnglish": "Example with calm.",
+    "id": 2530,
+    "image": "🏠"
+  },
+  {
+    "native": "列",
+    "english": "queue",
+    "phonetic": "れつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "列を例文に使います。",
+    "exampleEnglish": "Example with queue.",
+    "id": 2531,
+    "image": "🏠"
+  },
+  {
+    "native": "列車",
+    "english": "train (ordinary)",
+    "phonetic": "れっしゃ",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "列車を例文に使います。",
+    "exampleEnglish": "Example with train (ordinary).",
+    "id": 2532,
+    "image": "🚌"
+  },
+  {
+    "native": "レベル",
+    "english": "level",
+    "phonetic": "レベル",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "レベルを例文に使います。",
+    "exampleEnglish": "Example with level.",
+    "id": 2533,
+    "image": "🏠"
+  },
+  {
+    "native": "連想",
+    "english": "association (of ideas)",
+    "phonetic": "れんそう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "連想を例文に使います。",
+    "exampleEnglish": "Example with association (of ideas).",
+    "id": 2534,
+    "image": "🏠"
+  },
+  {
+    "native": "連続",
+    "english": "consecutive",
+    "phonetic": "れんぞく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "連続を例文に使います。",
+    "exampleEnglish": "Example with consecutive.",
+    "id": 2535,
+    "image": "🏠"
+  },
+  {
+    "native": "老人",
+    "english": "the aged",
+    "phonetic": "ろうじん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "老人を例文に使います。",
+    "exampleEnglish": "Example with the aged.",
+    "id": 2536,
+    "image": "🏠"
+  },
+  {
+    "native": "労働",
+    "english": "labor",
+    "phonetic": "ろうどう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "労働を例文に使います。",
+    "exampleEnglish": "Example with labor.",
+    "id": 2537,
+    "image": "🏠"
+  },
+  {
+    "native": "ロケット",
+    "english": "locket",
+    "phonetic": "ロケット",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ロケットを例文に使います。",
+    "exampleEnglish": "Example with locket.",
+    "id": 2538,
+    "image": "🏠"
+  },
+  {
+    "native": "論じる",
+    "english": "to argue",
+    "phonetic": "ろんじる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "論じるを例文に使います。",
+    "exampleEnglish": "Example with to argue.",
+    "id": 2539,
+    "image": "🏠"
+  },
+  {
+    "native": "論争",
+    "english": "controversy",
+    "phonetic": "ろんそう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "論争を例文に使います。",
+    "exampleEnglish": "Example with controversy.",
+    "id": 2540,
+    "image": "🏠"
+  },
+  {
+    "native": "論文",
+    "english": "thesis",
+    "phonetic": "ろんぶん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "論文を例文に使います。",
+    "exampleEnglish": "Example with thesis.",
+    "id": 2541,
+    "image": "🏠"
+  },
+  {
+    "native": "輪",
+    "english": "ring",
+    "phonetic": "わ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "輪を例文に使います。",
+    "exampleEnglish": "Example with ring.",
+    "id": 2542,
+    "image": "🏠"
+  },
+  {
+    "native": "ワイン",
+    "english": "wine",
+    "phonetic": "ワイン",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ワインを例文に使います。",
+    "exampleEnglish": "Example with wine.",
+    "id": 2543,
+    "image": "🏠"
+  },
+  {
+    "native": "わがまま",
+    "english": "selfishness",
+    "phonetic": "わがまま",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "わがままを例文に使います。",
+    "exampleEnglish": "Example with selfishness.",
+    "id": 2544,
+    "image": "🏠"
+  },
+  {
+    "native": "別れ",
+    "english": "parting",
+    "phonetic": "わかれ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "別れを例文に使います。",
+    "exampleEnglish": "Example with parting.",
+    "id": 2545,
+    "image": "🏠"
+  },
+  {
+    "native": "分かれる",
+    "english": "to branch off",
+    "phonetic": "わかれる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "分かれるを例文に使います。",
+    "exampleEnglish": "Example with to branch off.",
+    "id": 2546,
+    "image": "🏠"
+  },
+  {
+    "native": "脇",
+    "english": "side",
+    "phonetic": "わき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "脇を例文に使います。",
+    "exampleEnglish": "Example with side.",
+    "id": 2547,
+    "image": "🏠"
+  },
+  {
+    "native": "湧く",
+    "english": "to boil",
+    "phonetic": "わく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "湧くを例文に使います。",
+    "exampleEnglish": "Example with to boil.",
+    "id": 2548,
+    "image": "🏠"
+  },
+  {
+    "native": "分ける",
+    "english": "to divide",
+    "phonetic": "わける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "分けるを例文に使います。",
+    "exampleEnglish": "Example with to divide.",
+    "id": 2549,
+    "image": "🏠"
+  },
+  {
+    "native": "わざと",
+    "english": "on purpose",
+    "phonetic": "わざと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "わざとを例文に使います。",
+    "exampleEnglish": "Example with on purpose.",
+    "id": 2550,
+    "image": "🏠"
+  },
+  {
+    "native": "僅か",
+    "english": "only",
+    "phonetic": "わずか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "僅かを例文に使います。",
+    "exampleEnglish": "Example with only.",
+    "id": 2551,
+    "image": "🏠"
+  },
+  {
+    "native": "話題",
+    "english": "topic",
+    "phonetic": "わだい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "話題を例文に使います。",
+    "exampleEnglish": "Example with topic.",
+    "id": 2552,
+    "image": "🏠"
+  },
+  {
+    "native": "笑い",
+    "english": "laugh",
+    "phonetic": "わらい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "笑いを例文に使います。",
+    "exampleEnglish": "Example with laugh.",
+    "id": 2553,
+    "image": "🏠"
+  },
+  {
+    "native": "割る",
+    "english": "to divide",
+    "phonetic": "わる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "割るを例文に使います。",
+    "exampleEnglish": "Example with to divide.",
+    "id": 2554,
+    "image": "🏠"
+  },
+  {
+    "native": "悪口",
+    "english": "abuse",
+    "phonetic": "わるくち",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "悪口を例文に使います。",
+    "exampleEnglish": "Example with abuse.",
+    "id": 2555,
+    "image": "🚌"
+  },
+  {
+    "native": "我々",
+    "english": "we",
+    "phonetic": "われわれ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "我々を例文に使います。",
+    "exampleEnglish": "Example with we.",
+    "id": 2556,
+    "image": "🏠"
+  },
+  {
+    "native": "湾",
+    "english": "bay",
+    "phonetic": "わん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "湾を例文に使います。",
+    "exampleEnglish": "Example with bay.",
+    "id": 2557,
+    "image": "🏠"
+  },
+  {
+    "native": "椀",
+    "english": "bowl",
+    "phonetic": "わん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "椀を例文に使います。",
+    "exampleEnglish": "Example with bowl.",
+    "id": 2558,
+    "image": "🏠"
+  },
+  {
+    "native": "碗",
+    "english": "bowl",
+    "phonetic": "わん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "碗を例文に使います。",
+    "exampleEnglish": "Example with bowl.",
+    "id": 2559,
+    "image": "🏠"
+  },
+  {
+    "native": "悪",
+    "english": "evil",
+    "phonetic": "あく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "悪を例文に使います。",
+    "exampleEnglish": "Example with evil.",
+    "id": 2560,
+    "image": "🏠"
+  },
+  {
+    "native": "当り",
+    "english": "hit",
+    "phonetic": "あたり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "当りを例文に使います。",
+    "exampleEnglish": "Example with hit.",
+    "id": 2561,
+    "image": "🏠"
+  },
+  {
+    "native": "アップ",
+    "english": "up",
+    "phonetic": "アップ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "アップを例文に使います。",
+    "exampleEnglish": "Example with up.",
+    "id": 2562,
+    "image": "🏠"
+  },
+  {
+    "native": "宛てる",
+    "english": "to address",
+    "phonetic": "あてる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "宛てるを例文に使います。",
+    "exampleEnglish": "Example with to address.",
+    "id": 2563,
+    "image": "🏠"
+  },
+  {
+    "native": "アンケート",
+    "english": "questionnaire (FRE: enquete)",
+    "phonetic": "アンケート",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "アンケートを例文に使います。",
+    "exampleEnglish": "Example with questionnaire (FRE: enquete).",
+    "id": 2564,
+    "image": "🏠"
+  },
+  {
+    "native": "異",
+    "english": "objection",
+    "phonetic": "い",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "異を例文に使います。",
+    "exampleEnglish": "Example with objection.",
+    "id": 2565,
+    "image": "🏠"
+  },
+  {
+    "native": "意",
+    "english": "will",
+    "phonetic": "い",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "意を例文に使います。",
+    "exampleEnglish": "Example with will.",
+    "id": 2566,
+    "image": "🏠"
+  },
+  {
+    "native": "医院",
+    "english": "doctor's office (surgery)",
+    "phonetic": "いいん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "医院を例文に使います。",
+    "exampleEnglish": "Example with doctor's office (surgery).",
+    "id": 2567,
+    "image": "🏠"
+  },
+  {
+    "native": "怒り",
+    "english": "anger",
+    "phonetic": "いかり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "怒りを例文に使います。",
+    "exampleEnglish": "Example with anger.",
+    "id": 2568,
+    "image": "🏠"
+  },
+  {
+    "native": "粋",
+    "english": "chic",
+    "phonetic": "いき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "粋を例文に使います。",
+    "exampleEnglish": "Example with chic.",
+    "id": 2569,
+    "image": "🏠"
+  },
+  {
+    "native": "意地",
+    "english": "disposition",
+    "phonetic": "いじ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "意地を例文に使います。",
+    "exampleEnglish": "Example with disposition.",
+    "id": 2570,
+    "image": "🏠"
+  },
+  {
+    "native": "依然",
+    "english": "still",
+    "phonetic": "いぜん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "依然を例文に使います。",
+    "exampleEnglish": "Example with still.",
+    "id": 2571,
+    "image": "🏠"
+  },
+  {
+    "native": "傷める",
+    "english": "to damage",
+    "phonetic": "いためる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "傷めるを例文に使います。",
+    "exampleEnglish": "Example with to damage.",
+    "id": 2572,
+    "image": "🏠"
+  },
+  {
+    "native": "炒める",
+    "english": "to stir-fry",
+    "phonetic": "いためる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "炒めるを例文に使います。",
+    "exampleEnglish": "Example with to stir-fry.",
+    "id": 2573,
+    "image": "🏠"
+  },
+  {
+    "native": "一帯",
+    "english": "a region",
+    "phonetic": "いったい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "一帯を例文に使います。",
+    "exampleEnglish": "Example with a region.",
+    "id": 2574,
+    "image": "🏠"
+  },
+  {
+    "native": "異動",
+    "english": "a change",
+    "phonetic": "いどう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "異動を例文に使います。",
+    "exampleEnglish": "Example with a change.",
+    "id": 2575,
+    "image": "🏠"
+  },
+  {
+    "native": "衣料",
+    "english": "clothing",
+    "phonetic": "いりょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "衣料を例文に使います。",
+    "exampleEnglish": "Example with clothing.",
+    "id": 2576,
+    "image": "🏠"
+  },
+  {
+    "native": "渦",
+    "english": "swirl",
+    "phonetic": "うず",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "渦を例文に使います。",
+    "exampleEnglish": "Example with swirl.",
+    "id": 2577,
+    "image": "🏠"
+  },
+  {
+    "native": "埋まる",
+    "english": "to be buried",
+    "phonetic": "うまる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "埋まるを例文に使います。",
+    "exampleEnglish": "Example with to be buried.",
+    "id": 2578,
+    "image": "🏠"
+  },
+  {
+    "native": "産む",
+    "english": "to give birth (v.t.)",
+    "phonetic": "うむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "産むを例文に使います。",
+    "exampleEnglish": "Example with to give birth (v.t.).",
+    "id": 2579,
+    "image": "🏠"
+  },
+  {
+    "native": "縁",
+    "english": "chance",
+    "phonetic": "えん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "縁を例文に使います。",
+    "exampleEnglish": "Example with chance.",
+    "id": 2580,
+    "image": "🏠"
+  },
+  {
+    "native": "尾",
+    "english": "tail",
+    "phonetic": "お",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "尾を例文に使います。",
+    "exampleEnglish": "Example with tail.",
+    "id": 2581,
+    "image": "🏠"
+  },
+  {
+    "native": "負う",
+    "english": "to bear",
+    "phonetic": "おう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "負うを例文に使います。",
+    "exampleEnglish": "Example with to bear.",
+    "id": 2582,
+    "image": "🏠"
+  },
+  {
+    "native": "遅れ",
+    "english": "delay",
+    "phonetic": "おくれ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "遅れを例文に使います。",
+    "exampleEnglish": "Example with delay.",
+    "id": 2583,
+    "image": "🏠"
+  },
+  {
+    "native": "教え",
+    "english": "teachings",
+    "phonetic": "おしえ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "教えを例文に使います。",
+    "exampleEnglish": "Example with teachings.",
+    "id": 2584,
+    "image": "🏠"
+  },
+  {
+    "native": "驚き",
+    "english": "surprise",
+    "phonetic": "おどろき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "驚きを例文に使います。",
+    "exampleEnglish": "Example with surprise.",
+    "id": 2585,
+    "image": "🏠"
+  },
+  {
+    "native": "織る",
+    "english": "to weave",
+    "phonetic": "おる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "織るを例文に使います。",
+    "exampleEnglish": "Example with to weave.",
+    "id": 2586,
+    "image": "🏠"
+  },
+  {
+    "native": "欠く",
+    "english": "to lack",
+    "phonetic": "かく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "欠くを例文に使います。",
+    "exampleEnglish": "Example with to lack.",
+    "id": 2587,
+    "image": "🏠"
+  },
+  {
+    "native": "核",
+    "english": "nucleus",
+    "phonetic": "かく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "核を例文に使います。",
+    "exampleEnglish": "Example with nucleus.",
+    "id": 2588,
+    "image": "🏠"
+  },
+  {
+    "native": "格",
+    "english": "status",
+    "phonetic": "かく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "格を例文に使います。",
+    "exampleEnglish": "Example with status.",
+    "id": 2589,
+    "image": "🏠"
+  },
+  {
+    "native": "学歴",
+    "english": "academic background",
+    "phonetic": "がくれき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "学歴を例文に使います。",
+    "exampleEnglish": "Example with academic background.",
+    "id": 2590,
+    "image": "🏠"
+  },
+  {
+    "native": "駆ける",
+    "english": "to run",
+    "phonetic": "かける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "駆けるを例文に使います。",
+    "exampleEnglish": "Example with to run.",
+    "id": 2591,
+    "image": "🏠"
+  },
+  {
+    "native": "賭ける",
+    "english": "to bet",
+    "phonetic": "かける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "賭けるを例文に使います。",
+    "exampleEnglish": "Example with to bet.",
+    "id": 2592,
+    "image": "🏠"
+  },
+  {
+    "native": "課題",
+    "english": "subject",
+    "phonetic": "かだい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "課題を例文に使います。",
+    "exampleEnglish": "Example with subject.",
+    "id": 2593,
+    "image": "🏠"
+  },
+  {
+    "native": "片付け",
+    "english": "tidying up",
+    "phonetic": "かたづけ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "片付けを例文に使います。",
+    "exampleEnglish": "Example with tidying up.",
+    "id": 2594,
+    "image": "🏠"
+  },
+  {
+    "native": "加味",
+    "english": "seasoning",
+    "phonetic": "かみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "加味を例文に使います。",
+    "exampleEnglish": "Example with seasoning.",
+    "id": 2595,
+    "image": "🏠"
+  },
+  {
+    "native": "借り",
+    "english": "borrowing",
+    "phonetic": "かり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "借りを例文に使います。",
+    "exampleEnglish": "Example with borrowing.",
+    "id": 2596,
+    "image": "🏠"
+  },
+  {
+    "native": "狩り",
+    "english": "hunting",
+    "phonetic": "かり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "狩りを例文に使います。",
+    "exampleEnglish": "Example with hunting.",
+    "id": 2597,
+    "image": "🏠"
+  },
+  {
+    "native": "～観",
+    "english": "feeling",
+    "phonetic": "かん",
+    "category": "Feelings",
+    "topikLevel": 2,
+    "exampleNative": "～観を例文に使います。",
+    "exampleEnglish": "Example with feeling.",
+    "id": 2598,
+    "image": "💕"
+  },
+  {
+    "native": "癌",
+    "english": "cancer",
+    "phonetic": "がん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "癌を例文に使います。",
+    "exampleEnglish": "Example with cancer.",
+    "id": 2599,
+    "image": "🏠"
+  },
+  {
+    "native": "刊行",
+    "english": "publication",
+    "phonetic": "かんこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "刊行を例文に使います。",
+    "exampleEnglish": "Example with publication.",
+    "id": 2600,
+    "image": "🏠"
+  },
+  {
+    "native": "慣行",
+    "english": "customary practice",
+    "phonetic": "かんこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "慣行を例文に使います。",
+    "exampleEnglish": "Example with customary practice.",
+    "id": 2601,
+    "image": "🏠"
+  },
+  {
+    "native": "歓声",
+    "english": "cheer",
+    "phonetic": "かんせい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "歓声を例文に使います。",
+    "exampleEnglish": "Example with cheer.",
+    "id": 2602,
+    "image": "🏠"
+  },
+  {
+    "native": "官僚",
+    "english": "bureaucrat",
+    "phonetic": "かんりょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "官僚を例文に使います。",
+    "exampleEnglish": "Example with bureaucrat.",
+    "id": 2603,
+    "image": "🏠"
+  },
+  {
+    "native": "器官",
+    "english": "organ (of body",
+    "phonetic": "きかん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "器官を例文に使います。",
+    "exampleEnglish": "Example with organ (of body.",
+    "id": 2604,
+    "image": "🏠"
+  },
+  {
+    "native": "季刊",
+    "english": "quarterly (e.g.",
+    "phonetic": "きかん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "季刊を例文に使います。",
+    "exampleEnglish": "Example with quarterly (e.g..",
+    "id": 2605,
+    "image": "🏠"
+  },
+  {
+    "native": "起源",
+    "english": "origin",
+    "phonetic": "きげん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "起源を例文に使います。",
+    "exampleEnglish": "Example with origin.",
+    "id": 2606,
+    "image": "🏠"
+  },
+  {
+    "native": "機構",
+    "english": "mechanism",
+    "phonetic": "きこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "機構を例文に使います。",
+    "exampleEnglish": "Example with mechanism.",
+    "id": 2607,
+    "image": "🏠"
+  },
+  {
+    "native": "築く",
+    "english": "to build",
+    "phonetic": "きずく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "築くを例文に使います。",
+    "exampleEnglish": "Example with to build.",
+    "id": 2608,
+    "image": "🏠"
+  },
+  {
+    "native": "規制",
+    "english": "regulation",
+    "phonetic": "きせい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "規制を例文に使います。",
+    "exampleEnglish": "Example with regulation.",
+    "id": 2609,
+    "image": "🏠"
+  },
+  {
+    "native": "丘陵",
+    "english": "hill",
+    "phonetic": "きゅうりょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "丘陵を例文に使います。",
+    "exampleEnglish": "Example with hill.",
+    "id": 2610,
+    "image": "🏠"
+  },
+  {
+    "native": "協議",
+    "english": "conference",
+    "phonetic": "きょうぎ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "協議を例文に使います。",
+    "exampleEnglish": "Example with conference.",
+    "id": 2611,
+    "image": "🏠"
+  },
+  {
+    "native": "享受",
+    "english": "enjoyment",
+    "phonetic": "きょうじゅ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "享受を例文に使います。",
+    "exampleEnglish": "Example with enjoyment.",
+    "id": 2612,
+    "image": "🏠"
+  },
+  {
+    "native": "協調",
+    "english": "co-operation",
+    "phonetic": "きょうちょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "協調を例文に使います。",
+    "exampleEnglish": "Example with co-operation.",
+    "id": 2613,
+    "image": "🏠"
+  },
+  {
+    "native": "切り",
+    "english": "limits",
+    "phonetic": "きり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "切りを例文に使います。",
+    "exampleEnglish": "Example with limits.",
+    "id": 2614,
+    "image": "🏠"
+  },
+  {
+    "native": "菌",
+    "english": "germ",
+    "phonetic": "きん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "菌を例文に使います。",
+    "exampleEnglish": "Example with germ.",
+    "id": 2615,
+    "image": "🏠"
+  },
+  {
+    "native": "近視",
+    "english": "nearsightedness",
+    "phonetic": "きんし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "近視を例文に使います。",
+    "exampleEnglish": "Example with nearsightedness.",
+    "id": 2616,
+    "image": "🏠"
+  },
+  {
+    "native": "苦",
+    "english": "trouble",
+    "phonetic": "く",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "苦を例文に使います。",
+    "exampleEnglish": "Example with trouble.",
+    "id": 2617,
+    "image": "🏠"
+  },
+  {
+    "native": "群",
+    "english": "group",
+    "phonetic": "ぐん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "群を例文に使います。",
+    "exampleEnglish": "Example with group.",
+    "id": 2618,
+    "image": "🏠"
+  },
+  {
+    "native": "刑",
+    "english": "penalty",
+    "phonetic": "けい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "刑を例文に使います。",
+    "exampleEnglish": "Example with penalty.",
+    "id": 2619,
+    "image": "🏠"
+  },
+  {
+    "native": "経緯",
+    "english": "sequence of events",
+    "phonetic": "けいい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "経緯を例文に使います。",
+    "exampleEnglish": "Example with sequence of events.",
+    "id": 2620,
+    "image": "🏠"
+  },
+  {
+    "native": "計器",
+    "english": "meter",
+    "phonetic": "けいき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "計器を例文に使います。",
+    "exampleEnglish": "Example with meter.",
+    "id": 2621,
+    "image": "🏠"
+  },
+  {
+    "native": "契機",
+    "english": "opportunity",
+    "phonetic": "けいき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "契機を例文に使います。",
+    "exampleEnglish": "Example with opportunity.",
+    "id": 2622,
+    "image": "🏠"
+  },
+  {
+    "native": "携帯",
+    "english": "carrying something; mobile telephone",
+    "phonetic": "けいたい",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "携帯を例文に使います。",
+    "exampleEnglish": "Example with carrying something; mobile telephone.",
+    "id": 2623,
+    "image": "🚌"
+  },
+  {
+    "native": "形態",
+    "english": "form",
+    "phonetic": "けいたい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "形態を例文に使います。",
+    "exampleEnglish": "Example with form.",
+    "id": 2624,
+    "image": "🏠"
+  },
+  {
+    "native": "血管",
+    "english": "blood vessel",
+    "phonetic": "けっかん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "血管を例文に使います。",
+    "exampleEnglish": "Example with blood vessel.",
+    "id": 2625,
+    "image": "🏠"
+  },
+  {
+    "native": "決行",
+    "english": "doing (with resolve)",
+    "phonetic": "けっこう",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "決行を例文に使います。",
+    "exampleEnglish": "Example with doing (with resolve).",
+    "id": 2626,
+    "image": "🚌"
+  },
+  {
+    "native": "件",
+    "english": "matter",
+    "phonetic": "けん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "件を例文に使います。",
+    "exampleEnglish": "Example with matter.",
+    "id": 2627,
+    "image": "🏠"
+  },
+  {
+    "native": "減少",
+    "english": "decrease",
+    "phonetic": "げんしょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "減少を例文に使います。",
+    "exampleEnglish": "Example with decrease.",
+    "id": 2628,
+    "image": "🏠"
+  },
+  {
+    "native": "公演",
+    "english": "public performance",
+    "phonetic": "こうえん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "公演を例文に使います。",
+    "exampleEnglish": "Example with public performance.",
+    "id": 2629,
+    "image": "🏠"
+  },
+  {
+    "native": "後悔",
+    "english": "regret",
+    "phonetic": "こうかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "後悔を例文に使います。",
+    "exampleEnglish": "Example with regret.",
+    "id": 2630,
+    "image": "🏠"
+  },
+  {
+    "native": "航海",
+    "english": "sail",
+    "phonetic": "こうかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "航海を例文に使います。",
+    "exampleEnglish": "Example with sail.",
+    "id": 2631,
+    "image": "🏠"
+  },
+  {
+    "native": "拘束",
+    "english": "restriction",
+    "phonetic": "こうそく",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "拘束を例文に使います。",
+    "exampleEnglish": "Example with restriction.",
+    "id": 2632,
+    "image": "🚌"
+  },
+  {
+    "native": "荒廃",
+    "english": "ruin",
+    "phonetic": "こうはい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "荒廃を例文に使います。",
+    "exampleEnglish": "Example with ruin.",
+    "id": 2633,
+    "image": "🏠"
+  },
+  {
+    "native": "降伏",
+    "english": "capitulation",
+    "phonetic": "こうふく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "降伏を例文に使います。",
+    "exampleEnglish": "Example with capitulation.",
+    "id": 2634,
+    "image": "🏠"
+  },
+  {
+    "native": "興奮",
+    "english": "excitement",
+    "phonetic": "こうふん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "興奮を例文に使います。",
+    "exampleEnglish": "Example with excitement.",
+    "id": 2635,
+    "image": "🏠"
+  },
+  {
+    "native": "語句",
+    "english": "words",
+    "phonetic": "ごく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "語句を例文に使います。",
+    "exampleEnglish": "Example with words.",
+    "id": 2636,
+    "image": "🏠"
+  },
+  {
+    "native": "個々",
+    "english": "individual",
+    "phonetic": "ここ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "個々を例文に使います。",
+    "exampleEnglish": "Example with individual.",
+    "id": 2637,
+    "image": "🏠"
+  },
+  {
+    "native": "故人",
+    "english": "the deceased",
+    "phonetic": "こじん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "故人を例文に使います。",
+    "exampleEnglish": "Example with the deceased.",
+    "id": 2638,
+    "image": "🏠"
+  },
+  {
+    "native": "小銭",
+    "english": "coins",
+    "phonetic": "こぜに",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "小銭を例文に使います。",
+    "exampleEnglish": "Example with coins.",
+    "id": 2639,
+    "image": "🏠"
+  },
+  {
+    "native": "ことによると",
+    "english": "(depending on the circumstances)",
+    "phonetic": "ことによると",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ことによるとを例文に使います。",
+    "exampleEnglish": "Example with (depending on the circumstances).",
+    "id": 2640,
+    "image": "🏠"
+  },
+  {
+    "native": "コンテスト",
+    "english": "contest",
+    "phonetic": "コンテスト",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "コンテストを例文に使います。",
+    "exampleEnglish": "Example with contest.",
+    "id": 2641,
+    "image": "🏠"
+  },
+  {
+    "native": "採集",
+    "english": "collecting",
+    "phonetic": "さいしゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "採集を例文に使います。",
+    "exampleEnglish": "Example with collecting.",
+    "id": 2642,
+    "image": "🏠"
+  },
+  {
+    "native": "作",
+    "english": "a work",
+    "phonetic": "さく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "作を例文に使います。",
+    "exampleEnglish": "Example with a work.",
+    "id": 2643,
+    "image": "🏠"
+  },
+  {
+    "native": "策",
+    "english": "plan",
+    "phonetic": "さく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "策を例文に使います。",
+    "exampleEnglish": "Example with plan.",
+    "id": 2644,
+    "image": "🏠"
+  },
+  {
+    "native": "設備",
+    "english": "equipment",
+    "phonetic": "せつび",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "設備を例文に使います。",
+    "exampleEnglish": "Example with equipment.",
+    "id": 2645,
+    "image": "🏠"
+  },
+  {
+    "native": "絶滅",
+    "english": "destruction",
+    "phonetic": "ぜつめつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "絶滅を例文に使います。",
+    "exampleEnglish": "Example with destruction.",
+    "id": 2646,
+    "image": "🏠"
+  },
+  {
+    "native": "節約",
+    "english": "economizing",
+    "phonetic": "せつやく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "節約を例文に使います。",
+    "exampleEnglish": "Example with economizing.",
+    "id": 2647,
+    "image": "🏠"
+  },
+  {
+    "native": "攻める",
+    "english": "to attack",
+    "phonetic": "せめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "攻めるを例文に使います。",
+    "exampleEnglish": "Example with to attack.",
+    "id": 2648,
+    "image": "🏠"
+  },
+  {
+    "native": "責める",
+    "english": "to condemn",
+    "phonetic": "せめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "責めるを例文に使います。",
+    "exampleEnglish": "Example with to condemn.",
+    "id": 2649,
+    "image": "🏠"
+  },
+  {
+    "native": "善",
+    "english": "good",
+    "phonetic": "ぜん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "善を例文に使います。",
+    "exampleEnglish": "Example with good.",
+    "id": 2650,
+    "image": "🏠"
+  },
+  {
+    "native": "全",
+    "english": "all",
+    "phonetic": "ぜん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "全を例文に使います。",
+    "exampleEnglish": "Example with all.",
+    "id": 2651,
+    "image": "🏠"
+  },
+  {
+    "native": "全員",
+    "english": "all members",
+    "phonetic": "ぜんいん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "全員を例文に使います。",
+    "exampleEnglish": "Example with all members.",
+    "id": 2652,
+    "image": "🏠"
+  },
+  {
+    "native": "専攻",
+    "english": "major subject",
+    "phonetic": "せんこう",
+    "category": "Study & Work",
+    "topikLevel": 2,
+    "exampleNative": "専攻を例文に使います。",
+    "exampleEnglish": "Example with major subject.",
+    "id": 2653,
+    "image": "📚"
+  },
+  {
+    "native": "全国",
+    "english": "the entire nation",
+    "phonetic": "ぜんこく",
+    "category": "Numbers",
+    "topikLevel": 2,
+    "exampleNative": "全国を例文に使います。",
+    "exampleEnglish": "Example with the entire nation.",
+    "id": 2654,
+    "image": "🔢"
+  },
+  {
+    "native": "洗剤",
+    "english": "detergent",
+    "phonetic": "せんざい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "洗剤を例文に使います。",
+    "exampleEnglish": "Example with detergent.",
+    "id": 2655,
+    "image": "🏠"
+  },
+  {
+    "native": "先日",
+    "english": "the other day",
+    "phonetic": "せんじつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "先日を例文に使います。",
+    "exampleEnglish": "Example with the other day.",
+    "id": 2656,
+    "image": "🏠"
+  },
+  {
+    "native": "前者",
+    "english": "the former",
+    "phonetic": "ぜんしゃ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "前者を例文に使います。",
+    "exampleEnglish": "Example with the former.",
+    "id": 2657,
+    "image": "🏠"
+  },
+  {
+    "native": "選手",
+    "english": "player selected for a team (usually athletic)",
+    "phonetic": "せんしゅ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "選手を例文に使います。",
+    "exampleEnglish": "Example with player selected for a team (usually athletic).",
+    "id": 2658,
+    "image": "🏠"
+  },
+  {
+    "native": "全身",
+    "english": "the whole body",
+    "phonetic": "ぜんしん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "全身を例文に使います。",
+    "exampleEnglish": "Example with the whole body.",
+    "id": 2659,
+    "image": "🏠"
+  },
+  {
+    "native": "前進",
+    "english": "advance",
+    "phonetic": "ぜんしん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "前進を例文に使います。",
+    "exampleEnglish": "Example with advance.",
+    "id": 2660,
+    "image": "🏠"
+  },
+  {
+    "native": "センター",
+    "english": "center",
+    "phonetic": "センター",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "センターを例文に使います。",
+    "exampleEnglish": "Example with center.",
+    "id": 2661,
+    "image": "🏠"
+  },
+  {
+    "native": "全体",
+    "english": "whole",
+    "phonetic": "ぜんたい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "全体を例文に使います。",
+    "exampleEnglish": "Example with whole.",
+    "id": 2662,
+    "image": "🏠"
+  },
+  {
+    "native": "選択",
+    "english": "selection",
+    "phonetic": "せんたく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "選択を例文に使います。",
+    "exampleEnglish": "Example with selection.",
+    "id": 2663,
+    "image": "🏠"
+  },
+  {
+    "native": "宣伝",
+    "english": "advertisement",
+    "phonetic": "せんでん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "宣伝を例文に使います。",
+    "exampleEnglish": "Example with advertisement.",
+    "id": 2664,
+    "image": "🏠"
+  },
+  {
+    "native": "象",
+    "english": "elephant",
+    "phonetic": "ぞう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "象を例文に使います。",
+    "exampleEnglish": "Example with elephant.",
+    "id": 2665,
+    "image": "🏠"
+  },
+  {
+    "native": "騒音",
+    "english": "noise",
+    "phonetic": "そうおん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "騒音を例文に使います。",
+    "exampleEnglish": "Example with noise.",
+    "id": 2666,
+    "image": "🏠"
+  },
+  {
+    "native": "増加",
+    "english": "increase",
+    "phonetic": "ぞうか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "増加を例文に使います。",
+    "exampleEnglish": "Example with increase.",
+    "id": 2667,
+    "image": "🏠"
+  },
+  {
+    "native": "操作",
+    "english": "operation",
+    "phonetic": "そうさ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "操作を例文に使います。",
+    "exampleEnglish": "Example with operation.",
+    "id": 2668,
+    "image": "🏠"
+  },
+  {
+    "native": "想像",
+    "english": "imagination",
+    "phonetic": "そうぞう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "想像を例文に使います。",
+    "exampleEnglish": "Example with imagination.",
+    "id": 2669,
+    "image": "🏠"
+  },
+  {
+    "native": "相続",
+    "english": "succession",
+    "phonetic": "そうぞく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "相続を例文に使います。",
+    "exampleEnglish": "Example with succession.",
+    "id": 2670,
+    "image": "🏠"
+  },
+  {
+    "native": "装置",
+    "english": "equipment",
+    "phonetic": "そうち",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "装置を例文に使います。",
+    "exampleEnglish": "Example with equipment.",
+    "id": 2671,
+    "image": "🏠"
+  },
+  {
+    "native": "相当",
+    "english": "considerably",
+    "phonetic": "そうとう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "相当を例文に使います。",
+    "exampleEnglish": "Example with considerably.",
+    "id": 2672,
+    "image": "🏠"
+  },
+  {
+    "native": "速度",
+    "english": "speed",
+    "phonetic": "そくど",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "速度を例文に使います。",
+    "exampleEnglish": "Example with speed.",
+    "id": 2673,
+    "image": "🏠"
+  },
+  {
+    "native": "底",
+    "english": "bottom",
+    "phonetic": "そこ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "底を例文に使います。",
+    "exampleEnglish": "Example with bottom.",
+    "id": 2674,
+    "image": "🏠"
+  },
+  {
+    "native": "そこで",
+    "english": "so (conj.)",
+    "phonetic": "そこで",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "そこでを例文に使います。",
+    "exampleEnglish": "Example with so (conj.).",
+    "id": 2675,
+    "image": "🏠"
+  },
+  {
+    "native": "組織",
+    "english": "organization; structure; tissue",
+    "phonetic": "そしき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "組織を例文に使います。",
+    "exampleEnglish": "Example with organization; structure; tissue.",
+    "id": 2676,
+    "image": "🏠"
+  },
+  {
+    "native": "そして",
+    "english": "and then",
+    "phonetic": "そして",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "そしてを例文に使います。",
+    "exampleEnglish": "Example with and then.",
+    "id": 2677,
+    "image": "🏠"
+  },
+  {
+    "native": "注ぐ",
+    "english": "to pour (into)",
+    "phonetic": "そそぐ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "注ぐを例文に使います。",
+    "exampleEnglish": "Example with to pour (into).",
+    "id": 2678,
+    "image": "🏠"
+  },
+  {
+    "native": "育つ",
+    "english": "to be brought up",
+    "phonetic": "そだつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "育つを例文に使います。",
+    "exampleEnglish": "Example with to be brought up.",
+    "id": 2679,
+    "image": "🏠"
+  },
+  {
+    "native": "そっくり",
+    "english": "the splitting image of; entirely",
+    "phonetic": "そっくり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "そっくりを例文に使います。",
+    "exampleEnglish": "Example with the splitting image of; entirely.",
+    "id": 2680,
+    "image": "🏠"
+  },
+  {
+    "native": "そっと",
+    "english": "softly",
+    "phonetic": "そっと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "そっとを例文に使います。",
+    "exampleEnglish": "Example with softly.",
+    "id": 2681,
+    "image": "🏠"
+  },
+  {
+    "native": "袖",
+    "english": "sleeve",
+    "phonetic": "そで",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "袖を例文に使います。",
+    "exampleEnglish": "Example with sleeve.",
+    "id": 2682,
+    "image": "🏠"
+  },
+  {
+    "native": "備える",
+    "english": "to prepare",
+    "phonetic": "そなえる",
+    "category": "Shopping",
+    "topikLevel": 2,
+    "exampleNative": "備えるを例文に使います。",
+    "exampleEnglish": "Example with to prepare.",
+    "id": 2683,
+    "image": "🛍️"
+  },
+  {
+    "native": "具える",
+    "english": "to be furnished with",
+    "phonetic": "そなえる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "具えるを例文に使います。",
+    "exampleEnglish": "Example with to be furnished with.",
+    "id": 2684,
+    "image": "🏠"
+  },
+  {
+    "native": "そのうえ",
+    "english": "in addition",
+    "phonetic": "そのうえ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "そのうえを例文に使います。",
+    "exampleEnglish": "Example with in addition.",
+    "id": 2685,
+    "image": "🏠"
+  },
+  {
+    "native": "そのうち",
+    "english": "before long",
+    "phonetic": "そのうち",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "そのうちを例文に使います。",
+    "exampleEnglish": "Example with before long.",
+    "id": 2686,
+    "image": "🏠"
+  },
+  {
+    "native": "そのまま",
+    "english": "without change",
+    "phonetic": "そのまま",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "そのままを例文に使います。",
+    "exampleEnglish": "Example with without change.",
+    "id": 2687,
+    "image": "🏠"
+  },
+  {
+    "native": "蕎麦",
+    "english": "soba (buckwheat noodles)",
+    "phonetic": "そば",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "蕎麦を例文に使います。",
+    "exampleEnglish": "Example with soba (buckwheat noodles).",
+    "id": 2688,
+    "image": "🍜"
+  },
+  {
+    "native": "ソファー",
+    "english": "sofa",
+    "phonetic": "ソファー",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ソファーを例文に使います。",
+    "exampleEnglish": "Example with sofa.",
+    "id": 2689,
+    "image": "🏠"
+  },
+  {
+    "native": "粗末",
+    "english": "humble",
+    "phonetic": "そまつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "粗末を例文に使います。",
+    "exampleEnglish": "Example with humble.",
+    "id": 2690,
+    "image": "🏠"
+  },
+  {
+    "native": "それぞれ",
+    "english": "each",
+    "phonetic": "それぞれ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "それぞれを例文に使います。",
+    "exampleEnglish": "Example with each.",
+    "id": 2691,
+    "image": "🏠"
+  },
+  {
+    "native": "それでも",
+    "english": "but (still)",
+    "phonetic": "それでも",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "それでもを例文に使います。",
+    "exampleEnglish": "Example with but (still).",
+    "id": 2692,
+    "image": "🏠"
+  },
+  {
+    "native": "それと",
+    "english": "and",
+    "phonetic": "それと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "それとを例文に使います。",
+    "exampleEnglish": "Example with and.",
+    "id": 2693,
+    "image": "🏠"
+  },
+  {
+    "native": "それとも",
+    "english": "or",
+    "phonetic": "それとも",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "それともを例文に使います。",
+    "exampleEnglish": "Example with or.",
+    "id": 2694,
+    "image": "🏠"
+  },
+  {
+    "native": "揃う",
+    "english": "to become complete",
+    "phonetic": "そろう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "揃うを例文に使います。",
+    "exampleEnglish": "Example with to become complete.",
+    "id": 2695,
+    "image": "🏠"
+  },
+  {
+    "native": "揃える",
+    "english": "to put things in order",
+    "phonetic": "そろえる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "揃えるを例文に使います。",
+    "exampleEnglish": "Example with to put things in order.",
+    "id": 2696,
+    "image": "🏠"
+  },
+  {
+    "native": "損",
+    "english": "loss",
+    "phonetic": "そん",
+    "category": "Feelings",
+    "topikLevel": 2,
+    "exampleNative": "損を例文に使います。",
+    "exampleEnglish": "Example with loss.",
+    "id": 2697,
+    "image": "💕"
+  },
+  {
+    "native": "損害",
+    "english": "damage",
+    "phonetic": "そんがい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "損害を例文に使います。",
+    "exampleEnglish": "Example with damage.",
+    "id": 2698,
+    "image": "🏠"
+  },
+  {
+    "native": "尊敬",
+    "english": "respect",
+    "phonetic": "そんけい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "尊敬を例文に使います。",
+    "exampleEnglish": "Example with respect.",
+    "id": 2699,
+    "image": "🏠"
+  },
+  {
+    "native": "存在",
+    "english": "existence",
+    "phonetic": "そんざい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "存在を例文に使います。",
+    "exampleEnglish": "Example with existence.",
+    "id": 2700,
+    "image": "🏠"
+  },
+  {
+    "native": "尊重",
+    "english": "respect",
+    "phonetic": "そんちょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "尊重を例文に使います。",
+    "exampleEnglish": "Example with respect.",
+    "id": 2701,
+    "image": "🏠"
+  },
+  {
+    "native": "田",
+    "english": "rice field",
+    "phonetic": "た",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "田を例文に使います。",
+    "exampleEnglish": "Example with rice field.",
+    "id": 2702,
+    "image": "🏠"
+  },
+  {
+    "native": "他",
+    "english": "other (esp. places and things)",
+    "phonetic": "た",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "他を例文に使います。",
+    "exampleEnglish": "Example with other (esp. places and things).",
+    "id": 2703,
+    "image": "🏠"
+  },
+  {
+    "native": "対",
+    "english": "pair",
+    "phonetic": "たい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "対を例文に使います。",
+    "exampleEnglish": "Example with pair.",
+    "id": 2704,
+    "image": "🏠"
+  },
+  {
+    "native": "大",
+    "english": "big",
+    "phonetic": "だい",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "大を例文に使います。",
+    "exampleEnglish": "Example with big.",
+    "id": 2705,
+    "image": "🍜"
+  },
+  {
+    "native": "題",
+    "english": "title",
+    "phonetic": "だい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "題を例文に使います。",
+    "exampleEnglish": "Example with title.",
+    "id": 2706,
+    "image": "🏠"
+  },
+  {
+    "native": "体育",
+    "english": "physical education",
+    "phonetic": "たいいく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "体育を例文に使います。",
+    "exampleEnglish": "Example with physical education.",
+    "id": 2707,
+    "image": "🏠"
+  },
+  {
+    "native": "体温",
+    "english": "temperature (body)",
+    "phonetic": "たいおん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "体温を例文に使います。",
+    "exampleEnglish": "Example with temperature (body).",
+    "id": 2708,
+    "image": "🏠"
+  },
+  {
+    "native": "大会",
+    "english": "convention",
+    "phonetic": "たいかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "大会を例文に使います。",
+    "exampleEnglish": "Example with convention.",
+    "id": 2709,
+    "image": "🏠"
+  },
+  {
+    "native": "大気",
+    "english": "atmosphere",
+    "phonetic": "たいき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "大気を例文に使います。",
+    "exampleEnglish": "Example with atmosphere.",
+    "id": 2710,
+    "image": "🏠"
+  },
+  {
+    "native": "代金",
+    "english": "price",
+    "phonetic": "だいきん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "代金を例文に使います。",
+    "exampleEnglish": "Example with price.",
+    "id": 2711,
+    "image": "🏠"
+  },
+  {
+    "native": "退屈",
+    "english": "tedium",
+    "phonetic": "たいくつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "退屈を例文に使います。",
+    "exampleEnglish": "Example with tedium.",
+    "id": 2712,
+    "image": "🏠"
+  },
+  {
+    "native": "滞在",
+    "english": "stay",
+    "phonetic": "たいざい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "滞在を例文に使います。",
+    "exampleEnglish": "Example with stay.",
+    "id": 2713,
+    "image": "🏠"
+  },
+  {
+    "native": "大使",
+    "english": "ambassador",
+    "phonetic": "たいし",
+    "category": "Feelings",
+    "topikLevel": 2,
+    "exampleNative": "大使を例文に使います。",
+    "exampleEnglish": "Example with ambassador.",
+    "id": 2714,
+    "image": "💕"
+  },
+  {
+    "native": "大した",
+    "english": "significant",
+    "phonetic": "たいした",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "大したを例文に使います。",
+    "exampleEnglish": "Example with significant.",
+    "id": 2715,
+    "image": "🍜"
+  },
+  {
+    "native": "体重",
+    "english": "(body) weight",
+    "phonetic": "たいじゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "体重を例文に使います。",
+    "exampleEnglish": "Example with (body) weight.",
+    "id": 2716,
+    "image": "🏠"
+  },
+  {
+    "native": "対象",
+    "english": "target; object (of worship",
+    "phonetic": "たいしょう",
+    "category": "Study & Work",
+    "topikLevel": 2,
+    "exampleNative": "対象を例文に使います。",
+    "exampleEnglish": "Example with target; object (of worship.",
+    "id": 2717,
+    "image": "📚"
+  },
+  {
+    "native": "対照",
+    "english": "contrast",
+    "phonetic": "たいしょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "対照を例文に使います。",
+    "exampleEnglish": "Example with contrast.",
+    "id": 2718,
+    "image": "🏠"
+  },
+  {
+    "native": "大臣",
+    "english": "cabinet minister",
+    "phonetic": "だいじん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "大臣を例文に使います。",
+    "exampleEnglish": "Example with cabinet minister.",
+    "id": 2719,
+    "image": "🏠"
+  },
+  {
+    "native": "対する",
+    "english": "to face",
+    "phonetic": "たいする",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "対するを例文に使います。",
+    "exampleEnglish": "Example with to face.",
+    "id": 2720,
+    "image": "🏠"
+  },
+  {
+    "native": "大戦",
+    "english": "great war",
+    "phonetic": "たいせん",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "大戦を例文に使います。",
+    "exampleEnglish": "Example with great war.",
+    "id": 2721,
+    "image": "🍜"
+  },
+  {
+    "native": "態度",
+    "english": "attitude",
+    "phonetic": "たいど",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "態度を例文に使います。",
+    "exampleEnglish": "Example with attitude.",
+    "id": 2722,
+    "image": "🏠"
+  },
+  {
+    "native": "大統領",
+    "english": "president",
+    "phonetic": "だいとうりょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "大統領を例文に使います。",
+    "exampleEnglish": "Example with president.",
+    "id": 2723,
+    "image": "🏠"
+  },
+  {
+    "native": "大半",
+    "english": "most of",
+    "phonetic": "たいはん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "大半を例文に使います。",
+    "exampleEnglish": "Example with most of.",
+    "id": 2724,
+    "image": "🏠"
+  },
+  {
+    "native": "代表",
+    "english": "representative",
+    "phonetic": "だいひょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "代表を例文に使います。",
+    "exampleEnglish": "Example with representative.",
+    "id": 2725,
+    "image": "🏠"
+  },
+  {
+    "native": "大部分",
+    "english": "most part",
+    "phonetic": "だいぶぶん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "大部分を例文に使います。",
+    "exampleEnglish": "Example with most part.",
+    "id": 2726,
+    "image": "🏠"
+  },
+  {
+    "native": "タイプライター",
+    "english": "typewriter",
+    "phonetic": "タイプライター",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "タイプライターを例文に使います。",
+    "exampleEnglish": "Example with typewriter.",
+    "id": 2727,
+    "image": "🏠"
+  },
+  {
+    "native": "逮捕",
+    "english": "arrest",
+    "phonetic": "たいほ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "逮捕を例文に使います。",
+    "exampleEnglish": "Example with arrest.",
+    "id": 2728,
+    "image": "🏠"
+  },
+  {
+    "native": "題名",
+    "english": "title",
+    "phonetic": "だいめい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "題名を例文に使います。",
+    "exampleEnglish": "Example with title.",
+    "id": 2729,
+    "image": "🏠"
+  },
+  {
+    "native": "ダイヤ",
+    "english": "(railway) schedule; diamond",
+    "phonetic": "ダイヤ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ダイヤを例文に使います。",
+    "exampleEnglish": "Example with (railway) schedule; diamond.",
+    "id": 2730,
+    "image": "🏠"
+  },
+  {
+    "native": "太陽",
+    "english": "sun",
+    "phonetic": "たいよう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "太陽を例文に使います。",
+    "exampleEnglish": "Example with sun.",
+    "id": 2731,
+    "image": "🏠"
+  },
+  {
+    "native": "平ら",
+    "english": "flatness",
+    "phonetic": "たいら",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "平らを例文に使います。",
+    "exampleEnglish": "Example with flatness.",
+    "id": 2732,
+    "image": "🏠"
+  },
+  {
+    "native": "代理",
+    "english": "representation",
+    "phonetic": "だいり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "代理を例文に使います。",
+    "exampleEnglish": "Example with representation.",
+    "id": 2733,
+    "image": "🏠"
+  },
+  {
+    "native": "大陸",
+    "english": "continent",
+    "phonetic": "たいりく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "大陸を例文に使います。",
+    "exampleEnglish": "Example with continent.",
+    "id": 2734,
+    "image": "🏠"
+  },
+  {
+    "native": "倒す",
+    "english": "to throw down",
+    "phonetic": "たおす",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "倒すを例文に使います。",
+    "exampleEnglish": "Example with to throw down.",
+    "id": 2735,
+    "image": "🍜"
+  },
+  {
+    "native": "タオル",
+    "english": "(hand) towel",
+    "phonetic": "タオル",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "タオルを例文に使います。",
+    "exampleEnglish": "Example with (hand) towel.",
+    "id": 2736,
+    "image": "🏠"
+  },
+  {
+    "native": "だが",
+    "english": "but",
+    "phonetic": "だが",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "だがを例文に使います。",
+    "exampleEnglish": "Example with but.",
+    "id": 2737,
+    "image": "🏠"
+  },
+  {
+    "native": "互い",
+    "english": "mutual",
+    "phonetic": "たがい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "互いを例文に使います。",
+    "exampleEnglish": "Example with mutual.",
+    "id": 2738,
+    "image": "🏠"
+  },
+  {
+    "native": "高める",
+    "english": "to raise",
+    "phonetic": "たかめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "高めるを例文に使います。",
+    "exampleEnglish": "Example with to raise.",
+    "id": 2739,
+    "image": "🏠"
+  },
+  {
+    "native": "宝",
+    "english": "treasure",
+    "phonetic": "たから",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "宝を例文に使います。",
+    "exampleEnglish": "Example with treasure.",
+    "id": 2740,
+    "image": "🏠"
+  },
+  {
+    "native": "宅",
+    "english": "house",
+    "phonetic": "たく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "宅を例文に使います。",
+    "exampleEnglish": "Example with house.",
+    "id": 2741,
+    "image": "🏠"
+  },
+  {
+    "native": "炊く",
+    "english": "to boil",
+    "phonetic": "たく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "炊くを例文に使います。",
+    "exampleEnglish": "Example with to boil.",
+    "id": 2742,
+    "image": "🏠"
+  },
+  {
+    "native": "焚く",
+    "english": "to burn",
+    "phonetic": "たく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "焚くを例文に使います。",
+    "exampleEnglish": "Example with to burn.",
+    "id": 2743,
+    "image": "🏠"
+  },
+  {
+    "native": "だけど",
+    "english": "however",
+    "phonetic": "だけど",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "だけどを例文に使います。",
+    "exampleEnglish": "Example with however.",
+    "id": 2744,
+    "image": "🏠"
+  },
+  {
+    "native": "たしか",
+    "english": "certain",
+    "phonetic": "たしか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "たしかを例文に使います。",
+    "exampleEnglish": "Example with certain.",
+    "id": 2745,
+    "image": "🏠"
+  },
+  {
+    "native": "確かめる",
+    "english": "to ascertain",
+    "phonetic": "たしかめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "確かめるを例文に使います。",
+    "exampleEnglish": "Example with to ascertain.",
+    "id": 2746,
+    "image": "🏠"
+  },
+  {
+    "native": "多少",
+    "english": "a little (same as 少し (すこし))",
+    "phonetic": "たしょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "多少を例文に使います。",
+    "exampleEnglish": "Example with a little (same as 少し (すこし)).",
+    "id": 2747,
+    "image": "🏠"
+  },
+  {
+    "native": "助かる",
+    "english": "to be saved; (something) helps (v.i.)",
+    "phonetic": "たすかる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "助かるを例文に使います。",
+    "exampleEnglish": "Example with to be saved; (something) helps (v.i.).",
+    "id": 2748,
+    "image": "🏠"
+  },
+  {
+    "native": "助ける",
+    "english": "to help (v.t.)",
+    "phonetic": "たすける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "助けるを例文に使います。",
+    "exampleEnglish": "Example with to help (v.t.).",
+    "id": 2749,
+    "image": "🏠"
+  },
+  {
+    "native": "ただ",
+    "english": "free of charge; just (~); only (~)",
+    "phonetic": "ただ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ただを例文に使います。",
+    "exampleEnglish": "Example with free of charge; just (~); only (~).",
+    "id": 2750,
+    "image": "🏠"
+  },
+  {
+    "native": "只",
+    "english": "free of charge",
+    "phonetic": "ただ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "只を例文に使います。",
+    "exampleEnglish": "Example with free of charge.",
+    "id": 2751,
+    "image": "🏠"
+  },
+  {
+    "native": "唯",
+    "english": "mere",
+    "phonetic": "ただ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "唯を例文に使います。",
+    "exampleEnglish": "Example with mere.",
+    "id": 2752,
+    "image": "🏠"
+  },
+  {
+    "native": "戦い",
+    "english": "battle",
+    "phonetic": "たたかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "戦いを例文に使います。",
+    "exampleEnglish": "Example with battle.",
+    "id": 2753,
+    "image": "🏠"
+  },
+  {
+    "native": "戦う",
+    "english": "to fight",
+    "phonetic": "たたかう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "戦うを例文に使います。",
+    "exampleEnglish": "Example with to fight.",
+    "id": 2754,
+    "image": "🏠"
+  },
+  {
+    "native": "叩く",
+    "english": "to strike",
+    "phonetic": "たたく",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "叩くを例文に使います。",
+    "exampleEnglish": "Example with to strike.",
+    "id": 2755,
+    "image": "🍜"
+  },
+  {
+    "native": "直ちに",
+    "english": "at once",
+    "phonetic": "ただちに",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "直ちにを例文に使います。",
+    "exampleEnglish": "Example with at once.",
+    "id": 2756,
+    "image": "🏠"
+  },
+  {
+    "native": "畳む",
+    "english": "to fold (clothes)",
+    "phonetic": "たたむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "畳むを例文に使います。",
+    "exampleEnglish": "Example with to fold (clothes).",
+    "id": 2757,
+    "image": "🏠"
+  },
+  {
+    "native": "立ち上がる",
+    "english": "to stand up",
+    "phonetic": "たちあがる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "立ち上がるを例文に使います。",
+    "exampleEnglish": "Example with to stand up.",
+    "id": 2758,
+    "image": "🏠"
+  },
+  {
+    "native": "立場",
+    "english": "standpoint",
+    "phonetic": "たちば",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "立場を例文に使います。",
+    "exampleEnglish": "Example with standpoint.",
+    "id": 2759,
+    "image": "🏠"
+  },
+  {
+    "native": "建つ",
+    "english": "to stand; to be built (v.i.)",
+    "phonetic": "たつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "建つを例文に使います。",
+    "exampleEnglish": "Example with to stand; to be built (v.i.).",
+    "id": 2760,
+    "image": "🏠"
+  },
+  {
+    "native": "経つ",
+    "english": "(time) passes",
+    "phonetic": "たつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "経つを例文に使います。",
+    "exampleEnglish": "Example with (time) passes.",
+    "id": 2761,
+    "image": "🏠"
+  },
+  {
+    "native": "達する",
+    "english": "to reach",
+    "phonetic": "たっする",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "達するを例文に使います。",
+    "exampleEnglish": "Example with to reach.",
+    "id": 2762,
+    "image": "🏠"
+  },
+  {
+    "native": "だって",
+    "english": "but",
+    "phonetic": "だって",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "だってを例文に使います。",
+    "exampleEnglish": "Example with but.",
+    "id": 2763,
+    "image": "🏠"
+  },
+  {
+    "native": "たっぷり",
+    "english": "full",
+    "phonetic": "たっぷり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "たっぷりを例文に使います。",
+    "exampleEnglish": "Example with full.",
+    "id": 2764,
+    "image": "🏠"
+  },
+  {
+    "native": "たとえ",
+    "english": "even if",
+    "phonetic": "たとえ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "たとえを例文に使います。",
+    "exampleEnglish": "Example with even if.",
+    "id": 2765,
+    "image": "🏠"
+  },
+  {
+    "native": "谷",
+    "english": "valley",
+    "phonetic": "たに",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "谷を例文に使います。",
+    "exampleEnglish": "Example with valley.",
+    "id": 2766,
+    "image": "🏠"
+  },
+  {
+    "native": "他人",
+    "english": "unrelated person",
+    "phonetic": "たにん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "他人を例文に使います。",
+    "exampleEnglish": "Example with unrelated person.",
+    "id": 2767,
+    "image": "🏠"
+  },
+  {
+    "native": "種",
+    "english": "seed; material; cause",
+    "phonetic": "たね",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "種を例文に使います。",
+    "exampleEnglish": "Example with seed; material; cause.",
+    "id": 2768,
+    "image": "🏠"
+  },
+  {
+    "native": "束",
+    "english": "bunch",
+    "phonetic": "たば",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "束を例文に使います。",
+    "exampleEnglish": "Example with bunch.",
+    "id": 2769,
+    "image": "🏠"
+  },
+  {
+    "native": "足袋",
+    "english": "Japanese socks (with split toe)",
+    "phonetic": "たび",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "足袋を例文に使います。",
+    "exampleEnglish": "Example with Japanese socks (with split toe).",
+    "id": 2770,
+    "image": "🏠"
+  },
+  {
+    "native": "度",
+    "english": "counter for occurrences",
+    "phonetic": "たび",
+    "category": "Numbers",
+    "topikLevel": 2,
+    "exampleNative": "度を例文に使います。",
+    "exampleEnglish": "Example with counter for occurrences.",
+    "id": 2771,
+    "image": "🔢"
+  },
+  {
+    "native": "旅",
+    "english": "travel",
+    "phonetic": "たび",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "旅を例文に使います。",
+    "exampleEnglish": "Example with travel.",
+    "id": 2772,
+    "image": "🚌"
+  },
+  {
+    "native": "たびたび",
+    "english": "often",
+    "phonetic": "たびたび",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "たびたびを例文に使います。",
+    "exampleEnglish": "Example with often.",
+    "id": 2773,
+    "image": "🍜"
+  },
+  {
+    "native": "玉",
+    "english": "ball",
+    "phonetic": "たま",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "玉を例文に使います。",
+    "exampleEnglish": "Example with ball.",
+    "id": 2774,
+    "image": "🏠"
+  },
+  {
+    "native": "弾",
+    "english": "bullet",
+    "phonetic": "たま",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "弾を例文に使います。",
+    "exampleEnglish": "Example with bullet.",
+    "id": 2775,
+    "image": "🏠"
+  },
+  {
+    "native": "偶",
+    "english": "even number",
+    "phonetic": "たま",
+    "category": "Numbers",
+    "topikLevel": 2,
+    "exampleNative": "偶を例文に使います。",
+    "exampleEnglish": "Example with even number.",
+    "id": 2776,
+    "image": "🔢"
+  },
+  {
+    "native": "騙す",
+    "english": "to trick",
+    "phonetic": "だます",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "騙すを例文に使います。",
+    "exampleEnglish": "Example with to trick.",
+    "id": 2777,
+    "image": "🍜"
+  },
+  {
+    "native": "偶々",
+    "english": "unexpectedly",
+    "phonetic": "たまたま",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "偶々を例文に使います。",
+    "exampleEnglish": "Example with unexpectedly.",
+    "id": 2778,
+    "image": "🏠"
+  },
+  {
+    "native": "たまらない",
+    "english": "intolerable",
+    "phonetic": "たまらない",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "たまらないを例文に使います。",
+    "exampleEnglish": "Example with intolerable.",
+    "id": 2779,
+    "image": "🏠"
+  },
+  {
+    "native": "溜まる",
+    "english": "to collect",
+    "phonetic": "たまる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "溜まるを例文に使います。",
+    "exampleEnglish": "Example with to collect.",
+    "id": 2780,
+    "image": "🏠"
+  },
+  {
+    "native": "黙る",
+    "english": "to be silent",
+    "phonetic": "だまる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "黙るを例文に使います。",
+    "exampleEnglish": "Example with to be silent.",
+    "id": 2781,
+    "image": "🏠"
+  },
+  {
+    "native": "試し",
+    "english": "trial",
+    "phonetic": "ためし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "試しを例文に使います。",
+    "exampleEnglish": "Example with trial.",
+    "id": 2782,
+    "image": "🏠"
+  },
+  {
+    "native": "試す",
+    "english": "to attempt",
+    "phonetic": "ためす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "試すを例文に使います。",
+    "exampleEnglish": "Example with to attempt.",
+    "id": 2783,
+    "image": "🏠"
+  },
+  {
+    "native": "溜める",
+    "english": "to accumulate",
+    "phonetic": "ためる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "溜めるを例文に使います。",
+    "exampleEnglish": "Example with to accumulate.",
+    "id": 2784,
+    "image": "🏠"
+  },
+  {
+    "native": "便り",
+    "english": "news",
+    "phonetic": "たより",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "便りを例文に使います。",
+    "exampleEnglish": "Example with news.",
+    "id": 2785,
+    "image": "🏠"
+  },
+  {
+    "native": "頼る",
+    "english": "to rely on",
+    "phonetic": "たよる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "頼るを例文に使います。",
+    "exampleEnglish": "Example with to rely on.",
+    "id": 2786,
+    "image": "🏠"
+  },
+  {
+    "native": "段",
+    "english": "step",
+    "phonetic": "だん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "段を例文に使います。",
+    "exampleEnglish": "Example with step.",
+    "id": 2787,
+    "image": "🏠"
+  },
+  {
+    "native": "単位",
+    "english": "credit (for a course in school); unit",
+    "phonetic": "たんい",
+    "category": "Study & Work",
+    "topikLevel": 2,
+    "exampleNative": "単位を例文に使います。",
+    "exampleEnglish": "Example with credit (for a course in school); unit.",
+    "id": 2788,
+    "image": "📚"
+  },
+  {
+    "native": "単語",
+    "english": "word; vocabulary",
+    "phonetic": "たんご",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "単語を例文に使います。",
+    "exampleEnglish": "Example with word; vocabulary.",
+    "id": 2789,
+    "image": "🏠"
+  },
+  {
+    "native": "男子",
+    "english": "young man",
+    "phonetic": "だんし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "男子を例文に使います。",
+    "exampleEnglish": "Example with young man.",
+    "id": 2790,
+    "image": "🏠"
+  },
+  {
+    "native": "単純",
+    "english": "simplicity",
+    "phonetic": "たんじゅん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "単純を例文に使います。",
+    "exampleEnglish": "Example with simplicity.",
+    "id": 2791,
+    "image": "🏠"
+  },
+  {
+    "native": "誕生",
+    "english": "birth",
+    "phonetic": "たんじょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "誕生を例文に使います。",
+    "exampleEnglish": "Example with birth.",
+    "id": 2792,
+    "image": "🏠"
+  },
+  {
+    "native": "ダンス",
+    "english": "dance",
+    "phonetic": "ダンス",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ダンスを例文に使います。",
+    "exampleEnglish": "Example with dance.",
+    "id": 2793,
+    "image": "🏠"
+  },
+  {
+    "native": "団体",
+    "english": "organization",
+    "phonetic": "だんたい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "団体を例文に使います。",
+    "exampleEnglish": "Example with organization.",
+    "id": 2794,
+    "image": "🏠"
+  },
+  {
+    "native": "担当",
+    "english": "(in) charge",
+    "phonetic": "たんとう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "担当を例文に使います。",
+    "exampleEnglish": "Example with (in) charge.",
+    "id": 2795,
+    "image": "🏠"
+  },
+  {
+    "native": "単なる",
+    "english": "mere",
+    "phonetic": "たんなる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "単なるを例文に使います。",
+    "exampleEnglish": "Example with mere.",
+    "id": 2796,
+    "image": "🏠"
+  },
+  {
+    "native": "単に",
+    "english": "simply",
+    "phonetic": "たんに",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "単にを例文に使います。",
+    "exampleEnglish": "Example with simply.",
+    "id": 2797,
+    "image": "🏠"
+  },
+  {
+    "native": "地",
+    "english": "earth",
+    "phonetic": "ち",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "地を例文に使います。",
+    "exampleEnglish": "Example with earth.",
+    "id": 2798,
+    "image": "🏠"
+  },
+  {
+    "native": "地位",
+    "english": "(social) position",
+    "phonetic": "ちい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "地位を例文に使います。",
+    "exampleEnglish": "Example with (social) position.",
+    "id": 2799,
+    "image": "🏠"
+  },
+  {
+    "native": "地域",
+    "english": "area",
+    "phonetic": "ちいき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "地域を例文に使います。",
+    "exampleEnglish": "Example with area.",
+    "id": 2800,
+    "image": "🏠"
+  },
+  {
+    "native": "チーズ",
+    "english": "cheese",
+    "phonetic": "チーズ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "チーズを例文に使います。",
+    "exampleEnglish": "Example with cheese.",
+    "id": 2801,
+    "image": "🏠"
+  },
+  {
+    "native": "チーム",
+    "english": "team",
+    "phonetic": "チーム",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "チームを例文に使います。",
+    "exampleEnglish": "Example with team.",
+    "id": 2802,
+    "image": "🏠"
+  },
+  {
+    "native": "知恵",
+    "english": "wisdom",
+    "phonetic": "ちえ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "知恵を例文に使います。",
+    "exampleEnglish": "Example with wisdom.",
+    "id": 2803,
+    "image": "🏠"
+  },
+  {
+    "native": "地下",
+    "english": "basement",
+    "phonetic": "ちか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "地下を例文に使います。",
+    "exampleEnglish": "Example with basement.",
+    "id": 2804,
+    "image": "🏠"
+  },
+  {
+    "native": "違い",
+    "english": "difference",
+    "phonetic": "ちがい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "違いを例文に使います。",
+    "exampleEnglish": "Example with difference.",
+    "id": 2805,
+    "image": "🏠"
+  },
+  {
+    "native": "違いない",
+    "english": "(phrase) sure",
+    "phonetic": "ちがいない",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "違いないを例文に使います。",
+    "exampleEnglish": "Example with (phrase) sure.",
+    "id": 2806,
+    "image": "🏠"
+  },
+  {
+    "native": "近頃",
+    "english": "lately",
+    "phonetic": "ちかごろ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "近頃を例文に使います。",
+    "exampleEnglish": "Example with lately.",
+    "id": 2807,
+    "image": "🏠"
+  },
+  {
+    "native": "地球",
+    "english": "the earth",
+    "phonetic": "ちきゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "地球を例文に使います。",
+    "exampleEnglish": "Example with the earth.",
+    "id": 2808,
+    "image": "🏠"
+  },
+  {
+    "native": "地区",
+    "english": "district",
+    "phonetic": "ちく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "地区を例文に使います。",
+    "exampleEnglish": "Example with district.",
+    "id": 2809,
+    "image": "🏠"
+  },
+  {
+    "native": "遅刻",
+    "english": "lateness",
+    "phonetic": "ちこく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "遅刻を例文に使います。",
+    "exampleEnglish": "Example with lateness.",
+    "id": 2810,
+    "image": "🏠"
+  },
+  {
+    "native": "知事",
+    "english": "prefectural governor",
+    "phonetic": "ちじ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "知事を例文に使います。",
+    "exampleEnglish": "Example with prefectural governor.",
+    "id": 2811,
+    "image": "🏠"
+  },
+  {
+    "native": "知識",
+    "english": "knowledge",
+    "phonetic": "ちしき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "知識を例文に使います。",
+    "exampleEnglish": "Example with knowledge.",
+    "id": 2812,
+    "image": "🏠"
+  },
+  {
+    "native": "父親",
+    "english": "father",
+    "phonetic": "ちちおや",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "父親を例文に使います。",
+    "exampleEnglish": "Example with father.",
+    "id": 2813,
+    "image": "🏠"
+  },
+  {
+    "native": "知能",
+    "english": "intelligence",
+    "phonetic": "ちのう",
+    "category": "Weather & Nature",
+    "topikLevel": 2,
+    "exampleNative": "知能を例文に使います。",
+    "exampleEnglish": "Example with intelligence.",
+    "id": 2814,
+    "image": "🌤️"
+  },
+  {
+    "native": "地平線",
+    "english": "horizon",
+    "phonetic": "ちへいせん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "地平線を例文に使います。",
+    "exampleEnglish": "Example with horizon.",
+    "id": 2815,
+    "image": "🏠"
+  },
+  {
+    "native": "地方",
+    "english": "area",
+    "phonetic": "ちほう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "地方を例文に使います。",
+    "exampleEnglish": "Example with area.",
+    "id": 2816,
+    "image": "🏠"
+  },
+  {
+    "native": "茶",
+    "english": "tea",
+    "phonetic": "ちゃ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "茶を例文に使います。",
+    "exampleEnglish": "Example with tea.",
+    "id": 2817,
+    "image": "🏠"
+  },
+  {
+    "native": "チャンス",
+    "english": "chance",
+    "phonetic": "チャンス",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "チャンスを例文に使います。",
+    "exampleEnglish": "Example with chance.",
+    "id": 2818,
+    "image": "🏠"
+  },
+  {
+    "native": "ちゃんと",
+    "english": "perfectly",
+    "phonetic": "ちゃんと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ちゃんとを例文に使います。",
+    "exampleEnglish": "Example with perfectly.",
+    "id": 2819,
+    "image": "🏠"
+  },
+  {
+    "native": "注",
+    "english": "annotation",
+    "phonetic": "ちゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "注を例文に使います。",
+    "exampleEnglish": "Example with annotation.",
+    "id": 2820,
+    "image": "🏠"
+  },
+  {
+    "native": "中央",
+    "english": "central",
+    "phonetic": "ちゅうおう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "中央を例文に使います。",
+    "exampleEnglish": "Example with central.",
+    "id": 2821,
+    "image": "🏠"
+  },
+  {
+    "native": "中学",
+    "english": "middle school",
+    "phonetic": "ちゅうがく",
+    "category": "Study & Work",
+    "topikLevel": 2,
+    "exampleNative": "中学を例文に使います。",
+    "exampleEnglish": "Example with middle school.",
+    "id": 2822,
+    "image": "📚"
+  },
+  {
+    "native": "中古",
+    "english": "used",
+    "phonetic": "ちゅうこ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "中古を例文に使います。",
+    "exampleEnglish": "Example with used.",
+    "id": 2823,
+    "image": "🏠"
+  },
+  {
+    "native": "中止",
+    "english": "suspension",
+    "phonetic": "ちゅうし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "中止を例文に使います。",
+    "exampleEnglish": "Example with suspension.",
+    "id": 2824,
+    "image": "🏠"
+  },
+  {
+    "native": "駐車",
+    "english": "parking (e.g.",
+    "phonetic": "ちゅうしゃ",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "駐車を例文に使います。",
+    "exampleEnglish": "Example with parking (e.g..",
+    "id": 2825,
+    "image": "🚌"
+  },
+  {
+    "native": "昼食",
+    "english": "lunch (same as 昼ご飯 (ひるごはん))",
+    "phonetic": "ちゅうしょく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "昼食を例文に使います。",
+    "exampleEnglish": "Example with lunch (same as 昼ご飯 (ひるごはん)).",
+    "id": 2826,
+    "image": "🏠"
+  },
+  {
+    "native": "中心",
+    "english": "center",
+    "phonetic": "ちゅうしん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "中心を例文に使います。",
+    "exampleEnglish": "Example with center.",
+    "id": 2827,
+    "image": "🏠"
+  },
+  {
+    "native": "注目",
+    "english": "notice",
+    "phonetic": "ちゅうもく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "注目を例文に使います。",
+    "exampleEnglish": "Example with notice.",
+    "id": 2828,
+    "image": "🏠"
+  },
+  {
+    "native": "注文",
+    "english": "order",
+    "phonetic": "ちゅうもん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "注文を例文に使います。",
+    "exampleEnglish": "Example with order.",
+    "id": 2829,
+    "image": "🏠"
+  },
+  {
+    "native": "長期",
+    "english": "long time period",
+    "phonetic": "ちょうき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "長期を例文に使います。",
+    "exampleEnglish": "Example with long time period.",
+    "id": 2830,
+    "image": "🏠"
+  },
+  {
+    "native": "調査",
+    "english": "survey; investigation",
+    "phonetic": "ちょうさ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "調査を例文に使います。",
+    "exampleEnglish": "Example with survey; investigation.",
+    "id": 2831,
+    "image": "🏠"
+  },
+  {
+    "native": "調子",
+    "english": "condition",
+    "phonetic": "ちょうし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "調子を例文に使います。",
+    "exampleEnglish": "Example with condition.",
+    "id": 2832,
+    "image": "🏠"
+  },
+  {
+    "native": "頂上",
+    "english": "top",
+    "phonetic": "ちょうじょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "頂上を例文に使います。",
+    "exampleEnglish": "Example with top.",
+    "id": 2833,
+    "image": "🏠"
+  },
+  {
+    "native": "ちょうだい",
+    "english": "-- colloquial form of ください; typically used by children or women --",
+    "phonetic": "ちょうだい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ちょうだいを例文に使います。",
+    "exampleEnglish": "Example with -- colloquial form of ください; typically used by children or women --.",
+    "id": 2834,
+    "image": "🏠"
+  },
+  {
+    "native": "貯金",
+    "english": "(bank) savings",
+    "phonetic": "ちょきん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "貯金を例文に使います。",
+    "exampleEnglish": "Example with (bank) savings.",
+    "id": 2835,
+    "image": "🏠"
+  },
+  {
+    "native": "直接",
+    "english": "direct",
+    "phonetic": "ちょくせつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "直接を例文に使います。",
+    "exampleEnglish": "Example with direct.",
+    "id": 2836,
+    "image": "🏠"
+  },
+  {
+    "native": "著者",
+    "english": "author",
+    "phonetic": "ちょしゃ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "著者を例文に使います。",
+    "exampleEnglish": "Example with author.",
+    "id": 2837,
+    "image": "🏠"
+  },
+  {
+    "native": "散らす",
+    "english": "to scatter",
+    "phonetic": "ちらす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "散らすを例文に使います。",
+    "exampleEnglish": "Example with to scatter.",
+    "id": 2838,
+    "image": "🏠"
+  },
+  {
+    "native": "散る",
+    "english": "to fall",
+    "phonetic": "ちる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "散るを例文に使います。",
+    "exampleEnglish": "Example with to fall.",
+    "id": 2839,
+    "image": "🏠"
+  },
+  {
+    "native": "遂に",
+    "english": "finally",
+    "phonetic": "ついに",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "遂にを例文に使います。",
+    "exampleEnglish": "Example with finally.",
+    "id": 2840,
+    "image": "🏠"
+  },
+  {
+    "native": "通過",
+    "english": "passage through",
+    "phonetic": "つうか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "通過を例文に使います。",
+    "exampleEnglish": "Example with passage through.",
+    "id": 2841,
+    "image": "🏠"
+  },
+  {
+    "native": "通貨",
+    "english": "currency",
+    "phonetic": "つうか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "通貨を例文に使います。",
+    "exampleEnglish": "Example with currency.",
+    "id": 2842,
+    "image": "🏠"
+  },
+  {
+    "native": "通学",
+    "english": "commuting to school",
+    "phonetic": "つうがく",
+    "category": "Study & Work",
+    "topikLevel": 2,
+    "exampleNative": "通学を例文に使います。",
+    "exampleEnglish": "Example with commuting to school.",
+    "id": 2843,
+    "image": "📚"
+  },
+  {
+    "native": "通勤",
+    "english": "commuting to work",
+    "phonetic": "つうきん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "通勤を例文に使います。",
+    "exampleEnglish": "Example with commuting to work.",
+    "id": 2844,
+    "image": "🏠"
+  },
+  {
+    "native": "通行",
+    "english": "passage",
+    "phonetic": "つうこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "通行を例文に使います。",
+    "exampleEnglish": "Example with passage.",
+    "id": 2845,
+    "image": "🏠"
+  },
+  {
+    "native": "通じる",
+    "english": "to run to",
+    "phonetic": "つうじる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "通じるを例文に使います。",
+    "exampleEnglish": "Example with to run to.",
+    "id": 2846,
+    "image": "🏠"
+  },
+  {
+    "native": "通信",
+    "english": "correspondence",
+    "phonetic": "つうしん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "通信を例文に使います。",
+    "exampleEnglish": "Example with correspondence.",
+    "id": 2847,
+    "image": "🏠"
+  },
+  {
+    "native": "通訳",
+    "english": "interpretation; interpreter",
+    "phonetic": "つうやく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "通訳を例文に使います。",
+    "exampleEnglish": "Example with interpretation; interpreter.",
+    "id": 2848,
+    "image": "🏠"
+  },
+  {
+    "native": "捕まる",
+    "english": "to be arrested; to be caught",
+    "phonetic": "つかまる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "捕まるを例文に使います。",
+    "exampleEnglish": "Example with to be arrested; to be caught.",
+    "id": 2849,
+    "image": "🏠"
+  },
+  {
+    "native": "掴む",
+    "english": "to seize",
+    "phonetic": "つかむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "掴むを例文に使います。",
+    "exampleEnglish": "Example with to seize.",
+    "id": 2850,
+    "image": "🏠"
+  },
+  {
+    "native": "疲れ",
+    "english": "tiredness",
+    "phonetic": "つかれ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "疲れを例文に使います。",
+    "exampleEnglish": "Example with tiredness.",
+    "id": 2851,
+    "image": "🏠"
+  },
+  {
+    "native": "付き合い",
+    "english": "socialization; friendship; association",
+    "phonetic": "つきあい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "付き合いを例文に使います。",
+    "exampleEnglish": "Example with socialization; friendship; association.",
+    "id": 2852,
+    "image": "🏠"
+  },
+  {
+    "native": "付合う",
+    "english": "to associate with",
+    "phonetic": "つきあう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "付合うを例文に使います。",
+    "exampleEnglish": "Example with to associate with.",
+    "id": 2853,
+    "image": "🏠"
+  },
+  {
+    "native": "次々",
+    "english": "in succession",
+    "phonetic": "つぎつぎ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "次々を例文に使います。",
+    "exampleEnglish": "Example with in succession.",
+    "id": 2854,
+    "image": "🏠"
+  },
+  {
+    "native": "付く",
+    "english": "to adjoin",
+    "phonetic": "つく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "付くを例文に使います。",
+    "exampleEnglish": "Example with to adjoin.",
+    "id": 2855,
+    "image": "🏠"
+  },
+  {
+    "native": "就く",
+    "english": "to settle in (place)",
+    "phonetic": "つく",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "就くを例文に使います。",
+    "exampleEnglish": "Example with to settle in (place).",
+    "id": 2856,
+    "image": "🍜"
+  },
+  {
+    "native": "突く",
+    "english": "to thrust",
+    "phonetic": "つく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "突くを例文に使います。",
+    "exampleEnglish": "Example with to thrust.",
+    "id": 2857,
+    "image": "🏠"
+  },
+  {
+    "native": "次ぐ",
+    "english": "to rank next to",
+    "phonetic": "つぐ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "次ぐを例文に使います。",
+    "exampleEnglish": "Example with to rank next to.",
+    "id": 2858,
+    "image": "🏠"
+  },
+  {
+    "native": "付ける",
+    "english": "to attach",
+    "phonetic": "つける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "付けるを例文に使います。",
+    "exampleEnglish": "Example with to attach.",
+    "id": 2859,
+    "image": "🏠"
+  },
+  {
+    "native": "着ける",
+    "english": "to put on",
+    "phonetic": "つける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "着けるを例文に使います。",
+    "exampleEnglish": "Example with to put on.",
+    "id": 2860,
+    "image": "🏠"
+  },
+  {
+    "native": "伝わる",
+    "english": "to be handed down",
+    "phonetic": "つたわる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "伝わるを例文に使います。",
+    "exampleEnglish": "Example with to be handed down.",
+    "id": 2861,
+    "image": "🏠"
+  },
+  {
+    "native": "土",
+    "english": "earth",
+    "phonetic": "つち",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "土を例文に使います。",
+    "exampleEnglish": "Example with earth.",
+    "id": 2862,
+    "image": "🏠"
+  },
+  {
+    "native": "続き",
+    "english": "sequel",
+    "phonetic": "つづき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "続きを例文に使います。",
+    "exampleEnglish": "Example with sequel.",
+    "id": 2863,
+    "image": "🏠"
+  },
+  {
+    "native": "包み",
+    "english": "bundle",
+    "phonetic": "つつみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "包みを例文に使います。",
+    "exampleEnglish": "Example with bundle.",
+    "id": 2864,
+    "image": "🏠"
+  },
+  {
+    "native": "勤め",
+    "english": "work",
+    "phonetic": "つとめ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "勤めを例文に使います。",
+    "exampleEnglish": "Example with work.",
+    "id": 2865,
+    "image": "🏠"
+  },
+  {
+    "native": "務め",
+    "english": "duty",
+    "phonetic": "つとめ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "務めを例文に使います。",
+    "exampleEnglish": "Example with duty.",
+    "id": 2866,
+    "image": "🏠"
+  },
+  {
+    "native": "繋がる",
+    "english": "to be connected to",
+    "phonetic": "つながる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "繋がるを例文に使います。",
+    "exampleEnglish": "Example with to be connected to.",
+    "id": 2867,
+    "image": "🏠"
+  },
+  {
+    "native": "繋ぐ",
+    "english": "to tie",
+    "phonetic": "つなぐ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "繋ぐを例文に使います。",
+    "exampleEnglish": "Example with to tie.",
+    "id": 2868,
+    "image": "🏠"
+  },
+  {
+    "native": "繋げる",
+    "english": "to connect",
+    "phonetic": "つなげる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "繋げるを例文に使います。",
+    "exampleEnglish": "Example with to connect.",
+    "id": 2869,
+    "image": "🏠"
+  },
+  {
+    "native": "常に",
+    "english": "always (same as いつも) (written expression)",
+    "phonetic": "つねに",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "常にを例文に使います。",
+    "exampleEnglish": "Example with always (same as いつも) (written expression).",
+    "id": 2870,
+    "image": "🏠"
+  },
+  {
+    "native": "翼",
+    "english": "wings",
+    "phonetic": "つばさ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "翼を例文に使います。",
+    "exampleEnglish": "Example with wings.",
+    "id": 2871,
+    "image": "🏠"
+  },
+  {
+    "native": "つまり",
+    "english": "namely; in other words; in short",
+    "phonetic": "つまり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "つまりを例文に使います。",
+    "exampleEnglish": "Example with namely; in other words; in short.",
+    "id": 2872,
+    "image": "🏠"
+  },
+  {
+    "native": "罪",
+    "english": "crime",
+    "phonetic": "つみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "罪を例文に使います。",
+    "exampleEnglish": "Example with crime.",
+    "id": 2873,
+    "image": "🏠"
+  },
+  {
+    "native": "積む",
+    "english": "to pile up",
+    "phonetic": "つむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "積むを例文に使います。",
+    "exampleEnglish": "Example with to pile up.",
+    "id": 2874,
+    "image": "🏠"
+  },
+  {
+    "native": "詰める",
+    "english": "to pack",
+    "phonetic": "つめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "詰めるを例文に使います。",
+    "exampleEnglish": "Example with to pack.",
+    "id": 2875,
+    "image": "🏠"
+  },
+  {
+    "native": "積もる",
+    "english": "to pile up",
+    "phonetic": "つもる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "積もるを例文に使います。",
+    "exampleEnglish": "Example with to pile up.",
+    "id": 2876,
+    "image": "🏠"
+  },
+  {
+    "native": "梅雨",
+    "english": "rainy season",
+    "phonetic": "つゆ",
+    "category": "Weather & Nature",
+    "topikLevel": 2,
+    "exampleNative": "梅雨を例文に使います。",
+    "exampleEnglish": "Example with rainy season.",
+    "id": 2877,
+    "image": "🌤️"
+  },
+  {
+    "native": "釣",
+    "english": "fishing",
+    "phonetic": "つり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "釣を例文に使います。",
+    "exampleEnglish": "Example with fishing.",
+    "id": 2878,
+    "image": "🏠"
+  },
+  {
+    "native": "連れ",
+    "english": "companion",
+    "phonetic": "つれ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "連れを例文に使います。",
+    "exampleEnglish": "Example with companion.",
+    "id": 2879,
+    "image": "🏠"
+  },
+  {
+    "native": "出",
+    "english": "outflow",
+    "phonetic": "で",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "出を例文に使います。",
+    "exampleEnglish": "Example with outflow.",
+    "id": 2880,
+    "image": "🏠"
+  },
+  {
+    "native": "出会い",
+    "english": "meeting",
+    "phonetic": "であい",
+    "category": "Numbers",
+    "topikLevel": 2,
+    "exampleNative": "出会いを例文に使います。",
+    "exampleEnglish": "Example with meeting.",
+    "id": 2881,
+    "image": "🔢"
+  },
+  {
+    "native": "出合い",
+    "english": "an encounter",
+    "phonetic": "であい",
+    "category": "Numbers",
+    "topikLevel": 2,
+    "exampleNative": "出合いを例文に使います。",
+    "exampleEnglish": "Example with an encounter.",
+    "id": 2882,
+    "image": "🔢"
+  },
+  {
+    "native": "出会う",
+    "english": "to meet by chance",
+    "phonetic": "であう",
+    "category": "Numbers",
+    "topikLevel": 2,
+    "exampleNative": "出会うを例文に使います。",
+    "exampleEnglish": "Example with to meet by chance.",
+    "id": 2883,
+    "image": "🔢"
+  },
+  {
+    "native": "提案",
+    "english": "proposal",
+    "phonetic": "ていあん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "提案を例文に使います。",
+    "exampleEnglish": "Example with proposal.",
+    "id": 2884,
+    "image": "🏠"
+  },
+  {
+    "native": "定期",
+    "english": "fixed term",
+    "phonetic": "ていき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "定期を例文に使います。",
+    "exampleEnglish": "Example with fixed term.",
+    "id": 2885,
+    "image": "🏠"
+  },
+  {
+    "native": "抵抗",
+    "english": "resistance",
+    "phonetic": "ていこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "抵抗を例文に使います。",
+    "exampleEnglish": "Example with resistance.",
+    "id": 2886,
+    "image": "🏠"
+  },
+  {
+    "native": "提出",
+    "english": "presentation",
+    "phonetic": "ていしゅつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "提出を例文に使います。",
+    "exampleEnglish": "Example with presentation.",
+    "id": 2887,
+    "image": "🏠"
+  },
+  {
+    "native": "停電",
+    "english": "failure of electricity",
+    "phonetic": "ていでん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "停電を例文に使います。",
+    "exampleEnglish": "Example with failure of electricity.",
+    "id": 2888,
+    "image": "🏠"
+  },
+  {
+    "native": "程度",
+    "english": "degree",
+    "phonetic": "ていど",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "程度を例文に使います。",
+    "exampleEnglish": "Example with degree.",
+    "id": 2889,
+    "image": "🏠"
+  },
+  {
+    "native": "停留所",
+    "english": "bus or tram stop",
+    "phonetic": "ていりゅうじょ",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "停留所を例文に使います。",
+    "exampleEnglish": "Example with bus or tram stop.",
+    "id": 2890,
+    "image": "🚌"
+  },
+  {
+    "native": "デート",
+    "english": "date (in the sense of 'social engagement' only)",
+    "phonetic": "デート",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "デートを例文に使います。",
+    "exampleEnglish": "Example with date (in the sense of 'social engagement' only).",
+    "id": 2891,
+    "image": "🏠"
+  },
+  {
+    "native": "敵",
+    "english": "enemy",
+    "phonetic": "てき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "敵を例文に使います。",
+    "exampleEnglish": "Example with enemy.",
+    "id": 2892,
+    "image": "🏠"
+  },
+  {
+    "native": "出来事",
+    "english": "incident happening",
+    "phonetic": "できごと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "出来事を例文に使います。",
+    "exampleEnglish": "Example with incident happening.",
+    "id": 2893,
+    "image": "🏠"
+  },
+  {
+    "native": "適する",
+    "english": "to fit",
+    "phonetic": "てきする",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "適するを例文に使います。",
+    "exampleEnglish": "Example with to fit.",
+    "id": 2894,
+    "image": "🏠"
+  },
+  {
+    "native": "適切",
+    "english": "appropriate",
+    "phonetic": "てきせつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "適切を例文に使います。",
+    "exampleEnglish": "Example with appropriate.",
+    "id": 2895,
+    "image": "🏠"
+  },
+  {
+    "native": "適度",
+    "english": "moderate",
+    "phonetic": "てきど",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "適度を例文に使います。",
+    "exampleEnglish": "Example with moderate.",
+    "id": 2896,
+    "image": "🏠"
+  },
+  {
+    "native": "適用",
+    "english": "applying",
+    "phonetic": "てきよう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "適用を例文に使います。",
+    "exampleEnglish": "Example with applying.",
+    "id": 2897,
+    "image": "🏠"
+  },
+  {
+    "native": "できれば",
+    "english": "if possible…",
+    "phonetic": "できれば",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "できればを例文に使います。",
+    "exampleEnglish": "Example with if possible….",
+    "id": 2898,
+    "image": "🏠"
+  },
+  {
+    "native": "手品",
+    "english": "conjuring trick",
+    "phonetic": "てじな",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "手品を例文に使います。",
+    "exampleEnglish": "Example with conjuring trick.",
+    "id": 2899,
+    "image": "🏠"
+  },
+  {
+    "native": "ですから",
+    "english": "therefore",
+    "phonetic": "ですから",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ですからを例文に使います。",
+    "exampleEnglish": "Example with therefore.",
+    "id": 2900,
+    "image": "🏠"
+  },
+  {
+    "native": "鉄",
+    "english": "iron",
+    "phonetic": "てつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "鉄を例文に使います。",
+    "exampleEnglish": "Example with iron.",
+    "id": 2901,
+    "image": "🏠"
+  },
+  {
+    "native": "哲学",
+    "english": "philosophy",
+    "phonetic": "てつがく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "哲学を例文に使います。",
+    "exampleEnglish": "Example with philosophy.",
+    "id": 2902,
+    "image": "🏠"
+  },
+  {
+    "native": "手伝い",
+    "english": "help",
+    "phonetic": "てつだい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "手伝いを例文に使います。",
+    "exampleEnglish": "Example with help.",
+    "id": 2903,
+    "image": "🏠"
+  },
+  {
+    "native": "徹底",
+    "english": "thoroughness",
+    "phonetic": "てってい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "徹底を例文に使います。",
+    "exampleEnglish": "Example with thoroughness.",
+    "id": 2904,
+    "image": "🏠"
+  },
+  {
+    "native": "鉄道",
+    "english": "railway; railroad",
+    "phonetic": "てつどう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "鉄道を例文に使います。",
+    "exampleEnglish": "Example with railway; railroad.",
+    "id": 2905,
+    "image": "🏠"
+  },
+  {
+    "native": "徹夜",
+    "english": "staying up all night",
+    "phonetic": "てつや",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "徹夜を例文に使います。",
+    "exampleEnglish": "Example with staying up all night.",
+    "id": 2906,
+    "image": "🏠"
+  },
+  {
+    "native": "手間",
+    "english": "time",
+    "phonetic": "てま",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "手間を例文に使います。",
+    "exampleEnglish": "Example with time.",
+    "id": 2907,
+    "image": "🏠"
+  },
+  {
+    "native": "デモ",
+    "english": "demo",
+    "phonetic": "デモ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "デモを例文に使います。",
+    "exampleEnglish": "Example with demo.",
+    "id": 2908,
+    "image": "🏠"
+  },
+  {
+    "native": "典型",
+    "english": "type",
+    "phonetic": "てんけい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "典型を例文に使います。",
+    "exampleEnglish": "Example with type.",
+    "id": 2909,
+    "image": "🏠"
+  },
+  {
+    "native": "天候",
+    "english": "weather",
+    "phonetic": "てんこう",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "天候を例文に使います。",
+    "exampleEnglish": "Example with weather.",
+    "id": 2910,
+    "image": "🍜"
+  },
+  {
+    "native": "電子",
+    "english": "electron; electronic",
+    "phonetic": "でんし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "電子を例文に使います。",
+    "exampleEnglish": "Example with electron; electronic.",
+    "id": 2911,
+    "image": "🏠"
+  },
+  {
+    "native": "テント",
+    "english": "tent",
+    "phonetic": "テント",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "テントを例文に使います。",
+    "exampleEnglish": "Example with tent.",
+    "id": 2912,
+    "image": "🏠"
+  },
+  {
+    "native": "伝統",
+    "english": "tradition",
+    "phonetic": "でんとう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "伝統を例文に使います。",
+    "exampleEnglish": "Example with tradition.",
+    "id": 2913,
+    "image": "🏠"
+  },
+  {
+    "native": "天然",
+    "english": "nature",
+    "phonetic": "てんねん",
+    "category": "Weather & Nature",
+    "topikLevel": 2,
+    "exampleNative": "天然を例文に使います。",
+    "exampleEnglish": "Example with nature.",
+    "id": 2914,
+    "image": "🌤️"
+  },
+  {
+    "native": "問い",
+    "english": "question",
+    "phonetic": "とい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "問いを例文に使います。",
+    "exampleEnglish": "Example with question.",
+    "id": 2915,
+    "image": "🏠"
+  },
+  {
+    "native": "党",
+    "english": "party (political)",
+    "phonetic": "とう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "党を例文に使います。",
+    "exampleEnglish": "Example with party (political).",
+    "id": 2916,
+    "image": "🏠"
+  },
+  {
+    "native": "塔",
+    "english": "tower",
+    "phonetic": "とう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "塔を例文に使います。",
+    "exampleEnglish": "Example with tower.",
+    "id": 2917,
+    "image": "🏠"
+  },
+  {
+    "native": "答案",
+    "english": "examination paper",
+    "phonetic": "とうあん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "答案を例文に使います。",
+    "exampleEnglish": "Example with examination paper.",
+    "id": 2918,
+    "image": "🏠"
+  },
+  {
+    "native": "同一",
+    "english": "identity",
+    "phonetic": "どういつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "同一を例文に使います。",
+    "exampleEnglish": "Example with identity.",
+    "id": 2919,
+    "image": "🏠"
+  },
+  {
+    "native": "銅貨",
+    "english": "copper coin",
+    "phonetic": "どうか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "銅貨を例文に使います。",
+    "exampleEnglish": "Example with copper coin.",
+    "id": 2920,
+    "image": "🏠"
+  },
+  {
+    "native": "当時",
+    "english": "at that time",
+    "phonetic": "とうじ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "当時を例文に使います。",
+    "exampleEnglish": "Example with at that time.",
+    "id": 2921,
+    "image": "🏠"
+  },
+  {
+    "native": "動詞",
+    "english": "verb",
+    "phonetic": "どうし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "動詞を例文に使います。",
+    "exampleEnglish": "Example with verb.",
+    "id": 2922,
+    "image": "🏠"
+  },
+  {
+    "native": "同時",
+    "english": "simultaneous(ly)",
+    "phonetic": "どうじ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "同時を例文に使います。",
+    "exampleEnglish": "Example with simultaneous(ly).",
+    "id": 2923,
+    "image": "🏠"
+  },
+  {
+    "native": "どうしても",
+    "english": "at any cost",
+    "phonetic": "どうしても",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "どうしてもを例文に使います。",
+    "exampleEnglish": "Example with at any cost.",
+    "id": 2924,
+    "image": "🏠"
+  },
+  {
+    "native": "どうぞよろしく",
+    "english": "pleased to meet you",
+    "phonetic": "どうぞよろしく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "どうぞよろしくを例文に使います。",
+    "exampleEnglish": "Example with pleased to meet you.",
+    "id": 2925,
+    "image": "🏠"
+  },
+  {
+    "native": "到着",
+    "english": "arrival",
+    "phonetic": "とうちゃく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "到着を例文に使います。",
+    "exampleEnglish": "Example with arrival.",
+    "id": 2926,
+    "image": "🏠"
+  },
+  {
+    "native": "道徳",
+    "english": "morals",
+    "phonetic": "どうとく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "道徳を例文に使います。",
+    "exampleEnglish": "Example with morals.",
+    "id": 2927,
+    "image": "🏠"
+  },
+  {
+    "native": "投票",
+    "english": "voting",
+    "phonetic": "とうひょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "投票を例文に使います。",
+    "exampleEnglish": "Example with voting.",
+    "id": 2928,
+    "image": "🏠"
+  },
+  {
+    "native": "東洋",
+    "english": "Orient",
+    "phonetic": "とうよう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "東洋を例文に使います。",
+    "exampleEnglish": "Example with Orient.",
+    "id": 2929,
+    "image": "🏠"
+  },
+  {
+    "native": "同様",
+    "english": "identical",
+    "phonetic": "どうよう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "同様を例文に使います。",
+    "exampleEnglish": "Example with identical.",
+    "id": 2930,
+    "image": "🏠"
+  },
+  {
+    "native": "童謡",
+    "english": "children's song",
+    "phonetic": "どうよう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "童謡を例文に使います。",
+    "exampleEnglish": "Example with children's song.",
+    "id": 2931,
+    "image": "🏠"
+  },
+  {
+    "native": "同僚",
+    "english": "colleague; co-worker",
+    "phonetic": "どうりょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "同僚を例文に使います。",
+    "exampleEnglish": "Example with colleague; co-worker.",
+    "id": 2932,
+    "image": "🏠"
+  },
+  {
+    "native": "道路",
+    "english": "road",
+    "phonetic": "どうろ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "道路を例文に使います。",
+    "exampleEnglish": "Example with road.",
+    "id": 2933,
+    "image": "🏠"
+  },
+  {
+    "native": "通す",
+    "english": "to let pass",
+    "phonetic": "とおす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "通すを例文に使います。",
+    "exampleEnglish": "Example with to let pass.",
+    "id": 2934,
+    "image": "🏠"
+  },
+  {
+    "native": "通り過ぎる",
+    "english": "to pass",
+    "phonetic": "とおりすぎる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "通り過ぎるを例文に使います。",
+    "exampleEnglish": "Example with to pass.",
+    "id": 2935,
+    "image": "🏠"
+  },
+  {
+    "native": "都会",
+    "english": "city",
+    "phonetic": "とかい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "都会を例文に使います。",
+    "exampleEnglish": "Example with city.",
+    "id": 2936,
+    "image": "🏠"
+  },
+  {
+    "native": "溶く",
+    "english": "to dissolve (paint)",
+    "phonetic": "とく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "溶くを例文に使います。",
+    "exampleEnglish": "Example with to dissolve (paint).",
+    "id": 2937,
+    "image": "🏠"
+  },
+  {
+    "native": "解く",
+    "english": "to unfasten; answer",
+    "phonetic": "とく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "解くを例文に使います。",
+    "exampleEnglish": "Example with to unfasten; answer.",
+    "id": 2938,
+    "image": "🏠"
+  },
+  {
+    "native": "退く",
+    "english": "to retreat",
+    "phonetic": "どく",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "退くを例文に使います。",
+    "exampleEnglish": "Example with to retreat.",
+    "id": 2939,
+    "image": "🍜"
+  },
+  {
+    "native": "毒",
+    "english": "poison",
+    "phonetic": "どく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "毒を例文に使います。",
+    "exampleEnglish": "Example with poison.",
+    "id": 2940,
+    "image": "🏠"
+  },
+  {
+    "native": "得意",
+    "english": "pride",
+    "phonetic": "とくい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "得意を例文に使います。",
+    "exampleEnglish": "Example with pride.",
+    "id": 2941,
+    "image": "🏠"
+  },
+  {
+    "native": "読書",
+    "english": "reading",
+    "phonetic": "どくしょ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "読書を例文に使います。",
+    "exampleEnglish": "Example with reading.",
+    "id": 2942,
+    "image": "🏠"
+  },
+  {
+    "native": "独身",
+    "english": "single",
+    "phonetic": "どくしん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "独身を例文に使います。",
+    "exampleEnglish": "Example with single.",
+    "id": 2943,
+    "image": "🏠"
+  },
+  {
+    "native": "特徴",
+    "english": "characteristic(s); feature(s); trait(s)",
+    "phonetic": "とくちょう",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "特徴を例文に使います。",
+    "exampleEnglish": "Example with characteristic(s); feature(s); trait(s).",
+    "id": 2944,
+    "image": "🍜"
+  },
+  {
+    "native": "特長",
+    "english": "forte",
+    "phonetic": "とくちょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "特長を例文に使います。",
+    "exampleEnglish": "Example with forte.",
+    "id": 2945,
+    "image": "🏠"
+  },
+  {
+    "native": "独特",
+    "english": "peculiarity",
+    "phonetic": "どくとく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "独特を例文に使います。",
+    "exampleEnglish": "Example with peculiarity.",
+    "id": 2946,
+    "image": "🏠"
+  },
+  {
+    "native": "独立",
+    "english": "independence (e.g.",
+    "phonetic": "どくりつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "独立を例文に使います。",
+    "exampleEnglish": "Example with independence (e.g..",
+    "id": 2947,
+    "image": "🏠"
+  },
+  {
+    "native": "溶ける",
+    "english": "to melt",
+    "phonetic": "とける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "溶けるを例文に使います。",
+    "exampleEnglish": "Example with to melt.",
+    "id": 2948,
+    "image": "🏠"
+  },
+  {
+    "native": "解ける",
+    "english": "to come untied",
+    "phonetic": "とける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "解けるを例文に使います。",
+    "exampleEnglish": "Example with to come untied.",
+    "id": 2949,
+    "image": "🏠"
+  },
+  {
+    "native": "どこか",
+    "english": "somewhere",
+    "phonetic": "どこか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "どこかを例文に使います。",
+    "exampleEnglish": "Example with somewhere.",
+    "id": 2950,
+    "image": "🏠"
+  },
+  {
+    "native": "ところが",
+    "english": "however",
+    "phonetic": "ところが",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ところがを例文に使います。",
+    "exampleEnglish": "Example with however.",
+    "id": 2951,
+    "image": "🏠"
+  },
+  {
+    "native": "ところで",
+    "english": "by the way; even if",
+    "phonetic": "ところで",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ところでを例文に使います。",
+    "exampleEnglish": "Example with by the way; even if.",
+    "id": 2952,
+    "image": "🏠"
+  },
+  {
+    "native": "登山",
+    "english": "mountain-climbing",
+    "phonetic": "とざん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "登山を例文に使います。",
+    "exampleEnglish": "Example with mountain-climbing.",
+    "id": 2953,
+    "image": "🏠"
+  },
+  {
+    "native": "都市",
+    "english": "town",
+    "phonetic": "とし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "都市を例文に使います。",
+    "exampleEnglish": "Example with town.",
+    "id": 2954,
+    "image": "🏠"
+  },
+  {
+    "native": "年月",
+    "english": "months and years",
+    "phonetic": "としつき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "年月を例文に使います。",
+    "exampleEnglish": "Example with months and years.",
+    "id": 2955,
+    "image": "🏠"
+  },
+  {
+    "native": "図書",
+    "english": "books",
+    "phonetic": "としょ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "図書を例文に使います。",
+    "exampleEnglish": "Example with books.",
+    "id": 2956,
+    "image": "🏠"
+  },
+  {
+    "native": "年寄",
+    "english": "old people",
+    "phonetic": "としより",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "年寄を例文に使います。",
+    "exampleEnglish": "Example with old people.",
+    "id": 2957,
+    "image": "🏠"
+  },
+  {
+    "native": "閉じる",
+    "english": "to close (e.g.",
+    "phonetic": "とじる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "閉じるを例文に使います。",
+    "exampleEnglish": "Example with to close (e.g..",
+    "id": 2958,
+    "image": "🏠"
+  },
+  {
+    "native": "途端",
+    "english": "just (now",
+    "phonetic": "とたん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "途端を例文に使います。",
+    "exampleEnglish": "Example with just (now.",
+    "id": 2959,
+    "image": "🏠"
+  },
+  {
+    "native": "土地",
+    "english": "plot of land",
+    "phonetic": "とち",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "土地を例文に使います。",
+    "exampleEnglish": "Example with plot of land.",
+    "id": 2960,
+    "image": "🏠"
+  },
+  {
+    "native": "突然",
+    "english": "abruptly",
+    "phonetic": "とつぜん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "突然を例文に使います。",
+    "exampleEnglish": "Example with abruptly.",
+    "id": 2961,
+    "image": "🏠"
+  },
+  {
+    "native": "トップ",
+    "english": "top",
+    "phonetic": "トップ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "トップを例文に使います。",
+    "exampleEnglish": "Example with top.",
+    "id": 2962,
+    "image": "🏠"
+  },
+  {
+    "native": "届く",
+    "english": "to reach",
+    "phonetic": "とどく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "届くを例文に使います。",
+    "exampleEnglish": "Example with to reach.",
+    "id": 2963,
+    "image": "🏠"
+  },
+  {
+    "native": "とにかく",
+    "english": "anyhow",
+    "phonetic": "とにかく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "とにかくを例文に使います。",
+    "exampleEnglish": "Example with anyhow.",
+    "id": 2964,
+    "image": "🏠"
+  },
+  {
+    "native": "飛ばす",
+    "english": "to skip over",
+    "phonetic": "とばす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "飛ばすを例文に使います。",
+    "exampleEnglish": "Example with to skip over.",
+    "id": 2965,
+    "image": "🏠"
+  },
+  {
+    "native": "飛び出す",
+    "english": "to jump out",
+    "phonetic": "とびだす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "飛び出すを例文に使います。",
+    "exampleEnglish": "Example with to jump out.",
+    "id": 2966,
+    "image": "🏠"
+  },
+  {
+    "native": "留める",
+    "english": "to fasten",
+    "phonetic": "とめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "留めるを例文に使います。",
+    "exampleEnglish": "Example with to fasten.",
+    "id": 2967,
+    "image": "🏠"
+  },
+  {
+    "native": "泊める",
+    "english": "to have someone stay (over night) (v.t.)",
+    "phonetic": "とめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "泊めるを例文に使います。",
+    "exampleEnglish": "Example with to have someone stay (over night) (v.t.).",
+    "id": 2968,
+    "image": "🏠"
+  },
+  {
+    "native": "友",
+    "english": "friend",
+    "phonetic": "とも",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "友を例文に使います。",
+    "exampleEnglish": "Example with friend.",
+    "id": 2969,
+    "image": "🏠"
+  },
+  {
+    "native": "共に",
+    "english": "sharing with",
+    "phonetic": "ともに",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "共にを例文に使います。",
+    "exampleEnglish": "Example with sharing with.",
+    "id": 2970,
+    "image": "🏠"
+  },
+  {
+    "native": "虎",
+    "english": "tiger",
+    "phonetic": "とら",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "虎を例文に使います。",
+    "exampleEnglish": "Example with tiger.",
+    "id": 2971,
+    "image": "🏠"
+  },
+  {
+    "native": "ドライブ",
+    "english": "drive",
+    "phonetic": "ドライブ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ドライブを例文に使います。",
+    "exampleEnglish": "Example with drive.",
+    "id": 2972,
+    "image": "🏠"
+  },
+  {
+    "native": "トラック",
+    "english": "truck; (running) track",
+    "phonetic": "トラック",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "トラックを例文に使います。",
+    "exampleEnglish": "Example with truck; (running) track.",
+    "id": 2973,
+    "image": "🏠"
+  },
+  {
+    "native": "ドラマ",
+    "english": "drama",
+    "phonetic": "ドラマ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ドラマを例文に使います。",
+    "exampleEnglish": "Example with drama.",
+    "id": 2974,
+    "image": "🏠"
+  },
+  {
+    "native": "トランプ",
+    "english": "playing cards (lit: trump)",
+    "phonetic": "トランプ",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "トランプを例文に使います。",
+    "exampleEnglish": "Example with playing cards (lit: trump).",
+    "id": 2975,
+    "image": "🚌"
+  },
+  {
+    "native": "取り上げる",
+    "english": "to take up",
+    "phonetic": "とりあげる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "取り上げるを例文に使います。",
+    "exampleEnglish": "Example with to take up.",
+    "id": 2976,
+    "image": "🏠"
+  },
+  {
+    "native": "努力",
+    "english": "great effort",
+    "phonetic": "どりょく",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "努力を例文に使います。",
+    "exampleEnglish": "Example with great effort.",
+    "id": 2977,
+    "image": "🍜"
+  },
+  {
+    "native": "トレーニング",
+    "english": "training",
+    "phonetic": "トレーニング",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "トレーニングを例文に使います。",
+    "exampleEnglish": "Example with training.",
+    "id": 2978,
+    "image": "🚌"
+  },
+  {
+    "native": "ドレス",
+    "english": "dress",
+    "phonetic": "ドレス",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ドレスを例文に使います。",
+    "exampleEnglish": "Example with dress.",
+    "id": 2979,
+    "image": "🏠"
+  },
+  {
+    "native": "取れる",
+    "english": "to come off",
+    "phonetic": "とれる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "取れるを例文に使います。",
+    "exampleEnglish": "Example with to come off.",
+    "id": 2980,
+    "image": "🏠"
+  },
+  {
+    "native": "泥",
+    "english": "mud",
+    "phonetic": "どろ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "泥を例文に使います。",
+    "exampleEnglish": "Example with mud.",
+    "id": 2981,
+    "image": "🏠"
+  },
+  {
+    "native": "トン",
+    "english": "ton (1000 lbs.)",
+    "phonetic": "トン",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "トンを例文に使います。",
+    "exampleEnglish": "Example with ton (1000 lbs.).",
+    "id": 2982,
+    "image": "🏠"
+  },
+  {
+    "native": "とんでもない",
+    "english": "outrageous",
+    "phonetic": "とんでもない",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "とんでもないを例文に使います。",
+    "exampleEnglish": "Example with outrageous.",
+    "id": 2983,
+    "image": "🏠"
+  },
+  {
+    "native": "どんなに",
+    "english": "how",
+    "phonetic": "どんなに",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "どんなにを例文に使います。",
+    "exampleEnglish": "Example with how.",
+    "id": 2984,
+    "image": "🏠"
+  },
+  {
+    "native": "トンネル",
+    "english": "tunnel",
+    "phonetic": "トンネル",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "トンネルを例文に使います。",
+    "exampleEnglish": "Example with tunnel.",
+    "id": 2985,
+    "image": "🏠"
+  },
+  {
+    "native": "名",
+    "english": "name",
+    "phonetic": "な",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "名を例文に使います。",
+    "exampleEnglish": "Example with name.",
+    "id": 2986,
+    "image": "🏠"
+  },
+  {
+    "native": "内容",
+    "english": "subject",
+    "phonetic": "ないよう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "内容を例文に使います。",
+    "exampleEnglish": "Example with subject.",
+    "id": 2987,
+    "image": "🏠"
+  },
+  {
+    "native": "なお",
+    "english": "still",
+    "phonetic": "なお",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "なおを例文に使います。",
+    "exampleEnglish": "Example with still.",
+    "id": 2988,
+    "image": "🏠"
+  },
+  {
+    "native": "仲",
+    "english": "relation",
+    "phonetic": "なか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "仲を例文に使います。",
+    "exampleEnglish": "Example with relation.",
+    "id": 2989,
+    "image": "🏠"
+  },
+  {
+    "native": "流す",
+    "english": "to drain",
+    "phonetic": "ながす",
+    "category": "Weather & Nature",
+    "topikLevel": 2,
+    "exampleNative": "流すを例文に使います。",
+    "exampleEnglish": "Example with to drain.",
+    "id": 2990,
+    "image": "🌤️"
+  },
+  {
+    "native": "半ば",
+    "english": "middle",
+    "phonetic": "なかば",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "半ばを例文に使います。",
+    "exampleEnglish": "Example with middle.",
+    "id": 2991,
+    "image": "🏠"
+  },
+  {
+    "native": "仲間",
+    "english": "company",
+    "phonetic": "なかま",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "仲間を例文に使います。",
+    "exampleEnglish": "Example with company.",
+    "id": 2992,
+    "image": "🏠"
+  },
+  {
+    "native": "中身",
+    "english": "content(s); substance",
+    "phonetic": "なかみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "中身を例文に使います。",
+    "exampleEnglish": "Example with content(s); substance.",
+    "id": 2993,
+    "image": "🏠"
+  },
+  {
+    "native": "中味",
+    "english": "contents",
+    "phonetic": "なかみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "中味を例文に使います。",
+    "exampleEnglish": "Example with contents.",
+    "id": 2994,
+    "image": "🏠"
+  },
+  {
+    "native": "眺め",
+    "english": "scene; view; prospect; outlook",
+    "phonetic": "ながめ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "眺めを例文に使います。",
+    "exampleEnglish": "Example with scene; view; prospect; outlook.",
+    "id": 2995,
+    "image": "🏠"
+  },
+  {
+    "native": "眺める",
+    "english": "to view",
+    "phonetic": "ながめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "眺めるを例文に使います。",
+    "exampleEnglish": "Example with to view.",
+    "id": 2996,
+    "image": "🏠"
+  },
+  {
+    "native": "流れ",
+    "english": "stream",
+    "phonetic": "ながれ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "流れを例文に使います。",
+    "exampleEnglish": "Example with stream.",
+    "id": 2997,
+    "image": "🏠"
+  },
+  {
+    "native": "流れる",
+    "english": "to flow",
+    "phonetic": "ながれる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "流れるを例文に使います。",
+    "exampleEnglish": "Example with to flow.",
+    "id": 2998,
+    "image": "🏠"
+  },
+  {
+    "native": "亡くす",
+    "english": "to lose someone",
+    "phonetic": "なくす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "亡くすを例文に使います。",
+    "exampleEnglish": "Example with to lose someone.",
+    "id": 2999,
+    "image": "🏠"
+  },
+  {
+    "native": "殴る",
+    "english": "to strike; to hit; to punch",
+    "phonetic": "なぐる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "殴るを例文に使います。",
+    "exampleEnglish": "Example with to strike; to hit; to punch.",
+    "id": 3000,
+    "image": "🏠"
+  },
+  {
+    "native": "無し",
+    "english": "without",
+    "phonetic": "なし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "無しを例文に使います。",
+    "exampleEnglish": "Example with without.",
+    "id": 3001,
+    "image": "🏠"
+  },
+  {
+    "native": "なぜなら",
+    "english": "because",
+    "phonetic": "なぜなら",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "なぜならを例文に使います。",
+    "exampleEnglish": "Example with because.",
+    "id": 3002,
+    "image": "🏠"
+  },
+  {
+    "native": "謎",
+    "english": "riddle",
+    "phonetic": "なぞ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "謎を例文に使います。",
+    "exampleEnglish": "Example with riddle.",
+    "id": 3003,
+    "image": "🏠"
+  },
+  {
+    "native": "納得",
+    "english": "consent",
+    "phonetic": "なっとく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "納得を例文に使います。",
+    "exampleEnglish": "Example with consent.",
+    "id": 3004,
+    "image": "🏠"
+  },
+  {
+    "native": "何か",
+    "english": "something",
+    "phonetic": "なにか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "何かを例文に使います。",
+    "exampleEnglish": "Example with something.",
+    "id": 3005,
+    "image": "🏠"
+  },
+  {
+    "native": "なにも",
+    "english": "nothing",
+    "phonetic": "なにも",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "なにもを例文に使います。",
+    "exampleEnglish": "Example with nothing.",
+    "id": 3006,
+    "image": "🏠"
+  },
+  {
+    "native": "鍋",
+    "english": "saucepan",
+    "phonetic": "なべ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "鍋を例文に使います。",
+    "exampleEnglish": "Example with saucepan.",
+    "id": 3007,
+    "image": "🏠"
+  },
+  {
+    "native": "怠ける",
+    "english": "to be idle",
+    "phonetic": "なまける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "怠けるを例文に使います。",
+    "exampleEnglish": "Example with to be idle.",
+    "id": 3008,
+    "image": "🏠"
+  },
+  {
+    "native": "波",
+    "english": "wave",
+    "phonetic": "なみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "波を例文に使います。",
+    "exampleEnglish": "Example with wave.",
+    "id": 3009,
+    "image": "🏠"
+  },
+  {
+    "native": "涙",
+    "english": "tear",
+    "phonetic": "なみだ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "涙を例文に使います。",
+    "exampleEnglish": "Example with tear.",
+    "id": 3010,
+    "image": "🏠"
+  },
+  {
+    "native": "悩む",
+    "english": "to agonize",
+    "phonetic": "なやむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "悩むを例文に使います。",
+    "exampleEnglish": "Example with to agonize.",
+    "id": 3011,
+    "image": "🏠"
+  },
+  {
+    "native": "鳴らす",
+    "english": "to ring",
+    "phonetic": "ならす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "鳴らすを例文に使います。",
+    "exampleEnglish": "Example with to ring.",
+    "id": 3012,
+    "image": "🏠"
+  },
+  {
+    "native": "生る",
+    "english": "to bear fruit",
+    "phonetic": "なる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "生るを例文に使います。",
+    "exampleEnglish": "Example with to bear fruit.",
+    "id": 3013,
+    "image": "🏠"
+  },
+  {
+    "native": "馴れる",
+    "english": "to become domesticated",
+    "phonetic": "なれる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "馴れるを例文に使います。",
+    "exampleEnglish": "Example with to become domesticated.",
+    "id": 3014,
+    "image": "🏠"
+  },
+  {
+    "native": "縄",
+    "english": "rope",
+    "phonetic": "なわ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "縄を例文に使います。",
+    "exampleEnglish": "Example with rope.",
+    "id": 3015,
+    "image": "🏠"
+  },
+  {
+    "native": "何で",
+    "english": "Why",
+    "phonetic": "なんで",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "何でを例文に使います。",
+    "exampleEnglish": "Example with Why.",
+    "id": 3016,
+    "image": "🏠"
+  },
+  {
+    "native": "何でも",
+    "english": "by all means",
+    "phonetic": "なんでも",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "何でもを例文に使います。",
+    "exampleEnglish": "Example with by all means.",
+    "id": 3017,
+    "image": "🏠"
+  },
+  {
+    "native": "何とか",
+    "english": "somehow",
+    "phonetic": "なんとか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "何とかを例文に使います。",
+    "exampleEnglish": "Example with somehow.",
+    "id": 3018,
+    "image": "🏠"
+  },
+  {
+    "native": "似合う",
+    "english": "to suit (a person)",
+    "phonetic": "にあう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "似合うを例文に使います。",
+    "exampleEnglish": "Example with to suit (a person).",
+    "id": 3019,
+    "image": "🏠"
+  },
+  {
+    "native": "煮える",
+    "english": "to boil",
+    "phonetic": "にえる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "煮えるを例文に使います。",
+    "exampleEnglish": "Example with to boil.",
+    "id": 3020,
+    "image": "🏠"
+  },
+  {
+    "native": "苦手",
+    "english": "poor (at)",
+    "phonetic": "にがて",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "苦手を例文に使います。",
+    "exampleEnglish": "Example with poor (at).",
+    "id": 3021,
+    "image": "🏠"
+  },
+  {
+    "native": "握る",
+    "english": "to grasp",
+    "phonetic": "にぎる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "握るを例文に使います。",
+    "exampleEnglish": "Example with to grasp.",
+    "id": 3022,
+    "image": "🏠"
+  },
+  {
+    "native": "日常",
+    "english": "ordinary",
+    "phonetic": "にちじょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "日常を例文に使います。",
+    "exampleEnglish": "Example with ordinary.",
+    "id": 3023,
+    "image": "🏠"
+  },
+  {
+    "native": "日光",
+    "english": "sunlight",
+    "phonetic": "にっこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "日光を例文に使います。",
+    "exampleEnglish": "Example with sunlight.",
+    "id": 3024,
+    "image": "🏠"
+  },
+  {
+    "native": "日中",
+    "english": "daytime",
+    "phonetic": "にっちゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "日中を例文に使います。",
+    "exampleEnglish": "Example with daytime.",
+    "id": 3025,
+    "image": "🏠"
+  },
+  {
+    "native": "にっこり",
+    "english": "smile sweetly",
+    "phonetic": "にっこり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "にっこりを例文に使います。",
+    "exampleEnglish": "Example with smile sweetly.",
+    "id": 3026,
+    "image": "🏠"
+  },
+  {
+    "native": "日本",
+    "english": "Japan",
+    "phonetic": "にっぽん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "日本を例文に使います。",
+    "exampleEnglish": "Example with Japan.",
+    "id": 3027,
+    "image": "🏠"
+  },
+  {
+    "native": "入場",
+    "english": "entrance",
+    "phonetic": "にゅうじょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "入場を例文に使います。",
+    "exampleEnglish": "Example with entrance.",
+    "id": 3028,
+    "image": "🏠"
+  },
+  {
+    "native": "煮る",
+    "english": "to boil",
+    "phonetic": "にる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "煮るを例文に使います。",
+    "exampleEnglish": "Example with to boil.",
+    "id": 3029,
+    "image": "🏠"
+  },
+  {
+    "native": "人気",
+    "english": "popularity",
+    "phonetic": "にんき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "人気を例文に使います。",
+    "exampleEnglish": "Example with popularity.",
+    "id": 3030,
+    "image": "🏠"
+  },
+  {
+    "native": "人間",
+    "english": "human being",
+    "phonetic": "にんげん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "人間を例文に使います。",
+    "exampleEnglish": "Example with human being.",
+    "id": 3031,
+    "image": "🏠"
+  },
+  {
+    "native": "抜く",
+    "english": "to extract",
+    "phonetic": "ぬく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "抜くを例文に使います。",
+    "exampleEnglish": "Example with to extract.",
+    "id": 3032,
+    "image": "🏠"
+  },
+  {
+    "native": "抜ける",
+    "english": "to come out",
+    "phonetic": "ぬける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "抜けるを例文に使います。",
+    "exampleEnglish": "Example with to come out.",
+    "id": 3033,
+    "image": "🏠"
+  },
+  {
+    "native": "布",
+    "english": "cloth",
+    "phonetic": "ぬの",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "布を例文に使います。",
+    "exampleEnglish": "Example with cloth.",
+    "id": 3034,
+    "image": "🏠"
+  },
+  {
+    "native": "濡らす",
+    "english": "to wet",
+    "phonetic": "ぬらす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "濡らすを例文に使います。",
+    "exampleEnglish": "Example with to wet.",
+    "id": 3035,
+    "image": "🏠"
+  },
+  {
+    "native": "根",
+    "english": "root",
+    "phonetic": "ね",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "根を例文に使います。",
+    "exampleEnglish": "Example with root.",
+    "id": 3036,
+    "image": "🏠"
+  },
+  {
+    "native": "値",
+    "english": "value",
+    "phonetic": "ね",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "値を例文に使います。",
+    "exampleEnglish": "Example with value.",
+    "id": 3037,
+    "image": "🏠"
+  },
+  {
+    "native": "願い",
+    "english": "desire",
+    "phonetic": "ねがい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "願いを例文に使います。",
+    "exampleEnglish": "Example with desire.",
+    "id": 3038,
+    "image": "🏠"
+  },
+  {
+    "native": "願う",
+    "english": "to desire",
+    "phonetic": "ねがう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "願うを例文に使います。",
+    "exampleEnglish": "Example with to desire.",
+    "id": 3039,
+    "image": "🏠"
+  },
+  {
+    "native": "鼠",
+    "english": "mouse",
+    "phonetic": "ねずみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "鼠を例文に使います。",
+    "exampleEnglish": "Example with mouse.",
+    "id": 3040,
+    "image": "🏠"
+  },
+  {
+    "native": "熱帯",
+    "english": "tropics",
+    "phonetic": "ねったい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "熱帯を例文に使います。",
+    "exampleEnglish": "Example with tropics.",
+    "id": 3041,
+    "image": "🏠"
+  },
+  {
+    "native": "熱中",
+    "english": "enthusiasm",
+    "phonetic": "ねっちゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "熱中を例文に使います。",
+    "exampleEnglish": "Example with enthusiasm.",
+    "id": 3042,
+    "image": "🏠"
+  },
+  {
+    "native": "年間",
+    "english": "year",
+    "phonetic": "ねんかん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "年間を例文に使います。",
+    "exampleEnglish": "Example with year.",
+    "id": 3043,
+    "image": "🏠"
+  },
+  {
+    "native": "年中",
+    "english": "whole year",
+    "phonetic": "ねんじゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "年中を例文に使います。",
+    "exampleEnglish": "Example with whole year.",
+    "id": 3044,
+    "image": "🏠"
+  },
+  {
+    "native": "年代",
+    "english": "age",
+    "phonetic": "ねんだい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "年代を例文に使います。",
+    "exampleEnglish": "Example with age.",
+    "id": 3045,
+    "image": "🏠"
+  },
+  {
+    "native": "年齢",
+    "english": "age",
+    "phonetic": "ねんれい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "年齢を例文に使います。",
+    "exampleEnglish": "Example with age.",
+    "id": 3046,
+    "image": "🏠"
+  },
+  {
+    "native": "野",
+    "english": "field",
+    "phonetic": "の",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "野を例文に使います。",
+    "exampleEnglish": "Example with field.",
+    "id": 3047,
+    "image": "🏠"
+  },
+  {
+    "native": "能",
+    "english": "being skilled in",
+    "phonetic": "のう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "能を例文に使います。",
+    "exampleEnglish": "Example with being skilled in.",
+    "id": 3048,
+    "image": "🏠"
+  },
+  {
+    "native": "農家",
+    "english": "farmer",
+    "phonetic": "のうか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "農家を例文に使います。",
+    "exampleEnglish": "Example with farmer.",
+    "id": 3049,
+    "image": "🏠"
+  },
+  {
+    "native": "農業",
+    "english": "agriculture",
+    "phonetic": "のうぎょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "農業を例文に使います。",
+    "exampleEnglish": "Example with agriculture.",
+    "id": 3050,
+    "image": "🏠"
+  },
+  {
+    "native": "農民",
+    "english": "farmers",
+    "phonetic": "のうみん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "農民を例文に使います。",
+    "exampleEnglish": "Example with farmers.",
+    "id": 3051,
+    "image": "🏠"
+  },
+  {
+    "native": "能力",
+    "english": "ability",
+    "phonetic": "のうりょく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "能力を例文に使います。",
+    "exampleEnglish": "Example with ability.",
+    "id": 3052,
+    "image": "🏠"
+  },
+  {
+    "native": "ノー",
+    "english": "no",
+    "phonetic": "ノー",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ノーを例文に使います。",
+    "exampleEnglish": "Example with no.",
+    "id": 3053,
+    "image": "🏠"
+  },
+  {
+    "native": "軒",
+    "english": "eaves",
+    "phonetic": "のき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "軒を例文に使います。",
+    "exampleEnglish": "Example with eaves.",
+    "id": 3054,
+    "image": "🏠"
+  },
+  {
+    "native": "残す",
+    "english": "to leave (behind",
+    "phonetic": "のこす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "残すを例文に使います。",
+    "exampleEnglish": "Example with to leave (behind.",
+    "id": 3055,
+    "image": "🏠"
+  },
+  {
+    "native": "残り",
+    "english": "remaining",
+    "phonetic": "のこり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "残りを例文に使います。",
+    "exampleEnglish": "Example with remaining.",
+    "id": 3056,
+    "image": "🏠"
+  },
+  {
+    "native": "乗せる",
+    "english": "to place on (something)",
+    "phonetic": "のせる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "乗せるを例文に使います。",
+    "exampleEnglish": "Example with to place on (something).",
+    "id": 3057,
+    "image": "🏠"
+  },
+  {
+    "native": "載せる",
+    "english": "to place on (something); to publish",
+    "phonetic": "のせる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "載せるを例文に使います。",
+    "exampleEnglish": "Example with to place on (something); to publish.",
+    "id": 3058,
+    "image": "🏠"
+  },
+  {
+    "native": "覗く",
+    "english": "to peek in",
+    "phonetic": "のぞく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "覗くを例文に使います。",
+    "exampleEnglish": "Example with to peek in.",
+    "id": 3059,
+    "image": "🏠"
+  },
+  {
+    "native": "除く",
+    "english": "to remove",
+    "phonetic": "のぞく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "除くを例文に使います。",
+    "exampleEnglish": "Example with to remove.",
+    "id": 3060,
+    "image": "🏠"
+  },
+  {
+    "native": "望み",
+    "english": "wish",
+    "phonetic": "のぞみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "望みを例文に使います。",
+    "exampleEnglish": "Example with wish.",
+    "id": 3061,
+    "image": "🏠"
+  },
+  {
+    "native": "望む",
+    "english": "to desire",
+    "phonetic": "のぞむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "望むを例文に使います。",
+    "exampleEnglish": "Example with to desire.",
+    "id": 3062,
+    "image": "🏠"
+  },
+  {
+    "native": "ノック",
+    "english": "knock; fungo (baseball)",
+    "phonetic": "ノック",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ノックを例文に使います。",
+    "exampleEnglish": "Example with knock; fungo (baseball).",
+    "id": 3063,
+    "image": "🏠"
+  },
+  {
+    "native": "伸ばす",
+    "english": "to extend",
+    "phonetic": "のばす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "伸ばすを例文に使います。",
+    "exampleEnglish": "Example with to extend.",
+    "id": 3064,
+    "image": "🏠"
+  },
+  {
+    "native": "延ばす",
+    "english": "to extend",
+    "phonetic": "のばす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "延ばすを例文に使います。",
+    "exampleEnglish": "Example with to extend.",
+    "id": 3065,
+    "image": "🏠"
+  },
+  {
+    "native": "伸びる",
+    "english": "to extend",
+    "phonetic": "のびる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "伸びるを例文に使います。",
+    "exampleEnglish": "Example with to extend.",
+    "id": 3066,
+    "image": "🏠"
+  },
+  {
+    "native": "延びる",
+    "english": "to be prolonged",
+    "phonetic": "のびる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "延びるを例文に使います。",
+    "exampleEnglish": "Example with to be prolonged.",
+    "id": 3067,
+    "image": "🏠"
+  },
+  {
+    "native": "述べる",
+    "english": "to state",
+    "phonetic": "のべる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "述べるを例文に使います。",
+    "exampleEnglish": "Example with to state.",
+    "id": 3068,
+    "image": "🏠"
+  },
+  {
+    "native": "上る",
+    "english": "to ascend",
+    "phonetic": "のぼる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "上るを例文に使います。",
+    "exampleEnglish": "Example with to ascend.",
+    "id": 3069,
+    "image": "🏠"
+  },
+  {
+    "native": "昇る",
+    "english": "to arise",
+    "phonetic": "のぼる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "昇るを例文に使います。",
+    "exampleEnglish": "Example with to arise.",
+    "id": 3070,
+    "image": "🏠"
+  },
+  {
+    "native": "載る",
+    "english": "to appear (in print)",
+    "phonetic": "のる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "載るを例文に使います。",
+    "exampleEnglish": "Example with to appear (in print).",
+    "id": 3071,
+    "image": "🏠"
+  },
+  {
+    "native": "のんびり",
+    "english": "carefree",
+    "phonetic": "のんびり",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "のんびりを例文に使います。",
+    "exampleEnglish": "Example with carefree.",
+    "id": 3072,
+    "image": "🚌"
+  },
+  {
+    "native": "場",
+    "english": "place",
+    "phonetic": "ば",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "場を例文に使います。",
+    "exampleEnglish": "Example with place.",
+    "id": 3073,
+    "image": "🏠"
+  },
+  {
+    "native": "はあ (かん)",
+    "english": "(sigh)",
+    "phonetic": "はあ (かん)",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "はあ (かん)を例文に使います。",
+    "exampleEnglish": "Example with (sigh).",
+    "id": 3074,
+    "image": "🏠"
+  },
+  {
+    "native": "パーセント",
+    "english": "percent",
+    "phonetic": "パーセント",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "パーセントを例文に使います。",
+    "exampleEnglish": "Example with percent.",
+    "id": 3075,
+    "image": "🏠"
+  },
+  {
+    "native": "灰",
+    "english": "ash",
+    "phonetic": "はい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "灰を例文に使います。",
+    "exampleEnglish": "Example with ash.",
+    "id": 3076,
+    "image": "🏠"
+  },
+  {
+    "native": "バイオリン",
+    "english": "violin",
+    "phonetic": "バイオリン",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "バイオリンを例文に使います。",
+    "exampleEnglish": "Example with violin.",
+    "id": 3077,
+    "image": "🏠"
+  },
+  {
+    "native": "ハイキング",
+    "english": "hiking",
+    "phonetic": "ハイキング",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ハイキングを例文に使います。",
+    "exampleEnglish": "Example with hiking.",
+    "id": 3078,
+    "image": "🏠"
+  },
+  {
+    "native": "配達",
+    "english": "delivery",
+    "phonetic": "はいたつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "配達を例文に使います。",
+    "exampleEnglish": "Example with delivery.",
+    "id": 3079,
+    "image": "🏠"
+  },
+  {
+    "native": "パイプ",
+    "english": "pipe; channels official or otherwise",
+    "phonetic": "パイプ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "パイプを例文に使います。",
+    "exampleEnglish": "Example with pipe; channels official or otherwise.",
+    "id": 3080,
+    "image": "🏠"
+  },
+  {
+    "native": "俳優",
+    "english": "actor",
+    "phonetic": "はいゆう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "俳優を例文に使います。",
+    "exampleEnglish": "Example with actor.",
+    "id": 3081,
+    "image": "🏠"
+  },
+  {
+    "native": "パイロット",
+    "english": "pilot",
+    "phonetic": "パイロット",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "パイロットを例文に使います。",
+    "exampleEnglish": "Example with pilot.",
+    "id": 3082,
+    "image": "🏠"
+  },
+  {
+    "native": "生える",
+    "english": "to grow",
+    "phonetic": "はえる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "生えるを例文に使います。",
+    "exampleEnglish": "Example with to grow.",
+    "id": 3083,
+    "image": "🏠"
+  },
+  {
+    "native": "墓",
+    "english": "grave",
+    "phonetic": "はか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "墓を例文に使います。",
+    "exampleEnglish": "Example with grave.",
+    "id": 3084,
+    "image": "🏠"
+  },
+  {
+    "native": "馬鹿",
+    "english": "fool",
+    "phonetic": "ばか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "馬鹿を例文に使います。",
+    "exampleEnglish": "Example with fool.",
+    "id": 3085,
+    "image": "🏠"
+  },
+  {
+    "native": "博士",
+    "english": "doctorate",
+    "phonetic": "はかせ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "博士を例文に使います。",
+    "exampleEnglish": "Example with doctorate.",
+    "id": 3086,
+    "image": "🏠"
+  },
+  {
+    "native": "計る",
+    "english": "to measure",
+    "phonetic": "はかる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "計るを例文に使います。",
+    "exampleEnglish": "Example with to measure.",
+    "id": 3087,
+    "image": "🏠"
+  },
+  {
+    "native": "量る",
+    "english": "to measure",
+    "phonetic": "はかる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "量るを例文に使います。",
+    "exampleEnglish": "Example with to measure.",
+    "id": 3088,
+    "image": "🏠"
+  },
+  {
+    "native": "測る",
+    "english": "to measure",
+    "phonetic": "はかる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "測るを例文に使います。",
+    "exampleEnglish": "Example with to measure.",
+    "id": 3089,
+    "image": "🏠"
+  },
+  {
+    "native": "掃く",
+    "english": "to sweep",
+    "phonetic": "はく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "掃くを例文に使います。",
+    "exampleEnglish": "Example with to sweep.",
+    "id": 3090,
+    "image": "🏠"
+  },
+  {
+    "native": "吐く",
+    "english": "to throw up",
+    "phonetic": "はく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "吐くを例文に使います。",
+    "exampleEnglish": "Example with to throw up.",
+    "id": 3091,
+    "image": "🏠"
+  },
+  {
+    "native": "拍手",
+    "english": "clapping hands",
+    "phonetic": "はくしゅ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "拍手を例文に使います。",
+    "exampleEnglish": "Example with clapping hands.",
+    "id": 3092,
+    "image": "🏠"
+  },
+  {
+    "native": "莫大",
+    "english": "enormous",
+    "phonetic": "ばくだい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "莫大を例文に使います。",
+    "exampleEnglish": "Example with enormous.",
+    "id": 3093,
+    "image": "🏠"
+  },
+  {
+    "native": "爆発",
+    "english": "explosion",
+    "phonetic": "ばくはつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "爆発を例文に使います。",
+    "exampleEnglish": "Example with explosion.",
+    "id": 3094,
+    "image": "🏠"
+  },
+  {
+    "native": "博物館",
+    "english": "museum",
+    "phonetic": "はくぶつかん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "博物館を例文に使います。",
+    "exampleEnglish": "Example with museum.",
+    "id": 3095,
+    "image": "🏠"
+  },
+  {
+    "native": "激しい",
+    "english": "violent",
+    "phonetic": "はげしい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "激しいを例文に使います。",
+    "exampleEnglish": "Example with violent.",
+    "id": 3096,
+    "image": "🏠"
+  },
+  {
+    "native": "はさみ",
+    "english": "scissors",
+    "phonetic": "はさみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "はさみを例文に使います。",
+    "exampleEnglish": "Example with scissors.",
+    "id": 3097,
+    "image": "🏠"
+  },
+  {
+    "native": "破産",
+    "english": "(personal) bankruptcy",
+    "phonetic": "はさん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "破産を例文に使います。",
+    "exampleEnglish": "Example with (personal) bankruptcy.",
+    "id": 3098,
+    "image": "🏠"
+  },
+  {
+    "native": "端",
+    "english": "end (e.g.",
+    "phonetic": "はし",
+    "category": "Weather & Nature",
+    "topikLevel": 2,
+    "exampleNative": "端を例文に使います。",
+    "exampleEnglish": "Example with end (e.g..",
+    "id": 3099,
+    "image": "🌤️"
+  },
+  {
+    "native": "始まり",
+    "english": "origin",
+    "phonetic": "はじまり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "始まりを例文に使います。",
+    "exampleEnglish": "Example with origin.",
+    "id": 3100,
+    "image": "🏠"
+  },
+  {
+    "native": "パス",
+    "english": "path",
+    "phonetic": "パス",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "パスを例文に使います。",
+    "exampleEnglish": "Example with path.",
+    "id": 3101,
+    "image": "🏠"
+  },
+  {
+    "native": "外す",
+    "english": "to unfasten",
+    "phonetic": "はずす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "外すを例文に使います。",
+    "exampleEnglish": "Example with to unfasten.",
+    "id": 3102,
+    "image": "🏠"
+  },
+  {
+    "native": "パスポート",
+    "english": "passport",
+    "phonetic": "パスポート",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "パスポートを例文に使います。",
+    "exampleEnglish": "Example with passport.",
+    "id": 3103,
+    "image": "🏠"
+  },
+  {
+    "native": "外れる",
+    "english": "to be disconnected",
+    "phonetic": "はずれる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "外れるを例文に使います。",
+    "exampleEnglish": "Example with to be disconnected.",
+    "id": 3104,
+    "image": "🏠"
+  },
+  {
+    "native": "旗",
+    "english": "flag",
+    "phonetic": "はた",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "旗を例文に使います。",
+    "exampleEnglish": "Example with flag.",
+    "id": 3105,
+    "image": "🏠"
+  },
+  {
+    "native": "肌",
+    "english": "skin",
+    "phonetic": "はだ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "肌を例文に使います。",
+    "exampleEnglish": "Example with skin.",
+    "id": 3106,
+    "image": "🏠"
+  },
+  {
+    "native": "裸",
+    "english": "naked",
+    "phonetic": "はだか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "裸を例文に使います。",
+    "exampleEnglish": "Example with naked.",
+    "id": 3107,
+    "image": "🏠"
+  },
+  {
+    "native": "畑",
+    "english": "field",
+    "phonetic": "はたけ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "畑を例文に使います。",
+    "exampleEnglish": "Example with field.",
+    "id": 3108,
+    "image": "🏠"
+  },
+  {
+    "native": "働き",
+    "english": "work",
+    "phonetic": "はたらき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "働きを例文に使います。",
+    "exampleEnglish": "Example with work.",
+    "id": 3109,
+    "image": "🏠"
+  },
+  {
+    "native": "バッグ",
+    "english": "bag",
+    "phonetic": "バッグ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "バッグを例文に使います。",
+    "exampleEnglish": "Example with bag.",
+    "id": 3110,
+    "image": "🏠"
+  },
+  {
+    "native": "発見",
+    "english": "discovery",
+    "phonetic": "はっけん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "発見を例文に使います。",
+    "exampleEnglish": "Example with discovery.",
+    "id": 3111,
+    "image": "🏠"
+  },
+  {
+    "native": "発行",
+    "english": "issue (publications)",
+    "phonetic": "はっこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "発行を例文に使います。",
+    "exampleEnglish": "Example with issue (publications).",
+    "id": 3112,
+    "image": "🏠"
+  },
+  {
+    "native": "発車",
+    "english": "departure of a vehicle",
+    "phonetic": "はっしゃ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "発車を例文に使います。",
+    "exampleEnglish": "Example with departure of a vehicle.",
+    "id": 3113,
+    "image": "🏠"
+  },
+  {
+    "native": "発射",
+    "english": "firing",
+    "phonetic": "はっしゃ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "発射を例文に使います。",
+    "exampleEnglish": "Example with firing.",
+    "id": 3114,
+    "image": "🏠"
+  },
+  {
+    "native": "罰する",
+    "english": "to punish",
+    "phonetic": "ばっする",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "罰するを例文に使います。",
+    "exampleEnglish": "Example with to punish.",
+    "id": 3115,
+    "image": "🏠"
+  },
+  {
+    "native": "発達",
+    "english": "development",
+    "phonetic": "はったつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "発達を例文に使います。",
+    "exampleEnglish": "Example with development.",
+    "id": 3116,
+    "image": "🏠"
+  },
+  {
+    "native": "ばったり",
+    "english": "(to meet) by chance",
+    "phonetic": "ばったり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ばったりを例文に使います。",
+    "exampleEnglish": "Example with (to meet) by chance.",
+    "id": 3117,
+    "image": "🏠"
+  },
+  {
+    "native": "発展",
+    "english": "development",
+    "phonetic": "はってん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "発展を例文に使います。",
+    "exampleEnglish": "Example with development.",
+    "id": 3118,
+    "image": "🏠"
+  },
+  {
+    "native": "発表",
+    "english": "announcement; publication; presentation",
+    "phonetic": "はっぴょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "発表を例文に使います。",
+    "exampleEnglish": "Example with announcement; publication; presentation.",
+    "id": 3119,
+    "image": "🏠"
+  },
+  {
+    "native": "発明",
+    "english": "invention",
+    "phonetic": "はつめい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "発明を例文に使います。",
+    "exampleEnglish": "Example with invention.",
+    "id": 3120,
+    "image": "🏠"
+  },
+  {
+    "native": "派手",
+    "english": "showy",
+    "phonetic": "はで",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "派手を例文に使います。",
+    "exampleEnglish": "Example with showy.",
+    "id": 3121,
+    "image": "🏠"
+  },
+  {
+    "native": "話し合う",
+    "english": "to discuss",
+    "phonetic": "はなしあう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "話し合うを例文に使います。",
+    "exampleEnglish": "Example with to discuss.",
+    "id": 3122,
+    "image": "🏠"
+  },
+  {
+    "native": "離す",
+    "english": "to part",
+    "phonetic": "はなす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "離すを例文に使います。",
+    "exampleEnglish": "Example with to part.",
+    "id": 3123,
+    "image": "🏠"
+  },
+  {
+    "native": "放す",
+    "english": "to separate",
+    "phonetic": "はなす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "放すを例文に使います。",
+    "exampleEnglish": "Example with to separate.",
+    "id": 3124,
+    "image": "🏠"
+  },
+  {
+    "native": "離れる",
+    "english": "(something",
+    "phonetic": "はなれる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "離れるを例文に使います。",
+    "exampleEnglish": "Example with (something.",
+    "id": 3125,
+    "image": "🏠"
+  },
+  {
+    "native": "放れる",
+    "english": "to leave",
+    "phonetic": "はなれる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "放れるを例文に使います。",
+    "exampleEnglish": "Example with to leave.",
+    "id": 3126,
+    "image": "🏠"
+  },
+  {
+    "native": "羽",
+    "english": "wing",
+    "phonetic": "はね",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "羽を例文に使います。",
+    "exampleEnglish": "Example with wing.",
+    "id": 3127,
+    "image": "🏠"
+  },
+  {
+    "native": "羽根",
+    "english": "feather",
+    "phonetic": "はね",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "羽根を例文に使います。",
+    "exampleEnglish": "Example with feather.",
+    "id": 3128,
+    "image": "🍜"
+  },
+  {
+    "native": "幅",
+    "english": "width",
+    "phonetic": "はば",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "幅を例文に使います。",
+    "exampleEnglish": "Example with width.",
+    "id": 3129,
+    "image": "🏠"
+  },
+  {
+    "native": "母親",
+    "english": "mother",
+    "phonetic": "ははおや",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "母親を例文に使います。",
+    "exampleEnglish": "Example with mother.",
+    "id": 3130,
+    "image": "🏠"
+  },
+  {
+    "native": "省く",
+    "english": "to omit",
+    "phonetic": "はぶく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "省くを例文に使います。",
+    "exampleEnglish": "Example with to omit.",
+    "id": 3131,
+    "image": "🏠"
+  },
+  {
+    "native": "場面",
+    "english": "scene",
+    "phonetic": "ばめん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "場面を例文に使います。",
+    "exampleEnglish": "Example with scene.",
+    "id": 3132,
+    "image": "🏠"
+  },
+  {
+    "native": "流行る",
+    "english": "to be popular",
+    "phonetic": "はやる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "流行るを例文に使います。",
+    "exampleEnglish": "Example with to be popular.",
+    "id": 3133,
+    "image": "🏠"
+  },
+  {
+    "native": "腹",
+    "english": "abdomen",
+    "phonetic": "はら",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "腹を例文に使います。",
+    "exampleEnglish": "Example with abdomen.",
+    "id": 3134,
+    "image": "🏠"
+  },
+  {
+    "native": "原",
+    "english": "field",
+    "phonetic": "はら",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "原を例文に使います。",
+    "exampleEnglish": "Example with field.",
+    "id": 3135,
+    "image": "🏠"
+  },
+  {
+    "native": "バランス",
+    "english": "balance",
+    "phonetic": "バランス",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "バランスを例文に使います。",
+    "exampleEnglish": "Example with balance.",
+    "id": 3136,
+    "image": "🏠"
+  },
+  {
+    "native": "針",
+    "english": "needle",
+    "phonetic": "はり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "針を例文に使います。",
+    "exampleEnglish": "Example with needle.",
+    "id": 3137,
+    "image": "🏠"
+  },
+  {
+    "native": "範囲",
+    "english": "extent",
+    "phonetic": "はんい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "範囲を例文に使います。",
+    "exampleEnglish": "Example with extent.",
+    "id": 3138,
+    "image": "🏠"
+  },
+  {
+    "native": "反抗",
+    "english": "opposition",
+    "phonetic": "はんこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "反抗を例文に使います。",
+    "exampleEnglish": "Example with opposition.",
+    "id": 3139,
+    "image": "🏠"
+  },
+  {
+    "native": "犯罪",
+    "english": "crime",
+    "phonetic": "はんざい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "犯罪を例文に使います。",
+    "exampleEnglish": "Example with crime.",
+    "id": 3140,
+    "image": "🏠"
+  },
+  {
+    "native": "ハンサム",
+    "english": "handsome",
+    "phonetic": "ハンサム",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ハンサムを例文に使います。",
+    "exampleEnglish": "Example with handsome.",
+    "id": 3141,
+    "image": "🏠"
+  },
+  {
+    "native": "反省",
+    "english": "reflection",
+    "phonetic": "はんせい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "反省を例文に使います。",
+    "exampleEnglish": "Example with reflection.",
+    "id": 3142,
+    "image": "🏠"
+  },
+  {
+    "native": "判断",
+    "english": "judgment",
+    "phonetic": "はんだん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "判断を例文に使います。",
+    "exampleEnglish": "Example with judgment.",
+    "id": 3143,
+    "image": "🏠"
+  },
+  {
+    "native": "犯人",
+    "english": "offender",
+    "phonetic": "はんにん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "犯人を例文に使います。",
+    "exampleEnglish": "Example with offender.",
+    "id": 3144,
+    "image": "🏠"
+  },
+  {
+    "native": "販売",
+    "english": "sale",
+    "phonetic": "はんばい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "販売を例文に使います。",
+    "exampleEnglish": "Example with sale.",
+    "id": 3145,
+    "image": "🏠"
+  },
+  {
+    "native": "灯",
+    "english": "light",
+    "phonetic": "ひ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "灯を例文に使います。",
+    "exampleEnglish": "Example with light.",
+    "id": 3146,
+    "image": "🏠"
+  },
+  {
+    "native": "ビール",
+    "english": "beer",
+    "phonetic": "ビール",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ビールを例文に使います。",
+    "exampleEnglish": "Example with beer.",
+    "id": 3147,
+    "image": "🏠"
+  },
+  {
+    "native": "被害",
+    "english": "damage",
+    "phonetic": "ひがい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "被害を例文に使います。",
+    "exampleEnglish": "Example with damage.",
+    "id": 3148,
+    "image": "🏠"
+  },
+  {
+    "native": "比較",
+    "english": "comparison",
+    "phonetic": "ひかく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "比較を例文に使います。",
+    "exampleEnglish": "Example with comparison.",
+    "id": 3149,
+    "image": "🏠"
+  },
+  {
+    "native": "ピクニック",
+    "english": "picnic",
+    "phonetic": "ピクニック",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ピクニックを例文に使います。",
+    "exampleEnglish": "Example with picnic.",
+    "id": 3150,
+    "image": "🏠"
+  },
+  {
+    "native": "悲劇",
+    "english": "tragedy",
+    "phonetic": "ひげき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "悲劇を例文に使います。",
+    "exampleEnglish": "Example with tragedy.",
+    "id": 3151,
+    "image": "🏠"
+  },
+  {
+    "native": "飛行",
+    "english": "aviation",
+    "phonetic": "ひこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "飛行を例文に使います。",
+    "exampleEnglish": "Example with aviation.",
+    "id": 3152,
+    "image": "🏠"
+  },
+  {
+    "native": "膝",
+    "english": "knee",
+    "phonetic": "ひざ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "膝を例文に使います。",
+    "exampleEnglish": "Example with knee.",
+    "id": 3153,
+    "image": "🏠"
+  },
+  {
+    "native": "非常",
+    "english": "emergency",
+    "phonetic": "ひじょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "非常を例文に使います。",
+    "exampleEnglish": "Example with emergency.",
+    "id": 3154,
+    "image": "🏠"
+  },
+  {
+    "native": "美人",
+    "english": "beautiful person (woman)",
+    "phonetic": "びじん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "美人を例文に使います。",
+    "exampleEnglish": "Example with beautiful person (woman).",
+    "id": 3155,
+    "image": "🏠"
+  },
+  {
+    "native": "日付",
+    "english": "date",
+    "phonetic": "ひづけ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "日付を例文に使います。",
+    "exampleEnglish": "Example with date.",
+    "id": 3156,
+    "image": "🏠"
+  },
+  {
+    "native": "引越し",
+    "english": "moving",
+    "phonetic": "ひっこし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "引越しを例文に使います。",
+    "exampleEnglish": "Example with moving.",
+    "id": 3157,
+    "image": "🏠"
+  },
+  {
+    "native": "必死",
+    "english": "desperation",
+    "phonetic": "ひっし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "必死を例文に使います。",
+    "exampleEnglish": "Example with desperation.",
+    "id": 3158,
+    "image": "🏠"
+  },
+  {
+    "native": "ぴったり",
+    "english": "exactly",
+    "phonetic": "ぴったり",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "ぴったりを例文に使います。",
+    "exampleEnglish": "Example with exactly.",
+    "id": 3159,
+    "image": "🍜"
+  },
+  {
+    "native": "引っ張る",
+    "english": "to pull",
+    "phonetic": "ひっぱる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "引っ張るを例文に使います。",
+    "exampleEnglish": "Example with to pull.",
+    "id": 3160,
+    "image": "🏠"
+  },
+  {
+    "native": "否定",
+    "english": "negation",
+    "phonetic": "ひてい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "否定を例文に使います。",
+    "exampleEnglish": "Example with negation.",
+    "id": 3161,
+    "image": "🏠"
+  },
+  {
+    "native": "ビデオ",
+    "english": "video tape; VCR",
+    "phonetic": "ビデオ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ビデオを例文に使います。",
+    "exampleEnglish": "Example with video tape; VCR.",
+    "id": 3162,
+    "image": "🏠"
+  },
+  {
+    "native": "一言",
+    "english": "one word",
+    "phonetic": "ひとこと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "一言を例文に使います。",
+    "exampleEnglish": "Example with one word.",
+    "id": 3163,
+    "image": "🏠"
+  },
+  {
+    "native": "人込み",
+    "english": "crowd of people",
+    "phonetic": "ひとごみ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "人込みを例文に使います。",
+    "exampleEnglish": "Example with crowd of people.",
+    "id": 3164,
+    "image": "🏠"
+  },
+  {
+    "native": "等しい",
+    "english": "equal",
+    "phonetic": "ひとしい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "等しいを例文に使います。",
+    "exampleEnglish": "Example with equal.",
+    "id": 3165,
+    "image": "🏠"
+  },
+  {
+    "native": "独り",
+    "english": "alone",
+    "phonetic": "ひとり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "独りを例文に使います。",
+    "exampleEnglish": "Example with alone.",
+    "id": 3166,
+    "image": "🏠"
+  },
+  {
+    "native": "一人一人",
+    "english": "one by one",
+    "phonetic": "ひとりひとり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "一人一人を例文に使います。",
+    "exampleEnglish": "Example with one by one.",
+    "id": 3167,
+    "image": "🏠"
+  },
+  {
+    "native": "批判",
+    "english": "criticism",
+    "phonetic": "ひはん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "批判を例文に使います。",
+    "exampleEnglish": "Example with criticism.",
+    "id": 3168,
+    "image": "🏠"
+  },
+  {
+    "native": "批評",
+    "english": "criticism",
+    "phonetic": "ひひょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "批評を例文に使います。",
+    "exampleEnglish": "Example with criticism.",
+    "id": 3169,
+    "image": "🏠"
+  },
+  {
+    "native": "秘密",
+    "english": "secret",
+    "phonetic": "ひみつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "秘密を例文に使います。",
+    "exampleEnglish": "Example with secret.",
+    "id": 3170,
+    "image": "🏠"
+  },
+  {
+    "native": "微妙",
+    "english": "delicate",
+    "phonetic": "びみょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "微妙を例文に使います。",
+    "exampleEnglish": "Example with delicate.",
+    "id": 3171,
+    "image": "🏠"
+  },
+  {
+    "native": "紐",
+    "english": "string",
+    "phonetic": "ひも",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "紐を例文に使います。",
+    "exampleEnglish": "Example with string.",
+    "id": 3172,
+    "image": "🏠"
+  },
+  {
+    "native": "冷やす",
+    "english": "to cool",
+    "phonetic": "ひやす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "冷やすを例文に使います。",
+    "exampleEnglish": "Example with to cool.",
+    "id": 3173,
+    "image": "🏠"
+  },
+  {
+    "native": "費用",
+    "english": "cost",
+    "phonetic": "ひよう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "費用を例文に使います。",
+    "exampleEnglish": "Example with cost.",
+    "id": 3174,
+    "image": "🏠"
+  },
+  {
+    "native": "秒",
+    "english": "second (60th min)",
+    "phonetic": "びょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "秒を例文に使います。",
+    "exampleEnglish": "Example with second (60th min).",
+    "id": 3175,
+    "image": "🏠"
+  },
+  {
+    "native": "評価",
+    "english": "assessment",
+    "phonetic": "ひょうか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "評価を例文に使います。",
+    "exampleEnglish": "Example with assessment.",
+    "id": 3176,
+    "image": "🏠"
+  },
+  {
+    "native": "表現",
+    "english": "expression",
+    "phonetic": "ひょうげん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "表現を例文に使います。",
+    "exampleEnglish": "Example with expression.",
+    "id": 3177,
+    "image": "🏠"
+  },
+  {
+    "native": "表情",
+    "english": "facial expression",
+    "phonetic": "ひょうじょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "表情を例文に使います。",
+    "exampleEnglish": "Example with facial expression.",
+    "id": 3178,
+    "image": "🏠"
+  },
+  {
+    "native": "平等",
+    "english": "equality",
+    "phonetic": "びょうどう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "平等を例文に使います。",
+    "exampleEnglish": "Example with equality.",
+    "id": 3179,
+    "image": "🏠"
+  },
+  {
+    "native": "評判",
+    "english": "fame",
+    "phonetic": "ひょうばん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "評判を例文に使います。",
+    "exampleEnglish": "Example with fame.",
+    "id": 3180,
+    "image": "🏠"
+  },
+  {
+    "native": "表面",
+    "english": "surface",
+    "phonetic": "ひょうめん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "表面を例文に使います。",
+    "exampleEnglish": "Example with surface.",
+    "id": 3181,
+    "image": "🏠"
+  },
+  {
+    "native": "広がる",
+    "english": "to spread (out)",
+    "phonetic": "ひろがる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "広がるを例文に使います。",
+    "exampleEnglish": "Example with to spread (out).",
+    "id": 3182,
+    "image": "🏠"
+  },
+  {
+    "native": "広げる",
+    "english": "to spread",
+    "phonetic": "ひろげる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "広げるを例文に使います。",
+    "exampleEnglish": "Example with to spread.",
+    "id": 3183,
+    "image": "🏠"
+  },
+  {
+    "native": "広める",
+    "english": "to broaden",
+    "phonetic": "ひろめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "広めるを例文に使います。",
+    "exampleEnglish": "Example with to broaden.",
+    "id": 3184,
+    "image": "🏠"
+  },
+  {
+    "native": "瓶",
+    "english": "bottle",
+    "phonetic": "びん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "瓶を例文に使います。",
+    "exampleEnglish": "Example with bottle.",
+    "id": 3185,
+    "image": "🏠"
+  },
+  {
+    "native": "便",
+    "english": "way",
+    "phonetic": "びん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "便を例文に使います。",
+    "exampleEnglish": "Example with way.",
+    "id": 3186,
+    "image": "🏠"
+  },
+  {
+    "native": "ピン",
+    "english": "pin",
+    "phonetic": "ピン",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ピンを例文に使います。",
+    "exampleEnglish": "Example with pin.",
+    "id": 3187,
+    "image": "🏠"
+  },
+  {
+    "native": "不",
+    "english": "un(~)",
+    "phonetic": "ふ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "不を例文に使います。",
+    "exampleEnglish": "Example with un(~).",
+    "id": 3188,
+    "image": "🏠"
+  },
+  {
+    "native": "分",
+    "english": "dividing",
+    "phonetic": "ぶ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "分を例文に使います。",
+    "exampleEnglish": "Example with dividing.",
+    "id": 3189,
+    "image": "🏠"
+  },
+  {
+    "native": "不安",
+    "english": "anxiety",
+    "phonetic": "ふあん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "不安を例文に使います。",
+    "exampleEnglish": "Example with anxiety.",
+    "id": 3190,
+    "image": "🏠"
+  },
+  {
+    "native": "風景",
+    "english": "scenery",
+    "phonetic": "ふうけい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "風景を例文に使います。",
+    "exampleEnglish": "Example with scenery.",
+    "id": 3191,
+    "image": "🏠"
+  },
+  {
+    "native": "夫婦",
+    "english": "married couple",
+    "phonetic": "ふうふ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "夫婦を例文に使います。",
+    "exampleEnglish": "Example with married couple.",
+    "id": 3192,
+    "image": "🏠"
+  },
+  {
+    "native": "笛",
+    "english": "flute",
+    "phonetic": "ふえ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "笛を例文に使います。",
+    "exampleEnglish": "Example with flute.",
+    "id": 3193,
+    "image": "🏠"
+  },
+  {
+    "native": "不可",
+    "english": "wrong",
+    "phonetic": "ふか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "不可を例文に使います。",
+    "exampleEnglish": "Example with wrong.",
+    "id": 3194,
+    "image": "🏠"
+  },
+  {
+    "native": "深まる",
+    "english": "to deepen",
+    "phonetic": "ふかまる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "深まるを例文に使います。",
+    "exampleEnglish": "Example with to deepen.",
+    "id": 3195,
+    "image": "🏠"
+  },
+  {
+    "native": "武器",
+    "english": "weapon",
+    "phonetic": "ぶき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "武器を例文に使います。",
+    "exampleEnglish": "Example with weapon.",
+    "id": 3196,
+    "image": "🏠"
+  },
+  {
+    "native": "拭く",
+    "english": "to wipe",
+    "phonetic": "ふく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "拭くを例文に使います。",
+    "exampleEnglish": "Example with to wipe.",
+    "id": 3197,
+    "image": "🏠"
+  },
+  {
+    "native": "服装",
+    "english": "clothes",
+    "phonetic": "ふくそう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "服装を例文に使います。",
+    "exampleEnglish": "Example with clothes.",
+    "id": 3198,
+    "image": "🏠"
+  },
+  {
+    "native": "含む",
+    "english": "to contain",
+    "phonetic": "ふくむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "含むを例文に使います。",
+    "exampleEnglish": "Example with to contain.",
+    "id": 3199,
+    "image": "🏠"
+  },
+  {
+    "native": "含める",
+    "english": "to include",
+    "phonetic": "ふくめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "含めるを例文に使います。",
+    "exampleEnglish": "Example with to include.",
+    "id": 3200,
+    "image": "🏠"
+  },
+  {
+    "native": "袋",
+    "english": "bag",
+    "phonetic": "ふくろ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "袋を例文に使います。",
+    "exampleEnglish": "Example with bag.",
+    "id": 3201,
+    "image": "🏠"
+  },
+  {
+    "native": "不幸",
+    "english": "unhappiness",
+    "phonetic": "ふこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "不幸を例文に使います。",
+    "exampleEnglish": "Example with unhappiness.",
+    "id": 3202,
+    "image": "🏠"
+  },
+  {
+    "native": "節",
+    "english": "tune",
+    "phonetic": "ふし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "節を例文に使います。",
+    "exampleEnglish": "Example with tune.",
+    "id": 3203,
+    "image": "🏠"
+  },
+  {
+    "native": "無事",
+    "english": "safety",
+    "phonetic": "ぶじ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "無事を例文に使います。",
+    "exampleEnglish": "Example with safety.",
+    "id": 3204,
+    "image": "🏠"
+  },
+  {
+    "native": "不思議",
+    "english": "mystery",
+    "phonetic": "ふしぎ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "不思議を例文に使います。",
+    "exampleEnglish": "Example with mystery.",
+    "id": 3205,
+    "image": "🏠"
+  },
+  {
+    "native": "不自由",
+    "english": "discomfort",
+    "phonetic": "ふじゆう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "不自由を例文に使います。",
+    "exampleEnglish": "Example with discomfort.",
+    "id": 3206,
+    "image": "🏠"
+  },
+  {
+    "native": "夫人",
+    "english": "wife",
+    "phonetic": "ふじん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "夫人を例文に使います。",
+    "exampleEnglish": "Example with wife.",
+    "id": 3207,
+    "image": "🏠"
+  },
+  {
+    "native": "婦人",
+    "english": "woman (same as 女性 (じょせい)、女の人 (おんなのひと))",
+    "phonetic": "ふじん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "婦人を例文に使います。",
+    "exampleEnglish": "Example with woman (same as 女性 (じょせい)、女の人 (おんなのひと)).",
+    "id": 3208,
+    "image": "🏠"
+  },
+  {
+    "native": "不正",
+    "english": "injustice",
+    "phonetic": "ふせい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "不正を例文に使います。",
+    "exampleEnglish": "Example with injustice.",
+    "id": 3209,
+    "image": "🏠"
+  },
+  {
+    "native": "防ぐ",
+    "english": "to defend (against)",
+    "phonetic": "ふせぐ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "防ぐを例文に使います。",
+    "exampleEnglish": "Example with to defend (against).",
+    "id": 3210,
+    "image": "🏠"
+  },
+  {
+    "native": "不足",
+    "english": "insufficiency",
+    "phonetic": "ふそく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "不足を例文に使います。",
+    "exampleEnglish": "Example with insufficiency.",
+    "id": 3211,
+    "image": "🏠"
+  },
+  {
+    "native": "舞台",
+    "english": "stage (theater)",
+    "phonetic": "ぶたい",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "舞台を例文に使います。",
+    "exampleEnglish": "Example with stage (theater).",
+    "id": 3212,
+    "image": "🍜"
+  },
+  {
+    "native": "双子",
+    "english": "twins",
+    "phonetic": "ふたご",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "双子を例文に使います。",
+    "exampleEnglish": "Example with twins.",
+    "id": 3213,
+    "image": "🏠"
+  },
+  {
+    "native": "再び",
+    "english": "again",
+    "phonetic": "ふたたび",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "再びを例文に使います。",
+    "exampleEnglish": "Example with again.",
+    "id": 3214,
+    "image": "🏠"
+  },
+  {
+    "native": "普段",
+    "english": "in everyday situations",
+    "phonetic": "ふだん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "普段を例文に使います。",
+    "exampleEnglish": "Example with in everyday situations.",
+    "id": 3215,
+    "image": "🏠"
+  },
+  {
+    "native": "不通",
+    "english": "blockade",
+    "phonetic": "ふつう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "不通を例文に使います。",
+    "exampleEnglish": "Example with blockade.",
+    "id": 3216,
+    "image": "🏠"
+  },
+  {
+    "native": "物価",
+    "english": "(commodity/consumer) prices",
+    "phonetic": "ぶっか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "物価を例文に使います。",
+    "exampleEnglish": "Example with (commodity/consumer) prices.",
+    "id": 3217,
+    "image": "🏠"
+  },
+  {
+    "native": "ぶつかる",
+    "english": "to strike",
+    "phonetic": "ぶつかる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ぶつかるを例文に使います。",
+    "exampleEnglish": "Example with to strike.",
+    "id": 3218,
+    "image": "🏠"
+  },
+  {
+    "native": "ぶつける",
+    "english": "to knock",
+    "phonetic": "ぶつける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ぶつけるを例文に使います。",
+    "exampleEnglish": "Example with to knock.",
+    "id": 3219,
+    "image": "🏠"
+  },
+  {
+    "native": "物質",
+    "english": "material",
+    "phonetic": "ぶっしつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "物質を例文に使います。",
+    "exampleEnglish": "Example with material.",
+    "id": 3220,
+    "image": "🏠"
+  },
+  {
+    "native": "物理",
+    "english": "physics",
+    "phonetic": "ぶつり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "物理を例文に使います。",
+    "exampleEnglish": "Example with physics.",
+    "id": 3221,
+    "image": "🏠"
+  },
+  {
+    "native": "筆",
+    "english": "writing brush",
+    "phonetic": "ふで",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "筆を例文に使います。",
+    "exampleEnglish": "Example with writing brush.",
+    "id": 3222,
+    "image": "🏠"
+  },
+  {
+    "native": "ふと",
+    "english": "suddenly",
+    "phonetic": "ふと",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ふとを例文に使います。",
+    "exampleEnglish": "Example with suddenly.",
+    "id": 3223,
+    "image": "🏠"
+  },
+  {
+    "native": "部分",
+    "english": "portion",
+    "phonetic": "ぶぶん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "部分を例文に使います。",
+    "exampleEnglish": "Example with portion.",
+    "id": 3224,
+    "image": "🏠"
+  },
+  {
+    "native": "不平",
+    "english": "complaint",
+    "phonetic": "ふへい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "不平を例文に使います。",
+    "exampleEnglish": "Example with complaint.",
+    "id": 3225,
+    "image": "🏠"
+  },
+  {
+    "native": "不満",
+    "english": "dissatisfaction",
+    "phonetic": "ふまん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "不満を例文に使います。",
+    "exampleEnglish": "Example with dissatisfaction.",
+    "id": 3226,
+    "image": "🏠"
+  },
+  {
+    "native": "増やす",
+    "english": "to increase (v.t.)",
+    "phonetic": "ふやす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "増やすを例文に使います。",
+    "exampleEnglish": "Example with to increase (v.t.).",
+    "id": 3227,
+    "image": "🏠"
+  },
+  {
+    "native": "殖やす",
+    "english": "to increase",
+    "phonetic": "ふやす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "殖やすを例文に使います。",
+    "exampleEnglish": "Example with to increase.",
+    "id": 3228,
+    "image": "🏠"
+  },
+  {
+    "native": "プラス",
+    "english": "plus",
+    "phonetic": "プラス",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "プラスを例文に使います。",
+    "exampleEnglish": "Example with plus.",
+    "id": 3229,
+    "image": "🏠"
+  },
+  {
+    "native": "プラスチック",
+    "english": "plastic",
+    "phonetic": "プラスチック",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "プラスチックを例文に使います。",
+    "exampleEnglish": "Example with plastic.",
+    "id": 3230,
+    "image": "🏠"
+  },
+  {
+    "native": "プラン",
+    "english": "plan",
+    "phonetic": "プラン",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "プランを例文に使います。",
+    "exampleEnglish": "Example with plan.",
+    "id": 3231,
+    "image": "🏠"
+  },
+  {
+    "native": "不利",
+    "english": "disadvantage",
+    "phonetic": "ふり",
+    "category": "Feelings",
+    "topikLevel": 2,
+    "exampleNative": "不利を例文に使います。",
+    "exampleEnglish": "Example with disadvantage.",
+    "id": 3232,
+    "image": "💕"
+  },
+  {
+    "native": "振る",
+    "english": "to wave",
+    "phonetic": "ふる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "振るを例文に使います。",
+    "exampleEnglish": "Example with to wave.",
+    "id": 3233,
+    "image": "🏠"
+  },
+  {
+    "native": "震える",
+    "english": "to shiver",
+    "phonetic": "ふるえる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "震えるを例文に使います。",
+    "exampleEnglish": "Example with to shiver.",
+    "id": 3234,
+    "image": "🏠"
+  },
+  {
+    "native": "ブレーキ",
+    "english": "a brake",
+    "phonetic": "ブレーキ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ブレーキを例文に使います。",
+    "exampleEnglish": "Example with a brake.",
+    "id": 3235,
+    "image": "🏠"
+  },
+  {
+    "native": "触れる",
+    "english": "to touch",
+    "phonetic": "ふれる",
+    "category": "Feelings",
+    "topikLevel": 2,
+    "exampleNative": "触れるを例文に使います。",
+    "exampleEnglish": "Example with to touch.",
+    "id": 3236,
+    "image": "💕"
+  },
+  {
+    "native": "プロ",
+    "english": "professional",
+    "phonetic": "プロ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "プロを例文に使います。",
+    "exampleEnglish": "Example with professional.",
+    "id": 3237,
+    "image": "🏠"
+  },
+  {
+    "native": "文",
+    "english": "sentence",
+    "phonetic": "ぶん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "文を例文に使います。",
+    "exampleEnglish": "Example with sentence.",
+    "id": 3238,
+    "image": "🏠"
+  },
+  {
+    "native": "雰囲気",
+    "english": "atmosphere (e.g.",
+    "phonetic": "ふんいき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "雰囲気を例文に使います。",
+    "exampleEnglish": "Example with atmosphere (e.g..",
+    "id": 3239,
+    "image": "🏠"
+  },
+  {
+    "native": "分析",
+    "english": "analysis",
+    "phonetic": "ぶんせき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "分析を例文に使います。",
+    "exampleEnglish": "Example with analysis.",
+    "id": 3240,
+    "image": "🏠"
+  },
+  {
+    "native": "文明",
+    "english": "civilization",
+    "phonetic": "ぶんめい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "文明を例文に使います。",
+    "exampleEnglish": "Example with civilization.",
+    "id": 3241,
+    "image": "🏠"
+  },
+  {
+    "native": "分野",
+    "english": "field",
+    "phonetic": "ぶんや",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "分野を例文に使います。",
+    "exampleEnglish": "Example with field.",
+    "id": 3242,
+    "image": "🏠"
+  },
+  {
+    "native": "塀",
+    "english": "wall",
+    "phonetic": "へい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "塀を例文に使います。",
+    "exampleEnglish": "Example with wall.",
+    "id": 3243,
+    "image": "🏠"
+  },
+  {
+    "native": "平均",
+    "english": "equilibrium",
+    "phonetic": "へいきん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "平均を例文に使います。",
+    "exampleEnglish": "Example with equilibrium.",
+    "id": 3244,
+    "image": "🏠"
+  },
+  {
+    "native": "平和",
+    "english": "peace",
+    "phonetic": "へいわ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "平和を例文に使います。",
+    "exampleEnglish": "Example with peace.",
+    "id": 3245,
+    "image": "🏠"
+  },
+  {
+    "native": "別に",
+    "english": "(not) particularly",
+    "phonetic": "べつに",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "別にを例文に使います。",
+    "exampleEnglish": "Example with (not) particularly.",
+    "id": 3246,
+    "image": "🏠"
+  },
+  {
+    "native": "減らす",
+    "english": "to decrease",
+    "phonetic": "へらす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "減らすを例文に使います。",
+    "exampleEnglish": "Example with to decrease.",
+    "id": 3247,
+    "image": "🏠"
+  },
+  {
+    "native": "減る",
+    "english": "to decrease (in size or number)",
+    "phonetic": "へる",
+    "category": "Numbers",
+    "topikLevel": 2,
+    "exampleNative": "減るを例文に使います。",
+    "exampleEnglish": "Example with to decrease (in size or number).",
+    "id": 3248,
+    "image": "🔢"
+  },
+  {
+    "native": "ベルト",
+    "english": "Belt for western clothes",
+    "phonetic": "ベルト",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ベルトを例文に使います。",
+    "exampleEnglish": "Example with Belt for western clothes.",
+    "id": 3249,
+    "image": "🏠"
+  },
+  {
+    "native": "変化",
+    "english": "change",
+    "phonetic": "へんか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "変化を例文に使います。",
+    "exampleEnglish": "Example with change.",
+    "id": 3250,
+    "image": "🏠"
+  },
+  {
+    "native": "ペンキ",
+    "english": "paint",
+    "phonetic": "ペンキ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ペンキを例文に使います。",
+    "exampleEnglish": "Example with paint.",
+    "id": 3251,
+    "image": "🏠"
+  },
+  {
+    "native": "変更",
+    "english": "change",
+    "phonetic": "へんこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "変更を例文に使います。",
+    "exampleEnglish": "Example with change.",
+    "id": 3252,
+    "image": "🏠"
+  },
+  {
+    "native": "ベンチ",
+    "english": "bench",
+    "phonetic": "ベンチ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ベンチを例文に使います。",
+    "exampleEnglish": "Example with bench.",
+    "id": 3253,
+    "image": "🏠"
+  },
+  {
+    "native": "弁当",
+    "english": "box lunch",
+    "phonetic": "べんとう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "弁当を例文に使います。",
+    "exampleEnglish": "Example with box lunch.",
+    "id": 3254,
+    "image": "🏠"
+  },
+  {
+    "native": "法",
+    "english": "Act (law: the X Act)",
+    "phonetic": "ほう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "法を例文に使います。",
+    "exampleEnglish": "Example with Act (law: the X Act).",
+    "id": 3255,
+    "image": "🏠"
+  },
+  {
+    "native": "棒",
+    "english": "pole",
+    "phonetic": "ぼう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "棒を例文に使います。",
+    "exampleEnglish": "Example with pole.",
+    "id": 3256,
+    "image": "🏠"
+  },
+  {
+    "native": "冒険",
+    "english": "risk",
+    "phonetic": "ぼうけん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "冒険を例文に使います。",
+    "exampleEnglish": "Example with risk.",
+    "id": 3257,
+    "image": "🏠"
+  },
+  {
+    "native": "方向",
+    "english": "direction",
+    "phonetic": "ほうこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "方向を例文に使います。",
+    "exampleEnglish": "Example with direction.",
+    "id": 3258,
+    "image": "🏠"
+  },
+  {
+    "native": "報告",
+    "english": "report",
+    "phonetic": "ほうこく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "報告を例文に使います。",
+    "exampleEnglish": "Example with report.",
+    "id": 3259,
+    "image": "🏠"
+  },
+  {
+    "native": "宝石",
+    "english": "gem",
+    "phonetic": "ほうせき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "宝石を例文に使います。",
+    "exampleEnglish": "Example with gem.",
+    "id": 3260,
+    "image": "🏠"
+  },
+  {
+    "native": "包装",
+    "english": "packing",
+    "phonetic": "ほうそう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "包装を例文に使います。",
+    "exampleEnglish": "Example with packing.",
+    "id": 3261,
+    "image": "🏠"
+  },
+  {
+    "native": "豊富",
+    "english": "abundance",
+    "phonetic": "ほうふ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "豊富を例文に使います。",
+    "exampleEnglish": "Example with abundance.",
+    "id": 3262,
+    "image": "🏠"
+  },
+  {
+    "native": "方法",
+    "english": "method",
+    "phonetic": "ほうほう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "方法を例文に使います。",
+    "exampleEnglish": "Example with method.",
+    "id": 3263,
+    "image": "🏠"
+  },
+  {
+    "native": "訪問",
+    "english": "call",
+    "phonetic": "ほうもん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "訪問を例文に使います。",
+    "exampleEnglish": "Example with call.",
+    "id": 3264,
+    "image": "🏠"
+  },
+  {
+    "native": "吠える",
+    "english": "to bark",
+    "phonetic": "ほえる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "吠えるを例文に使います。",
+    "exampleEnglish": "Example with to bark.",
+    "id": 3265,
+    "image": "🏠"
+  },
+  {
+    "native": "ボーイ",
+    "english": "porter; boy",
+    "phonetic": "ボーイ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ボーイを例文に使います。",
+    "exampleEnglish": "Example with porter; boy.",
+    "id": 3266,
+    "image": "🏠"
+  },
+  {
+    "native": "ボート",
+    "english": "rowing boat",
+    "phonetic": "ボート",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ボートを例文に使います。",
+    "exampleEnglish": "Example with rowing boat.",
+    "id": 3267,
+    "image": "🏠"
+  },
+  {
+    "native": "ホーム",
+    "english": "platform; home",
+    "phonetic": "ホーム",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ホームを例文に使います。",
+    "exampleEnglish": "Example with platform; home.",
+    "id": 3268,
+    "image": "🏠"
+  },
+  {
+    "native": "ボール",
+    "english": "ball; bowl",
+    "phonetic": "ボール",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ボールを例文に使います。",
+    "exampleEnglish": "Example with ball; bowl.",
+    "id": 3269,
+    "image": "🏠"
+  },
+  {
+    "native": "誇り",
+    "english": "pride",
+    "phonetic": "ほこり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "誇りを例文に使います。",
+    "exampleEnglish": "Example with pride.",
+    "id": 3270,
+    "image": "🏠"
+  },
+  {
+    "native": "埃",
+    "english": "dust",
+    "phonetic": "ほこり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "埃を例文に使います。",
+    "exampleEnglish": "Example with dust.",
+    "id": 3271,
+    "image": "🏠"
+  },
+  {
+    "native": "保証",
+    "english": "guarantee",
+    "phonetic": "ほしょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "保証を例文に使います。",
+    "exampleEnglish": "Example with guarantee.",
+    "id": 3272,
+    "image": "🏠"
+  },
+  {
+    "native": "保存",
+    "english": "preservation",
+    "phonetic": "ほぞん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "保存を例文に使います。",
+    "exampleEnglish": "Example with preservation.",
+    "id": 3273,
+    "image": "🏠"
+  },
+  {
+    "native": "歩道",
+    "english": "walkway",
+    "phonetic": "ほどう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "歩道を例文に使います。",
+    "exampleEnglish": "Example with walkway.",
+    "id": 3274,
+    "image": "🏠"
+  },
+  {
+    "native": "仏",
+    "english": "Buddha",
+    "phonetic": "ほとけ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "仏を例文に使います。",
+    "exampleEnglish": "Example with Buddha.",
+    "id": 3275,
+    "image": "🏠"
+  },
+  {
+    "native": "骨",
+    "english": "bone",
+    "phonetic": "ほね",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "骨を例文に使います。",
+    "exampleEnglish": "Example with bone.",
+    "id": 3276,
+    "image": "🏠"
+  },
+  {
+    "native": "炎",
+    "english": "flame",
+    "phonetic": "ほのお",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "炎を例文に使います。",
+    "exampleEnglish": "Example with flame.",
+    "id": 3277,
+    "image": "🏠"
+  },
+  {
+    "native": "頬",
+    "english": "cheek (of face)",
+    "phonetic": "ほほ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "頬を例文に使います。",
+    "exampleEnglish": "Example with cheek (of face).",
+    "id": 3278,
+    "image": "🏠"
+  },
+  {
+    "native": "ほぼ",
+    "english": "almost",
+    "phonetic": "ほぼ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ほぼを例文に使います。",
+    "exampleEnglish": "Example with almost.",
+    "id": 3279,
+    "image": "🏠"
+  },
+  {
+    "native": "微笑む",
+    "english": "to smile",
+    "phonetic": "ほほえむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "微笑むを例文に使います。",
+    "exampleEnglish": "Example with to smile.",
+    "id": 3280,
+    "image": "🏠"
+  },
+  {
+    "native": "堀",
+    "english": "moat",
+    "phonetic": "ほり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "堀を例文に使います。",
+    "exampleEnglish": "Example with moat.",
+    "id": 3281,
+    "image": "🏠"
+  },
+  {
+    "native": "濠",
+    "english": "moat",
+    "phonetic": "ほり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "濠を例文に使います。",
+    "exampleEnglish": "Example with moat.",
+    "id": 3282,
+    "image": "🏠"
+  },
+  {
+    "native": "本人",
+    "english": "the person himself",
+    "phonetic": "ほんにん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "本人を例文に使います。",
+    "exampleEnglish": "Example with the person himself.",
+    "id": 3283,
+    "image": "🏠"
+  },
+  {
+    "native": "本物",
+    "english": "genuine article",
+    "phonetic": "ほんもの",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "本物を例文に使います。",
+    "exampleEnglish": "Example with genuine article.",
+    "id": 3284,
+    "image": "🏠"
+  },
+  {
+    "native": "ぼんやり",
+    "english": "dim",
+    "phonetic": "ぼんやり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ぼんやりを例文に使います。",
+    "exampleEnglish": "Example with dim.",
+    "id": 3285,
+    "image": "🏠"
+  },
+  {
+    "native": "まあ",
+    "english": "well (used when making a modest or hesitant statement)",
+    "phonetic": "まあ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "まあを例文に使います。",
+    "exampleEnglish": "Example with well (used when making a modest or hesitant statement).",
+    "id": 3286,
+    "image": "🏠"
+  },
+  {
+    "native": "マーケット",
+    "english": "market",
+    "phonetic": "マーケット",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "マーケットを例文に使います。",
+    "exampleEnglish": "Example with market.",
+    "id": 3287,
+    "image": "🏠"
+  },
+  {
+    "native": "マイク",
+    "english": "mic",
+    "phonetic": "マイク",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "マイクを例文に使います。",
+    "exampleEnglish": "Example with mic.",
+    "id": 3288,
+    "image": "🏠"
+  },
+  {
+    "native": "迷子",
+    "english": "lost (stray) child",
+    "phonetic": "まいご",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "迷子を例文に使います。",
+    "exampleEnglish": "Example with lost (stray) child.",
+    "id": 3289,
+    "image": "🏠"
+  },
+  {
+    "native": "マイナス",
+    "english": "minus",
+    "phonetic": "マイナス",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "マイナスを例文に使います。",
+    "exampleEnglish": "Example with minus.",
+    "id": 3290,
+    "image": "🏠"
+  },
+  {
+    "native": "任せる",
+    "english": "to entrust to another",
+    "phonetic": "まかせる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "任せるを例文に使います。",
+    "exampleEnglish": "Example with to entrust to another.",
+    "id": 3291,
+    "image": "🏠"
+  },
+  {
+    "native": "巻く",
+    "english": "to wind",
+    "phonetic": "まく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "巻くを例文に使います。",
+    "exampleEnglish": "Example with to wind.",
+    "id": 3292,
+    "image": "🏠"
+  },
+  {
+    "native": "蒔く",
+    "english": "to sow (seeds)",
+    "phonetic": "まく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "蒔くを例文に使います。",
+    "exampleEnglish": "Example with to sow (seeds).",
+    "id": 3293,
+    "image": "🏠"
+  },
+  {
+    "native": "撒く",
+    "english": "to scatter",
+    "phonetic": "まく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "撒くを例文に使います。",
+    "exampleEnglish": "Example with to scatter.",
+    "id": 3294,
+    "image": "🏠"
+  },
+  {
+    "native": "幕",
+    "english": "curtain",
+    "phonetic": "まく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "幕を例文に使います。",
+    "exampleEnglish": "Example with curtain.",
+    "id": 3295,
+    "image": "🏠"
+  },
+  {
+    "native": "負け",
+    "english": "defeat",
+    "phonetic": "まけ",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "負けを例文に使います。",
+    "exampleEnglish": "Example with defeat.",
+    "id": 3296,
+    "image": "🍜"
+  },
+  {
+    "native": "孫",
+    "english": "grandchild",
+    "phonetic": "まご",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "孫を例文に使います。",
+    "exampleEnglish": "Example with grandchild.",
+    "id": 3297,
+    "image": "🏠"
+  },
+  {
+    "native": "まさか",
+    "english": "by no means",
+    "phonetic": "まさか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "まさかを例文に使います。",
+    "exampleEnglish": "Example with by no means.",
+    "id": 3298,
+    "image": "🏠"
+  },
+  {
+    "native": "まさに",
+    "english": "correctly",
+    "phonetic": "まさに",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "まさにを例文に使います。",
+    "exampleEnglish": "Example with correctly.",
+    "id": 3299,
+    "image": "🏠"
+  },
+  {
+    "native": "混ざる",
+    "english": "to be mixed",
+    "phonetic": "まざる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "混ざるを例文に使います。",
+    "exampleEnglish": "Example with to be mixed.",
+    "id": 3300,
+    "image": "🏠"
+  },
+  {
+    "native": "交ざる",
+    "english": "to be mixed",
+    "phonetic": "まざる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "交ざるを例文に使います。",
+    "exampleEnglish": "Example with to be mixed.",
+    "id": 3301,
+    "image": "🏠"
+  },
+  {
+    "native": "混じる",
+    "english": "to be mixed",
+    "phonetic": "まじる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "混じるを例文に使います。",
+    "exampleEnglish": "Example with to be mixed.",
+    "id": 3302,
+    "image": "🏠"
+  },
+  {
+    "native": "交じる",
+    "english": "to be mixed",
+    "phonetic": "まじる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "交じるを例文に使います。",
+    "exampleEnglish": "Example with to be mixed.",
+    "id": 3303,
+    "image": "🏠"
+  },
+  {
+    "native": "増す",
+    "english": "to increase",
+    "phonetic": "ます",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "増すを例文に使います。",
+    "exampleEnglish": "Example with to increase.",
+    "id": 3304,
+    "image": "🏠"
+  },
+  {
+    "native": "貧しい",
+    "english": "poor",
+    "phonetic": "まずしい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "貧しいを例文に使います。",
+    "exampleEnglish": "Example with poor.",
+    "id": 3305,
+    "image": "🏠"
+  },
+  {
+    "native": "マスター",
+    "english": "bar owner",
+    "phonetic": "マスター",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "マスターを例文に使います。",
+    "exampleEnglish": "Example with bar owner.",
+    "id": 3306,
+    "image": "🏠"
+  },
+  {
+    "native": "ますます",
+    "english": "increasingly (same as もっと)",
+    "phonetic": "ますます",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ますますを例文に使います。",
+    "exampleEnglish": "Example with increasingly (same as もっと).",
+    "id": 3307,
+    "image": "🏠"
+  },
+  {
+    "native": "混ぜる",
+    "english": "to mix",
+    "phonetic": "まぜる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "混ぜるを例文に使います。",
+    "exampleEnglish": "Example with to mix.",
+    "id": 3308,
+    "image": "🏠"
+  },
+  {
+    "native": "交ぜる",
+    "english": "to be mixed",
+    "phonetic": "まぜる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "交ぜるを例文に使います。",
+    "exampleEnglish": "Example with to be mixed.",
+    "id": 3309,
+    "image": "🏠"
+  },
+  {
+    "native": "街",
+    "english": "town; street",
+    "phonetic": "まち",
+    "category": "Weather & Nature",
+    "topikLevel": 2,
+    "exampleNative": "街を例文に使います。",
+    "exampleEnglish": "Example with town; street.",
+    "id": 3310,
+    "image": "🌤️"
+  },
+  {
+    "native": "間違い",
+    "english": "mistake",
+    "phonetic": "まちがい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "間違いを例文に使います。",
+    "exampleEnglish": "Example with mistake.",
+    "id": 3311,
+    "image": "🏠"
+  },
+  {
+    "native": "松",
+    "english": "pine tree",
+    "phonetic": "まつ",
+    "category": "Weather & Nature",
+    "topikLevel": 2,
+    "exampleNative": "松を例文に使います。",
+    "exampleEnglish": "Example with pine tree.",
+    "id": 3312,
+    "image": "🌤️"
+  },
+  {
+    "native": "真っ赤",
+    "english": "deep red",
+    "phonetic": "まっか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "真っ赤を例文に使います。",
+    "exampleEnglish": "Example with deep red.",
+    "id": 3313,
+    "image": "🏠"
+  },
+  {
+    "native": "全く",
+    "english": "really",
+    "phonetic": "まったく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "全くを例文に使います。",
+    "exampleEnglish": "Example with really.",
+    "id": 3314,
+    "image": "🏠"
+  },
+  {
+    "native": "祭",
+    "english": "festival",
+    "phonetic": "まつり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "祭を例文に使います。",
+    "exampleEnglish": "Example with festival.",
+    "id": 3315,
+    "image": "🏠"
+  },
+  {
+    "native": "まとまる",
+    "english": "to be collected",
+    "phonetic": "まとまる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "まとまるを例文に使います。",
+    "exampleEnglish": "Example with to be collected.",
+    "id": 3316,
+    "image": "🏠"
+  },
+  {
+    "native": "まとめる",
+    "english": "to put in order",
+    "phonetic": "まとめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "まとめるを例文に使います。",
+    "exampleEnglish": "Example with to put in order.",
+    "id": 3317,
+    "image": "🏠"
+  },
+  {
+    "native": "学ぶ",
+    "english": "to learn; to study",
+    "phonetic": "まなぶ",
+    "category": "Study & Work",
+    "topikLevel": 2,
+    "exampleNative": "学ぶを例文に使います。",
+    "exampleEnglish": "Example with to learn; to study.",
+    "id": 3318,
+    "image": "📚"
+  },
+  {
+    "native": "真似",
+    "english": "mimicry",
+    "phonetic": "まね",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "真似を例文に使います。",
+    "exampleEnglish": "Example with mimicry.",
+    "id": 3319,
+    "image": "🏠"
+  },
+  {
+    "native": "招く",
+    "english": "to invite",
+    "phonetic": "まねく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "招くを例文に使います。",
+    "exampleEnglish": "Example with to invite.",
+    "id": 3320,
+    "image": "🏠"
+  },
+  {
+    "native": "まぶしい",
+    "english": "dazzling",
+    "phonetic": "まぶしい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "まぶしいを例文に使います。",
+    "exampleEnglish": "Example with dazzling.",
+    "id": 3321,
+    "image": "🏠"
+  },
+  {
+    "native": "柵",
+    "english": "fence",
+    "phonetic": "さく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "柵を例文に使います。",
+    "exampleEnglish": "Example with fence.",
+    "id": 3322,
+    "image": "🏠"
+  },
+  {
+    "native": "裂ける",
+    "english": "to split",
+    "phonetic": "さける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "裂けるを例文に使います。",
+    "exampleEnglish": "Example with to split.",
+    "id": 3323,
+    "image": "🏠"
+  },
+  {
+    "native": "裁く",
+    "english": "to judge",
+    "phonetic": "さばく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "裁くを例文に使います。",
+    "exampleEnglish": "Example with to judge.",
+    "id": 3324,
+    "image": "🏠"
+  },
+  {
+    "native": "酸化",
+    "english": "oxidation",
+    "phonetic": "さんか",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "酸化を例文に使います。",
+    "exampleEnglish": "Example with oxidation.",
+    "id": 3325,
+    "image": "🏠"
+  },
+  {
+    "native": "死",
+    "english": "death",
+    "phonetic": "し",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "死を例文に使います。",
+    "exampleEnglish": "Example with death.",
+    "id": 3326,
+    "image": "🍜"
+  },
+  {
+    "native": "資格",
+    "english": "qualifications",
+    "phonetic": "しかく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "資格を例文に使います。",
+    "exampleEnglish": "Example with qualifications.",
+    "id": 3327,
+    "image": "🏠"
+  },
+  {
+    "native": "視覚",
+    "english": "sense of sight",
+    "phonetic": "しかく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "視覚を例文に使います。",
+    "exampleEnglish": "Example with sense of sight.",
+    "id": 3328,
+    "image": "🏠"
+  },
+  {
+    "native": "指揮",
+    "english": "command",
+    "phonetic": "しき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "指揮を例文に使います。",
+    "exampleEnglish": "Example with command.",
+    "id": 3329,
+    "image": "🏠"
+  },
+  {
+    "native": "磁気",
+    "english": "magnetism",
+    "phonetic": "じき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "磁気を例文に使います。",
+    "exampleEnglish": "Example with magnetism.",
+    "id": 3330,
+    "image": "🏠"
+  },
+  {
+    "native": "磁器",
+    "english": "porcelain",
+    "phonetic": "じき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "磁器を例文に使います。",
+    "exampleEnglish": "Example with porcelain.",
+    "id": 3331,
+    "image": "🏠"
+  },
+  {
+    "native": "自己",
+    "english": "self",
+    "phonetic": "じこ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "自己を例文に使います。",
+    "exampleEnglish": "Example with self.",
+    "id": 3332,
+    "image": "🏠"
+  },
+  {
+    "native": "字体",
+    "english": "font",
+    "phonetic": "じたい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "字体を例文に使います。",
+    "exampleEnglish": "Example with font.",
+    "id": 3333,
+    "image": "🏠"
+  },
+  {
+    "native": "辞退",
+    "english": "refusal",
+    "phonetic": "じたい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "辞退を例文に使います。",
+    "exampleEnglish": "Example with refusal.",
+    "id": 3334,
+    "image": "🏠"
+  },
+  {
+    "native": "視点",
+    "english": "opinion",
+    "phonetic": "してん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "視点を例文に使います。",
+    "exampleEnglish": "Example with opinion.",
+    "id": 3335,
+    "image": "🏠"
+  },
+  {
+    "native": "脂肪",
+    "english": "fat",
+    "phonetic": "しぼう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "脂肪を例文に使います。",
+    "exampleEnglish": "Example with fat.",
+    "id": 3336,
+    "image": "🏠"
+  },
+  {
+    "native": "志望",
+    "english": "wish",
+    "phonetic": "しぼう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "志望を例文に使います。",
+    "exampleEnglish": "Example with wish.",
+    "id": 3337,
+    "image": "🏠"
+  },
+  {
+    "native": "衆",
+    "english": "masses",
+    "phonetic": "しゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "衆を例文に使います。",
+    "exampleEnglish": "Example with masses.",
+    "id": 3338,
+    "image": "🏠"
+  },
+  {
+    "native": "住",
+    "english": "dwelling",
+    "phonetic": "じゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "住を例文に使います。",
+    "exampleEnglish": "Example with dwelling.",
+    "id": 3339,
+    "image": "🏠"
+  },
+  {
+    "native": "修飾",
+    "english": "ornamentation; modification (gram)",
+    "phonetic": "しゅうしょく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "修飾を例文に使います。",
+    "exampleEnglish": "Example with ornamentation; modification (gram).",
+    "id": 3340,
+    "image": "🏠"
+  },
+  {
+    "native": "私用",
+    "english": "personal use",
+    "phonetic": "しよう",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "私用を例文に使います。",
+    "exampleEnglish": "Example with personal use.",
+    "id": 3341,
+    "image": "🚌"
+  },
+  {
+    "native": "仕様",
+    "english": "way",
+    "phonetic": "しよう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "仕様を例文に使います。",
+    "exampleEnglish": "Example with way.",
+    "id": 3342,
+    "image": "🏠"
+  },
+  {
+    "native": "情",
+    "english": "feelings",
+    "phonetic": "じょう",
+    "category": "Feelings",
+    "topikLevel": 2,
+    "exampleNative": "情を例文に使います。",
+    "exampleEnglish": "Example with feelings.",
+    "id": 3343,
+    "image": "💕"
+  },
+  {
+    "native": "生涯",
+    "english": "one's lifetime",
+    "phonetic": "しょうがい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "生涯を例文に使います。",
+    "exampleEnglish": "Example with one's lifetime.",
+    "id": 3344,
+    "image": "🏠"
+  },
+  {
+    "native": "上司",
+    "english": "one's superior",
+    "phonetic": "じょうし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "上司を例文に使います。",
+    "exampleEnglish": "Example with one's superior.",
+    "id": 3345,
+    "image": "🏠"
+  },
+  {
+    "native": "正体",
+    "english": "natural shape",
+    "phonetic": "しょうたい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "正体を例文に使います。",
+    "exampleEnglish": "Example with natural shape.",
+    "id": 3346,
+    "image": "🏠"
+  },
+  {
+    "native": "照明",
+    "english": "illumination",
+    "phonetic": "しょうめい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "照明を例文に使います。",
+    "exampleEnglish": "Example with illumination.",
+    "id": 3347,
+    "image": "🏠"
+  },
+  {
+    "native": "女史",
+    "english": "Ms.",
+    "phonetic": "じょし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "女史を例文に使います。",
+    "exampleEnglish": "Example with Ms..",
+    "id": 3348,
+    "image": "🏠"
+  },
+  {
+    "native": "助詞",
+    "english": "(gram) particle(s)",
+    "phonetic": "じょし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "助詞を例文に使います。",
+    "exampleEnglish": "Example with (gram) particle(s).",
+    "id": 3349,
+    "image": "🏠"
+  },
+  {
+    "native": "ショック",
+    "english": "shock",
+    "phonetic": "ショック",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ショックを例文に使います。",
+    "exampleEnglish": "Example with shock.",
+    "id": 3350,
+    "image": "🏠"
+  },
+  {
+    "native": "進行",
+    "english": "advance",
+    "phonetic": "しんこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "進行を例文に使います。",
+    "exampleEnglish": "Example with advance.",
+    "id": 3351,
+    "image": "🏠"
+  },
+  {
+    "native": "新興",
+    "english": "rising",
+    "phonetic": "しんこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "新興を例文に使います。",
+    "exampleEnglish": "Example with rising.",
+    "id": 3352,
+    "image": "🏠"
+  },
+  {
+    "native": "振興",
+    "english": "promotion",
+    "phonetic": "しんこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "振興を例文に使います。",
+    "exampleEnglish": "Example with promotion.",
+    "id": 3353,
+    "image": "🏠"
+  },
+  {
+    "native": "申告",
+    "english": "report",
+    "phonetic": "しんこく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "申告を例文に使います。",
+    "exampleEnglish": "Example with report.",
+    "id": 3354,
+    "image": "🏠"
+  },
+  {
+    "native": "真理",
+    "english": "truth",
+    "phonetic": "しんり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "真理を例文に使います。",
+    "exampleEnglish": "Example with truth.",
+    "id": 3355,
+    "image": "🏠"
+  },
+  {
+    "native": "水洗",
+    "english": "flushing",
+    "phonetic": "すいせん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "水洗を例文に使います。",
+    "exampleEnglish": "Example with flushing.",
+    "id": 3356,
+    "image": "🏠"
+  },
+  {
+    "native": "ストレス",
+    "english": "stress",
+    "phonetic": "ストレス",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ストレスを例文に使います。",
+    "exampleEnglish": "Example with stress.",
+    "id": 3357,
+    "image": "🏠"
+  },
+  {
+    "native": "擦る",
+    "english": "to rub",
+    "phonetic": "する",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "擦るを例文に使います。",
+    "exampleEnglish": "Example with to rub.",
+    "id": 3358,
+    "image": "🏠"
+  },
+  {
+    "native": "正規",
+    "english": "regular",
+    "phonetic": "せいき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "正規を例文に使います。",
+    "exampleEnglish": "Example with regular.",
+    "id": 3359,
+    "image": "🏠"
+  },
+  {
+    "native": "精巧",
+    "english": "elaborate",
+    "phonetic": "せいこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "精巧を例文に使います。",
+    "exampleEnglish": "Example with elaborate.",
+    "id": 3360,
+    "image": "🏠"
+  },
+  {
+    "native": "精算",
+    "english": "exact calculation",
+    "phonetic": "せいさん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "精算を例文に使います。",
+    "exampleEnglish": "Example with exact calculation.",
+    "id": 3361,
+    "image": "🏠"
+  },
+  {
+    "native": "成年",
+    "english": "majority",
+    "phonetic": "せいねん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "成年を例文に使います。",
+    "exampleEnglish": "Example with majority.",
+    "id": 3362,
+    "image": "🏠"
+  },
+  {
+    "native": "声明",
+    "english": "declaration",
+    "phonetic": "せいめい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "声明を例文に使います。",
+    "exampleEnglish": "Example with declaration.",
+    "id": 3363,
+    "image": "🏠"
+  },
+  {
+    "native": "姓名",
+    "english": "full name",
+    "phonetic": "せいめい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "姓名を例文に使います。",
+    "exampleEnglish": "Example with full name.",
+    "id": 3364,
+    "image": "🏠"
+  },
+  {
+    "native": "生理",
+    "english": "physiology",
+    "phonetic": "せいり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "生理を例文に使います。",
+    "exampleEnglish": "Example with physiology.",
+    "id": 3365,
+    "image": "🏠"
+  },
+  {
+    "native": "膳",
+    "english": "(small) table",
+    "phonetic": "ぜん",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "膳を例文に使います。",
+    "exampleEnglish": "Example with (small) table.",
+    "id": 3366,
+    "image": "🍜"
+  },
+  {
+    "native": "禅",
+    "english": "Zen (Buddhism)",
+    "phonetic": "ぜん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "禅を例文に使います。",
+    "exampleEnglish": "Example with Zen (Buddhism).",
+    "id": 3367,
+    "image": "🏠"
+  },
+  {
+    "native": "選挙",
+    "english": "election",
+    "phonetic": "せんきょ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "選挙を例文に使います。",
+    "exampleEnglish": "Example with election.",
+    "id": 3368,
+    "image": "🏠"
+  },
+  {
+    "native": "先行",
+    "english": "preceding",
+    "phonetic": "せんこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "先行を例文に使います。",
+    "exampleEnglish": "Example with preceding.",
+    "id": 3369,
+    "image": "🏠"
+  },
+  {
+    "native": "選考",
+    "english": "selection",
+    "phonetic": "せんこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "選考を例文に使います。",
+    "exampleEnglish": "Example with selection.",
+    "id": 3370,
+    "image": "🏠"
+  },
+  {
+    "native": "相",
+    "english": "aspect",
+    "phonetic": "そう",
+    "category": "Numbers",
+    "topikLevel": 2,
+    "exampleNative": "相を例文に使います。",
+    "exampleEnglish": "Example with aspect.",
+    "id": 3371,
+    "image": "🔢"
+  },
+  {
+    "native": "沿う",
+    "english": "to run along",
+    "phonetic": "そう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "沿うを例文に使います。",
+    "exampleEnglish": "Example with to run along.",
+    "id": 3372,
+    "image": "🏠"
+  },
+  {
+    "native": "添う",
+    "english": "to accompany",
+    "phonetic": "そう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "添うを例文に使います。",
+    "exampleEnglish": "Example with to accompany.",
+    "id": 3373,
+    "image": "🏠"
+  },
+  {
+    "native": "僧",
+    "english": "monk",
+    "phonetic": "そう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "僧を例文に使います。",
+    "exampleEnglish": "Example with monk.",
+    "id": 3374,
+    "image": "🏠"
+  },
+  {
+    "native": "像",
+    "english": "statue",
+    "phonetic": "ぞう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "像を例文に使います。",
+    "exampleEnglish": "Example with statue.",
+    "id": 3375,
+    "image": "🏠"
+  },
+  {
+    "native": "捜査",
+    "english": "search (esp. in criminal investigations",
+    "phonetic": "そうさ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "捜査を例文に使います。",
+    "exampleEnglish": "Example with search (esp. in criminal investigations.",
+    "id": 3376,
+    "image": "🏠"
+  },
+  {
+    "native": "操縦",
+    "english": "management",
+    "phonetic": "そうじゅう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "操縦を例文に使います。",
+    "exampleEnglish": "Example with management.",
+    "id": 3377,
+    "image": "🏠"
+  },
+  {
+    "native": "創造",
+    "english": "creation",
+    "phonetic": "そうぞう",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "創造を例文に使います。",
+    "exampleEnglish": "Example with creation.",
+    "id": 3378,
+    "image": "🍜"
+  },
+  {
+    "native": "隊",
+    "english": "party",
+    "phonetic": "たい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "隊を例文に使います。",
+    "exampleEnglish": "Example with party.",
+    "id": 3379,
+    "image": "🏠"
+  },
+  {
+    "native": "退学",
+    "english": "dropping out of school",
+    "phonetic": "たいがく",
+    "category": "Study & Work",
+    "topikLevel": 2,
+    "exampleNative": "退学を例文に使います。",
+    "exampleEnglish": "Example with dropping out of school.",
+    "id": 3380,
+    "image": "📚"
+  },
+  {
+    "native": "タイトル",
+    "english": "title",
+    "phonetic": "タイトル",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "タイトルを例文に使います。",
+    "exampleEnglish": "Example with title.",
+    "id": 3381,
+    "image": "🏠"
+  },
+  {
+    "native": "ダウン",
+    "english": "down",
+    "phonetic": "ダウン",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ダウンを例文に使います。",
+    "exampleEnglish": "Example with down.",
+    "id": 3382,
+    "image": "🏠"
+  },
+  {
+    "native": "高まる",
+    "english": "to rise; to grow; to mount (v.i.)",
+    "phonetic": "たかまる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "高まるを例文に使います。",
+    "exampleEnglish": "Example with to rise; to grow; to mount (v.i.).",
+    "id": 3383,
+    "image": "🏠"
+  },
+  {
+    "native": "断つ",
+    "english": "to sever",
+    "phonetic": "たつ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "断つを例文に使います。",
+    "exampleEnglish": "Example with to sever.",
+    "id": 3384,
+    "image": "🏠"
+  },
+  {
+    "native": "盾",
+    "english": "shield",
+    "phonetic": "たて",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "盾を例文に使います。",
+    "exampleEnglish": "Example with shield.",
+    "id": 3385,
+    "image": "🏠"
+  },
+  {
+    "native": "例え",
+    "english": "example; even though",
+    "phonetic": "たとえ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "例えを例文に使います。",
+    "exampleEnglish": "Example with example; even though.",
+    "id": 3386,
+    "image": "🏠"
+  },
+  {
+    "native": "チャイム",
+    "english": "chime",
+    "phonetic": "チャイム",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "チャイムを例文に使います。",
+    "exampleEnglish": "Example with chime.",
+    "id": 3387,
+    "image": "🏠"
+  },
+  {
+    "native": "挑戦",
+    "english": "challenge",
+    "phonetic": "ちょうせん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "挑戦を例文に使います。",
+    "exampleEnglish": "Example with challenge.",
+    "id": 3388,
+    "image": "🏠"
+  },
+  {
+    "native": "治療",
+    "english": "medical treatment",
+    "phonetic": "ちりょう",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "治療を例文に使います。",
+    "exampleEnglish": "Example with medical treatment.",
+    "id": 3389,
+    "image": "🍜"
+  },
+  {
+    "native": "接ぐ",
+    "english": "to join; to piece together; to set (bones); to graft (trees)",
+    "phonetic": "つぐ",
+    "category": "Weather & Nature",
+    "topikLevel": 2,
+    "exampleNative": "接ぐを例文に使います。",
+    "exampleEnglish": "Example with to join; to piece together; to set (bones); to graft (trees).",
+    "id": 3390,
+    "image": "🌤️"
+  },
+  {
+    "native": "継ぐ",
+    "english": "to succeed (someone in a business or inheritance",
+    "phonetic": "つぐ",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "継ぐを例文に使います。",
+    "exampleEnglish": "Example with to succeed (someone in a business or inheritance.",
+    "id": 3391,
+    "image": "🚌"
+  },
+  {
+    "native": "摘む",
+    "english": "to pluck",
+    "phonetic": "つむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "摘むを例文に使います。",
+    "exampleEnglish": "Example with to pluck.",
+    "id": 3392,
+    "image": "🏠"
+  },
+  {
+    "native": "露",
+    "english": "dew",
+    "phonetic": "つゆ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "露を例文に使います。",
+    "exampleEnglish": "Example with dew.",
+    "id": 3393,
+    "image": "🏠"
+  },
+  {
+    "native": "強まる",
+    "english": "to get strong",
+    "phonetic": "つよまる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "強まるを例文に使います。",
+    "exampleEnglish": "Example with to get strong.",
+    "id": 3394,
+    "image": "🏠"
+  },
+  {
+    "native": "強める",
+    "english": "to strengthen",
+    "phonetic": "つよめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "強めるを例文に使います。",
+    "exampleEnglish": "Example with to strengthen.",
+    "id": 3395,
+    "image": "🏠"
+  },
+  {
+    "native": "データ",
+    "english": "data",
+    "phonetic": "データ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "データを例文に使います。",
+    "exampleEnglish": "Example with data.",
+    "id": 3396,
+    "image": "🏠"
+  },
+  {
+    "native": "デザイン",
+    "english": "design",
+    "phonetic": "デザイン",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "デザインを例文に使います。",
+    "exampleEnglish": "Example with design.",
+    "id": 3397,
+    "image": "🏠"
+  },
+  {
+    "native": "デザート",
+    "english": "dessert",
+    "phonetic": "デザート",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "デザートを例文に使います。",
+    "exampleEnglish": "Example with dessert.",
+    "id": 3398,
+    "image": "🏠"
+  },
+  {
+    "native": "転校",
+    "english": "change schools",
+    "phonetic": "てんこう",
+    "category": "Study & Work",
+    "topikLevel": 2,
+    "exampleNative": "転校を例文に使います。",
+    "exampleEnglish": "Example with change schools.",
+    "id": 3399,
+    "image": "📚"
+  },
+  {
+    "native": "伝言",
+    "english": "verbal message",
+    "phonetic": "でんごん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "伝言を例文に使います。",
+    "exampleEnglish": "Example with verbal message.",
+    "id": 3400,
+    "image": "🏠"
+  },
+  {
+    "native": "と",
+    "english": "and",
+    "phonetic": "と",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "とを例文に使います。",
+    "exampleEnglish": "Example with and.",
+    "id": 3401,
+    "image": "🏠"
+  },
+  {
+    "native": "問う",
+    "english": "to ask",
+    "phonetic": "とう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "問うを例文に使います。",
+    "exampleEnglish": "Example with to ask.",
+    "id": 3402,
+    "image": "🏠"
+  },
+  {
+    "native": "棟",
+    "english": "ridge (of roof",
+    "phonetic": "とう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "棟を例文に使います。",
+    "exampleEnglish": "Example with ridge (of roof.",
+    "id": 3403,
+    "image": "🏠"
+  },
+  {
+    "native": "倒産",
+    "english": "(corporate) bankruptcy",
+    "phonetic": "とうさん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "倒産を例文に使います。",
+    "exampleEnglish": "Example with (corporate) bankruptcy.",
+    "id": 3404,
+    "image": "🏠"
+  },
+  {
+    "native": "同士",
+    "english": "one another",
+    "phonetic": "どうし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "同士を例文に使います。",
+    "exampleEnglish": "Example with one another.",
+    "id": 3405,
+    "image": "🏠"
+  },
+  {
+    "native": "同志",
+    "english": "same mind",
+    "phonetic": "どうし",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "同志を例文に使います。",
+    "exampleEnglish": "Example with same mind.",
+    "id": 3406,
+    "image": "🏠"
+  },
+  {
+    "native": "当然",
+    "english": "obvious; natural",
+    "phonetic": "とうぜん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "当然を例文に使います。",
+    "exampleEnglish": "Example with obvious; natural.",
+    "id": 3407,
+    "image": "🏠"
+  },
+  {
+    "native": "動揺",
+    "english": "disturbance",
+    "phonetic": "どうよう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "動揺を例文に使います。",
+    "exampleEnglish": "Example with disturbance.",
+    "id": 3408,
+    "image": "🏠"
+  },
+  {
+    "native": "説く",
+    "english": "to explain",
+    "phonetic": "とく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "説くを例文に使います。",
+    "exampleEnglish": "Example with to explain.",
+    "id": 3409,
+    "image": "🏠"
+  },
+  {
+    "native": "綴じる",
+    "english": "to bind",
+    "phonetic": "とじる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "綴じるを例文に使います。",
+    "exampleEnglish": "Example with to bind.",
+    "id": 3410,
+    "image": "🏠"
+  },
+  {
+    "native": "供",
+    "english": "accompanying",
+    "phonetic": "とも",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "供を例文に使います。",
+    "exampleEnglish": "Example with accompanying.",
+    "id": 3411,
+    "image": "🏠"
+  },
+  {
+    "native": "並",
+    "english": "medium (e.g.",
+    "phonetic": "なみ",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "並を例文に使います。",
+    "exampleEnglish": "Example with medium (e.g..",
+    "id": 3412,
+    "image": "🍜"
+  },
+  {
+    "native": "慣らす",
+    "english": "to accustom",
+    "phonetic": "ならす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "慣らすを例文に使います。",
+    "exampleEnglish": "Example with to accustom.",
+    "id": 3413,
+    "image": "🏠"
+  },
+  {
+    "native": "馴らす",
+    "english": "to domesticate",
+    "phonetic": "ならす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "馴らすを例文に使います。",
+    "exampleEnglish": "Example with to domesticate.",
+    "id": 3414,
+    "image": "🏠"
+  },
+  {
+    "native": "難",
+    "english": "difficulty",
+    "phonetic": "なん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "難を例文に使います。",
+    "exampleEnglish": "Example with difficulty.",
+    "id": 3415,
+    "image": "🏠"
+  },
+  {
+    "native": "年鑑",
+    "english": "yearbook",
+    "phonetic": "ねんかん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "年鑑を例文に使います。",
+    "exampleEnglish": "Example with yearbook.",
+    "id": 3416,
+    "image": "🏠"
+  },
+  {
+    "native": "脳",
+    "english": "brain",
+    "phonetic": "のう",
+    "category": "Weather & Nature",
+    "topikLevel": 2,
+    "exampleNative": "脳を例文に使います。",
+    "exampleEnglish": "Example with brain.",
+    "id": 3417,
+    "image": "🌤️"
+  },
+  {
+    "native": "臨む",
+    "english": "to look out on",
+    "phonetic": "のぞむ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "臨むを例文に使います。",
+    "exampleEnglish": "Example with to look out on.",
+    "id": 3418,
+    "image": "🏠"
+  },
+  {
+    "native": "肺",
+    "english": "lung",
+    "phonetic": "はい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "肺を例文に使います。",
+    "exampleEnglish": "Example with lung.",
+    "id": 3419,
+    "image": "🏠"
+  },
+  {
+    "native": "～敗",
+    "english": "counter for loss",
+    "phonetic": "はい",
+    "category": "Food & Drink",
+    "topikLevel": 2,
+    "exampleNative": "～敗を例文に使います。",
+    "exampleEnglish": "Example with counter for loss.",
+    "id": 3420,
+    "image": "🍜"
+  },
+  {
+    "native": "映える",
+    "english": "to shine",
+    "phonetic": "はえる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "映えるを例文に使います。",
+    "exampleEnglish": "Example with to shine.",
+    "id": 3421,
+    "image": "🏠"
+  },
+  {
+    "native": "諮る",
+    "english": "to consult with",
+    "phonetic": "はかる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "諮るを例文に使います。",
+    "exampleEnglish": "Example with to consult with.",
+    "id": 3422,
+    "image": "🏠"
+  },
+  {
+    "native": "図る",
+    "english": "to plot",
+    "phonetic": "はかる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "図るを例文に使います。",
+    "exampleEnglish": "Example with to plot.",
+    "id": 3423,
+    "image": "🏠"
+  },
+  {
+    "native": "生やす",
+    "english": "to grow",
+    "phonetic": "はやす",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "生やすを例文に使います。",
+    "exampleEnglish": "Example with to grow.",
+    "id": 3424,
+    "image": "🏠"
+  },
+  {
+    "native": "班",
+    "english": "group",
+    "phonetic": "はん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "班を例文に使います。",
+    "exampleEnglish": "Example with group.",
+    "id": 3425,
+    "image": "🏠"
+  },
+  {
+    "native": "判",
+    "english": "size (of paper or books)",
+    "phonetic": "はん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "判を例文に使います。",
+    "exampleEnglish": "Example with size (of paper or books).",
+    "id": 3426,
+    "image": "🏠"
+  },
+  {
+    "native": "版",
+    "english": "edition",
+    "phonetic": "はん",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "版を例文に使います。",
+    "exampleEnglish": "Example with edition.",
+    "id": 3427,
+    "image": "🏠"
+  },
+  {
+    "native": "碑",
+    "english": "stone monument bearing an inscription",
+    "phonetic": "ひ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "碑を例文に使います。",
+    "exampleEnglish": "Example with stone monument bearing an inscription.",
+    "id": 3428,
+    "image": "🏠"
+  },
+  {
+    "native": "非行",
+    "english": "delinquency",
+    "phonetic": "ひこう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "非行を例文に使います。",
+    "exampleEnglish": "Example with delinquency.",
+    "id": 3429,
+    "image": "🏠"
+  },
+  {
+    "native": "票",
+    "english": "label",
+    "phonetic": "ひょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "票を例文に使います。",
+    "exampleEnglish": "Example with label.",
+    "id": 3430,
+    "image": "🏠"
+  },
+  {
+    "native": "広まる",
+    "english": "to spread",
+    "phonetic": "ひろまる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "広まるを例文に使います。",
+    "exampleEnglish": "Example with to spread.",
+    "id": 3431,
+    "image": "🏠"
+  },
+  {
+    "native": "深める",
+    "english": "to deepen",
+    "phonetic": "ふかめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "深めるを例文に使います。",
+    "exampleEnglish": "Example with to deepen.",
+    "id": 3432,
+    "image": "🏠"
+  },
+  {
+    "native": "福",
+    "english": "good fortune",
+    "phonetic": "ふく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "福を例文に使います。",
+    "exampleEnglish": "Example with good fortune.",
+    "id": 3433,
+    "image": "🏠"
+  },
+  {
+    "native": "振り",
+    "english": "style",
+    "phonetic": "ふり",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "振りを例文に使います。",
+    "exampleEnglish": "Example with style.",
+    "id": 3434,
+    "image": "🏠"
+  },
+  {
+    "native": "経る",
+    "english": "to pass",
+    "phonetic": "へる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "経るを例文に使います。",
+    "exampleEnglish": "Example with to pass.",
+    "id": 3435,
+    "image": "🏠"
+  },
+  {
+    "native": "保護",
+    "english": "care",
+    "phonetic": "ほご",
+    "category": "Transport",
+    "topikLevel": 2,
+    "exampleNative": "保護を例文に使います。",
+    "exampleEnglish": "Example with care.",
+    "id": 3436,
+    "image": "🚌"
+  },
+  {
+    "native": "保障",
+    "english": "guarantee",
+    "phonetic": "ほしょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "保障を例文に使います。",
+    "exampleEnglish": "Example with guarantee.",
+    "id": 3437,
+    "image": "🏠"
+  },
+  {
+    "native": "補償",
+    "english": "compensation",
+    "phonetic": "ほしょう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "補償を例文に使います。",
+    "exampleEnglish": "Example with compensation.",
+    "id": 3438,
+    "image": "🏠"
+  },
+  {
+    "native": "ほっと",
+    "english": "feel relieved",
+    "phonetic": "ほっと",
+    "category": "Feelings",
+    "topikLevel": 2,
+    "exampleNative": "ほっとを例文に使います。",
+    "exampleEnglish": "Example with feel relieved.",
+    "id": 3439,
+    "image": "💕"
+  },
+  {
+    "native": "前もって",
+    "english": "in advance",
+    "phonetic": "まえもって",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "前もってを例文に使います。",
+    "exampleEnglish": "Example with in advance.",
+    "id": 3440,
+    "image": "🏠"
+  },
+  {
+    "native": "膜",
+    "english": "membrane",
+    "phonetic": "まく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "膜を例文に使います。",
+    "exampleEnglish": "Example with membrane.",
+    "id": 3441,
+    "image": "🏠"
+  },
+  {
+    "native": "マスコミ",
+    "english": "mass communication",
+    "phonetic": "マスコミ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "マスコミを例文に使います。",
+    "exampleEnglish": "Example with mass communication.",
+    "id": 3442,
+    "image": "🏠"
+  },
+  {
+    "native": "股",
+    "english": "thigh",
+    "phonetic": "また",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "股を例文に使います。",
+    "exampleEnglish": "Example with thigh.",
+    "id": 3443,
+    "image": "🏠"
+  },
+  {
+    "native": "マッサージ",
+    "english": "massage",
+    "phonetic": "マッサージ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "マッサージを例文に使います。",
+    "exampleEnglish": "Example with massage.",
+    "id": 3444,
+    "image": "🏠"
+  },
+  {
+    "native": "見掛ける",
+    "english": "to (happen to see)",
+    "phonetic": "みかける",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "見掛けるを例文に使います。",
+    "exampleEnglish": "Example with to (happen to see).",
+    "id": 3445,
+    "image": "🏠"
+  },
+  {
+    "native": "捲る",
+    "english": "to turn over",
+    "phonetic": "めくる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "捲るを例文に使います。",
+    "exampleEnglish": "Example with to turn over.",
+    "id": 3446,
+    "image": "🏠"
+  },
+  {
+    "native": "メッセージ",
+    "english": "message",
+    "phonetic": "メッセージ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "メッセージを例文に使います。",
+    "exampleEnglish": "Example with message.",
+    "id": 3447,
+    "image": "🏠"
+  },
+  {
+    "native": "野党",
+    "english": "opposition party",
+    "phonetic": "やとう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "野党を例文に使います。",
+    "exampleEnglish": "Example with opposition party.",
+    "id": 3448,
+    "image": "🏠"
+  },
+  {
+    "native": "優",
+    "english": "superiority",
+    "phonetic": "ゆう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "優を例文に使います。",
+    "exampleEnglish": "Example with superiority.",
+    "id": 3449,
+    "image": "🏠"
+  },
+  {
+    "native": "有機",
+    "english": "organic",
+    "phonetic": "ゆうき",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "有機を例文に使います。",
+    "exampleEnglish": "Example with organic.",
+    "id": 3450,
+    "image": "🏠"
+  },
+  {
+    "native": "世",
+    "english": "world",
+    "phonetic": "よ",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "世を例文に使います。",
+    "exampleEnglish": "Example with world.",
+    "id": 3451,
+    "image": "🏠"
+  },
+  {
+    "native": "良い",
+    "english": "good",
+    "phonetic": "よい",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "良いを例文に使います。",
+    "exampleEnglish": "Example with good.",
+    "id": 3452,
+    "image": "🏠"
+  },
+  {
+    "native": "予想",
+    "english": "expectation",
+    "phonetic": "よそう",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "予想を例文に使います。",
+    "exampleEnglish": "Example with expectation.",
+    "id": 3453,
+    "image": "🏠"
+  },
+  {
+    "native": "弱まる",
+    "english": "to weaken",
+    "phonetic": "よわまる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "弱まるを例文に使います。",
+    "exampleEnglish": "Example with to weaken.",
+    "id": 3454,
+    "image": "🏠"
+  },
+  {
+    "native": "弱める",
+    "english": "to weaken",
+    "phonetic": "よわめる",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "弱めるを例文に使います。",
+    "exampleEnglish": "Example with to weaken.",
+    "id": 3455,
+    "image": "🏠"
+  },
+  {
+    "native": "ラベル",
+    "english": "label",
+    "phonetic": "ラベル",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ラベルを例文に使います。",
+    "exampleEnglish": "Example with label.",
+    "id": 3456,
+    "image": "🏠"
+  },
+  {
+    "native": "ルール",
+    "english": "rule",
+    "phonetic": "ルール",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "ルールを例文に使います。",
+    "exampleEnglish": "Example with rule.",
+    "id": 3457,
+    "image": "🏠"
+  },
+  {
+    "native": "枠",
+    "english": "frame",
+    "phonetic": "わく",
+    "category": "Daily Life",
+    "topikLevel": 2,
+    "exampleNative": "枠を例文に使います。",
+    "exampleEnglish": "Example with frame.",
+    "id": 3458,
     "image": "🏠"
   }
 ];

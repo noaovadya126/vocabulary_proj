@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="VocabQuest">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5d0e8"/>
+      <stop offset="100%" stop-color="#b8e6d0"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="48" y="48" width="416" height="416" rx="96" fill="#ffffff" opacity="0.55"/>
+  <rect x="136" y="120" width="240" height="200" rx="24" fill="#8f74b5"/>
+  <rect x="168" y="152" width="176" height="20" rx="10" fill="#ffffff" opacity="0.9"/>
+  <rect x="168" y="188" width="140" height="16" rx="8" fill="#ffffff" opacity="0.75"/>
+  <rect x="168" y="220" width="160" height="16" rx="8" fill="#ffffff" opacity="0.75"/>
+  <rect x="168" y="252" width="120" height="16" rx="8" fill="#ffffff" opacity="0.75"/>
+  <circle cx="380" cy="340" r="56" fill="#6db89a"/>
+  <path d="M356 340 L374 358 L404 322" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

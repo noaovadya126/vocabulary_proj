@@ -33,7 +33,6 @@ export function WordImage({
   const [srcIndex, setSrcIndex] = useState(0);
   const [remoteUrl, setRemoteUrl] = useState<string | null>(null);
   const [pinterestUrl, setPinterestUrl] = useState<string | null>(null);
-  const [loading, setLoading] = useState(!!nativeText?.trim());
 
   const px = sizes[size];
   const alt = nativeText || english;
@@ -49,10 +48,11 @@ export function WordImage({
   );
 
   useEffect(() => {
-    if (!nativeText?.trim()) {
-      setLoading(false);
-      return;
-    }
+    setSrcIndex(0);
+    setRemoteUrl(null);
+    setPinterestUrl(null);
+
+    if (!nativeText?.trim()) return;
 
     const cacheKey = `${IMG_CACHE}${buildImageCacheKey(language, nativeText.trim(), english, category)}`;
     try {
@@ -61,7 +61,6 @@ export function WordImage({
         const parsed = JSON.parse(cached) as { imageUrl?: string; pinterestUrl?: string };
         if (parsed.imageUrl) setRemoteUrl(parsed.imageUrl);
         if (parsed.pinterestUrl) setPinterestUrl(parsed.pinterestUrl);
-        setLoading(false);
         return;
       }
     } catch {
@@ -80,12 +79,14 @@ export function WordImage({
     fetch(`/api/word-image?${params}`, { signal: controller.signal })
       .then((r) => r.json())
       .then((data: { imageUrl?: string; pinterestUrl?: string }) => {
-        if (data.imageUrl) setRemoteUrl(data.imageUrl);
+        if (data.imageUrl) {
+          setRemoteUrl(data.imageUrl);
+          setSrcIndex(0);
+        }
         if (data.pinterestUrl) setPinterestUrl(data.pinterestUrl);
         sessionStorage.setItem(cacheKey, JSON.stringify(data));
       })
-      .catch(() => {})
-      .finally(() => setLoading(false));
+      .catch(() => {});
 
     return () => controller.abort();
   }, [nativeText, english, category, language, wordId]);
@@ -93,15 +94,6 @@ export function WordImage({
   const sources = remoteUrl ? [remoteUrl, ...fallbacks.filter((u) => u !== remoteUrl)] : fallbacks;
   const src = sources[srcIndex];
   const failed = !src || srcIndex >= sources.length;
-
-  if (loading) {
-    return (
-      <div
-        className={cn('rounded-xl bg-pastel-lavender/40 animate-pulse shrink-0', className)}
-        style={{ width: px, height: px }}
-      />
-    );
-  }
 
   if (failed) {
     return (

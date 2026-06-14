@@ -4,6 +4,7 @@ import { AppShell } from '@/components/ui/AppShell';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { CharacterIllustration, SpeechBubble } from '@/components/ui/CharacterIllustration';
+import { InstallAppBanner } from '@/components/ui/InstallAppBanner';
 import { Toast } from '@/components/ui/Toast';
 import { cn } from '@/lib/cn';
 import { Check, Sparkles } from 'lucide-react';
@@ -102,6 +103,8 @@ export default function LanguageSelectionPage() {
           Pick the language you want to explore — you can change it later ✿
         </p>
       </div>
+
+      <InstallAppBanner className="mb-6" />
 
       <div className="mb-8 space-y-3">
         {languages.map((lang) => {

@@ -3,12 +3,12 @@
 import { cn } from '@/lib/cn';
 
 interface ChibiMascotProps {
-  mood?: 'happy' | 'thinking' | 'cheer' | 'study';
-  size?: 'sm' | 'md' | 'lg';
+  mood?: 'happy' | 'thinking' | 'cheer' | 'study' | 'school' | 'hearts';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
 }
 
-const sizes = { sm: 64, md: 96, lg: 128 };
+const sizes = { sm: 64, md: 96, lg: 128, xl: 168 };
 
 /** Cute chibi mascot — inline SVG, no external images needed */
 export function ChibiMascot({ mood = 'happy', size = 'md', className }: ChibiMascotProps) {
@@ -44,10 +44,22 @@ export function ChibiMascot({ mood = 'happy', size = 'md', className }: ChibiMas
       {mood === 'study' && (
         <rect x="78" y="78" width="22" height="16" rx="3" fill="#d8f0e4" stroke="#6db89a" strokeWidth="1.5" />
       )}
-      {mood === 'cheer' && (
+      {mood === 'school' && (
+        <>
+          <rect x="74" y="76" width="26" height="18" rx="3" fill="#fff8e8" stroke="#d4a574" strokeWidth="1.5" />
+          <path d="M87 76 L87 70 L93 73 L87 76" fill="#d4a574" />
+        </>
+      )}
+      {(mood === 'cheer' || mood === 'hearts') && (
         <>
           <text x="18" y="30" fontSize="14">✨</text>
           <text x="92" y="28" fontSize="12">⭐</text>
+        </>
+      )}
+      {mood === 'hearts' && (
+        <>
+          <text x="8" y="52" fontSize="12">💗</text>
+          <text x="98" y="48" fontSize="11">💕</text>
         </>
       )}
     </svg>

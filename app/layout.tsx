@@ -3,6 +3,10 @@ import { ClientProviders } from '@/components/providers/ClientProviders';
 import { Noto_Sans_KR, Heebo } from 'next/font/google';
 import './globals.css';
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_APP_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
+
 const notoSansKR = Noto_Sans_KR({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
@@ -29,11 +33,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL(siteUrl),
   openGraph: {
     title: 'VocabQuest — Interactive Language Learning',
     description: 'Learn Japanese, Korean, and French through fun, interactive vocabulary games and lessons.',
-    url: 'http://localhost:3000',
+    url: siteUrl,
     siteName: 'VocabQuest',
     images: [
       {
@@ -77,8 +81,11 @@ export default function RootLayout({
     <html lang="en" dir="ltr" className={`${notoSansKR.variable} ${heebo.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="/icons/app-icon.svg" />
         <link rel="manifest" href="/manifest.json" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="VocabQuest" />
         
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -92,7 +92,18 @@ export function getWordImageForTag(tag: string, wordId?: string, native?: string
     return pool[lock % pool.length];
   }
 
-  return `https://loremflickr.com/400/400/${encodeURIComponent(tag)}?lock=${lock}`;
+  const seed = encodeURIComponent(`${tag}-${lock}`);
+  return `https://picsum.photos/seed/${seed}/400/400`;
+}
+
+function picsumSeed(...parts: (string | number | undefined)[]): string {
+  const seed = parts.filter(Boolean).join('-').replace(/\s+/g, '-').slice(0, 48) || 'word';
+  return `https://picsum.photos/seed/${encodeURIComponent(seed)}/400/400`;
+}
+
+function placeholdLabel(native?: string, english?: string, tag?: string): string {
+  const label = native?.trim() || english?.split(/[,;]/)[0]?.trim() || tag || 'word';
+  return `https://placehold.co/400x400/8f74b5/ffffff?text=${encodeURIComponent(label.slice(0, 12))}`;
 }
 
 export function getWordImageFallbacks(
@@ -108,14 +119,16 @@ export function getWordImageFallbacks(
     : getWordImageForTag(tag, wordId, native);
   const lock = getVisualTagIndex(tag, wordId, native);
   const ctx = native && english ? getWordSearchContext(native, english, category, '', language) : null;
-  const flickrTag = ctx?.needsDisambiguation
-    ? `${ctx.enKeyword}-${ctx.koTopic}`
-    : tag;
+  const altTag = ctx?.needsDisambiguation ? `${ctx.enKeyword}-${ctx.koTopic}` : tag;
+  const unsplashPool = UNSPLASH_BY_TAG[tag] ?? UNSPLASH_BY_TAG.learning ?? [];
+  const altUnsplash = unsplashPool[(lock + 1) % unsplashPool.length];
+
   return [
     primary,
-    `https://loremflickr.com/400/400/${encodeURIComponent(flickrTag)}?lock=${lock + 1}`,
-    `https://placehold.co/400x400/8f74b5/ffffff?text=${encodeURIComponent(native?.slice(0, 8) || tag)}`,
-  ];
+    altUnsplash,
+    picsumSeed(native, wordId, altTag, lock),
+    placeholdLabel(native, english, tag),
+  ].filter((url, i, arr) => url && arr.indexOf(url) === i);
 }
 
 export function resolveWordImageUrl(

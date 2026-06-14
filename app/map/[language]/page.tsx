@@ -11,6 +11,7 @@ import { Card } from '@/components/ui/Card';
 import { CharacterIllustration, SpeechBubble } from '@/components/ui/CharacterIllustration';
 
 import { CategoryHubCard } from '@/components/ui/CuteDecor';
+import { InstallAppBanner } from '@/components/ui/InstallAppBanner';
 
 import { Toast } from '@/components/ui/Toast';
 
@@ -327,6 +328,10 @@ export default function CountryMapPage() {
         </div>
 
       </Card>
+
+
+
+      <InstallAppBanner className="mb-6" />
 
 
 

@@ -1,8 +1,8 @@
-/** Local chibi mascot illustrations — pastel kawaii style */
+/** Chibi mascot variant ids — rendered as inline SVG via ChibiMascot */
 export const MASCOT_IMAGES = {
-  hearts: '/characters/mascot-hearts.png',
-  school: '/characters/mascot-school.png',
-  study: '/characters/mascot-study.png',
+  hearts: 'hearts',
+  school: 'school',
+  study: 'study',
 } as const;
 
 export type MascotId = keyof typeof MASCOT_IMAGES;

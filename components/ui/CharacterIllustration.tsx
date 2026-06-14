@@ -1,10 +1,16 @@
 'use client';
 
+import { ChibiMascot } from '@/components/ui/ChibiMascot';
 import { cn } from '@/lib/cn';
-import { MASCOT_IMAGES, type MascotId } from '@/lib/chibi-images';
-import Image from 'next/image';
+import { type MascotId } from '@/lib/chibi-images';
 
-const SIZES = { sm: 64, md: 100, lg: 132, xl: 168 } as const;
+const SIZES = { sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' } as const;
+
+const MOOD_BY_VARIANT: Record<MascotId, 'happy' | 'thinking' | 'cheer' | 'study' | 'school' | 'hearts'> = {
+  hearts: 'hearts',
+  school: 'school',
+  study: 'study',
+};
 
 interface CharacterIllustrationProps {
   variant?: MascotId;
@@ -21,22 +27,15 @@ export function CharacterIllustration({
   size = 'md',
   className,
   animate = 'none',
-  priority = false,
   framed = true,
 }: CharacterIllustrationProps) {
-  const px = SIZES[size];
+  const mascotSize = SIZES[size];
+  const px = { sm: 64, md: 96, lg: 128, xl: 168 }[mascotSize];
   const animateClass =
     animate === 'float' ? 'animate-mascot-float' : animate === 'bounce' ? 'animate-mascot-bounce' : '';
 
-  const image = (
-    <Image
-      src={MASCOT_IMAGES[variant]}
-      alt=""
-      width={px}
-      height={px}
-      priority={priority}
-      className="object-contain object-bottom w-full h-full"
-    />
+  const mascot = (
+    <ChibiMascot mood={MOOD_BY_VARIANT[variant]} size={mascotSize} className="w-full h-full" />
   );
 
   if (!framed) {
@@ -46,7 +45,7 @@ export function CharacterIllustration({
         style={{ width: px, height: px }}
         aria-hidden="true"
       >
-        {image}
+        {mascot}
       </div>
     );
   }
@@ -57,7 +56,7 @@ export function CharacterIllustration({
         className="overflow-hidden rounded-[1.75rem] border-2 border-white/90 bg-gradient-to-b from-white via-pastel-pink-light/40 to-pastel-green-light/30 shadow-soft"
         style={{ width: px + 16, height: px + 8 }}
       >
-        <div className="flex h-full items-end justify-center px-2 pt-2">{image}</div>
+        <div className="flex h-full items-end justify-center px-2 pt-2">{mascot}</div>
       </div>
       <div className="mt-1.5 h-2 w-[65%] rounded-full bg-brand-300/20" />
     </div>
