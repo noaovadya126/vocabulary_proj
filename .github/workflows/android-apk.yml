@@ -8,14 +8,16 @@ on:
       - '.github/workflows/android-apk.yml'
       - 'android/**'
       - 'capacitor.config.json'
-      - 'scripts/prepare-android-ci.mjs'
       - 'www/**'
       - 'package.json'
       - 'package-lock.json'
+      - 'scripts/prepare-android-ci.mjs'
 
 jobs:
   build-apk:
     runs-on: ubuntu-latest
+    container:
+      image: mingc/android-build-box:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,27 +31,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: '17'
-
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v4
-
-      - name: Install Android SDK packages
-        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
-
       - name: Prepare Android assets
         run: node scripts/prepare-android-ci.mjs
 
       - name: Write local.properties
         run: echo "sdk.dir=$ANDROID_SDK_ROOT" > android/local.properties
-
-      - name: Make Gradle executable
-        working-directory: android
-        run: chmod +x gradlew
 
       - name: Build debug APK
         working-directory: android
@@ -60,9 +46,7 @@ jobs:
         with:
           name: VocabQuest-debug-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk
-          retention-days: 30
+          retention-days: 90
 
       - name: APK ready
-        run: |
-          echo "APK built successfully."
-          ls -lh android/app/build/outputs/apk/debug/
+        run: ls -lh android/app/build/outputs/apk/debug/
