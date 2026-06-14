@@ -17,11 +17,10 @@ function getAppOrigin(): string {
 
 async function signInWithGoogleNative(): Promise<void> {
   const origin = getAppOrigin();
-  const callbackUrl = `${origin}/auth/native-callback`;
-  const signInUrl = `${origin}/api/auth/signin/google?callbackUrl=${encodeURIComponent(callbackUrl)}`;
+  const bridgeUrl = `${origin}/auth/native-signin-bridge`;
 
   const { Browser } = await import('@capacitor/browser');
-  await Browser.open({ url: signInUrl, presentationStyle: 'fullscreen' });
+  await Browser.open({ url: bridgeUrl, presentationStyle: 'fullscreen' });
 }
 
 export function GoogleSignInButton({ className }: { className?: string }) {
