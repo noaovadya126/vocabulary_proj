@@ -28,12 +28,12 @@ export default function StationCard({ word, onWordClick, onMarkLearned }: Statio
 
   const getStatusColor = () => {
     if (!word.progress || word.progress.status === 'NOT_STARTED') {
-      return 'text-muted-500';
+      return 'text-slate-500 bg-slate-100';
     }
     if (word.progress.status === 'IN_PROGRESS') {
-      return 'text-blue-600';
+      return 'text-indigo-700 bg-indigo-100';
     }
-    return 'text-green-600';
+    return 'text-emerald-700 bg-emerald-100';
   };
 
   const getStatusText = () => {
@@ -94,7 +94,7 @@ export default function StationCard({ word, onWordClick, onMarkLearned }: Statio
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.02 }}
-      className={`word-tile ${statusClass} p-6 cursor-pointer`}
+      className={`word-tile ${statusClass} p-5 cursor-pointer`}
       onClick={() => onWordClick(word)}
       role="button"
       tabIndex={0}
@@ -108,7 +108,7 @@ export default function StationCard({ word, onWordClick, onMarkLearned }: Statio
     >
       {/* Status indicator */}
       <div className="absolute top-3 right-3">
-        <div className={`text-xs font-medium px-2 py-1 rounded-full ${statusColor} bg-opacity-10`}>
+        <div className={`text-xs font-medium px-2 py-1 rounded-full ${statusColor}`}>
           {statusText}
         </div>
       </div>
@@ -117,29 +117,29 @@ export default function StationCard({ word, onWordClick, onMarkLearned }: Statio
       <div className="text-center space-y-4">
         {/* Korean text */}
         <div className="space-y-2">
-          <h3 className="text-2xl font-bold korean-text text-muted-800">
+          <h3 className="text-xl font-bold korean-text text-slate-900">
             {word.lemma}
           </h3>
-          <p className="text-sm text-muted-600 font-mono">
+          <p className="text-sm text-slate-500 font-mono">
             {word.phonetic}
           </p>
         </div>
 
         {/* Hebrew translation */}
         <div className="hebrew-text">
-          <p className="text-lg font-medium text-muted-700">
+          <p className="text-base font-medium text-slate-700">
             {word.translationHe}
           </p>
         </div>
 
         {/* English translation */}
-        <p className="text-sm text-muted-500">
+        <p className="text-sm text-slate-500">
           {word.translationEn}
         </p>
 
         {/* Part of speech */}
-        <div className="inline-block px-3 py-1 bg-muted-100 rounded-full">
-          <span className="text-xs font-medium text-muted-600">
+        <div className="inline-block px-3 py-1 bg-slate-100 rounded-full">
+          <span className="text-xs font-medium text-slate-600">
             {word.partOfSpeech.toLowerCase()}
           </span>
         </div>
@@ -153,11 +153,11 @@ export default function StationCard({ word, onWordClick, onMarkLearned }: Statio
               handleAudioPlay();
             }}
             disabled={isPlaying}
-            className="p-2 rounded-full bg-primary-100 text-primary-600 hover:bg-primary-200 transition-colors disabled:opacity-50"
+            className="p-2 rounded-lg bg-indigo-50 text-indigo-600 hover:bg-indigo-100 transition-colors disabled:opacity-50"
             aria-label="Play pronunciation"
           >
             {isPlaying ? (
-              <div className="w-4 h-4 border-2 border-primary-600 border-t-transparent rounded-full animate-spin" />
+              <div className="w-4 h-4 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin" />
             ) : (
               <Volume2 className="w-4 h-4" />
             )}
@@ -170,7 +170,7 @@ export default function StationCard({ word, onWordClick, onMarkLearned }: Statio
                 e.stopPropagation();
                 handleMarkLearned();
               }}
-              className="p-2 rounded-full bg-green-100 text-green-600 hover:bg-green-200 transition-colors"
+              className="p-2 rounded-lg bg-emerald-50 text-emerald-600 hover:bg-emerald-100 transition-colors"
               aria-label="Mark as learned"
             >
               <CheckCircle className="w-4 h-4" />
@@ -183,7 +183,7 @@ export default function StationCard({ word, onWordClick, onMarkLearned }: Statio
               e.stopPropagation();
               onWordClick(word);
             }}
-            className="p-2 rounded-full bg-muted-100 text-muted-600 hover:bg-muted-200 transition-colors"
+            className="p-2 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors"
             aria-label="Learn more about this word"
           >
             <BookOpen className="w-4 h-4" />
@@ -193,7 +193,7 @@ export default function StationCard({ word, onWordClick, onMarkLearned }: Statio
         {/* Progress indicator */}
         {word.progress && (
           <div className="pt-2">
-            <div className="flex items-center justify-center space-x-2 text-xs text-muted-500">
+            <div className="flex items-center justify-center space-x-2 text-xs text-slate-500">
               <span>Attempts: {word.progress.totalAttempts}</span>
               <span>•</span>
               <span>Streak: {word.progress.correctStreak}</span>
@@ -205,7 +205,7 @@ export default function StationCard({ word, onWordClick, onMarkLearned }: Statio
       {/* Visual indicator for learned words */}
       {word.progress?.status === 'LEARNED' && (
         <div className="absolute top-2 left-2">
-          <CheckCircle className="w-6 h-6 text-green-500" />
+          <CheckCircle className="w-5 h-5 text-emerald-500" />
         </div>
       )}
     </motion.div>

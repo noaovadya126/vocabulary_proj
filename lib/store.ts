@@ -74,7 +74,7 @@ export const useGameStore = create<GameStore>((set) => ({
         userProgress: {
           ...state.userProgress,
           wordProgress: {
-            ...state.userProgress.wordProgress,
+            ...(state.userProgress.wordProgress ?? {}),
             [wordId]: { status, updatedAt: new Date() }
           }
         }

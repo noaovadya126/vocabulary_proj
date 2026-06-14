@@ -1,350 +1,592 @@
 'use client';
 
+
+
+import { AppShell } from '@/components/ui/AppShell';
+
+import { Button } from '@/components/ui/Button';
+
+import { Card } from '@/components/ui/Card';
+
+import { CharacterIllustration, SpeechBubble } from '@/components/ui/CharacterIllustration';
+
+import { CategoryHubCard } from '@/components/ui/CuteDecor';
+
+import { Toast } from '@/components/ui/Toast';
+
+import { useI18nContext } from '@/contexts/I18nContext';
+
+import { LANGUAGE_NAMES } from '@/lib/constants';
+
+import { cn } from '@/lib/cn';
+
+import { getGrammarPoints } from '@/lib/grammar-data';
+
+import { getUserItem } from '@/lib/userStorage';
+
+import { getMilestoneCount, VOCABULARY_BY_LANGUAGE } from '@/lib/vocabulary-data';
+
+import { CheckCircle2, ChevronRight, Lock, MapPin, Play, Sparkles } from 'lucide-react';
+
 import { useParams, useRouter } from 'next/navigation';
+
 import { useEffect, useState } from 'react';
 
+
+
 interface Milestone {
+
   id: number;
+
   name: string;
+
   status: 'completed' | 'current' | 'locked';
-  position: { x: number; y: number };
+
+  topikLevel: 1 | 2;
+
 }
 
-const languageNames = {
-  es: 'Spanish',
-  ko: 'Korean', 
-  fr: 'French'
-};
+
+
+const languageNames = LANGUAGE_NAMES;
+
+
+
+const MILESTONE_LABELS_T1 = [
+
+  'Greetings', 'People & family', 'Food & drink', 'Places', 'Time & numbers',
+
+  'Verbs basics', 'Adjectives', 'Weather', 'Transport', 'Shopping',
+
+  'Daily life', 'Feelings', 'Study', 'Review 1', 'Review 2',
+
+  'More greetings', 'More food', 'More places', 'More verbs', 'More adjectives',
+
+  'More weather', 'More transport', 'More shopping', 'More daily', 'More feelings',
+
+  'More study', 'Review 3', 'Review 4', 'Review 5', 'Review 6',
+
+  'Final review 1', 'Final review 2', 'Final review 3', 'Final review 4', 'Final review 5',
+
+  'Final review 6', 'Final review 7', 'Final review 8', 'Final review 9', 'Final review 10',
+
+  'Final review 11', 'Final review 12', 'Final review 13', 'Final review 14', 'Final review 15',
+
+  'Final review 16', 'Final review 17', 'Final review 18', 'Final review 19', 'Final review 20',
+
+  'Final review 21', 'Final review 22', 'Final review 23', 'Final review 24', 'Final review 25',
+
+  'Final review 26', 'Final review 27', 'Final review 28', 'Final review 29', 'Final review 30',
+
+  'Final review 31', 'Final review 32',
+
+];
+
+
+
+const ENCOURAGEMENT_EN = [
+
+  "You're doing amazing! 💗",
+
+  'Almost there — keep going! ✨',
+
+  'Every new word is a tiny victory! 🌸',
+
+];
+
+
+
+function buildMilestones(count: number, wordsPerStage: number, t1Count: number): Milestone[] {
+
+  return Array.from({ length: count }, (_, i) => {
+
+    const wordStart = i * wordsPerStage;
+
+    const topikLevel: 1 | 2 = wordStart < t1Count ? 1 : 2;
+
+    return {
+
+      id: i + 1,
+
+      name: MILESTONE_LABELS_T1[i] ?? `Stage ${i + 1}`,
+
+      status: i === 0 ? ('current' as const) : ('locked' as const),
+
+      topikLevel,
+
+    };
+
+  });
+
+}
+
+
 
 export default function CountryMapPage() {
+
   const [showToast, setShowToast] = useState(false);
+
   const [toastMessage, setToastMessage] = useState('');
-  const [milestones, setMilestones] = useState<Milestone[]>([
-    { id: 1, name: 'First', status: 'completed', position: { x: 25, y: 75 } },
-    { id: 2, name: 'Second', status: 'completed', position: { x: 45, y: 55 } },
-    { id: 3, name: 'Third', status: 'current', position: { x: 65, y: 35 } },
-    { id: 4, name: 'Fourth', status: 'locked', position: { x: 85, y: 55 } },
-    { id: 5, name: 'Fifth', status: 'locked', position: { x: 65, y: 75 } },
-    { id: 6, name: 'Sixth', status: 'locked', position: { x: 45, y: 85 } }
-  ]);
-  
+
+  const [milestones, setMilestones] = useState<Milestone[]>([]);
+
+  const [topikFilter, setTopikFilter] = useState<0 | 1 | 2>(0);
+
+  const { t } = useI18nContext();
+
+
+
   const router = useRouter();
+
   const params = useParams();
+
   const language = params.language as string;
 
+  const vocabulary = VOCABULARY_BY_LANGUAGE[language] || [];
+
+  const t1Count = vocabulary.filter((w) => w.difficultyLevel === 1).length;
+
+  const grammarCount = getGrammarPoints(language).length;
+
+
+
   useEffect(() => {
+
     const userData = localStorage.getItem('userData');
+
     const selectedLanguage = localStorage.getItem('selectedLanguage');
-    
+
+
+
     if (!userData) {
+
       router.push('/auth');
+
       return;
-    }
-    
-    if (!selectedLanguage || selectedLanguage !== language) {
-      router.push('/language-selection');
-      return;
+
     }
 
-    // Check milestone progress and update status
-    const checkMilestoneProgress = () => {
-      const updatedMilestones: Milestone[] = milestones.map(milestone => {
-        const progressKey = `progress_${language}_${milestone.id}`;
-        const userProgress = localStorage.getItem(progressKey);
-        
-        if (userProgress) {
-          const progress = JSON.parse(userProgress);
-          const completedWords = Object.values(progress).filter(status => status === 'completed').length;
-          
-          if (completedWords >= 5) { // Milestone completed if 5+ words done
-            return { ...milestone, status: 'completed' as const };
-          } else if (completedWords > 0) { // Milestone in progress if some words done
-            return { ...milestone, status: 'current' as const };
-          }
-        }
-        
-        // Check if previous milestone is completed
+
+
+    if (!selectedLanguage || selectedLanguage !== language) {
+
+      router.push('/language-selection');
+
+      return;
+
+    }
+
+
+
+    const count = getMilestoneCount(language);
+
+
+
+    setMilestones(() => {
+
+      const base = buildMilestones(count, 5, t1Count);
+
+      let foundCurrent = false;
+
+
+
+      return base.map((milestone) => {
+
+        const key = `milestone_progress_${language}_${milestone.id}`;
+
+        const data = JSON.parse(getUserItem(key) || '{}');
+
+
+
+        if (data.quizCompleted) return { ...milestone, status: 'completed' as const };
+
+
+
         if (milestone.id > 1) {
-          const prevProgressKey = `progress_${language}_${milestone.id - 1}`;
-          const prevProgress = localStorage.getItem(prevProgressKey);
-          if (prevProgress) {
-            const prevProgressData = JSON.parse(prevProgress);
-            const prevCompletedWords = Object.values(prevProgressData).filter(status => status === 'completed').length;
-            if (prevCompletedWords >= 5) {
-              return { ...milestone, status: 'current' as const };
-            }
-          }
+
+          const prev = JSON.parse(getUserItem(`milestone_progress_${language}_${milestone.id - 1}`) || '{}');
+
+          if (!prev.quizCompleted) return { ...milestone, status: 'locked' as const };
+
         }
-        
-        return milestone;
+
+
+
+        if (!foundCurrent) {
+
+          foundCurrent = true;
+
+          return { ...milestone, status: 'current' as const };
+
+        }
+
+        return { ...milestone, status: 'locked' as const };
+
       });
-      
-      // Update milestones state
-      setMilestones(updatedMilestones);
-    };
-    
-    checkMilestoneProgress();
-  }, [language, router]);
+
+    });
+
+  }, [language, router, t1Count]);
+
+
 
   const handleMilestoneClick = (milestone: Milestone) => {
+
     if (milestone.status === 'locked') {
-      setToastMessage('This milestone is locked. Complete the current one first.');
+
+      setToastMessage(t('stage_locked', 'common'));
+
       setShowToast(true);
+
       setTimeout(() => setShowToast(false), 3000);
+
       return;
+
     }
 
-    if (milestone.status === 'current' || milestone.status === 'completed') {
-      router.push(`/milestone/${language}/${milestone.id}`);
-    }
+    router.push(`/milestone/${language}/${milestone.id}`);
+
   };
 
-  const getMilestoneColor = (status: string) => {
-    switch (status) {
-      case 'completed':
-        return 'bg-green-500';
-      case 'current':
-        return 'bg-blue-500';
-      case 'locked':
-        return 'bg-gray-500';
-      default:
-        return 'bg-gray-500';
-    }
-  };
 
-  const getMilestoneIcon = (status: string) => {
-    switch (status) {
-      case 'completed':
-        return '✓';
-      case 'current':
-        return '📚';
-      case 'locked':
-        return '🔒';
-      default:
-        return '●';
-    }
-  };
 
-  const completedMilestones = milestones.filter(m => m.status === 'completed').length;
-  const progressPercentage = (completedMilestones / milestones.length) * 100;
+  const filteredMilestones =
 
-  const handleLogout = () => {
-    localStorage.removeItem('userData');
-    localStorage.removeItem('selectedLanguage');
-    router.push('/auth');
-  };
+    topikFilter === 0 ? milestones : milestones.filter((m) => m.topikLevel === topikFilter);
+
+
+
+  const completedMilestones = milestones.filter((m) => m.status === 'completed').length;
+
+  const progressPercentage = milestones.length > 0 ? (completedMilestones / milestones.length) * 100 : 0;
+
+  const currentMilestone = milestones.find((m) => m.status === 'current');
+
+  const encouragement = ENCOURAGEMENT_EN;
+
+  const cheerLine = encouragement[completedMilestones % encouragement.length];
+
+
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-indigo-50 p-4">
-      {/* Logout Button */}
-      <div className="absolute top-4 right-4 z-50">
-        <button
-          onClick={handleLogout}
-          className="px-3 py-2 bg-red-400 hover:bg-red-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm font-medium"
-        >
-          Logout
-        </button>
-      </div>
 
-      {/* Page Character - Main Character */}
-      <div className="absolute top-8 left-8 z-10 opacity-80 animate-bounce">
-        <div className="w-24 h-24 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full flex items-center justify-center shadow-lg">
-          <span className="text-5xl">🗺️</span>
-        </div>
-      </div>
+    <AppShell
 
-      {/* Background Characters */}
-      <div className="absolute top-20 right-8 z-10 opacity-70 animate-float">
-        <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full flex items-center justify-center shadow-lg">
-          <span className="text-4xl">😊</span>
-        </div>
-      </div>
+      backHref="/language-selection"
 
-      <div className="absolute bottom-20 left-8 z-10 opacity-70 animate-float-delayed">
-        <div className="w-24 h-24 bg-gradient-to-br from-green-100 to-blue-100 rounded-full flex items-center justify-center shadow-lg">
-          <span className="text-5xl">✍️</span>
-        </div>
-      </div>
+      backLabel={t('languages', 'common')}
 
-      <div className="absolute bottom-16 right-12 z-10 opacity-70 animate-float-slow">
-        <div className="w-28 h-28 bg-gradient-to-br from-orange-100 to-red-100 rounded-full flex items-center justify-center shadow-lg">
-          <span className="text-6xl">🏃‍♀️</span>
-        </div>
-      </div>
+      eyebrow={t('learning_hub', 'common')}
 
-      <div className="max-w-6xl mx-auto relative z-30 pt-20">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <div className="relative inline-block mb-6">
-            <h1 className="text-4xl font-bold text-gray-800 mb-3 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent break-words max-w-[600px] mx-auto">
-              {languageNames[language as keyof typeof languageNames]} Country Map
-            </h1>
-            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-yellow-100 to-orange-100 rounded-full flex items-center justify-center shadow-lg animate-pulse">
-              <span className="text-2xl">🌟</span>
-            </div>
+      title={`${languageNames[language] ?? language} ${t('journey', 'common')}`}
+
+      subtitle={`${vocabulary.length} ${t('words', 'common')} · ${grammarCount} ${t('lessons', 'common')}`}
+
+      maxWidth="2xl"
+
+      backgroundVariant="hub"
+
+    >
+
+      {/* Hero welcome */}
+
+      <Card padding="none" className="relative mb-6 overflow-hidden border-pastel-pink/60 bg-hub-hero">
+
+        <div className="cute-stripes-pink absolute inset-0 opacity-40" aria-hidden="true" />
+
+        <div className="relative flex flex-col items-center gap-4 p-5 sm:flex-row sm:items-end sm:justify-between sm:p-6">
+
+          <div className="flex flex-1 flex-col items-center gap-3 sm:items-start">
+
+            <SpeechBubble className="max-w-xs text-center sm:text-left">
+
+              {cheerLine}
+
+            </SpeechBubble>
+
+            {currentMilestone && (
+
+              <p className="text-sm font-medium text-brand-600/90">
+
+                {t('your_current_stage', 'common')}{' '}
+
+                <span className="font-bold text-brand-700">
+
+                  {currentMilestone.name}
+
+                </span>
+
+              </p>
+
+            )}
+
           </div>
-          <p className="text-xl text-gray-600 break-words max-w-[500px] mx-auto">
-            Progress through the milestones and learn new words
+
+          <CharacterIllustration variant="hearts" size="lg" priority />
+
+        </div>
+
+      </Card>
+
+
+
+      <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+
+        <CategoryHubCard
+
+          emoji="📚"
+
+          title={t('vocabulary', 'common')}
+
+          subtitle={`${vocabulary.length} TOPIK ${t('words', 'common')}`}
+
+          accent="pink"
+
+          mascot="study"
+
+          onClick={() => router.push(`/vocabulary/${language}`)}
+
+        />
+
+        <CategoryHubCard
+
+          emoji="✏️"
+
+          title={t('grammar', 'common')}
+
+          subtitle={language === 'ko' ? `${grammarCount} ${t('lessons', 'common')}` : t('korean_only', 'common')}
+
+          accent="green"
+
+          mascot="school"
+
+          onClick={() => (language === 'ko' ? router.push(`/grammar/${language}`) : undefined)}
+
+          disabled={language !== 'ko'}
+
+        />
+
+      </div>
+
+
+
+      <Card className="mb-6 border-pastel-green/50 bg-gradient-to-r from-pastel-pink-light/80 to-pastel-green-light/80">
+
+        <div className="mb-3 flex items-center justify-between">
+
+          <h2 className="flex items-center gap-2 text-sm font-bold text-brand-700">
+
+            <Sparkles className="h-4 w-4 text-brand-400" />
+
+            {t('learning_path_progress', 'common')}
+
+          </h2>
+
+          <span className="rounded-full bg-white/70 px-3 py-0.5 text-sm font-semibold text-success-600">
+
+            {completedMilestones} / {milestones.length} {t('stages', 'common')}
+
+          </span>
+
+        </div>
+
+        <div className="h-3 w-full overflow-hidden rounded-full bg-white/70 shadow-inner">
+
+          <div
+
+            className="hub-progress-shimmer h-3 rounded-full transition-all duration-700"
+
+            style={{ width: `${Math.max(progressPercentage, 4)}%` }}
+
+          />
+
+        </div>
+
+        {progressPercentage > 0 && (
+
+          <p className="mt-2 text-center text-xs font-medium text-brand-500">
+
+            {Math.round(progressPercentage)}% {t('complete_percent', 'common')}
+
           </p>
-        </div>
 
-        {/* Progress Bar */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 mb-8 relative">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-800 break-words max-w-[200px]">Overall Progress</h3>
-            <span className="text-lg text-gray-600 break-words max-w-[300px] text-right">
-              {completedMilestones} of {milestones.length} milestones completed
-            </span>
-          </div>
-          <div className="w-full bg-gray-200 rounded-full h-4">
-            <div 
-              className="bg-gradient-to-r from-pink-300 to-purple-300 h-4 rounded-full transition-all duration-1000 ease-out shadow-md"
-              style={{ width: `${progressPercentage}%` }}
-            ></div>
-          </div>
-          <div className="absolute -right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center shadow-lg animate-pulse">
-            <span className="text-lg">📊</span>
-          </div>
-        </div>
+        )}
 
-        {/* Map Container */}
-        <div className="relative bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 min-h-[500px] overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0 bg-gradient-to-br from-pink-100 to-blue-100"></div>
-          </div>
+      </Card>
 
-          {/* SVG Path */}
-          <div className="relative w-full h-full min-h-[450px]">
-            <svg 
-              className="absolute inset-0 w-full h-full" 
-              viewBox="0 0 100 100" 
-              preserveAspectRatio="xMidYMid meet"
+
+
+      {language === 'ko' && (
+
+        <div className="mb-4 flex flex-wrap gap-2">
+
+          {([0, 1, 2] as const).map((level) => (
+
+            <button
+
+              key={level}
+
+              type="button"
+
+              onClick={() => setTopikFilter(level)}
+
+              className={cn(
+
+                'rounded-2xl px-4 py-2 text-sm font-semibold transition-all',
+
+                topikFilter === level
+
+                  ? 'bg-gradient-to-r from-brand-400 to-success-500 text-white shadow-cute'
+
+                  : 'border-2 border-pastel-pink/50 bg-white/80 text-brand-700 hover:border-pastel-green'
+
+              )}
+
             >
-              <path
-                d="M 25,75 Q 35,65 45,55 Q 55,45 65,35 Q 75,45 85,55 Q 75,65 65,75 Q 55,85 45,85"
-                fill="none"
-                stroke="url(#gradient)"
-                strokeWidth="3"
-                strokeDasharray="5,5"
-                className="animate-pulse"
-              />
-              <defs>
-                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#F472B6" />
-                  <stop offset="100%" stopColor="#A78BFA" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
 
-          {/* Milestones */}
-          {milestones.map((milestone) => (
-            <div
-              key={milestone.id}
-              onClick={() => handleMilestoneClick(milestone)}
-              className={`absolute w-12 h-12 rounded-full flex items-center justify-center text-white font-bold cursor-pointer transition-all duration-300 transform hover:scale-110 ${
-                milestone.status === 'locked' ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
-              } ${getMilestoneColor(milestone.status)}`}
-              style={{
-                left: `${milestone.position.x}%`,
-                top: `${milestone.position.y}%`,
-                transform: 'translate(-50%, -50%)'
-              }}
-            >
-              {getMilestoneIcon(milestone.status)}
-            </div>
+              {level === 0 ? t('all_stages', 'common') : `TOPIK ${level}`}
+
+            </button>
+
           ))}
 
-          {/* Character Avatars on Current Milestone */}
-          <div
-            className="absolute w-10 h-10 bg-gradient-to-r from-purple-300 to-pink-300 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce"
-            style={{
-              left: `${milestones.find(m => m.status === 'current')?.position.x! - 3}%`,
-              top: `${milestones.find(m => m.status === 'current')?.position.y! - 3}%`,
-              transform: 'translate(-50%, -50%)'
-            }}
-          >
-            👧
-          </div>
-          <div
-            className="absolute w-8 h-8 bg-gradient-to-r from-blue-300 to-cyan-300 rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-bounce"
-            style={{
-              left: `${milestones.find(m => m.status === 'current')?.position.x! + 3}%`,
-              top: `${milestones.find(m => m.status === 'current')?.position.y! + 3}%`,
-              transform: 'translate(-50%, -50%)',
-              animationDelay: '0.2s'
-            }}
-          >
-            👦
-          </div>
-
-          {/* Milestone Labels */}
-          {milestones.map((milestone) => (
-            <div
-              key={milestone.id}
-              className="absolute text-center"
-              style={{
-                left: `${milestone.position.x}%`,
-                top: `${milestone.position.y + 10}%`,
-                transform: 'translateX(-50%)'
-              }}
-            >
-              <div className={`px-3 py-2 rounded-lg font-medium break-words max-w-[120px] shadow-md ${
-                milestone.status === 'completed' 
-                  ? 'bg-green-100 text-green-700 border-2 border-green-300' 
-                  : milestone.status === 'current'
-                  ? 'bg-blue-100 text-blue-700 border-2 border-blue-300'
-                  : 'bg-gray-100 text-gray-600 border-2 border-gray-300'
-              } text-sm`}>
-                {milestone.name}
-              </div>
-            </div>
-          ))}
         </div>
 
-        {/* Navigation */}
-        <div className="text-center mt-8 space-y-4">
-          <div className="relative inline-block">
-            <button
-              onClick={() => router.push(`/vocabulary/${language}`)}
-              className="px-6 py-3 bg-gradient-to-r from-purple-400 to-pink-400 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words text-lg mr-4"
-            >
-              📚 Vocabulary Learning
-            </button>
-            <div className="absolute -right-16 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center shadow-lg animate-pulse">
-              <span className="text-lg">📚</span>
-            </div>
-          </div>
-          
-          <div className="relative inline-block">
-            <button
-              onClick={() => router.push('/language-selection')}
-              className="px-6 py-3 text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words text-lg"
-            >
-              ← Back to Language Selection
-            </button>
-            <div className="absolute -right-16 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full flex items-center justify-center shadow-lg animate-pulse">
-              <span className="text-lg">🔙</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Toast Notification */}
-      {showToast && (
-        <div className="fixed top-4 right-4 z-50 bg-gradient-to-r from-blue-300 to-purple-300 text-white p-4 rounded-xl shadow-lg max-w-[350px] break-words">
-          <div className="flex items-center">
-            <span className="mr-3 text-xl">ℹ️</span>
-            <span className="text-base">{toastMessage}</span>
-          </div>
-        </div>
       )}
 
-      {/* Floating particles */}
-      <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-pink-300 rounded-full animate-ping opacity-60"></div>
-      <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-purple-300 rounded-full animate-ping opacity-60" style={{animationDelay: '1s'}}></div>
-      <div className="absolute bottom-1/3 left-1/3 w-5 h-5 bg-blue-300 rounded-full animate-ping opacity-60" style={{animationDelay: '2s'}}></div>
-    </div>
+
+
+      <div className="mb-6 space-y-3">
+
+        {filteredMilestones.map((milestone) => {
+
+          const locked = milestone.status === 'locked';
+
+          return (
+
+            <button
+
+              key={milestone.id}
+
+              type="button"
+
+              onClick={() => handleMilestoneClick(milestone)}
+
+              disabled={locked}
+
+              className={cn(
+
+                'flex w-full items-center gap-4 rounded-3xl border-2 p-4 text-left transition-all',
+
+                milestone.status === 'completed' &&
+
+                  'border-success-200 bg-pastel-green-light/80 cute-stripes-green',
+
+                milestone.status === 'current' &&
+
+                  'border-brand-300 bg-pastel-pink-light/90 shadow-cute ring-2 ring-pastel-pink/40',
+
+                milestone.status === 'locked' && 'cursor-not-allowed border-pastel-pink/30 bg-white/50 opacity-55',
+
+                !locked && 'cursor-pointer hover:scale-[1.01] hover:shadow-soft'
+
+              )}
+
+            >
+
+              <div
+
+                className={cn(
+
+                  'flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl',
+
+                  milestone.status === 'completed' && 'bg-success-100',
+
+                  milestone.status === 'current' && 'bg-pastel-pink',
+
+                  milestone.status === 'locked' && 'bg-pastel-pink-light'
+
+                )}
+
+              >
+
+                {milestone.status === 'completed' && <CheckCircle2 className="h-5 w-5 text-success-600" />}
+
+                {milestone.status === 'current' && <MapPin className="h-5 w-5 text-brand-500" />}
+
+                {milestone.status === 'locked' && <Lock className="h-4 w-4 text-brand-300" />}
+
+              </div>
+
+              <div className="min-w-0 flex-1">
+
+                <span className="text-xs font-semibold text-brand-500">
+
+                  {t('stage', 'common')} {milestone.id} · TOPIK{' '}
+
+                  {milestone.topikLevel}
+
+                </span>
+
+                <p className="text-sm font-bold text-brand-800 sm:text-base">
+
+                  {milestone.name}
+
+                </p>
+
+                <p className="text-xs text-brand-500">5 {t('words', 'common')}</p>
+
+              </div>
+
+              {!locked && <ChevronRight className="h-5 w-5 shrink-0 text-brand-400" />}
+
+            </button>
+
+          );
+
+        })}
+
+      </div>
+
+
+
+      {currentMilestone && (
+
+        <div className="mb-4 flex flex-col items-center gap-3 text-center">
+
+          <CharacterIllustration variant="study" size="md" className="opacity-95" />
+
+          <Button
+
+            size="lg"
+
+            onClick={() => {
+
+              if (currentMilestone) handleMilestoneClick(currentMilestone);
+
+            }}
+
+            className="min-w-[220px]"
+
+          >
+
+            <Play className="h-5 w-5" />
+
+            {t('continue_learning', 'common')}
+
+          </Button>
+
+        </div>
+
+      )}
+
+
+
+      {showToast && <Toast message={toastMessage} />}
+
+    </AppShell>
+
   );
+
 }
+

@@ -58,31 +58,26 @@ export const useI18n = (): I18nContextType => {
     }
   }, []);
 
-  // Initialize language from localStorage/cookies
+  // UI is English-only — always use English display language
   useEffect(() => {
     const initializeLanguage = async () => {
       try {
-        // Try to get language from localStorage first
-        const savedDisplayLang = localStorage.getItem('displayLanguage') || 'en';
-        const savedLearningLang = localStorage.getItem('learningLanguage') || undefined;
+        localStorage.setItem('displayLanguage', 'en');
 
-        // Validate saved languages
-        const validDisplayLang = getLanguageByCode(savedDisplayLang) ? savedDisplayLang : 'en';
+        const validDisplayLang = 'en';
+        const savedLearningLang = localStorage.getItem('learningLanguage') || undefined;
         const validLearningLang = savedLearningLang && getLanguageByCode(savedLearningLang) ? savedLearningLang : undefined;
 
         setDisplayLanguageState(validDisplayLang);
         setLearningLanguageState(validLearningLang);
 
-        // Load translations for display language
         const displayTranslations = await loadTranslations(validDisplayLang);
         setTranslations(displayTranslations);
 
-        // Load translations for learning language if different
         if (validLearningLang && validLearningLang !== validDisplayLang) {
           await loadTranslations(validLearningLang);
         }
 
-        // Update HTML attributes
         updateHtmlAttributes(validDisplayLang);
       } catch (error) {
         console.error('Failed to initialize language:', error);
@@ -112,30 +107,9 @@ export const useI18n = (): I18nContextType => {
   }, []);
 
   // Set display language
-  const setDisplayLanguage = useCallback(async (languageCode: string) => {
-    if (languageCode === displayLanguage) return;
-
-    const language = getLanguageByCode(languageCode);
-    if (!language) {
-      console.error(`Unsupported language: ${languageCode}`);
-      return;
-    }
-
-    try {
-      // Load new translations
-      const newTranslations = await loadTranslations(languageCode);
-      setTranslations(newTranslations);
-      setDisplayLanguageState(languageCode);
-
-      // Save to localStorage
-      localStorage.setItem('displayLanguage', languageCode);
-
-      // Update HTML attributes
-      updateHtmlAttributes(languageCode);
-    } catch (error) {
-      console.error(`Failed to switch to language ${languageCode}:`, error);
-    }
-  }, [displayLanguage, loadTranslations, updateHtmlAttributes]);
+  const setDisplayLanguage = useCallback(async (_languageCode: string) => {
+    // English-only UI — ignore display language changes
+  }, []);
 
   // Set learning language
   const setLearningLanguage = useCallback((languageCode?: string) => {
@@ -200,7 +174,10 @@ export const useI18n = (): I18nContextType => {
   }, [translations, learningLanguage, displayLanguage, isLoading]);
 
   // Memoized values
-  const currentLanguage = useMemo(() => getLanguageByCode(displayLanguage)!, [displayLanguage]);
+  const currentLanguage = useMemo(
+    () => getLanguageByCode(displayLanguage) ?? i18nConfig.supportedLanguages[0],
+    [displayLanguage]
+  );
   const isRTLMode = useMemo(() => isRTL(displayLanguage), [displayLanguage]);
 
   return {

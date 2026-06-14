@@ -4,11 +4,16 @@ export class AudioPlayer {
   private eventListeners: Map<string, Function[]> = new Map();
 
   constructor() {
-    // Only create audio element on client side
-    if (typeof window !== 'undefined') {
+    this.initAudio();
+  }
+
+  private initAudio(): HTMLAudioElement | null {
+    if (typeof window === 'undefined') return null;
+    if (!this.audio) {
       this.audio = new Audio();
       this.setupEventListeners();
     }
+    return this.audio;
   }
 
   private setupEventListeners() {
@@ -21,51 +26,52 @@ export class AudioPlayer {
   }
 
   async play(url: string, options?: AudioPlayOptions): Promise<void> {
-    if (!this.audio) {
-      console.warn('Audio not available in this environment');
-      return;
+    const audio = this.initAudio();
+    if (!audio) {
+      throw new Error('Audio not available in this environment');
     }
 
-    try {
-      // Check if the URL is actually an audio file
-      if (url.includes('#') || url.includes('.txt') || url.includes('.md')) {
-        console.warn('Invalid audio URL:', url);
-        this.emit('error', new Error('Invalid audio file'));
-        return;
+    if (url.includes('#') || url.includes('.txt') || url.includes('.md')) {
+      throw new Error('Invalid audio URL');
+    }
+
+    return new Promise((resolve, reject) => {
+      const onEnded = () => {
+        cleanup();
+        options?.onEnd?.();
+        resolve();
+      };
+      const onError = () => {
+        cleanup();
+        const err = new Error(`Failed to play audio: ${url}`);
+        options?.onError?.(err);
+        reject(err);
+      };
+      const cleanup = () => {
+        audio.removeEventListener('ended', onEnded);
+        audio.removeEventListener('error', onError);
+      };
+
+      audio.addEventListener('ended', onEnded);
+      audio.addEventListener('error', onError);
+
+      if (options?.volume !== undefined) {
+        audio.volume = options.volume;
+      }
+      if (options?.playbackRate !== undefined) {
+        audio.playbackRate = options.playbackRate;
       }
 
       if (this.currentUrl !== url) {
-        this.audio.src = url;
+        audio.src = url;
         this.currentUrl = url;
+        audio.load();
       }
 
-      // Set options
-      if (options?.volume !== undefined) {
-        this.audio.volume = options.volume;
-      }
-      if (options?.playbackRate !== undefined) {
-        this.audio.playbackRate = options.playbackRate;
-      }
-
-      // Add event listeners for this play session
-      if (options?.onEnd) {
-        this.once('ended', options.onEnd);
-      }
-      if (options?.onError) {
-        this.once('error', options.onError);
-      }
-
-      await this.audio.play();
-      this.emit('play');
-    } catch (error) {
-      console.error('Failed to play audio:', error);
-      this.emit('error', error);
-      
-      // If it's a placeholder file, show a user-friendly message
-      if (url.includes('placeholder') || url.includes('#')) {
-        console.info('This is a placeholder audio file. Replace with real MP3 files for audio playback.');
-      }
-    }
+      audio.play()
+        .then(() => this.emit('play'))
+        .catch(onError);
+    });
   }
 
   stop(): void {

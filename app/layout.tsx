@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ClientProviders } from '@/components/providers/ClientProviders';
 import { Noto_Sans_KR, Heebo } from 'next/font/google';
 import './globals.css';
 
@@ -17,9 +18,9 @@ const heebo = Heebo({
 });
 
 export const metadata: Metadata = {
-  title: 'VocabQuest - אפליקציית למידת שפות אינטראקטיבית',
-  description: 'למדו שפות חדשות דרך חוויה אינטראקטיבית ומהנה עם VocabQuest',
-  keywords: 'למידת שפות, ספרדית, קוריאנית, צרפתית, אוצר מילים, אינטראקטיבי',
+  title: 'VocabQuest — Interactive Language Learning',
+  description: 'Learn Japanese, Korean, and French through fun, interactive vocabulary games and lessons.',
+  keywords: 'language learning, Japanese, Korean, French, vocabulary, interactive, TOPIK, JLPT',
   authors: [{ name: 'VocabQuest Team' }],
   creator: 'VocabQuest',
   publisher: 'VocabQuest',
@@ -30,8 +31,8 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('http://localhost:3000'),
   openGraph: {
-    title: 'VocabQuest - אפליקציית למידת שפות אינטראקטיבית',
-    description: 'למדו שפות חדשות דרך חוויה אינטראקטיבית ומהנה',
+    title: 'VocabQuest — Interactive Language Learning',
+    description: 'Learn Japanese, Korean, and French through fun, interactive vocabulary games and lessons.',
     url: 'http://localhost:3000',
     siteName: 'VocabQuest',
     images: [
@@ -42,13 +43,13 @@ export const metadata: Metadata = {
         alt: 'VocabQuest Language Learning',
       },
     ],
-    locale: 'he_IL',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VocabQuest - אפליקציית למידת שפות אינטראקטיבית',
-    description: 'למדו שפות חדשות דרך חוויה אינטראקטיבית ומהנה',
+    title: 'VocabQuest — Interactive Language Learning',
+    description: 'Learn Japanese, Korean, and French through fun, interactive vocabulary games and lessons.',
     images: ['/images/og-image.jpg'],
   },
   robots: {
@@ -73,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="he" dir="rtl" className={`${notoSansKR.variable} ${heebo.variable}`}>
+    <html lang="en" dir="ltr" className={`${notoSansKR.variable} ${heebo.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -85,7 +86,7 @@ export default function RootLayout({
         
         {/* Meta tags for accessibility */}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <meta name="theme-color" content="#6366F1" />
+        <meta name="theme-color" content="#8f74b5" />
         <meta name="color-scheme" content="light" />
         
         {/* Structured data for SEO */}
@@ -96,7 +97,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'WebApplication',
               name: 'VocabQuest',
-              description: 'אפליקציית למידת שפות אינטראקטיבית',
+              description: 'Interactive language learning application',
               applicationCategory: 'EducationalApplication',
               operatingSystem: 'Web Browser',
               offers: {
@@ -109,8 +110,8 @@ export default function RootLayout({
         />
       </head>
       <body className={`${notoSansKR.variable} ${heebo.variable} antialiased`}>
-        <div id="root" className="min-h-screen bg-gray-50 text-gray-900">
-          {children}
+        <div id="main-content" className="min-h-screen bg-pastel-cream text-brand-800">
+          <ClientProviders>{children}</ClientProviders>
         </div>
         
         {/* Accessibility improvements */}
@@ -119,9 +120,9 @@ export default function RootLayout({
         {/* Skip to main content link for keyboard navigation */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-indigo-600 focus:text-white focus:rounded focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-400 focus:text-white focus:rounded focus:outline-none focus:ring-2 focus:ring-brand-300 focus:ring-offset-2"
         >
-          דלג לתוכן הראשי
+          Skip to main content
         </a>
       </body>
     </html>

@@ -2,10 +2,13 @@
 
 import StationCard from '@/components/game/StationCard';
 import WordModal from '@/components/game/WordModal';
-import { useGameStore } from '@/lib/store';
+import { AppShell } from '@/components/ui/AppShell';
+import { Button } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
+import { LoadingScreen } from '@/components/ui/LoadingScreen';
 import type { UserWordProgress, Word } from '@/types';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Trophy } from 'lucide-react';
+import { Trophy } from 'lucide-react';
 import { useParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -146,7 +149,6 @@ const mockWords: (Word & { progress?: UserWordProgress })[] = [
     ],
     progress: { status: 'LEARNED', totalAttempts: 5, correctStreak: 3, totalCorrect: 4, updatedAt: new Date() } as UserWordProgress,
   },
-  // Add more words to make 10 total
   ...Array.from({ length: 7 }, (_, i) => ({
     id: `word-${i + 4}`,
     languageId: 'ko-kr',
@@ -165,17 +167,14 @@ const mockWords: (Word & { progress?: UserWordProgress })[] = [
 export default function StationPage() {
   const params = useParams();
   const router = useRouter();
-  const { currentStation, setCurrentStation } = useGameStore();
   const [words, setWords] = useState<(Word & { progress?: UserWordProgress })[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedWord, setSelectedWord] = useState<Word | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    // Load station data (in real app, this would be an API call)
     const loadStation = async () => {
       try {
-        // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1000));
         setWords(mockWords);
       } catch (error) {
@@ -215,13 +214,8 @@ export default function StationPage() {
     );
   };
 
-  const handleBackClick = () => {
-    router.push('/map/ko-KR');
-  };
-
   const handleStartQuiz = () => {
-    // In a real app, this would start the quiz
-    console.log('Starting quiz for station:', params.id);
+    router.push('/quiz/ko/1');
   };
 
   const getProgressStats = () => {
@@ -234,174 +228,107 @@ export default function StationPage() {
   };
 
   const progressStats = getProgressStats();
-  const canStartQuiz = progressStats.learned >= 8; // Need 80% to start quiz
+  const canStartQuiz = progressStats.learned >= 8;
+  const progressPercent = progressStats.total > 0
+    ? Math.round((progressStats.learned / progressStats.total) * 100)
+    : 0;
 
   if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-primary-50 to-muted-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="loading-spinner w-16 h-16 mx-auto mb-4"></div>
-          <h2 className="text-xl font-semibold text-muted-600">Loading Station...</h2>
-        </div>
-      </div>
-    );
+    return <LoadingScreen message="Loading station..." />;
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-muted-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b border-muted-200">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={handleBackClick}
-                className="p-2 rounded-lg hover:bg-muted-100 transition-colors"
-                aria-label="Go back to map"
-              >
-                <ArrowLeft className="w-5 h-5 text-muted-600" />
-              </button>
-              
-              <div>
-                <h1 className="text-2xl font-bold text-muted-800">
-                  Seoul Station
-                </h1>
-                <p className="text-muted-600">
-                  Learn essential greetings and basic phrases
-                </p>
-              </div>
-            </div>
+    <AppShell
+      backHref="/map/ko"
+      backLabel="Map"
+      eyebrow="Station"
+      title="Seoul Station"
+      subtitle="Learn essential greetings and basic phrases"
+      maxWidth="4xl"
+      headerActions={
+        <Button
+          size="sm"
+          onClick={handleStartQuiz}
+          disabled={!canStartQuiz}
+        >
+          <Trophy className="w-4 h-4" />
+          Start quiz
+        </Button>
+      }
+    >
+      <Card className="mb-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold text-slate-900">Learning progress</h2>
+          <span className="text-sm font-medium text-indigo-600">
+            {progressStats.learned}/{progressStats.total} learned
+          </span>
+        </div>
 
-            <div className="flex items-center space-x-4">
-              {/* Progress indicator */}
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600">
-                  {progressStats.learned}/{progressStats.total}
-                </div>
-                <div className="text-xs text-muted-500">Words Learned</div>
-              </div>
-
-              {/* Quiz button */}
-              <button
-                onClick={handleStartQuiz}
-                disabled={!canStartQuiz}
-                className={`px-6 py-2 rounded-lg font-semibold transition-colors flex items-center space-x-2 ${
-                  canStartQuiz
-                    ? 'bg-green-600 text-white hover:bg-green-700'
-                    : 'bg-muted-300 text-muted-500 cursor-not-allowed'
-                }`}
-              >
-                <Trophy className="w-4 h-4" />
-                <span>Start Quiz</span>
-              </button>
-            </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+          <div className="text-center p-3 rounded-lg bg-slate-50">
+            <div className="text-xl font-bold text-slate-900">{progressStats.total}</div>
+            <div className="text-xs text-slate-500">Total</div>
+          </div>
+          <div className="text-center p-3 rounded-lg bg-emerald-50">
+            <div className="text-xl font-bold text-emerald-600">{progressStats.learned}</div>
+            <div className="text-xs text-emerald-600">Learned</div>
+          </div>
+          <div className="text-center p-3 rounded-lg bg-indigo-50">
+            <div className="text-xl font-bold text-indigo-600">{progressStats.inProgress}</div>
+            <div className="text-xs text-indigo-600">In progress</div>
+          </div>
+          <div className="text-center p-3 rounded-lg bg-slate-100">
+            <div className="text-xl font-bold text-slate-500">{progressStats.notStarted}</div>
+            <div className="text-xs text-slate-500">Not started</div>
           </div>
         </div>
-      </header>
 
-      {/* Main content */}
-      <main className="container mx-auto px-4 py-8">
-        <div className="max-w-7xl mx-auto">
-          {/* Progress overview */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-            <h2 className="text-2xl font-bold text-muted-800 mb-4">
-              📚 Learning Progress
-            </h2>
-            
-            <div className="grid md:grid-cols-4 gap-4 mb-6">
-              <div className="text-center p-4 bg-muted-50 rounded-lg">
-                <div className="text-2xl font-bold text-muted-600">
-                  {progressStats.total}
-                </div>
-                <div className="text-sm text-muted-500">Total Words</div>
-              </div>
-              <div className="text-center p-4 bg-green-50 rounded-lg">
-                <div className="text-2xl font-bold text-green-600">
-                  {progressStats.learned}
-                </div>
-                <div className="text-sm text-green-600">Learned</div>
-              </div>
-              <div className="text-center p-4 bg-blue-50 rounded-lg">
-                <div className="text-2xl font-bold text-blue-600">
-                  {progressStats.inProgress}
-                </div>
-                <div className="text-sm text-blue-600">In Progress</div>
-              </div>
-              <div className="text-center p-4 bg-muted-100 rounded-lg">
-                <div className="text-2xl font-bold text-muted-500">
-                  {progressStats.notStarted}
-                </div>
-                <div className="text-sm text-muted-500">Not Started</div>
-              </div>
-            </div>
+        <div className="w-full bg-slate-200 rounded-full h-2">
+          <div
+            className="bg-indigo-600 h-2 rounded-full transition-all duration-500"
+            style={{ width: `${progressPercent}%` }}
+          />
+        </div>
+        <p className="mt-3 text-sm text-slate-600 text-center">
+          {canStartQuiz
+            ? 'Ready for the quiz. Test your knowledge when you feel confident.'
+            : `${8 - progressStats.learned} more words needed to unlock the quiz.`}
+        </p>
+      </Card>
 
-            {/* Progress bar */}
-            <div className="w-full bg-muted-200 rounded-full h-3">
-              <div
-                className="bg-green-600 h-3 rounded-full transition-all duration-500"
-                style={{ width: `${(progressStats.learned / progressStats.total) * 100}%` }}
+      <Card className="mb-6">
+        <h2 className="text-lg font-semibold text-slate-900 mb-6">Words to learn</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {words.map((word, index) => (
+            <motion.div
+              key={word.id}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05 }}
+            >
+              <StationCard
+                word={word}
+                onWordClick={handleWordClick}
+                onMarkLearned={handleMarkLearned}
               />
-            </div>
-            
-            <div className="mt-2 text-sm text-muted-600 text-center">
-              {progressStats.learned >= 8 
-                ? '🎉 Ready for quiz! You can now test your knowledge.'
-                : `${8 - progressStats.learned} more words needed to unlock the quiz.`
-              }
-            </div>
-          </div>
+            </motion.div>
+          ))}
+        </div>
+      </Card>
 
-          {/* Words grid */}
-          <div className="bg-white rounded-2xl shadow-lg p-6">
-            <h2 className="text-2xl font-bold text-muted-800 mb-6">
-              🎯 Learn These Words
-            </h2>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-              {words.map((word, index) => (
-                <motion.div
-                  key={word.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <StationCard
-                    word={word}
-                    onWordClick={handleWordClick}
-                    onMarkLearned={handleMarkLearned}
-                  />
-                </motion.div>
-              ))}
-            </div>
+      <Card padding="sm" className="bg-indigo-50/50 border-indigo-100">
+        <h3 className="text-sm font-semibold text-slate-900 mb-3">Learning tips</h3>
+        <div className="grid md:grid-cols-2 gap-4 text-sm text-slate-600">
+          <div>
+            <p className="font-medium text-slate-800 mb-1">Listen to pronunciation</p>
+            <p>Use the audio button to hear native pronunciation for each word.</p>
           </div>
-
-          {/* Learning tips */}
-          <div className="mt-8 bg-gradient-to-r from-blue-50 to-primary-50 rounded-2xl p-6 border border-blue-100">
-            <h3 className="text-xl font-bold text-muted-800 mb-4">
-              💡 Learning Tips
-            </h3>
-            <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-600">
-              <div>
-                <h4 className="font-semibold text-muted-800 mb-2">
-                  🎧 Listen to Pronunciation
-                </h4>
-                <p>
-                  Click the volume icon to hear how each word is pronounced by native speakers.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-muted-800 mb-2">
-                  ✅ Mark as Learned
-                </h4>
-                <p>
-                  Use the checkmark button when you feel confident with a word. 
-                  This tracks your progress and unlocks the quiz.
-                </p>
-              </div>
-            </div>
+          <div>
+            <p className="font-medium text-slate-800 mb-1">Mark as learned</p>
+            <p>Track your progress and unlock the quiz once you know enough words.</p>
           </div>
         </div>
-      </main>
+      </Card>
 
       {selectedWord && (
         <WordModal
@@ -411,6 +338,6 @@ export default function StationPage() {
           onMarkLearned={handleMarkLearned}
         />
       )}
-    </div>
+    </AppShell>
   );
 }

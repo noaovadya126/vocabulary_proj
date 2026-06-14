@@ -2,52 +2,144 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom CSS variables */
 :root {
   --font-noto-sans-kr: 'Noto Sans KR', sans-serif;
   --font-heebo: 'Heebo', sans-serif;
+  --color-brand: #e8759a;
+  --color-brand-green: #6db89a;
+  --color-surface: #fffbfc;
+  --color-pink-pastel: #ffd6e8;
+  --color-green-pastel: #c8edd8;
 }
 
-/* Base styles */
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  font-size: clamp(14px, 2.8vw, 16px);
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: var(--font-heebo), system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  color: #1e293b;
-  background-color: #f8fafc;
+  color: #863a52;
+  background-color: var(--color-surface);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-noto-sans-kr), system-ui, -apple-system, sans-serif;
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
+  color: #a84866;
 }
 
-/* Korean text styling */
+/* ── Cute pastel page background with soft textures ── */
+.cute-page-bg {
+  background-color: #fffbfc;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 15% 0%, rgba(255, 182, 213, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 45% at 85% 5%, rgba(184, 224, 200, 0.28) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(255, 214, 232, 0.18) 0%, transparent 45%),
+    linear-gradient(180deg, #fff5f9 0%, #fffbfc 40%, #f0faf4 100%);
+}
+
+.cute-pattern-overlay {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffb3cf' fill-opacity='0.07'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 28c-2 0-4 2-4 4 0 3 4 8 4 8s4-5 4-8c0-2-2-4-4-4z' fill='%23b8e0c8' fill-opacity='0.06'/%3E%3C/svg%3E");
+  opacity: 1;
+}
+
+.cute-card-texture {
+  background-image:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 240, 246, 0.85) 100%),
+    url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1' fill='%23ffd6e8' fill-opacity='0.35'/%3E%3C/svg%3E");
+}
+
+.cute-stripes-pink {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(255, 182, 213, 0.08) 8px,
+    rgba(255, 182, 213, 0.08) 16px
+  );
+}
+
+.cute-stripes-green {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 8px,
+    rgba(184, 224, 200, 0.1) 8px,
+    rgba(184, 224, 200, 0.1) 16px
+  );
+}
+
+.cute-deco-float {
+  animation: cute-float 4s ease-in-out infinite;
+}
+
+.cute-deco-bounce {
+  animation: cute-bounce 2.5s ease-in-out infinite;
+}
+
+.cute-deco-heart {
+  animation: cute-heart 3s ease-in-out infinite;
+}
+
+.cute-deco-star {
+  animation: cute-twinkle 2s ease-in-out infinite;
+}
+
+@keyframes cute-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(8deg); }
+}
+
+@keyframes cute-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes cute-heart {
+  0%, 100% { transform: scale(1); opacity: 0.25; }
+  50% { transform: scale(1.15); opacity: 0.45; }
+}
+
+@keyframes cute-twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.hub-progress-shimmer {
+  background: linear-gradient(90deg, #f78fb3 0%, #6db89a 50%, #f78fb3 100%);
+  background-size: 200% 100%;
+  animation: bar-shimmer 2.5s linear infinite;
+}
+
 .korean-text {
   font-family: var(--font-noto-sans-kr), sans-serif;
   font-weight: 500;
 }
 
-/* Hebrew text styling */
+.japanese-text {
+  font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', var(--font-noto-sans-kr), sans-serif;
+  font-weight: 500;
+}
+
 .hebrew-text {
   font-family: var(--font-heebo), sans-serif;
   direction: rtl;
   text-align: right;
 }
 
-/* Utility classes */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -60,14 +152,14 @@ h1, h2, h3, h4, h5, h6 {
   border: 0;
 }
 
-/* Loading Spinner */
 .loading-spinner {
-  border: 4px solid #f3f4f6;
-  border-top: 4px solid #3b82f6;
+  border: 3px solid #ffe8f1;
+  border-top: 3px solid var(--color-brand);
+  border-right: 3px solid var(--color-brand-green);
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  animation: spin 1s linear infinite;
+  animation: spin 0.8s linear infinite;
 }
 
 @keyframes spin {
@@ -75,112 +167,64 @@ h1, h2, h3, h4, h5, h6 {
   100% { transform: rotate(360deg); }
 }
 
-/* Character Animations */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-10px) rotate(2deg);
-  }
-  50% {
-    transform: translateY(-5px) rotate(0deg);
-  }
-  75% {
-    transform: translateY(-15px) rotate(-2deg);
-  }
+.unit-preload-bounce {
+  animation: unit-bounce 1.2s ease-in-out infinite;
 }
 
-@keyframes float-delayed {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-8px) rotate(-1deg);
-  }
-  50% {
-    transform: translateY(-12px) rotate(0deg);
-  }
-  75% {
-    transform: translateY(-6px) rotate(1deg);
-  }
+@keyframes unit-bounce {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
 }
 
-@keyframes float-slow {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  33% {
-    transform: translateY(-6px) rotate(1deg);
-  }
-  66% {
-    transform: translateY(-10px) rotate(-1deg);
-  }
+.unit-preload-float {
+  animation: unit-float 3.5s ease-in-out infinite;
 }
 
-@keyframes float-fast {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  20% {
-    transform: translateY(-12px) rotate(2deg);
-  }
-  40% {
-    transform: translateY(-8px) rotate(-1deg);
-  }
-  60% {
-    transform: translateY(-15px) rotate(1deg);
-  }
-  80% {
-    transform: translateY(-5px) rotate(-2deg);
-  }
+@keyframes unit-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.35; }
+  50% { transform: translateY(-18px) rotate(12deg); opacity: 0.65; }
 }
 
-/* Apply animations to characters */
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+.unit-preload-caption-bubble {
+  animation: caption-wiggle 2.8s ease-in-out infinite;
 }
 
-.animate-float-delayed {
-  animation: float-delayed 7s ease-in-out infinite;
-  animation-delay: 1s;
+@keyframes caption-wiggle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
 }
 
-.animate-float-slow {
-  animation: float-slow 8s ease-in-out infinite;
-  animation-delay: 2s;
+.unit-preload-caption-pop {
+  animation: caption-pop 2.8s ease-in-out infinite;
 }
 
-.animate-float-fast {
-  animation: float-fast 5s ease-in-out infinite;
-  animation-delay: 0.5s;
+@keyframes caption-pop {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.04); }
 }
 
-/* Enhanced hover effects for characters */
-.animate-float:hover,
-.animate-float-delayed:hover,
-.animate-float-slow:hover,
-.animate-float-fast:hover {
-  animation-play-state: paused;
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+.unit-preload-bar-shimmer {
+  background-size: 200% 100%;
+  animation: bar-shimmer 1.8s linear infinite;
 }
 
-/* Responsive character sizing */
-@media (max-width: 640px) {
-  .animate-float,
-  .animate-float-delayed,
-  .animate-float-slow,
-  .animate-float-fast {
-    animation-duration: 4s;
-  }
+@keyframes bar-shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
 }
 
-/* Character shadow effects */
-.character-shadow {
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+.word-tile {
+  @apply relative bg-white rounded-xl border border-brand-100 shadow-sm transition-all duration-200 hover:shadow-md hover:border-brand-200;
 }
 
-.character-shadow:hover {
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+.word-tile.not-started {
+  @apply border-brand-100;
+}
+
+.word-tile.in-progress {
+  @apply border-brand-200 bg-pastel-lavender/40;
+}
+
+.word-tile.learned {
+  @apply border-success-100 bg-pastel-mint/50;
 }

@@ -4,6 +4,7 @@ import { useAudioPlayer } from '@/lib/audio';
 import type { UserWordProgress, Word } from '@/types';
 import { AnimatePresence, motion } from 'framer-motion';
 import { BookOpen, CheckCircle, Volume2, X } from 'lucide-react';
+import Image from 'next/image';
 import { useState } from 'react';
 
 interface WordModalProps {
@@ -84,6 +85,8 @@ export default function WordModal({ word, isOpen, onClose, onMarkLearned }: Word
     return 'text-green-600';
   };
 
+  const imageMedia = word.media.find(m => m.role === 'IMAGE');
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -124,11 +127,14 @@ export default function WordModal({ word, isOpen, onClose, onMarkLearned }: Word
             <div className="p-6 space-y-6">
               {/* Main Image */}
               <div className="text-center">
-                {word.media.find(m => m.role === 'IMAGE') ? (
-                  <img
-                    src={word.media.find(m => m.role === 'IMAGE')!.media.url}
-                    alt={word.media.find(m => m.role === 'IMAGE')!.media.alt}
+                {imageMedia ? (
+                  <Image
+                    src={imageMedia.media.url}
+                    alt={imageMedia.media.alt}
+                    width={imageMedia.media.width ?? 400}
+                    height={imageMedia.media.height ?? 300}
                     className="w-full max-w-md h-auto rounded-xl shadow-lg mx-auto"
+                    unoptimized
                   />
                 ) : (
                   <div className="w-full max-w-md h-64 bg-muted-100 rounded-xl flex items-center justify-center mx-auto">

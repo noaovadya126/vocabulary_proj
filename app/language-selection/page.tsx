@@ -1,196 +1,179 @@
 'use client';
 
+import { AppShell } from '@/components/ui/AppShell';
+import { Button } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
+import { CharacterIllustration, SpeechBubble } from '@/components/ui/CharacterIllustration';
+import { Toast } from '@/components/ui/Toast';
+import { cn } from '@/lib/cn';
+import { Check, Sparkles } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const languages = [
   {
-    id: 'es',
-    name: 'Spanish',
-    flag: '🇪🇸',
-    description: 'Learn Spanish vocabulary and culture',
-    color: 'from-red-100 to-yellow-100'
+    id: 'ja',
+    name: 'Japanese',
+    flag: '🇯🇵',
+    description: 'Hiragana basics and polite expressions',
+    accent: 'pink' as const,
+    emoji: '🌸',
   },
   {
     id: 'ko',
     name: 'Korean',
     flag: '🇰🇷',
-    description: 'Master Korean language skills',
-    color: 'from-blue-100 to-red-100'
+    description: 'Hangul basics and polite expressions',
+    accent: 'green' as const,
+    emoji: '💚',
   },
   {
     id: 'fr',
     name: 'French',
     flag: '🇫🇷',
-    description: 'Discover French expressions',
-    color: 'from-blue-100 to-white'
-  }
+    description: 'Core vocabulary for daily conversation',
+    accent: 'peach' as const,
+    emoji: '🥐',
+  },
 ];
 
+const accentStyles = {
+  pink: {
+    card: 'border-pastel-pink/70 bg-gradient-to-br from-pastel-pink-light to-white hover:border-brand-300 cute-stripes-pink',
+    selected: 'border-brand-400 bg-pastel-pink/40 ring-2 ring-brand-300/50 shadow-cute',
+    badge: 'bg-brand-400',
+  },
+  green: {
+    card: 'border-pastel-green/70 bg-gradient-to-br from-pastel-green-light to-white hover:border-success-300 cute-stripes-green',
+    selected: 'border-success-400 bg-pastel-green/50 ring-2 ring-success-300/50 shadow-cute',
+    badge: 'bg-success-500',
+  },
+  peach: {
+    card: 'border-pastel-peach/80 bg-gradient-to-br from-pastel-peach/50 to-white hover:border-brand-200',
+    selected: 'border-brand-300 bg-pastel-peach/60 ring-2 ring-brand-200/50 shadow-cute',
+    badge: 'bg-brand-400',
+  },
+};
+
 export default function LanguageSelectionPage() {
-  const [selectedLanguage, setSelectedLanguage] = useState<string>('');
+  const [selectedLanguage, setSelectedLanguage] = useState('');
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const router = useRouter();
 
-  const handleLanguageSelect = (languageId: string) => {
-    setSelectedLanguage(languageId);
-  };
+  useEffect(() => {
+    if (localStorage.getItem('selectedLanguage') === 'es') {
+      localStorage.setItem('selectedLanguage', 'ja');
+    }
+  }, []);
 
   const handleContinue = () => {
     if (!selectedLanguage) {
-      setToastMessage('Please select a language first');
+      setToastMessage('Please select a language to continue');
       setShowToast(true);
       setTimeout(() => setShowToast(false), 3000);
       return;
     }
-
     localStorage.setItem('selectedLanguage', selectedLanguage);
     router.push(`/map/${selectedLanguage}`);
   };
 
+  const selectedLang = languages.find((l) => l.id === selectedLanguage);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-indigo-50 relative overflow-hidden">
-      {/* Page Character - Main Character */}
-      <div className="absolute top-8 left-8 z-10 opacity-80 animate-bounce">
-        <div className="w-24 h-24 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full flex items-center justify-center shadow-lg">
-          <span className="text-5xl">🌍</span>
-        </div>
+    <AppShell
+      showLogout={false}
+      backHref="/auth"
+      backLabel="Sign in"
+      maxWidth="lg"
+      backgroundVariant="selection"
+    >
+      <div className="mb-8 flex flex-col items-center text-center">
+        <CharacterIllustration variant="school" size="xl" priority />
+        <SpeechBubble className="mt-4 max-w-sm">
+          <span className="flex items-center justify-center gap-1.5">
+            <Sparkles className="h-4 w-4 text-brand-400" />
+            Which language shall we learn today?
+            <Sparkles className="h-4 w-4 text-success-500" />
+          </span>
+        </SpeechBubble>
+        <h1 className="mt-5 text-2xl font-bold text-brand-700 sm:text-3xl">Choose your language</h1>
+        <p className="mt-2 text-sm text-brand-600/80 sm:text-base">
+          Pick the language you want to explore — you can change it later ✿
+        </p>
       </div>
 
-      {/* Background Characters */}
-      <div className="absolute top-16 left-6 z-10 opacity-70 animate-float">
-        <div className="w-20 h-20 bg-gradient-to-br from-pink-100 to-purple-100 rounded-full flex items-center justify-center shadow-lg">
-          <span className="text-3xl">🤔</span>
-        </div>
-      </div>
-
-      <div className="absolute top-20 right-8 z-10 opacity-70 animate-float-delayed">
-        <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full flex items-center justify-center shadow-lg">
-          <span className="text-4xl">😊</span>
-        </div>
-      </div>
-
-      <div className="absolute bottom-20 left-8 z-10 opacity-70 animate-float-slow">
-        <div className="w-28 h-28 bg-gradient-to-br from-green-100 to-blue-100 rounded-full flex items-center justify-center shadow-lg">
-          <span className="text-5xl">✍️</span>
-        </div>
-      </div>
-
-      <div className="absolute bottom-16 right-12 z-10 opacity-70 animate-float-fast">
-        <div className="w-32 h-32 bg-gradient-to-br from-orange-100 to-red-100 rounded-full flex items-center justify-center shadow-lg">
-          <span className="text-6xl">🏃‍♀️</span>
-        </div>
-      </div>
-
-      <div className="relative z-30 min-h-screen flex items-center justify-center p-4">
-        <div className="max-w-4xl w-full">
-          {/* Header with Character */}
-          <div className="text-center mb-8">
-            <div className="relative inline-block mb-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent break-words max-w-[600px] mx-auto leading-tight">
-                Choose Your Learning Language
-              </h1>
-              {/* Character above title */}
-              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-yellow-100 to-orange-100 rounded-full flex items-center justify-center shadow-lg animate-bounce">
-                <span className="text-2xl">🎯</span>
-              </div>
-            </div>
-            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto break-words leading-relaxed">
-              Select the language you want to learn and start your vocabulary journey
-            </p>
-          </div>
-
-          {/* Language Cards with Characters */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            {languages.map((language) => (
-              <div
-                key={language.id}
-                onClick={() => handleLanguageSelect(language.id)}
-                className={`relative cursor-pointer transition-all duration-300 transform hover:scale-105 ${
-                  selectedLanguage === language.id
-                    ? 'ring-4 ring-cyan-400 ring-offset-4 ring-offset-pink-50'
-                    : 'hover:shadow-xl'
-                }`}
-              >
-                {/* Character on each card */}
-                <div className={`absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br ${language.color} rounded-full flex items-center justify-center shadow-lg z-20`}>
-                  <span className="text-lg">👧</span>
-                </div>
-
-                <div className={`bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 ${
-                  selectedLanguage === language.id
-                    ? 'border-cyan-400 bg-gradient-to-br from-cyan-50 to-blue-50'
-                    : 'border-gray-200 hover:border-gray-300'
-                }`}>
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">{language.flag}</div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-3 break-words">{language.name}</h3>
-                    <p className="text-gray-600 mb-4 break-words">{language.description}</p>
-                    
-                    {/* Selection indicator */}
-                    {selectedLanguage === language.id && (
-                      <div className="inline-flex items-center justify-center w-8 h-8 bg-cyan-400 text-white rounded-full">
-                        <span className="text-sm">✓</span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Continue Button with Character */}
-          <div className="text-center">
-            <div className="relative inline-block">
-              <button
-                onClick={handleContinue}
-                disabled={!selectedLanguage}
-                className={`px-8 py-4 text-xl font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg ${
-                  selectedLanguage
-                    ? 'bg-gradient-to-r from-pink-300 to-purple-300 text-white hover:from-pink-400 hover:to-purple-400'
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                }`}
-              >
-                Continue to Learning Journey 🚀
-              </button>
-              {/* Character next to button */}
-              <div className="absolute -right-16 top-1/2 transform -translate-y-1/2 w-14 h-14 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center shadow-lg animate-pulse">
-                <span className="text-xl">🎉</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Back Button */}
-          <div className="text-center mt-6">
+      <div className="mb-8 space-y-3">
+        {languages.map((lang) => {
+          const selected = selectedLanguage === lang.id;
+          const styles = accentStyles[lang.accent];
+          return (
             <button
-              onClick={() => router.push('/auth')}
-              className="px-6 py-3 text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 break-words"
+              key={lang.id}
+              type="button"
+              onClick={() => setSelectedLanguage(lang.id)}
+              className={cn(
+                'w-full rounded-3xl border-2 p-4 text-left transition-all active:scale-[0.99]',
+                selected ? styles.selected : styles.card,
+                !selected && 'hover:scale-[1.01] hover:shadow-soft'
+              )}
             >
-              ← Back to Login
+              <div className="flex items-center gap-4">
+                <span
+                  className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white/80 text-4xl shadow-soft backdrop-blur-sm"
+                  aria-hidden="true"
+                >
+                  {lang.flag}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg font-bold text-brand-800">{lang.name}</span>
+                    <span className="text-base opacity-70">{lang.emoji}</span>
+                  </div>
+                  <div className="mt-0.5 text-sm text-brand-600/85">{lang.description}</div>
+                </div>
+                {selected ? (
+                  <div
+                    className={cn(
+                      'flex h-8 w-8 shrink-0 items-center justify-center rounded-full shadow-soft',
+                      styles.badge
+                    )}
+                  >
+                    <Check className="h-4 w-4 text-white" />
+                  </div>
+                ) : (
+                  <div className="h-8 w-8 shrink-0 rounded-full border-2 border-dashed border-pastel-pink/60" />
+                )}
+              </div>
             </button>
-          </div>
-        </div>
+          );
+        })}
       </div>
 
-      {/* Toast Notification */}
-      {showToast && (
-        <div className={`fixed top-4 right-4 z-50 p-4 rounded-xl shadow-lg max-w-md break-words ${
-          toastMessage.includes('Please select') 
-            ? 'bg-gradient-to-r from-red-300 to-pink-300 text-white' 
-            : 'bg-gradient-to-r from-blue-300 to-purple-300 text-white'
-        }`}>
-          <div className="flex items-center">
-            <span className="mr-2">{toastMessage.includes('Please select') ? '❌' : 'ℹ️'}</span>
-            <span className="text-base break-words">{toastMessage}</span>
-          </div>
+      <Card
+        padding="sm"
+        className="flex flex-col gap-4 border-pastel-green/50 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <div className="flex items-center gap-3">
+          {selectedLang ? (
+            <CharacterIllustration variant="hearts" size="sm" />
+          ) : (
+            <div className="flex h-[72px] w-[72px] items-center justify-center rounded-2xl bg-pastel-pink-light text-2xl">
+              🌸
+            </div>
+          )}
+          <p className="text-sm font-medium text-brand-700">
+            {selectedLang
+              ? `Great choice! ${selectedLang.name} awaits you 💗`
+              : 'Pick a language above to continue'}
+          </p>
         </div>
-      )}
+        <Button onClick={handleContinue} disabled={!selectedLanguage} size="lg" className="shrink-0">
+          Continue to map →
+        </Button>
+      </Card>
 
-      {/* Floating particles */}
-      <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-pink-300 rounded-full animate-ping opacity-60"></div>
-      <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-purple-300 rounded-full animate-ping opacity-60" style={{animationDelay: '1s'}}></div>
-      <div className="absolute bottom-1/3 left-1/3 w-5 h-5 bg-blue-300 rounded-full animate-ping opacity-60" style={{animationDelay: '2s'}}></div>
-    </div>
+      {showToast && <Toast message={toastMessage} />}
+    </AppShell>
   );
 }

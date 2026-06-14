@@ -1,7 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter, useParams } from 'next/navigation';
+import { AppShell } from '@/components/ui/AppShell';
+import { Button } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
+import { Toast } from '@/components/ui/Toast';
+import { cn } from '@/lib/cn';
+import { LANGUAGE_NAMES } from '@/lib/constants';
+import { RotateCcw } from 'lucide-react';
+import { useParams, useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 interface GameWord {
   id: number;
@@ -19,26 +26,20 @@ interface TargetArea {
 }
 
 const mockGameWords: GameWord[] = [
-  { id: 1, word: 'Hola', meaning: 'שלום', isMatched: false, position: { x: 20, y: 30 } },
-  { id: 2, word: 'Gracias', meaning: 'תודה', isMatched: false, position: { x: 80, y: 20 } },
-  { id: 3, word: 'Por favor', meaning: 'בבקשה', isMatched: false, position: { x: 15, y: 70 } },
-  { id: 4, word: 'Buenos días', meaning: 'בוקר טוב', isMatched: false, position: { x: 85, y: 80 } },
-  { id: 5, word: 'Buenas noches', meaning: 'לילה טוב', isMatched: false, position: { x: 50, y: 15 } }
+  { id: 1, word: 'こんにちは', meaning: 'Hello', isMatched: false, position: { x: 20, y: 30 } },
+  { id: 2, word: 'ありがとう', meaning: 'Thank you', isMatched: false, position: { x: 80, y: 20 } },
+  { id: 3, word: 'お願いします', meaning: 'Please', isMatched: false, position: { x: 15, y: 70 } },
+  { id: 4, word: 'おはよう', meaning: 'Good morning', isMatched: false, position: { x: 85, y: 80 } },
+  { id: 5, word: 'おやすみ', meaning: 'Good night', isMatched: false, position: { x: 50, y: 15 } },
 ];
 
 const mockTargetAreas: TargetArea[] = [
-  { id: 1, meaning: 'שלום', isMatched: false, position: { x: 25, y: 60 } },
-  { id: 2, meaning: 'תודה', isMatched: false, position: { x: 75, y: 50 } },
-  { id: 3, meaning: 'בבקשה', isMatched: false, position: { x: 20, y: 85 } },
-  { id: 4, meaning: 'בוקר טוב', isMatched: false, position: { x: 80, y: 90 } },
-  { id: 5, meaning: 'לילה טוב', isMatched: false, position: { x: 50, y: 75 } }
+  { id: 1, meaning: 'Hello', isMatched: false, position: { x: 25, y: 60 } },
+  { id: 2, meaning: 'Thank you', isMatched: false, position: { x: 75, y: 50 } },
+  { id: 3, meaning: 'Please', isMatched: false, position: { x: 20, y: 85 } },
+  { id: 4, meaning: 'Good morning', isMatched: false, position: { x: 80, y: 90 } },
+  { id: 5, meaning: 'Good night', isMatched: false, position: { x: 50, y: 75 } },
 ];
-
-const languageNames = {
-  es: 'ספרדית',
-  ko: 'קוריאנית',
-  fr: 'צרפתית'
-};
 
 export default function GamePage() {
   const [gameWords, setGameWords] = useState<GameWord[]>(mockGameWords);
@@ -50,25 +51,23 @@ export default function GamePage() {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const [toastType, setToastType] = useState<'success' | 'error'>('success');
-  
+
   const router = useRouter();
   const params = useParams();
   const language = params.language as string;
   const milestoneId = params.milestoneId as string;
 
-  // Check if user is authenticated and has selected a language
   useEffect(() => {
     const userData = localStorage.getItem('userData');
     const selectedLanguage = localStorage.getItem('selectedLanguage');
-    
+
     if (!userData) {
       router.push('/auth');
       return;
     }
-    
+
     if (!selectedLanguage || selectedLanguage !== language) {
       router.push('/language-selection');
-      return;
     }
   }, [language, router]);
 
@@ -86,38 +85,31 @@ export default function GamePage() {
   const handleTargetClick = (target: TargetArea) => {
     if (!selectedWord || target.isMatched) return;
 
-    // Check if the match is correct
     const isCorrect = selectedWord.meaning === target.meaning;
 
     if (isCorrect) {
-      // Correct match
       setCorrectMatches(prev => prev + 1);
-      setGameWords(prev => prev.map(w => 
+      setGameWords(prev => prev.map(w =>
         w.id === selectedWord.id ? { ...w, isMatched: true } : w
       ));
-      setTargetAreas(prev => prev.map(t => 
+      setTargetAreas(prev => prev.map(t =>
         t.id === target.id ? { ...t, isMatched: true } : t
       ));
-      
-      setToastMessage('נכון! התאמה מושלמת! 🎉');
+      setToastMessage('Correct match!');
       setToastType('success');
       setShowToast(true);
     } else {
-      // Incorrect match
       setIncorrectMatches(prev => prev + 1);
-      setToastMessage('לא נכון. נסי שוב! 💪');
+      setToastMessage('Not quite — try again.');
       setToastType('error');
       setShowToast(true);
     }
 
     setSelectedWord(null);
 
-    // Check if game is complete
     const newCorrectMatches = isCorrect ? correctMatches + 1 : correctMatches;
     if (newCorrectMatches === gameWords.length) {
-      setTimeout(() => {
-        setShowGameOver(true);
-      }, 1000);
+      setTimeout(() => setShowGameOver(true), 1000);
     }
   };
 
@@ -134,202 +126,126 @@ export default function GamePage() {
     if (calculateAccuracy() >= 90) {
       router.push(`/winner/${language}/${milestoneId}?score=${calculateAccuracy()}`);
     } else {
-      setToastMessage('עליך להגיע ל-90% דיוק לפחות כדי להמשיך.');
+      setToastMessage('Reach at least 90% accuracy to continue.');
       setToastType('error');
       setShowToast(true);
     }
   };
 
-  const getWordStyle = (word: GameWord) => {
-    const baseStyle = "absolute w-24 h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center text-center font-bold text-lg cursor-pointer transition-all duration-300 transform hover:scale-110 border-2";
-    
-    if (word.isMatched) {
-      return `${baseStyle} bg-green-100 border-green-500 text-green-700 opacity-60`;
-    }
-    
-    if (selectedWord?.id === word.id) {
-      return `${baseStyle} bg-cyan-100 border-cyan-500 text-cyan-700 ring-4 ring-cyan-300`;
-    }
-    
-    return `${baseStyle} border-gray-300 text-gray-700 hover:border-cyan-400`;
-  };
+  const getWordStyle = (word: GameWord) => cn(
+    'absolute w-24 h-24 rounded-xl shadow-sm flex items-center justify-center text-center font-semibold text-sm cursor-pointer transition-all border-2 p-2',
+    word.isMatched && 'bg-emerald-50 border-emerald-400 text-emerald-800 opacity-60',
+    !word.isMatched && selectedWord?.id === word.id && 'bg-indigo-50 border-indigo-500 text-indigo-800 ring-2 ring-indigo-200',
+    !word.isMatched && selectedWord?.id !== word.id && 'bg-white border-slate-200 text-slate-800 hover:border-indigo-300'
+  );
 
-  const getTargetStyle = (target: TargetArea) => {
-    const baseStyle = "absolute w-32 h-16 bg-gray-100 rounded-xl flex items-center justify-center text-center font-medium text-gray-700 border-2 transition-all duration-300";
-    
-    if (target.isMatched) {
-      return `${baseStyle} bg-green-100 border-green-500 text-green-700`;
-    }
-    
-    if (selectedWord && selectedWord.meaning === target.meaning) {
-      return `${baseStyle} bg-cyan-100 border-cyan-500 text-cyan-700 ring-2 ring-cyan-300`;
-    }
-    
-    return `${baseStyle} border-gray-300 hover:border-cyan-400 hover:bg-cyan-50`;
-  };
+  const getTargetStyle = (target: TargetArea) => cn(
+    'absolute w-32 h-16 rounded-lg flex items-center justify-center text-center font-medium text-sm border-2 transition-all p-2',
+    target.isMatched && 'bg-emerald-50 border-emerald-400 text-emerald-800',
+    !target.isMatched && selectedWord && selectedWord.meaning === target.meaning && 'bg-indigo-50 border-indigo-400 text-indigo-800 ring-2 ring-indigo-200',
+    !target.isMatched && (!selectedWord || selectedWord.meaning !== target.meaning) && 'bg-slate-50 border-slate-200 text-slate-700 hover:border-indigo-300'
+  );
 
   const accuracy = calculateAccuracy();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            משחק למידה - {languageNames[language as keyof typeof languageNames]}
-          </h1>
-          <p className="text-xl text-gray-600">
-            התאימי מילים למשמעויות שלהן
-          </p>
-        </div>
-
-        {/* Progress Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-600">{correctMatches}</div>
-              <div className="text-sm text-gray-600">תשובות נכונות</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-red-600">{incorrectMatches}</div>
-              <div className="text-sm text-gray-600">תשובות שגויות</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-indigo-600">{accuracy}%</div>
-              <div className="text-sm text-gray-600">דיוק</div>
-            </div>
+    <AppShell
+      backHref={`/milestone/${language}/${milestoneId}`}
+      backLabel="Milestone"
+      eyebrow="Matching game"
+      title={LANGUAGE_NAMES[language] ?? language}
+      subtitle="Match each word to its meaning"
+      maxWidth="4xl"
+    >
+      <Card className="mb-6">
+        <div className="grid grid-cols-3 gap-4 mb-4">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-emerald-600">{correctMatches}</div>
+            <div className="text-xs text-slate-500">Correct</div>
           </div>
-          
-          {/* Accuracy Bar */}
-          <div className="mt-4">
-            <div className="w-full bg-gray-200 rounded-full h-3">
-              <div 
-                className={`h-3 rounded-full transition-all duration-1000 ${
-                  accuracy >= 90 ? 'bg-green-500' : accuracy >= 70 ? 'bg-yellow-500' : 'bg-red-500'
-                }`}
-                style={{ width: `${accuracy}%` }}
-              ></div>
-            </div>
-            <div className="text-center mt-2">
-              <span className="text-sm text-gray-600">
-                {accuracy >= 90 ? 'מעולה! את יכולה להמשיך!' : 'המשיכי לנסות להגיע ל-90%'}
-              </span>
-            </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-red-500">{incorrectMatches}</div>
+            <div className="text-xs text-slate-500">Incorrect</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-indigo-600">{accuracy}%</div>
+            <div className="text-xs text-slate-500">Accuracy</div>
           </div>
         </div>
-
-        {/* Game Container */}
-        <div className="relative bg-white rounded-2xl shadow-xl p-8 min-h-[600px] mb-8">
-          {/* Floating Words */}
-          {gameWords.map((word) => (
-            <div
-              key={word.id}
-              onClick={() => handleWordClick(word)}
-              className={getWordStyle(word)}
-              style={{
-                left: `${word.position.x}%`,
-                top: `${word.position.y}%`,
-                transform: 'translate(-50%, -50%)'
-              }}
-            >
-              {word.word}
-            </div>
-          ))}
-
-          {/* Target Areas */}
-          {targetAreas.map((target) => (
-            <div
-              key={target.id}
-              onClick={() => handleTargetClick(target)}
-              className={getTargetStyle(target)}
-              style={{
-                left: `${target.position.x}%`,
-                top: `${target.position.y}%`,
-                transform: 'translate(-50%, -50%)'
-              }}
-            >
-              {target.meaning}
-            </div>
-          ))}
-
-          {/* Instructions */}
-          <div className="absolute bottom-4 left-4 bg-blue-100 text-blue-800 px-4 py-2 rounded-lg text-sm">
-            💡 לחיצה על מילה ואז על משמעות
-          </div>
+        <div className="w-full bg-slate-200 rounded-full h-2">
+          <div
+            className={cn(
+              'h-2 rounded-full transition-all duration-500',
+              accuracy >= 90 ? 'bg-emerald-500' : accuracy >= 70 ? 'bg-amber-400' : 'bg-red-400'
+            )}
+            style={{ width: `${accuracy}%` }}
+          />
         </div>
+        <p className="text-center text-sm text-slate-600 mt-2">
+          {accuracy >= 90 ? 'Great work — you can continue.' : 'Aim for 90% accuracy to unlock the next step.'}
+        </p>
+      </Card>
 
-        {/* Game Controls */}
-        <div className="flex justify-center space-x-4 mb-8">
+      <Card padding="lg" className="relative min-h-[500px] mb-6">
+        {gameWords.map((word) => (
           <button
-            onClick={handleReset}
-            className="px-6 py-3 bg-gray-500 text-white rounded-xl hover:bg-gray-600 transition-colors"
+            key={word.id}
+            type="button"
+            onClick={() => handleWordClick(word)}
+            className={getWordStyle(word)}
+            style={{ left: `${word.position.x}%`, top: `${word.position.y}%`, transform: 'translate(-50%, -50%)' }}
+            disabled={word.isMatched}
           >
-            🔄 טעינה מחדש
+            {word.word}
           </button>
-          <button
-            onClick={handleNext}
-            disabled={accuracy < 90}
-            className={`px-6 py-3 rounded-xl transition-all ${
-              accuracy >= 90
-                ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 to-purple-700 hover:scale-105 shadow-lg'
-                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-            }`}
-          >
-            {accuracy >= 90 ? '🎯 המשך לשלב הבא!' : 'השיגי 90% דיוק תחילה'}
-          </button>
-        </div>
+        ))}
 
-        {/* Navigation */}
-        <div className="text-center">
+        {targetAreas.map((target) => (
           <button
-            onClick={() => router.push(`/milestone/${language}/${milestoneId}`)}
-            className="px-6 py-3 text-gray-600 hover:text-gray-800 font-medium"
+            key={target.id}
+            type="button"
+            onClick={() => handleTargetClick(target)}
+            className={getTargetStyle(target)}
+            style={{ left: `${target.position.x}%`, top: `${target.position.y}%`, transform: 'translate(-50%, -50%)' }}
+            disabled={target.isMatched}
           >
-            ← חזרה לאבן הדרך
+            {target.meaning}
           </button>
-        </div>
+        ))}
+
+        <p className="absolute bottom-4 left-4 text-xs text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg">
+          Tap a word, then tap its meaning
+        </p>
+      </Card>
+
+      <div className="flex flex-wrap justify-center gap-3">
+        <Button variant="secondary" onClick={handleReset}>
+          <RotateCcw className="w-4 h-4" />
+          Reset
+        </Button>
+        <Button onClick={handleNext} disabled={accuracy < 90}>
+          {accuracy >= 90 ? 'Continue' : 'Need 90% accuracy'}
+        </Button>
       </div>
 
-      {/* Game Over Modal */}
       {showGameOver && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl p-8 max-w-md mx-4 text-center">
-            <div className="text-6xl mb-4">🎉</div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">כל הכבוד!</h2>
-            <p className="text-gray-600 mb-6">
-              השלמת את המשחק עם {accuracy}% דיוק!
+        <div className="fixed inset-0 bg-slate-900/50 flex items-center justify-center z-50 p-4">
+          <Card className="max-w-md w-full text-center">
+            <h2 className="text-xl font-bold text-slate-900 mb-2">Well done!</h2>
+            <p className="text-slate-600 mb-6">
+              You finished with {accuracy}% accuracy.
             </p>
-            <div className="flex space-x-4">
-              <button
-                onClick={handleReset}
-                className="px-6 py-3 bg-gray-500 text-white rounded-xl hover:bg-gray-600 transition-colors"
-              >
-                נסי שוב
-              </button>
-              <button
-                onClick={handleNext}
-                className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-xl hover:from-indigo-600 to-purple-700 transition-colors"
-              >
-                המשך
-              </button>
+            <div className="flex gap-3 justify-center">
+              <Button variant="secondary" onClick={handleReset}>Try again</Button>
+              <Button onClick={handleNext}>Continue</Button>
             </div>
-          </div>
+          </Card>
         </div>
       )}
 
-      {/* Toast Notification */}
       {showToast && (
-        <div className={`fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg ${
-          toastType === 'success' ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
-        }`}>
-          <div className="flex items-center">
-            <span className="mr-2">
-              {toastType === 'success' ? '✓' : '✗'}
-            </span>
-            {toastMessage}
-          </div>
-        </div>
+        <Toast message={toastMessage} variant={toastType === 'success' ? 'success' : 'error'} />
       )}
-    </div>
+    </AppShell>
   );
 }

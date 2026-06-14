@@ -146,6 +146,7 @@ export interface UserRunProgress {
     x: number;
     y: number;
   };
+  wordProgress?: Record<string, { status: string; updatedAt: Date }>;
   updatedAt: Date;
 }
 

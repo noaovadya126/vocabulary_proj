@@ -1,398 +1,608 @@
 'use client';
 
+
+
+import { AppShell } from '@/components/ui/AppShell';
+
+import { Button } from '@/components/ui/Button';
+
+import { Card } from '@/components/ui/Card';
+
+import { ChibiMascot } from '@/components/ui/ChibiMascot';
+
+import { LoadingScreen } from '@/components/ui/LoadingScreen';
+
+import { Toast } from '@/components/ui/Toast';
+
+import { WrongAnswerFeedback } from '@/components/ui/WrongAnswerFeedback';
+
+import { useI18nContext } from '@/contexts/I18nContext';
+
+import { cn } from '@/lib/cn';
+
+import { getLanguageDisplayName } from '@/lib/displayText';
+
+import { getWordNotes, getWordNotesByNative } from '@/lib/notes';
+
+import { getUserItem, setUserItem } from '@/lib/userStorage';
+
+import { playWordAudio } from '@/lib/playWord';
+
+import { getMilestoneWords, getQuizQuestions } from '@/lib/vocabulary-data';
+
+import { Volume2 } from 'lucide-react';
+
 import { useParams, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
 
-interface Question {
-  id: number;
-  word: string;
-  translation: string;
-  options: string[];
-  correctAnswer: string;
-}
+import { useEffect, useMemo, useState } from 'react';
 
-// Language-specific quiz questions
-const quizQuestions = {
-  es: [
-    {
-      id: 1,
-      word: 'Hola',
-      translation: 'Hello',
-      options: ['Thank you', 'Hello', 'Please', 'Sorry'],
-      correctAnswer: 'Hello'
-    },
-    {
-      id: 2,
-      word: 'Gracias',
-      translation: 'Thank you',
-      options: ['Hello', 'Thank you', 'Please', 'Yes'],
-      correctAnswer: 'Thank you'
-    },
-    {
-      id: 3,
-      word: 'Por favor',
-      translation: 'Please',
-      options: ['Sorry', 'Please', 'No', 'What?'],
-      correctAnswer: 'Please'
-    },
-    {
-      id: 4,
-      word: 'Lo siento',
-      translation: 'Sorry',
-      options: ['Yes', 'Sorry', 'Where?', 'How?'],
-      correctAnswer: 'Sorry'
-    },
-    {
-      id: 5,
-      word: 'Sí',
-      translation: 'Yes',
-      options: ['No', 'What?', 'Yes', 'When?'],
-      correctAnswer: 'Yes'
-    }
-  ],
-  ko: [
-    {
-      id: 1,
-      word: '안녕하세요',
-      translation: 'Hello',
-      options: ['Thank you', 'Hello', 'Please', 'Sorry'],
-      correctAnswer: 'Hello'
-    },
-    {
-      id: 2,
-      word: '감사합니다',
-      translation: 'Thank you',
-      options: ['Hello', 'Thank you', 'Please', 'Yes'],
-      correctAnswer: 'Thank you'
-    },
-    {
-      id: 3,
-      word: '부탁합니다',
-      translation: 'Please',
-      options: ['Sorry', 'Please', 'No', 'What?'],
-      correctAnswer: 'Please'
-    },
-    {
-      id: 4,
-      word: '죄송합니다',
-      translation: 'Sorry',
-      options: ['Yes', 'Sorry', 'Where?', 'How?'],
-      correctAnswer: 'Sorry'
-    },
-    {
-      id: 5,
-      word: '네',
-      translation: 'Yes',
-      options: ['No', 'What?', 'Yes', 'When?'],
-      correctAnswer: 'Yes'
-    }
-  ],
-  fr: [
-    {
-      id: 1,
-      word: 'Bonjour',
-      translation: 'Hello',
-      options: ['Thank you', 'Hello', 'Please', 'Sorry'],
-      correctAnswer: 'Hello'
-    },
-    {
-      id: 2,
-      word: 'Merci',
-      translation: 'Thank you',
-      options: ['Hello', 'Thank you', 'Please', 'Yes'],
-      correctAnswer: 'Thank you'
-    },
-    {
-      id: 3,
-      word: 'S\'il vous plaît',
-      translation: 'Please',
-      options: ['Sorry', 'Please', 'No', 'What?'],
-      correctAnswer: 'Please'
-    },
-    {
-      id: 4,
-      word: 'Désolé',
-      translation: 'Sorry',
-      options: ['Yes', 'Sorry', 'Where?', 'How?'],
-      correctAnswer: 'Sorry'
-    },
-    {
-      id: 5,
-      word: 'Oui',
-      translation: 'Yes',
-      options: ['No', 'What?', 'Yes', 'When?'],
-      correctAnswer: 'Yes'
-    }
-  ]
-};
 
-const languageNames = {
-  es: 'Spanish',
-  ko: 'Korean',
-  fr: 'French'
-};
 
 export default function QuizPage() {
+
+  const [showToast, setShowToast] = useState(false);
+
+  const [toastMessage, setToastMessage] = useState('');
+
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
   const [selectedAnswer, setSelectedAnswer] = useState<string>('');
+
   const [score, setScore] = useState(0);
+
   const [showResult, setShowResult] = useState(false);
-  const [quizCompleted, setQuizCompleted] = useState(false);
+
   const [showAnswerFeedback, setShowAnswerFeedback] = useState(false);
+
   const [isCorrect, setIsCorrect] = useState(false);
-  const [feedbackMessage, setFeedbackMessage] = useState('');
-  
+
+  const [awaitingRetry, setAwaitingRetry] = useState(false);
+
+  const [userNotes, setUserNotes] = useState('');
+
+  const [hasSavedNotes, setHasSavedNotes] = useState(false);
+
+
+
   const router = useRouter();
+
   const params = useParams();
+
   const language = params.language as string;
+
   const milestoneId = params.milestoneId as string;
 
-  const questions = quizQuestions[language as keyof typeof quizQuestions] || quizQuestions.es;
+  const { t, displayLanguage } = useI18nContext();
+
+
+
+  const milestoneWords = useMemo(
+
+    () => getMilestoneWords(language, milestoneId),
+
+    [language, milestoneId]
+
+  );
+
+
+
+  const questions = useMemo(
+
+    () => getQuizQuestions(language, milestoneId, displayLanguage),
+
+    [language, milestoneId, displayLanguage]
+
+  );
+
+
+
   const currentQuestion = questions[currentQuestionIndex];
 
+
+
   useEffect(() => {
+
     const userData = localStorage.getItem('userData');
+
     const selectedLanguage = localStorage.getItem('selectedLanguage');
-    
+
+
+
     if (!userData) {
+
       router.push('/auth');
+
       return;
-    }
-    
-    if (!selectedLanguage || selectedLanguage !== language) {
-      router.push('/language-selection');
-      return;
+
     }
 
-    // Check if user has completed enough words to take the quiz
-    const progressKey = `progress_${language}_${milestoneId}`;
-    const userProgress = localStorage.getItem(progressKey);
-    
-    if (userProgress) {
-      const progress = JSON.parse(userProgress);
-      const completedWords = Object.values(progress).filter(status => status === 'completed').length;
-      
-      if (completedWords < 5) { // Require at least 5 words completed
-        alert('You need to complete at least 5 words before taking the quiz!');
-        router.push(`/milestone/${language}/${milestoneId}`);
-        return;
-      }
-    } else {
-      alert('No progress found! Please complete some words first.');
-      router.push(`/milestone/${language}/${milestoneId}`);
+
+
+    if (!selectedLanguage || selectedLanguage !== language) {
+
+      router.push('/language-selection');
+
       return;
+
     }
-  }, [language, milestoneId, router]);
+
+
+
+    const progressKey = `progress_${language}_${milestoneId}`;
+
+    const userProgress = getUserItem(progressKey);
+
+
+
+    if (userProgress) {
+
+      const progress = JSON.parse(userProgress);
+
+      const completedWords = Object.values(progress).filter((s) => s === 'completed').length;
+
+      if (completedWords < milestoneWords.length) {
+
+        setToastMessage(`${t('complete_words_quiz', 'common')} (${milestoneWords.length})`);
+
+        setShowToast(true);
+
+        setTimeout(() => router.push(`/milestone/${language}/${milestoneId}`), 2000);
+
+      }
+
+    } else {
+
+      setToastMessage(t('no_progress', 'common'));
+
+      setShowToast(true);
+
+      setTimeout(() => router.push(`/milestone/${language}/${milestoneId}`), 2000);
+
+    }
+
+  }, [language, milestoneId, milestoneWords.length, router, t]);
+
+
+
+  const advanceQuestion = () => {
+
+    setShowAnswerFeedback(false);
+
+    setSelectedAnswer('');
+
+    setAwaitingRetry(false);
+
+    setUserNotes('');
+
+    setHasSavedNotes(false);
+
+
+
+    if (currentQuestionIndex < questions.length - 1) {
+
+      setCurrentQuestionIndex((prev) => prev + 1);
+
+    } else {
+
+      setShowResult(true);
+
+    }
+
+  };
+
+
 
   const handleAnswerSelect = (answer: string) => {
+
+    if (showAnswerFeedback && !awaitingRetry) return;
+
     setSelectedAnswer(answer);
-    
-    const isCorrect = answer === currentQuestion.correctAnswer;
-    
-    if (isCorrect) {
-      setScore(score + 1);
+
+
+
+    const correct = answer === currentQuestion.correctAnswer;
+
+
+
+    if (correct) {
+
+      setScore((prev) => prev + 1);
+
       setIsCorrect(true);
-      setFeedbackMessage('Correct! 🎉');
+
+      setShowAnswerFeedback(true);
+
+      setAwaitingRetry(false);
+
     } else {
+
       setIsCorrect(false);
-      setFeedbackMessage(`Wrong! The correct answer is: ${currentQuestion.correctAnswer}`);
-      
-      // Save wrong answer for review
+
+      const notes = currentQuestion.wordId
+
+        ? getWordNotes(language, milestoneId, String(currentQuestion.wordId))
+
+        : getWordNotesByNative(language, milestoneId, currentQuestion.word, milestoneWords);
+
+      setUserNotes(notes.trim());
+
+      setHasSavedNotes(!!notes.trim());
+
+      setAwaitingRetry(true);
+
+      setShowAnswerFeedback(true);
+
+
+
       const wrongAnswersKey = `wrong_answers_${language}_${milestoneId}`;
-      const existingWrongAnswers = localStorage.getItem(wrongAnswersKey);
-      const wrongAnswers = existingWrongAnswers ? JSON.parse(existingWrongAnswers) : [];
-      
-      const wrongAnswer = {
+
+      const existing = JSON.parse(getUserItem(wrongAnswersKey) || '[]');
+
+      existing.push({
+
         word: currentQuestion.word,
+
         userAnswer: answer,
+
         correctAnswer: currentQuestion.correctAnswer,
+
+        notes,
+
         questionId: currentQuestion.id,
-        timestamp: new Date().toISOString()
-      };
-      
-      wrongAnswers.push(wrongAnswer);
-      localStorage.setItem(wrongAnswersKey, JSON.stringify(wrongAnswers));
+
+        timestamp: new Date().toISOString(),
+
+      });
+
+      setUserItem(wrongAnswersKey, JSON.stringify(existing));
+
     }
-    
-    setShowAnswerFeedback(true);
-    
-    // Hide feedback after 3 seconds and move to next question
-    setTimeout(() => {
-      setShowAnswerFeedback(false);
-      setSelectedAnswer('');
-      
-      if (currentQuestionIndex < questions.length - 1) {
-        setCurrentQuestionIndex(currentQuestionIndex + 1);
-      } else {
-        setQuizCompleted(true);
-        setShowResult(true);
-      }
-    }, 3000);
+
   };
+
+
+
+  const handleTryAgain = () => {
+
+    setShowAnswerFeedback(false);
+
+    setSelectedAnswer('');
+
+    setAwaitingRetry(false);
+
+    setUserNotes('');
+
+    setHasSavedNotes(false);
+
+  };
+
+
+
+  const handleGiveUp = () => {
+
+    setAwaitingRetry(false);
+
+    setIsCorrect(false);
+
+  };
+
+
 
   const handleFinishQuiz = () => {
-    // Save quiz results
-    const quizResults = {
-      language,
-      milestoneId,
-      score,
-      totalQuestions: questions.length,
-      completedAt: new Date().toISOString()
-    };
-    
-    localStorage.setItem(`quiz_results_${language}_${milestoneId}`, JSON.stringify(quizResults));
-    
-    // Mark milestone as completed
+
+    const percentage = Math.round((score / questions.length) * 100);
+
+    setUserItem(
+
+      `quiz_results_${language}_${milestoneId}`,
+
+      JSON.stringify({ language, milestoneId, score, totalQuestions: questions.length, percentage, completedAt: new Date().toISOString() })
+
+    );
+
+    setUserItem(`score_${language}_${milestoneId}`, String(percentage));
+
+
+
     const milestoneProgressKey = `milestone_progress_${language}_${milestoneId}`;
-    const milestoneProgress = localStorage.getItem(milestoneProgressKey);
-    const milestoneData = milestoneProgress ? JSON.parse(milestoneProgress) : {};
-    
+
+    const milestoneData = JSON.parse(getUserItem(milestoneProgressKey) || '{}');
+
     milestoneData.quizCompleted = true;
-    milestoneData.quizScore = score;
+
+    milestoneData.quizScore = percentage;
+
     milestoneData.quizCompletedAt = new Date().toISOString();
-    localStorage.setItem(milestoneProgressKey, JSON.stringify(milestoneData));
-    
-    // Navigate to winner page
-    router.push(`/winner/${language}/${milestoneId}`);
+
+    setUserItem(milestoneProgressKey, JSON.stringify(milestoneData));
+
+
+
+    router.push(`/winner/${language}/${milestoneId}?score=${percentage}`);
+
   };
 
+
+
   if (!currentQuestion) {
-    return <div>Loading quiz...</div>;
+
+    return <LoadingScreen message={t('loading', 'common')} />;
+
   }
+
+
 
   if (showResult) {
+
     return (
-      <div className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-indigo-50 p-3">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-800 mb-6 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-              Quiz Complete! 🎉
-            </h1>
-            
-            <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 mb-6">
-              <div className="text-6xl mb-4">🎯</div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                Your Score: {score} out of {questions.length}
-              </h2>
-              
-              <div className="text-lg text-gray-600 mb-6">
-                {score === questions.length ? (
-                  <span className="text-green-600 font-bold">Perfect! You're amazing! 🌟</span>
-                ) : score >= questions.length * 0.8 ? (
-                  <span className="text-blue-600 font-bold">Great job! Well done! 👏</span>
-                ) : (
-                  <span className="text-orange-600 font-bold">Good effort! Keep practicing! 💪</span>
-                )}
-              </div>
-              
-              <button
-                onClick={handleFinishQuiz}
-                className="px-8 py-3 bg-gradient-to-r from-pink-300 to-purple-300 text-white font-bold text-lg rounded-xl hover:from-pink-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Continue to Results 🚀
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+
+      <AppShell
+
+        backHref={`/milestone/${language}/${milestoneId}`}
+
+        backLabel={t('milestone', 'common')}
+
+        eyebrow={t('quiz_complete', 'common')}
+
+        title={t('great_work', 'common')}
+
+        subtitle={`You answered ${score} out of ${questions.length} correctly.`}
+
+        maxWidth="lg"
+
+      >
+
+        <Card className="text-center">
+
+          <ChibiMascot mood="cheer" size="lg" className="mx-auto mb-4" />
+
+          <div className="text-3xl sm:text-5xl font-bold text-brand-500 mb-2">{score}/{questions.length}</div>
+
+          <p className="text-brand-600 mb-6 text-sm sm:text-base">
+
+            {score === questions.length
+
+              ? t('perfect_score', 'common')
+
+              : score >= questions.length * 0.8
+
+              ? t('strong_performance', 'common')
+
+              : t('good_effort', 'common')}
+
+          </p>
+
+          <Button onClick={handleFinishQuiz} size="lg">
+
+            {t('view_results', 'common')}
+
+          </Button>
+
+        </Card>
+
+      </AppShell>
+
     );
+
   }
 
+
+
+  const questionLabel = `${t('question_of', 'common')} ${currentQuestionIndex + 1} ${t('of', 'common')} ${questions.length}`;
+
+
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-indigo-50 p-3">
-      <div className="max-w-3xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent break-words">
-            Quiz - {languageNames[language as keyof typeof languageNames]}
-          </h1>
-          <p className="text-lg text-gray-600 break-words">
-            Milestone {milestoneId} - Test your knowledge
-          </p>
+
+    <AppShell
+
+      backHref={`/milestone/${language}/${milestoneId}`}
+
+      backLabel={t('milestone', 'common')}
+
+      eyebrow={`${t('milestone', 'common')} ${milestoneId} · ${t('quiz', 'navigation')}`}
+
+      title={getLanguageDisplayName(language, displayLanguage)}
+
+      subtitle={questionLabel}
+
+      maxWidth="lg"
+
+    >
+
+      <Card className="mb-4 relative overflow-hidden">
+
+        <div className="w-full bg-pastel-lavender/50 rounded-full h-2 mb-4">
+
+          <div
+
+            className="bg-brand-400 h-2 rounded-full transition-all duration-500"
+
+            style={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}
+
+          />
+
         </div>
 
-        {/* Progress */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-4 mb-6">
-          <div className="flex items-center justify-between mb-3">
-            <h3 className="text-lg font-bold text-gray-800 break-words">Quiz Progress</h3>
-            <span className="text-base text-gray-600 break-words">
-              Question {currentQuestionIndex + 1} of {questions.length}
-            </span>
-          </div>
-          <div className="w-full bg-gray-200 rounded-full h-3">
-            <div 
-              className="bg-gradient-to-r from-pink-300 to-purple-300 h-3 rounded-full transition-all duration-500 ease-out"
-              style={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}
-            ></div>
-          </div>
-        </div>
 
-        {/* Answer Feedback */}
+
         {showAnswerFeedback && (
-          <div className={`mb-6 p-4 rounded-xl shadow-lg ${
-            isCorrect ? 'bg-green-100 border-2 border-green-300' : 'bg-red-100 border-2 border-red-300'
-          }`}>
-            <div className="text-center">
-              <p className={`text-lg font-semibold break-words ${
-                isCorrect ? 'text-green-700' : 'text-red-700'
-              }`}>
-                {feedbackMessage}
-              </p>
-            </div>
+
+          <div
+
+            className={cn(
+
+              'mb-4 p-3 sm:p-4 rounded-2xl text-sm',
+
+              isCorrect
+
+                ? 'bg-pastel-mint/60 text-success-600 border border-success-200'
+
+                : 'bg-pastel-peach/50 text-brand-800 border border-pastel-peach'
+
+            )}
+
+          >
+
+            {isCorrect ? (
+
+              <p className="font-semibold text-center">{t('correct', 'common')} 🎉</p>
+
+            ) : awaitingRetry ? (
+
+              <div className="space-y-3">
+
+                <div className="flex items-center gap-3">
+
+                  <ChibiMascot mood="thinking" size="sm" />
+
+                  <p className="font-semibold hebrew-text">{t('wrong_try_again', 'common')}</p>
+
+                </div>
+
+                <WrongAnswerFeedback
+
+                  hasNotes={hasSavedNotes}
+
+                  notes={userNotes}
+
+                  language={language}
+
+                  milestoneId={milestoneId}
+
+                  wordId={currentQuestion.wordId}
+
+                  onRetry={handleTryAgain}
+
+                  onSkip={handleGiveUp}
+
+                />
+
+              </div>
+
+            ) : (
+
+              <div className="space-y-2 hebrew-text">
+
+                <p className="font-semibold">
+
+                  {t('correct_answer_label', 'common')}{' '}
+
+                  <strong>{currentQuestion.correctAnswer}</strong>
+
+                </p>
+
+                <Button onClick={advanceQuestion} size="sm">
+
+                  {currentQuestionIndex < questions.length - 1 ? t('next_question', 'common') : t('see_results', 'common')}
+
+                </Button>
+
+              </div>
+
+            )}
+
           </div>
+
         )}
 
-        {/* Question Card */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 mb-6">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 break-words">
-              What does "{currentQuestion.word}" mean?
-            </h2>
-            <p className="text-sm text-gray-500 mb-4 break-words">Multiple Choice</p>
-          </div>
 
-          {/* Answer Options */}
-          <div className="space-y-3 mb-6">
-            {currentQuestion.options.map((option, index) => (
-              <button
-                key={index}
-                onClick={() => handleAnswerSelect(option)}
-                disabled={showAnswerFeedback}
-                className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-300 break-words ${
-                  selectedAnswer === option
-                    ? 'border-purple-400 bg-purple-50 text-purple-700'
-                    : 'border-gray-200 hover:border-gray-300 bg-white hover:bg-gray-50 text-gray-700'
-                } ${
-                  showAnswerFeedback ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'
-                }`}
-              >
-                <span className="font-medium break-words">{option}</span>
-              </button>
-            ))}
-          </div>
 
-          {/* Progress Info */}
-          <div className="text-center text-sm text-gray-600">
-            {showAnswerFeedback ? (
-              <p className="text-purple-600 font-medium break-words">
-                {currentQuestionIndex < questions.length - 1 ? 'Moving to next question...' : 'Quiz complete!'}
-              </p>
-            ) : (
-              <p className="break-words">Click on an answer to submit</p>
-            )}
-          </div>
-        </div>
+        <div className="flex flex-col items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
 
-        {/* Navigation */}
-        <div className="text-center">
           <button
-            onClick={() => router.push(`/milestone/${language}/${milestoneId}`)}
-            className="px-6 py-2 text-gray-600 hover:text-gray-800 font-medium bg-white/80 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+
+            type="button"
+
+            onClick={() => playWordAudio(language, currentQuestion.word, currentQuestion.audioFile)}
+
+            className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-pastel-sky/60 text-brand-700 text-xs sm:text-sm font-medium hover:bg-pastel-sky"
+
           >
-            ← Back to Milestone
+
+            <Volume2 className="w-4 h-4" />
+
+            {t('hear_word', 'common')}
+
           </button>
+
+          <h2 className="text-base sm:text-xl font-semibold text-brand-800 text-center japanese-text korean-text px-2">
+
+            {t('what_does_mean', 'common')} &ldquo;{currentQuestion.word}&rdquo;?
+
+          </h2>
+
         </div>
-      </div>
-    </div>
+
+
+
+        <div className="space-y-2">
+
+          {currentQuestion.options.map((option, index) => (
+
+            <button
+
+              key={`${index}-${option}`}
+
+              type="button"
+
+              onClick={() => handleAnswerSelect(option)}
+
+              disabled={showAnswerFeedback && !awaitingRetry}
+
+              className={cn(
+
+                'w-full p-3 sm:p-4 text-left rounded-xl border text-sm font-medium transition-colors hebrew-text',
+
+                selectedAnswer === option && !showAnswerFeedback && 'border-brand-400 bg-pastel-lavender/50 text-brand-800',
+
+                showAnswerFeedback && !awaitingRetry && option === currentQuestion.correctAnswer && 'border-success-300 bg-pastel-mint/50 text-success-700',
+
+                showAnswerFeedback && !awaitingRetry && selectedAnswer === option && option !== currentQuestion.correctAnswer && 'border-red-300 bg-pastel-rose/40 text-red-700',
+
+                !showAnswerFeedback && selectedAnswer !== option && 'border-brand-100 bg-white hover:border-brand-200 text-brand-800',
+
+                showAnswerFeedback && awaitingRetry && selectedAnswer === option && 'border-red-300 bg-pastel-rose/40 text-red-700',
+
+                showAnswerFeedback && awaitingRetry && selectedAnswer !== option && 'opacity-70'
+
+              )}
+
+            >
+
+              {option}
+
+            </button>
+
+          ))}
+
+        </div>
+
+
+
+        {showAnswerFeedback && isCorrect && (
+
+          <div className="mt-5 flex justify-center">
+
+            <Button onClick={advanceQuestion}>
+
+              {currentQuestionIndex < questions.length - 1 ? t('next_question', 'common') : t('see_results', 'common')}
+
+            </Button>
+
+          </div>
+
+        )}
+
+      </Card>
+
+
+
+      {showToast && <Toast message={toastMessage} />}
+
+    </AppShell>
+
   );
+
 }
+

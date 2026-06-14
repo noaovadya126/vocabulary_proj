@@ -640,7 +640,7 @@
 
       getLanguageInfo(language) {
         const languages = {
-          'es': { flag: '🇪🇸', name: 'ספרד' },
+          'ja': { flag: '🇯🇵', name: 'יפן' },
           'ko': { flag: '🇰🇷', name: 'קוריאה' },
           'fr': { flag: '🇫🇷', name: 'צרפת' }
         };
@@ -741,9 +741,9 @@
       getCurrentLanguage() {
         try {
           const urlParams = new URLSearchParams(window.location.search);
-          return urlParams.get('language') || 'es';
+          return urlParams.get('language') || 'ja';
         } catch (error) {
-          return 'es';
+          return 'ja';
         }
       }
 

@@ -879,7 +879,7 @@
 
       getMilestoneInfo(language, milestone) {
         const milestones = {
-          'es': {
+          'ja': {
             1: { title: 'ברכות בסיסיות' },
             2: { title: 'מספרים וצבעים' },
             3: { title: 'משפחה וחברים' },
@@ -1009,9 +1009,9 @@
       getCurrentLanguage() {
         try {
           const urlParams = new URLSearchParams(window.location.search);
-          return urlParams.get('language') || 'es';
+          return urlParams.get('language') || 'ja';
         } catch (error) {
-          return 'es';
+          return 'ja';
         }
       }
 
