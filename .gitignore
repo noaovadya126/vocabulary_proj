@@ -93,6 +93,7 @@ jspm_packages/
 *.sqlite3
 
 # Capacitor / Android local build
+.tools/
 android/.gradle/
 android/build/
 android/app/build/

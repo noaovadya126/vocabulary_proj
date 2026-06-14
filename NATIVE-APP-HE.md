@@ -17,13 +17,19 @@
 
 ---
 
-## שלב 1: APK מוכן (GitHub Actions)
+## שלב 1: APK מוכן (הכי מהיר — 5 דקות)
 
-**הדרך הכי קלה** — בלי Android Studio:
+### אפשרות א — PWABuilder (בלי Android Studio)
+1. פתחי https://www.pwabuilder.com/
+2. הזיני: `https://vocabulary-proj.vercel.app`
+3. **Package for stores** → **Android** → **Generate**
+4. הורידי **APK** — קובץ התקנה אמיתי לטלפון
 
-1. GitHub → **Actions** → **Build Android APK** → **Run workflow**
-2. אחרי ~5 דקות: לחצי על הריצה → **Artifacts** → **VocabQuest-debug-apk**
-3. הורידי `app-debug.apk` ושלחי לטלפון
+### אפשרות ב — GitHub Actions (אוטומטי מהקוד)
+1. פתחי: https://github.com/noaovadya126/vocabulary_proj/actions/workflows/android-apk.yml
+2. **Run workflow** → **Run workflow**
+3. אחרי בנייה מוצלחת (✓ ירוק): לחצי על הריצה → **Artifacts** → **VocabQuest-debug-apk**
+4. הורידי `app-debug.apk`
 
 ---
 
