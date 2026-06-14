@@ -1,19 +1,14 @@
 # VocabQuest — הגדרת שרת, Google Login, שמירה בענן ו-Google Play
 
-## איפה מורידים את האפליקציה? (חינם, עכשיו)
+## איפה מורידים את האפליקציה?
 
+### אפליקציה אמיתית (Android — Google Play / APK)
+ראי **`NATIVE-APP-HE.md`** — בניית APK/AAB עם Android Studio ופרסום ב-Google Play ($25).
+
+זו **אפליקציה רגילה** — לא "הוסף למסך הבית" בדפדפן.
+
+### אתר (דפדפן)
 **כתובת:** https://vocabulary-proj.vercel.app
-
-### Android
-1. פתחי ב-**Chrome**
-2. תפריט (⋮) → **Install app** / **הוסף למסך הבית**
-3. או: במסך המפה → **Install app**
-
-### iPhone
-1. פתחי ב-**Safari** (לא Chrome)
-2. Share (□↑) → **Add to Home Screen**
-
-זו **אפליקציה (PWA)** — אייקון על המסך, בלי חנות. מתאימה לשיתוף עם חברים מיד.
 
 ---
 
@@ -104,7 +99,7 @@ npx prisma db push
 
 | רוצה | מה לעשות |
 |------|-----------|
-| אפליקציה על הטלפון **עכשיו** | Chrome → Install app |
+| **אפליקציה אמיתית (Android)** | `NATIVE-APP-HE.md` → Android Studio → APK / Google Play |
 | Google Login | 4 משתנים ב-Vercel + Redeploy |
 | התקדמות שלא נמחקת | `DATABASE_URL` (Neon) + Google Login |
-| ב-Google Play | $25 + PWABuilder → AAB |
+| אתר בדפדפן | https://vocabulary-proj.vercel.app |

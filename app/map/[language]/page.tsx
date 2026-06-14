@@ -11,7 +11,7 @@ import { Card } from '@/components/ui/Card';
 import { CharacterIllustration, SpeechBubble } from '@/components/ui/CharacterIllustration';
 
 import { HubTabBar } from '@/components/ui/HubTabBar';
-import { InstallAppBanner } from '@/components/ui/InstallAppBanner';
+import { GetTheAppBanner } from '@/components/ui/GetTheAppBanner';
 
 import { Toast } from '@/components/ui/Toast';
 
@@ -328,7 +328,7 @@ export default function CountryMapPage() {
 
 
 
-      <InstallAppBanner className="mb-6" />
+      <GetTheAppBanner className="mb-6" />
 
 
 

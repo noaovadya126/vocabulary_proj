@@ -92,6 +92,16 @@ jspm_packages/
 *.sqlite
 *.sqlite3
 
+# Capacitor / Android local build
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+android/captures/
+*.iml
+android/.cxx/
+
 # Docker
 .dockerignore
 
