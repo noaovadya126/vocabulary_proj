@@ -2,25 +2,119 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>VocabQuest</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
       body {
         margin: 0;
-        font-family: system-ui, sans-serif;
-        background: #fff8fb;
+        font-family: system-ui, -apple-system, sans-serif;
+        background: linear-gradient(160deg, #fff8fb 0%, #f0fdf4 100%);
         color: #5c4a6e;
-        display: flex;
         min-height: 100vh;
+        display: flex;
         align-items: center;
         justify-content: center;
+        padding: 24px;
+      }
+      .box {
+        max-width: 320px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 1.5rem;
+        margin: 0 0 8px;
+        color: #e8759a;
+      }
+      p {
+        margin: 0 0 16px;
+        line-height: 1.5;
+        font-size: 0.95rem;
+      }
+      button {
+        border: none;
+        border-radius: 16px;
+        padding: 12px 20px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        background: linear-gradient(135deg, #e8759a, #7bc89c);
+        cursor: pointer;
+      }
+      button:active {
+        transform: scale(0.98);
+      }
+      .hint {
+        margin-top: 16px;
+        font-size: 0.8rem;
+        color: #8b7a9e;
       }
     </style>
   </head>
   <body>
-    <p>Loading VocabQuest…</p>
+    <div class="box">
+      <h1>VocabQuest</h1>
+      <p id="status">Connecting…</p>
+      <button id="retry" type="button" hidden>Try again</button>
+      <p class="hint" id="hint"></p>
+    </div>
     <script>
-      window.location.replace('https://vocabulary-proj.vercel.app');
+      (function () {
+        var APP_URL = 'https://vocabulary-proj.vercel.app';
+        var statusEl = document.getElementById('status');
+        var retryEl = document.getElementById('retry');
+        var hintEl = document.getElementById('hint');
+        var attempt = 0;
+        var maxAttempts = 4;
+
+        function openApp() {
+          attempt += 1;
+          retryEl.hidden = true;
+          statusEl.textContent = attempt > 1 ? 'Retrying… (' + attempt + ')' : 'Opening VocabQuest…';
+          hintEl.textContent = '';
+
+          var timer = setTimeout(function () {
+            onFail(new Error('timeout'));
+          }, 20000);
+
+          try {
+            window.location.replace(APP_URL);
+          } catch (e) {
+            clearTimeout(timer);
+            onFail(e);
+            return;
+          }
+
+          setTimeout(function () {
+            clearTimeout(timer);
+            if (document.visibilityState !== 'hidden') {
+              onFail(new Error('still here'));
+            }
+          }, 8000);
+        }
+
+        function onFail() {
+          if (attempt < maxAttempts) {
+            statusEl.textContent = 'Connection failed. Retrying…';
+            setTimeout(openApp, 1500 * attempt);
+            return;
+          }
+          statusEl.textContent =
+            'Could not connect. Check mobile data or Wi‑Fi, then tap Try again.';
+          hintEl.textContent =
+            'You can also open vocabulary-proj.vercel.app in Chrome.';
+          retryEl.hidden = false;
+        }
+
+        retryEl.addEventListener('click', function () {
+          attempt = 0;
+          openApp();
+        });
+
+        openApp();
+      })();
     </script>
   </body>
 </html>

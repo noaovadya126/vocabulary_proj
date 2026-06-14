@@ -3,8 +3,19 @@
   "appName": "VocabQuest",
   "webDir": "www",
   "server": {
-    "url": "https://vocabulary-proj.vercel.app",
-    "cleartext": false
+    "androidScheme": "https",
+    "allowNavigation": [
+      "vocabulary-proj.vercel.app",
+      "*.vercel.app",
+      "accounts.google.com",
+      "*.google.com",
+      "*.googleusercontent.com",
+      "*.youtube.com",
+      "*.youtube-nocookie.com",
+      "*.ytimg.com",
+      "*.googleapis.com",
+      "*.gstatic.com"
+    ]
   },
   "android": {
     "allowMixedContent": false,
