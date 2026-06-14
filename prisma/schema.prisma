@@ -241,6 +241,19 @@ model UserRunProgress {
   @@map("user_run_progress")
 }
 
+// Cloud-synced app state per account (progress, settings).
+model UserCloudState {
+  id               String   @id @default(cuid())
+  email            String   @unique
+  name             String?
+  selectedLanguage String?
+  progress         Json     @default("{}")
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("user_cloud_state")
+}
+
 // Enums
 enum AgeGroup {
   CHILD

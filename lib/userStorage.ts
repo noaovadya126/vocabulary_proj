@@ -1,4 +1,5 @@
 import { getUserData } from './auth';
+import { scheduleCloudSave } from './cloudSync';
 
 export function getUserStorageKey(key: string): string {
   const user = getUserData();
@@ -14,9 +15,11 @@ export function getUserItem(key: string): string | null {
 export function setUserItem(key: string, value: string): void {
   if (typeof window === 'undefined') return;
   localStorage.setItem(getUserStorageKey(key), value);
+  scheduleCloudSave();
 }
 
 export function removeUserItem(key: string): void {
   if (typeof window === 'undefined') return;
   localStorage.removeItem(getUserStorageKey(key));
+  scheduleCloudSave();
 }

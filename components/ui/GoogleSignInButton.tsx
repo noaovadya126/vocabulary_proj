@@ -2,12 +2,26 @@
 
 import { cn } from '@/lib/cn';
 import { signIn } from 'next-auth/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+interface AuthStatus {
+  googleEnabled: boolean;
+  databaseEnabled: boolean;
+}
 
 export function GoogleSignInButton({ className }: { className?: string }) {
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<AuthStatus | null>(null);
+
+  useEffect(() => {
+    fetch('/api/auth/status')
+      .then((r) => r.json())
+      .then((data: AuthStatus) => setStatus(data))
+      .catch(() => setStatus({ googleEnabled: false, databaseEnabled: false }));
+  }, []);
 
   const handleClick = async () => {
+    if (!status?.googleEnabled) return;
     setLoading(true);
     try {
       await signIn('google', { callbackUrl: '/auth' });
@@ -15,6 +29,27 @@ export function GoogleSignInButton({ className }: { className?: string }) {
       setLoading(false);
     }
   };
+
+  if (!status) {
+    return (
+      <div className={cn('h-12 w-full animate-pulse rounded-2xl bg-pastel-pink/40', className)} />
+    );
+  }
+
+  if (!status.googleEnabled) {
+    return (
+      <div
+        className={cn(
+          'rounded-2xl border border-amber-200 bg-amber-50/90 px-4 py-3 text-xs text-amber-900',
+          className
+        )}
+      >
+        Google sign-in is not configured on the server yet. Ask the admin to add{' '}
+        <strong>GOOGLE_CLIENT_ID</strong>, <strong>GOOGLE_CLIENT_SECRET</strong>, and{' '}
+        <strong>NEXTAUTH_SECRET</strong> in Vercel → Settings → Environment Variables.
+      </div>
+    );
+  }
 
   return (
     <button
@@ -35,6 +70,9 @@ export function GoogleSignInButton({ className }: { className?: string }) {
         <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.05 12.05 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" />
       </svg>
       {loading ? 'Connecting...' : 'Continue with Google'}
+      {!status.databaseEnabled && (
+        <span className="sr-only">Cloud save unavailable until database is configured.</span>
+      )}
     </button>
   );
 }

@@ -1,14 +1,21 @@
 import type { NextAuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 
+const googleId = process.env.GOOGLE_CLIENT_ID;
+const googleSecret = process.env.GOOGLE_CLIENT_SECRET;
+const authSecret = process.env.NEXTAUTH_SECRET;
+
 export const authOptions: NextAuthOptions = {
-  providers: [
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID ?? '',
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? '',
-    }),
-  ],
-  secret: process.env.NEXTAUTH_SECRET,
+  providers:
+    googleId && googleSecret
+      ? [
+          GoogleProvider({
+            clientId: googleId,
+            clientSecret: googleSecret,
+          }),
+        ]
+      : [],
+  secret: authSecret,
   pages: {
     signIn: '/auth',
   },
@@ -23,5 +30,5 @@ export const authOptions: NextAuthOptions = {
 };
 
 export function isGoogleAuthConfigured(): boolean {
-  return !!(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET);
+  return !!(googleId && googleSecret && authSecret);
 }
