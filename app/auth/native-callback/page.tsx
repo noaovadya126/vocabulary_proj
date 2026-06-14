@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from 'react';
 
-/** Runs inside Chrome Custom Tab after Google OAuth — sends session back to the native app. */
+/** Runs in Chrome after Google OAuth — sends session back to the native app. */
 export default function NativeAuthCallbackPage() {
   const [message, setMessage] = useState('Finishing sign-in…');
+  const [returnUrl, setReturnUrl] = useState<string | null>(null);
 
   useEffect(() => {
     void (async () => {
@@ -21,8 +22,10 @@ export default function NativeAuthCallbackPage() {
           return;
         }
 
+        const deepLink = `com.vocabquest.app://oauth?token=${encodeURIComponent(data.token)}`;
+        setReturnUrl(deepLink);
         setMessage('Returning to VocabQuest…');
-        window.location.href = `com.vocabquest.app://oauth?token=${encodeURIComponent(data.token)}`;
+        window.location.href = deepLink;
       } catch {
         setMessage('Connection error. Close this tab and try again in the app.');
       }
@@ -31,9 +34,19 @@ export default function NativeAuthCallbackPage() {
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#fff8fb] px-6 text-center">
-      <div>
+      <div className="space-y-4">
         <p className="text-lg font-semibold text-[#5c4a6e]">{message}</p>
-        <p className="mt-2 text-sm text-[#8b7a9e]">You can close this browser tab if nothing happens.</p>
+        {returnUrl && (
+          <a
+            href={returnUrl}
+            className="inline-block rounded-2xl bg-gradient-to-r from-[#e8759a] to-[#7bc89c] px-5 py-3 text-sm font-semibold text-white"
+          >
+            Open VocabQuest
+          </a>
+        )}
+        <p className="text-sm text-[#8b7a9e]">
+          If nothing happens, tap Open VocabQuest above or switch back to the app.
+        </p>
       </div>
     </main>
   );
