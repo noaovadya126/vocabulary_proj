@@ -17,7 +17,17 @@
 
 ---
 
-## שלב 1: פתיחת הפרויקט
+## שלב 1: APK מוכן (GitHub Actions)
+
+**הדרך הכי קלה** — בלי Android Studio:
+
+1. GitHub → **Actions** → **Build Android APK** → **Run workflow**
+2. אחרי ~5 דקות: לחצי על הריצה → **Artifacts** → **VocabQuest-debug-apk**
+3. הורידי `app-debug.apk` ושלחי לטלפון
+
+---
+
+## שלב 1 (חלופי): פתיחה ב-Android Studio
 
 ```powershell
 cd "C:\Users\...\vocabulary_proj"
