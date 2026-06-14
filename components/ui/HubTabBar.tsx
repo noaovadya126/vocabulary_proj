@@ -16,7 +16,7 @@ export function HubTabBar({ tabs, className }: { tabs: HubTabItem[]; className?:
   return (
     <div
       className={cn(
-        'inline-flex w-full max-w-sm rounded-xl border border-brand-200/60 bg-pastel-pink-light/40 p-0.5 shadow-soft',
+        'inline-flex w-full max-w-md rounded-xl border border-brand-200/60 bg-pastel-pink-light/40 p-0.5 shadow-soft',
         className
       )}
       role="tablist"

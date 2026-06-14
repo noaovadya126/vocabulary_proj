@@ -27,7 +27,7 @@ import { getUserItem } from '@/lib/userStorage';
 
 import { getMilestoneCount, VOCABULARY_BY_LANGUAGE } from '@/lib/vocabulary-data';
 
-import { CheckCircle2, ChevronRight, Lock, MapPin, Play, Sparkles } from 'lucide-react';
+import { CheckCircle2, ChevronRight, Lock, MapPin, MessageCircle, Play, Sparkles } from 'lucide-react';
 
 import { useParams, useRouter } from 'next/navigation';
 
@@ -330,6 +330,30 @@ export default function CountryMapPage() {
 
       <GetTheAppBanner className="mb-6" />
 
+      <Card
+        className="mb-6 cursor-pointer border-brand-200/60 bg-gradient-to-r from-white via-pastel-green-light/40 to-pastel-pink-light/50 transition-all hover:shadow-medium active:scale-[0.99]"
+        onClick={() => router.push(`/chat/${language}`)}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            router.push(`/chat/${language}`);
+          }
+        }}
+      >
+        <div className="flex items-center gap-4">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-100 text-brand-600">
+            <MessageCircle className="h-6 w-6" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="font-bold text-brand-800">{t('ai_chat_title', 'common')}</p>
+            <p className="text-sm text-brand-600">{t('ai_chat_blurb', 'common')}</p>
+          </div>
+          <ChevronRight className="h-5 w-5 shrink-0 text-brand-400" />
+        </div>
+      </Card>
+
 
 
       <div className="mb-6 flex justify-center">
@@ -349,6 +373,12 @@ export default function CountryMapPage() {
               badge: language === 'ko' ? String(grammarCount) : undefined,
               disabled: language !== 'ko',
               onClick: () => language === 'ko' && router.push(`/grammar/${language}`),
+            },
+            {
+              id: 'chat',
+              emoji: '💬',
+              label: t('ai_chat', 'common'),
+              onClick: () => router.push(`/chat/${language}`),
             },
           ]}
         />
