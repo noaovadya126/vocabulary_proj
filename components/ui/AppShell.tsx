@@ -3,6 +3,7 @@
 
 
 import { AudioMuteButton } from '@/components/ui/AudioMuteButton';
+import { DownloadAppButton } from '@/components/ui/GetTheAppBanner';
 
 import { Button } from '@/components/ui/Button';
 
@@ -161,6 +162,8 @@ export function AppShell({
           <div className="flex shrink-0 items-center gap-2">
 
             {headerActions}
+
+            <DownloadAppButton />
 
             <AudioMuteButton />
 
