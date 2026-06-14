@@ -29,6 +29,7 @@ export function LanguageChatPanel({ language, className }: LanguageChatPanelProp
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [aiEnabled, setAiEnabled] = useState<boolean | null>(null);
+  const [aiStatusMessage, setAiStatusMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [playingIdx, setPlayingIdx] = useState<number | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -59,8 +60,14 @@ export function LanguageChatPanel({ language, className }: LanguageChatPanelProp
   useEffect(() => {
     fetch('/api/language-chat/status')
       .then((r) => r.json())
-      .then((d: { enabled?: boolean }) => setAiEnabled(!!d.enabled))
-      .catch(() => setAiEnabled(false));
+      .then((d: { enabled?: boolean; message?: string }) => {
+        setAiEnabled(!!d.enabled);
+        setAiStatusMessage(d.message ?? null);
+      })
+      .catch(() => {
+        setAiEnabled(false);
+        setAiStatusMessage('Could not check AI chat status.');
+      });
   }, []);
 
   useEffect(() => {
@@ -78,7 +85,7 @@ export function LanguageChatPanel({ language, className }: LanguageChatPanelProp
       }
 
       if (!aiEnabled) {
-        setError('AI chat is not available yet. The server needs an OpenAI API key.');
+        setError(aiStatusMessage ?? 'AI chat is not available yet. The server needs an OpenAI API key.');
         return;
       }
 
@@ -109,7 +116,7 @@ export function LanguageChatPanel({ language, className }: LanguageChatPanelProp
         inputRef.current?.focus();
       }
     },
-    [aiEnabled, chatLang, loading, messages]
+    [aiEnabled, aiStatusMessage, chatLang, loading, messages]
   );
 
   const handlePlay = async (content: string, idx: number) => {
@@ -156,10 +163,9 @@ export function LanguageChatPanel({ language, className }: LanguageChatPanelProp
         </div>
       </Card>
 
-      {aiEnabled === false && (
+      {aiEnabled === false && aiStatusMessage && (
         <Card className="border-amber-200 bg-amber-50/80 p-3 text-sm text-amber-900">
-          AI chat will work once <code className="text-xs">OPENAI_API_KEY</code> is set on the server
-          (Vercel → Environment Variables).
+          {aiStatusMessage}
         </Card>
       )}
 

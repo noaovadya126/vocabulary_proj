@@ -4,6 +4,11 @@ import {
   getLanguageChatConfig,
   isChatLanguage,
 } from '@/lib/language-chat';
+import {
+  getOpenAIApiKey,
+  getOpenAIChatModel,
+  requestOpenAIChat,
+} from '@/lib/openai-chat';
 import { NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'nodejs';
@@ -13,10 +18,10 @@ const MAX_USER_LEN = 500;
 const MAX_HISTORY = 16;
 
 export async function POST(request: NextRequest) {
-  const apiKey = process.env.OPENAI_API_KEY?.trim();
+  const apiKey = getOpenAIApiKey();
   if (!apiKey) {
     return NextResponse.json(
-      { error: 'AI chat is not configured. Add OPENAI_API_KEY on the server.' },
+      { error: 'AI chat is not configured. Add OPENAI_API_KEY on the server.', code: 'missing_key' },
       { status: 503 }
     );
   }
@@ -52,48 +57,22 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Last message must be from the user' }, { status: 400 });
   }
 
-  const model = process.env.OPENAI_CHAT_MODEL?.trim() || 'gpt-4o-mini';
+  const model = getOpenAIChatModel();
   const cfg = getLanguageChatConfig(language)!;
 
-  try {
-    const res = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model,
-        temperature: 0.7,
-        max_tokens: 450,
-        messages: [
-          { role: 'system', content: buildChatSystemPrompt(language) },
-          ...history,
-        ],
-      }),
-    });
+  const result = await requestOpenAIChat({
+    apiKey,
+    model,
+    messages: [{ role: 'system', content: buildChatSystemPrompt(language) }, ...history],
+  });
 
-    if (!res.ok) {
-      const errText = await res.text().catch(() => '');
-      console.error('OpenAI chat error:', res.status, errText);
-      return NextResponse.json({ error: 'AI provider error' }, { status: 502 });
-    }
-
-    const data = (await res.json()) as {
-      choices?: Array<{ message?: { content?: string } }>;
-    };
-    const reply = data.choices?.[0]?.message?.content?.trim();
-    if (!reply) {
-      return NextResponse.json({ error: 'Empty AI response' }, { status: 502 });
-    }
-
-    return NextResponse.json({
-      reply,
-      language: cfg.code,
-      languageName: cfg.name,
-    });
-  } catch (err) {
-    console.error('language-chat failed:', err);
-    return NextResponse.json({ error: 'Chat request failed' }, { status: 500 });
+  if (!result.ok) {
+    return NextResponse.json({ error: result.message, code: result.code }, { status: 502 });
   }
+
+  return NextResponse.json({
+    reply: result.reply,
+    language: cfg.code,
+    languageName: cfg.name,
+  });
 }
