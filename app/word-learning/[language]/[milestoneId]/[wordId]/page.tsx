@@ -12,7 +12,7 @@ import { WordImage } from '@/components/ui/WordImage';
 import { getMilestoneWord, getMilestoneWords } from '@/lib/vocabulary-data';
 import { getUserItem, setUserItem } from '@/lib/userStorage';
 import { setWordNotes } from '@/lib/notes';
-import { CheckCircle2, Volume2 } from 'lucide-react';
+import { CheckCircle2, Info, Volume2 } from 'lucide-react';
 import { useParams, useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
@@ -188,6 +188,30 @@ export default function WordLearningPage() {
             <Volume2 className="h-4 w-4" />
             {isPlayingSentence ? 'Playing...' : 'Sentence audio'}
           </Button>
+        </div>
+      </Card>
+
+      <Card className="mb-4 border-pastel-pink/50 bg-pastel-cream/40">
+        <div className="flex gap-3">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-600">
+            <Info className="h-4 w-4" aria-hidden />
+          </div>
+          <div className="min-w-0 space-y-2 text-sm text-brand-700">
+            <p className="font-semibold text-brand-800">Why is there a video?</p>
+            <p>
+              <strong>What it is:</strong> A short song or clip from YouTube that uses this word — often a
+              kids&apos; song ({language === 'ko' ? '동요' : language === 'ja' ? '童謡' : 'song'}) matched to
+              what you are learning.
+            </p>
+            <p>
+              <strong>Why it helps:</strong> Music and repetition make words stick. You hear the word in a
+              real sentence, see it in context, and connect sound with meaning — the same way children learn
+              vocabulary. Use <strong>Another video</strong> if you want a different song.
+            </p>
+            <p className="text-xs text-brand-500">
+              Tip: Watch once, then say the example sentence out loud and add your own note below.
+            </p>
+          </div>
         </div>
       </Card>
 
