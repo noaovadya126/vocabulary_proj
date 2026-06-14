@@ -6,8 +6,6 @@ import { AudioMuteButton } from '@/components/ui/AudioMuteButton';
 
 import { Button } from '@/components/ui/Button';
 
-import { CharacterIllustration } from '@/components/ui/CharacterIllustration';
-
 import { PastelBackground } from '@/components/ui/PastelBackground';
 
 import { useI18nContext } from '@/contexts/I18nContext';
@@ -17,6 +15,8 @@ import { cn } from '@/lib/cn';
 import { clearUserData } from '@/lib/auth';
 
 import { ArrowLeft, LogOut } from 'lucide-react';
+
+import Image from 'next/image';
 
 import { useRouter } from 'next/navigation';
 
@@ -114,7 +114,7 @@ export function AppShell({
 
     <PastelBackground variant={backgroundVariant}>
 
-      <header className="sticky top-0 z-40 border-b border-pastel-pink/40 bg-white/85 backdrop-blur-md shadow-soft">
+      <header className="sticky top-0 z-40 border-b border-white/60 bg-white/75 backdrop-blur-xl shadow-[0_4px_24px_-8px_rgba(232,117,154,0.15)]">
 
         <div
 
@@ -143,9 +143,7 @@ export function AppShell({
             ) : (
 
               <div className="flex shrink-0 items-center gap-2">
-
-                <CharacterIllustration variant="hearts" size="sm" />
-
+                <Image src="/icons/icon-192.png" alt="" width={36} height={36} className="rounded-xl shadow-soft" />
                 <span className="hidden bg-gradient-to-r from-brand-500 to-success-500 bg-clip-text font-bold text-transparent sm:inline">
 
                   VocabQuest

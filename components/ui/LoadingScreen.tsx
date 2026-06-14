@@ -2,7 +2,7 @@
 
 
 
-import { startBackgroundMusic, stopBackgroundMusic } from '@/lib/backgroundMusic';
+import { startBackgroundMusic } from '@/lib/backgroundMusic';
 
 import { isMusicMuted } from '@/lib/audioSettings';
 
@@ -19,15 +19,9 @@ import { useEffect } from 'react';
 export function LoadingScreen({ message = 'Loading...' }: { message?: string }) {
 
   useEffect(() => {
-
     if (!isMusicMuted()) {
-
       startBackgroundMusic();
-
     }
-
-    return () => stopBackgroundMusic();
-
   }, []);
 
 

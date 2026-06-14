@@ -291,10 +291,7 @@ export default function CountryMapPage() {
 
       {/* Hero welcome */}
 
-      <Card padding="none" className="relative mb-6 overflow-hidden border-pastel-pink/60 bg-hub-hero">
-
-        <div className="cute-stripes-pink absolute inset-0 opacity-40" aria-hidden="true" />
-
+      <Card padding="none" className="relative mb-6 overflow-hidden border-white/70 bg-hub-hero shadow-medium">
         <div className="relative flex flex-col items-center gap-4 p-5 sm:flex-row sm:items-end sm:justify-between sm:p-6">
 
           <div className="flex flex-1 flex-col items-center gap-3 sm:items-start">
@@ -481,17 +478,17 @@ export default function CountryMapPage() {
 
               className={cn(
 
-                'flex w-full items-center gap-4 rounded-3xl border-2 p-4 text-left transition-all',
+                'flex w-full items-center gap-4 rounded-3xl border p-4 text-left transition-all duration-200',
 
                 milestone.status === 'completed' &&
 
-                  'border-success-200 bg-pastel-green-light/80 cute-stripes-green',
+                  'border-success-200/80 bg-white/80 shadow-soft',
 
                 milestone.status === 'current' &&
 
-                  'border-brand-300 bg-pastel-pink-light/90 shadow-cute ring-2 ring-pastel-pink/40',
+                  'border-brand-200 bg-white/90 shadow-medium ring-2 ring-brand-100/60',
 
-                milestone.status === 'locked' && 'cursor-not-allowed border-pastel-pink/30 bg-white/50 opacity-55',
+                milestone.status === 'locked' && 'cursor-not-allowed border-pastel-pink/25 bg-white/40 opacity-50',
 
                 !locked && 'cursor-pointer hover:scale-[1.01] hover:shadow-soft'
 

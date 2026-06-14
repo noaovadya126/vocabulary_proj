@@ -80,8 +80,8 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr" className={`${notoSansKR.variable} ${heebo.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/icons/app-icon.svg" />
+        <link rel="icon" href="/icons/icon-192.png" sizes="192x192" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

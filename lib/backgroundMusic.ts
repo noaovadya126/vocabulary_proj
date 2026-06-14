@@ -1,20 +1,28 @@
 import { isMusicMuted, subscribeAudioSettings } from './audioSettings';
 import { startAmbientMusic, stopAmbientMusic } from './ambientMusic';
 
-/** Mixkit "Piano Reflections" — full calm romantic piano (~3 min), royalty-free */
 const CALM_TRACKS = [
   '/audio/calm-piano-full.mp3',
   '/audio/spring-piano.mp3',
-  'https://assets.mixkit.co/music/22/22.mp3',
-  'https://cdn.pixabay.com/audio/2022/05/27/audio_1808fbf07a.mp3',
 ];
 
-const MUSIC_VOLUME = 0.06;
+const MUSIC_VOLUME = 0.14;
 
 let audioEl: HTMLAudioElement | null = null;
 let trackIndex = 0;
 let unlocked = false;
 let playing = false;
+let autoplayBlocked = false;
+
+function getAudio(): HTMLAudioElement {
+  if (!audioEl) {
+    audioEl = new Audio();
+    audioEl.loop = true;
+    audioEl.volume = MUSIC_VOLUME;
+    audioEl.preload = 'auto';
+  }
+  return audioEl;
+}
 
 function tryPlayTrack(idx: number): void {
   if (typeof window === 'undefined' || isMusicMuted()) return;
@@ -22,33 +30,53 @@ function tryPlayTrack(idx: number): void {
   if (idx >= CALM_TRACKS.length) {
     startAmbientMusic();
     playing = true;
+    autoplayBlocked = false;
     return;
   }
 
-  try {
-    if (!audioEl) {
-      audioEl = new Audio();
-      audioEl.loop = true;
-      audioEl.volume = MUSIC_VOLUME;
-    }
-    audioEl.volume = MUSIC_VOLUME;
-    audioEl.src = CALM_TRACKS[idx];
-    void audioEl.play().then(() => {
-      playing = true;
-    }).catch(() => tryPlayTrack(idx + 1));
-  } catch {
-    tryPlayTrack(idx + 1);
-  }
+  const el = getAudio();
+  el.volume = MUSIC_VOLUME;
+  el.src = CALM_TRACKS[idx];
+
+  const finishPlay = () => {
+    playing = true;
+    autoplayBlocked = false;
+  };
+
+  const tryMutedAutoplay = () => {
+    el.muted = true;
+    return el
+      .play()
+      .then(() => {
+        el.muted = false;
+        finishPlay();
+      })
+      .catch(() => {
+        el.muted = false;
+        throw new Error('autoplay blocked');
+      });
+  };
+
+  void tryMutedAutoplay().catch(() => {
+    void el
+      .play()
+      .then(finishPlay)
+      .catch(() => {
+        autoplayBlocked = true;
+        tryPlayTrack(idx + 1);
+      });
+  });
 }
 
 export function startBackgroundMusic(): void {
-  if (typeof window === 'undefined' || isMusicMuted() || playing) return;
+  if (typeof window === 'undefined' || isMusicMuted()) return;
   unlocked = true;
-  tryPlayTrack(trackIndex);
+  if (!playing) tryPlayTrack(trackIndex);
 }
 
 export function stopBackgroundMusic(): void {
   playing = false;
+  autoplayBlocked = false;
   if (audioEl) {
     audioEl.pause();
     audioEl.currentTime = 0;
@@ -57,13 +85,19 @@ export function stopBackgroundMusic(): void {
 }
 
 export function unlockBackgroundMusic(): void {
-  if (unlocked || isMusicMuted()) return;
+  if (isMusicMuted()) return;
   unlocked = true;
+  playing = false;
+  autoplayBlocked = false;
   startBackgroundMusic();
 }
 
 export function isBackgroundMusicPlaying(): boolean {
   return playing;
+}
+
+export function isBackgroundMusicBlocked(): boolean {
+  return autoplayBlocked && !playing;
 }
 
 if (typeof window !== 'undefined') {

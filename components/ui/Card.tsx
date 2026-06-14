@@ -34,7 +34,7 @@ export function Card({ className, padding = 'md', children, ...props }: CardProp
 
       className={cn(
 
-        'cute-card-texture rounded-3xl border-2 border-pastel-pink/50 shadow-soft',
+        'cute-card-texture rounded-3xl border border-pastel-pink/40 shadow-soft',
 
         paddingMap[padding],
 

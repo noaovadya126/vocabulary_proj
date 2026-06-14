@@ -72,13 +72,13 @@ export function CategoryHubCard({
 
   const accents = {
 
-    pink: 'from-pastel-pink/90 to-pastel-pink-light/70 border-pastel-pink hover:border-brand-300 cute-stripes-pink',
+    pink: 'from-white/90 to-pastel-pink-light/80 border-pastel-pink/50 hover:border-brand-200 hover:shadow-medium',
 
-    green: 'from-pastel-green/90 to-pastel-green-light/70 border-pastel-green hover:border-success-300 cute-stripes-green',
+    green: 'from-white/90 to-pastel-green-light/80 border-pastel-green/50 hover:border-success-200 hover:shadow-medium',
 
-    peach: 'from-pastel-peach/80 to-pastel-rose/40 border-pastel-peach hover:border-brand-200',
+    peach: 'from-white/90 to-pastel-peach/60 border-pastel-peach/50 hover:border-brand-200',
 
-    sky: 'from-pastel-sky/80 to-pastel-green-light/50 border-pastel-green/60 hover:border-success-200',
+    sky: 'from-white/90 to-pastel-sky/60 border-pastel-green/40 hover:border-success-200',
 
   };
 
@@ -96,7 +96,7 @@ export function CategoryHubCard({
 
       className={cn(
 
-        'group relative min-h-[120px] w-full overflow-hidden rounded-3xl border-2 bg-gradient-to-br p-5 text-left transition-all',
+        'group relative min-h-[112px] w-full overflow-hidden rounded-3xl border bg-gradient-to-br p-5 text-left transition-all duration-200',
 
         accents[accent],
 

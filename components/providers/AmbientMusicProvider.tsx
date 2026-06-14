@@ -1,8 +1,12 @@
 'use client';
 
-import { useI18nContext } from '@/contexts/I18nContext';
 import { isMusicMuted, subscribeAudioSettings } from '@/lib/audioSettings';
-import { unlockBackgroundMusic } from '@/lib/backgroundMusic';
+import {
+  isBackgroundMusicBlocked,
+  isBackgroundMusicPlaying,
+  startBackgroundMusic,
+  unlockBackgroundMusic,
+} from '@/lib/backgroundMusic';
 import { Music } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -11,35 +15,60 @@ export function unlockAndPlayMusic() {
 }
 
 export function AmbientMusicProvider({ children }: { children: React.ReactNode }) {
-  const { t } = useI18nContext();
-  const [showHint, setShowHint] = useState(false);
+  const [needsTap, setNeedsTap] = useState(false);
 
   useEffect(() => {
-    setShowHint(!isMusicMuted());
-    return subscribeAudioSettings(() => setShowHint(!isMusicMuted()));
+    const sync = () => {
+      if (isMusicMuted()) {
+        setNeedsTap(false);
+        return;
+      }
+      setNeedsTap(isBackgroundMusicBlocked() && !isBackgroundMusicPlaying());
+    };
+
+    if (!isMusicMuted()) startBackgroundMusic();
+
+    const t1 = window.setTimeout(sync, 400);
+    const t2 = window.setTimeout(sync, 1200);
+    const unsub = subscribeAudioSettings(sync);
+
+    return () => {
+      window.clearTimeout(t1);
+      window.clearTimeout(t2);
+      unsub();
+    };
   }, []);
 
   useEffect(() => {
-    const onInteract = () => {
+    const resume = () => {
       if (!isMusicMuted()) unlockBackgroundMusic();
-      setShowHint(false);
+      setNeedsTap(false);
     };
-    window.addEventListener('pointerdown', onInteract, { once: true });
-    window.addEventListener('keydown', onInteract, { once: true });
+
+    window.addEventListener('pointerdown', resume, { once: true });
+    window.addEventListener('keydown', resume, { once: true });
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible' && !isMusicMuted()) startBackgroundMusic();
+    });
+
     return () => {
-      window.removeEventListener('pointerdown', onInteract);
-      window.removeEventListener('keydown', onInteract);
+      window.removeEventListener('pointerdown', resume);
+      window.removeEventListener('keydown', resume);
     };
   }, []);
 
   return (
     <>
       {children}
-      {showHint && (
-        <div className="fixed bottom-6 right-20 z-30 px-3 py-2 rounded-xl bg-white/95 border border-brand-100 shadow-soft text-xs text-brand-700 flex items-center gap-2 max-w-[240px] animate-pulse">
-          <Music className="w-4 h-4 text-brand-500 shrink-0" />
-          {t('music_hint', 'common')}
-        </div>
+      {needsTap && (
+        <button
+          type="button"
+          onClick={() => unlockBackgroundMusic()}
+          className="fixed bottom-6 right-20 z-30 flex max-w-[240px] items-center gap-2 rounded-2xl border border-brand-100 bg-white/95 px-3 py-2 text-xs font-medium text-brand-700 shadow-soft transition hover:scale-[1.02]"
+        >
+          <Music className="h-4 w-4 shrink-0 text-brand-500" />
+          Tap to play music
+        </button>
       )}
     </>
   );
