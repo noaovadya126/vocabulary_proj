@@ -27,6 +27,7 @@ import { getWordNotes, getWordNotesByNative } from '@/lib/notes';
 import { getUserItem, setUserItem } from '@/lib/userStorage';
 
 import { playWordAudio } from '@/lib/playWord';
+import { playErrorSfx, playSuccessSfx } from '@/lib/sfx';
 
 import { getMilestoneWords, getQuizQuestions } from '@/lib/vocabulary-data';
 
@@ -214,9 +215,13 @@ export default function QuizPage() {
 
       setAwaitingRetry(false);
 
+      playSuccessSfx();
+
     } else {
 
       setIsCorrect(false);
+
+      playErrorSfx();
 
       const notes = currentQuestion.wordId
 

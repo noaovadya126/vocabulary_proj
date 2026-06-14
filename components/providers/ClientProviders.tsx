@@ -2,15 +2,20 @@
 
 import { I18nProvider } from '@/contexts/I18nContext';
 import { AmbientMusicProvider } from '@/components/providers/AmbientMusicProvider';
+import { AuthSessionSync } from '@/components/providers/AuthSessionSync';
+import { SessionProvider } from '@/components/providers/SessionProvider';
 import { PracticeGamesLauncher } from '@/components/ui/PracticeGamesLauncher';
 
 export function ClientProviders({ children }: { children: React.ReactNode }) {
   return (
-    <I18nProvider>
-      <AmbientMusicProvider>
-        {children}
-        <PracticeGamesLauncher global />
-      </AmbientMusicProvider>
-    </I18nProvider>
+    <SessionProvider>
+      <I18nProvider>
+        <AmbientMusicProvider>
+          <AuthSessionSync />
+          {children}
+          <PracticeGamesLauncher global />
+        </AmbientMusicProvider>
+      </I18nProvider>
+    </SessionProvider>
   );
 }

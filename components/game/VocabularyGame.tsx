@@ -8,6 +8,7 @@ import { normalizeCategory } from '@/lib/categories';
 import { getDisplayMeaning } from '@/lib/displayText';
 import { getVocabGameNotes } from '@/lib/notes';
 import { playWordAudio } from '@/lib/playWord';
+import { playErrorSfx, playSuccessSfx } from '@/lib/sfx';
 import { buildQuizOptions } from '@/lib/quiz-options';
 import { shuffleArray } from '@/lib/shuffle';
 import { useAutoPlayWord } from '@/lib/useAutoPlayWord';
@@ -524,8 +525,10 @@ function MatchingGame({ words, language, onScore, onComplete }: {
       onScore(10);
       setSelectedWordId(null);
       setWrongFlash(null);
+      playSuccessSfx();
     } else {
       setWrongFlash(targetWordId);
+      playErrorSfx();
       window.setTimeout(() => setWrongFlash(null), 600);
       setSelectedWordId(null);
     }
@@ -641,12 +644,14 @@ function ListenPickGame({ words, language, onScore, onComplete }: {
       onScore(10);
       setShowResult(true);
       setAwaitingRetry(false);
+      playSuccessSfx();
     } else {
       const notes = getVocabGameNotes(language, currentWord.lemma, currentWord.id);
       setUserNotes(notes.trim());
       setHasSavedNotes(!!notes.trim());
       setShowResult(true);
       setAwaitingRetry(true);
+      playErrorSfx();
     }
   };
 
@@ -820,12 +825,14 @@ function QuizGame({ words, language, onScore, onComplete }: {
       onScore(10);
       setShowResult(true);
       setAwaitingRetry(false);
+      playSuccessSfx();
     } else {
       const notes = getVocabGameNotes(language, currentWord.lemma, currentWord.id);
       setUserNotes(notes.trim());
       setHasSavedNotes(!!notes.trim());
       setShowResult(true);
       setAwaitingRetry(true);
+      playErrorSfx();
     }
   };
 
@@ -1005,12 +1012,14 @@ function ScrambleGame({ words, language, onScore, onComplete }: {
     if (guess.trim() === current.lemma) {
       onScore(15);
       setFeedback('Correct!');
+      playSuccessSfx();
       setTimeout(() => {
         if (index < words.length - 1) setIndex((i) => i + 1);
         else onComplete();
       }, 800);
     } else {
       setFeedback(`Try again! Hint: ${current.translation}`);
+      playErrorSfx();
     }
   };
 
@@ -1067,7 +1076,12 @@ function PictureQuizGame({ words, language, onScore, onComplete }: {
     if (showResult) return;
     setSelected(lemma);
     setShowResult(true);
-    if (lemma === current.lemma) onScore(12);
+    if (lemma === current.lemma) {
+      onScore(12);
+      playSuccessSfx();
+    } else {
+      playErrorSfx();
+    }
   };
 
   const next = () => {
@@ -1169,6 +1183,9 @@ function SpeedRoundGame({ words, language, onScore, onComplete }: {
     if (translation === current.translation) {
       onScore(8);
       setRoundScore((s) => s + 1);
+      playSuccessSfx();
+    } else {
+      playErrorSfx();
     }
     if (index < words.length - 1) {
       setIndex((i) => i + 1);

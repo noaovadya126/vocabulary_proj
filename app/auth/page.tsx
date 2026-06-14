@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { CharacterIllustration, SpeechBubble } from '@/components/ui/CharacterIllustration';
 import { PastelBackground } from '@/components/ui/PastelBackground';
+import { GoogleSignInButton } from '@/components/ui/GoogleSignInButton';
 import { Toast } from '@/components/ui/Toast';
 import { cn } from '@/lib/cn';
 import { loginUser, registerUser } from '@/lib/userAccount';
@@ -124,6 +125,14 @@ export default function AuthPage() {
                 ? 'Continue your vocabulary journey'
                 : 'Free — learn Korean, Japanese & French'}
             </p>
+          </div>
+
+          <GoogleSignInButton className="mb-5" />
+
+          <div className="relative mb-5 flex items-center gap-3">
+            <div className="h-px flex-1 bg-pastel-pink/50" />
+            <span className="text-xs font-medium text-brand-400">or with email</span>
+            <div className="h-px flex-1 bg-pastel-pink/50" />
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">

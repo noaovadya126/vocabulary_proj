@@ -4,7 +4,7 @@ import { AppShell } from '@/components/ui/AppShell';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { ChibiMascot } from '@/components/ui/ChibiMascot';
-import { Toast } from '@/components/ui/Toast';
+import { KnownWordCelebration } from '@/components/ui/KnownWordCelebration';
 import { WordVideo } from '@/components/ui/WordVideo';
 import { LANGUAGE_NAMES } from '@/lib/constants';
 import { playWordAudio, stopWordAudio } from '@/lib/playWord';
@@ -15,7 +15,7 @@ import { getUserItem, setUserItem } from '@/lib/userStorage';
 import { setWordNotes } from '@/lib/notes';
 import { CheckCircle2, Volume2 } from 'lucide-react';
 import { useParams, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function WordLearningPage() {
   const [showTranslation, setShowTranslation] = useState(false);
@@ -23,8 +23,8 @@ export default function WordLearningPage() {
   const [isPlayingWord, setIsPlayingWord] = useState(false);
   const [isPlayingSentence, setIsPlayingSentence] = useState(false);
   const [showGotIt, setShowGotIt] = useState(false);
-  const [showToast, setShowToast] = useState(false);
-  const [toastMessage, setToastMessage] = useState('');
+  const [showCelebration, setShowCelebration] = useState(false);
+  const pendingNav = useRef<(() => void) | null>(null);
 
   const router = useRouter();
   const params = useParams();
@@ -63,10 +63,6 @@ export default function WordLearningPage() {
     setIsPlayingWord(true);
     try {
       await playWordAudio(language, currentWord.native, currentWord.audioFile);
-    } catch {
-      setToastMessage('Audio playback failed.');
-      setShowToast(true);
-      setTimeout(() => setShowToast(false), 3000);
     } finally {
       setIsPlayingWord(false);
     }
@@ -77,10 +73,6 @@ export default function WordLearningPage() {
     setIsPlayingSentence(true);
     try {
       await playWordAudio(language, currentWord.exampleNative);
-    } catch {
-      setToastMessage('Sentence audio failed.');
-      setShowToast(true);
-      setTimeout(() => setShowToast(false), 3000);
     } finally {
       setIsPlayingSentence(false);
     }
@@ -92,8 +84,14 @@ export default function WordLearningPage() {
     setWordNotes(language, milestoneId, String(wordId), newNotes);
   };
 
+  const handleCelebrationDone = () => {
+    setShowCelebration(false);
+    pendingNav.current?.();
+    pendingNav.current = null;
+  };
+
   const handleGotIt = () => {
-    if (!currentWord) return;
+    if (!currentWord || showGotIt) return;
     setShowGotIt(true);
 
     const progressKey = `progress_${language}_${milestoneId}`;
@@ -125,24 +123,25 @@ export default function WordLearningPage() {
     setUserItem(vocabProgressKey, JSON.stringify(vocabProgress));
 
     if (nextWord) {
-      setToastMessage('Great! Moving to the next word...');
-      setShowToast(true);
-      setTimeout(
-        () => router.push(`/word-learning/${language}/${milestoneId}/${nextWord.id}`),
-        600
-      );
+      pendingNav.current = () => router.push(`/word-learning/${language}/${milestoneId}/${nextWord.id}`);
     } else {
-      setToastMessage('Milestone complete! All words learned.');
-      setShowToast(true);
-      setTimeout(() => router.push(`/milestone/${language}/${milestoneId}`), 1200);
+      pendingNav.current = () => router.push(`/milestone/${language}/${milestoneId}`);
     }
+
+    setShowCelebration(true);
   };
+
+  useEffect(() => {
+    if (!showCelebration) return;
+    const t = window.setTimeout(() => setShowCelebration(false), 2600);
+    return () => window.clearTimeout(t);
+  }, [showCelebration]);
 
   if (!currentWord || !inMilestone) {
     return (
       <AppShell backHref={`/milestone/${language}/${milestoneId}`} backLabel="Milestone" title="Word not found">
         <Card>
-          <p className="text-slate-600 text-sm">This word could not be loaded. Return to the milestone and try again.</p>
+          <p className="text-sm text-brand-600">This word could not be loaded. Return to the milestone and try again.</p>
         </Card>
       </AppShell>
     );
@@ -157,25 +156,32 @@ export default function WordLearningPage() {
       subtitle={`${LANGUAGE_NAMES[language] ?? language} · ${currentWord.english}`}
       maxWidth="lg"
     >
-      <Card className="text-center mb-6 relative overflow-hidden">
+      <Card className="relative mb-6 overflow-hidden text-center">
         <ChibiMascot mood="happy" size="md" className="mx-auto mb-2" />
-        <div className="flex justify-center mb-3">
-          <WordImage english={currentWord.english} category={currentWord.category} wordId={String(currentWord.id)} nativeText={currentWord.native} language={language} size="lg" />
+        <div className="mb-3 flex justify-center">
+          <WordImage
+            english={currentWord.english}
+            category={currentWord.category}
+            wordId={String(currentWord.id)}
+            nativeText={currentWord.native}
+            language={language}
+            size="lg"
+          />
         </div>
-        <p className="text-sm text-slate-500 font-mono mb-1">{currentWord.phonetic}</p>
+        <p className="mb-1 font-mono text-sm text-brand-500">{currentWord.phonetic}</p>
         {showTranslation && (
-          <p className="text-lg text-indigo-600 font-medium">{currentWord.english}</p>
+          <p className="text-lg font-medium text-brand-600">{currentWord.english}</p>
         )}
-        <div className="flex flex-wrap justify-center gap-2 mt-4">
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
           <Button variant="secondary" size="sm" onClick={() => setShowTranslation(!showTranslation)}>
             {showTranslation ? 'Hide meaning' : 'Show meaning'}
           </Button>
           <Button variant="secondary" size="sm" onClick={handleWordAudio} disabled={isPlayingWord}>
-            <Volume2 className="w-4 h-4" />
+            <Volume2 className="h-4 w-4" />
             {isPlayingWord ? 'Playing...' : 'Word audio'}
           </Button>
           <Button variant="secondary" size="sm" onClick={handleSentenceAudio} disabled={isPlayingSentence}>
-            <Volume2 className="w-4 h-4" />
+            <Volume2 className="h-4 w-4" />
             {isPlayingSentence ? 'Playing...' : 'Sentence audio'}
           </Button>
         </div>
@@ -197,21 +203,21 @@ export default function WordLearningPage() {
       />
 
       <Card className="mb-6">
-        <label className="block text-sm font-medium text-slate-700 mb-2">Personal notes</label>
+        <label className="mb-2 block text-sm font-medium text-brand-700">Personal notes</label>
         <textarea
           value={notes}
           onChange={handleNotesChange}
           placeholder="Add a memory hook or example sentence..."
-          className="w-full h-24 p-3 border border-slate-300 rounded-lg text-sm resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+          className="h-24 w-full resize-none rounded-2xl border border-pastel-pink/60 bg-white/90 p-3 text-sm text-brand-800 focus:border-brand-300 focus:outline-none focus:ring-2 focus:ring-brand-200/50"
         />
-        <p className="text-xs text-slate-500 mt-2">Saved automatically</p>
+        <p className="mt-2 text-xs text-brand-500">Saved automatically</p>
       </Card>
 
       <div className="text-center">
         <Button onClick={handleGotIt} disabled={showGotIt} size="lg">
           {showGotIt ? (
             <>
-              <CheckCircle2 className="w-5 h-5" />
+              <CheckCircle2 className="h-5 w-5" />
               Completed
             </>
           ) : (
@@ -220,7 +226,11 @@ export default function WordLearningPage() {
         </Button>
       </div>
 
-      {showToast && <Toast message={toastMessage} variant="success" />}
+      <KnownWordCelebration
+        show={showCelebration}
+        wordLabel={currentWord.native}
+        onDone={handleCelebrationDone}
+      />
     </AppShell>
   );
 }

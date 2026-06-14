@@ -9,7 +9,7 @@ import {
   buildPinterestImageQuery,
   getPinterestSearchUrl,
 } from '@/lib/word-media-search';
-import { buildContextualImageSearchQueries } from '@/lib/word-search-context';
+import { buildContextualImageSearchQueries, extractPrimaryEnglish } from '@/lib/word-search-context';
 import { getContextualWordImageUrl } from '@/lib/word-image-library';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -20,6 +20,50 @@ interface ImageCandidate {
   title: string;
   source: string;
   score: number;
+}
+
+async function searchWikipedia(
+  query: string,
+  native: string,
+  english: string,
+  tag: string,
+  category: string,
+  language: string
+): Promise<ImageCandidate[]> {
+  try {
+    const api = new URL('https://en.wikipedia.org/w/api.php');
+    api.searchParams.set('action', 'query');
+    api.searchParams.set('generator', 'search');
+    api.searchParams.set('gsrsearch', query);
+    api.searchParams.set('gsrlimit', '6');
+    api.searchParams.set('prop', 'pageimages|pageterms');
+    api.searchParams.set('piprop', 'thumbnail');
+    api.searchParams.set('pithumbsize', '400');
+    api.searchParams.set('format', 'json');
+
+    const res = await fetch(api.toString(), { next: { revalidate: 86400 } });
+    if (!res.ok) return [];
+    const data = await res.json();
+    const pages = data.query?.pages ?? {};
+    const out: ImageCandidate[] = [];
+
+    for (const page of Object.values(pages) as Array<{
+      title?: string;
+      terms?: Array<{ title?: string }>;
+      thumbnail?: { source?: string };
+    }>) {
+      const imageUrl = page.thumbnail?.source;
+      const title = page.title ?? page.terms?.[0]?.title ?? '';
+      if (!imageUrl || !title) continue;
+      const score = scoreWordImageTitle(title, native, english, tag, category, language) + 10;
+      if (score >= 20) {
+        out.push({ url: imageUrl, title, source: 'wikipedia', score });
+      }
+    }
+    return out;
+  } catch {
+    return [];
+  }
 }
 
 async function searchOpenverse(
@@ -133,15 +177,22 @@ export async function GET(request: NextRequest) {
     exampleNative
   );
 
+  const enKeyword = extractPrimaryEnglish(english);
+
+  const wikiBatches = await Promise.all(
+    [enKeyword, `${enKeyword} ${category.split(' ')[0]}`, ...searchQueries.slice(0, 2)].map((q) =>
+      searchWikipedia(q, native, english, tag, category, language)
+    )
+  );
   const openverseBatches = await Promise.all(
     searchQueries.map((q) => searchOpenverse(q, native, english, tag, category, language))
   );
-  const wikiBatches = await Promise.all(
+  const commonsBatches = await Promise.all(
     searchQueries.slice(0, 3).map((q) => searchWikimedia(q, native, english, tag, category, language))
   );
 
   const best = pickBestImage(
-    [...openverseBatches.flat(), ...wikiBatches.flat()],
+    [...wikiBatches.flat(), ...openverseBatches.flat(), ...commonsBatches.flat()],
     native,
     tag,
     english,

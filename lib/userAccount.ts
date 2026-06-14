@@ -91,3 +91,31 @@ export async function loginUser(
   setUserData(user);
   return { ok: true, user };
 }
+
+export async function loginWithGoogle(profile: {
+  email: string;
+  name: string;
+  id?: string;
+}): Promise<{ ok: true; user: UserData }> {
+  const normalizedEmail = profile.email.trim().toLowerCase();
+  const user: UserData = {
+    id: profile.id || `google_${normalizedEmail.replace(/[^a-z0-9]/g, '_')}`,
+    name: profile.name.trim() || normalizedEmail.split('@')[0],
+    email: normalizedEmail,
+  };
+
+  const accounts = readAccounts();
+  if (!accounts.some((a) => a.email === normalizedEmail)) {
+    accounts.push({
+      id: user.id,
+      email: normalizedEmail,
+      name: user.name,
+      passwordHash: 'google_oauth',
+      createdAt: new Date().toISOString(),
+    });
+    writeAccounts(accounts);
+  }
+
+  setUserData(user);
+  return { ok: true, user };
+}

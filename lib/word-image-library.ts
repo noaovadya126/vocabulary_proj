@@ -15,7 +15,7 @@ const NUMBER_DIGIT: Record<string, string> = {
   hundred: '100',
   thousand: '1000',
 };
-/** Solid-color placeholders for color words (always loads). */
+
 const COLOR_HEX: Record<string, string> = {
   green: '16a34a',
   red: 'dc2626',
@@ -44,7 +44,17 @@ const UNSPLASH_BY_TAG: Record<string, string[]> = {
   nature: ['https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=400&fit=crop&q=80'],
   learning: ['https://images.unsplash.com/photo-1524995994136-a04041a10794?w=400&h=400&fit=crop&q=80'],
   numbers: ['https://images.unsplash.com/photo-1509228468518-180dd4862744?w=400&h=400&fit=crop&q=80'],
+  transport: ['https://images.unsplash.com/photo-1544627661-7574a3c2a2b5?w=400&h=400&fit=crop&q=80'],
+  shopping: ['https://images.unsplash.com/photo-1472851294607-062d12411534?w=400&h=400&fit=crop&q=80'],
+  weather: ['https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=400&fit=crop&q=80'],
 };
+
+function placeholdCard(native: string, english: string, tag: string): string {
+  const en = extractPrimaryEnglish(english).slice(0, 18);
+  const nat = native.trim().slice(0, 10);
+  const label = encodeURIComponent(`${nat}\n${en || tag}`);
+  return `https://placehold.co/400x400/8f74b5/ffffff?text=${label}`;
+}
 
 export function getContextualWordImageUrl(
   tag: string,
@@ -57,53 +67,34 @@ export function getContextualWordImageUrl(
   const ctx = getWordSearchContext(native, english, category, '', language);
   const lock = getVisualTagIndex(tag, wordId, native);
 
-  if (ctx.needsDisambiguation && ctx.category === 'Numbers') {
+  if (ctx.category === 'Numbers') {
     const digit = NUMBER_DIGIT[ctx.enKeyword] ?? ctx.enKeyword;
     const label = encodeURIComponent(`${native}\n${digit}`);
     return `https://placehold.co/400x400/6366f1/ffffff?text=${label}`;
   }
 
-  if (ctx.needsDisambiguation && UNSPLASH_BY_TAG[tag]?.length) {
-    return UNSPLASH_BY_TAG[tag][lock % UNSPLASH_BY_TAG[tag].length];
-  }
-
-  if (ctx.needsDisambiguation) {
-    const en = extractPrimaryEnglish(english);
-    const label = encodeURIComponent(`${native}\n${en}`);
-    return `https://placehold.co/400x400/8f74b5/ffffff?text=${label}`;
-  }
-
-  return getWordImageForTag(tag, wordId, native);
-}
-
-export function getWordImageForTag(tag: string, wordId?: string, native?: string): string {
-  const lock = getVisualTagIndex(tag, wordId, native);
-
   if (COLOR_HEX[tag]) {
     const pool = UNSPLASH_BY_TAG[tag];
     if (pool?.length) return pool[lock % pool.length];
-    const text = encodeURIComponent(native?.trim() || tag);
+    const text = encodeURIComponent(native.trim() || tag);
     const fg = tag === 'white' || tag === 'yellow' ? '1f2937' : 'ffffff';
     return `https://placehold.co/400x400/${COLOR_HEX[tag]}/${fg}?text=${text}`;
   }
 
-  const pool = UNSPLASH_BY_TAG[tag] ?? UNSPLASH_BY_TAG.learning ?? [];
-  if (pool.length) {
+  const pool = UNSPLASH_BY_TAG[tag];
+  if (pool?.length && ctx.enKeyword.length <= 20) {
     return pool[lock % pool.length];
   }
 
-  const seed = encodeURIComponent(`${tag}-${lock}`);
-  return `https://picsum.photos/seed/${seed}/400/400`;
+  return placeholdCard(native, english, tag);
 }
 
-function picsumSeed(...parts: (string | number | undefined)[]): string {
-  const seed = parts.filter(Boolean).join('-').replace(/\s+/g, '-').slice(0, 48) || 'word';
-  return `https://picsum.photos/seed/${encodeURIComponent(seed)}/400/400`;
-}
-
-function placeholdLabel(native?: string, english?: string, tag?: string): string {
-  const label = native?.trim() || english?.split(/[,;]/)[0]?.trim() || tag || 'word';
-  return `https://placehold.co/400x400/8f74b5/ffffff?text=${encodeURIComponent(label.slice(0, 12))}`;
+export function getWordImageForTag(tag: string, wordId?: string, native?: string): string {
+  const lock = getVisualTagIndex(tag, wordId, native);
+  const pool = UNSPLASH_BY_TAG[tag] ?? UNSPLASH_BY_TAG.learning ?? [];
+  if (pool.length) return pool[lock % pool.length];
+  const label = encodeURIComponent(native?.trim().slice(0, 12) || tag);
+  return `https://placehold.co/400x400/8f74b5/ffffff?text=${label}`;
 }
 
 export function getWordImageFallbacks(
@@ -114,21 +105,17 @@ export function getWordImageFallbacks(
   category = 'Daily Life',
   language = 'ko'
 ): string[] {
-  const primary = english
+  const labeled = english
+    ? placeholdCard(native ?? '', english, tag)
+    : getWordImageForTag(tag, wordId, native);
+  const semantic = english
     ? getContextualWordImageUrl(tag, native ?? '', english, category, wordId, language)
     : getWordImageForTag(tag, wordId, native);
   const lock = getVisualTagIndex(tag, wordId, native);
-  const ctx = native && english ? getWordSearchContext(native, english, category, '', language) : null;
-  const altTag = ctx?.needsDisambiguation ? `${ctx.enKeyword}-${ctx.koTopic}` : tag;
   const unsplashPool = UNSPLASH_BY_TAG[tag] ?? UNSPLASH_BY_TAG.learning ?? [];
   const altUnsplash = unsplashPool[(lock + 1) % unsplashPool.length];
 
-  return [
-    primary,
-    altUnsplash,
-    picsumSeed(native, wordId, altTag, lock),
-    placeholdLabel(native, english, tag),
-  ].filter((url, i, arr) => url && arr.indexOf(url) === i);
+  return [labeled, semantic, altUnsplash].filter((url, i, arr) => url && arr.indexOf(url) === i);
 }
 
 export function resolveWordImageUrl(
@@ -138,5 +125,5 @@ export function resolveWordImageUrl(
   nativeText?: string
 ): string {
   const tag = getWordVisualTag(nativeText ?? '', english, category, wordId);
-  return getWordImageForTag(tag, wordId, nativeText);
+  return getContextualWordImageUrl(tag, nativeText ?? '', english, category, wordId);
 }
