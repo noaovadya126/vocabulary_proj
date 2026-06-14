@@ -8,6 +8,7 @@ on:
       - '.github/workflows/android-apk.yml'
       - 'android/**'
       - 'capacitor.config.json'
+      - 'scripts/prepare-android-ci.mjs'
       - 'www/**'
       - 'package.json'
       - 'package-lock.json'
@@ -42,11 +43,8 @@ jobs:
           yes | sdkmanager --licenses || true
           sdkmanager "platforms;android-35" "build-tools;35.0.0" "platform-tools"
 
-      - name: Copy web assets into Android project
-        run: |
-          mkdir -p android/app/src/main/assets/public
-          cp -r www/* android/app/src/main/assets/public/
-          cp capacitor.config.json android/app/src/main/assets/capacitor.config.json
+      - name: Prepare Android assets
+        run: node scripts/prepare-android-ci.mjs
 
       - name: Make Gradle executable
         working-directory: android

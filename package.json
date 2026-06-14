@@ -21,7 +21,8 @@
     "cap:sync": "npx cap sync android",
     "cap:open": "npx cap open android",
     "android:sync": "npx cap sync android",
-    "android:open": "npx cap open android"
+    "android:open": "npx cap open android",
+    "android:prepare": "node scripts/prepare-android-ci.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.4.0",
