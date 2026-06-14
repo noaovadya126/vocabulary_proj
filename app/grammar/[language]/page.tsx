@@ -2,7 +2,8 @@
 
 import { AppShell } from '@/components/ui/AppShell';
 import { Card } from '@/components/ui/Card';
-import { CategoryHubCard, CuteDecor } from '@/components/ui/CuteDecor';
+import { CuteDecor } from '@/components/ui/CuteDecor';
+import { HubTabBar } from '@/components/ui/HubTabBar';
 import { LANGUAGE_NAMES } from '@/lib/constants';
 import { cn } from '@/lib/cn';
 import { getGrammarPoints } from '@/lib/grammar-data';
@@ -40,22 +41,23 @@ export default function GrammarListPage() {
       subtitle="TOPIK 1 & 2 patterns — learn step by step with cute examples."
       maxWidth="2xl"
     >
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-        <CategoryHubCard
-          emoji="📖"
-          title="Vocabulary"
-          subtitle="Words and phrases"
-          accent="pink"
-          mascot="study"
-          onClick={() => router.push(`/vocabulary/${language}`)}
-        />
-        <CategoryHubCard
-          emoji="✏️"
-          title="Grammar"
-          subtitle={`${allGrammar.length} lessons`}
-          accent="green"
-          mascot="school"
-          disabled
+      <div className="mb-6 flex justify-center">
+        <HubTabBar
+          tabs={[
+            {
+              id: 'vocabulary',
+              emoji: '📚',
+              label: 'Vocabulary',
+              onClick: () => router.push(`/vocabulary/${language}`),
+            },
+            {
+              id: 'grammar',
+              emoji: '✏️',
+              label: 'Grammar',
+              badge: String(allGrammar.length),
+              active: true,
+            },
+          ]}
         />
       </div>
 

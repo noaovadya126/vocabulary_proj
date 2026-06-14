@@ -10,7 +10,7 @@ import { Card } from '@/components/ui/Card';
 
 import { CharacterIllustration, SpeechBubble } from '@/components/ui/CharacterIllustration';
 
-import { CategoryHubCard } from '@/components/ui/CuteDecor';
+import { HubTabBar } from '@/components/ui/HubTabBar';
 import { InstallAppBanner } from '@/components/ui/InstallAppBanner';
 
 import { Toast } from '@/components/ui/Toast';
@@ -332,42 +332,26 @@ export default function CountryMapPage() {
 
 
 
-      <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-
-        <CategoryHubCard
-
-          emoji="📚"
-
-          title={t('vocabulary', 'common')}
-
-          subtitle={`${vocabulary.length} TOPIK ${t('words', 'common')}`}
-
-          accent="pink"
-
-          mascot="study"
-
-          onClick={() => router.push(`/vocabulary/${language}`)}
-
+      <div className="mb-6 flex justify-center">
+        <HubTabBar
+          tabs={[
+            {
+              id: 'vocabulary',
+              emoji: '📚',
+              label: t('vocabulary', 'common'),
+              badge: String(vocabulary.length),
+              onClick: () => router.push(`/vocabulary/${language}`),
+            },
+            {
+              id: 'grammar',
+              emoji: '✏️',
+              label: t('grammar', 'common'),
+              badge: language === 'ko' ? String(grammarCount) : undefined,
+              disabled: language !== 'ko',
+              onClick: () => language === 'ko' && router.push(`/grammar/${language}`),
+            },
+          ]}
         />
-
-        <CategoryHubCard
-
-          emoji="✏️"
-
-          title={t('grammar', 'common')}
-
-          subtitle={language === 'ko' ? `${grammarCount} ${t('lessons', 'common')}` : t('korean_only', 'common')}
-
-          accent="green"
-
-          mascot="school"
-
-          onClick={() => (language === 'ko' ? router.push(`/grammar/${language}`) : undefined)}
-
-          disabled={language !== 'ko'}
-
-        />
-
       </div>
 
 

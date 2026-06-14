@@ -3,7 +3,6 @@
 import { AppShell } from '@/components/ui/AppShell';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
-import { ChibiMascot } from '@/components/ui/ChibiMascot';
 import { KnownWordCelebration } from '@/components/ui/KnownWordCelebration';
 import { WordVideo } from '@/components/ui/WordVideo';
 import { LANGUAGE_NAMES } from '@/lib/constants';
@@ -152,13 +151,21 @@ export default function WordLearningPage() {
       backHref={`/milestone/${language}/${milestoneId}`}
       backLabel="Milestone"
       eyebrow={`${currentWord.category} · TOPIK ${currentWord.topikLevel}`}
-      title={currentWord.native}
-      subtitle={`${LANGUAGE_NAMES[language] ?? language} · ${currentWord.english}`}
       maxWidth="lg"
     >
       <Card className="relative mb-6 overflow-hidden text-center">
-        <ChibiMascot mood="happy" size="md" className="mx-auto mb-2" />
-        <div className="mb-3 flex justify-center">
+        <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-brand-500">
+          {LANGUAGE_NAMES[language] ?? language}
+        </p>
+        <h1 className="text-4xl font-bold leading-tight text-brand-800 sm:text-5xl japanese-text korean-text">
+          {currentWord.native}
+        </h1>
+        <p className="mt-2 font-mono text-base text-brand-500 sm:text-lg">{currentWord.phonetic}</p>
+        {showTranslation && (
+          <p className="mt-2 text-lg font-medium text-brand-600">{currentWord.english}</p>
+        )}
+
+        <div className="my-5 flex justify-center">
           <WordImage
             english={currentWord.english}
             category={currentWord.category}
@@ -168,11 +175,8 @@ export default function WordLearningPage() {
             size="lg"
           />
         </div>
-        <p className="mb-1 font-mono text-sm text-brand-500">{currentWord.phonetic}</p>
-        {showTranslation && (
-          <p className="text-lg font-medium text-brand-600">{currentWord.english}</p>
-        )}
-        <div className="mt-4 flex flex-wrap justify-center gap-2">
+
+        <div className="flex flex-wrap justify-center gap-2">
           <Button variant="secondary" size="sm" onClick={() => setShowTranslation(!showTranslation)}>
             {showTranslation ? 'Hide meaning' : 'Show meaning'}
           </Button>

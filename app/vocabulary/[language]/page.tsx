@@ -5,7 +5,7 @@ import { AppShell } from '@/components/ui/AppShell';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { AutoPlayOnVisible } from '@/components/ui/AutoPlayOnVisible';
-import { CategoryHubCard } from '@/components/ui/CuteDecor';
+import { HubTabBar } from '@/components/ui/HubTabBar';
 import { Toast } from '@/components/ui/Toast';
 import { KnownMarkButton } from '@/components/ui/KnownMarkButton';
 import { KnownWordCelebration } from '@/components/ui/KnownWordCelebration';
@@ -158,16 +158,24 @@ export default function VocabularyPage() {
       subtitle={`${stats.totalWords} ${t('words', 'common')}`}
       maxWidth="xl"
     >
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
-        <CategoryHubCard emoji="📚" title={t('vocabulary', 'common')} subtitle={`${stats.totalWords} ${t('words', 'common')}`} accent="pink" mascot="study" onClick={() => {}} disabled />
-        <CategoryHubCard
-          emoji="✏️"
-          title={t('grammar', 'common')}
-          subtitle={language === 'ko' ? 'TOPIK' : t('korean_only', 'common')}
-          accent="green"
-          mascot="school"
-          onClick={() => language === 'ko' && router.push(`/grammar/${language}`)}
-          disabled={language !== 'ko'}
+      <div className="mb-4 flex justify-center sm:mb-6">
+        <HubTabBar
+          tabs={[
+            {
+              id: 'vocabulary',
+              emoji: '📚',
+              label: t('vocabulary', 'common'),
+              badge: String(stats.totalWords),
+              active: true,
+            },
+            {
+              id: 'grammar',
+              emoji: '✏️',
+              label: t('grammar', 'common'),
+              disabled: language !== 'ko',
+              onClick: () => language === 'ko' && router.push(`/grammar/${language}`),
+            },
+          ]}
         />
       </div>
 
