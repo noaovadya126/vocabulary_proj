@@ -1,5 +1,10 @@
 import { isMusicMuted, subscribeAudioSettings } from './audioSettings';
 import { startAmbientMusic, stopAmbientMusic } from './ambientMusic';
+import {
+  isYoutubeBackgroundMusicPlaying,
+  startYoutubeBackgroundMusic,
+  stopYoutubeBackgroundMusic,
+} from './youtubeBackgroundMusic';
 
 const CALM_TRACKS = [
   '/audio/calm-piano-full.mp3',
@@ -13,6 +18,7 @@ let trackIndex = 0;
 let unlocked = false;
 let playing = false;
 let autoplayBlocked = false;
+let usingYoutube = false;
 
 function getAudio(): HTMLAudioElement {
   if (!audioEl) {
@@ -27,7 +33,22 @@ function getAudio(): HTMLAudioElement {
 function tryPlayTrack(idx: number): void {
   if (typeof window === 'undefined' || isMusicMuted()) return;
 
-  if (idx >= CALM_TRACKS.length) {
+  if (idx === 0) {
+    void startYoutubeBackgroundMusic().then((ok) => {
+      if (ok) {
+        usingYoutube = true;
+        playing = true;
+        autoplayBlocked = false;
+        return;
+      }
+      tryPlayTrack(1);
+    });
+    return;
+  }
+
+  usingYoutube = false;
+
+  if (idx - 1 >= CALM_TRACKS.length) {
     startAmbientMusic();
     playing = true;
     autoplayBlocked = false;
@@ -36,7 +57,7 @@ function tryPlayTrack(idx: number): void {
 
   const el = getAudio();
   el.volume = MUSIC_VOLUME;
-  el.src = CALM_TRACKS[idx];
+  el.src = CALM_TRACKS[idx - 1];
 
   const finishPlay = () => {
     playing = true;
@@ -77,10 +98,12 @@ export function startBackgroundMusic(): void {
 export function stopBackgroundMusic(): void {
   playing = false;
   autoplayBlocked = false;
+  usingYoutube = false;
   if (audioEl) {
     audioEl.pause();
     audioEl.currentTime = 0;
   }
+  stopYoutubeBackgroundMusic();
   stopAmbientMusic();
 }
 
@@ -93,7 +116,7 @@ export function unlockBackgroundMusic(): void {
 }
 
 export function isBackgroundMusicPlaying(): boolean {
-  return playing;
+  return playing || isYoutubeBackgroundMusicPlaying();
 }
 
 export function isBackgroundMusicBlocked(): boolean {

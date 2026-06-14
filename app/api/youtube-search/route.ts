@@ -94,7 +94,8 @@ function buildSongFallbackQueries(
 
 async function collectVideos(
   queries: string[],
-  filter: (title: string) => boolean
+  filter: (title: string) => boolean,
+  excludeIds: Set<string> = new Set()
 ): Promise<RawHit[]> {
   const hits: RawHit[] = [];
   const seen = new Set<string>();
@@ -104,6 +105,7 @@ async function collectVideos(
       const result = await yts(query);
       for (const v of result.videos ?? []) {
         if (!v.videoId || !v.title || seen.has(v.videoId)) continue;
+        if (excludeIds.has(v.videoId)) continue;
         if ((v.seconds ?? 0) > 600) continue;
         if (!filter(v.title)) continue;
         seen.add(v.videoId);
@@ -114,6 +116,13 @@ async function collectVideos(
     }
   }
   return hits;
+}
+
+function pickFirstExcluded<T extends { videoId: string }>(
+  ranked: T[],
+  excludeIds: Set<string>
+): T | undefined {
+  return ranked.find((h) => !excludeIds.has(h.videoId));
 }
 
 async function scoreSongCandidates(
@@ -169,6 +178,13 @@ export async function GET(request: NextRequest) {
   const language = request.nextUrl.searchParams.get('language')?.trim() ?? 'ko';
   const category = request.nextUrl.searchParams.get('category')?.trim() ?? '';
   const exampleNative = request.nextUrl.searchParams.get('exampleNative')?.trim() ?? '';
+  const excludeParam = request.nextUrl.searchParams.get('exclude')?.trim() ?? '';
+  const excludeIds = new Set(
+    excludeParam
+      .split(',')
+      .map((id) => id.trim())
+      .filter(Boolean)
+  );
 
   if (!query) {
     return NextResponse.json({ error: 'Missing search query' }, { status: 400 });
@@ -179,7 +195,11 @@ export async function GET(request: NextRequest) {
   const watchUrlSearch = getYoutubeMusicSearchUrl(word, language, english, category, exampleNative);
 
   const known = getKnownKidsVideo(word, language);
-  if (known && !getWordSearchContext(word, english, category, exampleNative, language).needsDisambiguation) {
+  if (
+    known &&
+    !excludeIds.has(known.videoId) &&
+    !getWordSearchContext(word, english, category, exampleNative, language).needsDisambiguation
+  ) {
     return NextResponse.json({
       ...jsonVideo({ ...known, score: 100 }, query, 'curated', true),
       hasEnglishCaptions: false,
@@ -188,7 +208,7 @@ export async function GET(request: NextRequest) {
 
   try {
     const kidsQueries = buildKidsQueries(word, english, category, language, exampleNative);
-    const kidsRaw = await collectVideos(kidsQueries, isKidsVideoTitle);
+    const kidsRaw = await collectVideos(kidsQueries, isKidsVideoTitle, excludeIds);
     const kidsRanked = kidsRaw
       .map((h) => ({
         ...h,
@@ -197,34 +217,44 @@ export async function GET(request: NextRequest) {
       .filter((h) => h.score > 0)
       .sort((a, b) => b.score - a.score);
 
-    const bestKids = kidsRanked.find((h) =>
-      isVideoRelevantEnough(h.score, h.title, word, english, category, language)
+    const bestKids = pickFirstExcluded(
+      kidsRanked.filter((h) =>
+        isVideoRelevantEnough(h.score, h.title, word, english, category, language)
+      ),
+      excludeIds
     );
     if (bestKids) {
       return NextResponse.json(jsonVideo(bestKids, query, 'kids', true));
     }
 
-    const kidsFallback = kidsRanked[0];
-    if (kidsFallback && kidsFallback.score >= 35) {
+    const kidsFallback = pickFirstExcluded(
+      kidsRanked.filter((h) => h.score >= 35),
+      excludeIds
+    );
+    if (kidsFallback) {
       return NextResponse.json(jsonVideo(kidsFallback, query, 'kids', false));
     }
 
     const songQueries = buildSongFallbackQueries(word, english, category, language);
     const songRaw = await collectVideos(
       songQueries,
-      (title) => titleHintsEnglishSubtitles(title) || /song|노래|lyric|가사/i.test(title)
+      (title) => titleHintsEnglishSubtitles(title) || /song|노래|lyric|가사/i.test(title),
+      excludeIds
     );
     const songRanked = await scoreSongCandidates(songRaw, word, english, tag, category, language);
-    const bestSong = songRanked.find((h) =>
-      isSongFallbackRelevantEnough(
-        h.score,
-        h.title,
-        word,
-        h.hasEnglishCaptions,
-        english,
-        category,
-        language
-      )
+    const bestSong = pickFirstExcluded(
+      songRanked.filter((h) =>
+        isSongFallbackRelevantEnough(
+          h.score,
+          h.title,
+          word,
+          h.hasEnglishCaptions,
+          english,
+          category,
+          language
+        )
+      ),
+      excludeIds
     );
 
     if (bestSong) {
@@ -233,8 +263,11 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const songFallback = songRanked[0];
-    if (songFallback && songFallback.score >= 30) {
+    const songFallback = pickFirstExcluded(
+      songRanked.filter((h) => h.score >= 30),
+      excludeIds
+    );
+    if (songFallback) {
       return NextResponse.json(
         jsonVideo(songFallback, query, 'song-en-subs', false, songFallback.hasEnglishCaptions)
       );

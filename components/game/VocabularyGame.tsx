@@ -762,6 +762,7 @@ function ListenPickGame({ words, language, onScore, onComplete }: {
                 language={language}
                 nativeWord={currentWord.lemma}
                 wordId={currentWord.id}
+                correctAnswer={currentWord.translation}
                 onRetry={handleTryAgain}
                 onSkip={handleGiveUp}
               />
@@ -944,6 +945,7 @@ function QuizGame({ words, language, onScore, onComplete }: {
                 language={language}
                 nativeWord={currentWord.lemma}
                 wordId={currentWord.id}
+                correctAnswer={currentWord.translation}
                 onRetry={handleTryAgain}
                 onSkip={handleGiveUp}
               />
@@ -1018,7 +1020,7 @@ function ScrambleGame({ words, language, onScore, onComplete }: {
         else onComplete();
       }, 800);
     } else {
-      setFeedback(`Try again! Hint: ${current.translation}`);
+      setFeedback(`Correct spelling: ${current.lemma}`);
       playErrorSfx();
     }
   };
@@ -1045,7 +1047,11 @@ function ScrambleGame({ words, language, onScore, onComplete }: {
         >
           Check
         </button>
-        {feedback && <p className="text-sm font-medium text-success-600">{feedback}</p>}
+        {feedback && (
+          <p className={`text-sm font-medium ${feedback.startsWith('Correct spelling') ? 'text-red-700' : 'text-success-600'}`}>
+            {feedback}
+          </p>
+        )}
       </div>
     </div>
   );
@@ -1121,7 +1127,12 @@ function PictureQuizGame({ words, language, onScore, onComplete }: {
           ))}
         </div>
         {showResult && (
-          <div className="text-center mt-4">
+          <div className="text-center mt-4 space-y-2">
+            {selected !== current.lemma && (
+              <p className="text-sm font-medium text-red-700">
+                Correct answer: <strong className="japanese-text korean-text">{current.lemma}</strong>
+              </p>
+            )}
             <button type="button" onClick={next} className="px-5 py-2 rounded-lg bg-brand-400 text-white text-sm font-medium">
               {index < words.length - 1 ? 'Next' : 'Finish'}
             </button>

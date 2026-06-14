@@ -22,7 +22,8 @@
     "cap:open": "npx cap open android",
     "android:sync": "npx cap sync android",
     "android:open": "npx cap open android",
-    "android:prepare": "node scripts/prepare-android-ci.mjs"
+    "android:prepare": "node scripts/prepare-android-ci.mjs",
+    "android:build": "powershell -ExecutionPolicy Bypass -File scripts/build-apk.ps1"
   },
   "dependencies": {
     "@capacitor/android": "^8.4.0",

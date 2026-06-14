@@ -12,7 +12,7 @@ import {
 } from '@/lib/word-youtube-library';
 import { cn } from '@/lib/cn';
 import { useAutoPlayWord } from '@/lib/useAutoPlayWord';
-import { ExternalLink, Pause, Play, Volume2 } from 'lucide-react';
+import { ExternalLink, Pause, Play, RefreshCw, Volume2 } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 interface WordVideoProps {
@@ -84,6 +84,9 @@ export function WordVideo({
   const [videoPlaying, setVideoPlaying] = useState(false);
   const [embedStarted, setEmbedStarted] = useState(!!explicitYoutubeId?.trim());
   const [embedError, setEmbedError] = useState(false);
+  const [excludeVideoIds, setExcludeVideoIds] = useState<string[]>([]);
+  const [refreshingVideo, setRefreshingVideo] = useState(false);
+  const [searchNonce, setSearchNonce] = useState(0);
 
   const mp4Url = mp4Sources[mp4Index] ?? mp4Sources[0];
   const showYoutube = !!resolvedVideoId && !useMp4 && !embedError;
@@ -108,28 +111,31 @@ export function WordVideo({
     setEmbedError(false);
     setEmbedStarted(false);
     setResolvedVideoId(null);
+    setVideoPlaying(false);
 
     const cacheKey = `${CACHE_PREFIX}${language}_${nativeText.trim()}`;
-    try {
-      const cached = sessionStorage.getItem(cacheKey);
-      if (cached) {
-        const parsed = JSON.parse(cached) as {
-          videoId?: string;
-          title?: string;
-          verified?: boolean;
-          hasEnglishCaptions?: boolean;
-        };
-        if (parsed.videoId) {
-          setResolvedVideoId(parsed.videoId);
-          setVideoTitle(parsed.title ?? null);
-          setVerified(!!parsed.verified);
-          setHasEnglishCaptions(!!parsed.hasEnglishCaptions);
-          setSearchLoading(false);
-          return;
+    if (searchNonce === 0) {
+      try {
+        const cached = sessionStorage.getItem(cacheKey);
+        if (cached) {
+          const parsed = JSON.parse(cached) as {
+            videoId?: string;
+            title?: string;
+            verified?: boolean;
+            hasEnglishCaptions?: boolean;
+          };
+          if (parsed.videoId && !excludeVideoIds.includes(parsed.videoId)) {
+            setResolvedVideoId(parsed.videoId);
+            setVideoTitle(parsed.title ?? null);
+            setVerified(!!parsed.verified);
+            setHasEnglishCaptions(!!parsed.hasEnglishCaptions);
+            setSearchLoading(false);
+            return;
+          }
         }
+      } catch {
+        /* ignore */
       }
-    } catch {
-      /* ignore */
     }
 
     const params = new URLSearchParams({
@@ -140,6 +146,9 @@ export function WordVideo({
       category,
       exampleNative,
     });
+    if (excludeVideoIds.length > 0) {
+      params.set('exclude', excludeVideoIds.join(','));
+    }
 
     const controller = new AbortController();
     fetch(`/api/youtube-search?${params}`, { signal: controller.signal })
@@ -161,10 +170,13 @@ export function WordVideo({
         }
       })
       .catch(() => setUseMp4(true))
-      .finally(() => setSearchLoading(false));
+      .finally(() => {
+        setSearchLoading(false);
+        setRefreshingVideo(false);
+      });
 
     return () => controller.abort();
-  }, [explicitYoutubeId, language, nativeText, searchQuery, label, category, exampleNative]);
+  }, [explicitYoutubeId, language, nativeText, searchQuery, label, category, exampleNative, excludeVideoIds, searchNonce]);
 
   const startYoutube = useCallback(() => {
     if (!resolvedVideoId) return;
@@ -208,10 +220,19 @@ export function WordVideo({
     }
   };
 
+  const loadAnotherVideo = () => {
+    if (refreshingVideo || explicitYoutubeId?.trim()) return;
+    if (resolvedVideoId) {
+      setExcludeVideoIds((prev) => [...new Set([...prev, resolvedVideoId])]);
+    }
+    setRefreshingVideo(true);
+    setSearchNonce((n) => n + 1);
+  };
+
   if (searchLoading) {
     return (
       <div className={cn('rounded-2xl border border-brand-100 bg-white overflow-hidden min-h-[200px]', className)}>
-        <LoadingScreen message="Loading song video..." />
+        <LoadingScreen message={refreshingVideo ? 'Finding another video...' : 'Loading song video...'} />
       </div>
     );
   }
@@ -290,6 +311,18 @@ export function WordVideo({
           {videoPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" fill="currentColor" />}
           {videoPlaying ? 'Pause video' : 'Play video'}
         </button>
+        {!explicitYoutubeId?.trim() && (
+          <button
+            type="button"
+            onClick={loadAnotherVideo}
+            disabled={refreshingVideo}
+            className="inline-flex items-center gap-1 px-3 py-2 min-h-[44px] rounded-xl bg-white border border-brand-200 text-brand-700 text-xs font-semibold disabled:opacity-60"
+            title="Find a different YouTube song for this word"
+          >
+            <RefreshCw className={cn('w-3.5 h-3.5', refreshingVideo && 'animate-spin')} />
+            Another video
+          </button>
+        )}
         <button
           type="button"
           onClick={playSentenceAudio}

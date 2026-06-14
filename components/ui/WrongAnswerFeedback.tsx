@@ -29,7 +29,6 @@ export function WrongAnswerFeedback({
   nativeWord,
   onRetry,
   onSkip,
-  showCorrectAnswer = false,
   correctAnswer,
   className,
 }: WrongAnswerFeedbackProps) {
@@ -49,6 +48,14 @@ export function WrongAnswerFeedback({
 
   return (
     <div className={cn('space-y-3', className)}>
+      {correctAnswer && (
+        <div className="rounded-xl bg-pastel-mint/50 p-3 border border-success-200 text-center">
+          <p className="text-xs font-medium text-brand-500 mb-1">Correct answer</p>
+          <p className="text-base font-semibold text-brand-800">{correctAnswer}</p>
+          <p className="text-[11px] text-brand-500 mt-1">Write this in your notes if you want to remember it.</p>
+        </div>
+      )}
+
       {hasNotes ? (
         <div className="rounded-xl bg-white/80 p-3 border border-brand-100">
           <p className="text-xs font-medium text-brand-500 mb-1 flex items-center gap-1">
@@ -67,19 +74,13 @@ export function WrongAnswerFeedback({
               setSaved(false);
             }}
             rows={2}
-            placeholder="e.g. sounds like..."
+            placeholder="e.g. sounds like... or paste the correct answer"
             className="w-full rounded-lg border border-brand-100 px-3 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-brand-200"
           />
           <Button type="button" size="sm" variant="secondary" onClick={saveNote} disabled={!draftNote.trim()}>
             {saved ? 'Saved ✓' : 'Save note'}
           </Button>
         </div>
-      )}
-
-      {showCorrectAnswer && correctAnswer && (
-        <p className="text-sm text-brand-700">
-          Correct answer: <strong>{correctAnswer}</strong>
-        </p>
       )}
 
       <div className="flex flex-col sm:flex-row gap-2 justify-center">

@@ -44,9 +44,20 @@ export function GoogleSignInButton({ className }: { className?: string }) {
           className
         )}
       >
-        Google sign-in is not configured on the server yet. Ask the admin to add{' '}
-        <strong>GOOGLE_CLIENT_ID</strong>, <strong>GOOGLE_CLIENT_SECRET</strong>, and{' '}
-        <strong>NEXTAUTH_SECRET</strong> in Vercel → Settings → Environment Variables.
+        Google sign-in is not set up on the live server yet. In{' '}
+        <a
+          href="https://vercel.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+        >
+          Vercel
+        </a>{' '}
+        → your project → Settings → Environment Variables, add:{' '}
+        <strong>GOOGLE_CLIENT_ID</strong>, <strong>GOOGLE_CLIENT_SECRET</strong>,{' '}
+        <strong>NEXTAUTH_SECRET</strong>, and <strong>NEXTAUTH_URL</strong> (
+        <code className="text-[10px]">https://vocabulary-proj.vercel.app</code>
+        ). Then Redeploy. See <strong>SETUP-HE.md</strong> in the repo for step-by-step.
       </div>
     );
   }

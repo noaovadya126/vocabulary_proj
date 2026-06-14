@@ -94,7 +94,9 @@ jspm_packages/
 
 # Capacitor / Android local build
 .tools/
+release/
 android/.gradle/
+android/local.properties
 android/build/
 android/app/build/
 android/local.properties

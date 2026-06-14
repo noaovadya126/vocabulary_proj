@@ -477,6 +477,8 @@ export default function QuizPage() {
 
                   wordId={currentQuestion.wordId}
 
+                  correctAnswer={currentQuestion.correctAnswer}
+
                   onRetry={handleTryAgain}
 
                   onSkip={handleGiveUp}
