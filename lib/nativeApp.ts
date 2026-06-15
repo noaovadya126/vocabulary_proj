@@ -22,11 +22,35 @@ export function shouldUseExternalGoogleSignIn(): boolean {
 /** Google Play listing — set after publishing. */
 export const GOOGLE_PLAY_URL = '';
 
-/** Direct APK download (served from /public/downloads on Vercel). Override with NEXT_PUBLIC_APK_URL. */
-export const APK_DOWNLOAD_URL =
-  process.env.NEXT_PUBLIC_APK_URL?.trim() || '/downloads/VocabQuest.apk';
-
 export const APK_FILENAME = 'VocabQuest.apk';
+
+const DEFAULT_SITE_ORIGIN =
+  process.env.NEXT_PUBLIC_APP_URL?.trim() || 'https://vocabulary-proj.vercel.app';
+
+const DEFAULT_APK_PATH = '/downloads/VocabQuest.apk';
+
+/** Absolute APK URL — works reliably on Android browsers and in the native WebView. */
+export function getApkDownloadUrl(): string {
+  const override = process.env.NEXT_PUBLIC_APK_URL?.trim();
+  if (override?.startsWith('http://') || override?.startsWith('https://')) {
+    return override;
+  }
+
+  const path = override
+    ? override.startsWith('/')
+      ? override
+      : `/${override}`
+    : DEFAULT_APK_PATH;
+
+  if (typeof window !== 'undefined') {
+    return `${window.location.origin}${path}`;
+  }
+
+  return `${DEFAULT_SITE_ORIGIN}${path}`;
+}
+
+/** @deprecated Prefer getApkDownloadUrl() for absolute URLs in UI links. */
+export const APK_DOWNLOAD_URL = getApkDownloadUrl();
 
 export function isAndroidBrowser(): boolean {
   if (typeof navigator === 'undefined') return false;
