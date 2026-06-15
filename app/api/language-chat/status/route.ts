@@ -1,44 +1,22 @@
-import {
-  getOpenAIApiKey,
-  getOpenAIChatModel,
-  reasonToMessage,
-  requestOpenAIChat,
-  type OpenAIChatErrorCode,
-} from '@/lib/openai-chat';
+import { isAiChatEnabled } from '@/lib/features';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const apiKey = getOpenAIApiKey();
-  const model = getOpenAIChatModel();
-
-  if (!apiKey) {
+  if (!isAiChatEnabled()) {
     return NextResponse.json({
       enabled: false,
-      model,
-      reason: 'missing_key' satisfies OpenAIChatErrorCode,
-      message: reasonToMessage('missing_key'),
+      model: null,
+      reason: 'disabled',
+      message: 'AI chat is currently unavailable.',
     });
   }
 
-  const probe = await requestOpenAIChat({
-    apiKey,
-    model,
-    maxTokens: 1,
-    messages: [{ role: 'user', content: 'hi' }],
-  });
-
-  if (!probe.ok) {
-    return NextResponse.json({
-      enabled: false,
-      model,
-      reason: probe.code,
-      message: probe.message,
-    });
-  }
+  const model = process.env.OPENAI_CHAT_MODEL?.trim() || 'gpt-4o-mini';
+  const apiKey = process.env.OPENAI_API_KEY?.trim();
 
   return NextResponse.json({
-    enabled: true,
+    enabled: !!apiKey,
     model,
-    message: 'AI chat is ready.',
+    message: apiKey ? 'AI chat is ready.' : 'AI chat is not configured on the server.',
   });
 }

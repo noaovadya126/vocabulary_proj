@@ -1,3 +1,5 @@
+import { ExternalBrowser } from '@/lib/externalBrowser';
+
 /** True when running inside the Capacitor native shell (Google Play / sideload APK). */
 export function isNativeApp(): boolean {
   if (typeof window === 'undefined') return false;
@@ -61,6 +63,15 @@ function openInSystemBrowser(url: string): void {
 /** Opens Google sign-in in the device browser (not WebView) and returns via deep link. */
 export async function openNativeGoogleSignIn(): Promise<void> {
   const bridgeUrl = `${getAppOrigin()}/auth/native-signin-bridge`;
+
+  if (isNativeApp()) {
+    try {
+      await ExternalBrowser.open({ url: bridgeUrl });
+      return;
+    } catch {
+      /* fall through to intent URL */
+    }
+  }
 
   if (shouldUseExternalGoogleSignIn()) {
     openInSystemBrowser(bridgeUrl);

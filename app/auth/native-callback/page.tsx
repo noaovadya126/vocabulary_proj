@@ -22,10 +22,23 @@ export default function NativeAuthCallbackPage() {
           return;
         }
 
-        const deepLink = `com.vocabquest.app://oauth?token=${encodeURIComponent(data.token)}`;
+        const encoded = encodeURIComponent(data.token);
+        const deepLink = `com.vocabquest.app://oauth?token=${encoded}`;
+        const intentLink =
+          `intent://oauth?token=${encoded}` +
+          '#Intent;scheme=com.vocabquest.app;package=com.vocabquest.app;end';
+
         setReturnUrl(deepLink);
         setMessage('Returning to VocabQuest…');
-        window.location.href = deepLink;
+
+        if (/android/i.test(navigator.userAgent)) {
+          window.location.href = intentLink;
+          window.setTimeout(() => {
+            window.location.href = deepLink;
+          }, 700);
+        } else {
+          window.location.href = deepLink;
+        }
       } catch {
         setMessage('Connection error. Close this tab and try again in the app.');
       }

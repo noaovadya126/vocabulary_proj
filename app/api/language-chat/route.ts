@@ -4,6 +4,7 @@ import {
   getLanguageChatConfig,
   isChatLanguage,
 } from '@/lib/language-chat';
+import { isAiChatEnabled } from '@/lib/features';
 import {
   getOpenAIApiKey,
   getOpenAIChatModel,
@@ -18,6 +19,10 @@ const MAX_USER_LEN = 500;
 const MAX_HISTORY = 16;
 
 export async function POST(request: NextRequest) {
+  if (!isAiChatEnabled()) {
+    return NextResponse.json({ error: 'AI chat is currently unavailable.', code: 'disabled' }, { status: 503 });
+  }
+
   const apiKey = getOpenAIApiKey();
   if (!apiKey) {
     return NextResponse.json(

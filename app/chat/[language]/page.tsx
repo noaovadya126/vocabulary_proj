@@ -4,6 +4,7 @@ import { AppShell } from '@/components/ui/AppShell';
 import { Card } from '@/components/ui/Card';
 import { LanguageChatPanel } from '@/components/ui/LanguageChatPanel';
 import { LANGUAGE_NAMES } from '@/lib/constants';
+import { isAiChatEnabled } from '@/lib/features';
 import { getLanguageChatConfig } from '@/lib/language-chat';
 import { useParams, useRouter } from 'next/navigation';
 import { useEffect } from 'react';
@@ -14,8 +15,14 @@ export default function LanguageChatPage() {
   const language = params.language as string;
   const cfg = getLanguageChatConfig(language);
   const languageName = LANGUAGE_NAMES[language] ?? language;
+  const aiChatEnabled = isAiChatEnabled();
 
   useEffect(() => {
+    if (!aiChatEnabled) {
+      router.replace(`/map/${language}`);
+      return;
+    }
+
     const userData = localStorage.getItem('userData');
     const selectedLanguage = localStorage.getItem('selectedLanguage');
 
@@ -27,7 +34,11 @@ export default function LanguageChatPage() {
     if (!selectedLanguage || selectedLanguage !== language) {
       router.push('/language-selection');
     }
-  }, [language, router]);
+  }, [aiChatEnabled, language, router]);
+
+  if (!aiChatEnabled) {
+    return null;
+  }
 
   if (!cfg) {
     return (

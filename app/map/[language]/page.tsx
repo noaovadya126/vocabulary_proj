@@ -20,6 +20,7 @@ import { useI18nContext } from '@/contexts/I18nContext';
 import { LANGUAGE_NAMES } from '@/lib/constants';
 
 import { cn } from '@/lib/cn';
+import { isAiChatEnabled } from '@/lib/features';
 
 import { getGrammarPoints } from '@/lib/grammar-data';
 
@@ -142,6 +143,7 @@ export default function CountryMapPage() {
   const params = useParams();
 
   const language = params.language as string;
+  const aiChatEnabled = isAiChatEnabled();
 
   const vocabulary = VOCABULARY_BY_LANGUAGE[language] || [];
 
@@ -330,6 +332,7 @@ export default function CountryMapPage() {
 
       <GetTheAppBanner className="mb-6" />
 
+      {aiChatEnabled && (
       <Card
         className="mb-6 cursor-pointer border-brand-200/60 bg-gradient-to-r from-white via-pastel-green-light/40 to-pastel-pink-light/50 transition-all hover:shadow-medium active:scale-[0.99]"
         onClick={() => router.push(`/chat/${language}`)}
@@ -353,6 +356,7 @@ export default function CountryMapPage() {
           <ChevronRight className="h-5 w-5 shrink-0 text-brand-400" />
         </div>
       </Card>
+      )}
 
 
 
@@ -374,12 +378,16 @@ export default function CountryMapPage() {
               disabled: language !== 'ko',
               onClick: () => language === 'ko' && router.push(`/grammar/${language}`),
             },
-            {
-              id: 'chat',
-              emoji: '💬',
-              label: t('ai_chat', 'common'),
-              onClick: () => router.push(`/chat/${language}`),
-            },
+            ...(aiChatEnabled
+              ? [
+                  {
+                    id: 'chat',
+                    emoji: '💬',
+                    label: t('ai_chat', 'common'),
+                    onClick: () => router.push(`/chat/${language}`),
+                  },
+                ]
+              : []),
           ]}
         />
       </div>
