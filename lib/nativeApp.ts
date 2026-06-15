@@ -27,33 +27,26 @@ export const GOOGLE_PLAY_URL = '';
 
 export const APK_FILENAME = 'VocabQuest.apk';
 
-const DEFAULT_SITE_ORIGIN =
-  process.env.NEXT_PUBLIC_APP_URL?.trim() || 'https://vocabulary-proj.vercel.app';
+export const PRODUCTION_SITE_URL = 'https://vocabulary-proj.vercel.app';
 
-const DEFAULT_APK_PATH = '/downloads/VocabQuest.apk';
+/** Stable public APK URL — always absolute, works on Android Chrome and WhatsApp shares. */
+export const APK_DOWNLOAD_URL = `${PRODUCTION_SITE_URL}/downloads/VocabQuest.apk`;
 
-/** Absolute APK URL — works reliably on Android browsers and in the native WebView. */
+/** Same file via API route (backup if static path is cached/blocked). */
+export const APK_DOWNLOAD_API_URL = `${PRODUCTION_SITE_URL}/api/download/apk`;
+
+/** Best URL for website download buttons. */
 export function getApkDownloadUrl(): string {
   const override = process.env.NEXT_PUBLIC_APK_URL?.trim();
   if (override?.startsWith('http://') || override?.startsWith('https://')) {
     return override;
   }
-
-  const path = override
-    ? override.startsWith('/')
-      ? override
-      : `/${override}`
-    : DEFAULT_APK_PATH;
-
-  if (typeof window !== 'undefined') {
-    return `${window.location.origin}${path}`;
+  if (override) {
+    const path = override.startsWith('/') ? override : `/${override}`;
+    return `${PRODUCTION_SITE_URL}${path}`;
   }
-
-  return `${DEFAULT_SITE_ORIGIN}${path}`;
+  return APK_DOWNLOAD_URL;
 }
-
-/** @deprecated Prefer getApkDownloadUrl() for absolute URLs in UI links. */
-export const APK_DOWNLOAD_URL = getApkDownloadUrl();
 
 export function isAndroidBrowser(): boolean {
   if (typeof navigator === 'undefined') return false;
@@ -61,7 +54,7 @@ export function isAndroidBrowser(): boolean {
 }
 
 function getAppOrigin(): string {
-  if (typeof window === 'undefined') return 'https://vocabulary-proj.vercel.app';
+  if (typeof window === 'undefined') return PRODUCTION_SITE_URL;
   return window.location.origin;
 }
 

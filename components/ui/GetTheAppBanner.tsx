@@ -3,12 +3,13 @@
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/cn';
 import {
-  getApkDownloadUrl,
+  APK_DOWNLOAD_API_URL,
   GOOGLE_PLAY_URL,
   isAndroidBrowser,
   isNativeApp,
 } from '@/lib/nativeApp';
 import { Download, Smartphone, X } from 'lucide-react';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const DISMISS_KEY = 'vq_get_app_dismissed';
@@ -16,13 +17,12 @@ const DISMISS_KEY = 'vq_get_app_dismissed';
 export function GetTheAppBanner({ className }: { className?: string }) {
   const [visible, setVisible] = useState(false);
   const [android, setAndroid] = useState(false);
-  const [apkUrl, setApkUrl] = useState('https://vocabulary-proj.vercel.app/downloads/VocabQuest.apk');
+  const apiUrl = APK_DOWNLOAD_API_URL;
 
   useEffect(() => {
     if (isNativeApp() || sessionStorage.getItem(DISMISS_KEY) === '1') return;
     setVisible(true);
     setAndroid(isAndroidBrowser());
-    setApkUrl(getApkDownloadUrl());
   }, []);
 
   const dismiss = () => {
@@ -74,12 +74,19 @@ export function GetTheAppBanner({ className }: { className?: string }) {
 
         <div className="flex flex-wrap gap-2">
           <a
-            href={apkUrl}
+            href={apiUrl}
             className="inline-flex items-center justify-center gap-2 rounded-2xl border border-brand-300/30 bg-gradient-to-r from-brand-400 to-brand-500 px-3 py-2 text-sm font-semibold text-white shadow-cute transition-all hover:from-brand-500 hover:to-brand-600 active:scale-[0.98] min-h-[44px]"
           >
             <Download className="h-4 w-4" />
             Download app
           </a>
+
+          <Link
+            href="/download"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-brand-200 bg-white px-3 py-2 text-sm font-semibold text-brand-700 hover:bg-pastel-pink/30 min-h-[44px]"
+          >
+            More options
+          </Link>
 
           {GOOGLE_PLAY_URL ? (
             <a
@@ -106,18 +113,16 @@ export function GetTheAppBanner({ className }: { className?: string }) {
 /** Compact download control for headers or menus. */
 export function DownloadAppButton({ className }: { className?: string }) {
   const [show, setShow] = useState(false);
-  const [apkUrl, setApkUrl] = useState('https://vocabulary-proj.vercel.app/downloads/VocabQuest.apk');
 
   useEffect(() => {
     setShow(!isNativeApp());
-    setApkUrl(getApkDownloadUrl());
   }, []);
 
   if (!show) return null;
 
   return (
     <a
-      href={apkUrl}
+      href={APK_DOWNLOAD_API_URL}
       className={cn(
         'inline-flex items-center gap-1.5 rounded-xl border border-brand-200 bg-white/90 px-2.5 py-1.5 text-xs font-semibold text-brand-700 hover:bg-pastel-pink/40 min-h-[36px]',
         className
