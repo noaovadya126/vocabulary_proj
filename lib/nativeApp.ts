@@ -3,8 +3,11 @@ import { ExternalBrowser } from '@/lib/externalBrowser';
 /** True when running inside the Capacitor native shell (Google Play / sideload APK). */
 export function isNativeApp(): boolean {
   if (typeof window === 'undefined') return false;
-  const cap = (window as Window & { Capacitor?: { isNativePlatform?: () => boolean } }).Capacitor;
-  return cap?.isNativePlatform?.() === true;
+  const cap = (window as Window & { Capacitor?: { isNativePlatform?: () => boolean; getPlatform?: () => string } }).Capacitor;
+  if (!cap) return false;
+  if (cap.isNativePlatform?.()) return true;
+  const platform = cap.getPlatform?.();
+  return platform === 'android' || platform === 'ios';
 }
 
 /** Android WebView (Capacitor loads the live site inside one). */
@@ -62,50 +65,32 @@ function getAppOrigin(): string {
   return window.location.origin;
 }
 
-/** Launch the system browser from Android WebView (avoids Google disallowed_useragent). */
-function openInSystemBrowser(url: string): void {
-  if (typeof window === 'undefined') return;
-
-  if (/android/i.test(navigator.userAgent)) {
-    try {
-      const parsed = new URL(url);
-      const fallback = encodeURIComponent(url);
-      const intentUrl =
-        `intent://${parsed.host}${parsed.pathname}${parsed.search}` +
-        `#Intent;scheme=https;action=android.intent.action.VIEW;` +
-        `S.browser_fallback_url=${fallback};end`;
-      window.location.href = intentUrl;
-      return;
-    } catch {
-      /* fall through */
-    }
-  }
-
-  window.open(url, '_blank', 'noopener,noreferrer');
-}
-
 /** Opens Google sign-in in the device browser (not WebView) and returns via deep link. */
-export async function openNativeGoogleSignIn(): Promise<void> {
+export async function openNativeGoogleSignIn(): Promise<{ ok: true } | { ok: false; message: string }> {
   const bridgeUrl = `${getAppOrigin()}/auth/native-signin-bridge`;
 
   if (isNativeApp()) {
     try {
       await ExternalBrowser.open({ url: bridgeUrl });
-      return;
+      return { ok: true };
     } catch {
-      /* fall through to intent URL */
+      /* try Capacitor Browser next */
     }
   }
 
-  if (shouldUseExternalGoogleSignIn()) {
-    openInSystemBrowser(bridgeUrl);
-    return;
+  if (isNativeApp() || isAndroidWebView()) {
+    try {
+      const { Browser } = await import('@capacitor/browser');
+      await Browser.open({ url: bridgeUrl });
+      return { ok: true };
+    } catch {
+      return {
+        ok: false,
+        message:
+          'Could not open Chrome for sign-in. Install the latest VocabQuest app from the website, then try again.',
+      };
+    }
   }
 
-  try {
-    const { Browser } = await import('@capacitor/browser');
-    await Browser.open({ url: bridgeUrl });
-  } catch {
-    openInSystemBrowser(bridgeUrl);
-  }
+  return { ok: false, message: 'Google sign-in must be opened in your browser.' };
 }

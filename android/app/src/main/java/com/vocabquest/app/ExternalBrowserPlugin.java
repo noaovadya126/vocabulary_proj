@@ -19,7 +19,13 @@ public class ExternalBrowserPlugin extends Plugin {
 
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        getActivity().startActivity(intent);
+
+        if (getActivity() != null) {
+            getActivity().startActivity(intent);
+        } else {
+            getContext().startActivity(intent);
+        }
+
         call.resolve();
     }
 }

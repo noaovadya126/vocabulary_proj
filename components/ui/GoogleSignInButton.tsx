@@ -13,6 +13,7 @@ interface AuthStatus {
 export function GoogleSignInButton({ className }: { className?: string }) {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<AuthStatus | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetch('/api/auth/status')
@@ -24,9 +25,13 @@ export function GoogleSignInButton({ className }: { className?: string }) {
   const handleClick = async () => {
     if (!status?.googleEnabled) return;
     setLoading(true);
+    setError(null);
     try {
       if (shouldUseExternalGoogleSignIn()) {
-        await openNativeGoogleSignIn();
+        const result = await openNativeGoogleSignIn();
+        if (!result.ok) {
+          setError(result.message);
+        }
         return;
       }
       await signIn('google', { callbackUrl: '/auth' });
@@ -74,7 +79,8 @@ export function GoogleSignInButton({ className }: { className?: string }) {
     : 'Continue with Google';
 
   return (
-    <button
+    <div className={cn('space-y-3', className)}>
+      <button
       type="button"
       onClick={handleClick}
       disabled={loading}
@@ -96,5 +102,11 @@ export function GoogleSignInButton({ className }: { className?: string }) {
         <span className="sr-only">Cloud save unavailable until database is configured.</span>
       )}
     </button>
+      {error && (
+        <p className="rounded-2xl border border-red-200 bg-red-50/90 px-3 py-2 text-xs text-red-800">
+          {error}
+        </p>
+      )}
+    </div>
   );
 }
