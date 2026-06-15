@@ -1,3 +1,4 @@
+import { Browser } from '@capacitor/browser';
 import { ExternalBrowser } from '@/lib/externalBrowser';
 
 /** True when running inside the Capacitor native shell (Google Play / sideload APK). */
@@ -58,9 +59,32 @@ function getAppOrigin(): string {
   return window.location.origin;
 }
 
+export function getNativeGoogleSignInUrl(): string {
+  return `${getAppOrigin()}/auth/native-signin-bridge`;
+}
+
+type VocabQuestNativeBridge = {
+  openExternalUrl?: (url: string) => void;
+};
+
+function openViaNativeJavascriptBridge(url: string): boolean {
+  const native = (window as Window & { VocabQuestNative?: VocabQuestNativeBridge }).VocabQuestNative;
+  if (!native?.openExternalUrl) return false;
+  try {
+    native.openExternalUrl(url);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 /** Opens Google sign-in in the device browser (not WebView) and returns via deep link. */
 export async function openNativeGoogleSignIn(): Promise<{ ok: true } | { ok: false; message: string }> {
-  const bridgeUrl = `${getAppOrigin()}/auth/native-signin-bridge`;
+  const bridgeUrl = getNativeGoogleSignInUrl();
+
+  if (openViaNativeJavascriptBridge(bridgeUrl)) {
+    return { ok: true };
+  }
 
   if (isNativeApp()) {
     try {
@@ -73,14 +97,13 @@ export async function openNativeGoogleSignIn(): Promise<{ ok: true } | { ok: fal
 
   if (isNativeApp() || isAndroidWebView()) {
     try {
-      const { Browser } = await import('@capacitor/browser');
       await Browser.open({ url: bridgeUrl });
       return { ok: true };
     } catch {
       return {
         ok: false,
         message:
-          'Could not open Chrome for sign-in. Install the latest VocabQuest app from the website, then try again.',
+          'Could not open Chrome. Delete the app, reinstall the latest APK from vocabulary-proj.vercel.app/download, then try again.',
       };
     }
   }

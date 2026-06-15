@@ -1,7 +1,11 @@
 'use client';
 
 import { cn } from '@/lib/cn';
-import { openNativeGoogleSignIn, shouldUseExternalGoogleSignIn } from '@/lib/nativeApp';
+import {
+  APK_DOWNLOAD_API_URL,
+  openNativeGoogleSignIn,
+  shouldUseExternalGoogleSignIn,
+} from '@/lib/nativeApp';
 import { signIn } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 
@@ -103,9 +107,17 @@ export function GoogleSignInButton({ className }: { className?: string }) {
       )}
     </button>
       {error && (
-        <p className="rounded-2xl border border-red-200 bg-red-50/90 px-3 py-2 text-xs text-red-800">
-          {error}
-        </p>
+        <div className="space-y-2">
+          <p className="rounded-2xl border border-red-200 bg-red-50/90 px-3 py-2 text-xs text-red-800">
+            {error}
+          </p>
+          <a
+            href={APK_DOWNLOAD_API_URL}
+            className="block rounded-2xl border border-brand-200 bg-white px-3 py-2 text-center text-xs font-semibold text-brand-700 underline"
+          >
+            Download latest app
+          </a>
+        </div>
       )}
     </div>
   );
