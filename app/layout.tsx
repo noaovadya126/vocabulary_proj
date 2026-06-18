@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: 'VocabQuest',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/opengraph-image',
         width: 1200,
         height: 630,
         alt: 'VocabQuest Language Learning',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'VocabQuest — Interactive Language Learning',
     description: 'Learn Japanese, Korean, and French through fun, interactive vocabulary games and lessons.',
-    images: ['/images/og-image.jpg'],
+    images: ['/opengraph-image'],
   },
   robots: {
     index: true,
